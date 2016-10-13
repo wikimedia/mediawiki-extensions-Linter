@@ -1,0 +1,38 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kunal Mehta"
+		]
+	},
+	"linterrors": "Lint errors",
+	"linterrors-subpage": "Lint errors: $1",
+	"linter-desc": "Track lint errors from an external service and show them to users",
+	"linter-pager-title": "Page title",
+	"linter-pager-template": "Through a template?",
+	"linter-pager-obsolete-tag-details": "Obsolete HTML tag",
+	"linter-pager-bogus-image-options-details": "Bogus file option",
+	"linter-pager-missing-end-tag-details": "Missing end tag",
+	"linter-pager-stripped-tag-details": "Stripped tag",
+	"linter-category-fostered": "Fostered content",
+	"linter-category-fostered-desc": "These pages have fostered content.",
+	"linter-category-obsolete-tag": "Obsolete HTML tags",
+	"linter-category-obsolete-tag-desc": "These pages use obsolete HTML tags.",
+	"linter-category-bogus-image-options": "Bogus file options",
+	"linter-category-bogus-image-options-desc": "These pages have files with bogus options.",
+	"linter-category-missing-end-tag": "Missing end tag",
+	"linter-category-missing-end-tag-desc": "These pages have missing end tags.",
+	"linter-category-stripped-tag": "Stripped tags",
+	"linter-category-stripped-tag-desc": "These pages have stripped tags.",
+	"linker-page-title-edit": "$1 ($2)",
+	"linker-page-edit": "edit",
+	"apihelp-query+linterrors-description": "Get a list of lint errors",
+	"apihelp-query+linterrors-param-category": "Category of lint errors",
+	"apihelp-query+linterrors-param-limit": "Number of results to query",
+	"apihelp-query+linterrors-param-from": "Lint ID to start querying from",
+	"apihelp-query+linterrors-param-namespace": "Only include lint errors from the specified namespaces",
+	"apihelp-query+linterrors-example-1": "Get all lint errors of the obsolete-tag category",
+	"apihelp-record-lint-description": "Record a lint error in the database",
+	"apihelp-record-lint-param-data": "JSON encoded data about the error",
+	"apihelp-record-lint-param-page": "Page title",
+	"apihelp-record-lint-param-revision": "Revision ID that the error was found in"
+}

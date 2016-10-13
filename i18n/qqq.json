@@ -1,0 +1,38 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kunal Mehta"
+		]
+	},
+	"linterrors": "{{doc-special|LintErrors}}",
+	"linterrors-subpage": "Page title for Special:LintErrors, $1 is the localized category description",
+	"linter-desc": "{{desc|name=Linter|url=https://www.mediawiki.org/wiki/Extension:Linter}}",
+	"linter-pager-title": "Table column heading for the column with page titles in it",
+	"linter-pager-template": "Table column heading for column with template title in it or an em dash if lint error is not inside a template",
+	"linter-pager-obsolete-tag-details": "Table column heading",
+	"linter-pager-bogus-image-options-details": "Table column heading",
+	"linter-pager-missing-end-tag-details": "Table column heading",
+	"linter-pager-stripped-tag-details": "Table column heading",
+	"linter-category-fostered": "Name of lint error category",
+	"linter-category-fostered-desc": "Description of category.",
+	"linter-category-obsolete-tag": "Name of lint error category",
+	"linter-category-obsolete-tag-desc": "Description of category.",
+	"linter-category-bogus-image-options": "Name of lint error category",
+	"linter-category-bogus-image-options-desc": "Description of category",
+	"linter-category-missing-end-tag": "Name of lint error category",
+	"linter-category-missing-end-tag-desc": "Description of category",
+	"linter-category-stripped-tag": "Name of lint error category",
+	"linter-category-stripped-tag-desc": "Description of category",
+	"linker-page-title-edit": "Used in a table cell. $1 is a link to the page, $2 is a link to edit that page, the link text is {{msg-mw|linker-page-edit}}",
+	"linker-page-edit": "Link text for edit link in {{msg-mw|linker-page-title-edit}} and {{msg-mw|linker-page-title-edit-template}}",
+	"apihelp-query+linterrors-description": "{{doc-apihelp-description|query+linterrors}}",
+	"apihelp-query+linterrors-param-category": "{{doc-apihelp-param|query+linterrors|category}}",
+	"apihelp-query+linterrors-param-limit": "{{doc-apihelp-param|query+linterrors|limit}}",
+	"apihelp-query+linterrors-param-from": "{{doc-apihelp-param|query+linterrors|from}}",
+	"apihelp-query+linterrors-param-namespace": "{{doc-apihelp-param|query+linterrors|namespace}}",
+	"apihelp-query+linterrors-example-1": "{{doc-apihelp-example|query+linterrors}}",
+	"apihelp-record-lint-description": "{{doc-apihelp-description|record-lint}}",
+	"apihelp-record-lint-param-data": "{{doc-apihelp-param|record-lint|data}}",
+	"apihelp-record-lint-param-page": "{{doc-apihelp-param|record-lint|page}}",
+	"apihelp-record-lint-param-revision": "{{doc-apihelp-param|record-lint|revision}}"
+}

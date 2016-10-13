@@ -1,0 +1,60 @@
+{
+	"name": "Linter",
+	"license-name": "GPL-2.0+",
+	"url": "https://www.mediawiki.org/wiki/Extension:Linter",
+	"author": [
+		"Kunal Mehta"
+	],
+	"descriptionmsg": "linter-desc",
+	"type": "specialpage",
+	"AutoloadClasses": {
+		"MediaWiki\\Linter\\Hooks": "includes/Hooks.php",
+		"MediaWiki\\Linter\\Database": "includes/Database.php",
+		"MediaWiki\\Linter\\LintError": "includes/LintError.php",
+		"MediaWiki\\Linter\\ApiRecordLint": "includes/ApiRecordLint.php",
+		"MediaWiki\\Linter\\ApiQueryLintErrors": "includes/ApiQueryLintErrors.php",
+		"MediaWiki\\Linter\\SpecialLintErrors": "includes/SpecialLintErrors.php",
+		"MediaWiki\\Linter\\LintErrorsPager": "includes/LintErrorsPager.php"
+	},
+	"MessagesDirs": {
+		"Linter": "i18n"
+	},
+	"Hooks": {
+		"LoadExtensionSchemaUpdates": "MediaWiki\\Linter\\Hooks::onLoadExtensionSchemaUpdates",
+		"EditFormInitialText": "MediaWiki\\Linter\\Hooks::onEditFormInitialText"
+	},
+	"APIModules": {
+		"record-lint": "MediaWiki\\Linter\\ApiRecordLint"
+	},
+	"APIListModules": {
+		"linterrors": "MediaWiki\\Linter\\ApiQueryLintErrors"
+	},
+	"SpecialPages": {
+		"LintErrors": "MediaWiki\\Linter\\SpecialLintErrors"
+	},
+	"ResourceModules": {
+		"ext.linter.edit": {
+			"scripts": "ext.linter.edit.js",
+			"dependencies": [
+				"jquery.textSelection"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "modules",
+		"remoteExtPath": "Linter/modules"
+	},
+	"config": {
+		"LinterCategories": {
+			"fostered": true,
+			"obsolete-tag": true,
+			"bogus-image-options": true,
+			"missing-end-tag": true,
+			"stripped-tag": true
+		},
+		"LinterSubmitterWhitelist": {
+			"127.0.0.1": true
+		}
+	},
+	"manifest_version": 1
+}
