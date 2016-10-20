@@ -8,6 +8,9 @@
 	<rule ref="MediaWiki.Commenting.FunctionComment.MissingParamComment">
 		<severity>0</severity>
 	</rule>
+	<rule ref="MediaWiki.Commenting.FunctionComment.MissingReturn">
+		<severity>0</severity>
+	</rule>
 	<arg name="extensions" value="php,php5,inc"/>
 	<arg name="encoding" value="utf8"/>
 	<exclude-pattern>vendor</exclude-pattern>
