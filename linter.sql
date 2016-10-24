@@ -1,6 +1,6 @@
 CREATE TABLE /*_*/linter (
 	-- primary key
-	linter_id int UNSIGNED AUTO_INCREMENT PRIMARY KEY not null,
+	linter_id int UNSIGNED PRIMARY KEY not null AUTO_INCREMENT,
 	-- page id
 	linter_page int UNSIGNED not null,
 	-- error category
