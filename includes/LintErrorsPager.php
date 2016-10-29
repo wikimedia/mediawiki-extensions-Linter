@@ -33,6 +33,9 @@ use Title;
 class LintErrorsPager extends TablePager {
 
 	private $category;
+
+	private $categoryId;
+
 	/**
 	 * @var LinkRenderer
 	 */
@@ -40,6 +43,7 @@ class LintErrorsPager extends TablePager {
 
 	public function __construct( IContextSource $context, $category, LinkRenderer $linkRenderer ) {
 		$this->category = $category;
+		$this->categoryId = CategoryManager::getInstance()->getCategoryId( $this->category );
 		$this->linkRenderer = $linkRenderer;
 		parent::__construct( $context );
 	}
@@ -54,7 +58,7 @@ class LintErrorsPager extends TablePager {
 					'linter_id', 'linter_params',
 				]
 			),
-			'conds' => [ 'linter_cat' => $this->category ],
+			'conds' => [ 'linter_cat' => $this->categoryId ],
 			'join_conds' => [ 'page' => [ 'INNER JOIN', 'page_id=linter_page' ] ]
 		];
 	}
@@ -73,7 +77,7 @@ class LintErrorsPager extends TablePager {
 
 	public function formatValue( $name, $value ) {
 		$row = $this->mCurrentRow;
-		$row->linter_cat = $this->category;
+		$row->linter_cat = $this->categoryId;
 		$lintError = Database::makeLintError( $row );
 		switch ( $name ) {
 			case 'title':

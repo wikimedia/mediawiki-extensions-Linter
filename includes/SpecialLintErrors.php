@@ -31,18 +31,10 @@ class SpecialLintErrors extends SpecialPage {
 		parent::__construct( 'LintErrors' );
 	}
 
-	/**
-	 * @return array
-	 */
-	private function getCategories() {
-		global $wgLinterCategories;
-		return array_keys( array_filter( $wgLinterCategories ) );
-	}
-
 	public function execute( $par ) {
 		$this->setHeaders();
 		$this->outputHeader();
-		$cats = $this->getCategories();
+		$cats = CategoryManager::getInstance()->getCategories();
 		if ( in_array( $par, $cats ) ) {
 			$this->category = $par;
 		}

@@ -3,8 +3,8 @@ CREATE TABLE /*_*/linter (
 	linter_id int UNSIGNED PRIMARY KEY not null AUTO_INCREMENT,
 	-- page id
 	linter_page int UNSIGNED not null,
-	-- error category
-	linter_cat VARCHAR(30) not null,
+	-- error category (lint_categories.lc_id)
+	linter_cat int UNSIGNED not null,
 	-- extra parameters about the error, JSON encoded
 	linter_params blob NOT NULL
 ) /*$wgDBTableOptions*/;
