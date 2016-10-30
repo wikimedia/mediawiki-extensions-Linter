@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robby"
+		]
+	},
+	"linterrors": "Lint-Feeler",
+	"linterrors-subpage": "Lint-Feeler: $1",
+	"linter-pager-title": "Titel vun der Säit",
+	"linter-pager-template": "Duerch eng Schabloun?",
+	"linter-pager-obsolete-tag-details": "Vereelzten HTML-Tag",
+	"linter-category-obsolete-tag": "Vereelzt HTML-Tagen",
+	"linker-page-edit": "änneren",
+	"apihelp-query+linterrors-description": "Eng Lëscht vun de Lint-Feeler kréien",
+	"apihelp-query+linterrors-param-category": "Kategorie vu Lint-Feeleren",
+	"apihelp-query+linterrors-example-1": "All Lint-Feeler aus der Kategorie vereelzten-Tag kréien",
+	"apihelp-record-lint-description": "E Lint-Feeler an der Datebank notéieren",
+	"apihelp-record-lint-param-page": "Titel vun der Säit"
+}

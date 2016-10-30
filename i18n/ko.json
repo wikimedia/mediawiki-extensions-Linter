@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ykhwong"
+		]
+	},
+	"linter-pager-title": "문서 제목",
+	"linker-page-edit": "편집",
+	"apihelp-record-lint-param-page": "문서 제목"
+}

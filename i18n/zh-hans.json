@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liuxinyu970226"
+		]
+	},
+	"linterrors": "Lint错误",
+	"linterrors-subpage": "Lint错误：$1",
+	"linter-desc": "从外部服务追踪lint错误，并向用户显示",
+	"linter-pager-title": "页面标题",
+	"linter-pager-template": "通过模板？",
+	"linter-pager-obsolete-tag-details": "废弃的HTML标签",
+	"linter-pager-bogus-image-options-details": "伪造的文件选项",
+	"linter-pager-missing-end-tag-details": "缺少结束标签",
+	"linter-pager-stripped-tag-details": "剥去的标签",
+	"linter-category-fostered": "培养的内容",
+	"linter-category-fostered-desc": "这些页面有培养的内容。",
+	"linter-category-obsolete-tag": "废弃的HTML标签",
+	"linter-category-obsolete-tag-desc": "这些页面使用废弃的HTML标签。",
+	"linter-category-bogus-image-options": "伪造的文件选项",
+	"linter-category-bogus-image-options-desc": "这些页面有伪造选项的文件。",
+	"linter-category-missing-end-tag": "缺少结束标签",
+	"linter-category-missing-end-tag-desc": "这些页面缺少结束标签。",
+	"linter-category-stripped-tag": "剥去的标签",
+	"linter-category-stripped-tag-desc": "这些页面有剥去的标签。",
+	"linker-page-edit": "编辑",
+	"apihelp-query+linterrors-description": "获取lint错误的列表",
+	"apihelp-query+linterrors-param-category": "lint错误的分类",
+	"apihelp-query+linterrors-param-limit": "要查询的结果数",
+	"apihelp-query+linterrors-param-from": "查询的起始Lint ID",
+	"apihelp-query+linterrors-param-namespace": "只包含来自指定名字空间的lint错误",
+	"apihelp-query+linterrors-example-1": "获取所有废弃标签分类的lint错误",
+	"apihelp-record-lint-description": "在数据库中记录lint错误",
+	"apihelp-record-lint-param-data": "有关错误的JSON编码数据",
+	"apihelp-record-lint-param-page": "页面标题",
+	"apihelp-record-lint-param-revision": "找到错误的修订版本ID"
+}

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"GR"
+		]
+	},
+	"linter-pager-missing-end-tag-details": "Λείπει η ετικέτα τέλους",
+	"apihelp-record-lint-param-page": "Τίτλος σελίδας"
+}
