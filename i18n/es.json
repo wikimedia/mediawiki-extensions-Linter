@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido"
+		]
+	},
+	"linterrors": "Errores de comprobador",
+	"linterrors-subpage": "Errores de comprobador: $1",
+	"linter-desc": "Supervisa errores informados por un servicio comprobador externo y los muestra a los usuarios",
+	"linter-pager-title": "Título de la página",
+	"linter-pager-template": "¿A través de una plantilla?",
+	"linter-pager-obsolete-tag-details": "Etiqueta HTML obsoleta",
+	"linter-pager-bogus-image-options-details": "Opción de archivo inútil",
+	"linter-pager-missing-end-tag-details": "Etiqueta de cierre faltante",
+	"linter-category-fostered": "Contenido fuera de lugar",
+	"linter-category-fostered-desc": "Estas páginas incluyen contenido fuera de lugar.",
+	"linter-category-obsolete-tag": "Etiquetas HTML obsoletas",
+	"linter-category-obsolete-tag-desc": "Estas páginas utilizan etiquetas HTML obsoletas.",
+	"linter-category-bogus-image-options": "Opciones de archivo inútiles",
+	"linter-category-bogus-image-options-desc": "Estas páginas contienen archivos con opciones inútiles.",
+	"linter-category-missing-end-tag": "Etiqueta de cierre faltante",
+	"linter-category-missing-end-tag-desc": "Estas páginas contienen etiquetas sin su correspondiente cierre.",
+	"linker-page-edit": "editar",
+	"apihelp-query+linterrors-description": "Obtener lista de errores de comprobador",
+	"apihelp-query+linterrors-param-category": "Categoría de errores de comprobador",
+	"apihelp-query+linterrors-param-limit": "Cantidad de resultados que consultar",
+	"apihelp-query+linterrors-param-from": "Id. de comprobador a partir del cual comenzar una consulta",
+	"apihelp-query+linterrors-param-namespace": "Incluir solo errores de comprobador de los espacios de nombres especificados",
+	"apihelp-query+linterrors-example-1": "Obtener todos los errores de comprobador de la categoría «obsolete-tag»",
+	"apihelp-record-lint-description": "Registrar un error de comprobador en la base de datos",
+	"apihelp-record-lint-param-data": "Datos codificados en JSON acerca del error",
+	"apihelp-record-lint-param-page": "Título de la página",
+	"apihelp-record-lint-param-revision": "Id. de la revisión en que se encontró el error"
+}

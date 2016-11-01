@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Otokoume"
+		]
+	},
+	"linter-pager-title": "ページ名",
+	"linker-page-edit": "編集",
+	"apihelp-record-lint-param-page": "ページ名"
+}

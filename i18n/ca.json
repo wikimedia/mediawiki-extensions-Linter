@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido"
+		]
+	},
+	"linter-pager-title": "Títol de la pàgina",
+	"linker-page-edit": "edita",
+	"apihelp-record-lint-param-page": "Títol de la pàgina"
+}

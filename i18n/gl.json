@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Banjo",
+			"Elisardojm"
+		]
+	},
+	"linterrors": "Erros de lint",
+	"linterrors-subpage": "Erros de lintː $1",
+	"linter-pager-title": "Título da páxina",
+	"linter-pager-template": "Vía un modelo?",
+	"linter-pager-obsolete-tag-details": "Etiqueta HTML desbotada",
+	"linter-pager-missing-end-tag-details": "Falta etiqueta de finalización",
+	"linter-category-obsolete-tag": "Etiquetas HTML desbotadas",
+	"linter-category-obsolete-tag-desc": "Estas páxinas usan etiquetas HTML obsoletas.",
+	"linter-category-missing-end-tag": "Falta etiqueta de finalización",
+	"linker-page-edit": "editar",
+	"apihelp-query+linterrors-param-limit": "Número de resultados a consultar",
+	"apihelp-record-lint-param-data": "Datos codificados en JSON sobre o erro",
+	"apihelp-record-lint-param-page": "Título da páxina",
+	"apihelp-record-lint-param-revision": "Identificación da modificación na que se atopou o erro"
+}

@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrumps"
+		]
+	},
+	"linter-pager-title": "Tytuł strony",
+	"linter-pager-obsolete-tag-details": "Przestarzały znacznik HTML",
+	"linter-pager-missing-end-tag-details": "Brak znacznika zamykającego",
+	"linter-category-obsolete-tag": "Przestarzałe znaczniki HTML",
+	"linter-category-missing-end-tag": "Brak znacznika zamykającego",
+	"linter-category-missing-end-tag-desc": "Tym stronom brakuje znaczników zamykających",
+	"apihelp-record-lint-param-page": "Tytuł strony"
+}

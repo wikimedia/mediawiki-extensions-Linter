@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Kunal Mehta",
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"Fitoschido"
 		]
 	},
 	"linterrors": "{{doc-special|LintErrors}}",
@@ -14,13 +15,13 @@
 	"linter-pager-bogus-image-options-details": "Table column heading",
 	"linter-pager-missing-end-tag-details": "Table column heading",
 	"linter-pager-stripped-tag-details": "Table column heading",
-	"linter-category-fostered": "Name of lint error category",
+	"linter-category-fostered": "Name of lint error category. See [[:mw:Help:Extension:Linter/fostered]]",
 	"linter-category-fostered-desc": "Description of category.",
-	"linter-category-obsolete-tag": "Name of lint error category",
+	"linter-category-obsolete-tag": "Name of lint error category. See [[:mw:Help:Extension:Linter/obsolete-tag]]",
 	"linter-category-obsolete-tag-desc": "Description of category.",
-	"linter-category-bogus-image-options": "Name of lint error category",
+	"linter-category-bogus-image-options": "Name of lint error category. See [[:mw:Help:Extension:Linter/bogus-image-options]]",
 	"linter-category-bogus-image-options-desc": "Description of category",
-	"linter-category-missing-end-tag": "Name of lint error category",
+	"linter-category-missing-end-tag": "Name of lint error category. See [[:mw:Help:Extension:Linter/missing-end-tag]]",
 	"linter-category-missing-end-tag-desc": "Description of category",
 	"linter-category-stripped-tag": "Name of lint error category",
 	"linter-category-stripped-tag-desc": "Description of category",

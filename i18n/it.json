@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beta16"
+		]
+	},
+	"linter-pager-title": "Titolo della pagina",
+	"linker-page-edit": "modifica",
+	"apihelp-record-lint-param-page": "Titolo della pagina"
+}
