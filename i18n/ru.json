@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kareyac"
+		]
+	},
+	"linter-pager-title": "Заголовок страницы",
+	"linker-page-edit": "править",
+	"apihelp-record-lint-param-page": "Заголовок страницы"
+}

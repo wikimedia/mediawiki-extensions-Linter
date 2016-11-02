@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"WikiPhoenix"
+		]
+	},
+	"linter-pager-title": "Sidtitel",
+	"linter-pager-template": "Genom en mall?",
+	"linker-page-edit": "redigera",
+	"apihelp-record-lint-param-page": "Sidtitel"
+}
