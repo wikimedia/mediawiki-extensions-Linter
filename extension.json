@@ -8,6 +8,7 @@
 	"descriptionmsg": "linter-desc",
 	"type": "specialpage",
 	"AutoloadClasses": {
+		"MediaWiki\\Linter\\CategoryManager": "includes/CategoryManager.php",
 		"MediaWiki\\Linter\\Hooks": "includes/Hooks.php",
 		"MediaWiki\\Linter\\Database": "includes/Database.php",
 		"MediaWiki\\Linter\\LintError": "includes/LintError.php",

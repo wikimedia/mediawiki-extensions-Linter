@@ -20,14 +20,12 @@
 
 namespace MediaWiki\Linter;
 
-use DBAccessObjectUtils;
-use IDBAccessObject;
 use FormatJson;
 
 /**
  * Database logic
  */
-class Database implements IDBAccessObject {
+class Database {
 	/**
 	 * @var int
 	 */
@@ -44,17 +42,14 @@ class Database implements IDBAccessObject {
 	 * Get a specific LintError by id
 	 *
 	 * @param int $id linter_id
-	 * @param int $flags
 	 * @return bool|LintError
 	 */
-	public function getFromId( $id, $flags = 0 ) {
-		list( $index, $options ) = DBAccessObjectUtils::getDBOptions( $flags );
-		$row = wfGetDB( $index )->selectRow(
+	public function getFromId( $id ) {
+		$row = wfGetDB( DB_REPLICA )->selectRow(
 			'linter',
 			[ 'linter_cat', 'linter_params' ],
 			[ 'linter_id' => $id, 'linter_page' => $this->pageId ],
-			__METHOD__,
-			$options
+			__METHOD__
 		);
 
 		if ( $row ) {
@@ -72,8 +67,9 @@ class Database implements IDBAccessObject {
 	 * @return LintError
 	 */
 	public static function makeLintError( $row ) {
+		$categoryMgr = CategoryManager::getInstance();
 		return new LintError(
-			$row->linter_cat,
+			$categoryMgr->getCategoryName( $row->linter_cat ),
 			$row->linter_params,
 			(int)$row->linter_id
 		);
@@ -82,17 +78,14 @@ class Database implements IDBAccessObject {
 	/**
 	 * Get all the lint errors for a page
 	 *
-	 * @param int $flags
 	 * @return LintError[]
 	 */
-	public function getForPage( $flags = 0 ) {
-		list( $index, $options ) = DBAccessObjectUtils::getDBOptions( $flags );
-		$rows = wfGetDB( $index )->select(
+	public function getForPage() {
+		$rows = wfGetDB( DB_REPLICA )->select(
 			'linter',
 			[ 'linter_id', 'linter_cat', 'linter_params' ],
 			[ 'linter_page' => $this->pageId ],
-			__METHOD__,
-			$options
+			__METHOD__
 		);
 		$result = [];
 		foreach ( $rows as $row ) {
@@ -111,17 +104,12 @@ class Database implements IDBAccessObject {
 	 * @return array
 	 */
 	private function serializeError( LintError $error ) {
-		if ( $error->lintId !== 0 ) {
-			return [
-				'linter_id' => $error->lintId,
-			];
-		} else {
-			return [
-				'linter_page' => $this->pageId,
-				'linter_cat' => $error->category,
-				'linter_params' => FormatJson::encode( $error->params, false, FormatJson::ALL_OK ),
-			];
-		}
+		$categoryMgr = CategoryManager::getInstance();
+		return [
+			'linter_page' => $this->pageId,
+			'linter_cat' => $categoryMgr->getAndMaybeCreateCategoryId( $error->category ),
+			'linter_params' => FormatJson::encode( $error->params, false, FormatJson::ALL_OK ),
+		];
 	}
 
 	/**
@@ -132,7 +120,7 @@ class Database implements IDBAccessObject {
 	 * @return array [ 'deleted' => int|bool, 'added' => int ]
 	 */
 	public function setForPage( $errors ) {
-		$previous = $this->getForPage( self::READ_LATEST );
+		$previous = $this->getForPage();
 		$dbw = wfGetDB( DB_MASTER );
 		if ( !$previous && !$errors ) {
 			return [ 'deleted' => 0, 'added' => 0 ];

@@ -33,13 +33,16 @@ class ApiQueryLintErrors extends ApiQueryBase {
 
 	public function execute() {
 		$params = $this->extractRequestParams();
+		$categoryMgr = CategoryManager::getInstance();
 
 		$this->addTables( 'linter' );
 		if ( $params['category'] !== null ) {
-			$this->addWhereFld( 'linter_cat', $params['category'] );
+			$this->addWhereFld( 'linter_cat', $categoryMgr->getCategoryId( $params['category'] ) );
 		} else {
 			// Limit only to enabled categories (there might be others in the DB)
-			$this->addWhereFld( 'linter_cat', $this->getCategories() );
+			$this->addWhereFld( 'linter_cat', array_values( $categoryMgr->getCategoryIds(
+				$categoryMgr->getCategories()
+			) ) );
 		}
 		$db = $this->getDB();
 		if ( $params['from'] !== null ) {
@@ -90,15 +93,10 @@ class ApiQueryLintErrors extends ApiQueryBase {
 		}
 	}
 
-	private function getCategories() {
-		global $wgLinterCategories;
-		return array_keys( array_filter( $wgLinterCategories ) );
-	}
-
 	public function getAllowedParams() {
 		return [
 			'category' => [
-				ApiBase::PARAM_TYPE => $this->getCategories(),
+				ApiBase::PARAM_TYPE => CategoryManager::getInstance()->getCategories(),
 				ApiBase::PARAM_ISMULTI => true,
 			],
 			'limit' => [
