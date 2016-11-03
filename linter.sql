@@ -11,3 +11,5 @@ CREATE TABLE /*_*/linter (
 
 -- Query by page
 CREATE INDEX /*i*/linter_page ON /*_*/linter (linter_page);
+-- Query by category
+CREATE INDEX /*i*/linter_cat ON /*_*/linter (linter_cat);
