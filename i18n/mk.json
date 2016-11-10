@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"linter-pager-title": "Наслов на страницата",
+	"linter-pager-template": "Преку шаблон?",
+	"linter-pager-obsolete-tag-details": "Застарена HTML-ознака"
+}
