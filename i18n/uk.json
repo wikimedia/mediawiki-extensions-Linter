@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Piramidion"
+		]
+	},
+	"linterrors": "Lint-помилки",
+	"linterrors-subpage": "Lint-помилки: $1",
+	"linter-desc": "Відстежувати помилки Lint із зовнішнього сервісу і показувати їх користувачам",
+	"linter-pager-title": "Назва сторінки",
+	"linter-pager-template": "Через шаблон?",
+	"linter-pager-obsolete-tag-details": "Застарілий HTML-тег",
+	"linter-pager-bogus-image-options-details": "Фальшива опція файлу",
+	"linter-pager-missing-end-tag-details": "Відсутній кінцевий тег",
+	"linter-pager-stripped-tag-details": "Відкритий тег",
+	"linter-category-fostered": "Присвоєний контент",
+	"linter-category-fostered-desc": "Ці сторінки містять присвоєний контент.",
+	"linter-category-obsolete-tag": "Застарілі HTML-теги",
+	"linter-category-obsolete-tag-desc": "Ці сторінки використовують застарілі HTML-теги.",
+	"linter-category-bogus-image-options": "Фальшиві опції файлу",
+	"linter-category-bogus-image-options-desc": "Ці сторінки мають файли з фальшивими опціями.",
+	"linter-category-missing-end-tag": "Відсутній кінцевий тег",
+	"linter-category-missing-end-tag-desc": "На цих сторінках відсутні кінцеві теги.",
+	"linter-category-stripped-tag": "Відкриті теги",
+	"linter-category-stripped-tag-desc": "Ці сторінки мають відкриті теги.",
+	"linker-page-edit": "редагувати",
+	"apihelp-query+linterrors-description": "Отримати список Lint-помилок",
+	"apihelp-query+linterrors-param-category": "Категорія Lint-помилок",
+	"apihelp-query+linterrors-param-limit": "Кількість результатів, на яку надіслати запит",
+	"apihelp-query+linterrors-param-from": "Ідентифікатор Lint, куди треба надсилати запити",
+	"apihelp-query+linterrors-param-namespace": "Включати лише Lint-помилки із вказаних просторів назв",
+	"apihelp-query+linterrors-example-1": "Отримати всі Lint-помилки із категорії застарілих тегів",
+	"apihelp-record-lint-description": "Записати Lint-помилку в базі даних",
+	"apihelp-record-lint-param-data": "Дані про помилку, зашифровані у JSON",
+	"apihelp-record-lint-param-page": "Назва сторінки",
+	"apihelp-record-lint-param-revision": "Ідентифікатор версії, в якій було виявлено помилку"
+}
