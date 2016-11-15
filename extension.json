@@ -55,7 +55,8 @@
 			"obsolete-tag": true,
 			"bogus-image-options": true,
 			"missing-end-tag": true,
-			"stripped-tag": true
+			"stripped-tag": true,
+			"self-closed-tag": true
 		},
 		"LinterSubmitterWhitelist": {
 			"127.0.0.1": true
