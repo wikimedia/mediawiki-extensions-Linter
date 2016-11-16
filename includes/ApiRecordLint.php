@@ -23,6 +23,7 @@ namespace MediaWiki\Linter;
 use ApiBase;
 use FormatJson;
 use IPSet\IPSet;
+use JobQueueGroup;
 use Title;
 
 /**
@@ -61,15 +62,15 @@ class ApiRecordLint extends ApiBase {
 			if ( isset( $info['templateInfo'] ) && $info['templateInfo'] ) {
 				$info['params']['templateInfo'] = $info['templateInfo'];
 			}
-			$errors[] = new LintError(
-				$info['type'],
-				$info['params']
-			);
+			$errors[] = $info;
 		}
 
-		$lintDb = new Database( $title->getArticleID() );
-		$result = $lintDb->setForPage( $errors );
-		$this->getResult()->addValue( $this->getModuleName(), 'success', $result );
+		$job = new RecordLintJob( $title, [
+			'errors' => $errors,
+			'revision' => $params['revision'],
+		] );
+		JobQueueGroup::singleton()->push( $job );
+		$this->getResult()->addValue( $this->getModuleName(), 'success', true );
 	}
 
 	public function isInternal() {

@@ -14,6 +14,7 @@
 		"MediaWiki\\Linter\\LintError": "includes/LintError.php",
 		"MediaWiki\\Linter\\ApiRecordLint": "includes/ApiRecordLint.php",
 		"MediaWiki\\Linter\\ApiQueryLintErrors": "includes/ApiQueryLintErrors.php",
+		"MediaWiki\\Linter\\RecordLintJob": "includes/RecordLintJob.php",
 		"MediaWiki\\Linter\\SpecialLintErrors": "includes/SpecialLintErrors.php",
 		"MediaWiki\\Linter\\LintErrorsPager": "includes/LintErrorsPager.php"
 	},
@@ -32,6 +33,9 @@
 	},
 	"SpecialPages": {
 		"LintErrors": "MediaWiki\\Linter\\SpecialLintErrors"
+	},
+	"JobClasses": {
+		"RecordLintJob": "MediaWiki\\Linter\\RecordLintJob"
 	},
 	"ResourceModules": {
 		"ext.linter.edit": {
