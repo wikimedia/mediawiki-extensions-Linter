@@ -13,6 +13,7 @@
 	"linter-pager-bogus-image-options-details": "Falschdateioption",
 	"linter-pager-missing-end-tag-details": "Fehlendes End-Tag",
 	"linter-pager-stripped-tag-details": "Enthülltes Tag",
+	"linter-pager-self-closed-tag-details": "Selbstschließendes Tag",
 	"linter-category-fostered": "Gepflegter Inhalt",
 	"linter-category-fostered-desc": "Diese Seiten haben gepflegten Inhalt.",
 	"linter-category-obsolete-tag": "Veraltete HTML-Tags",
@@ -23,5 +24,7 @@
 	"linter-category-missing-end-tag-desc": "Diese Seiten haben fehlende End-Tags.",
 	"linter-category-stripped-tag": "Enthüllte Tags",
 	"linter-category-stripped-tag-desc": "Diese Seiten haben enthüllte Tags.",
+	"linter-category-self-closed-tag": "Selbstschließende Tags",
+	"linter-category-self-closed-tag-desc": "Diese Seiten haben selbstschließende Tags.",
 	"linker-page-edit": "bearbeiten"
 }
