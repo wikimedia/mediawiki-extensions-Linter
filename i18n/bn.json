@@ -5,6 +5,9 @@
 		]
 	},
 	"linter-pager-title": "পাতার শিরোনাম",
+	"linter-pager-self-closed-tag-details": "স্ব-বন্ধকৃত ট্যাগ",
+	"linter-category-self-closed-tag": "স্ব-বন্ধকৃত ট্যাগ",
+	"linter-category-self-closed-tag-desc": "এই সব পাতাগুলির স্ব-বন্ধকৃত ট্যাগ আছে।",
 	"linker-page-edit": "সম্পাদনা",
 	"apihelp-record-lint-param-page": "পাতার শিরোনাম"
 }

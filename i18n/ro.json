@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Narlotep1"
+		]
+	},
+	"linter-pager-self-closed-tag-details": "Tag auto-inchis",
+	"linter-category-self-closed-tag": "Tag-uri auto-inchise.",
+	"linter-category-self-closed-tag-desc": "Aceste pagini contin tag-uri auto-inchise."
+}

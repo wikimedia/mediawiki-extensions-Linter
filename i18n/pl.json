@@ -7,8 +7,11 @@
 	"linter-pager-title": "Tytuł strony",
 	"linter-pager-obsolete-tag-details": "Przestarzały znacznik HTML",
 	"linter-pager-missing-end-tag-details": "Brak znacznika zamykającego",
+	"linter-pager-self-closed-tag-details": "Znacznik samozamykający się",
 	"linter-category-obsolete-tag": "Przestarzałe znaczniki HTML",
 	"linter-category-missing-end-tag": "Brak znacznika zamykającego",
 	"linter-category-missing-end-tag-desc": "Tym stronom brakuje znaczników zamykających",
+	"linter-category-self-closed-tag": "Znaczniki samozamykające się",
+	"linter-category-self-closed-tag-desc": "Te strony zawierają znaczniki samozamykające się.",
 	"apihelp-record-lint-param-page": "Tytuł strony"
 }
