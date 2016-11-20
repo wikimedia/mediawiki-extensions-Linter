@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Metalhead64"
+			"Metalhead64",
+			"Kghbln"
 		]
 	},
 	"linterrors": "Lint-Fehler",
@@ -25,6 +26,6 @@
 	"linter-category-stripped-tag": "Enthüllte Tags",
 	"linter-category-stripped-tag-desc": "Diese Seiten haben enthüllte Tags.",
 	"linter-category-self-closed-tag": "Selbstschließende Tags",
-	"linter-category-self-closed-tag-desc": "Diese Seiten haben selbstschließende Tags.",
+	"linter-category-self-closed-tag-desc": "Diese Seiten enthalten selbstschließende Tags.",
 	"linker-page-edit": "bearbeiten"
 }
