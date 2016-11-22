@@ -118,7 +118,7 @@ class ApiQueryLintErrors extends ApiQueryBase {
 
 	public function getExamplesMessages() {
 		return [
-			'action=query&list=linterrors&lecategory=obsolete-tag' =>
+			'action=query&list=linterrors&lntcategory=obsolete-tag' =>
 				'apihelp-query+linterrors-example-1',
 		];
 	}
