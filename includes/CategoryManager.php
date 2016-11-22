@@ -20,73 +20,54 @@
 
 namespace MediaWiki\Linter;
 
-use MediaWiki\MediaWikiServices;
-
 /**
  * Functions for lint error categories
  */
 class CategoryManager {
 
 	/**
-	 * @var array|bool
+	 * Map of category names to their hardcoded
+	 * numerical ids for use in the database
+	 *
+	 * @var int[]
 	 */
-	private $map;
+	private $categoryIds = [
+		'fostered' => 1,
+		'obsolete-tag' => 2,
+		'bogus-image-options' => 3,
+		'missing-end-tag' => 4,
+		'stripped-tag' => 5,
+		'self-closed-tag' => 6,
+	];
+
 	/**
-	 * @var \BagOStuff
+	 * Categories that are configure to be displayed to users
+	 *
+	 * @return string[]
 	 */
-	private $cache;
-	/**
-	 * @var string
-	 */
-	private $cacheKey;
-
-	private function __construct() {
-		$this->cache = MediaWikiServices::getInstance()->getLocalServerObjectCache();
-		$this->cacheKey = $this->cache->makeKey( 'linter', 'categories' );
-	}
-
-	public static function getInstance() {
-		static $self;
-		if ( !$self ) {
-			$self = new self();
-		}
-
-		return $self;
-	}
-
-	public function getCategories() {
+	public function getVisibleCategories() {
 		global $wgLinterCategories;
 		return array_keys( array_filter( $wgLinterCategories ) );
 	}
 
 	/**
-	 * @see getCategoryId
+	 * Whether this category has a hardcoded id and can be
+	 * inserted into the database
+	 *
 	 * @param string $name
-	 * @return bool|int
+	 * @return bool
 	 */
-	public function getAndMaybeCreateCategoryId( $name ) {
-		return $this->getCategoryId( $name, true );
+	public function isKnownCategory( $name ) {
+		return isset( $this->categoryIds[$name] );
 	}
 
 	/**
-	 * @param string $id
-	 * @throws \RuntimeException
-	 * @return int
+	 * @param int $id
+	 * @throws \RuntimeException if we can't find the name for the id
+	 * @return string
 	 */
 	public function getCategoryName( $id ) {
-		if ( !$this->map ) {
-			$this->loadMapFromCache();
-		}
-
-		if ( $this->map ) {
-			$flip = array_flip( $this->map );
-			if ( isset( $flip[$id] ) ) {
-				return $flip[$id];
-			}
-		}
-
-		$this->loadMapFromDB();
-		$flip = array_flip( $this->map );
+		$flip = array_flip( $this->categoryIds );
 		if ( isset( $flip[$id] ) ) {
 			return $flip[$id];
 		}
@@ -94,6 +75,10 @@ class CategoryManager {
 		throw new \RuntimeException( "Could not find name for id $id" );
 	}
 
+	/**
+	 * @param string[] $names
+	 * @return int[]
+	 */
 	public function getCategoryIds( array $names ) {
 		$result = [];
 		foreach ( $names as $name ) {
@@ -103,79 +88,18 @@ class CategoryManager {
 		return $result;
 	}
 
-	private function loadMapFromCache() {
-		$this->map = $this->cache->get( $this->cacheKey );
-	}
-
-	private function saveMapToCache() {
-		$this->cache->set( $this->cacheKey, $this->map );
-	}
-
 	/**
 	 * Get the int id for the category in lint_categories table
 	 *
 	 * @param string $name
-	 * @param bool $create Whether to create an id if missing
-	 * @return int|bool
+	 * @return int
+	 * @throws \RuntimeException if we can't find the id for the name
 	 */
-	public function getCategoryId( $name, $create = false ) {
-		// Check static cache
-		if ( !$this->map ) {
-			$this->loadMapFromCache();
+	public function getCategoryId( $name ) {
+		if ( isset( $this->categoryIds[$name] ) ) {
+			return $this->categoryIds[$name];
 		}
 
-		if ( $this->map && isset( $this->map[$name] ) ) {
-			return $this->map[$name];
-		}
-
-		// Cache miss, hit the DB (replica)
-		$this->loadMapFromDB();
-		if ( isset( $this->map[$name] ) ) {
-			$this->saveMapToCache();
-			return $this->map[$name];
-		}
-
-		if ( !$create ) {
-			return false;
-		}
-
-		// Not in DB, create a new ID
-		$dbw = wfGetDB( DB_MASTER );
-		$dbw->insert(
-			'lint_categories',
-			[ 'lc_name' => $name ],
-			__METHOD__,
-			[ 'IGNORE' ]
-		);
-		if ( $dbw->affectedRows() ) {
-			$id = $dbw->insertId();
-		} else {
-			// Raced out, get the inserted id
-			$id = $dbw->selectField(
-				'lint_categories',
-				'lc_id',
-				[ 'lc_name' => $name ],
-				__METHOD__,
-				[ 'LOCK IN SHARE MODE' ]
-			);
-		}
-
-		$this->map[$name] = (int)$id;
-		$this->saveMapToCache();
-		return $this->map[$name];
+		throw new \RuntimeException( "Cannot find id for '$name'" );
 	}
-
-	private function loadMapFromDB() {
-		$rows = wfGetDB( DB_REPLICA )->select(
-			'lint_categories',
-			[ 'lc_id', 'lc_name' ],
-			[],
-			__METHOD__
-		);
-		$this->map = [];
-		foreach ( $rows as $row ) {
-			$this->map[$row->lc_name] = (int)$row->lc_id;
-		}
-	}
-
 }

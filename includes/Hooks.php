@@ -30,7 +30,6 @@ class Hooks {
 	public static function onLoadExtensionSchemaUpdates( DatabaseUpdater $updater ) {
 		$dir = dirname( __DIR__ );
 		$updater->addExtensionTable( 'linter', "$dir/linter.sql" );
-		$updater->addExtensionTable( 'lint_categories', "$dir/lint_categories.sql" );
 	}
 
 	/**

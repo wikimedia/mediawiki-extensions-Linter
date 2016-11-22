@@ -67,9 +67,8 @@ class Database {
 	 * @return LintError
 	 */
 	public static function makeLintError( $row ) {
-		$categoryMgr = CategoryManager::getInstance();
 		return new LintError(
-			$categoryMgr->getCategoryName( $row->linter_cat ),
+			( new CategoryManager() )->getCategoryName( $row->linter_cat ),
 			$row->linter_params,
 			(int)$row->linter_id
 		);
@@ -104,10 +103,9 @@ class Database {
 	 * @return array
 	 */
 	private function serializeError( LintError $error ) {
-		$categoryMgr = CategoryManager::getInstance();
 		return [
 			'linter_page' => $this->pageId,
-			'linter_cat' => $categoryMgr->getAndMaybeCreateCategoryId( $error->category ),
+			'linter_cat' => ( new CategoryManager() )->getCategoryId( $error->category ),
 			'linter_params' => FormatJson::encode( $error->params, false, FormatJson::ALL_OK ),
 		];
 	}
