@@ -77,4 +77,8 @@ class SpecialLintErrors extends SpecialPage {
 		return 'maintenance';
 	}
 
+	protected function getSubpagesForPrefixSearch() {
+		return ( new CategoryManager() )->getVisibleCategories();
+	}
+
 }
