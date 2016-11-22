@@ -83,9 +83,18 @@ class ApiRecordLint extends ApiBase {
 
 	public function getAllowedParams() {
 		return [
-			'data' => 'string',
-			'page' => 'string',
-			'revision' => 'int',
+			'data' => [
+				ApiBase::PARAM_TYPE => 'string',
+				ApiBase::PARAM_REQUIRED => true,
+			],
+			'page' => [
+				ApiBase::PARAM_TYPE => 'string',
+				ApiBase::PARAM_REQUIRED => true,
+			],
+			'revision' => [
+				ApiBase::PARAM_TYPE => 'integer',
+				ApiBase::PARAM_REQUIRED => true,
+			],
 		];
 	}
 }
