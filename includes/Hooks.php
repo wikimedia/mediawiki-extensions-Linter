@@ -20,8 +20,11 @@
 
 namespace MediaWiki\Linter;
 
+use Content;
 use DatabaseUpdater;
 use EditPage;
+use MWCallableUpdate;
+use WikiPage;
 
 class Hooks {
 	/**
@@ -61,5 +64,24 @@ class Hooks {
 			'wgLinterErrorLocation' => $lintError->location,
 		] );
 		$out->addModules( 'ext.linter.edit' );
+	}
+
+	/**
+	 * Hook: WikiPageDeletionUpdates
+	 *
+	 * Remove entries from the linter table upon page deletion
+	 *
+	 * @param WikiPage $wikiPage
+	 * @param Content $content
+	 * @param array &$updates
+	 */
+	public static function onWikiPageDeletionUpdates( WikiPage $wikiPage,
+		Content $content, array &$updates
+	) {
+		$id = $wikiPage->getId();
+		$updates[] = new MWCallableUpdate( function() use ( $id ) {
+			$database = new Database( $id );
+			$database->setForPage( [] );
+		} );
 	}
 }

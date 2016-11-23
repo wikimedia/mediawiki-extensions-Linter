@@ -23,7 +23,8 @@
 	},
 	"Hooks": {
 		"LoadExtensionSchemaUpdates": "MediaWiki\\Linter\\Hooks::onLoadExtensionSchemaUpdates",
-		"EditFormInitialText": "MediaWiki\\Linter\\Hooks::onEditFormInitialText"
+		"EditFormInitialText": "MediaWiki\\Linter\\Hooks::onEditFormInitialText",
+		"WikiPageDeletionUpdates": "MediaWiki\\Linter\\Hooks::onWikiPageDeletionUpdates"
 	},
 	"APIModules": {
 		"record-lint": "MediaWiki\\Linter\\ApiRecordLint"
