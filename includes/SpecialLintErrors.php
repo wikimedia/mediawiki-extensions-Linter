@@ -34,7 +34,7 @@ class SpecialLintErrors extends SpecialPage {
 	public function execute( $par ) {
 		$this->setHeaders();
 		$this->outputHeader();
-		$cats = CategoryManager::getInstance()->getCategories();
+		$cats = ( new CategoryManager() )->getVisibleCategories();
 		if ( in_array( $par, $cats ) ) {
 			$this->category = $par;
 		}

@@ -33,7 +33,7 @@ class ApiQueryLintErrors extends ApiQueryBase {
 
 	public function execute() {
 		$params = $this->extractRequestParams();
-		$categoryMgr = CategoryManager::getInstance();
+		$categoryMgr = new CategoryManager();
 
 		$this->addTables( 'linter' );
 		if ( $params['category'] !== null ) {
@@ -41,7 +41,7 @@ class ApiQueryLintErrors extends ApiQueryBase {
 		} else {
 			// Limit only to enabled categories (there might be others in the DB)
 			$this->addWhereFld( 'linter_cat', array_values( $categoryMgr->getCategoryIds(
-				$categoryMgr->getCategories()
+				$categoryMgr->getVisibleCategories()
 			) ) );
 		}
 		$db = $this->getDB();
@@ -96,7 +96,7 @@ class ApiQueryLintErrors extends ApiQueryBase {
 	public function getAllowedParams() {
 		return [
 			'category' => [
-				ApiBase::PARAM_TYPE => CategoryManager::getInstance()->getCategories(),
+				ApiBase::PARAM_TYPE => ( new CategoryManager() )->getVisibleCategories(),
 				ApiBase::PARAM_ISMULTI => true,
 			],
 			'limit' => [

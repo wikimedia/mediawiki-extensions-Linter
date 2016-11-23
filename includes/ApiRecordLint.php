@@ -57,7 +57,11 @@ class ApiRecordLint extends ApiBase {
 		) {
 			$this->dieUsage( 'Invalid, non-existent, or outdated title', 'invalid-title' );
 		}
+		$categoryMgr = new CategoryManager();
 		foreach ( $data as $info ) {
+			if ( !$categoryMgr->isKnownCategory( $info['type'] ) ) {
+				continue;
+			}
 			$info['params']['location'] = array_slice( $info['dsr'], 0, 2 );
 			if ( isset( $info['templateInfo'] ) && $info['templateInfo'] ) {
 				$info['params']['templateInfo'] = $info['templateInfo'];
