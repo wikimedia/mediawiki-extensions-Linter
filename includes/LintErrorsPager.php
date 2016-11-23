@@ -130,13 +130,13 @@ class LintErrorsPager extends TablePager {
 
 	public function getFieldNames() {
 		$names = [
-			'title' => $this->msg( 'linter-pager-title' ),
+			'title' => $this->msg( 'linter-pager-title' )->text(),
 		];
 		if ( $this->category !== 'fostered' ) {
 			// TODO: don't hardcode list of stuff with no parameters...?
-			$names['details'] = $this->msg( "linter-pager-{$this->category}-details" );
+			$names['details'] = $this->msg( "linter-pager-{$this->category}-details" )->text();
 		}
-		$names['template'] = $this->msg( "linter-pager-template" );
+		$names['template'] = $this->msg( "linter-pager-template" )->text();
 		return $names;
 	}
 }
