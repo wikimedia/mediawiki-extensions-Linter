@@ -31,7 +31,7 @@
 	"linker-page-title-edit": "Used in a table cell. $1 is a link to the page, $2 is a link to edit that page, the link text is {{msg-mw|linker-page-edit}}",
 	"linker-page-edit": "Link text for edit link in {{msg-mw|linker-page-title-edit}} and {{msg-mw|linker-page-title-edit-template}}\n{{Identical|Edit}}",
 	"apihelp-query+linterrors-description": "{{doc-apihelp-description|query+linterrors}}",
-	"apihelp-query+linterrors-param-category": "{{doc-apihelp-param|query+linterrors|category}}",
+	"apihelp-query+linterrors-param-categories": "{{doc-apihelp-param|query+linterrors|categories}}",
 	"apihelp-query+linterrors-param-limit": "{{doc-apihelp-param|query+linterrors|limit}}",
 	"apihelp-query+linterrors-param-from": "{{doc-apihelp-param|query+linterrors|from}}",
 	"apihelp-query+linterrors-param-namespace": "{{doc-apihelp-param|query+linterrors|namespace}}",

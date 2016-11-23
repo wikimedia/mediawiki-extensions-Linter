@@ -36,14 +36,9 @@ class ApiQueryLintErrors extends ApiQueryBase {
 		$categoryMgr = new CategoryManager();
 
 		$this->addTables( 'linter' );
-		if ( $params['category'] !== null ) {
-			$this->addWhereFld( 'linter_cat', $categoryMgr->getCategoryId( $params['category'] ) );
-		} else {
-			// Limit only to enabled categories (there might be others in the DB)
-			$this->addWhereFld( 'linter_cat', array_values( $categoryMgr->getCategoryIds(
-				$categoryMgr->getVisibleCategories()
-			) ) );
-		}
+		$this->addWhereFld( 'linter_cat', array_values( $categoryMgr->getCategoryIds(
+			$params['categories']
+		) ) );
 		$db = $this->getDB();
 		if ( $params['from'] !== null ) {
 			$this->addWhere( 'linter_id >= ' . $db->addQuotes( $params['from'] ) );
@@ -94,10 +89,13 @@ class ApiQueryLintErrors extends ApiQueryBase {
 	}
 
 	public function getAllowedParams() {
+		$visibleCats = ( new CategoryManager() )->getVisibleCategories();
 		return [
-			'category' => [
-				ApiBase::PARAM_TYPE => ( new CategoryManager() )->getVisibleCategories(),
+			'categories' => [
+				ApiBase::PARAM_TYPE => $visibleCats,
 				ApiBase::PARAM_ISMULTI => true,
+				// Default is to show all categories
+				ApiBase::PARAM_DFLT => implode( '|', $visibleCats ),
 			],
 			'limit' => [
 				ApiBase::PARAM_DFLT => 10,
@@ -118,7 +116,7 @@ class ApiQueryLintErrors extends ApiQueryBase {
 
 	public function getExamplesMessages() {
 		return [
-			'action=query&list=linterrors&lntcategory=obsolete-tag' =>
+			'action=query&list=linterrors&lntcategories=obsolete-tag' =>
 				'apihelp-query+linterrors-example-1',
 		];
 	}

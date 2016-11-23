@@ -29,7 +29,7 @@
 	"linker-page-title-edit": "$1 ($2)",
 	"linker-page-edit": "edit",
 	"apihelp-query+linterrors-description": "Get a list of lint errors",
-	"apihelp-query+linterrors-param-category": "Category of lint errors",
+	"apihelp-query+linterrors-param-categories": "Categories of lint errors",
 	"apihelp-query+linterrors-param-limit": "Number of results to query",
 	"apihelp-query+linterrors-param-from": "Lint ID to start querying from",
 	"apihelp-query+linterrors-param-namespace": "Only include lint errors from the specified namespaces",
