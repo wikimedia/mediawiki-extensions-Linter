@@ -39,15 +39,28 @@ class RecordLintJob extends Job {
 			return true;
 		}
 
+		// [ 'category' => [ 'id' => LintError ] ]
 		$errors = [];
-		foreach ( $this->params['errors'] as $error ) {
-			$errors[] = new LintError(
-				$error['type'],
-				$error['params']
+		foreach ( $this->params['errors'] as $errorInfo ) {
+			$error = new LintError(
+				$errorInfo['type'],
+				$errorInfo['params']
 			);
+			// Use unique id as key to get rid of exact dupes
+			// (e.g. same category of error in same template)
+			$errors[$error->category][$error->id()] = $error;
 		}
 		$lintDb = new Database( $this->title->getArticleID() );
-		$lintDb->setForPage( $errors );
+		$toSet = [];
+		foreach ( $errors as $category => $catErrors ) {
+			// If there are too many errors for a category, trim some of them.
+			if ( count( $catErrors ) > $lintDb::MAX_PER_CAT ) {
+				$catErrors = array_slice( $catErrors, 0, $lintDb::MAX_PER_CAT );
+			}
+			$toSet = array_merge( $toSet, $catErrors );
+		}
+
+		$lintDb->setForPage( $toSet );
 		return true;
 	}
 
