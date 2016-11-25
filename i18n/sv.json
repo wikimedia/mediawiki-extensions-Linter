@@ -6,6 +6,9 @@
 	},
 	"linter-pager-title": "Sidtitel",
 	"linter-pager-template": "Genom en mall?",
+	"linter-pager-self-closed-tag-details": "Självstängande märke",
+	"linter-category-self-closed-tag": "Självstängande märken",
+	"linter-category-self-closed-tag-desc": "Dessa sidor har självstängande märken.",
 	"linker-page-edit": "redigera",
 	"apihelp-record-lint-param-page": "Sidtitel"
 }
