@@ -44,6 +44,7 @@ class RecordLintJob extends Job {
 		foreach ( $this->params['errors'] as $errorInfo ) {
 			$error = new LintError(
 				$errorInfo['type'],
+				$errorInfo['location'],
 				$errorInfo['params']
 			);
 			// Use unique id as key to get rid of exact dupes

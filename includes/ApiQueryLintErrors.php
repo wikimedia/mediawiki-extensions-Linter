@@ -50,6 +50,7 @@ class ApiQueryLintErrors extends ApiQueryBase {
 		$this->addJoinConds( [ 'page' => [ 'INNER JOIN', 'page_id=linter_page' ] ] );
 		$this->addFields( [
 			'linter_id', 'linter_cat', 'linter_params',
+			'linter_start', 'linter_end',
 			'page_namespace', 'page_title',
 		] );
 		// Be explicit about ORDER BY

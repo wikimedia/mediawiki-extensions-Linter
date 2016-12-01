@@ -56,6 +56,7 @@ class LintErrorsPager extends TablePager {
 				[
 					'page_namespace', 'page_title',
 					'linter_id', 'linter_params',
+					'linter_start', 'linter_end',
 				]
 			),
 			'conds' => [ 'linter_cat' => $this->categoryId ],

@@ -54,7 +54,7 @@ class Database {
 	public function getFromId( $id ) {
 		$row = wfGetDB( DB_REPLICA )->selectRow(
 			'linter',
-			[ 'linter_cat', 'linter_params' ],
+			[ 'linter_cat', 'linter_params', 'linter_start', 'linter_end' ],
 			[ 'linter_id' => $id, 'linter_page' => $this->pageId ],
 			__METHOD__
 		);
@@ -76,6 +76,7 @@ class Database {
 	public static function makeLintError( $row ) {
 		return new LintError(
 			( new CategoryManager() )->getCategoryName( $row->linter_cat ),
+			[ (int)$row->linter_start, (int)$row->linter_end ],
 			$row->linter_params,
 			(int)$row->linter_id
 		);
@@ -89,7 +90,10 @@ class Database {
 	public function getForPage() {
 		$rows = wfGetDB( DB_REPLICA )->select(
 			'linter',
-			[ 'linter_id', 'linter_cat', 'linter_params' ],
+			[
+				'linter_id', 'linter_cat', 'linter_start',
+				'linter_end', 'linter_params'
+			],
 			[ 'linter_page' => $this->pageId ],
 			__METHOD__
 		);
@@ -114,6 +118,8 @@ class Database {
 			'linter_page' => $this->pageId,
 			'linter_cat' => ( new CategoryManager() )->getCategoryId( $error->category ),
 			'linter_params' => FormatJson::encode( $error->params, false, FormatJson::ALL_OK ),
+			'linter_start' => $error->location[0],
+			'linter_end' => $error->location[1],
 		];
 	}
 

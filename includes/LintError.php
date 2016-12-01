@@ -53,18 +53,19 @@ class LintError {
 
 	/**
 	 * @param string $category
+	 * @param int[] $location [ start, end ]
 	 * @param string|array $params JSON string or already decoded array
 	 * @param int $lintId linter_id
 	 */
-	public function __construct( $category, $params, $lintId = 0 ) {
+	public function __construct( $category, $location, $params, $lintId = 0 ) {
 		$this->category = $category;
 		if ( is_string( $params ) ) {
 			$params = FormatJson::decode( $params, true );
 		}
 		$this->params = $params;
 		$this->lintId = $lintId;
+		$this->location = $location;
 		// Convenient accessors for all errors
-		$this->location = $params['location'];
 		$this->templateInfo = isset( $params['templateInfo'] )
 			? $params['templateInfo'] : null;
 	}
@@ -75,7 +76,8 @@ class LintError {
 	 */
 	public function equals( LintError $other ) {
 		return $this->category === $other->category
-			&& $this->params === $other->params;
+			&& $this->params === $other->params
+			&& $this->location === $other->location;
 	}
 
 	/**
@@ -97,7 +99,6 @@ class LintError {
 	public function getExtraParams() {
 		$params = $this->params;
 		unset( $params['templateInfo'] );
-		unset( $params['location'] );
 
 		return $params;
 	}

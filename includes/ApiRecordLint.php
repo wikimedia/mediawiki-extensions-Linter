@@ -62,7 +62,7 @@ class ApiRecordLint extends ApiBase {
 			if ( !$categoryMgr->isKnownCategory( $info['type'] ) ) {
 				continue;
 			}
-			$info['params']['location'] = array_slice( $info['dsr'], 0, 2 );
+			$info['location'] = array_slice( $info['dsr'], 0, 2 );
 			if ( isset( $info['templateInfo'] ) && $info['templateInfo'] ) {
 				$info['params']['templateInfo'] = $info['templateInfo'];
 			}

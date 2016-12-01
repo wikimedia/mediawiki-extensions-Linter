@@ -5,6 +5,9 @@ CREATE TABLE /*_*/linter (
 	linter_page int UNSIGNED not null,
 	-- error category (see CategoryManager::$categoryIds)
 	linter_cat int UNSIGNED not null,
+	-- start and end positions of where the error is located
+	linter_start int UNSIGNED not null,
+	linter_end int UNSIGNED not null,
 	-- extra parameters about the error, JSON encoded
 	linter_params blob NOT NULL
 ) /*$wgDBTableOptions*/;
@@ -13,3 +16,4 @@ CREATE TABLE /*_*/linter (
 CREATE INDEX /*i*/linter_page ON /*_*/linter (linter_page);
 -- Query by category
 CREATE INDEX /*i*/linter_cat ON /*_*/linter (linter_cat);
+CREATE UNIQUE INDEX /*i*/linter_cat_page_position ON /*_*/linter (linter_cat, linter_page, linter_start, linter_end);
