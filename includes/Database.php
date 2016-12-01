@@ -128,7 +128,7 @@ class Database {
 	 * database
 	 *
 	 * @param LintError[] $errors
-	 * @return array [ 'deleted' => int|bool, 'added' => int ]
+	 * @return array [ 'deleted' => int, 'added' => int ]
 	 */
 	public function setForPage( $errors ) {
 		$previous = $this->getForPage();
@@ -144,7 +144,7 @@ class Database {
 				[ 'linter_page' => $this->pageId ],
 				__METHOD__
 			);
-			return [ 'deleted' => true, 'added' => 0 ];
+			return [ 'deleted' => count( $previous ), 'added' => 0 ];
 		} else {
 			$toInsert = [];
 			$toDelete = $previous;
