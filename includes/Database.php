@@ -130,7 +130,7 @@ class Database {
 		if ( !$previous && !$errors ) {
 			return [ 'deleted' => 0, 'added' => 0 ];
 		} elseif ( !$previous && $errors ) {
-			$toInsert = $errors;
+			$toInsert = array_values( $errors );
 			$toDelete = [];
 		} elseif ( $previous && !$errors ) {
 			$dbw->delete(
