@@ -174,10 +174,13 @@ class Database {
 		}
 
 		if ( $toInsert ) {
+			// Insert into db, ignoring any duplicate key errors
+			// since they're the same lint error
 			$dbw->insert(
 				'linter',
 				array_map( [ $this, 'serializeError' ], $toInsert ),
-				__METHOD__
+				__METHOD__,
+				[ 'IGNORE' ]
 			);
 		}
 
