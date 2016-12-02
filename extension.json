@@ -21,6 +21,9 @@
 	"MessagesDirs": {
 		"Linter": "i18n"
 	},
+	"ExtensionMessagesFiles": {
+		"LinterAlias": "Linter.alias.php"
+	},
 	"Hooks": {
 		"LoadExtensionSchemaUpdates": "MediaWiki\\Linter\\Hooks::onLoadExtensionSchemaUpdates",
 		"EditFormInitialText": "MediaWiki\\Linter\\Hooks::onEditFormInitialText",
