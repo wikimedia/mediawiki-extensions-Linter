@@ -71,16 +71,6 @@ class LintError {
 	}
 
 	/**
-	 * @param LintError $other
-	 * @return bool
-	 */
-	public function equals( LintError $other ) {
-		return $this->category === $other->category
-			&& $this->params === $other->params
-			&& $this->location === $other->location;
-	}
-
-	/**
 	 * Unique id to identify this error, for internal
 	 * purposes
 	 *
