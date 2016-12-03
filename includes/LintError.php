@@ -77,7 +77,8 @@ class LintError {
 	 * @return string
 	 */
 	public function id() {
-		return $this->category . FormatJson::encode( $this->params );
+		return $this->category . ",{$this->location[0]},{$this->location[1]},"
+			. FormatJson::encode( $this->params );
 	}
 
 	/**
