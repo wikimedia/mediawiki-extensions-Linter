@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Cwlin0416"
+			"Cwlin0416",
+			"Liuxinyu970226"
 		]
 	},
 	"linter-pager-title": "頁面標題",
 	"linter-pager-missing-end-tag-details": "缺少結束標籤",
 	"linter-category-missing-end-tag": "缺少結束標籤",
+	"linker-page-edit": "編輯",
 	"apihelp-record-lint-param-page": "頁面標題"
 }
