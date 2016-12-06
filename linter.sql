@@ -14,6 +14,5 @@ CREATE TABLE /*_*/linter (
 
 -- Query by page
 CREATE INDEX /*i*/linter_page ON /*_*/linter (linter_page);
--- Query by category
-CREATE INDEX /*i*/linter_cat ON /*_*/linter (linter_cat);
+-- Unique index for lint errors, also covers linter_cat for query by category
 CREATE UNIQUE INDEX /*i*/linter_cat_page_position ON /*_*/linter (linter_cat, linter_page, linter_start, linter_end);
