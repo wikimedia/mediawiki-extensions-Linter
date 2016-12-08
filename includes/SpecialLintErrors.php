@@ -63,11 +63,12 @@ class SpecialLintErrors extends SpecialPage {
 		$linkRenderer = $this->getLinkRenderer();
 		$html = Html::openElement( 'ul' ) . "\n";
 		sort( $cats );
+		$totals = ( new Database( 0 ) )->getTotals();
 		foreach ( $cats as $cat ) {
 			$html .= Html::rawElement( 'li', [], $linkRenderer->makeKnownLink(
 				$this->getPageTitle( $cat ),
 				$this->msg( "linter-category-$cat" )->text()
-			) ) . "\n";
+			) . ' ' . $this->msg( "linter-numerrors" )->numParams( $totals[$cat] )->escaped() ) . "\n";
 		}
 		$html .= Html::closeElement( 'ul' );
 		$this->getOutput()->addHTML( $html );

@@ -26,6 +26,7 @@
 	"linter-category-stripped-tag-desc": "These pages have stripped tags.",
 	"linter-category-self-closed-tag": "Self-closed tags",
 	"linter-category-self-closed-tag-desc": "These pages have self-closed tags.",
+	"linter-numerrors": "($1 {{PLURAL:$1|error|errors}})",
 	"linker-page-title-edit": "$1 ($2)",
 	"linker-page-edit": "edit",
 	"apihelp-query+linterrors-description": "Get a list of lint errors",

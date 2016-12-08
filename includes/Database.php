@@ -39,10 +39,16 @@ class Database {
 	private $pageId;
 
 	/**
+	 * @var CategoryManager
+	 */
+	private $categoryManager;
+
+	/**
 	 * @param int $pageId
 	 */
 	public function __construct( $pageId ) {
 		$this->pageId = $pageId;
+		$this->categoryManager = new CategoryManager();
 	}
 
 	/**
@@ -116,7 +122,7 @@ class Database {
 	private function serializeError( LintError $error ) {
 		return [
 			'linter_page' => $this->pageId,
-			'linter_cat' => ( new CategoryManager() )->getCategoryId( $error->category ),
+			'linter_cat' => $this->categoryManager->getCategoryId( $error->category ),
 			'linter_params' => FormatJson::encode( $error->params, false, FormatJson::ALL_OK ),
 			'linter_start' => $error->location[0],
 			'linter_end' => $error->location[1],
@@ -188,6 +194,27 @@ class Database {
 			'deleted' => count( $toDelete ),
 			'added' => count( $toInsert ),
 		];
+	}
+
+	/**
+	 * @return int[]
+	 */
+	public function getTotals() {
+		$rows = wfGetDB( DB_SLAVE )->select(
+			'linter',
+			[ 'linter_cat', 'COUNT(*) AS count' ],
+			[],
+			__METHOD__,
+			[ 'GROUP BY' => 'linter_cat' ]
+		);
+
+		// Initialize zero values
+		$ret = array_fill_keys( $this->categoryManager->getVisibleCategories(), 0 );
+		foreach ( $rows as $row ) {
+			$ret[$this->categoryManager->getCategoryName( $row->linter_cat )] = (int)$row->count;
+		}
+
+		return $ret;
 	}
 
 }
