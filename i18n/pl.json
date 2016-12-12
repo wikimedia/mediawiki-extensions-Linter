@@ -13,5 +13,6 @@
 	"linter-category-missing-end-tag-desc": "Tym stronom brakuje znaczników zamykających",
 	"linter-category-self-closed-tag": "Znaczniki samozamykające się",
 	"linter-category-self-closed-tag-desc": "Te strony zawierają znaczniki samozamykające się.",
+	"linter-numerrors": "($1 {{PLURAL:$1|błąd|błędy|błędów}})",
 	"apihelp-record-lint-param-page": "Tytuł strony"
 }

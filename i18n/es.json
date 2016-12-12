@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Fitoschido"
+			"Fitoschido",
+			"Macofe"
 		]
 	},
 	"linterrors": "Errores de comprobador",
@@ -20,9 +21,9 @@
 	"linter-category-bogus-image-options-desc": "Estas páginas contienen archivos con opciones inútiles.",
 	"linter-category-missing-end-tag": "Etiqueta de cierre faltante",
 	"linter-category-missing-end-tag-desc": "Estas páginas contienen etiquetas sin su correspondiente cierre.",
+	"linter-numerrors": "($1 {{PLURAL:$1|error|errores}})",
 	"linker-page-edit": "editar",
 	"apihelp-query+linterrors-description": "Obtener lista de errores de comprobador",
-	"apihelp-query+linterrors-param-category": "Categoría de errores de comprobador",
 	"apihelp-query+linterrors-param-limit": "Cantidad de resultados que consultar",
 	"apihelp-query+linterrors-param-from": "Id. de comprobador a partir del cual comenzar una consulta",
 	"apihelp-query+linterrors-param-namespace": "Incluir solo errores de comprobador de los espacios de nombres especificados",

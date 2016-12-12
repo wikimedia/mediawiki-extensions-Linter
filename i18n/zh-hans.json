@@ -26,6 +26,7 @@
 	"linter-category-stripped-tag-desc": "这些页面有剥去的标签。",
 	"linter-category-self-closed-tag": "自封闭标签",
 	"linter-category-self-closed-tag-desc": "这些页面有自封闭标签。",
+	"linter-numerrors": "（$1个{{PLURAL:$1|错误}}）",
 	"linker-page-edit": "编辑",
 	"apihelp-query+linterrors-description": "获取lint错误的列表",
 	"apihelp-query+linterrors-param-categories": "lint错误的分类",

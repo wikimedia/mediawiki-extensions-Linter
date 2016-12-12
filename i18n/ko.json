@@ -10,6 +10,7 @@
 	"linter-category-missing-end-tag": "존재하지 않는 종료 태그",
 	"linter-category-self-closed-tag": "스스로 닫는 태그",
 	"linter-category-self-closed-tag-desc": "이 문서들에는 스스로 닫는 태그가 있습니다.",
+	"linter-numerrors": "($1개의 {{PLURAL:$1|오류}})",
 	"linker-page-edit": "편집",
 	"apihelp-record-lint-param-page": "문서 제목"
 }

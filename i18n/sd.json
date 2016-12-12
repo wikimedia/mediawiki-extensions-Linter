@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mehtab ahmed"
+		]
+	},
+	"linter-numerrors": "($1 {{PLURAL:$1|خرابي|خرابيون}})"
+}

@@ -8,6 +8,7 @@
 	"linter-pager-self-closed-tag-details": "Tag auto-chiusi",
 	"linter-category-self-closed-tag": "Tag auto-chiusi",
 	"linter-category-self-closed-tag-desc": "Queste pagine hanno tag auto-chiusi.",
+	"linter-numerrors": "($1 {{PLURAL:$1|errore|errori}})",
 	"linker-page-edit": "modifica",
 	"apihelp-record-lint-param-page": "Titolo della pagina"
 }

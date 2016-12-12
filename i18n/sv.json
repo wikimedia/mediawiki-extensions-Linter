@@ -9,6 +9,7 @@
 	"linter-pager-self-closed-tag-details": "Självstängande märke",
 	"linter-category-self-closed-tag": "Självstängande märken",
 	"linter-category-self-closed-tag-desc": "Dessa sidor har självstängande märken.",
+	"linter-numerrors": "($1 {{PLURAL:$1|fel}})",
 	"linker-page-edit": "redigera",
 	"apihelp-record-lint-param-page": "Sidtitel"
 }

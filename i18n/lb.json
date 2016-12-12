@@ -17,6 +17,7 @@
 	"linter-category-obsolete-tag-desc": "Dës Säite benotze vereelzt HTML-Tagen.",
 	"linter-category-missing-end-tag": "Schluss-Tag feelt",
 	"linter-category-missing-end-tag-desc": "Op dëse Säite feelen Schluss-Tagen.",
+	"linter-numerrors": "({{PLURAL:$1|Ee|$1}} Feeler)",
 	"linker-page-edit": "änneren",
 	"apihelp-query+linterrors-description": "Eng Lëscht vun de Lint-Feeler kréien",
 	"apihelp-query+linterrors-param-categories": "Kategorie vu Lint-Feeleren",
