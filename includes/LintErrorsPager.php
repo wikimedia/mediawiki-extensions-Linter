@@ -114,7 +114,7 @@ class LintErrorsPager extends TablePager {
 				$templateTitle = Title::newFromText( $templateName, NS_TEMPLATE );
 				if ( !$templateTitle ) {
 					// Shouldn't be possible...???
-					return '&mdash';
+					return '&mdash;';
 				}
 
 				return $this->linkRenderer->makeLink(
