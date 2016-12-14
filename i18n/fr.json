@@ -28,6 +28,7 @@
 	"linter-category-stripped-tag-desc": "Ces pages ont des balises vides.",
 	"linter-category-self-closed-tag": "Balises auto-fermantes",
 	"linter-category-self-closed-tag-desc": "Ces pages ont des balises auto-fermantes.",
+	"linter-numerrors": "($1 {{PLURAL:$1|erreur|erreurs}})",
 	"linker-page-edit": "modifier",
 	"apihelp-query+linterrors-description": "Obtenir une liste des erreurs lint",
 	"apihelp-query+linterrors-param-categories": "Catégories d'erreurs lint",
