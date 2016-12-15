@@ -31,6 +31,8 @@
 	"linter-numerrors": "Shown after a category link to indicate how many errors are in that category. $1 is the number of errors, and can be used for PLURAL.\n{{Identical|Error}}",
 	"linker-page-title-edit": "Used in a table cell. $1 is a link to the page, $2 is a link to edit that page, the link text is {{msg-mw|linker-page-edit}}",
 	"linker-page-edit": "Link text for edit link in {{msg-mw|linker-page-title-edit}} and {{msg-mw|linker-page-title-edit-template}}\n{{Identical|Edit}}",
+	"linter-heading-errors": "Heading on [[Special:LintErrors]]",
+	"linter-heading-warnings": "Heading on [[Special:LintErrors]]",
 	"apihelp-query+linterrors-description": "{{doc-apihelp-description|query+linterrors}}",
 	"apihelp-query+linterrors-param-categories": "{{doc-apihelp-param|query+linterrors|categories}}",
 	"apihelp-query+linterrors-param-limit": "{{doc-apihelp-param|query+linterrors|limit}}",

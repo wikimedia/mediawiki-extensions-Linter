@@ -25,6 +25,9 @@ namespace MediaWiki\Linter;
  */
 class CategoryManager {
 
+	const ERROR = 'error';
+	const WARNING = 'warning';
+
 	/**
 	 * Map of category names to their hardcoded
 	 * numerical ids for use in the database
@@ -41,13 +44,51 @@ class CategoryManager {
 	];
 
 	/**
+	 * @var string[]
+	 */
+	private $errors = [];
+
+	/**
+	 * @var string[]
+	 */
+	private $warnings = [];
+
+	public function __construct() {
+		global $wgLinterCategories;
+		foreach ( $wgLinterCategories as $name => $info ) {
+			if ( $info['enabled'] ) {
+				if ( $info['severity'] === self::ERROR ) {
+					$this->errors[] = $name;
+				} elseif ( $info['severity'] === self::WARNING ) {
+					$this->warnings[] = $name;
+				}
+			}
+		}
+		sort( $this->errors );
+		sort( $this->warnings );
+	}
+
+	/**
+	 * @return string[]
+	 */
+	public function getErrors() {
+		return $this->errors;
+	}
+
+	/**
+	 * @return string[]
+	 */
+	public function getWarnings() {
+		return $this->warnings;
+	}
+
+	/**
 	 * Categories that are configure to be displayed to users
 	 *
 	 * @return string[]
 	 */
 	public function getVisibleCategories() {
-		global $wgLinterCategories;
-		return array_keys( array_filter( $wgLinterCategories ) );
+		return array_merge( $this->errors, $this->warnings );
 	}
 
 	/**

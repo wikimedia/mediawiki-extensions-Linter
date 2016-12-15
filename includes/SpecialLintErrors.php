@@ -34,14 +34,14 @@ class SpecialLintErrors extends SpecialPage {
 	public function execute( $par ) {
 		$this->setHeaders();
 		$this->outputHeader();
-		$cats = ( new CategoryManager() )->getVisibleCategories();
-		if ( in_array( $par, $cats ) ) {
+		$catManager = new CategoryManager();
+		if ( in_array( $par, $catManager->getVisibleCategories() ) ) {
 			$this->category = $par;
 		}
 
 		if ( !$this->category ) {
 			$this->addHelpLink( 'Help:Extension:Linter' );
-			$this->showCategoryList( $cats );
+			$this->showCategoryListings( $catManager );
 		} else {
 			$this->addHelpLink( "Help:Extension:Linter/{$this->category}" );
 			$out = $this->getOutput();
@@ -53,17 +53,31 @@ class SpecialLintErrors extends SpecialPage {
 			$out->addBacklinkSubtitle( $this->getPageTitle() );
 			$out->addWikiMsg( "linter-category-{$this->category}-desc" );
 			$pager = new LintErrorsPager(
-				$this->getContext(), $this->category, $this->getLinkRenderer()
+				$this->getContext(), $this->category, $this->getLinkRenderer(),
+				$catManager
 			);
 			$out->addParserOutput( $pager->getFullOutput() );
 		}
 	}
 
-	private function showCategoryList( array $cats ) {
+	private function showCategoryListings( CategoryManager $catManager ) {
+		$totals = ( new Database( 0 ) )->getTotals();
+
+		$out = $this->getOutput();
+		$out->addHTML( Html::element( 'h2', [], $this->msg( 'linter-heading-errors' )->text() ) );
+		$out->addHTML( $this->buildCategoryList( $catManager->getErrors(), $totals ) );
+		$out->addHTML( Html::element( 'h2', [], $this->msg( 'linter-heading-warnings' )->text() ) );
+		$out->addHTML( $this->buildCategoryList( $catManager->getWarnings(), $totals ) );
+	}
+
+	/**
+	 * @param string[] $cats
+	 * @param int[] $totals name => count
+	 * @return string
+	 */
+	private function buildCategoryList( array $cats, array $totals ) {
 		$linkRenderer = $this->getLinkRenderer();
 		$html = Html::openElement( 'ul' ) . "\n";
-		sort( $cats );
-		$totals = ( new Database( 0 ) )->getTotals();
 		foreach ( $cats as $cat ) {
 			$html .= Html::rawElement( 'li', [], $linkRenderer->makeKnownLink(
 				$this->getPageTitle( $cat ),
@@ -71,7 +85,8 @@ class SpecialLintErrors extends SpecialPage {
 			) . ' ' . $this->msg( "linter-numerrors" )->numParams( $totals[$cat] )->escaped() ) . "\n";
 		}
 		$html .= Html::closeElement( 'ul' );
-		$this->getOutput()->addHTML( $html );
+
+		return $html;
 	}
 
 	public function getGroupName() {
