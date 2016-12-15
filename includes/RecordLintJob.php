@@ -21,6 +21,7 @@
 namespace MediaWiki\Linter;
 
 use Job;
+use MediaWiki\MediaWikiServices;
 use Title;
 
 class RecordLintJob extends Job {
@@ -62,7 +63,34 @@ class RecordLintJob extends Job {
 		}
 
 		$lintDb->setForPage( $toSet );
+		$this->updateStats( $lintDb );
+
 		return true;
+	}
+
+	/**
+	 * Send stats to statsd
+	 *
+	 * @param Database $lintDb
+	 */
+	protected function updateStats( Database $lintDb ) {
+		global $wgLinterStatsdSampleFactor;
+
+		if ( $wgLinterStatsdSampleFactor === false ) {
+			// Not enabled at all
+			return;
+		} elseif ( mt_rand( 1, $wgLinterStatsdSampleFactor ) != 1 ) {
+			return;
+		}
+
+		$totals = $lintDb->getTotals();
+
+		$stats = MediaWikiServices::getInstance()->getStatsdDataFactory();
+		foreach ( $totals as $name => $count ) {
+			$stats->gauge( "linter.category.$name", $count );
+		}
+
+		$stats->gauge( "linter.totals", array_sum( $totals ) );
 	}
 
 }

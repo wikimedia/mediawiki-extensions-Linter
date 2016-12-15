@@ -64,7 +64,8 @@
 		},
 		"LinterSubmitterWhitelist": {
 			"127.0.0.1": true
-		}
+		},
+		"LinterStatsdSampleFactor": false
 	},
 	"manifest_version": 1
 }
