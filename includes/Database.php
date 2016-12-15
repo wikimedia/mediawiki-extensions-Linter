@@ -199,11 +199,19 @@ class Database {
 	/**
 	 * @return int[]
 	 */
-	public function getTotals() {
+	public function getTotalsForPage() {
+		return $this->getTotals( [ 'linter_page' => $this->pageId ] );
+	}
+
+	/**
+	 * @param array $conds Query conditions
+	 * @return int[]
+	 */
+	public function getTotals( $conds = [] ) {
 		$rows = wfGetDB( DB_SLAVE )->select(
 			'linter',
 			[ 'linter_cat', 'COUNT(*) AS count' ],
-			[],
+			$conds,
 			__METHOD__,
 			[ 'GROUP BY' => 'linter_cat' ]
 		);

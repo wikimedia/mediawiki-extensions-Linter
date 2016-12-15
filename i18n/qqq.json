@@ -33,6 +33,7 @@
 	"linker-page-edit": "Link text for edit link in {{msg-mw|linker-page-title-edit}} and {{msg-mw|linker-page-title-edit-template}}\n{{Identical|Edit}}",
 	"linter-heading-errors": "Heading on [[Special:LintErrors]]\n{{Identical|Error}}",
 	"linter-heading-warnings": "Heading on [[Special:LintErrors]]\n{{Identical|Warning}}",
+	"pageinfo-linter": "Heading on ?action=info for a page if it has lint errors",
 	"apihelp-query+linterrors-description": "{{doc-apihelp-description|query+linterrors}}",
 	"apihelp-query+linterrors-param-categories": "{{doc-apihelp-param|query+linterrors|categories}}",
 	"apihelp-query+linterrors-param-limit": "{{doc-apihelp-param|query+linterrors|limit}}",
