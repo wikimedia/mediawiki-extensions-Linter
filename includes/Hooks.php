@@ -20,6 +20,7 @@
 
 namespace MediaWiki\Linter;
 
+use ApiQuerySiteInfo;
 use Content;
 use DatabaseUpdater;
 use EditPage;
@@ -83,5 +84,21 @@ class Hooks {
 			$database = new Database( $id );
 			$database->setForPage( [] );
 		}, __METHOD__ );
+	}
+
+	/**
+	 * Hook: APIQuerySiteInfoGeneralInfo
+	 *
+	 * Expose categories via action=query&meta=siteinfo
+	 *
+	 * @param ApiQuerySiteInfo $api
+	 * @param array &$data
+	 */
+	public static function onAPIQuerySiteInfoGeneralInfo( ApiQuerySiteInfo $api, array &$data ) {
+		$catManager = new CategoryManager();
+		$data['linter'] = [
+			'errors' => $catManager->getErrors(),
+			'warnings' => $catManager->getWarnings(),
+		];
 	}
 }
