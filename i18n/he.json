@@ -1,8 +1,42 @@
 {
 	"@metadata": {
 		"authors": [
-			"Guycn2"
+			"Guycn2",
+			"Amire80"
 		]
 	},
-	"linter-pager-title": "כותרת הדף"
+	"linterrors": "שגיאות ניקיון",
+	"linterrors-subpage": "שגיאות ניקיון: $1",
+	"linter-desc": "מעקב אחר שגיאות שנמצאו בבדיקת ניקיון על־ידי שירות חיצוני והצגתן למשתמשים",
+	"linter-pager-title": "כותרת הדף",
+	"linter-pager-template": "דרך תבנית?",
+	"linter-pager-obsolete-tag-details": "תג HTML מיושן",
+	"linter-pager-bogus-image-options-details": "אפשרות קובץ שגויה",
+	"linter-pager-missing-end-tag-details": "תג מסיים חסר",
+	"linter-pager-stripped-tag-details": "תג ערום",
+	"linter-pager-self-closed-tag-details": "תג שסוגר את עצמו",
+	"linter-category-fostered": "תוכן מאומץ",
+	"linter-category-fostered-desc": "בדפים האלה יש תוכן מאומץ.",
+	"linter-category-obsolete-tag": "תגי HTML מיושנים",
+	"linter-category-obsolete-tag-desc": "בדפים האלה יש תגי HTML מיושנים.",
+	"linter-category-bogus-image-options": "אפשרויות קובץ שגויות",
+	"linter-category-bogus-image-options-desc": "בדפים האלה יש אפשרויות קובץ שגויות.",
+	"linter-category-missing-end-tag": "תג מסיים חסר",
+	"linter-category-missing-end-tag-desc": "בדפים האלה יש תג מסיים חסר.",
+	"linter-category-stripped-tag": "תגים ערומים",
+	"linter-category-stripped-tag-desc": "בדפים האלה יש תגים ערומים.",
+	"linter-category-self-closed-tag": "תגים שסוגרים את עצמם",
+	"linter-category-self-closed-tag-desc": "בדפים האלה יש תגים שסוגרים את עצמם.",
+	"linter-numerrors": "({{PLURAL:$1|שגיאה אחת|$1 שגיאות}})",
+	"linker-page-edit": "עריכה",
+	"apihelp-query+linterrors-description": "קבלת רשימת שגיאות ניקיון",
+	"apihelp-query+linterrors-param-categories": "סוגים של שגיאות ניקיון",
+	"apihelp-query+linterrors-param-limit": "מספר התוצאות לשאילתה",
+	"apihelp-query+linterrors-param-from": "מאיזה מזהה ניקיון להתחיל את השאילתה",
+	"apihelp-query+linterrors-param-namespace": "לכלול רק שגיאות ניקיון ממרחבי שם שצוינו",
+	"apihelp-query+linterrors-example-1": "קבלת כל שגיאות הניקיון מקטגוריית תג מיושן",
+	"apihelp-record-lint-description": "רישום שגיאת ניקיון במסד הנתונים",
+	"apihelp-record-lint-param-data": "נתונים מקודדים ב־JSON על השגיאה",
+	"apihelp-record-lint-param-page": "כותרת דף",
+	"apihelp-record-lint-param-revision": "מזהה גרסה שבה נמצאה השגיאה"
 }

@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Valtlait"
+			"Valtlait",
+			"Nike"
 		]
 	},
 	"linter-pager-title": "Sivun otsikko",
+	"linter-numerrors": "($1 {{PLURAL:$1|virhe|virhettä}})",
 	"linker-page-edit": "muokkaa",
 	"apihelp-record-lint-param-page": "Sivun otsikko"
 }
