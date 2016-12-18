@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robin van der Vliet"
+		]
+	},
+	"linter-numerrors": "($1 {{PLURAL:$1|eraro|eraroj}})"
+}
