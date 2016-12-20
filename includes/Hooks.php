@@ -82,6 +82,6 @@ class Hooks {
 		$updates[] = new MWCallableUpdate( function() use ( $id ) {
 			$database = new Database( $id );
 			$database->setForPage( [] );
-		} );
+		}, __METHOD__ );
 	}
 }
