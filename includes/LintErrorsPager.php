@@ -41,9 +41,11 @@ class LintErrorsPager extends TablePager {
 	 */
 	private $linkRenderer;
 
-	public function __construct( IContextSource $context, $category, LinkRenderer $linkRenderer ) {
+	public function __construct( IContextSource $context, $category, LinkRenderer $linkRenderer,
+		CategoryManager $catManager
+	) {
 		$this->category = $category;
-		$this->categoryId = ( new CategoryManager() )->getCategoryId( $this->category );
+		$this->categoryId = $catManager->getCategoryId( $this->category );
 		$this->linkRenderer = $linkRenderer;
 		parent::__construct( $context );
 	}

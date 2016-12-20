@@ -55,12 +55,30 @@
 	},
 	"config": {
 		"LinterCategories": {
-			"fostered": true,
-			"obsolete-tag": true,
-			"bogus-image-options": true,
-			"missing-end-tag": true,
-			"stripped-tag": true,
-			"self-closed-tag": true
+			"fostered": {
+				"severity": "error",
+				"enabled": true
+			},
+			"obsolete-tag": {
+				"severity": "warning",
+				"enabled": true
+			},
+			"bogus-image-options": {
+				"severity": "error",
+				"enabled": true
+			},
+			"missing-end-tag": {
+				"severity": "error",
+				"enabled": true
+			},
+			"stripped-tag": {
+				"severity": "error",
+				"enabled": true
+			},
+			"self-closed-tag": {
+				"severity": "warning",
+				"enabled": true
+			}
 		},
 		"LinterSubmitterWhitelist": {
 			"127.0.0.1": true
