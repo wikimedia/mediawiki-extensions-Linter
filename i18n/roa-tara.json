@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"linter-heading-errors": "Errore",
+	"linter-heading-warnings": "Avvise"
+}

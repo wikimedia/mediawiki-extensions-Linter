@@ -28,6 +28,8 @@
 	"linter-category-self-closed-tag-desc": "Овие страници имаат самозатворени ознаки.",
 	"linter-numerrors": "($1 {{PLURAL:$1|грешка|грешки}})",
 	"linker-page-edit": "уреди",
+	"linter-heading-errors": "Грешки",
+	"linter-heading-warnings": "Предупредувања",
 	"apihelp-query+linterrors-description": "Добивање список на грешки од пречистувачот",
 	"apihelp-query+linterrors-param-categories": "Категории на грешки од пречистувачот",
 	"apihelp-query+linterrors-param-limit": "Број на ставки во исходот од барањето",

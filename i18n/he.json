@@ -29,6 +29,8 @@
 	"linter-category-self-closed-tag-desc": "בדפים האלה יש תגים שסוגרים את עצמם.",
 	"linter-numerrors": "({{PLURAL:$1|שגיאה אחת|$1 שגיאות}})",
 	"linker-page-edit": "עריכה",
+	"linter-heading-errors": "שגיאות",
+	"linter-heading-warnings": "אזהרות",
 	"apihelp-query+linterrors-description": "קבלת רשימת שגיאות ניקיון",
 	"apihelp-query+linterrors-param-categories": "סוגים של שגיאות ניקיון",
 	"apihelp-query+linterrors-param-limit": "מספר התוצאות לשאילתה",

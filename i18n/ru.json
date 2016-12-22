@@ -7,5 +7,7 @@
 	"linter-pager-title": "Заголовок страницы",
 	"linter-pager-template": "Через шаблон?",
 	"linker-page-edit": "править",
+	"linter-heading-errors": "Ошибки",
+	"linter-heading-warnings": "Предупреждения",
 	"apihelp-record-lint-param-page": "Заголовок страницы"
 }

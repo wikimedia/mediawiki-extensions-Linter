@@ -27,6 +27,8 @@
 	"linter-category-self-closed-tag-desc": "Estas páginas contienen etiquetas autocerradas.",
 	"linter-numerrors": "($1 {{PLURAL:$1|error|errores}})",
 	"linker-page-edit": "editar",
+	"linter-heading-errors": "Errores",
+	"linter-heading-warnings": "Advertencias",
 	"apihelp-query+linterrors-description": "Obtener lista de errores de comprobador",
 	"apihelp-query+linterrors-param-limit": "Cantidad de resultados que consultar",
 	"apihelp-query+linterrors-param-from": "Id. de comprobador a partir del cual comenzar una consulta",

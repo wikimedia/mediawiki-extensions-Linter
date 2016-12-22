@@ -14,5 +14,7 @@
 	"linter-category-self-closed-tag": "Znaczniki samozamykające się",
 	"linter-category-self-closed-tag-desc": "Te strony zawierają znaczniki samozamykające się.",
 	"linter-numerrors": "($1 {{PLURAL:$1|błąd|błędy|błędów}})",
+	"linter-heading-errors": "Błędy",
+	"linter-heading-warnings": "Ostrzeżenia",
 	"apihelp-record-lint-param-page": "Tytuł strony"
 }

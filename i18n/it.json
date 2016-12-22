@@ -10,5 +10,7 @@
 	"linter-category-self-closed-tag-desc": "Queste pagine hanno tag auto-chiusi.",
 	"linter-numerrors": "($1 {{PLURAL:$1|errore|errori}})",
 	"linker-page-edit": "modifica",
+	"linter-heading-errors": "Errori",
+	"linter-heading-warnings": "Avvisi",
 	"apihelp-record-lint-param-page": "Titolo della pagina"
 }
