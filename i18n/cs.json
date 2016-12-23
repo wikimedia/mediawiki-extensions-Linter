@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mormegil"
+		]
+	},
+	"linterrors": "Chyby nalezené Lintem",
+	"linterrors-subpage": "Chyby nalezené Lintem: $1",
+	"linter-desc": "Sleduje chyby zjištěné externí službou a zobrazuje je uživatelům",
+	"linter-pager-title": "Název stránky",
+	"linter-pager-template": "Prostřednictvím šablony?",
+	"linter-pager-obsolete-tag-details": "Zastaralá HTML značka",
+	"linter-pager-bogus-image-options-details": "Chybná volba souboru",
+	"linter-pager-missing-end-tag-details": "Chybějící koncová značka",
+	"linter-pager-self-closed-tag-details": "Samouzavírací značka",
+	"linter-category-fostered": "Přesunutý obsah",
+	"linter-category-fostered-desc": "Tyto stránky obsahují prvky, které bylo nutno někam přesunout.",
+	"linter-category-obsolete-tag": "Zastaralé HTML značky",
+	"linter-category-obsolete-tag-desc": "Tyto stránky používají zastaralé HTML značky.",
+	"linter-category-bogus-image-options": "Chybné volby souboru",
+	"linter-category-bogus-image-options-desc": "Tyto stránky vkládají soubory s použitím chybných voleb.",
+	"linter-category-missing-end-tag": "Chybějící koncová značka",
+	"linter-category-missing-end-tag-desc": "V těchto stránkách chybí koncové značky.",
+	"linter-category-self-closed-tag": "Samouzavírací značky",
+	"linter-category-self-closed-tag-desc": "Tyto stránky obsahují samouzavírací značky.",
+	"linter-numerrors": "($1 {{PLURAL:$1|chyba|chyby|chyb}})",
+	"linker-page-edit": "editovat",
+	"linter-heading-errors": "Chyby",
+	"linter-heading-warnings": "Varování"
+}
