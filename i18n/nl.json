@@ -1,8 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Sjoerddebruin"
+			"Sjoerddebruin",
+			"Mainframe98"
 		]
 	},
-	"linker-page-edit": "bewerken"
+	"linter-numerrors": "($1 {{PLURAL:$1|fout|fouten}})",
+	"linker-page-edit": "bewerken",
+	"linter-heading-errors": "Fouten",
+	"linter-heading-warnings": "Waarschuwingen"
 }
