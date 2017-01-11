@@ -25,6 +25,8 @@
 	"linter-category-self-closed-tag": "Etiquetas auto-pechadas",
 	"linter-category-self-closed-tag-desc": "Estas páxinas teñen etiquetas auto-pechadas.",
 	"linker-page-edit": "editar",
+	"linter-heading-errors": "Erros",
+	"linter-heading-warnings": "Avisos",
 	"apihelp-query+linterrors-description": "Obter unha lista de erros do comprobador",
 	"apihelp-query+linterrors-param-limit": "Número de resultados a consultar",
 	"apihelp-query+linterrors-param-from": "Identificador do comprobador a partir do que comezar a consulta",
