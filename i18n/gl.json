@@ -24,6 +24,7 @@
 	"linter-category-missing-end-tag-desc": "Estas páxinas teñen etiquetas sen o seu correspondente peche.",
 	"linter-category-self-closed-tag": "Etiquetas auto-pechadas",
 	"linter-category-self-closed-tag-desc": "Estas páxinas teñen etiquetas auto-pechadas.",
+	"linter-numerrors": "($1 {{PLURAL:$1|erro|erros}})",
 	"linker-page-edit": "editar",
 	"linter-heading-errors": "Erros",
 	"linter-heading-warnings": "Avisos",
