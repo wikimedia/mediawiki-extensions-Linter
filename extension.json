@@ -27,6 +27,7 @@
 	"Hooks": {
 		"LoadExtensionSchemaUpdates": "MediaWiki\\Linter\\Hooks::onLoadExtensionSchemaUpdates",
 		"EditFormInitialText": "MediaWiki\\Linter\\Hooks::onEditFormInitialText",
+		"APIQuerySiteInfoGeneralInfo": "MediaWiki\\Linter\\Hooks::onAPIQuerySiteInfoGeneralInfo",
 		"WikiPageDeletionUpdates": "MediaWiki\\Linter\\Hooks::onWikiPageDeletionUpdates"
 	},
 	"APIModules": {
