@@ -24,6 +24,7 @@ use ApiQuerySiteInfo;
 use Content;
 use DatabaseUpdater;
 use EditPage;
+use IContextSource;
 use MWCallableUpdate;
 use WikiPage;
 
@@ -100,5 +101,30 @@ class Hooks {
 			'errors' => $catManager->getErrors(),
 			'warnings' => $catManager->getWarnings(),
 		];
+	}
+
+	/**
+	 * Hook: InfoAction
+	 *
+	 * Display quick summary of errors for this page on ?action=info
+	 *
+	 * @param IContextSource $context
+	 * @param array &$pageInfo
+	 */
+	public static function onInfoAction( IContextSource $context, array &$pageInfo ) {
+		$pageId = $context->getTitle()->getArticleID();
+		if ( !$pageId ) {
+			return;
+		}
+		$database = new Database( $pageId );
+		$totals = array_filter( $database->getTotalsForPage() );
+		if ( !$totals ) {
+			// No errors, yay!
+			return;
+		}
+
+		foreach ( $totals as $name => $count ) {
+			$pageInfo['linter'][] = [ $context->msg( "linter-category-$name" ), htmlspecialchars( $count ) ];
+		}
 	}
 }

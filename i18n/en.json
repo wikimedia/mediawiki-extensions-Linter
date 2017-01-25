@@ -31,6 +31,7 @@
 	"linker-page-edit": "edit",
 	"linter-heading-errors": "Errors",
 	"linter-heading-warnings": "Warnings",
+	"pageinfo-linter": "Lint errors",
 	"apihelp-query+linterrors-description": "Get a list of lint errors",
 	"apihelp-query+linterrors-param-categories": "Categories of lint errors",
 	"apihelp-query+linterrors-param-limit": "Number of results to query",
