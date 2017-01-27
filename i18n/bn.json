@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Aftabuzzaman"
+			"Aftabuzzaman",
+			"Elias Ahmmad"
 		]
 	},
 	"linter-pager-title": "পাতার শিরোনাম",
@@ -12,5 +13,6 @@
 	"linker-page-edit": "সম্পাদনা",
 	"linter-heading-errors": "ত্রুটিসমূহ",
 	"linter-heading-warnings": "সতর্কীকরণসমূহ",
+	"pageinfo-linter": "Lint ত্রুটি",
 	"apihelp-record-lint-param-page": "পাতার শিরোনাম"
 }

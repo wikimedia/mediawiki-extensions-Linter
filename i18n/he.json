@@ -31,6 +31,7 @@
 	"linker-page-edit": "עריכה",
 	"linter-heading-errors": "שגיאות",
 	"linter-heading-warnings": "אזהרות",
+	"pageinfo-linter": "שגיאות ניקיון",
 	"apihelp-query+linterrors-description": "קבלת רשימת שגיאות ניקיון",
 	"apihelp-query+linterrors-param-categories": "סוגים של שגיאות ניקיון",
 	"apihelp-query+linterrors-param-limit": "מספר התוצאות לשאילתה",

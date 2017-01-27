@@ -30,6 +30,7 @@
 	"linker-page-edit": "编辑",
 	"linter-heading-errors": "错误",
 	"linter-heading-warnings": "警告",
+	"pageinfo-linter": "Lint错误",
 	"apihelp-query+linterrors-description": "获取lint错误的列表",
 	"apihelp-query+linterrors-param-categories": "lint错误的分类",
 	"apihelp-query+linterrors-param-limit": "要查询的结果数",
