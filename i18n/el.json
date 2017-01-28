@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"GR"
+			"GR",
+			"Geraki"
 		]
 	},
 	"linter-pager-missing-end-tag-details": "Λείπει η ετικέτα τέλους",
+	"pageinfo-linter": "Σφάλματα Lint",
 	"apihelp-record-lint-param-page": "Τίτλος σελίδας"
 }

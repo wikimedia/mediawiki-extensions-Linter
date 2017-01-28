@@ -21,6 +21,7 @@
 	"linker-page-edit": "änneren",
 	"linter-heading-errors": "Feeler",
 	"linter-heading-warnings": "Warnungen",
+	"pageinfo-linter": "Lint-Feeler",
 	"apihelp-query+linterrors-description": "Eng Lëscht vun de Lint-Feeler kréien",
 	"apihelp-query+linterrors-param-categories": "Kategorie vu Lint-Feeleren",
 	"apihelp-query+linterrors-param-limit": "Zuel vu Resultater fir ofzefroen",
