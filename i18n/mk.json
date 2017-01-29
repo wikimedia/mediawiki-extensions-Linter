@@ -30,6 +30,7 @@
 	"linker-page-edit": "уреди",
 	"linter-heading-errors": "Грешки",
 	"linter-heading-warnings": "Предупредувања",
+	"pageinfo-linter": "Грешки од пречистувачот",
 	"apihelp-query+linterrors-description": "Добивање список на грешки од пречистувачот",
 	"apihelp-query+linterrors-param-categories": "Категории на грешки од пречистувачот",
 	"apihelp-query+linterrors-param-limit": "Број на ставки во исходот од барањето",
