@@ -30,6 +30,7 @@
 	"linker-page-edit": "редагувати",
 	"linter-heading-errors": "Помилки",
 	"linter-heading-warnings": "Застереження",
+	"pageinfo-linter": "Lint-помилки",
 	"apihelp-query+linterrors-description": "Отримати список Lint-помилок",
 	"apihelp-query+linterrors-param-categories": "Категорії Lint-помилок",
 	"apihelp-query+linterrors-param-limit": "Кількість результатів, на яку надіслати запит",
