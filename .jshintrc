@@ -19,6 +19,7 @@
 
 	"globals": {
 		"mediaWiki": false,
+		"ve": false,
 		"OO": false
 	}
 }
