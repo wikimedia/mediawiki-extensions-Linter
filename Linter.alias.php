@@ -25,3 +25,8 @@ $specialPageAliases = [];
 $specialPageAliases['en'] = [
 	'LintErrors' => [ 'LintErrors' ],
 ];
+
+/** Español (Spanish) */
+$specialPageAliases['es'] = [
+	'LintErrors' => [ 'Errores_de_sintaxis' ],
+];
