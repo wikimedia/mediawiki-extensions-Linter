@@ -1,10 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Otokoume"
+			"Otokoume",
+			"Shirayuki"
 		]
 	},
 	"linter-pager-title": "ページ名",
+	"linter-category-missing-end-tag": "終了タグの不足",
+	"linter-numerrors": "($1 {{PLURAL:$1|件のエラー}})",
 	"linker-page-edit": "編集",
+	"linter-heading-errors": "エラー",
+	"linter-heading-warnings": "警告",
 	"apihelp-record-lint-param-page": "ページ名"
 }
