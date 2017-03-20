@@ -97,10 +97,15 @@ class Hooks {
 	 */
 	public static function onAPIQuerySiteInfoGeneralInfo( ApiQuerySiteInfo $api, array &$data ) {
 		$catManager = new CategoryManager();
-		$data['linter'] = [
-			'errors' => $catManager->getErrors(),
-			'warnings' => $catManager->getWarnings(),
-		];
+		$totals = ( new Database( 0 ) )->getTotals();
+		$info = [];
+		foreach ( $catManager->getErrors() as $error ) {
+			$info['errors'][$error] = $totals[$error];
+		}
+		foreach ( $catManager->getWarnings() as $warning ) {
+			$info['warnings'][$warning] = $totals[$warning];
+		}
+		$data['linter'] = $info;
 	}
 
 	/**
