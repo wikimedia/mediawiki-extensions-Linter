@@ -5,8 +5,14 @@
 			"Mainframe98"
 		]
 	},
+	"linter-pager-title": "Paginanaam",
+	"linter-pager-template": "Door middel van een sjabloon?",
+	"linter-pager-obsolete-tag-details": "Verouderde HTML-tag",
+	"linter-category-obsolete-tag": "Verouderde HTML-tags",
+	"linter-category-obsolete-tag-desc": "Deze pagina's maken gebruik van verouderde HTML tags.",
 	"linter-numerrors": "($1 {{PLURAL:$1|fout|fouten}})",
 	"linker-page-edit": "bewerken",
 	"linter-heading-errors": "Fouten",
-	"linter-heading-warnings": "Waarschuwingen"
+	"linter-heading-warnings": "Waarschuwingen",
+	"apihelp-record-lint-param-page": "Paginanaam"
 }

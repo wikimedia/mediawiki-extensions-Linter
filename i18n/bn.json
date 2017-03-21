@@ -5,6 +5,8 @@
 			"Elias Ahmmad"
 		]
 	},
+	"linterrors": "লিন্ট ত্রুটি",
+	"linterrors-subpage": "লিন্ট ত্রুটি: $1",
 	"linter-pager-title": "পাতার শিরোনাম",
 	"linter-pager-self-closed-tag-details": "স্ব-বন্ধকৃত ট্যাগ",
 	"linter-category-self-closed-tag": "স্ব-বন্ধকৃত ট্যাগ",
