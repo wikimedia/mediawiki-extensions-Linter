@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Tacsipacsi"
+		]
+	},
+	"linter-pager-title": "Lapcím",
+	"linter-pager-template": "Sablonon keresztül?",
+	"linter-pager-obsolete-tag-details": "Elavult HTML-címke",
+	"linter-pager-missing-end-tag-details": "Hiányzó lezáró címke",
+	"linter-pager-self-closed-tag-details": "Önzáró címke",
+	"linter-category-obsolete-tag": "Elavult HTML-címkék",
+	"linter-category-obsolete-tag-desc": "Ezek a lapok elavult HTML-címkéket használnak.",
+	"linter-category-missing-end-tag": "Hiányzó lezáró címke",
+	"linter-category-missing-end-tag-desc": "Ezeken a lapokon hiányoznak lezáró címkék.",
+	"linter-category-self-closed-tag": "Önzáró címkék",
+	"linter-category-self-closed-tag-desc": "Ezek a lapok önzáró címkéket használnak.",
+	"linter-numerrors": "($1 hiba)",
+	"linker-page-edit": "szerkesztés",
+	"linter-heading-errors": "Hibák",
+	"linter-heading-warnings": "Figyelmeztetések",
+	"apihelp-query+linterrors-param-limit": "Megjelenítendő találatok száma",
+	"apihelp-record-lint-param-data": "JSON-kódolt adatok a hibáról",
+	"apihelp-record-lint-param-page": "Lapcím",
+	"apihelp-record-lint-param-revision": "Lapváltozat-azonosító, amiben a hiba található"
+}
