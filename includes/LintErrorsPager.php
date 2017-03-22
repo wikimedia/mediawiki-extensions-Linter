@@ -96,7 +96,17 @@ class LintErrorsPager extends TablePager {
 					[ 'action' => 'edit', 'lintid' => $lintError->lintId, ]
 				);
 
-				return $this->msg( 'linker-page-title-edit' )->rawParams( $viewLink, $editLink )->escaped();
+				$historyLink = $this->linkRenderer->makeLink(
+					$title,
+					$this->msg( 'linker-page-history' )->text(),
+					[],
+					[ 'action' => 'history' ]
+				);
+
+				$editHistLinks = $this->getLanguage()->pipeList( [ $editLink, $historyLink ] );
+				return $this->msg( 'linker-page-title-edit' )
+					->rawParams( $viewLink, $editHistLinks )
+					->escaped();
 			case 'details':
 				$hasNameCats = [ 'obsolete-tag', 'missing-end-tag', 'self-closed-tag' ];
 				if ( in_array( $this->category, $hasNameCats ) && isset( $lintError->params['name'] ) ) {
