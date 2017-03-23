@@ -1,12 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kareyac"
+			"Kareyac",
+			"Redredsonia"
 		]
 	},
 	"linter-pager-title": "Заголовок страницы",
 	"linter-pager-template": "Через шаблон?",
 	"linker-page-edit": "править",
+	"linker-page-history": "история",
 	"linter-heading-errors": "Ошибки",
 	"linter-heading-warnings": "Предупреждения",
 	"apihelp-record-lint-param-page": "Заголовок страницы"

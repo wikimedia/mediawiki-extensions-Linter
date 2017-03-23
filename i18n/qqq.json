@@ -31,7 +31,7 @@
 	"linter-numerrors": "Shown after a category link to indicate how many errors are in that category. $1 is the number of errors, and can be used for PLURAL.\n{{Identical|Error}}",
 	"linker-page-title-edit": "Used in a table cell. $1 is a link to the page, $2 is pipe separated links to the edit and history pages, the link text is {{msg-mw|linker-page-edit}} and {{msg-mw|linker-page-history}}",
 	"linker-page-edit": "Link text for edit link in {{msg-mw|linker-page-title-edit}}\n{{Identical|Edit}}",
-	"linker-page-history": "Link text for history link in {{msg-mw|linker-page-title-edit}}",
+	"linker-page-history": "Link text for history link in {{msg-mw|linker-page-title-edit}}\n{{Identical|History}}",
 	"linter-heading-errors": "Heading on [[Special:LintErrors]]\n{{Identical|Error}}",
 	"linter-heading-warnings": "Heading on [[Special:LintErrors]]\n{{Identical|Warning}}",
 	"pageinfo-linter": "Heading on ?action=info for a page if it has lint errors",

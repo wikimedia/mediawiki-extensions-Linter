@@ -28,6 +28,7 @@
 	"linter-category-self-closed-tag-desc": "这些页面有自封闭标签。",
 	"linter-numerrors": "（$1个{{PLURAL:$1|错误}}）",
 	"linker-page-edit": "编辑",
+	"linker-page-history": "历史",
 	"linter-heading-errors": "错误",
 	"linter-heading-warnings": "警告",
 	"pageinfo-linter": "Lint错误",

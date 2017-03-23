@@ -30,6 +30,7 @@
 	"linter-category-self-closed-tag-desc": "Ces pages ont des balises auto-fermantes.",
 	"linter-numerrors": "($1 {{PLURAL:$1|erreur|erreurs}})",
 	"linker-page-edit": "modifier",
+	"linker-page-history": "historique",
 	"linter-heading-errors": "Erreurs",
 	"linter-heading-warnings": "Avertissements",
 	"pageinfo-linter": "Erreurs de Lint",

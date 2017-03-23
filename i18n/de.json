@@ -29,6 +29,7 @@
 	"linter-category-self-closed-tag-desc": "Diese Seiten enthalten selbstschließende Tags.",
 	"linter-numerrors": "({{PLURAL:$1|Ein|$1}} Fehler)",
 	"linker-page-edit": "bearbeiten",
+	"linker-page-history": "Versionsgeschichte",
 	"linter-heading-errors": "Fehler",
 	"linter-heading-warnings": "Warnungen",
 	"pageinfo-linter": "Lint-Fehler"
