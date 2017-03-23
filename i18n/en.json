@@ -29,6 +29,7 @@
 	"linter-numerrors": "($1 {{PLURAL:$1|error|errors}})",
 	"linker-page-title-edit": "$1 ($2)",
 	"linker-page-edit": "edit",
+	"linker-page-history": "history",
 	"linter-heading-errors": "Errors",
 	"linter-heading-warnings": "Warnings",
 	"pageinfo-linter": "Lint errors",
