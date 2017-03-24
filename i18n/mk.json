@@ -28,6 +28,7 @@
 	"linter-category-self-closed-tag-desc": "Овие страници имаат самозатворени ознаки.",
 	"linter-numerrors": "($1 {{PLURAL:$1|грешка|грешки}})",
 	"linker-page-edit": "уреди",
+	"linker-page-history": "историја",
 	"linter-heading-errors": "Грешки",
 	"linter-heading-warnings": "Предупредувања",
 	"pageinfo-linter": "Грешки од пречистувачот",

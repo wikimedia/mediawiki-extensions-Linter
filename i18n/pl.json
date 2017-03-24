@@ -1,19 +1,26 @@
 {
 	"@metadata": {
 		"authors": [
-			"Chrumps"
+			"Chrumps",
+			"Woytecr"
 		]
 	},
 	"linter-pager-title": "Tytuł strony",
+	"linter-pager-template": "Poprzez szablon?",
 	"linter-pager-obsolete-tag-details": "Przestarzały znacznik HTML",
+	"linter-pager-bogus-image-options-details": "Nieprawidłowa opcja pliku",
 	"linter-pager-missing-end-tag-details": "Brak znacznika zamykającego",
 	"linter-pager-self-closed-tag-details": "Znacznik samozamykający się",
 	"linter-category-obsolete-tag": "Przestarzałe znaczniki HTML",
+	"linter-category-bogus-image-options": "Nieprawidłowe opcje pliku",
+	"linter-category-bogus-image-options-desc": "Te strony odwołują się do plików z podaniem nieistniejących opcji.",
 	"linter-category-missing-end-tag": "Brak znacznika zamykającego",
 	"linter-category-missing-end-tag-desc": "Tym stronom brakuje znaczników zamykających",
 	"linter-category-self-closed-tag": "Znaczniki samozamykające się",
 	"linter-category-self-closed-tag-desc": "Te strony zawierają znaczniki samozamykające się.",
 	"linter-numerrors": "($1 {{PLURAL:$1|błąd|błędy|błędów}})",
+	"linker-page-edit": "edytuj",
+	"linker-page-history": "historia",
 	"linter-heading-errors": "Błędy",
 	"linter-heading-warnings": "Ostrzeżenia",
 	"apihelp-record-lint-param-page": "Tytuł strony"

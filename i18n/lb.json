@@ -19,6 +19,7 @@
 	"linter-category-missing-end-tag-desc": "Op dëse Säite feelen Schluss-Tagen.",
 	"linter-numerrors": "({{PLURAL:$1|Ee|$1}} Feeler)",
 	"linker-page-edit": "änneren",
+	"linker-page-history": "Versiounen",
 	"linter-heading-errors": "Feeler",
 	"linter-heading-warnings": "Warnungen",
 	"pageinfo-linter": "Lint-Feeler",

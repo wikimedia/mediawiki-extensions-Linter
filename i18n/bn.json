@@ -13,6 +13,7 @@
 	"linter-category-self-closed-tag-desc": "এই সব পাতাগুলির স্ব-বন্ধকৃত ট্যাগ আছে।",
 	"linter-numerrors": "($1টি {{PLURAL:$1|ত্রুটি}})",
 	"linker-page-edit": "সম্পাদনা",
+	"linker-page-history": "ইতিহাস",
 	"linter-heading-errors": "ত্রুটিসমূহ",
 	"linter-heading-warnings": "সতর্কীকরণসমূহ",
 	"pageinfo-linter": "Lint ত্রুটি",

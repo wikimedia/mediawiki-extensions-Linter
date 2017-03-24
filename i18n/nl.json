@@ -12,6 +12,7 @@
 	"linter-category-obsolete-tag-desc": "Deze pagina's maken gebruik van verouderde HTML tags.",
 	"linter-numerrors": "($1 {{PLURAL:$1|fout|fouten}})",
 	"linker-page-edit": "bewerken",
+	"linker-page-history": "geschiedenis",
 	"linter-heading-errors": "Fouten",
 	"linter-heading-warnings": "Waarschuwingen",
 	"apihelp-record-lint-param-page": "Paginanaam"
