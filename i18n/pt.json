@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"He7d3r"
+		]
+	},
+	"linterrors": "Erros de lint",
+	"linterrors-subpage": "Erros de lint: $1",
+	"linter-pager-title": "Título da página",
+	"linter-pager-template": "Através de uma predefinição?",
+	"linter-pager-obsolete-tag-details": "Elemento HTML obsoleto",
+	"linter-pager-bogus-image-options-details": "Opção de ficheiro inválida",
+	"linter-pager-missing-end-tag-details": "Elemento de fechamento ausente",
+	"linter-category-obsolete-tag": "Elementos HTML obsoletos"
+}
