@@ -28,6 +28,7 @@
 	"linter-category-self-closed-tag-desc": "اسن صفحات دارای برچسب‌های خودبسته هستند.",
 	"linter-numerrors": "($1 {{PLURAL:$1|خطا|خطا}})",
 	"linker-page-edit": "ویرایش",
+	"linker-page-history": "تاریخچه",
 	"linter-heading-errors": "خطاها",
 	"linter-heading-warnings": "هشدارها",
 	"pageinfo-linter": "خطاهای نحوی پنهان",
