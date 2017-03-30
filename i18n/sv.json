@@ -11,5 +11,6 @@
 	"linter-category-self-closed-tag-desc": "Dessa sidor har självstängande märken.",
 	"linter-numerrors": "($1 {{PLURAL:$1|fel}})",
 	"linker-page-edit": "redigera",
+	"linker-page-history": "historik",
 	"apihelp-record-lint-param-page": "Sidtitel"
 }
