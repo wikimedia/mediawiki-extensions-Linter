@@ -27,6 +27,7 @@
 	"linter-category-self-closed-tag-desc": "Estas páginas contienen etiquetas autocerradas.",
 	"linter-numerrors": "($1 {{PLURAL:$1|error|errores}})",
 	"linker-page-edit": "editar",
+	"linker-page-history": "historial",
 	"linter-heading-errors": "Errores",
 	"linter-heading-warnings": "Advertencias",
 	"apihelp-query+linterrors-description": "Obtener lista de errores de comprobador",
