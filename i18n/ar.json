@@ -1,8 +1,16 @@
 {
 	"@metadata": {
 		"authors": [
-			"محمد أحمد عبد الفتاح"
+			"محمد أحمد عبد الفتاح",
+			"Mr. Ibrahem"
 		]
 	},
-	"linker-page-history": "تاريخ"
+	"linter-pager-title": "عنوان الصفحة",
+	"linter-numerrors": "($1 {{PLURAL:$1|خطأ|أخطاء}})",
+	"linker-page-edit": "تعديل",
+	"linker-page-history": "تاريخ",
+	"linter-heading-errors": "أخطاء",
+	"linter-heading-warnings": "تحذيرات",
+	"apihelp-query+linterrors-param-limit": "عدد النتائج للاستعلام",
+	"apihelp-record-lint-param-page": "عنوان الصفحة"
 }
