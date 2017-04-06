@@ -84,13 +84,14 @@ class RecordLintJob extends Job {
 		}
 
 		$totals = $lintDb->getTotals();
+		$wiki = wfWikiID();
 
 		$stats = MediaWikiServices::getInstance()->getStatsdDataFactory();
 		foreach ( $totals as $name => $count ) {
-			$stats->gauge( "linter.category.$name", $count );
+			$stats->gauge( "linter.category.$name.$wiki", $count );
 		}
 
-		$stats->gauge( "linter.totals", array_sum( $totals ) );
+		$stats->gauge( "linter.totals.$wiki", array_sum( $totals ) );
 	}
 
 }
