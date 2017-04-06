@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bugoslav"
+		]
+	},
+	"linterrors": "Pročišćivač pogrješčica",
+	"linterrors-subpage": "Pročišćivač pogrješčica: $1",
+	"pageinfo-linter": "Pročišćivač pogrješčica",
+	"apihelp-query+linterrors-param-namespace": "Prikaži samo pročišćivačeve pogrješčice iz pojedinih imenskih prostora"
+}

@@ -7,6 +7,8 @@
 	},
 	"linter-pager-title": "Заголовок страницы",
 	"linter-pager-template": "Через шаблон?",
+	"linter-pager-deletable-table-tag-details": "Тег таблицы, который следует удалить",
+	"linter-category-deletable-table-tag-desc": "На страницах есть теги таблицы, которые следует удалить.",
 	"linker-page-edit": "править",
 	"linker-page-history": "история",
 	"linter-heading-errors": "Ошибки",
