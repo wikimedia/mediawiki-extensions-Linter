@@ -80,6 +80,10 @@
 			"self-closed-tag": {
 				"severity": "warning",
 				"enabled": true
+			},
+			"deletable-table-tag": {
+				"severity": "error",
+				"enabled": true
 			}
 		},
 		"LinterSubmitterWhitelist": {
