@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kareyac"
+			"Kareyac",
+			"Red Winged Duck"
 		]
 	},
+	"linterrors": "Lint-памылкі",
 	"linker-page-edit": "рэдагаваць"
 }
