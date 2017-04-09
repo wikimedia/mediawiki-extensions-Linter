@@ -18,6 +18,7 @@
 	"linter-category-missing-end-tag-desc": "Tym stronom brakuje znaczników zamykających",
 	"linter-category-self-closed-tag": "Znaczniki samozamykające się",
 	"linter-category-self-closed-tag-desc": "Te strony zawierają znaczniki samozamykające się.",
+	"linter-category-deletable-table-tag-desc": "Te strony zawierają znaczniki tabeli, które powinny zostać usunięte.",
 	"linter-numerrors": "($1 {{PLURAL:$1|błąd|błędy|błędów}})",
 	"linker-page-edit": "edytuj",
 	"linker-page-history": "historia",

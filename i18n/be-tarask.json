@@ -6,5 +6,6 @@
 		]
 	},
 	"linterrors": "Lint-памылкі",
+	"linterrors-subpage": "Lint-памылкі: $1",
 	"linker-page-edit": "рэдагаваць"
 }

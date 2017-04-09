@@ -1,11 +1,25 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bugoslav"
+			"Bugoslav",
+			"SpeedyGonsales"
 		]
 	},
 	"linterrors": "Pročišćivač pogrješčica",
 	"linterrors-subpage": "Pročišćivač pogrješčica: $1",
+	"linter-pager-title": "Ime stranice",
+	"linter-pager-template": "Preko predloška?",
+	"linter-pager-obsolete-tag-details": "Zastarjela HTML oznaka",
+	"linter-pager-missing-end-tag-details": "Nedostaje zatvarajuća oznaka",
+	"linter-category-obsolete-tag": "Zastarjele HTML oznake",
+	"linter-category-obsolete-tag-desc": "Sljedeće stranice rabe zastarjele HTML oznake.",
+	"linter-category-missing-end-tag": "Nedostaje zatvarajuća oznaka",
+	"linter-category-missing-end-tag-desc": "Na sljedećim stranicama nedostaju zatvarajuće HTML oznake.",
+	"linter-numerrors": "($1 {{PLURAL:$1|pogrješka|pogrješke|pogrješaka}})",
+	"linker-page-edit": "uredi",
+	"linker-page-history": "stare izmjene",
+	"linter-heading-errors": "Pogrješke",
+	"linter-heading-warnings": "Upozorenja",
 	"pageinfo-linter": "Pročišćivač pogrješčica",
 	"apihelp-query+linterrors-param-namespace": "Prikaži samo pročišćivačeve pogrješčice iz pojedinih imenskih prostora"
 }
