@@ -42,6 +42,7 @@ class CategoryManager {
 		'stripped-tag' => 5,
 		'self-closed-tag' => 6,
 		'deletable-table-tag' => 7,
+		'misnested-tag' => 8,
 	];
 
 	/**

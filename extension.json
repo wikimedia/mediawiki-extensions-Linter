@@ -84,6 +84,10 @@
 			"deletable-table-tag": {
 				"severity": "error",
 				"enabled": true
+			},
+			"misnested-tag": {
+				"severity": "warning",
+				"enabled": true
 			}
 		},
 		"LinterSubmitterWhitelist": {
