@@ -24,6 +24,7 @@
 	"linter-category-missing-end-tag": "Sen etiqueta de peche",
 	"linter-category-missing-end-tag-desc": "Estas páxinas teñen etiquetas sen o seu correspondente peche.",
 	"linter-category-stripped-tag": "Etiquetas ignoradas",
+	"linter-category-stripped-tag-desc": "Páxinas que conteñen etiquetas HTML ignoradas.",
 	"linter-category-self-closed-tag": "Etiquetas auto-pechadas",
 	"linter-category-self-closed-tag-desc": "Estas páxinas teñen etiquetas auto-pechadas.",
 	"linter-numerrors": "($1 {{PLURAL:$1|erro|erros}})",

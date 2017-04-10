@@ -11,6 +11,7 @@
 	"linter-pager-obsolete-tag-details": "Vereelzten HTML-Tag",
 	"linter-pager-missing-end-tag-details": "Schluss-Tag feelt",
 	"linter-pager-stripped-tag-details": "Eidelen Tag",
+	"linter-pager-deletable-table-tag-details": "Tabellen-Tag dee geläscht gi soll",
 	"linter-category-fostered": "Qualitéits-Inhalt",
 	"linter-category-fostered-desc": "Dës Säiten hu Qualitéits-Inhalt.",
 	"linter-category-obsolete-tag": "Vereelzt HTML-Tagen",
