@@ -88,6 +88,10 @@
 			"misnested-tag": {
 				"severity": "warning",
 				"enabled": true
+			},
+			"pwrap-bug-workaround": {
+				"severity": "warning",
+				"enabled": true
 			}
 		},
 		"LinterSubmitterWhitelist": {

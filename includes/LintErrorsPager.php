@@ -134,6 +134,11 @@ class LintErrorsPager extends TablePager {
 						return Html::element( 'code', [], $in );
 					}, $lintError->params['items'] );
 					return $this->getLanguage()->commaList( $list );
+				} elseif ( $this->category === 'pwrap-bug-workaround' &&
+					isset( $lintError->params['root'] ) &&
+					isset( $lintError->params['child'] ) ) {
+					return Html::element( 'code', [],
+						$lintError->params['root'] . " > " . $lintError->params['child'] );
 				}
 				return '';
 			case 'template':

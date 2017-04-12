@@ -43,6 +43,7 @@ class CategoryManager {
 		'self-closed-tag' => 6,
 		'deletable-table-tag' => 7,
 		'misnested-tag' => 8,
+		'pwrap-bug-workaround' => 9,
 	];
 
 	/**
