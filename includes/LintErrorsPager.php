@@ -41,16 +41,26 @@ class LintErrorsPager extends TablePager {
 	 */
 	private $linkRenderer;
 
+	/**
+	 * @var int|null
+	 */
+	private $namespace;
+
 	public function __construct( IContextSource $context, $category, LinkRenderer $linkRenderer,
-		CategoryManager $catManager
+		CategoryManager $catManager, $namespace
 	) {
 		$this->category = $category;
 		$this->categoryId = $catManager->getCategoryId( $this->category );
 		$this->linkRenderer = $linkRenderer;
+		$this->namespace = $namespace;
 		parent::__construct( $context );
 	}
 
 	public function getQueryInfo() {
+		$conds = [ 'linter_cat' => $this->categoryId ];
+		if ( $this->namespace !== null ) {
+			$conds['page_namespace'] = $this->namespace;
+		}
 		return [
 			'tables' => [ 'page', 'linter' ],
 			'fields' => array_merge(
@@ -61,7 +71,7 @@ class LintErrorsPager extends TablePager {
 					'linter_start', 'linter_end',
 				]
 			),
-			'conds' => [ 'linter_cat' => $this->categoryId ],
+			'conds' => $conds,
 			'join_conds' => [ 'page' => [ 'INNER JOIN', 'page_id=linter_page' ] ]
 		];
 	}

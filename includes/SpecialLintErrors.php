@@ -20,6 +20,7 @@
 
 namespace MediaWiki\Linter;
 
+use HTMLForm;
 use Html;
 use SpecialPage;
 
@@ -29,6 +30,25 @@ class SpecialLintErrors extends SpecialPage {
 
 	public function __construct() {
 		parent::__construct( 'LintErrors' );
+	}
+
+	protected function showNamespaceFilterForm( $ns ) {
+		$fields = [
+			'namespace' => [
+				'type' => 'namespaceselect',
+				'name' => 'namespace',
+				'label-message' => 'linter-form-namespace',
+				'default' => $ns,
+				'id' => 'namespace',
+				'all' => '',
+				'cssclass' => 'namespaceselector',
+			],
+		];
+		$form = HTMLForm::factory( 'ooui', $fields, $this->getContext() );
+		$form->setWrapperLegend( true );
+		$form->addHeaderText( $this->msg( "linter-category-{$this->category}-desc" )->escaped() );
+		$form->setMethod( 'get' );
+		$form->prepareForm()->displayForm( false );
 	}
 
 	public function execute( $par ) {
@@ -51,10 +71,11 @@ class SpecialLintErrors extends SpecialPage {
 				)
 			);
 			$out->addBacklinkSubtitle( $this->getPageTitle() );
-			$out->addWikiMsg( "linter-category-{$this->category}-desc" );
+			$ns = $this->getRequest()->getIntOrNull( 'namespace' );
+			$this->showNamespaceFilterForm( $ns );
 			$pager = new LintErrorsPager(
 				$this->getContext(), $this->category, $this->getLinkRenderer(),
-				$catManager
+				$catManager, $ns
 			);
 			$out->addParserOutput( $pager->getFullOutput() );
 		}

@@ -7,6 +7,7 @@
 	"linterrors": "Lint errors",
 	"linterrors-subpage": "Lint errors: $1",
 	"linter-desc": "Track lint errors from an external service and show them to users",
+	"linter-form-namespace": "Namespace:",
 	"linter-pager-title": "Page title",
 	"linter-pager-template": "Through a template?",
 	"linter-pager-obsolete-tag-details": "Obsolete HTML tag",
