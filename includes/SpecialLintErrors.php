@@ -103,7 +103,9 @@ class SpecialLintErrors extends SpecialPage {
 			$html .= Html::rawElement( 'li', [], $linkRenderer->makeKnownLink(
 				$this->getPageTitle( $cat ),
 				$this->msg( "linter-category-$cat" )->text()
-			) . ' ' . $this->msg( "linter-numerrors" )->numParams( $totals[$cat] )->escaped() ) . "\n";
+			) . ' ' . Html::element( 'bdi', [],
+				$this->msg( "linter-numerrors" )->numParams( $totals[$cat] )->text()
+			) ) . "\n";
 		}
 		$html .= Html::closeElement( 'ul' );
 
