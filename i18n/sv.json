@@ -4,11 +4,14 @@
 			"WikiPhoenix"
 		]
 	},
+	"linter-form-namespace": "Namnrymd:",
 	"linter-pager-title": "Sidtitel",
 	"linter-pager-template": "Genom en mall?",
 	"linter-pager-self-closed-tag-details": "Självstängande märke",
+	"linter-pager-deletable-table-tag-details": "Tabelltagg som bör raderas",
 	"linter-category-self-closed-tag": "Självstängande märken",
 	"linter-category-self-closed-tag-desc": "Dessa sidor har självstängande märken.",
+	"linter-category-deletable-table-tag": "Tabelltagg som bör raderas",
 	"linter-numerrors": "($1 {{PLURAL:$1|fel}})",
 	"linker-page-edit": "redigera",
 	"linker-page-history": "historik",

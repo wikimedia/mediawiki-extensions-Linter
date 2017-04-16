@@ -8,6 +8,7 @@
 	"linterrors": "Lint-Fehler",
 	"linterrors-subpage": "Lint-Fehler: $1",
 	"linter-desc": "Verfolgt Lint-Fehler von einem externen Dienst und zeigt sie Benutzern an",
+	"linter-form-namespace": "Namensraum:",
 	"linter-pager-title": "Seitentitel",
 	"linter-pager-template": "Durch eine Vorlage?",
 	"linter-pager-obsolete-tag-details": "Veraltetes HTML-Tag",

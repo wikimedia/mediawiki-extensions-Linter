@@ -9,7 +9,7 @@
 	"linterrors": "{{doc-special|LintErrors}}",
 	"linterrors-subpage": "Page title for Special:LintErrors, $1 is the localized category description",
 	"linter-desc": "{{desc|name=Linter|url=https://www.mediawiki.org/wiki/Extension:Linter}}",
-	"linter-form-namespace": "Label for select field on Special:LintErrors",
+	"linter-form-namespace": "Label for select field on Special:LintErrors\n{{Identical|Namespace}}",
 	"linter-pager-title": "Table column heading for the column with page titles in it\n{{Identical|Page title}}",
 	"linter-pager-template": "Table column heading for column with template title in it or an em dash if lint error is not inside a template",
 	"linter-pager-obsolete-tag-details": "Table column heading",

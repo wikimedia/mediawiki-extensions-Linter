@@ -7,6 +7,7 @@
 	},
 	"linterrors": "লিন্ট ত্রুটি",
 	"linterrors-subpage": "লিন্ট ত্রুটি: $1",
+	"linter-form-namespace": "নামস্থান:",
 	"linter-pager-title": "পাতার শিরোনাম",
 	"linter-pager-self-closed-tag-details": "স্ব-বন্ধকৃত ট্যাগ",
 	"linter-pager-deletable-table-tag-details": "টেবিল ট্যাগ যা মুছে ফেলা উচিত",

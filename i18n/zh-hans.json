@@ -7,6 +7,7 @@
 	"linterrors": "Lint错误",
 	"linterrors-subpage": "Lint错误：$1",
 	"linter-desc": "从外部服务追踪lint错误，并向用户显示",
+	"linter-form-namespace": "名字空间：",
 	"linter-pager-title": "页面标题",
 	"linter-pager-template": "通过模板？",
 	"linter-pager-obsolete-tag-details": "废弃的HTML标签",

@@ -5,6 +5,7 @@
 			"Woytecr"
 		]
 	},
+	"linter-form-namespace": "Przestrzeń nazw:",
 	"linter-pager-title": "Tytuł strony",
 	"linter-pager-template": "Poprzez szablon?",
 	"linter-pager-obsolete-tag-details": "Przestarzały znacznik HTML",

@@ -6,6 +6,7 @@
 	},
 	"linterrors": "Lint-Feeler",
 	"linterrors-subpage": "Lint-Feeler: $1",
+	"linter-form-namespace": "Nummraum:",
 	"linter-pager-title": "Titel vun der Säit",
 	"linter-pager-template": "Duerch eng Schabloun?",
 	"linter-pager-obsolete-tag-details": "Vereelzten HTML-Tag",

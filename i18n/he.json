@@ -8,6 +8,7 @@
 	"linterrors": "שגיאות ניקיון",
 	"linterrors-subpage": "שגיאות ניקיון: $1",
 	"linter-desc": "מעקב אחר שגיאות שנמצאו בבדיקת ניקיון על־ידי שירות חיצוני והצגתן למשתמשים",
+	"linter-form-namespace": "מרחב שם:",
 	"linter-pager-title": "כותרת הדף",
 	"linter-pager-template": "דרך תבנית?",
 	"linter-pager-obsolete-tag-details": "תג HTML מיושן",
