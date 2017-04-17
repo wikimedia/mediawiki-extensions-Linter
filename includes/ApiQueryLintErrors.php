@@ -70,6 +70,8 @@ class ApiQueryLintErrors extends ApiQueryBase {
 			$title = Title::makeTitle( $row->page_namespace, $row->page_title );
 
 			$data = [
+				'pageid' => $title->getArticleID(),
+				'ns' => $title->getNamespace(),
 				'title' => $title->getPrefixedText(),
 				'lintId' => $lintError->lintId,
 				'category' => $lintError->category,
