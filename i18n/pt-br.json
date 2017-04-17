@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Felipe L. Ewald"
+		]
+	},
+	"linter-pager-title": "Título da página",
+	"linker-page-title-edit": "$1 ($2)",
+	"linker-page-edit": "editar",
+	"linker-page-history": "histórico",
+	"apihelp-record-lint-param-page": "Título da página"
+}

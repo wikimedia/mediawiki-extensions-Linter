@@ -4,6 +4,7 @@
 			"Ykhwong"
 		]
 	},
+	"linter-form-namespace": "이름공간:",
 	"linter-pager-title": "문서 제목",
 	"linter-pager-missing-end-tag-details": "존재하지 않는 종료 태그",
 	"linter-pager-self-closed-tag-details": "스스로 닫는 태그",

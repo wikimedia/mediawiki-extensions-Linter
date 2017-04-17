@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"GR",
-			"Geraki"
+			"Geraki",
+			"Thodoris"
 		]
 	},
+	"linter-form-namespace": "Περιοχή:",
 	"linter-pager-missing-end-tag-details": "Λείπει η ετικέτα τέλους",
 	"linker-page-history": "ιστορικό",
 	"pageinfo-linter": "Σφάλματα Lint",

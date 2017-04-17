@@ -7,6 +7,7 @@
 	"linterrors": "Грешки од пречистувачот",
 	"linterrors-subpage": "Грешки од пречистувачот: $1",
 	"linter-desc": "Следи грешки од пречистувачот од надворешна служба и ги прикажува на корисниците",
+	"linter-form-namespace": "Именски простор:",
 	"linter-pager-title": "Наслов на страницата",
 	"linter-pager-template": "Преку шаблон?",
 	"linter-pager-obsolete-tag-details": "Застарена HTML-ознака",

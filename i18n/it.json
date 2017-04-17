@@ -4,6 +4,7 @@
 			"Beta16"
 		]
 	},
+	"linter-form-namespace": "Namespace:",
 	"linter-pager-title": "Titolo della pagina",
 	"linter-pager-self-closed-tag-details": "Tag auto-chiusi",
 	"linter-category-self-closed-tag": "Tag auto-chiusi",

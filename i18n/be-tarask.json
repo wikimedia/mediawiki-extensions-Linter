@@ -9,6 +9,8 @@
 	"linterrors-subpage": "Lint-памылкі: $1",
 	"linter-pager-title": "Назва старонкі",
 	"linter-pager-template": "Праз шаблён?",
+	"linter-pager-bogus-image-options-details": "Няслушны парамэтар файлу",
+	"linter-numerrors": "($1 {{PLURAL:$1|памылка|памылкі|памылак}})",
 	"linker-page-edit": "рэдагаваць",
 	"linker-page-history": "гісторыя",
 	"linter-heading-errors": "Памылкі",

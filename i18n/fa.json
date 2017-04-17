@@ -7,6 +7,7 @@
 	"linterrors": "خطاهای نحوی پنهان",
 	"linterrors-subpage": "خطاهای نحوی پنهان: $1",
 	"linter-desc": "پیگیری خطاهای نحوی پنهان از یک سامانه خارجی برای نمایش به کاربران",
+	"linter-form-namespace": "فضای نام:",
 	"linter-pager-title": "عنوان صفحه",
 	"linter-pager-template": "از طریق تراگنجایش الگو؟",
 	"linter-pager-obsolete-tag-details": "برچسب منسوخ HTML",
