@@ -9,6 +9,7 @@
 	"linterrors": "Errores de comprobador",
 	"linterrors-subpage": "Errores de comprobador: $1",
 	"linter-desc": "Supervisa errores informados por un servicio comprobador externo y los muestra a los usuarios",
+	"linter-form-namespace": "Espacio de nombres:",
 	"linter-pager-title": "Título de la página",
 	"linter-pager-template": "¿A través de una plantilla?",
 	"linter-pager-obsolete-tag-details": "Etiqueta HTML obsoleta",

@@ -9,6 +9,7 @@
 	"linterrors": "Erreurs de lint",
 	"linterrors-subpage": "Erreurs de lint : $1",
 	"linter-desc": "Tracer les erreurs de lint depuis un service externe et les afficher aux utilisateurs",
+	"linter-form-namespace": "Espace de noms :",
 	"linter-pager-title": "Titre de la page",
 	"linter-pager-template": "Via un modèle ?",
 	"linter-pager-obsolete-tag-details": "Balise HTML obsolète",
