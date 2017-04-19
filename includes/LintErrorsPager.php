@@ -120,7 +120,13 @@ class LintErrorsPager extends TablePager {
 			case 'details':
 				// While deletable-table-tag has params set, it adds no new information
 				// and is not included here since the error category has the tag name.
-				$hasNameCats = [ 'obsolete-tag', 'missing-end-tag', 'self-closed-tag', 'misnested-tag' ];
+				$hasNameCats = [
+					'obsolete-tag',
+					'missing-end-tag',
+					'self-closed-tag',
+					'misnested-tag',
+					'stripped-tag',
+				];
 				if ( in_array( $this->category, $hasNameCats ) && isset( $lintError->params['name'] ) ) {
 					return Html::element( 'code', [], $lintError->params['name'] );
 				} elseif ( $this->category === 'bogus-image-options' && isset( $lintError->params['items'] ) ) {
