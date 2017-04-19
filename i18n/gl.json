@@ -8,6 +8,7 @@
 	"linterrors": "Erros de lint",
 	"linterrors-subpage": "Erros de lintː $1",
 	"linter-desc": "Supervisa erros informados por un servizo comprobador externo e móstraos ós usuarios",
+	"linter-form-namespace": "Espazo de nomes:",
 	"linter-pager-title": "Título da páxina",
 	"linter-pager-template": "Vía un modelo?",
 	"linter-pager-obsolete-tag-details": "Etiqueta HTML desbotada",
