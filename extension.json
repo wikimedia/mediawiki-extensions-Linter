@@ -74,7 +74,7 @@
 				"enabled": true
 			},
 			"stripped-tag": {
-				"severity": "error",
+				"severity": "warning",
 				"enabled": true
 			},
 			"self-closed-tag": {
@@ -86,7 +86,7 @@
 				"enabled": true
 			},
 			"misnested-tag": {
-				"severity": "warning",
+				"severity": "error",
 				"enabled": true
 			},
 			"pwrap-bug-workaround": {
