@@ -12,6 +12,7 @@
 	"linter-pager-template": "Праз шаблён?",
 	"linter-pager-obsolete-tag-details": "Састарэлы HTML-тэг",
 	"linter-pager-bogus-image-options-details": "Няслушны парамэтар файлу",
+	"linter-pager-missing-end-tag-details": "Адсутнічае канцавы тэг",
 	"linter-numerrors": "($1 {{PLURAL:$1|памылка|памылкі|памылак}})",
 	"linker-page-edit": "рэдагаваць",
 	"linker-page-history": "гісторыя",
