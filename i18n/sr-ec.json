@@ -1,8 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Сербијана"
+			"Сербијана",
+			"Obsuser"
 		]
 	},
-	"linterrors": "Пречишћивач грешки"
+	"linterrors": "Пречишћивач грешки",
+	"linter-pager-pwrap-bug-workaround-details": "Алтернативно решење за баг око преламања параграфа",
+	"linter-category-pwrap-bug-workaround": "Алтернативно решење за баг око преламања параграфа",
+	"linter-category-pwrap-bug-workaround-desc": "Ове странице имају баг око преламања параграфа за који постоји алтернативно решење."
 }
