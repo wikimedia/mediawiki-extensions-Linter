@@ -6,7 +6,15 @@
 		]
 	},
 	"linterrors": "Пречишћивач грешки",
+	"linter-form-namespace": "Именски простор:",
+	"linter-pager-deletable-table-tag-details": "Table таг који би требало обрисати",
+	"linter-pager-misnested-tag-details": "Погрешно уметнут таг који би требало правилно уметнути",
 	"linter-pager-pwrap-bug-workaround-details": "Алтернативно решење за баг око преламања параграфа",
+	"linter-category-deletable-table-tag": "Table таг који би требало обрисати",
+	"linter-category-deletable-table-tag-desc": "Ове странице имају table тагове које би требало обрисати.",
+	"linter-category-misnested-tag": "Погрешно уметнути тагови",
+	"linter-category-misnested-tag-desc": "Ове странице имају погрешно уметнуте тагове које је могуће поправити.",
 	"linter-category-pwrap-bug-workaround": "Алтернативно решење за баг око преламања параграфа",
-	"linter-category-pwrap-bug-workaround-desc": "Ове странице имају баг око преламања параграфа за који постоји алтернативно решење."
+	"linter-category-pwrap-bug-workaround-desc": "Ове странице имају баг око преламања параграфа за који постоји алтернативно решење.",
+	"linker-page-history": "историја"
 }
