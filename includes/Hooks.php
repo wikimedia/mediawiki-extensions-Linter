@@ -23,9 +23,9 @@ namespace MediaWiki\Linter;
 use ApiQuerySiteInfo;
 use Content;
 use DatabaseUpdater;
-use EditPage;
 use IContextSource;
 use MWCallableUpdate;
+use OutputPage;
 use WikiPage;
 
 class Hooks {
@@ -38,21 +38,23 @@ class Hooks {
 	}
 
 	/**
-	 * Hook: EditFormInitialText
+	 * Hook: BeforePageDisplay
 	 *
 	 * If there is a lintid parameter, look up that error in the database
 	 * and setup and output our client-side helpers
 	 *
-	 * @param EditPage $editPage
+	 * @param OutputPage &$out
 	 */
-	public static function onEditFormInitialText( EditPage $editPage ) {
-		$context = $editPage->getContext();
-		$request = $context->getRequest();
+	public static function onBeforePageDisplay( OutputPage &$out ) {
+		$request = $out->getRequest();
 		$lintId = $request->getInt( 'lintid' );
 		if ( !$lintId ) {
 			return;
 		}
-		$title = $editPage->getTitle();
+		$title = $out->getTitle();
+		if ( !$title ) {
+			return;
+		}
 
 		$lintError = ( new Database( $title->getArticleID() ) )->getFromId( $lintId );
 		if ( !$lintError ) {
@@ -60,7 +62,6 @@ class Hooks {
 			return;
 		}
 
-		$out = $context->getOutput();
 		$out->addJsConfigVars( [
 			'wgLinterErrorCategory' => $lintError->category,
 			'wgLinterErrorLocation' => $lintError->location,
