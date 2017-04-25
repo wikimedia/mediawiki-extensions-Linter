@@ -3,7 +3,8 @@
 		"authors": [
 			"Fitoschido",
 			"Macofe",
-			"Dgstranz"
+			"Dgstranz",
+			"Luzcaru"
 		]
 	},
 	"linterrors": "Errores de comprobador",
@@ -26,6 +27,8 @@
 	"linter-category-missing-end-tag-desc": "Estas páginas contienen etiquetas sin su correspondiente cierre.",
 	"linter-category-self-closed-tag": "Etiquetas autocerradas",
 	"linter-category-self-closed-tag-desc": "Estas páginas contienen etiquetas autocerradas.",
+	"linter-category-pwrap-bug-workaround": "Solución de errores de ajuste de párrafo",
+	"linter-category-pwrap-bug-workaround-desc": "Estas páginas tienen un error de ajuste de párrafo que podría ser trabajado en varios lugares.",
 	"linter-numerrors": "($1 {{PLURAL:$1|error|errores}})",
 	"linker-page-edit": "editar",
 	"linker-page-history": "historial",

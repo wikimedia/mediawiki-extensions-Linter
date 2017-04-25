@@ -16,6 +16,7 @@
 	"linter-pager-missing-end-tag-details": "Адсутнічае канцавы тэг",
 	"linter-pager-self-closed-tag-details": "Самазакрыты тэг",
 	"linter-category-obsolete-tag": "Састарэлыя HTML-тэгі",
+	"linter-category-obsolete-tag-desc": "Гэтыя старонкі ўтрымліваюць састарэлыя HTML-тэгі.",
 	"linter-numerrors": "($1 {{PLURAL:$1|памылка|памылкі|памылак}})",
 	"linker-page-edit": "рэдагаваць",
 	"linker-page-history": "гісторыя",
