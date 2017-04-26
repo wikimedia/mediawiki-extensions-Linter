@@ -99,8 +99,9 @@ class Hooks {
 	public static function onAPIQuerySiteInfoGeneralInfo( ApiQuerySiteInfo $api, array &$data ) {
 		$catManager = new CategoryManager();
 		$data['linter'] = [
-			'errors' => $catManager->getErrors(),
-			'warnings' => $catManager->getWarnings(),
+			'high' => $catManager->getHighPriority(),
+			'medium' => $catManager->getMediumPriority(),
+			'low' => $catManager->getLowPriority(),
 		];
 	}
 

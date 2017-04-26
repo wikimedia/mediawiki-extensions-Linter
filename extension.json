@@ -58,40 +58,40 @@
 	"config": {
 		"LinterCategories": {
 			"fostered": {
-				"severity": "error",
-				"enabled": true
+				"enabled": true,
+				"priority": "medium"
 			},
 			"obsolete-tag": {
-				"severity": "warning",
-				"enabled": true
+				"enabled": true,
+				"priority": "low"
 			},
 			"bogus-image-options": {
-				"severity": "error",
-				"enabled": true
+				"enabled": true,
+				"priority": "medium"
 			},
 			"missing-end-tag": {
-				"severity": "error",
-				"enabled": true
+				"enabled": true,
+				"priority": "low"
 			},
 			"stripped-tag": {
-				"severity": "warning",
-				"enabled": true
+				"enabled": true,
+				"priority": "low"
 			},
 			"self-closed-tag": {
-				"severity": "warning",
-				"enabled": true
+				"enabled": true,
+				"priority": "high"
 			},
 			"deletable-table-tag": {
-				"severity": "error",
-				"enabled": true
+				"enabled": true,
+				"priority": "high"
 			},
 			"misnested-tag": {
-				"severity": "error",
-				"enabled": true
+				"enabled": true,
+				"priority": "medium"
 			},
 			"pwrap-bug-workaround": {
-				"severity": "warning",
-				"enabled": true
+				"enabled": true,
+				"priority": "high"
 			}
 		},
 		"LinterSubmitterWhitelist": {
