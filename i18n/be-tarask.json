@@ -17,10 +17,12 @@
 	"linter-pager-self-closed-tag-details": "Самазакрыты тэг",
 	"linter-category-obsolete-tag": "Састарэлыя HTML-тэгі",
 	"linter-category-obsolete-tag-desc": "Гэтыя старонкі ўтрымліваюць састарэлыя HTML-тэгі.",
+	"linter-category-bogus-image-options": "Няслушныя парамэтры файлу",
 	"linter-numerrors": "($1 {{PLURAL:$1|памылка|памылкі|памылак}})",
 	"linker-page-edit": "рэдагаваць",
 	"linker-page-history": "гісторыя",
 	"linter-heading-errors": "Памылкі",
 	"linter-heading-warnings": "Папярэджаньні",
-	"pageinfo-linter": "Lint-памылкі"
+	"pageinfo-linter": "Lint-памылкі",
+	"apihelp-query+linterrors-description": "Атрымаць сьпіс lint-памылак"
 }
