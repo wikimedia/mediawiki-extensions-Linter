@@ -81,14 +81,25 @@ class SpecialLintErrors extends SpecialPage {
 		}
 	}
 
+	/**
+	 * @param string $priority
+	 * @param int[] $totals name => count
+	 * @param string[] $categories
+	 */
+	private function displayList( $priority, $totals, array $categories ) {
+		$out = $this->getOutput();
+		$msgName = 'linter-heading-' . $priority . '-priority';
+		$out->addHTML( Html::element( 'h2', [], $this->msg( $msgName )->text() ) );
+		$out->addHTML( $this->buildCategoryList( $categories, $totals ) );
+	}
+
 	private function showCategoryListings( CategoryManager $catManager ) {
 		$totals = ( new Database( 0 ) )->getTotals();
 
-		$out = $this->getOutput();
-		$out->addHTML( Html::element( 'h2', [], $this->msg( 'linter-heading-errors' )->text() ) );
-		$out->addHTML( $this->buildCategoryList( $catManager->getErrors(), $totals ) );
-		$out->addHTML( Html::element( 'h2', [], $this->msg( 'linter-heading-warnings' )->text() ) );
-		$out->addHTML( $this->buildCategoryList( $catManager->getWarnings(), $totals ) );
+		// Display lint issues by priority
+		$this->displayList( 'high', $totals, $catManager->getHighPriority() );
+		$this->displayList( 'medium', $totals, $catManager->getMediumPriority() );
+		$this->displayList( 'low', $totals, $catManager->getLowPriority() );
 	}
 
 	/**

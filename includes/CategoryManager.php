@@ -25,8 +25,9 @@ namespace MediaWiki\Linter;
  */
 class CategoryManager {
 
-	const ERROR = 'error';
-	const WARNING = 'warning';
+	const HIGH = 'high';
+	const MEDIUM = 'medium';
+	const LOW = 'low';
 
 	/**
 	 * Map of category names to their hardcoded
@@ -49,49 +50,57 @@ class CategoryManager {
 	/**
 	 * @var string[]
 	 */
-	private $errors = [];
-
-	/**
-	 * @var string[]
-	 */
-	private $warnings = [];
+	private $categories = [
+		self::HIGH => [],
+		self::MEDIUM => [],
+		self::LOW => [],
+	];
 
 	public function __construct() {
 		global $wgLinterCategories;
 		foreach ( $wgLinterCategories as $name => $info ) {
 			if ( $info['enabled'] ) {
-				if ( $info['severity'] === self::ERROR ) {
-					$this->errors[] = $name;
-				} elseif ( $info['severity'] === self::WARNING ) {
-					$this->warnings[] = $name;
-				}
+				$this->categories[$info['priority']][] = $name;
 			}
 		}
-		sort( $this->errors );
-		sort( $this->warnings );
+
+		sort( $this->categories[self::HIGH] );
+		sort( $this->categories[self::MEDIUM] );
+		sort( $this->categories[self::LOW] );
 	}
 
 	/**
 	 * @return string[]
 	 */
-	public function getErrors() {
-		return $this->errors;
+	public function getHighPriority() {
+		return $this->categories[self::HIGH];
 	}
 
 	/**
 	 * @return string[]
 	 */
-	public function getWarnings() {
-		return $this->warnings;
+	public function getMediumPriority() {
+		return $this->categories[self::MEDIUM];
 	}
 
 	/**
-	 * Categories that are configure to be displayed to users
+	 * @return string[]
+	 */
+	public function getLowPriority() {
+		return $this->categories[self::LOW];
+	}
+
+	/**
+	 * Categories that are configured to be displayed to users
 	 *
 	 * @return string[]
 	 */
 	public function getVisibleCategories() {
-		return array_merge( $this->errors, $this->warnings );
+		return array_merge(
+			$this->categories[self::HIGH],
+			$this->categories[self::MEDIUM],
+			$this->categories[self::LOW]
+		);
 	}
 
 	/**
