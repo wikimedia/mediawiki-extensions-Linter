@@ -16,7 +16,5 @@
 	"linter-numerrors": "($1개의 {{PLURAL:$1|오류}})",
 	"linker-page-edit": "편집",
 	"linker-page-history": "역사",
-	"linter-heading-errors": "오류",
-	"linter-heading-warnings": "경고",
 	"apihelp-record-lint-param-page": "문서 제목"
 }

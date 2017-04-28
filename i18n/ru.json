@@ -16,7 +16,8 @@
 	"linter-category-misnested-tag-desc": "Эти страницы содержат неверно вложенные теги, которые можно исправить.",
 	"linker-page-edit": "править",
 	"linker-page-history": "история",
-	"linter-heading-errors": "Ошибки",
-	"linter-heading-warnings": "Предупреждения",
+	"linter-heading-high-priority": "Высокий приоритет",
+	"linter-heading-medium-priority": "Средний приоритет",
+	"linter-heading-low-priority": "Низкий приоритет",
 	"apihelp-record-lint-param-page": "Заголовок страницы"
 }

@@ -41,8 +41,6 @@
 	"linter-numerrors": "($1 {{PLURAL:$1|erreur|erreurs}})",
 	"linker-page-edit": "modifier",
 	"linker-page-history": "historique",
-	"linter-heading-errors": "Erreurs",
-	"linter-heading-warnings": "Avertissements",
 	"pageinfo-linter": "Erreurs de Lint",
 	"apihelp-query+linterrors-description": "Obtenir une liste des erreurs lint",
 	"apihelp-query+linterrors-param-categories": "Catégories d'erreurs lint",
