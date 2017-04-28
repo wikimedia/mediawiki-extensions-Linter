@@ -22,6 +22,8 @@ namespace MediaWiki\Linter;
 
 use HTMLForm;
 use Html;
+use MediaWiki\MediaWikiServices;
+use ObjectCache;
 use SpecialPage;
 
 class SpecialLintErrors extends SpecialPage {
@@ -94,7 +96,11 @@ class SpecialLintErrors extends SpecialPage {
 	}
 
 	private function showCategoryListings( CategoryManager $catManager ) {
-		$totals = ( new Database( 0 ) )->getTotals();
+		$lookup = new TotalsLookup(
+			$catManager,
+			MediaWikiServices::getInstance()->getMainWANObjectCache()
+		);
+		$totals = $lookup->getTotals();
 
 		// Display lint issues by priority
 		$this->displayList( 'high', $totals, $catManager->getHighPriority() );
