@@ -40,7 +40,8 @@
 	"linter-numerrors": "({{PLURAL:$1|Ein|$1}} Fehler)",
 	"linker-page-edit": "bearbeiten",
 	"linker-page-history": "Versionsgeschichte",
-	"linter-heading-errors": "Fehler",
-	"linter-heading-warnings": "Warnungen",
+	"linter-heading-high-priority": "Hohe Priorität",
+	"linter-heading-medium-priority": "Mittlere Priorität",
+	"linter-heading-low-priority": "Niedrige Priorität",
 	"pageinfo-linter": "Lint-Fehler"
 }

@@ -16,5 +16,8 @@
 	"linter-numerrors": "($1개의 {{PLURAL:$1|오류}})",
 	"linker-page-edit": "편집",
 	"linker-page-history": "역사",
+	"linter-heading-high-priority": "높은 우선순위",
+	"linter-heading-medium-priority": "중간 우선순위",
+	"linter-heading-low-priority": "낮은 우선순위",
 	"apihelp-record-lint-param-page": "문서 제목"
 }

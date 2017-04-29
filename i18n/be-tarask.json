@@ -19,6 +19,7 @@
 	"linter-category-obsolete-tag-desc": "Гэтыя старонкі ўтрымліваюць састарэлыя HTML-тэгі.",
 	"linter-category-bogus-image-options": "Няслушныя парамэтры файлу",
 	"linter-category-missing-end-tag": "Адсутнічае канцавы тэг",
+	"linter-category-pwrap-bug-workaround": "Пазьбяганьне памылкі абгорткі параграфу",
 	"linter-numerrors": "($1 {{PLURAL:$1|памылка|памылкі|памылак}})",
 	"linker-page-edit": "рэдагаваць",
 	"linker-page-history": "гісторыя",

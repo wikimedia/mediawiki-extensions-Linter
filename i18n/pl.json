@@ -23,7 +23,8 @@
 	"linter-numerrors": "($1 {{PLURAL:$1|błąd|błędy|błędów}})",
 	"linker-page-edit": "edytuj",
 	"linker-page-history": "historia",
-	"linter-heading-errors": "Błędy",
-	"linter-heading-warnings": "Ostrzeżenia",
+	"linter-heading-high-priority": "Wysoki priorytet",
+	"linter-heading-medium-priority": "Średni priorytet",
+	"linter-heading-low-priority": "Niski priorytet",
 	"apihelp-record-lint-param-page": "Tytuł strony"
 }
