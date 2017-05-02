@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Beta16"
+			"Beta16",
+			"Ontsed"
 		]
 	},
 	"linter-form-namespace": "Namespace:",
@@ -12,7 +13,8 @@
 	"linter-numerrors": "($1 {{PLURAL:$1|errore|errori}})",
 	"linker-page-edit": "modifica",
 	"linker-page-history": "cronologia",
-	"linter-heading-errors": "Errori",
-	"linter-heading-warnings": "Avvisi",
+	"linter-heading-high-priority": "Alta priorità",
+	"linter-heading-medium-priority": "Priorità media",
+	"linter-heading-low-priority": "Bassa priorità",
 	"apihelp-record-lint-param-page": "Titolo della pagina"
 }

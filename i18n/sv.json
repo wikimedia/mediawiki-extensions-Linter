@@ -15,5 +15,7 @@
 	"linter-numerrors": "($1 {{PLURAL:$1|fel}})",
 	"linker-page-edit": "redigera",
 	"linker-page-history": "historik",
+	"linter-heading-high-priority": "Hög prioritet",
+	"linter-heading-low-priority": "Låg prioritet",
 	"apihelp-record-lint-param-page": "Sidtitel"
 }

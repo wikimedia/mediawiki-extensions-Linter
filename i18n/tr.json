@@ -1,8 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Vito Genovese"
+			"Vito Genovese",
+			"Bulgu"
 		]
 	},
-	"linker-page-edit": "düzenle"
+	"linker-page-edit": "düzenle",
+	"linter-heading-high-priority": "Yüksek öncelik",
+	"linter-heading-medium-priority": "Orta seviye öncelik",
+	"linter-heading-low-priority": "Düşük öncelik"
 }

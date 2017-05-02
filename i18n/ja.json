@@ -5,13 +5,12 @@
 			"Shirayuki"
 		]
 	},
+	"linter-form-namespace": "名前空間:",
 	"linter-pager-title": "ページ名",
 	"linter-pager-missing-end-tag-details": "不足している終了タグ",
 	"linter-category-missing-end-tag": "終了タグの不足",
 	"linter-numerrors": "($1 {{PLURAL:$1|件のエラー}})",
 	"linker-page-edit": "編集",
 	"linker-page-history": "履歴",
-	"linter-heading-errors": "エラー",
-	"linter-heading-warnings": "警告",
 	"apihelp-record-lint-param-page": "ページ名"
 }

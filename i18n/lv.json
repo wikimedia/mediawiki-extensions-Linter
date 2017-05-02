@@ -4,5 +4,8 @@
 			"Papuass"
 		]
 	},
-	"linter-form-namespace": "Vārdtelpa:"
+	"linter-form-namespace": "Vārdtelpa:",
+	"linter-heading-high-priority": "Augsta prioritāte",
+	"linter-heading-medium-priority": "Vidēja prioritāte",
+	"linter-heading-low-priority": "Zema prioritāte"
 }
