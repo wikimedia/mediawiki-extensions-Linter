@@ -17,6 +17,7 @@
 	"linter-pager-stripped-tag-details": "Няпарны тэг",
 	"linter-pager-self-closed-tag-details": "Самазакрыты тэг",
 	"linter-pager-deletable-table-tag-details": "Тэг табліцы, які мае быць выдалены",
+	"linter-pager-misnested-tag-details": "Няслушна ўкладзены тэг, які трэба ўкласьці правільна",
 	"linter-pager-pwrap-bug-workaround-details": "Пазьбяганьне памылкі абгорткі параграфу",
 	"linter-category-obsolete-tag": "Састарэлыя HTML-тэгі",
 	"linter-category-obsolete-tag-desc": "Гэтыя старонкі ўтрымліваюць састарэлыя HTML-тэгі.",
