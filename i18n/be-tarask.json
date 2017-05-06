@@ -22,6 +22,7 @@
 	"linter-category-obsolete-tag": "Састарэлыя HTML-тэгі",
 	"linter-category-obsolete-tag-desc": "Гэтыя старонкі ўтрымліваюць састарэлыя HTML-тэгі.",
 	"linter-category-bogus-image-options": "Няслушныя парамэтры файлу",
+	"linter-category-bogus-image-options-desc": "Гэтыя старонкі ўтрымліваюць файлы зь няслушнымі парамэтрамі.",
 	"linter-category-missing-end-tag": "Адсутнічае канцавы тэг",
 	"linter-category-stripped-tag": "Няпарныя тэгі",
 	"linter-category-misnested-tag": "Няслушна ўкладзеныя тэгі",

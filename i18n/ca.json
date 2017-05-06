@@ -1,10 +1,24 @@
 {
 	"@metadata": {
 		"authors": [
-			"Fitoschido"
+			"Fitoschido",
+			"Vriullop"
 		]
 	},
+	"linterrors": "Errors de lint",
+	"linterrors-subpage": "Errors de lint: $1",
+	"linter-desc": "Analitza errors de lint des d'un servei extern i els mostra als usuaris",
+	"linter-form-namespace": "Espai de noms:",
 	"linter-pager-title": "Títol de la pàgina",
+	"linter-pager-template": "Mitjançant una plantilla?",
+	"linter-pager-obsolete-tag-details": "Etiqueta HTML obsoleta",
+	"linter-category-obsolete-tag": "Etiquetes HTML obsoletes",
+	"linter-category-obsolete-tag-desc": "Aquestes pàgines utilitzen etiquetes HTML obsoletes.",
+	"linter-numerrors": "($1 {{PLURAL:$1|error|errors}})",
 	"linker-page-edit": "edita",
+	"linker-page-history": "historial",
+	"linter-heading-high-priority": "Prioritat alta",
+	"linter-heading-medium-priority": "Prioritat mitjana",
+	"linter-heading-low-priority": "Prioritat baixa",
 	"apihelp-record-lint-param-page": "Títol de la pàgina"
 }
