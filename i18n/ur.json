@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Obaid Raza"
+		]
+	},
+	"linter-form-namespace": "نام فضا:",
+	"linter-pager-title": "عنوان صفحہ",
+	"linter-category-self-closed-tag": "خود بند کر دیا گیا ٹیگز",
+	"linter-numerrors": "($1 {{PLURAL:$1|خطا|خطائیں}})"
+}

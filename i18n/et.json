@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pikne"
+		]
+	},
+	"linterrors": "Linteri vead",
+	"linterrors-subpage": "Linteri vead: $1",
+	"linter-form-namespace": "Nimeruum:",
+	"linter-pager-title": "Lehekülje pealkiri",
+	"linter-pager-template": "Malli vahendusel?",
+	"linter-pager-obsolete-tag-details": "Aegunud HTML-silt",
+	"linter-pager-missing-end-tag-details": "Puuduv lõppsilt",
+	"linter-pager-self-closed-tag-details": "Endassesuletud silt",
+	"linter-pager-deletable-table-tag-details": "Tabelisilt, mis tuleks kustutada",
+	"linter-pager-misnested-tag-details": "Valesti pesastatud silt, mis tuleks õigesti pesastada",
+	"linter-pager-pwrap-bug-workaround-details": "Vastukaal reamurdeta lõigu veale",
+	"linter-category-obsolete-tag": "Aegunud HTML-sildid",
+	"linter-category-obsolete-tag-desc": "Need leheküljed kasutavad aegunud HTML-silte.",
+	"linter-category-missing-end-tag": "Lõppsilt puudub",
+	"linter-category-missing-end-tag-desc": "Neil lehekülgedel puudub mõni lõppsilt.",
+	"linter-category-self-closed-tag": "Endassesuletud sildid",
+	"linter-category-self-closed-tag-desc": "Neil lehekülgedel on endassesuletud silte.",
+	"linter-category-deletable-table-tag": "Tabelisilt tuleks kustutada",
+	"linter-category-deletable-table-tag-desc": "Neil lehekülgedel on tabelisilte, mis tuleks kustutada.",
+	"linter-category-misnested-tag": "Valesti pesastatud sildid",
+	"linter-category-misnested-tag-desc": "Neil lehekülgedel on valesti pesastatud silte, mida saaks parandada.",
+	"linter-category-pwrap-bug-workaround": "Vastukaal reamurdeta lõigu veale",
+	"linter-category-pwrap-bug-workaround-desc": "Neil lehekülgedel on reamurdeta lõigu viga, millele saab vastukaalu seada.",
+	"linter-numerrors": "($1 {{PLURAL:$1|viga}})",
+	"linker-page-edit": "redigeeri",
+	"linker-page-history": "ajalugu",
+	"linter-heading-high-priority": "Esmajärgulise tähtsusega",
+	"linter-heading-medium-priority": "Teisejärgulise tähtsusega",
+	"linter-heading-low-priority": "Kolmandajärgulise tähtsusega",
+	"pageinfo-linter": "Linteri vead"
+}
