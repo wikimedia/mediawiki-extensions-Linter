@@ -26,6 +26,7 @@
 	"linter-category-missing-end-tag": "Адсутнічае канцавы тэг",
 	"linter-category-stripped-tag": "Няпарныя тэгі",
 	"linter-category-self-closed-tag": "Самазакрытыя тэгі",
+	"linter-category-deletable-table-tag": "Тэг табліцы, які мае быць выдалены",
 	"linter-category-misnested-tag": "Няслушна ўкладзеныя тэгі",
 	"linter-category-pwrap-bug-workaround": "Пазьбяганьне памылкі абгорткі параграфу",
 	"linter-numerrors": "($1 {{PLURAL:$1|памылка|памылкі|памылак}})",
