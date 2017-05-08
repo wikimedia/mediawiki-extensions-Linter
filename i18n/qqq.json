@@ -46,6 +46,7 @@
 	"linter-heading-high-priority": "Heading on [[Special:LintErrors]]",
 	"linter-heading-medium-priority": "Heading on [[Special:LintErrors]]",
 	"linter-heading-low-priority": "Heading on [[Special:LintErrors]]",
+	"multi-part-template-block": "Table cell on [[Special:LintErrors]] indicating that content block is not produced by a single template",
 	"pageinfo-linter": "Heading on ?action=info for a page if it has lint errors",
 	"apihelp-query+linterrors-description": "{{doc-apihelp-description|query+linterrors}}",
 	"apihelp-query+linterrors-param-categories": "{{doc-apihelp-param|query+linterrors|categories}}",

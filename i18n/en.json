@@ -43,6 +43,7 @@
 	"linter-heading-high-priority": "High priority",
 	"linter-heading-medium-priority": "Medium priority",
 	"linter-heading-low-priority": "Low priority",
+	"multi-part-template-block": "Output not from a single template",
 	"pageinfo-linter": "Lint errors",
 	"apihelp-query+linterrors-description": "Get a list of lint errors",
 	"apihelp-query+linterrors-param-categories": "Categories of lint errors",

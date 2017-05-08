@@ -145,11 +145,16 @@ class LintErrorsPager extends TablePager {
 				if ( !$lintError->templateInfo ) {
 					return '&mdash;';
 				}
-				$templateName = $lintError->templateInfo['name'];
-				$templateTitle = Title::newFromText( $templateName, NS_TEMPLATE );
-				if ( !$templateTitle ) {
-					// Shouldn't be possible...???
-					return '&mdash;';
+
+				if ( isset( $lintError->templateInfo['multiPartTemplateBlock'] ) ) {
+					return $this->msg( 'multi-part-template-block' )->escaped();
+				} else {
+					$templateName = $lintError->templateInfo['name'];
+					$templateTitle = Title::newFromText( $templateName, NS_TEMPLATE );
+					if ( !$templateTitle ) {
+						// Shouldn't be possible...???
+						return '&mdash;';
+					}
 				}
 
 				return $this->linkRenderer->makeLink(
