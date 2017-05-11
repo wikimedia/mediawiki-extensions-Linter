@@ -43,5 +43,6 @@
 	"linter-heading-high-priority": "Hohe Priorität",
 	"linter-heading-medium-priority": "Mittlere Priorität",
 	"linter-heading-low-priority": "Niedrige Priorität",
+	"multi-part-template-block": "Ausgabe nicht von einer einzelnen Vorlage",
 	"pageinfo-linter": "Lint-Fehler"
 }

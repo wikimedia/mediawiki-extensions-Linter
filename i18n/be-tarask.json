@@ -33,6 +33,8 @@
 	"linker-page-edit": "рэдагаваць",
 	"linker-page-history": "гісторыя",
 	"linter-heading-high-priority": "Высокі прыярытэт",
+	"linter-heading-medium-priority": "Сярэдні прыярытэт",
+	"linter-heading-low-priority": "Нізкі прыярытэт",
 	"pageinfo-linter": "Lint-памылкі",
 	"apihelp-query+linterrors-description": "Атрымаць сьпіс lint-памылак"
 }

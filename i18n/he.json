@@ -43,6 +43,7 @@
 	"linter-heading-high-priority": "עדיפות גבוהה",
 	"linter-heading-medium-priority": "עדיפות בינונית",
 	"linter-heading-low-priority": "עדיפות נמוכה",
+	"multi-part-template-block": "פלא לא מתוך תבנית אחת",
 	"pageinfo-linter": "שגיאות ניקיון",
 	"apihelp-query+linterrors-description": "קבלת רשימת שגיאות ניקיון",
 	"apihelp-query+linterrors-param-categories": "סוגים של שגיאות ניקיון",
