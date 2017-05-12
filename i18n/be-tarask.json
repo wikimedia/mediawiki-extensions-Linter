@@ -35,6 +35,7 @@
 	"linter-heading-high-priority": "Высокі прыярытэт",
 	"linter-heading-medium-priority": "Сярэдні прыярытэт",
 	"linter-heading-low-priority": "Нізкі прыярытэт",
+	"multi-part-template-block": "Атрымана не з аднаго шаблёну",
 	"pageinfo-linter": "Lint-памылкі",
 	"apihelp-query+linterrors-description": "Атрымаць сьпіс lint-памылак"
 }

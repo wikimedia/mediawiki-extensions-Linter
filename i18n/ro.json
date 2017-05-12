@@ -1,10 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Narlotep1"
+			"Narlotep1",
+			"Matrafox"
 		]
 	},
 	"linter-pager-self-closed-tag-details": "Tag auto-inchis",
 	"linter-category-self-closed-tag": "Tag-uri auto-inchise.",
-	"linter-category-self-closed-tag-desc": "Aceste pagini contin tag-uri auto-inchise."
+	"linter-category-self-closed-tag-desc": "Aceste pagini contin tag-uri auto-inchise.",
+	"linter-heading-high-priority": "Prioritate ridicată",
+	"linter-heading-medium-priority": "Prioritate medie",
+	"linter-heading-low-priority": "Prioritate scăzută",
+	"multi-part-template-block": "Output din mai multe șabloane"
 }

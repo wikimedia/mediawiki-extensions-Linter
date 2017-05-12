@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Octahedron80"
+			"Octahedron80",
+			"Ans"
 		]
 	},
 	"linter-form-namespace": "เนมสเปซ:",
@@ -10,7 +11,7 @@
 	"linter-pager-obsolete-tag-details": "แท็ก HTML ที่เลิกใช้",
 	"linter-pager-bogus-image-options-details": "ตัวเลือกไฟล์ที่ไม่สมบูรณ์",
 	"linter-pager-missing-end-tag-details": "ขาดแท็กปิด",
-	"linter-pager-deletable-table-tag-details": "แท็กตารางที่ควรถูกลบ",
+	"linter-pager-deletable-table-tag-details": "แท็กตารางที่ควรลบ",
 	"linter-category-obsolete-tag": "แท็ก HTML ที่เลิกใช้",
 	"linter-category-obsolete-tag-desc": "หน้าเหล่านี้ใช้แท็ก HTML ที่เลิกใช้",
 	"linter-category-bogus-image-options": "ตัวเลือกไฟล์ที่ไม่สมบูรณ์",
@@ -21,7 +22,5 @@
 	"linter-category-deletable-table-tag-desc": "หน้าเหล่านี้มีแท็กตารางที่ควรลบ",
 	"linter-numerrors": "($1 {{PLURAL:$1|ข้อผิดพลาด|ข้อผิดพลาด}})",
 	"linker-page-edit": "แก้ไข",
-	"linker-page-history": "ประวัติ",
-	"linter-heading-errors": "ข้อผิดพลาด",
-	"linter-heading-warnings": "คำเตือน"
+	"linker-page-history": "ประวัติ"
 }
