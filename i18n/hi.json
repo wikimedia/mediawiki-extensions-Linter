@@ -4,5 +4,8 @@
 			"Sfic"
 		]
 	},
-	"linter-form-namespace": "नामस्थान:"
+	"linter-form-namespace": "नामस्थान:",
+	"linter-heading-high-priority": "उच्च प्राथमिकता",
+	"linter-heading-medium-priority": "मध्यम प्राथमिकता",
+	"linter-heading-low-priority": "निम्न प्राथमिकता"
 }
