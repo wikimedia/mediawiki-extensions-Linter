@@ -1,8 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kareyac"
+			"Kareyac",
+			"Vodnokon4e"
 		]
 	},
-	"linker-page-edit": "редактиране"
+	"linker-page-edit": "редактиране",
+	"linter-heading-high-priority": "Висок приоритет",
+	"linter-heading-medium-priority": "Среден приоритет",
+	"linter-heading-low-priority": "Нисък приоритет"
 }
