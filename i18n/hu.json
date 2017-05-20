@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Tacsipacsi"
+			"Tacsipacsi",
+			"Urbalazs"
 		]
 	},
 	"linter-pager-title": "Lapcím",
@@ -17,8 +18,9 @@
 	"linter-category-self-closed-tag-desc": "Ezek a lapok önzáró címkéket használnak.",
 	"linter-numerrors": "($1 hiba)",
 	"linker-page-edit": "szerkesztés",
-	"linter-heading-errors": "Hibák",
-	"linter-heading-warnings": "Figyelmeztetések",
+	"linter-heading-high-priority": "Magas prioritás",
+	"linter-heading-medium-priority": "Közepes prioritás",
+	"linter-heading-low-priority": "Alacsony prioritás",
 	"apihelp-query+linterrors-param-limit": "Megjelenítendő találatok száma",
 	"apihelp-record-lint-param-data": "JSON-kódolt adatok a hibáról",
 	"apihelp-record-lint-param-page": "Lapcím",
