@@ -36,6 +36,7 @@
 	"linter-category-misnested-tag": "Няслушна ўкладзеныя тэгі",
 	"linter-category-misnested-tag-desc": "Гэтыя старонкі маюць няслушна ўкладзеныя тэгі, якія можна выправіць.",
 	"linter-category-pwrap-bug-workaround": "Пазьбяганьне памылкі абгорткі параграфу",
+	"linter-category-pwrap-bug-workaround-desc": "Гэтыя старонкі маюць памылку абгорткі параграфу, якая можа быць пазьбегнутая.",
 	"linter-numerrors": "($1 {{PLURAL:$1|памылка|памылкі|памылак}})",
 	"linker-page-edit": "рэдагаваць",
 	"linker-page-history": "гісторыя",
