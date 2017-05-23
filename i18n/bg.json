@@ -2,9 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Kareyac",
-			"Vodnokon4e"
+			"Vodnokon4e",
+			"StanProg"
 		]
 	},
+	"linter-form-namespace": "Именно пространство:",
+	"linter-pager-missing-end-tag-details": "Липсващ затварящ таг",
+	"linter-category-missing-end-tag": "Липсващ затварящ таг",
+	"linter-category-self-closed-tag": "Самозатварящи се тагове",
 	"linker-page-edit": "редактиране",
 	"linter-heading-high-priority": "Висок приоритет",
 	"linter-heading-medium-priority": "Среден приоритет",
