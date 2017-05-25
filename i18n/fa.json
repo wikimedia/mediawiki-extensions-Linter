@@ -43,6 +43,7 @@
 	"linter-heading-high-priority": "اهمیت بالا",
 	"linter-heading-medium-priority": "اهمیت متوسط",
 	"linter-heading-low-priority": "اهمیت کم",
+	"multi-part-template-block": "خروجیی که فقط از یک الگو نباشد",
 	"pageinfo-linter": "خطاهای نحوی پنهان",
 	"apihelp-query+linterrors-description": "دریافت فهرست خطاهای نحوی پنهان",
 	"apihelp-query+linterrors-param-categories": "رده‌های خطاهای نحوی پنهان",
