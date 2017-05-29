@@ -21,7 +21,7 @@
 	"linter-pager-misnested-tag-details": "Prolínající se prvek",
 	"linter-pager-pwrap-bug-workaround-details": "Nowrap prvek s blokovým prvkem na jednom řádku",
 	"linter-category-fostered": "Chybně vnořený obsah",
-	"linter-category-fostered-desc": "Tyto stránky obsahují prvky, které bylo nutno někam přesunout.",
+	"linter-category-fostered-desc": "Tyto stránky obsahují chybně vložený obsah do tabulky.",
 	"linter-category-obsolete-tag": "Zastaralé HTML značky",
 	"linter-category-obsolete-tag-desc": "Tyto stránky používají zastaralé HTML značky.",
 	"linter-category-bogus-image-options": "Chybné parametry souboru",
