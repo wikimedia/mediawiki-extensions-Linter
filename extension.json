@@ -14,6 +14,7 @@
 		"MediaWiki\\Linter\\LintError": "includes/LintError.php",
 		"MediaWiki\\Linter\\ApiRecordLint": "includes/ApiRecordLint.php",
 		"MediaWiki\\Linter\\ApiQueryLintErrors": "includes/ApiQueryLintErrors.php",
+		"MediaWiki\\Linter\\ApiQueryLinterStats": "includes/ApiQueryLinterStats.php",
 		"MediaWiki\\Linter\\RecordLintJob": "includes/RecordLintJob.php",
 		"MediaWiki\\Linter\\SpecialLintErrors": "includes/SpecialLintErrors.php",
 		"MediaWiki\\Linter\\LintErrorsPager": "includes/LintErrorsPager.php",
@@ -37,6 +38,9 @@
 	},
 	"APIListModules": {
 		"linterrors": "MediaWiki\\Linter\\ApiQueryLintErrors"
+	},
+	"APIMetaModules": {
+		"linterstats": "MediaWiki\\Linter\\ApiQueryLinterStats"
 	},
 	"SpecialPages": {
 		"LintErrors": "MediaWiki\\Linter\\SpecialLintErrors"
