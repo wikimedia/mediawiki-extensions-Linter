@@ -3,7 +3,8 @@
 		"authors": [
 			"Fitoschido",
 			"Gomoko",
-			"Wladek92"
+			"Wladek92",
+			"Urhixidur"
 		]
 	},
 	"linterrors": "Erreurs de lint",
@@ -12,7 +13,7 @@
 	"linter-form-namespace": "Espace de noms :",
 	"linter-pager-title": "Titre de la page",
 	"linter-pager-template": "Via un modèle ?",
-	"linter-pager-obsolete-tag-details": "Balise HTML obsolète",
+	"linter-pager-obsolete-tag-details": "Balise HTML désuète",
 	"linter-pager-bogus-image-options-details": "Option de fichier factices",
 	"linter-pager-missing-end-tag-details": "Balise de fin manquante",
 	"linter-pager-stripped-tag-details": "Balise vide",
@@ -22,8 +23,8 @@
 	"linter-pager-pwrap-bug-workaround-details": "Palliatif au bogue de délimitation de paragraphe",
 	"linter-category-fostered": "Contenu mal placé",
 	"linter-category-fostered-desc": "Ces pages ont du contenu mal placé.",
-	"linter-category-obsolete-tag": "Balises HTML obsolètes",
-	"linter-category-obsolete-tag-desc": "Ces pages utilisent des balises HTML obsolètes.",
+	"linter-category-obsolete-tag": "Balises HTML désuètes",
+	"linter-category-obsolete-tag-desc": "Ces pages utilisent des balises HTML désuètes.",
 	"linter-category-bogus-image-options": "Options de fichier factices",
 	"linter-category-bogus-image-options-desc": "Ces pages ont des fichiers avec des options factices.",
 	"linter-category-missing-end-tag": "Balise de fin manquante",
@@ -51,7 +52,7 @@
 	"apihelp-query+linterrors-param-limit": "Nombre de résultats à demander",
 	"apihelp-query+linterrors-param-from": "ID de lint auquel commencer la requête",
 	"apihelp-query+linterrors-param-namespace": "Inclure uniquement les erreurs lint des espaces de nom spécifiés",
-	"apihelp-query+linterrors-example-1": "Obtenir toutes les erreurs lint de la catégorie balise obsolète",
+	"apihelp-query+linterrors-example-1": "Obtenir toutes les erreurs lint de la catégorie balise désuète",
 	"apihelp-record-lint-description": "Enregistrer une erreur lint dans la base de données",
 	"apihelp-record-lint-param-data": "Données encodées en JSON sur l’erreur",
 	"apihelp-record-lint-param-page": "Titre de la page",
