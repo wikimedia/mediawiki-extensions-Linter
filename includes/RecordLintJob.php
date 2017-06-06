@@ -62,22 +62,46 @@ class RecordLintJob extends Job {
 			$toSet = array_merge( $toSet, $catErrors );
 		}
 
-		$lintDb->setForPage( $toSet );
-		$this->updateStats( $lintDb );
+		$changes = $lintDb->setForPage( $toSet );
+		$this->updateStats( $lintDb, $changes );
 
 		return true;
 	}
 
 	/**
-	 * Send stats to statsd
+	 * Send stats to statsd and update totals cache
 	 *
 	 * @param Database $lintDb
+	 * @param array $changes
 	 */
-	protected function updateStats( Database $lintDb ) {
+	protected function updateStats( Database $lintDb, array $changes ) {
 		global $wgLinterStatsdSampleFactor;
 
+		$mwServices = MediaWikiServices::getInstance();
+
+		$totalsLookup = new TotalsLookup(
+			new CategoryManager(),
+			$mwServices->getMainWANObjectCache()
+		);
+
 		if ( $wgLinterStatsdSampleFactor === false ) {
-			// Not enabled at all
+			// Don't send to statsd, but update cache with $changes
+			$raw = $changes['added'];
+			foreach ( $changes['deleted'] as $cat => $count ) {
+				if ( isset( $raw[$cat] ) ) {
+					$raw[$cat] -= $count;
+				} else {
+					// Negative value
+					$raw[$cat] = 0 - $count;
+				}
+			}
+
+			foreach ( $raw as $cat => $count ) {
+				if ( $count != 0 ) {
+					// There was a change in counts, invalidate the cache
+					$totalsLookup->touchCategoryCache( $cat );
+				}
+			}
 			return;
 		} elseif ( mt_rand( 1, $wgLinterStatsdSampleFactor ) != 1 ) {
 			return;
@@ -86,12 +110,14 @@ class RecordLintJob extends Job {
 		$totals = $lintDb->getTotals();
 		$wiki = wfWikiID();
 
-		$stats = MediaWikiServices::getInstance()->getStatsdDataFactory();
+		$stats = $mwServices->getStatsdDataFactory();
 		foreach ( $totals as $name => $count ) {
 			$stats->gauge( "linter.category.$name.$wiki", $count );
 		}
 
 		$stats->gauge( "linter.totals.$wiki", array_sum( $totals ) );
+
+		$totalsLookup->touchAllCategoriesCache();
 	}
 
 }

@@ -16,7 +16,8 @@
 		"MediaWiki\\Linter\\ApiQueryLintErrors": "includes/ApiQueryLintErrors.php",
 		"MediaWiki\\Linter\\RecordLintJob": "includes/RecordLintJob.php",
 		"MediaWiki\\Linter\\SpecialLintErrors": "includes/SpecialLintErrors.php",
-		"MediaWiki\\Linter\\LintErrorsPager": "includes/LintErrorsPager.php"
+		"MediaWiki\\Linter\\LintErrorsPager": "includes/LintErrorsPager.php",
+		"MediaWiki\\Linter\\TotalsLookup": "includes/TotalsLookup.php"
 	},
 	"MessagesDirs": {
 		"Linter": "i18n"

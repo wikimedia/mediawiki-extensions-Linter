@@ -66,22 +66,22 @@ class DatabaseTest extends MediaWikiTestCase {
 		$lintDb = new Database( 5 );
 		$dummyErrors = $this->getDummyLintErrors();
 		$result = $lintDb->setForPage( $dummyErrors );
-		$this->assertSetForPageResult( $result, 0, 2 );
+		$this->assertSetForPageResult( $result, [], [ 'fostered' => 1, 'obsolete-tag' => 1 ] );
 		$this->assertLintErrorsEqual( $dummyErrors, $lintDb->getForPage() );
 
 		// Should delete the second error
 		$result2 = $lintDb->setForPage( [ $dummyErrors[0] ] );
-		$this->assertSetForPageResult( $result2, 1, 0 );
+		$this->assertSetForPageResult( $result2, [ 'obsolete-tag' => 1 ], [] );
 		$this->assertLintErrorsEqual( [ $dummyErrors[0] ], $lintDb->getForPage() );
 
 		// Insert the second error, delete the first
 		$result3 = $lintDb->setForPage( [ $dummyErrors[1] ] );
-		$this->assertSetForPageResult( $result3, 1, 1 );
+		$this->assertSetForPageResult( $result3, [ 'fostered' => 1 ], [ 'obsolete-tag' => 1 ] );
 		$this->assertLintErrorsEqual( [ $dummyErrors[1] ], $lintDb->getForPage() );
 
 		// Delete the second (only) error
 		$result4 = $lintDb->setForPage( [] );
-		$this->assertSetForPageResult( $result4, 1, 0 );
+		$this->assertSetForPageResult( $result4, [ 'obsolete-tag' => 1 ], [] );
 		$this->assertLintErrorsEqual( [], $lintDb->getForPage() );
 	}
 

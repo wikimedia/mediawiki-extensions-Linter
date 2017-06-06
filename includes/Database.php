@@ -130,17 +130,34 @@ class Database {
 	}
 
 	/**
+	 * @param LintError[] $errors
+	 * @return array
+	 */
+	private function countByCat( array $errors ) {
+		$count = [];
+		foreach ( $errors as $error ) {
+			if ( !isset( $count[$error->category] ) ) {
+				$count[$error->category] = 1;
+			} else {
+				$count[$error->category] += 1;
+			}
+		}
+
+		return $count;
+	}
+
+	/**
 	 * Save the specified lint errors in the
 	 * database
 	 *
 	 * @param LintError[] $errors
-	 * @return array [ 'deleted' => int, 'added' => int ]
+	 * @return array [ 'deleted' => [ cat => count ], 'added' => [ cat => count ] ]
 	 */
 	public function setForPage( $errors ) {
 		$previous = $this->getForPage();
 		$dbw = wfGetDB( DB_MASTER );
 		if ( !$previous && !$errors ) {
-			return [ 'deleted' => 0, 'added' => 0 ];
+			return [ 'deleted' => [], 'added' => [] ];
 		} elseif ( !$previous && $errors ) {
 			$toInsert = array_values( $errors );
 			$toDelete = [];
@@ -150,7 +167,7 @@ class Database {
 				[ 'linter_page' => $this->pageId ],
 				__METHOD__
 			);
-			return [ 'deleted' => count( $previous ), 'added' => 0 ];
+			return [ 'deleted' => $this->countByCat( $previous ), 'added' => [] ];
 		} else {
 			$toInsert = [];
 			$toDelete = $previous;
@@ -191,8 +208,8 @@ class Database {
 		}
 
 		return [
-			'deleted' => count( $toDelete ),
-			'added' => count( $toInsert ),
+			'deleted' => $this->countByCat( $toDelete ),
+			'added' => $this->countByCat( $toInsert ),
 		];
 	}
 
