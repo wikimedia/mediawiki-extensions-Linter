@@ -60,5 +60,4 @@
 	"apihelp-record-lint-param-revision": "{{doc-apihelp-param|record-lint|revision}}",
 	"apihelp-query+linterstats-description": "{{doc-apihelp-description|query+linterstats}}",
 	"apihelp-query+linterstats-example-1": "{{doc-apihelp-example|query+linterstats}}"
-
 }

@@ -44,5 +44,7 @@
 	"linter-heading-medium-priority": "Mittlere Priorität",
 	"linter-heading-low-priority": "Niedrige Priorität",
 	"multi-part-template-block": "Ausgabe nicht von einer einzelnen Vorlage",
-	"pageinfo-linter": "Lint-Fehler"
+	"pageinfo-linter": "Lint-Fehler",
+	"apihelp-query+linterstats-description": "Ruft die Anzahl der Lint-Fehler in jeder Kategorie ab",
+	"apihelp-query+linterstats-example-1": "Ruft die Anzahl der Lint-Fehler in jeder Kategorie ab"
 }

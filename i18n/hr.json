@@ -19,6 +19,9 @@
 	"linter-numerrors": "($1 {{PLURAL:$1|pogrješka|pogrješke|pogrješaka}})",
 	"linker-page-edit": "uredi",
 	"linker-page-history": "stare izmjene",
+	"linter-heading-high-priority": "Iznimna važnost",
+	"linter-heading-medium-priority": "Srednja važnost",
+	"linter-heading-low-priority": "Mala važnost",
 	"pageinfo-linter": "Pročišćivač pogrješčica",
 	"apihelp-query+linterrors-param-namespace": "Prikaži samo pročišćivačeve pogrješčice iz pojedinih imenskih prostora"
 }
