@@ -54,5 +54,7 @@
 	"apihelp-record-lint-description": "Record a lint error in the database",
 	"apihelp-record-lint-param-data": "JSON encoded data about the error",
 	"apihelp-record-lint-param-page": "Page title",
-	"apihelp-record-lint-param-revision": "Revision ID that the error was found in"
+	"apihelp-record-lint-param-revision": "Revision ID that the error was found in",
+	"apihelp-query+linterstats-description": "Get number of lint errors in each category",
+	"apihelp-query+linterstats-example-1": "Get number of lint errors in each category"
 }

@@ -57,5 +57,8 @@
 	"apihelp-record-lint-description": "{{doc-apihelp-description|record-lint}}",
 	"apihelp-record-lint-param-data": "{{doc-apihelp-param|record-lint|data}}",
 	"apihelp-record-lint-param-page": "{{doc-apihelp-param|record-lint|page}}\n{{Identical|Page title}}",
-	"apihelp-record-lint-param-revision": "{{doc-apihelp-param|record-lint|revision}}"
+	"apihelp-record-lint-param-revision": "{{doc-apihelp-param|record-lint|revision}}",
+	"apihelp-query+linterstats-description": "{{doc-apihelp-description|query+linterstats}}",
+	"apihelp-query+linterstats-example-1": "{{doc-apihelp-example|query+linterstats}}"
+
 }
