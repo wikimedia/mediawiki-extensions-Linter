@@ -56,5 +56,7 @@
 	"apihelp-record-lint-description": "Enregistrer une erreur lint dans la base de données",
 	"apihelp-record-lint-param-data": "Données encodées en JSON sur l’erreur",
 	"apihelp-record-lint-param-page": "Titre de la page",
-	"apihelp-record-lint-param-revision": "ID de révision dans laquelle l’erreur a été trouvée"
+	"apihelp-record-lint-param-revision": "ID de révision dans laquelle l’erreur a été trouvée",
+	"apihelp-query+linterstats-description": "Obtenir le nombre d’erreurs lint dans chaque catégorie",
+	"apihelp-query+linterstats-example-1": "Obtenir le nombre d’erreurs lint dans chaque catégorie"
 }
