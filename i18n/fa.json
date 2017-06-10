@@ -54,5 +54,7 @@
 	"apihelp-record-lint-description": "ذخیره خطاهای نحوی پنهان در پایگاه داده",
 	"apihelp-record-lint-param-data": "داده‌های رمزنگاری شده JSON درمورد خطا",
 	"apihelp-record-lint-param-page": "عنوان صفحه",
-	"apihelp-record-lint-param-revision": "شناسهٔ نسخه‌ای که خطا در آن یافت شده‌است"
+	"apihelp-record-lint-param-revision": "شناسهٔ نسخه‌ای که خطا در آن یافت شده‌است",
+	"apihelp-query+linterstats-description": "دریافت تعداد خطای موجود در هر رده",
+	"apihelp-query+linterstats-example-1": "دریافت تعداد خطای موجود در هر رده"
 }
