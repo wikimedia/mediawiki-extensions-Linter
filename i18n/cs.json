@@ -54,5 +54,7 @@
 	"apihelp-record-lint-description": "Zaznamenat chybu nalezenou Lintem do databáze",
 	"apihelp-record-lint-param-data": "Data o chybě ve formátu JSON",
 	"apihelp-record-lint-param-page": "Název stránky",
-	"apihelp-record-lint-param-revision": "ID revize, ve které byla nalezena chyba"
+	"apihelp-record-lint-param-revision": "ID revize, ve které byla nalezena chyba",
+	"apihelp-query+linterstats-description": "Získat počet chyb nalezených Lintem pro každou kategorii",
+	"apihelp-query+linterstats-example-1": "Získat počet chyb nalezených Lintem pro každou kategorii"
 }
