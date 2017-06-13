@@ -53,5 +53,7 @@
 	"apihelp-record-lint-description": "Grabar un error de lint na base de datos",
 	"apihelp-record-lint-param-data": "Datos codificaos en JSON sobro l'error",
 	"apihelp-record-lint-param-page": "Títulu de la páxina",
-	"apihelp-record-lint-param-revision": "Id. de la revisión na que s'atopó l'error"
+	"apihelp-record-lint-param-revision": "Id. de la revisión na que s'atopó l'error",
+	"apihelp-query+linterstats-description": "Algamar el númberu d'errores de lint en cada categoría",
+	"apihelp-query+linterstats-example-1": "Algamar el númberu d'errores de lint en cada categoría"
 }
