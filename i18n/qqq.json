@@ -49,15 +49,18 @@
 	"multi-part-template-block": "Table cell on [[Special:LintErrors]] indicating that content block is not produced by a single template",
 	"pageinfo-linter": "Heading on ?action=info for a page if it has lint errors",
 	"apihelp-query+linterrors-description": "{{doc-apihelp-description|query+linterrors}}",
+	"apihelp-query+linterrors-summary": "{{doc-apihelp-summary|query+linterrors}}",
 	"apihelp-query+linterrors-param-categories": "{{doc-apihelp-param|query+linterrors|categories}}",
 	"apihelp-query+linterrors-param-limit": "{{doc-apihelp-param|query+linterrors|limit}}",
 	"apihelp-query+linterrors-param-from": "{{doc-apihelp-param|query+linterrors|from}}",
 	"apihelp-query+linterrors-param-namespace": "{{doc-apihelp-param|query+linterrors|namespace}}",
 	"apihelp-query+linterrors-example-1": "{{doc-apihelp-example|query+linterrors}}",
 	"apihelp-record-lint-description": "{{doc-apihelp-description|record-lint}}",
+	"apihelp-record-lint-summary": "{{doc-apihelp-summary|record-lint}}",
 	"apihelp-record-lint-param-data": "{{doc-apihelp-param|record-lint|data}}",
 	"apihelp-record-lint-param-page": "{{doc-apihelp-param|record-lint|page}}\n{{Identical|Page title}}",
 	"apihelp-record-lint-param-revision": "{{doc-apihelp-param|record-lint|revision}}",
 	"apihelp-query+linterstats-description": "{{doc-apihelp-description|query+linterstats}}",
+	"apihelp-query+linterstats-summary": "{{doc-apihelp-summary|query+linterstats}}",
 	"apihelp-query+linterstats-example-1": "{{doc-apihelp-example|query+linterstats}}"
 }
