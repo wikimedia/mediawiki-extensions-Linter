@@ -48,6 +48,7 @@
 	"multi-part-template-block": "Résultat fourni par plus d'un modèle",
 	"pageinfo-linter": "Erreurs de Lint",
 	"apihelp-query+linterrors-description": "Obtenir une liste des erreurs lint",
+	"apihelp-query+linterrors-summary": "Fournit une liste d'erreurs lint",
 	"apihelp-query+linterrors-param-categories": "Catégories d'erreurs lint",
 	"apihelp-query+linterrors-param-limit": "Nombre de résultats à demander",
 	"apihelp-query+linterrors-param-from": "ID de lint auquel commencer la requête",
