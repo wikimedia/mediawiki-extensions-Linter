@@ -17,7 +17,6 @@
  *
  * @file
  */
-// @codingStandardsIgnoreFile
 
 $specialPageAliases = [];
 
