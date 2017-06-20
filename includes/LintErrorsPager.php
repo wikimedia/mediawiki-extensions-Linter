@@ -130,7 +130,7 @@ class LintErrorsPager extends TablePager {
 				if ( in_array( $this->category, $hasNameCats ) && isset( $lintError->params['name'] ) ) {
 					return Html::element( 'code', [], $lintError->params['name'] );
 				} elseif ( $this->category === 'bogus-image-options' && isset( $lintError->params['items'] ) ) {
-					$list = array_map( function( $in ) {
+					$list = array_map( function ( $in ) {
 						return Html::element( 'code', [], $in );
 					}, $lintError->params['items'] );
 					return $this->getLanguage()->commaList( $list );

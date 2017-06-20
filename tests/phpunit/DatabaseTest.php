@@ -53,10 +53,10 @@ class DatabaseTest extends MediaWikiTestCase {
 	}
 
 	private function assertLintErrorsEqual( $expected, $actual ) {
-		$expectedIds = array_map( function( LintError $error ) {
+		$expectedIds = array_map( function ( LintError $error ) {
 			return $error->id();
 		}, $expected );
-		$actualIds = array_map( function( LintError $error ) {
+		$actualIds = array_map( function ( LintError $error ) {
 			return $error->id();
 		}, $actual );
 		$this->assertArrayEquals( $expectedIds, $actualIds );

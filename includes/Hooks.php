@@ -82,7 +82,7 @@ class Hooks {
 		Content $content, array &$updates
 	) {
 		$id = $wikiPage->getId();
-		$updates[] = new MWCallableUpdate( function() use ( $id ) {
+		$updates[] = new MWCallableUpdate( function () use ( $id ) {
 			$database = new Database( $id );
 			$database->setForPage( [] );
 		}, __METHOD__ );
