@@ -5,13 +5,7 @@
 		<exclude name="MediaWiki.FunctionComment.Missing.Public" />
 	</rule>
 	<file>.</file>
-	<rule ref="MediaWiki.Commenting.FunctionComment.Missing">
-		<severity>0</severity>
-	</rule>
 	<rule ref="MediaWiki.Commenting.FunctionComment.MissingParamComment">
-		<severity>0</severity>
-	</rule>
-	<rule ref="MediaWiki.Commenting.FunctionComment.MissingReturn">
 		<severity>0</severity>
 	</rule>
 	<arg name="extensions" value="php,php5,inc" />
