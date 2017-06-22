@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"He7d3r"
+			"He7d3r",
+			"Hamilton Abreu"
 		]
 	},
 	"linterrors": "Erros de lint",
@@ -10,7 +11,7 @@
 	"linter-pager-template": "Através de uma predefinição?",
 	"linter-pager-obsolete-tag-details": "Elemento HTML obsoleto",
 	"linter-pager-bogus-image-options-details": "Opção de ficheiro inválida",
-	"linter-pager-missing-end-tag-details": "Elemento de fechamento ausente",
+	"linter-pager-missing-end-tag-details": "Elemento de fecho ausente",
 	"linter-pager-stripped-tag-details": "Elemento ignorado",
 	"linter-pager-self-closed-tag-details": "Elemento auto-fechado",
 	"linter-pager-deletable-table-tag-details": "Elemento de tabela que deve ser eliminado",
@@ -21,8 +22,8 @@
 	"linter-category-obsolete-tag-desc": "Estas páginas usam elementos HTML obsoletos.",
 	"linter-category-bogus-image-options": "Opções de ficheiro inválidas",
 	"linter-category-bogus-image-options-desc": "Estas páginas possuem ficheiros com opções inválidas.",
-	"linter-category-missing-end-tag": "Elemento de fechamento ausente",
-	"linter-category-missing-end-tag-desc": "Faltam elementos de fechamento nestas páginas.",
+	"linter-category-missing-end-tag": "Elemento de fecho ausente",
+	"linter-category-missing-end-tag-desc": "Faltam elementos de fecho nestas páginas.",
 	"linter-category-stripped-tag": "Elementos ignorados",
 	"linter-category-stripped-tag-desc": "Estas páginas possuem elementos ignorados",
 	"linter-category-self-closed-tag": "Elementos auto-fechados",
@@ -34,8 +35,6 @@
 	"linter-numerrors": "($1 {{PLURAL:$1|erro|erros}})",
 	"linker-page-edit": "editar",
 	"linker-page-history": "histórico",
-	"linter-heading-errors": "Erros",
-	"linter-heading-warnings": "Avisos",
 	"pageinfo-linter": "Erros de lint",
 	"apihelp-query+linterrors-description": "Obter uma lista de erros de lint",
 	"apihelp-query+linterrors-param-categories": "Categorias de erros de lint",
