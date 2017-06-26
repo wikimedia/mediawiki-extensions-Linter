@@ -24,6 +24,7 @@ use ApiBase;
 use FormatJson;
 use IPSet\IPSet;
 use JobQueueGroup;
+use MediaWiki\Logger\LoggerFactory;
 use Title;
 
 /**
@@ -61,6 +62,16 @@ class ApiRecordLint extends ApiBase {
 		foreach ( $data as $info ) {
 			if ( !$categoryMgr->isKnownCategory( $info['type'] ) ) {
 				continue;
+			}
+			if ( !isset( $info['dsr'] ) ) {
+				LoggerFactory::getInstance( 'Linter' )->warning(
+					'dsr for {page} @ rev {revid}, for lint: {lint} is missing',
+					[
+						'page' => $params['page'],
+						'revid' => $params['revision'],
+						'lint' => $info['type'],
+					]
+				);
 			}
 			$info['location'] = array_slice( $info['dsr'], 0, 2 );
 			if ( isset( $info['templateInfo'] ) && $info['templateInfo'] ) {
