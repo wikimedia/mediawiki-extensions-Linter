@@ -43,6 +43,7 @@
 	"linter-heading-high-priority": "Prioridade alta",
 	"linter-heading-medium-priority": "Prioridade media",
 	"linter-heading-low-priority": "Prioridade baixa",
+	"multi-part-template-block": "O resultado non procede dun só modelo",
 	"pageinfo-linter": "Erros detectados por Lint",
 	"apihelp-query+linterrors-description": "Obter unha lista de erros do comprobador",
 	"apihelp-query+linterrors-summary": "Obter unha lista de erros do comprobador",

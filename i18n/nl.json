@@ -9,6 +9,7 @@
 	"linter-pager-title": "Paginanaam",
 	"linter-pager-template": "Door middel van een sjabloon?",
 	"linter-pager-obsolete-tag-details": "Verouderde HTML-tag",
+	"linter-pager-missing-end-tag-details": "Missend eindlabel",
 	"linter-category-obsolete-tag": "Verouderde HTML-tags",
 	"linter-category-obsolete-tag-desc": "Deze pagina's maken gebruik van verouderde HTML tags.",
 	"linter-numerrors": "($1 {{PLURAL:$1|fout|fouten}})",

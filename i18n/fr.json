@@ -5,7 +5,8 @@
 			"Gomoko",
 			"Wladek92",
 			"Urhixidur",
-			"JackPotte"
+			"JackPotte",
+			"Thibaut120094"
 		]
 	},
 	"linterrors": "Erreurs de lint",
@@ -56,9 +57,11 @@
 	"apihelp-query+linterrors-param-namespace": "Inclure uniquement les erreurs lint des espaces de nom spécifiés",
 	"apihelp-query+linterrors-example-1": "Obtenir toutes les erreurs lint de la catégorie balise désuète",
 	"apihelp-record-lint-description": "Enregistrer une erreur lint dans la base de données",
+	"apihelp-record-lint-summary": "Enregistrer une erreur lint dans la base de données",
 	"apihelp-record-lint-param-data": "Données encodées en JSON sur l’erreur",
 	"apihelp-record-lint-param-page": "Titre de la page",
 	"apihelp-record-lint-param-revision": "ID de révision dans laquelle l’erreur a été trouvée",
 	"apihelp-query+linterstats-description": "Obtenir le nombre d’erreurs lint dans chaque catégorie",
+	"apihelp-query+linterstats-summary": "Obtenir le nombre d’erreurs lint dans chaque catégorie",
 	"apihelp-query+linterstats-example-1": "Obtenir le nombre d’erreurs lint dans chaque catégorie"
 }
