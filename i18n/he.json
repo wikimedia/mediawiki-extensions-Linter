@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Guycn2",
-			"Amire80"
+			"Amire80",
+			"IKhitron"
 		]
 	},
 	"linterrors": "שגיאות ניקיון",
@@ -43,18 +44,21 @@
 	"linter-heading-high-priority": "עדיפות גבוהה",
 	"linter-heading-medium-priority": "עדיפות בינונית",
 	"linter-heading-low-priority": "עדיפות נמוכה",
-	"multi-part-template-block": "פלא לא מתוך תבנית אחת",
+	"multi-part-template-block": "פלט שנוצר מקוד שאינו תבנית בודדת",
 	"pageinfo-linter": "שגיאות ניקיון",
 	"apihelp-query+linterrors-description": "קבלת רשימת שגיאות ניקיון",
+	"apihelp-query+linterrors-summary": "קבלת רשימת שגיאות ניקיון",
 	"apihelp-query+linterrors-param-categories": "סוגים של שגיאות ניקיון",
 	"apihelp-query+linterrors-param-limit": "מספר התוצאות לשאילתה",
 	"apihelp-query+linterrors-param-from": "מאיזה מזהה ניקיון להתחיל את השאילתה",
 	"apihelp-query+linterrors-param-namespace": "לכלול רק שגיאות ניקיון ממרחבי שם שצוינו",
 	"apihelp-query+linterrors-example-1": "קבלת כל שגיאות הניקיון מקטגוריית תג מיושן",
 	"apihelp-record-lint-description": "רישום שגיאת ניקיון במסד הנתונים",
+	"apihelp-record-lint-summary": "רישום שגיאת ניקיון במסד הנתונים",
 	"apihelp-record-lint-param-data": "נתונים מקודדים ב־JSON על השגיאה",
 	"apihelp-record-lint-param-page": "כותרת דף",
 	"apihelp-record-lint-param-revision": "מזהה גרסה שבה נמצאה השגיאה",
 	"apihelp-query+linterstats-description": "קבלת מספר שגיאות הניקיון בכל קטגוריה",
+	"apihelp-query+linterstats-summary": "קבלת מספר שגיאות הניקיון בכל קטגוריה",
 	"apihelp-query+linterstats-example-1": "קבלת מספר שגיאות הניקיון בכל קטגוריה"
 }

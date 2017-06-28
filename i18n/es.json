@@ -38,6 +38,7 @@
 	"linter-heading-high-priority": "Prioridad alta",
 	"linter-heading-medium-priority": "Prioridad media",
 	"linter-heading-low-priority": "Prioridad baja",
+	"multi-part-template-block": "Salida proporcionada por más de una plantilla",
 	"apihelp-query+linterrors-description": "Obtener lista de errores de comprobador",
 	"apihelp-query+linterrors-param-limit": "Cantidad de resultados que consultar",
 	"apihelp-query+linterrors-param-from": "Id. de comprobador a partir del cual comenzar una consulta",
