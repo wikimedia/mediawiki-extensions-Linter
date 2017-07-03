@@ -2,15 +2,25 @@
 	"@metadata": {
 		"authors": [
 			"محمد أحمد عبد الفتاح",
-			"Mr. Ibrahem"
+			"Mr. Ibrahem",
+			"Shbib Al-Subaie"
 		]
 	},
+	"linterrors": "أخطاء لنت",
+	"linterrors-subpage": "أخطاء لنت: $1",
+	"linter-form-namespace": "النطاق:",
 	"linter-pager-title": "عنوان الصفحة",
+	"linter-pager-template": "من خلال قالب؟",
 	"linter-numerrors": "({{PLURAL:$1|خطأ|خطآن|$1 أخطاء}})",
 	"linker-page-edit": "تعديل",
 	"linker-page-history": "تاريخ",
-	"linter-heading-errors": "أخطاء",
-	"linter-heading-warnings": "تحذيرات",
+	"linter-heading-high-priority": "أولوية عالية",
+	"linter-heading-medium-priority": "أولوية متوسطة",
+	"linter-heading-low-priority": "أولوية قليلة",
+	"pageinfo-linter": "أخطاء لنت",
+	"apihelp-query+linterrors-description": "احصل على قائمة بأخطاء لنت",
+	"apihelp-query+linterrors-summary": "احصل على قائمة بأخطاء لنت",
+	"apihelp-query+linterrors-param-categories": "تصنيفات أخطاء لنت",
 	"apihelp-query+linterrors-param-limit": "عدد النتائج للاستعلام",
 	"apihelp-record-lint-param-page": "عنوان الصفحة"
 }
