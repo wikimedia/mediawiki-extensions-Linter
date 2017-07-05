@@ -118,9 +118,8 @@ class LintErrorsPager extends TablePager {
 					->rawParams( $viewLink, $editHistLinks )
 					->escaped();
 			case 'details':
-				// While deletable-table-tag has params set, it adds no new information
-				// and is not included here since the error category has the tag name.
 				$hasNameCats = [
+					'deletable-table-tag',
 					'obsolete-tag',
 					'missing-end-tag',
 					'self-closed-tag',
