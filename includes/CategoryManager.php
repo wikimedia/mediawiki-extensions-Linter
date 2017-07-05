@@ -57,17 +57,29 @@ class CategoryManager {
 		self::LOW => [],
 	];
 
+	/**
+	 * @var string[]
+	 */
+	private $parserMigrationCategories = [];
+
 	public function __construct() {
 		global $wgLinterCategories;
 		foreach ( $wgLinterCategories as $name => $info ) {
 			if ( $info['enabled'] ) {
 				$this->categories[$info['priority']][] = $name;
 			}
+			if ( isset( $info['parser-migration'] ) ) {
+				$this->parserMigrationCategories[$name] = true;
+			}
 		}
 
 		sort( $this->categories[self::HIGH] );
 		sort( $this->categories[self::MEDIUM] );
 		sort( $this->categories[self::LOW] );
+	}
+
+	public function needsParserMigrationEdit( $name ) {
+		return isset( $this->parserMigrationCategories[$name] );
 	}
 
 	/**
