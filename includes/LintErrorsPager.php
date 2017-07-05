@@ -149,7 +149,9 @@ class LintErrorsPager extends TablePager {
 					return $this->msg( 'multi-part-template-block' )->escaped();
 				} else {
 					$templateName = $lintError->templateInfo['name'];
-					$templateTitle = Title::newFromText( $templateName, NS_TEMPLATE );
+					// Parsoid provides us with fully qualified template title
+					// So, fallback to the default main namespace
+					$templateTitle = Title::newFromText( $templateName );
 					if ( !$templateTitle ) {
 						// Shouldn't be possible...???
 						return '&mdash;';
