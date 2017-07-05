@@ -7,11 +7,21 @@
 		]
 	},
 	"linter-form-namespace": "Именно пространство:",
+	"linter-pager-title": "Заглавие на страницата",
+	"linter-pager-template": "Чрез шаблон?",
 	"linter-pager-missing-end-tag-details": "Липсващ затварящ таг",
+	"linter-pager-deletable-table-tag-details": "Таг на таблица, който трябва да се изтрие",
+	"linter-category-fostered": "Грешно разположено съдържание",
+	"linter-category-fostered-desc": "Тези страници съдържат грешно разположено съдържание.",
+	"linter-category-obsolete-tag": "Остарели HTML-тагове",
 	"linter-category-missing-end-tag": "Липсващ затварящ таг",
 	"linter-category-self-closed-tag": "Самозатварящи се тагове",
+	"linter-category-deletable-table-tag": "Таг на таблица, който трябва да се изтрие",
+	"linter-category-deletable-table-tag-desc": "На тези страници има тагове на таблици, които трябва да бъдат изтрити.",
+	"linter-category-misnested-tag": "Грешно вложени тагове",
 	"linker-page-edit": "редактиране",
 	"linter-heading-high-priority": "Висок приоритет",
 	"linter-heading-medium-priority": "Среден приоритет",
-	"linter-heading-low-priority": "Нисък приоритет"
+	"linter-heading-low-priority": "Нисък приоритет",
+	"multi-part-template-block": "Грешката е в повече от един шаблон"
 }
