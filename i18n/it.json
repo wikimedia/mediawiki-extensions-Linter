@@ -2,14 +2,20 @@
 	"@metadata": {
 		"authors": [
 			"Beta16",
-			"Ontsed"
+			"Ontsed",
+			"Candalua"
 		]
 	},
+	"linter-desc": "Traccia gli errori di validazione Lint da un servizio esterno e li mostra agli utenti.",
 	"linter-form-namespace": "Namespace:",
 	"linter-pager-title": "Titolo della pagina",
 	"linter-pager-self-closed-tag-details": "Tag auto-chiusi",
+	"linter-category-obsolete-tag-desc": "Queste pagine utilizzano tag HTML obsoleti.",
+	"linter-category-missing-end-tag": "Tag di chiusura mancante",
+	"linter-category-missing-end-tag-desc": "Queste pagine contengono dei tag HTML che non hanno il corrispondente tag di chiusura.",
 	"linter-category-self-closed-tag": "Tag auto-chiusi",
 	"linter-category-self-closed-tag-desc": "Queste pagine hanno tag auto-chiusi.",
+	"linter-category-misnested-tag-desc": "Queste pagine contengono tag innestati in maniera sbagliata.",
 	"linter-numerrors": "($1 {{PLURAL:$1|errore|errori}})",
 	"linker-page-edit": "modifica",
 	"linker-page-history": "cronologia",
