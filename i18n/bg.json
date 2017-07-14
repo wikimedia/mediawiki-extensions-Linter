@@ -23,5 +23,5 @@
 	"linter-heading-high-priority": "Висок приоритет",
 	"linter-heading-medium-priority": "Среден приоритет",
 	"linter-heading-low-priority": "Нисък приоритет",
-	"multi-part-template-block": "Грешката е в повече от един шаблон"
+	"multi-part-template-block": "Резултатът не е от един шаблон"
 }

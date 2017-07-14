@@ -2,11 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Valtlait",
-			"Nike"
+			"Nike",
+			"Silvonen"
 		]
 	},
+	"linterrors": "Lint-virheet",
 	"linter-pager-title": "Sivun otsikko",
 	"linter-numerrors": "($1 {{PLURAL:$1|virhe|virhettä}})",
 	"linker-page-edit": "muokkaa",
+	"pageinfo-linter": "Lint-virheet",
 	"apihelp-record-lint-param-page": "Sivun otsikko"
 }

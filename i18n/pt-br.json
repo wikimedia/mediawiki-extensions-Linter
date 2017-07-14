@@ -4,9 +4,17 @@
 			"Felipe L. Ewald"
 		]
 	},
+	"linterrors": "Erros de Lint",
 	"linter-pager-title": "Título da página",
+	"linter-pager-missing-end-tag-details": "Faltando tag final",
+	"linter-pager-deletable-table-tag-details": "Etiqueta da tabela que deve ser excluída",
+	"linter-category-missing-end-tag": "Faltando tag final",
+	"linter-category-deletable-table-tag": "Etiqueta da tabela que deve ser excluída",
 	"linker-page-title-edit": "$1 ($2)",
 	"linker-page-edit": "editar",
 	"linker-page-history": "histórico",
+	"pageinfo-linter": "Erros de Lint",
+	"apihelp-query+linterrors-description": "Obter uma lista de erros de lint",
+	"apihelp-query+linterrors-summary": "Obter uma lista de erros de lint",
 	"apihelp-record-lint-param-page": "Título da página"
 }
