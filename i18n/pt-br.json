@@ -32,5 +32,7 @@
 	"pageinfo-linter": "Erros de Lint",
 	"apihelp-query+linterrors-description": "Obter uma lista de erros de lint",
 	"apihelp-query+linterrors-summary": "Obter uma lista de erros de lint",
+	"apihelp-query+linterrors-param-categories": "Categorias de erros Lint",
+	"apihelp-query+linterrors-param-limit": "Número de resultados a consultar",
 	"apihelp-record-lint-param-page": "Título da página"
 }
