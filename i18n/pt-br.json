@@ -15,6 +15,7 @@
 	"linter-pager-stripped-tag-details": "Stripped tag",
 	"linter-pager-self-closed-tag-details": "Etiqueta auto-fechada",
 	"linter-pager-deletable-table-tag-details": "Etiqueta da tabela que deve ser excluída",
+	"linter-pager-pwrap-bug-workaround-details": "Solução alternativa para o bug da quebra de linha de parágrafos",
 	"linter-category-fostered": "Conteúdo Fostered",
 	"linter-category-obsolete-tag": "Tags HTML obsoletas",
 	"linter-category-bogus-image-options": "Opção de arquivo Bogus",
@@ -23,6 +24,8 @@
 	"linter-category-self-closed-tag": "Etiquetas auto-fechadas",
 	"linter-category-deletable-table-tag": "Etiqueta da tabela que deve ser excluída",
 	"linter-category-misnested-tag": "Etiquetas Misnested",
+	"linter-category-pwrap-bug-workaround": "Solução alternativa para o bug da quebra de linha de parágrafos",
+	"linter-numerrors": "($1{{PLURAL:$1|erro|erros}})",
 	"linker-page-title-edit": "$1 ($2)",
 	"linker-page-edit": "editar",
 	"linker-page-history": "histórico",
@@ -34,5 +37,11 @@
 	"apihelp-query+linterrors-summary": "Obter uma lista de erros de lint",
 	"apihelp-query+linterrors-param-categories": "Categorias de erros Lint",
 	"apihelp-query+linterrors-param-limit": "Número de resultados a consultar",
-	"apihelp-record-lint-param-page": "Título da página"
+	"apihelp-query+linterrors-param-from": "Lint ID para começar a consultar a partir de",
+	"apihelp-record-lint-description": "Registre um erro de lint no banco de dados",
+	"apihelp-record-lint-summary": "Registre um erro de lint no banco de dados",
+	"apihelp-record-lint-param-page": "Título da página",
+	"apihelp-query+linterstats-description": "Obter número de erros de lint em cada categoria",
+	"apihelp-query+linterstats-summary": "Obter número de erros de lint em cada categoria",
+	"apihelp-query+linterstats-example-1": "Obter número de erros de lint em cada categoria"
 }
