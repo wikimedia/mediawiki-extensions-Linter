@@ -46,7 +46,7 @@
 	"linter-heading-high-priority": "Высокий приоритет",
 	"linter-heading-medium-priority": "Средний приоритет",
 	"linter-heading-low-priority": "Низкий приоритет",
-	"multi-part-template-block": "Вывод не из одного шаблона",
+	"multi-part-template-block": "Из нескольких шаблонов",
 	"pageinfo-linter": "Ошибки статического анализатора",
 	"apihelp-query+linterrors-description": "Получение списка ошибок статического анализатора",
 	"apihelp-query+linterrors-summary": "Получение списка ошибок статического анализатора",
