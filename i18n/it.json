@@ -45,7 +45,7 @@
 	"linter-heading-high-priority": "Alta priorità",
 	"linter-heading-medium-priority": "Priorità media",
 	"linter-heading-low-priority": "Bassa priorità",
-	"multi-part-template-block": "Output non da un solo template",
+	"multi-part-template-block": "Generato da più di un template",
 	"pageinfo-linter": "Errori di Lint",
 	"apihelp-query+linterrors-description": "Ottieni lista di errori di Lint",
 	"apihelp-query+linterrors-summary": "Ottieni lista di errori di Lint",
