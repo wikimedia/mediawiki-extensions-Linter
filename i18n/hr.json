@@ -15,6 +15,7 @@
 	"linter-category-obsolete-tag-desc": "Sljedeće stranice rabe zastarjele HTML oznake.",
 	"linter-category-missing-end-tag": "Nedostaje zatvarajuća oznaka",
 	"linter-category-missing-end-tag-desc": "Na sljedećim stranicama nedostaju zatvarajuće HTML oznake.",
+	"linter-category-self-closed-tag": "Samozatvoreni tagovi",
 	"linter-category-misnested-tag": "Pogrješno ugniježđeni tagovi",
 	"linter-numerrors": "($1 {{PLURAL:$1|pogrješka|pogrješke|pogrješaka}})",
 	"linker-page-edit": "uredi",
