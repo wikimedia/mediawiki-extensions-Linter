@@ -4,11 +4,23 @@
 			"Умар"
 		]
 	},
+	"linterrors": "Статикин анализаторан гӀалаташ",
+	"linterrors-subpage": "Статикин анализаторан гӀалаташ: $1",
 	"linter-form-namespace": "ЦӀерийн меттиг:",
 	"linter-pager-title": "АгӀона корта",
 	"linter-pager-template": "Кеп тӀехь?",
+	"linter-pager-obsolete-tag-details": "Ширъелла HTML-тег",
+	"linter-pager-bogus-image-options-details": "Файлийн харц билгалонаш",
+	"linter-pager-missing-end-tag-details": "ДӀакъовлуш йолу тег яц",
+	"linter-pager-stripped-tag-details": "Екъна тег",
+	"linter-pager-self-closed-tag-details": "ШадӀакъовлуш йолу тег",
 	"linter-pager-deletable-table-tag-details": "ДӀаяккха еза таблицан тег",
 	"linter-pager-misnested-tag-details": "Чуйиллина нийса йоцу тег, нисъян езаш йолу",
+	"linter-category-bogus-image-options": "Файлийн харц билгалонаш",
+	"linter-category-bogus-image-options-desc": "ХӀокху агӀонгахь ю харц билгалонаш йолу агӀонаш.",
+	"linter-category-stripped-tag": "Екъна тегаш",
+	"linter-category-stripped-tag-desc": "ХӀокху агӀонгахь ю екъна тегаш.",
+	"linter-category-self-closed-tag": "ШадӀакъовлуш йолу тегаш",
 	"linter-category-deletable-table-tag": "ДӀаяккха еза таблицан тег",
 	"linter-category-deletable-table-tag-desc": "ХӀокху агӀонашкахь ю дӀаяха еза таблицан тегаш.",
 	"linter-category-misnested-tag": "Чуйиллина нийса йоцу тег",
@@ -19,5 +31,9 @@
 	"linter-heading-high-priority": "Лакхара приоритет",
 	"linter-heading-medium-priority": "Юкъара приоритет",
 	"linter-heading-low-priority": "Лахара приоритет",
+	"pageinfo-linter": "Статикин анализаторан гӀалаташ",
+	"apihelp-query+linterrors-description": "Статикин анализаторан долу карина гӀалаташ",
+	"apihelp-query+linterrors-summary": "Статикин анализаторан долу карина гӀалаташ",
+	"apihelp-query+linterrors-param-categories": "Статикин анализаторан гӀалатийн категореш",
 	"apihelp-record-lint-param-page": "АгӀона корта"
 }

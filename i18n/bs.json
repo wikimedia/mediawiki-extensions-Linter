@@ -4,5 +4,6 @@
 			"Srdjan m"
 		]
 	},
-	"linterrors": "Pročišćivač grešaka"
+	"linterrors": "Pročišćivač grešaka",
+	"linter-category-self-closed-tag": "Samozatvorene oznake"
 }
