@@ -138,6 +138,11 @@ class LintErrorsPager extends TablePager {
 					isset( $lintError->params['child'] ) ) {
 					return Html::element( 'code', [],
 						$lintError->params['root'] . " > " . $lintError->params['child'] );
+				} elseif ( $this->category === 'tidy-whitespace-bug' &&
+					isset( $lintError->params['node'] ) &&
+					isset( $lintError->params['sibling'] ) ) {
+					return Html::element( 'code', [],
+						$lintError->params['node'] . " + " . $lintError->params['sibling'] );
 				}
 				return '';
 			case 'template':

@@ -45,6 +45,7 @@ class CategoryManager {
 		'deletable-table-tag' => 7,
 		'misnested-tag' => 8,
 		'pwrap-bug-workaround' => 9,
+		'tidy-whitespace-bug' => 10
 	];
 
 	/**

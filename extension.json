@@ -99,6 +99,10 @@
 			"pwrap-bug-workaround": {
 				"enabled": true,
 				"priority": "high"
+			},
+			"tidy-whitespace-bug": {
+				"enabled": true,
+				"priority": "high"
 			}
 		},
 		"LinterSubmitterWhitelist": {
