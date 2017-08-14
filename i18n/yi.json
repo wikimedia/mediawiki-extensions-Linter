@@ -4,6 +4,11 @@
 			"פוילישער"
 		]
 	},
+	"linter-form-namespace": "נאָמענטייל:",
+	"linter-pager-title": "בלאַטנאָמען",
+	"linter-pager-template": "דורך א מוסטער?",
+	"linter-pager-obsolete-tag-details": "פֿאַרעלטערטער HTML-טאַג",
+	"linter-category-fostered": "אַדאפטירטער אינהאַלט",
 	"linter-category-self-closed-tag": "אליין־פֿאַרמאַכטע טאַגן",
 	"linker-page-history": "היסטאריע",
 	"linter-heading-high-priority": "הויכער פריאריטעט"
