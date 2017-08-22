@@ -45,6 +45,11 @@ class LintErrorsPager extends TablePager {
 	private $linkRenderer;
 
 	/**
+	 * @var bool
+	 */
+	private $haveParserMigrationExt;
+
+	/**
 	 * @var int|null
 	 */
 	private $namespace;
@@ -98,7 +103,7 @@ class LintErrorsPager extends TablePager {
 		$row->linter_cat = $this->categoryId;
 		$lintError = Database::makeLintError( $row );
 		if ( $this->haveParserMigrationExt &&
-			$categoryManager->needsParserMigrationEdit( $name )
+			$this->categoryManager->needsParserMigrationEdit( $name )
 		) {
 			$editAction = 'parsermigration-edit';
 		} else {
