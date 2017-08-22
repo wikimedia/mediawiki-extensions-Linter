@@ -20,6 +20,7 @@
 
 namespace MediaWiki\Linter;
 
+use ExtensionRegistry;
 use IContextSource;
 use InvalidArgumentException;
 use LinkCache;
@@ -31,6 +32,8 @@ use TitleValue;
 use Title;
 
 class LintErrorsPager extends TablePager {
+
+	private $categoryManager;
 
 	private $category;
 
@@ -50,9 +53,11 @@ class LintErrorsPager extends TablePager {
 		CategoryManager $catManager, $namespace
 	) {
 		$this->category = $category;
+		$this->categoryManager = $catManager;
 		$this->categoryId = $catManager->getCategoryId( $this->category );
 		$this->linkRenderer = $linkRenderer;
 		$this->namespace = $namespace;
+		$this->haveParserMigrationExt = ExtensionRegistry::getInstance()->isLoaded( 'ParserMigration' );
 		parent::__construct( $context );
 	}
 
@@ -92,6 +97,13 @@ class LintErrorsPager extends TablePager {
 		$row = $this->mCurrentRow;
 		$row->linter_cat = $this->categoryId;
 		$lintError = Database::makeLintError( $row );
+		if ( $this->haveParserMigrationExt &&
+			$categoryManager->needsParserMigrationEdit( $name )
+		) {
+			$editAction = 'parsermigration-edit';
+		} else {
+			$editAction = 'edit';
+		}
 		switch ( $name ) {
 			case 'title':
 				$title = Title::makeTitle( $row->page_namespace, $row->page_title );
@@ -103,7 +115,7 @@ class LintErrorsPager extends TablePager {
 					$title,
 					$this->msg( 'linker-page-edit' )->text(),
 					[],
-					[ 'action' => 'edit', 'lintid' => $lintError->lintId, ]
+					[ 'action' => $editAction, 'lintid' => $lintError->lintId, ]
 				);
 
 				$historyLink = $this->linkRenderer->makeLink(

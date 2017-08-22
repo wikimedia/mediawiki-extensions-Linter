@@ -86,11 +86,13 @@
 			},
 			"self-closed-tag": {
 				"enabled": true,
-				"priority": "high"
+				"priority": "high",
+				"parser-migration": true
 			},
 			"deletable-table-tag": {
 				"enabled": true,
-				"priority": "high"
+				"priority": "high",
+				"parser-migration": true
 			},
 			"misnested-tag": {
 				"enabled": true,
@@ -98,11 +100,13 @@
 			},
 			"pwrap-bug-workaround": {
 				"enabled": true,
-				"priority": "high"
+				"priority": "high",
+				"parser-migration": true
 			},
 			"tidy-whitespace-bug": {
 				"enabled": true,
-				"priority": "high"
+				"priority": "high",
+				"parser-migration": true
 			}
 		},
 		"LinterSubmitterWhitelist": {
