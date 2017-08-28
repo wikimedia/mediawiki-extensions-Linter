@@ -4,5 +4,6 @@
 			"Mehtab ahmed"
 		]
 	},
+	"linter-pager-title": "صفحي جو عنوان",
 	"linter-numerrors": "($1 {{PLURAL:$1|خرابي|خرابيون}})"
 }
