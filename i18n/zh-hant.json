@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Cwlin0416",
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"A2093064"
 		]
 	},
+	"linterrors-subpage": "Lint錯誤：$1",
 	"linter-pager-title": "頁面標題",
 	"linter-pager-missing-end-tag-details": "缺少結束標籤",
 	"linter-category-missing-end-tag": "缺少結束標籤",
