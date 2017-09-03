@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Minh Nguyen"
+		]
+	},
+	"linterrors": "Lỗi cú pháp",
+	"linterrors-subpage": "Lỗi cú pháp: $1",
+	"linter-desc": "Dò ra các lỗi cú pháp từ dịch vụ bên ngoài và hiển thị các lỗi cho người dùng",
+	"linter-form-namespace": "Không gian tên:",
+	"linter-pager-title": "Tên trang",
+	"linter-pager-template": "Qua bản mẫu?",
+	"linter-pager-obsolete-tag-details": "Thẻ HTML cũ",
+	"linter-pager-missing-end-tag-details": "Thiếu thẻ kết thúc",
+	"linter-pager-self-closed-tag-details": "Thẻ tự đóng",
+	"linter-pager-deletable-table-tag-details": "Thẻ bảng cần xóa",
+	"linter-pager-tidy-whitespace-bug-details": "Lỗi ký tự khoảng cách Tidy",
+	"linter-category-obsolete-tag": "Thẻ HTML cũ",
+	"linter-category-obsolete-tag-desc": "Các trang này chứa thẻ HTML cũ.",
+	"linter-category-missing-end-tag": "Thiếu thẻ kết thúc",
+	"linter-category-missing-end-tag-desc": "Các trang này thiếu thẻ kết thúc.",
+	"linter-category-self-closed-tag": "Thẻ tự đóng",
+	"linter-category-self-closed-tag-desc": "Các trang này chứa thẻ tự đóng.",
+	"linter-category-deletable-table-tag": "Thẻ bảng cần xóa",
+	"linter-category-deletable-table-tag-desc": "Các trang này chứa thẻ bảng cần được xóa.",
+	"linter-category-tidy-whitespace-bug": "Lỗi ký tự khoảng cách Tidy",
+	"linter-category-tidy-whitespace-bug-desc": "Các trang này gây ra lỗi ký tự khoảng cách nên được khắc phục.",
+	"linter-numerrors": "$1 lỗi",
+	"linker-page-edit": "sửa đổi",
+	"linker-page-history": "lịch sử",
+	"linter-heading-high-priority": "Ưu tiên cao",
+	"linter-heading-medium-priority": "Ưu tiên trung bình",
+	"linter-heading-low-priority": "Ưu tiên thấp",
+	"multi-part-template-block": "Đầu ra không chỉ do một bản mẫu nào đó",
+	"pageinfo-linter": "Lỗi cú pháp"
+}
