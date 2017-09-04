@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"MokaAkashiyaPT"
+		]
+	},
+	"linterrors": "Erros de lint",
+	"linterrors-subpage": "Erros de lint: $1",
+	"pageinfo-linter": "Erros de lint"
+}
