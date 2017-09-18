@@ -107,6 +107,10 @@
 				"enabled": true,
 				"priority": "high",
 				"parser-migration": true
+			},
+			"multi-colon-escape": {
+				"enabled": true,
+				"priority": "medium"
 			}
 		},
 		"LinterSubmitterWhitelist": {
