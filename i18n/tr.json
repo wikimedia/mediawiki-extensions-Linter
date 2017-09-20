@@ -2,11 +2,34 @@
 	"@metadata": {
 		"authors": [
 			"Vito Genovese",
-			"Bulgu"
+			"Bulgu",
+			"Incelemeelemani"
 		]
 	},
+	"linterrors": "Lint hataları",
+	"linterrors-subpage": "Lint hataları: $1",
+	"linter-desc": "Lint hatalarını harici bir hizmetten izleyin ve kullanıcılara gösterin",
+	"linter-form-namespace": "Ad alanı:",
+	"linter-pager-title": "Sayfa başlığı",
+	"linter-pager-obsolete-tag-details": "Kullanılmayan HTML etiketi",
+	"linter-pager-bogus-image-options-details": "Sahte dosya seçeneği",
+	"linter-pager-missing-end-tag-details": "Eksik bitiş etiketi",
+	"linter-pager-stripped-tag-details": "Kaldırılmış etiket",
+	"linter-pager-self-closed-tag-details": "Kendiliğinden kapanan etiket",
+	"linter-pager-deletable-table-tag-details": "Silinecek tablo etiketi",
+	"linter-pager-misnested-tag-details": "İç içe geçmiş ve hatalı yerleştirilmiş etiket",
+	"linter-pager-pwrap-bug-workaround-details": "Paragraf kaydırma hatası geçici çözümü",
+	"linter-pager-tidy-whitespace-bug-details": "Düzenli boşluk hatası",
+	"linter-category-missing-end-tag": "Eksik bitiş etiketi",
+	"linter-category-missing-end-tag-desc": "Bu sayfaların eksik bitiş etiketleri var.",
+	"linter-category-stripped-tag": "Kaldırılmış etiketler",
+	"linter-category-stripped-tag-desc": "Bu sayfalarda çıkarılmış etiketler var.",
+	"linter-category-self-closed-tag": "Kendiliğinden kapanan etiketler",
 	"linker-page-edit": "düzenle",
+	"linker-page-history": "geçmiş",
 	"linter-heading-high-priority": "Yüksek öncelik",
 	"linter-heading-medium-priority": "Orta seviye öncelik",
-	"linter-heading-low-priority": "Düşük öncelik"
+	"linter-heading-low-priority": "Düşük öncelik",
+	"pageinfo-linter": "Lint hataları",
+	"apihelp-record-lint-param-page": "Sayfa başlığı"
 }
