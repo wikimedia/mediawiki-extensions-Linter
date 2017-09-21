@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Narlotep1",
-			"Matrafox"
+			"Matrafox",
+			"Strainu"
 		]
 	},
 	"linter-pager-self-closed-tag-details": "Tag auto-inchis",
@@ -11,5 +12,5 @@
 	"linter-heading-high-priority": "Prioritate ridicată",
 	"linter-heading-medium-priority": "Prioritate medie",
 	"linter-heading-low-priority": "Prioritate scăzută",
-	"multi-part-template-block": "Output din mai multe șabloane"
+	"multi-part-template-block": "Rezultat din mai multe formate"
 }
