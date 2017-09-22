@@ -160,6 +160,9 @@ class LintErrorsPager extends TablePager {
 					isset( $lintError->params['sibling'] ) ) {
 					return Html::element( 'code', [],
 						$lintError->params['node'] . " + " . $lintError->params['sibling'] );
+				} elseif ( $this->category === 'multi-colon-escape' &&
+					isset( $lintError->params['href'] ) ) {
+					return Html::element( 'code', [], $lintError->params['href'] );
 				}
 				return '';
 			case 'template':
