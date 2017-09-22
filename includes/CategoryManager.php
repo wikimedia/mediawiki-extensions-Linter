@@ -47,6 +47,7 @@ class CategoryManager {
 		'pwrap-bug-workaround' => 9,
 		'tidy-whitespace-bug' => 10,
 		'multi-colon-escape' => 11,
+		'html5-misnesting' => 12,
 	];
 
 	/**

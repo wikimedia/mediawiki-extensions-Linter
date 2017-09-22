@@ -111,6 +111,11 @@
 			"multi-colon-escape": {
 				"enabled": true,
 				"priority": "medium"
+			},
+			"html5-misnesting": {
+				"enabled": true,
+				"priority": "high",
+				"parser-migration": true
 			}
 		},
 		"LinterSubmitterWhitelist": {
