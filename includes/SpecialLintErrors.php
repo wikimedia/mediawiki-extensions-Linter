@@ -23,7 +23,6 @@ namespace MediaWiki\Linter;
 use HTMLForm;
 use Html;
 use MediaWiki\MediaWikiServices;
-use ObjectCache;
 use SpecialPage;
 
 class SpecialLintErrors extends SpecialPage {

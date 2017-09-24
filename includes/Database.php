@@ -225,7 +225,7 @@ class Database {
 	 * @return int[]
 	 */
 	public function getTotals( $conds = [] ) {
-		$rows = wfGetDB( DB_SLAVE )->select(
+		$rows = wfGetDB( DB_REPLICA )->select(
 			'linter',
 			[ 'linter_cat', 'COUNT(*) AS count' ],
 			$conds,
