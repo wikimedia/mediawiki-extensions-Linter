@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Jeblad"
+			"Jeblad",
+			"Jon Harald Søby"
 		]
 	},
 	"linterrors": "Lint-feil",
@@ -13,6 +14,7 @@
 	"linter-pager-obsolete-tag-details": "Avleggs HTML-tagg",
 	"linter-pager-bogus-image-options-details": "Uekte filalternativ",
 	"linter-pager-missing-end-tag-details": "Manglende slutt-tagg",
+	"linter-pager-multi-colon-escape-details": "Flere kolon",
 	"linter-pager-stripped-tag-details": "Fjernet tagg",
 	"linter-pager-self-closed-tag-details": "Selvstengende tagger",
 	"linter-pager-deletable-table-tag-details": "Tabelltagg som bør slettes",
@@ -27,6 +29,8 @@
 	"linter-category-bogus-image-options-desc": "Disse sidene har ugyldige filalternativ.",
 	"linter-category-missing-end-tag": "Manglende slutt-tagg",
 	"linter-category-missing-end-tag-desc": "Disse sidene mangler slutt-tagger.",
+	"linter-category-multi-colon-escape": "Flere kolon",
+	"linter-category-multi-colon-escape-desc": "Disse sidene har lenker med flere kolon som prefiks.",
 	"linter-category-stripped-tag": "Fjernede tagger",
 	"linter-category-stripped-tag-desc": "Disse sidene har fjernede tagger.",
 	"linter-category-self-closed-tag": "Selv-stengte tagger",
