@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"WikiPhoenix"
+			"WikiPhoenix",
+			"Bengtsson96"
 		]
 	},
 	"linterrors": "Lint-fel",
@@ -17,6 +18,7 @@
 	"linter-pager-self-closed-tag-details": "Självstängande tagg",
 	"linter-pager-deletable-table-tag-details": "Tabelltagg som bör raderas",
 	"linter-pager-misnested-tag-details": "Felplacerad tagg som bör placeras korrekt",
+	"linter-pager-html5-nesting": "Felnästade taggar i HTML5 (men inte i Tidy)",
 	"linter-category-obsolete-tag": "Föråldrade HTML-taggar",
 	"linter-category-obsolete-tag-desc": "Dessa sidor använder föråldrade HTML-taggar.",
 	"linter-category-bogus-image-options": "Oäkta filalternativ",
@@ -31,6 +33,8 @@
 	"linter-category-deletable-table-tag-desc": "Dessa sidor har tabelltaggar som bör raderas.",
 	"linter-category-misnested-tag": "Felplacerade taggar",
 	"linter-category-misnested-tag-desc": "Dessa sidor har felplacerade taggar som kan åtgärdas.",
+	"linter-category-html5-misnesting": "Felnästade taggar kommer visas annorlunda i HTML5 jämfört med HTML4",
+	"linter-category-html5-misnesting-desc": "Följande felnästade taggar uppför sig annorlunda i HTML5 jämfört med HTML4.",
 	"linter-numerrors": "($1 {{PLURAL:$1|fel}})",
 	"linker-page-edit": "redigera",
 	"linker-page-history": "historik",
