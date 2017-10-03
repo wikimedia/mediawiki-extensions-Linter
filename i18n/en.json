@@ -20,7 +20,7 @@
 	"linter-pager-misnested-tag-details": "Misnested tag which should be properly nested",
 	"linter-pager-pwrap-bug-workaround-details": "Paragraph wrapping bug workaround",
 	"linter-pager-tidy-whitespace-bug-details": "Tidy whitespace bug",
-	"linter-pager-html5-nesting": "Misnesting in HTML5 (but not in Tidy)",
+	"linter-pager-html5-misnesting-details": "Misnesting in HTML5 (but not in Tidy)",
 	"linter-category-fostered": "Fostered content",
 	"linter-category-fostered-desc": "These pages have fostered content.",
 	"linter-category-obsolete-tag": "Obsolete HTML tags",

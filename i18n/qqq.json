@@ -24,7 +24,7 @@
 	"linter-pager-misnested-tag-details": "Table column heading",
 	"linter-pager-pwrap-bug-workaround-details": "Table column heading",
 	"linter-pager-tidy-whitespace-bug-details": "Table column heading. \"Tidy\" is a name of a software package that transforms HTML files, so it doesn't have to be translated. For information about the bug, see the commit message https://gerrit.wikimedia.org/r/#/c/371068 .",
-	"linter-pager-html5-nesting": "Table column heading",
+	"linter-pager-html5-misnesting-details": "Table column heading.",
 	"linter-category-fostered": "Name of lint error category. See [[:mw:Help:Extension:Linter/fostered]]",
 	"linter-category-fostered-desc": "Description of category.",
 	"linter-category-obsolete-tag": "Name of lint error category. See [[:mw:Help:Extension:Linter/obsolete-tag]]",
