@@ -20,7 +20,7 @@
 	"linter-pager-misnested-tag-details": "Погрешно вгнездена ознака која треба правилно да се вгнезди",
 	"linter-pager-pwrap-bug-workaround-details": "Заобиколка на грешка во пасусниот прелом",
 	"linter-pager-tidy-whitespace-bug-details": "Грешка во празно место на Tidy",
-	"linter-pager-html5-nesting": "Погрешно вгнездување во HTML5 (но не во Tidy)",
+	"linter-pager-html5-misnesting-details": "Погрешно вгнездување во HTML5 (но не во Tidy)",
 	"linter-category-fostered": "Погрешно сместена содржина",
 	"linter-category-fostered-desc": "Овие страници имаат погрешно сместена содржина.",
 	"linter-category-obsolete-tag": "Застарени HTML-ознаки",

@@ -21,7 +21,7 @@
 	"linter-pager-misnested-tag-details": "Feilplasserte tagger som bør plasseres korrekt",
 	"linter-pager-pwrap-bug-workaround-details": "Løsning på paragrafinnpakningsfeil",
 	"linter-pager-tidy-whitespace-bug-details": "Tidy tomromsfeil",
-	"linter-pager-html5-nesting": "Feilnøsting i HTML5 (men ikke i Tidy)",
+	"linter-pager-html5-misnesting-details": "Feilnøsting i HTML5 (men ikke i Tidy)",
 	"linter-category-fostered": "Fostret innhold",
 	"linter-category-fostered-desc": "Disse sidene har fostret innhold.",
 	"linter-category-obsolete-tag": "Avleggse HTML-tagger",

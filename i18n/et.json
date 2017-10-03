@@ -19,7 +19,7 @@
 	"linter-pager-misnested-tag-details": "Valesti pesastatud silt, mis tuleks õigesti pesastada",
 	"linter-pager-pwrap-bug-workaround-details": "Vastukaal reamurdeta lõigu veale",
 	"linter-pager-tidy-whitespace-bug-details": "Tidy tühemikuviga",
-	"linter-pager-html5-nesting": "HTML5-s valesti pesastatud (aga mitte Tidyga)",
+	"linter-pager-html5-misnesting-details": "HTML5-s valesti pesastatud (aga mitte Tidyga)",
 	"linter-category-fostered": "Valesti paigutatud tabelisisu",
 	"linter-category-fostered-desc": "Neil lehekülgedel on tabeli sisu valesti paigutatud.",
 	"linter-category-obsolete-tag": "Aegunud HTML-sildid",

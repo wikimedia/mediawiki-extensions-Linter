@@ -22,7 +22,7 @@
 	"linter-pager-deletable-table-tag-details": "Etiqueta de tabla que se debería borrar",
 	"linter-pager-misnested-tag-details": "Etiqueta mal anidada que se debería anidar correctamente",
 	"linter-pager-pwrap-bug-workaround-details": "Parche para el error en el ajuste de párrafos",
-	"linter-pager-html5-nesting": "Anidación errónea en HTML5 (pero no en Tidy)",
+	"linter-pager-html5-misnesting-details": "Anidación errónea en HTML5 (pero no en Tidy)",
 	"linter-category-fostered": "Contenido fuera de lugar",
 	"linter-category-fostered-desc": "Estas páginas incluyen contenido fuera de lugar.",
 	"linter-category-obsolete-tag": "Etiquetas HTML obsoletas",

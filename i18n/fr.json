@@ -25,7 +25,7 @@
 	"linter-pager-misnested-tag-details": "Balise mal emboîtée qui devrait l’être correctement",
 	"linter-pager-pwrap-bug-workaround-details": "Palliatif au bogue de délimitation de paragraphe",
 	"linter-pager-tidy-whitespace-bug-details": "Bogue d'espace blanc Tidy",
-	"linter-pager-html5-nesting": "Mauvaise inclusion en HTML5 (mais pas dans Tidy)",
+	"linter-pager-html5-misnesting-details": "Mauvaise inclusion en HTML5 (mais pas dans Tidy)",
 	"linter-category-fostered": "Contenu mal placé",
 	"linter-category-fostered-desc": "Ces pages ont du contenu mal placé.",
 	"linter-category-obsolete-tag": "Balises HTML désuètes",
