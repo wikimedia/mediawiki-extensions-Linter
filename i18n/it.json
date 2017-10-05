@@ -4,7 +4,8 @@
 			"Beta16",
 			"Ontsed",
 			"Candalua",
-			"Bultro"
+			"Bultro",
+			"Sakretsu"
 		]
 	},
 	"linterrors": "Errori di Lint",
@@ -42,6 +43,8 @@
 	"linter-category-pwrap-bug-workaround-desc": "Queste pagine contengono un errore nei capoversi che si potrebbe aggirare.",
 	"linter-category-tidy-whitespace-bug": "Problema di Tidy con gli spazi",
 	"linter-category-tidy-whitespace-bug-desc": "Queste pagine causano un bug di Tidy, che sposta fuori dai tag gli spazi che si trovano alle estremità del contenuto dei tag.",
+	"linter-category-html5-misnesting": "Tag annidati male con resa differente in HTML5 e HTML4",
+	"linter-category-html5-misnesting-desc": "Questi tag male annidati si comporteranno diversamente in HTML5 rispetto a HTML4.",
 	"linter-numerrors": "($1 {{PLURAL:$1|errore|errori}})",
 	"linker-page-edit": "modifica",
 	"linker-page-history": "cronologia",
