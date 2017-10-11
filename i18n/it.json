@@ -24,6 +24,7 @@
 	"linter-pager-misnested-tag-details": "Tag annidato male",
 	"linter-pager-pwrap-bug-workaround-details": "Errore di capoverso aggirabile",
 	"linter-pager-tidy-whitespace-bug-details": "Problema di Tidy con gli spazi",
+	"linter-pager-html5-misnesting-details": "Annidamento errato in HTML5 (ma non in Tidy)",
 	"linter-category-fostered": "Contenuto di tabella in posizione errata",
 	"linter-category-fostered-desc": "Queste pagine hanno tabelle con del contenuto in posizione non valida, che pertanto viene mostrato fuori dalla tabella.",
 	"linter-category-obsolete-tag": "Tag HTML obsoleti",
