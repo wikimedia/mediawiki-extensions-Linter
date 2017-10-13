@@ -1,8 +1,35 @@
 {
 	"@metadata": {
 		"authors": [
-			"Сербијана"
+			"Сербијана",
+			"Obsuser"
 		]
 	},
-	"linterrors": "Prdčišćivač greški"
+	"linterrors": "Prdčišćivač greški",
+	"linter-pager-missing-end-tag-details": "Nedostaje zatvarajući tag",
+	"linter-category-fostered": "Namenski sadržaj",
+	"linter-category-fostered-desc": "Ove stranice imaju namenski sadržaj.",
+	"linter-category-obsolete-tag": "Zastareli HTML tagovi",
+	"linter-category-obsolete-tag-desc": "Ove stranice koriste zastarele HTML tagove.",
+	"linter-category-bogus-image-options": "Bogusne opcije datoteka",
+	"linter-category-bogus-image-options-desc": "Ove stranice imaju datoteke s bogusnim opcijama.",
+	"linter-category-missing-end-tag": "Nedostaje zatvarajući tag",
+	"linter-category-missing-end-tag-desc": "Ove stranice imaju nedostajuće zatvarajuće tagove.",
+	"linter-category-multi-colon-escape": "Escape с више двотачки",
+	"linter-category-multi-colon-escape-desc": "Ove stranice imaju veze s prefiksima više dvotački.",
+	"linter-category-stripped-tag": "Ogoljeni tagovi",
+	"linter-category-stripped-tag-desc": "Ove stranice imaju ogoljene tagove.",
+	"linter-category-self-closed-tag": "Samozatvarajući tagovi",
+	"linter-category-self-closed-tag-desc": "Ove stranice imaju samozatvarajuće tagove.",
+	"linter-category-deletable-table-tag": "Table tag koji bi trebalo obrisati",
+	"linter-category-deletable-table-tag-desc": "Ove stranice imaju table tagove koje bi trebalo obrisati.",
+	"linter-category-misnested-tag": "Pogrešno ugnežđeni tagovi",
+	"linter-category-misnested-tag-desc": "Ove stranice imaju pogrešno ugnežđene tagove koje je moguće popraviti.",
+	"linter-category-pwrap-bug-workaround": "Alternativno rešenje za bag oko prelamanja paragrafa",
+	"linter-category-pwrap-bug-workaround-desc": "Ove stranice imaju bag oko prelamanja paragrafa za koji postoji alternativno rešenje.",
+	"linter-category-tidy-whitespace-bug": "Bag čistog vajtspejsa",
+	"linter-category-tidy-whitespace-bug-desc": "Ove stranice aktiviraju bag čistih vajtspejsa za koji postoji alternativno rešenje.",
+	"linter-category-html5-misnesting": "Pogrešno ugnežđeni tagovi s različitim renderovanjem u HTML5 i HTML4",
+	"linter-category-html5-misnesting-desc": "Ovi pogrešno ugnežđeni tagovi će se ponašati drugačije u HTML5 u odnosu na HTML4.",
+	"pageinfo-linter": "Pročišćivač grešaka"
 }
