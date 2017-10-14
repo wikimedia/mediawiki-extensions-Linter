@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Liuxinyu970226",
-			"NeverBehave"
+			"NeverBehave",
+			"A2093064"
 		]
 	},
 	"linterrors": "Lint错误",
@@ -26,7 +27,7 @@
 	"linter-category-fostered-desc": "这些页面有培养的内容。",
 	"linter-category-obsolete-tag": "废弃的HTML标签",
 	"linter-category-obsolete-tag-desc": "这些页面使用废弃的HTML标签。",
-	"linter-category-bogus-image-options": "伪造的文件选项",
+	"linter-category-bogus-image-options": "虚构的文件选项",
 	"linter-category-bogus-image-options-desc": "这些页面有伪造选项的文件。",
 	"linter-category-missing-end-tag": "缺少结束标签",
 	"linter-category-missing-end-tag-desc": "这些页面缺少结束标签。",

@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Felipe L. Ewald"
+			"Felipe L. Ewald",
+			"Opraco"
 		]
 	},
 	"linterrors": "Erros de Lint",
@@ -36,7 +37,7 @@
 	"linter-category-misnested-tag-desc": "Essas páginas têm tags inadequadas que podem ser corrigidas.",
 	"linter-category-pwrap-bug-workaround": "Solução alternativa para o bug da quebra de linha de parágrafos",
 	"linter-category-pwrap-bug-workaround-desc": "Essas páginas possuem um bug de preenchimento de parágrafo que pode ser corrigido.",
-	"linter-numerrors": "($1{{PLURAL:$1|erro|erros}})",
+	"linter-numerrors": "($1 {{PLURAL:$1|erro|erros}})",
 	"linker-page-title-edit": "$1 ($2)",
 	"linker-page-edit": "editar",
 	"linker-page-history": "histórico",

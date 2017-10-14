@@ -7,9 +7,19 @@
 		]
 	},
 	"linterrors-subpage": "Lint錯誤：$1",
+	"linter-form-namespace": "命名空間：",
 	"linter-pager-title": "頁面標題",
+	"linter-pager-template": "通過模板？",
+	"linter-pager-bogus-image-options-details": "虛構的文件選項",
 	"linter-pager-missing-end-tag-details": "缺少結束標籤",
+	"linter-category-bogus-image-options": "虛構的文件選項",
+	"linter-category-bogus-image-options-desc": "這些頁面有虛構選項的文件。",
 	"linter-category-missing-end-tag": "缺少結束標籤",
+	"linter-category-deletable-table-tag": "應被刪除的表格標籤",
 	"linker-page-edit": "編輯",
+	"linker-page-history": "歷史",
+	"linter-heading-high-priority": "高優先級",
+	"linter-heading-medium-priority": "中優先級",
+	"linter-heading-low-priority": "低優先級",
 	"apihelp-record-lint-param-page": "頁面標題"
 }
