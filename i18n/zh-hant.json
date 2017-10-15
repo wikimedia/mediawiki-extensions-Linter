@@ -12,6 +12,8 @@
 	"linter-pager-template": "通過模板？",
 	"linter-pager-bogus-image-options-details": "虛構的文件選項",
 	"linter-pager-missing-end-tag-details": "缺少結束標籤",
+	"linter-category-fostered": "表格中不合法內容",
+	"linter-category-fostered-desc": "這些頁面的表格中含有不合法內容。",
 	"linter-category-bogus-image-options": "虛構的文件選項",
 	"linter-category-bogus-image-options-desc": "這些頁面有虛構選項的文件。",
 	"linter-category-missing-end-tag": "缺少結束標籤",
