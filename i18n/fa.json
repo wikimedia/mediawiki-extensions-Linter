@@ -35,7 +35,7 @@
 	"linter-category-stripped-tag": "برچسب برهنه",
 	"linter-category-stripped-tag-desc": "این صفحات دارای برچسب برهنه هستند.",
 	"linter-category-self-closed-tag": "برچسب خودبسته",
-	"linter-category-self-closed-tag-desc": "اسن صفحات دارای برچسب‌های خودبسته هستند.",
+	"linter-category-self-closed-tag-desc": "این صفحات دارای برچسب‌های خودبسته هستند.",
 	"linter-category-deletable-table-tag": "جدول برچسبی که باید حذف شود",
 	"linter-category-deletable-table-tag-desc": "این صفحات شامل جدول برچسب‌هایی‌ست که باید حذف شوند",
 	"linter-category-misnested-tag": "برچسب‌های بدون حلقه",
