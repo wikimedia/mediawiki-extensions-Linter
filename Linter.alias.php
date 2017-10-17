@@ -29,3 +29,8 @@ $specialPageAliases['en'] = [
 $specialPageAliases['es'] = [
 	'LintErrors' => [ 'Errores_de_sintaxis' ],
 ];
+
+/** Urdu (اردو) */
+$specialPageAliases['ur'] = [
+	'LintErrors' => [ 'نحوی_نقائص' ],
+];
