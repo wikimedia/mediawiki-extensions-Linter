@@ -19,6 +19,7 @@
 	"linter-category-bogus-image-options-desc": "這些頁面有些圖片或檔案含有錯誤的選項。",
 	"linter-category-missing-end-tag": "缺少結束標籤",
 	"linter-category-deletable-table-tag": "應被刪除的表格標籤",
+	"linter-numerrors": "（$1個{{PLURAL:$1|錯誤}}）",
 	"linker-page-edit": "編輯",
 	"linker-page-history": "歷史",
 	"linter-heading-high-priority": "高優先級",
