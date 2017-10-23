@@ -143,6 +143,7 @@ class LintErrorsPager extends TablePager {
 					'misnested-tag',
 					'stripped-tag',
 					'html5-misnesting',
+					'tidy-font-bug',
 				];
 				if ( in_array( $this->category, $hasNameCats ) && isset( $lintError->params['name'] ) ) {
 					return Html::element( 'code', [], $lintError->params['name'] );

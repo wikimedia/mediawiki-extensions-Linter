@@ -48,6 +48,7 @@ class CategoryManager {
 		'tidy-whitespace-bug' => 10,
 		'multi-colon-escape' => 11,
 		'html5-misnesting' => 12,
+		'tidy-font-bug' => 13,
 	];
 
 	/**

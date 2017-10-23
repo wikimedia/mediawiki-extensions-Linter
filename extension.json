@@ -116,6 +116,11 @@
 				"enabled": true,
 				"priority": "high",
 				"parser-migration": true
+			},
+			"tidy-font-bug": {
+				"enabled": true,
+				"priority": "high",
+				"parser-migration": true
 			}
 		},
 		"LinterSubmitterWhitelist": {
