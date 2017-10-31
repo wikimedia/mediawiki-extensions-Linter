@@ -132,7 +132,7 @@ class CategoryManager {
 
 	/**
 	 * @param int $id
-	 * @throws \RuntimeException if we can't find the name for the id
+	 * @throws MissingCategoryException if we can't find the name for the id
 	 * @return string
 	 */
 	public function getCategoryName( $id ) {
@@ -141,7 +141,7 @@ class CategoryManager {
 			return $flip[$id];
 		}
 
-		throw new \RuntimeException( "Could not find name for id $id" );
+		throw new MissingCategoryException( "Could not find name for id $id" );
 	}
 
 	/**
@@ -162,13 +162,13 @@ class CategoryManager {
 	 *
 	 * @param string $name
 	 * @return int
-	 * @throws \RuntimeException if we can't find the id for the name
+	 * @throws MissingCategoryException if we can't find the id for the name
 	 */
 	public function getCategoryId( $name ) {
 		if ( isset( $this->categoryIds[$name] ) ) {
 			return $this->categoryIds[$name];
 		}
 
-		throw new \RuntimeException( "Cannot find id for '$name'" );
+		throw new MissingCategoryException( "Cannot find id for '$name'" );
 	}
 }

@@ -62,6 +62,9 @@ class ApiQueryLintErrors extends ApiQueryBase {
 		$count = 0;
 		foreach ( $rows as $row ) {
 			$lintError = Database::makeLintError( $row );
+			if ( !$lintError ) {
+				continue;
+			}
 			$count++;
 			if ( $count > $params['limit'] ) {
 				$this->setContinueEnumParameter( 'from', $lintError->lintId );

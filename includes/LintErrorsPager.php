@@ -102,6 +102,9 @@ class LintErrorsPager extends TablePager {
 		$row = $this->mCurrentRow;
 		$row->linter_cat = $this->categoryId;
 		$lintError = Database::makeLintError( $row );
+		if ( !$lintError ) {
+			return '';
+		}
 		if ( $this->haveParserMigrationExt &&
 			$this->categoryManager->needsParserMigrationEdit( $name )
 		) {
