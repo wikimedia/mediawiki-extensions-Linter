@@ -52,7 +52,7 @@ class CategoryManager {
 	];
 
 	/**
-	 * @var string[]
+	 * @var string[][]
 	 */
 	private $categories = [
 		self::HIGH => [],
