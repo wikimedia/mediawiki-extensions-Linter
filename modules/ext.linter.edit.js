@@ -22,13 +22,16 @@
 			// Register NWE code should it be loaded
 			// TODO: We should somehow force source mode if VE is opened
 			mw.hook( 've.activationComplete' ).add( function () {
-				var range,
-					surface = ve.init.target.getSurface();
+				// Selection is reset on a setTimeout after activation, so wait for that.
+				setTimeout( function () {
+					var range,
+						surface = ve.init.target.getSurface();
 
-				if ( surface.getMode() === 'source' ) {
-					range = new ve.Range( fixOffset( surface, location[ 0 ] ), fixOffset( surface, location[ 1 ] ) );
-					surface.getModel().setLinearSelection( range );
-				}
+					if ( surface.getMode() === 'source' ) {
+						range = new ve.Range( fixOffset( surface, location[ 0 ] ), fixOffset( surface, location[ 1 ] ) );
+						surface.getModel().setLinearSelection( range );
+					}
+				} );
 			} );
 		}
 	} );
