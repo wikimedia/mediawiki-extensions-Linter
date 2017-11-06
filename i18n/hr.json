@@ -7,12 +7,14 @@
 	},
 	"linterrors": "Pročišćivač pogrješčica",
 	"linterrors-subpage": "Pročišćivač pogrješčica: $1",
+	"linter-form-namespace": "Imenski prostor:",
 	"linter-pager-title": "Ime stranice",
 	"linter-pager-template": "Preko predloška?",
 	"linter-pager-obsolete-tag-details": "Zastarjela HTML oznaka",
 	"linter-pager-missing-end-tag-details": "Nedostaje zatvarajuća oznaka",
 	"linter-category-obsolete-tag": "Zastarjele HTML oznake",
 	"linter-category-obsolete-tag-desc": "Sljedeće stranice rabe zastarjele HTML oznake.",
+	"linter-category-bogus-image-options": "Pogrješke mogućnosti prikaza datoteka",
 	"linter-category-missing-end-tag": "Nedostaje zatvarajuća oznaka",
 	"linter-category-missing-end-tag-desc": "Na sljedećim stranicama nedostaju zatvarajuće HTML oznake.",
 	"linter-category-self-closed-tag": "Samozatvoreni tagovi",
@@ -23,6 +25,7 @@
 	"linter-heading-high-priority": "Iznimna važnost",
 	"linter-heading-medium-priority": "Srednja važnost",
 	"linter-heading-low-priority": "Mala važnost",
+	"multi-part-template-block": "Proizlazi iz više od jednog predloška",
 	"pageinfo-linter": "Pročišćivač pogrješčica",
 	"apihelp-query+linterrors-param-namespace": "Prikaži samo pročišćivačeve pogrješčice iz pojedinih imenskih prostora"
 }

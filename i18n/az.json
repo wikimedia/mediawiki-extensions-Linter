@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Zpizza"
+			"Zpizza",
+			"Wertuose"
 		]
 	},
 	"linter-pager-self-closed-tag-details": "Self-qapalı tag",
 	"linter-category-self-closed-tag": "Self-qapalı tags",
-	"linter-category-self-closed-tag-desc": "Bu pages özünü qapalı tags var."
+	"linter-category-self-closed-tag-desc": "Bu pages özünü qapalı tags var.",
+	"linker-page-edit": "redaktə"
 }
