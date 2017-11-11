@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Сербијана",
-			"Obsuser"
+			"Obsuser",
+			"Bugoslav"
 		]
 	},
-	"linterrors": "Prdčišćivač greški",
+	"linterrors": "Prečišćivač greški",
 	"linter-pager-missing-end-tag-details": "Nedostaje zatvarajući tag",
 	"linter-category-fostered": "Namenski sadržaj",
 	"linter-category-fostered-desc": "Ove stranice imaju namenski sadržaj.",
