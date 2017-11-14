@@ -20,6 +20,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Vastukaal reamurdeta lõigu veale",
 	"linter-pager-tidy-whitespace-bug-details": "Tidy tühemikuviga",
 	"linter-pager-html5-misnesting-details": "HTML5-s valesti pesastatud (aga mitte Tidyga)",
+	"linter-pager-tidy-font-bug-details": "Font-silt muudab lingi värvust Tidyga, aga mitte HTML5-s",
 	"linter-category-fostered": "Valesti paigutatud tabelisisu",
 	"linter-category-fostered-desc": "Neil lehekülgedel on tabeli sisu valesti paigutatud.",
 	"linter-category-obsolete-tag": "Aegunud HTML-sildid",
@@ -44,11 +45,14 @@
 	"linter-category-tidy-whitespace-bug-desc": "Need leheküljed vallandavad Tidy tühemikuvea, millele tuleks vastukaal seada.",
 	"linter-category-html5-misnesting": "Valesti pesastatud silt, mille viimistlus HTML5 ja HTML4 puhul on erinev",
 	"linter-category-html5-misnesting-desc": "Need valesti pesastatud sildid toimivad HTML5-s ja HTML4-s erinevalt.",
+	"linter-category-tidy-font-bug": "Tidy viga, mille tõttu font-sildid murravad linke",
+	"linter-category-tidy-font-bug-desc": "Tidy liigutab need font-sildid linkide sisse, et lingi värvust muuta.",
 	"linter-numerrors": "($1 {{PLURAL:$1|viga}})",
 	"linker-page-edit": "redigeeri",
 	"linker-page-history": "ajalugu",
 	"linter-heading-high-priority": "Esmajärgulise tähtsusega",
 	"linter-heading-medium-priority": "Teisejärgulise tähtsusega",
 	"linter-heading-low-priority": "Kolmandajärgulise tähtsusega",
+	"multi-part-template-block": "Ei väljastata üheainsa malli vahendusel",
 	"pageinfo-linter": "Linteri vead"
 }
