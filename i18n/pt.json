@@ -47,7 +47,7 @@
 	"linter-category-tidy-whitespace-bug-desc": "Estas páginas desencadeiam um defeito de espaço em branco do Tidy que devia ser evitado.",
 	"linter-category-html5-misnesting": "Elemento mal intercalado com composição gráfica diferente em HTML5 e HTML4",
 	"linter-category-html5-misnesting-desc": "Estes elementos mal intercalados terão comportamentos diferentes no HTML5 em comparação com o HTML4",
-	"linter-category-tidy-font-bug": "Defeito do Tidy que afeta as hiperligações de encapsulamento das etiquetas font",
+	"linter-category-tidy-font-bug": "Defeito do Tidy que afeta as etiquetas font que encapsulam hiperligações",
 	"linter-category-tidy-font-bug-desc": "O Tidy move estas etiquetas font para dentro de hiperligações para mudar a cor das hiperligações",
 	"linter-numerrors": "($1 {{PLURAL:$1|erro|erros}})",
 	"linker-page-edit": "editar",
