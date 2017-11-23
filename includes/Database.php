@@ -21,7 +21,7 @@
 namespace MediaWiki\Linter;
 
 use FormatJson;
-use MWExceptionHandler;
+use MediaWiki\Logger\LoggerFactory;
 
 /**
  * Database logic
@@ -84,7 +84,10 @@ class Database {
 		try {
 			$name = ( new CategoryManager() )->getCategoryName( $row->linter_cat );
 		} catch ( MissingCategoryException $e ) {
-			MWExceptionHandler::logException( $e );
+			LoggerFactory::getInstance( 'Linter' )->error(
+				'Could not find name for id: {linter_cat}',
+				[ 'linter_cat' => $row->linter_cat ]
+			);
 			return false;
 		}
 		return new LintError(
