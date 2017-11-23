@@ -21,6 +21,7 @@
 namespace MediaWiki\Linter;
 
 use FormatJson;
+use MWExceptionHandler;
 
 /**
  * Database logic
@@ -77,11 +78,17 @@ class Database {
 	 * Turn a database row into a LintError object
 	 *
 	 * @param \stdClass $row
-	 * @return LintError
+	 * @return LintError|bool false on error
 	 */
 	public static function makeLintError( $row ) {
+		try {
+			$name = ( new CategoryManager() )->getCategoryName( $row->linter_cat );
+		} catch ( MissingCategoryException $e ) {
+			MWExceptionHandler::logException( $e );
+			return false;
+		}
 		return new LintError(
-			( new CategoryManager() )->getCategoryName( $row->linter_cat ),
+			$name,
 			[ (int)$row->linter_start, (int)$row->linter_end ],
 			$row->linter_params,
 			(int)$row->linter_id
@@ -106,6 +113,9 @@ class Database {
 		$result = [];
 		foreach ( $rows as $row ) {
 			$error = $this->makeLintError( $row );
+			if ( !$error ) {
+				continue;
+			}
 			$result[$error->id()] = $error;
 		}
 
@@ -236,7 +246,12 @@ class Database {
 		// Initialize zero values
 		$ret = array_fill_keys( $this->categoryManager->getVisibleCategories(), 0 );
 		foreach ( $rows as $row ) {
-			$ret[$this->categoryManager->getCategoryName( $row->linter_cat )] = (int)$row->count;
+			try {
+				$catName = $this->categoryManager->getCategoryName( $row->linter_cat );
+			} catch ( MissingCategoryException $e ) {
+				continue;
+			}
+			$ret[$catName] = (int)$row->count;
 		}
 
 		return $ret;
