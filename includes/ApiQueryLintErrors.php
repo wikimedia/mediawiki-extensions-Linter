@@ -43,6 +43,9 @@ class ApiQueryLintErrors extends ApiQueryBase {
 		if ( $params['from'] !== null ) {
 			$this->addWhere( 'linter_id >= ' . $db->addQuotes( $params['from'] ) );
 		}
+		if ( $params['pageid'] !== null ) {
+			$this->addWhereFld( 'linter_page', $params['pageid'] );
+		}
 		if ( $params['namespace'] !== null ) {
 			$this->addWhereFld( 'page_namespace', $params['namespace'] );
 		}
@@ -112,6 +115,10 @@ class ApiQueryLintErrors extends ApiQueryBase {
 			],
 			'namespace' => [
 				ApiBase::PARAM_TYPE => 'namespace',
+				ApiBase::PARAM_ISMULTI => true,
+			],
+			'pageid' => [
+				ApiBase::PARAM_TYPE => 'integer',
 				ApiBase::PARAM_ISMULTI => true,
 			],
 			'from' => [

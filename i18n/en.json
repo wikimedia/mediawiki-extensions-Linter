@@ -63,6 +63,7 @@
 	"apihelp-query+linterrors-param-limit": "Number of results to query",
 	"apihelp-query+linterrors-param-from": "Lint ID to start querying from",
 	"apihelp-query+linterrors-param-namespace": "Only include lint errors from the specified namespaces",
+	"apihelp-query+linterrors-param-pageid": "Only include lint errors from the specified page IDs",
 	"apihelp-query+linterrors-example-1": "Get all lint errors of the obsolete-tag category",
 	"apihelp-record-lint-description": "Record a lint error in the database",
 	"apihelp-record-lint-summary": "Record a lint error in the database",
