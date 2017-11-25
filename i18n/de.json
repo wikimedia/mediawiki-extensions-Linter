@@ -51,6 +51,7 @@
 	"linter-category-tidy-font-bug-desc": "Tidy verschiebt diese Font-Tags innerhalb von Links, um die Linkfarbe zu ändern.",
 	"linter-numerrors": "({{PLURAL:$1|Ein|$1}} Fehler)",
 	"linter-page-edit": "bearbeiten",
+	"linter-page-viewsource": "Quelltext ansehen",
 	"linter-page-history": "Versionsgeschichte",
 	"linter-heading-high-priority": "Hohe Priorität",
 	"linter-heading-medium-priority": "Mittlere Priorität",
@@ -61,6 +62,7 @@
 	"apihelp-query+linterrors-summary": "Ruft eine Liste der Lint-Fehler ab",
 	"apihelp-query+linterrors-param-categories": "Kategorien der Lint-Fehler",
 	"apihelp-query+linterrors-param-limit": "Anzahl der abzurufenden Ergebnisse",
+	"apihelp-query+linterrors-param-pageid": "Schließt nur Lint-Fehler von den angegebenen Seitenkennungen ein",
 	"apihelp-record-lint-param-page": "Seitentitel",
 	"apihelp-query+linterstats-description": "Ruft die Anzahl der Lint-Fehler in jeder Kategorie ab",
 	"apihelp-query+linterstats-example-1": "Ruft die Anzahl der Lint-Fehler in jeder Kategorie ab"
