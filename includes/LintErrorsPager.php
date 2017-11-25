@@ -116,12 +116,11 @@ class LintErrorsPager extends TablePager {
 			case 'title':
 				$title = Title::makeTitle( $row->page_namespace, $row->page_title );
 				$viewLink = $this->linkRenderer->makeLink( $title );
-				if ( !$title->quickUserCan( 'edit', $this->getUser() ) ) {
-					return $viewLink;
-				}
+				$editMsgKey = $title->quickUserCan( 'edit', $this->getUser() ) ?
+					'linker-page-edit' : 'linter-page-viewsource';
 				$editLink = $this->linkRenderer->makeLink(
 					$title,
-					$this->msg( 'linker-page-edit' )->text(),
+					$this->msg( $editMsgKey )->text(),
 					[],
 					[ 'action' => $editAction, 'lintid' => $lintError->lintId, ]
 				);
