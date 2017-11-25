@@ -14,7 +14,7 @@
 	"linter-category-self-closed-tag": "自己終了タグ",
 	"linter-category-self-closed-tag-desc": "これらのページには自己終了タグがあります。",
 	"linter-numerrors": "($1 {{PLURAL:$1|件のエラー}})",
-	"linker-page-edit": "編集",
-	"linker-page-history": "履歴",
+	"linter-page-edit": "編集",
+	"linter-page-history": "履歴",
 	"apihelp-record-lint-param-page": "ページ名"
 }
