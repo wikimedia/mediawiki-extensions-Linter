@@ -21,6 +21,6 @@
 	"linter-category-deletable-table-tag": "แท็กตารางที่ควรลบ",
 	"linter-category-deletable-table-tag-desc": "หน้าเหล่านี้มีแท็กตารางที่ควรลบ",
 	"linter-numerrors": "($1 {{PLURAL:$1|ข้อผิดพลาด|ข้อผิดพลาด}})",
-	"linker-page-edit": "แก้ไข",
-	"linker-page-history": "ประวัติ"
+	"linter-page-edit": "แก้ไข",
+	"linter-page-history": "ประวัติ"
 }

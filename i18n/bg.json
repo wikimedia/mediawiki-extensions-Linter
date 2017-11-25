@@ -25,7 +25,7 @@
 	"linter-category-misnested-tag": "Грешно вложени тагове",
 	"linter-category-html5-misnesting": "Неправилно вложен таг с различно визуализиране в HTML5 и HTML4",
 	"linter-category-html5-misnesting-desc": "Следните неправилно вложени тагове държат по различен начин в HTML5 в сравнение с HTML4.",
-	"linker-page-edit": "редактиране",
+	"linter-page-edit": "редактиране",
 	"linter-heading-high-priority": "Висок приоритет",
 	"linter-heading-medium-priority": "Среден приоритет",
 	"linter-heading-low-priority": "Нисък приоритет",

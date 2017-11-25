@@ -10,8 +10,8 @@
 	"linter-category-missing-end-tag": "Trūksta pabaigos žymės",
 	"linter-category-missing-end-tag-desc": "Šiems puslapiams trūksta pabaigos žymų.",
 	"linter-numerrors": "($1 {{PLURAL:$1|klaida|klaidos}})",
-	"linker-page-edit": "redaguoti",
-	"linker-page-history": "istorija",
+	"linter-page-edit": "redaguoti",
+	"linter-page-history": "istorija",
 	"linter-heading-errors": "Klaidos",
 	"linter-heading-warnings": "Įspėjimai",
 	"apihelp-record-lint-param-page": "Puslapio pavadinimas"

@@ -117,7 +117,7 @@ class LintErrorsPager extends TablePager {
 				$title = Title::makeTitle( $row->page_namespace, $row->page_title );
 				$viewLink = $this->linkRenderer->makeLink( $title );
 				$editMsgKey = $title->quickUserCan( 'edit', $this->getUser() ) ?
-					'linker-page-edit' : 'linter-page-viewsource';
+					'linter-page-edit' : 'linter-page-viewsource';
 				$editLink = $this->linkRenderer->makeLink(
 					$title,
 					$this->msg( $editMsgKey )->text(),
@@ -127,13 +127,13 @@ class LintErrorsPager extends TablePager {
 
 				$historyLink = $this->linkRenderer->makeLink(
 					$title,
-					$this->msg( 'linker-page-history' )->text(),
+					$this->msg( 'linter-page-history' )->text(),
 					[],
 					[ 'action' => 'history' ]
 				);
 
 				$editHistLinks = $this->getLanguage()->pipeList( [ $editLink, $historyLink ] );
-				return $this->msg( 'linker-page-title-edit' )
+				return $this->msg( 'linter-page-title-edit' )
 					->rawParams( $viewLink, $editHistLinks )
 					->escaped();
 			case 'details':
