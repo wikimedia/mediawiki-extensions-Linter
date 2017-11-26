@@ -37,6 +37,7 @@
 	"linter-category-html5-misnesting-desc": "Följande felnästade taggar uppför sig annorlunda i HTML5 jämfört med HTML4.",
 	"linter-numerrors": "($1 {{PLURAL:$1|fel}})",
 	"linter-page-edit": "redigera",
+	"linter-page-viewsource": "visa wikitext",
 	"linter-page-history": "historik",
 	"linter-heading-high-priority": "Hög prioritet",
 	"linter-heading-medium-priority": "Medelprioritet",

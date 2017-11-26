@@ -13,6 +13,7 @@
 	"linter-pager-template": "من خلال قالب؟",
 	"linter-numerrors": "({{PLURAL:$1|خطأ|خطآن|$1 أخطاء}})",
 	"linter-page-edit": "تعديل",
+	"linter-page-viewsource": "عرض المصدر",
 	"linter-page-history": "تاريخ",
 	"linter-heading-high-priority": "أولوية عالية",
 	"linter-heading-medium-priority": "أولوية متوسطة",

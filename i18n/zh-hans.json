@@ -52,6 +52,7 @@
 	"linter-category-tidy-font-bug-desc": "Tidy将这些字体标签移动到链接内以更改链接颜色",
 	"linter-numerrors": "（$1个{{PLURAL:$1|错误}}）",
 	"linter-page-edit": "编辑",
+	"linter-page-viewsource": "查看源代码",
 	"linter-page-history": "历史",
 	"linter-heading-high-priority": "高优先级",
 	"linter-heading-medium-priority": "中优先级",

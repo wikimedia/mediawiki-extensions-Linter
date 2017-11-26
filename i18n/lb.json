@@ -21,6 +21,7 @@
 	"linter-category-missing-end-tag-desc": "Op dëse Säite feelen Schluss-Tagen.",
 	"linter-numerrors": "({{PLURAL:$1|Ee|$1}} Feeler)",
 	"linter-page-edit": "änneren",
+	"linter-page-viewsource": "Quellcode kucken",
 	"linter-page-history": "Versiounen",
 	"linter-heading-high-priority": "Héich Prioritéit",
 	"linter-heading-medium-priority": "Mëttel Prioritéit",

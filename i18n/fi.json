@@ -3,13 +3,15 @@
 		"authors": [
 			"Valtlait",
 			"Nike",
-			"Silvonen"
+			"Silvonen",
+			"BriskyBlizzard"
 		]
 	},
 	"linterrors": "Lint-virheet",
 	"linter-pager-title": "Sivun otsikko",
 	"linter-numerrors": "($1 {{PLURAL:$1|virhe|virhettä}})",
 	"linter-page-edit": "muokkaa",
+	"linter-page-viewsource": "näytä wikiteksti",
 	"pageinfo-linter": "Lint-virheet",
 	"apihelp-record-lint-param-page": "Sivun otsikko"
 }

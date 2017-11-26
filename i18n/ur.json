@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Obaid Raza",
-			"Muhammad Shuaib"
+			"Muhammad Shuaib",
+			"Zainab Meher"
 		]
 	},
 	"linterrors": "پوشیدہ نحوی نقائص",
@@ -34,6 +35,7 @@
 	"linter-category-misnested-tag-desc": "یہ وہ صفحات ہیں جن میں ایسے مسنیسٹڈ ٹیگ ہیں جن کو درست کیا جا سکتا ہے۔",
 	"linter-numerrors": "($1 {{PLURAL:$1|نقص|نقائص}})",
 	"linter-page-edit": "ترمیم",
+	"linter-page-viewsource": "ماخذ دیکھیں",
 	"linter-page-history": "تاریخچہ",
 	"linter-heading-high-priority": "اعلی ترجیح",
 	"linter-heading-medium-priority": "درمیانی ترجیح",

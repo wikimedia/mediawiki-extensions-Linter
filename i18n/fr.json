@@ -55,6 +55,7 @@
 	"linter-category-tidy-font-bug-desc": "Tidy déplace ces balises font à l’intérieur des liens pour modifier leur couleur",
 	"linter-numerrors": "($1 {{PLURAL:$1|erreur|erreurs}})",
 	"linter-page-edit": "modifier",
+	"linter-page-viewsource": "voir la source",
 	"linter-page-history": "historique",
 	"linter-heading-high-priority": "Priorité haute",
 	"linter-heading-medium-priority": "Priorité moyenne",
