@@ -68,6 +68,7 @@
 	"apihelp-query+linterrors-param-limit": "Nombre de résultats à demander",
 	"apihelp-query+linterrors-param-from": "ID de lint auquel commencer la requête",
 	"apihelp-query+linterrors-param-namespace": "Inclure uniquement les erreurs lint des espaces de nom spécifiés",
+	"apihelp-query+linterrors-param-pageid": "Inclure uniquement les erreurs lint des pages spécifiées par leur ID",
 	"apihelp-query+linterrors-example-1": "Obtenir toutes les erreurs lint de la catégorie balise désuète",
 	"apihelp-record-lint-description": "Enregistrer une erreur lint dans la base de données",
 	"apihelp-record-lint-summary": "Enregistrer une erreur lint dans la base de données",

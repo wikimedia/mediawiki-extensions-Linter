@@ -52,6 +52,7 @@
 	"linter-category-tidy-font-bug-desc": "Tidy מעביר את תגי ה־font האלה לתוך קישורים כדי לשנות את צבע הקישור",
 	"linter-numerrors": "({{PLURAL:$1|שגיאה אחת|$1 שגיאות}})",
 	"linter-page-edit": "עריכה",
+	"linter-page-viewsource": "הצגת מקור",
 	"linter-page-history": "היסטוריה",
 	"linter-heading-high-priority": "עדיפות גבוהה",
 	"linter-heading-medium-priority": "עדיפות בינונית",

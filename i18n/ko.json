@@ -15,6 +15,7 @@
 	"linter-category-misnested-tag": "닫히지 않은 태그",
 	"linter-numerrors": "($1개의 {{PLURAL:$1|오류}})",
 	"linter-page-edit": "편집",
+	"linter-page-viewsource": "원본 보기",
 	"linter-page-history": "역사",
 	"linter-heading-high-priority": "높은 우선순위",
 	"linter-heading-medium-priority": "중간 우선순위",
