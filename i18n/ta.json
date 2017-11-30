@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"ElangoRamanujam"
+			"ElangoRamanujam",
+			"Balajijagadesh"
 		]
 	},
-	"linter-heading-errors": "பிழைகள்",
-	"linter-heading-warnings": "எச்சரிக்கைகள்"
+	"linter-page-viewsource": "மூலத்தை காட்டுக"
 }
