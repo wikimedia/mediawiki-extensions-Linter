@@ -17,6 +17,7 @@
 	"linter-category-deletable-table-tag-desc": "এই সব পাতায় টেবিল ট্যাগ রয়েছে যা মুছে ফেলা উচিত।",
 	"linter-numerrors": "($1টি {{PLURAL:$1|ত্রুটি}})",
 	"linter-page-edit": "সম্পাদনা",
+	"linter-page-viewsource": "উৎস দেখুন",
 	"linter-page-history": "ইতিহাস",
 	"linter-heading-high-priority": "উচ্চ অগ্রাধিকার",
 	"linter-heading-medium-priority": "মধ্যম অগ্রাধিকার",
