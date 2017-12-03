@@ -77,5 +77,8 @@
 	"apihelp-record-lint-param-revision": "{{doc-apihelp-param|record-lint|revision}}",
 	"apihelp-query+linterstats-description": "{{doc-apihelp-description|query+linterstats}}",
 	"apihelp-query+linterstats-summary": "{{doc-apihelp-summary|query+linterstats}}",
-	"apihelp-query+linterstats-example-1": "{{doc-apihelp-example|query+linterstats}}"
+	"apihelp-query+linterstats-example-1": "{{doc-apihelp-example|query+linterstats}}",
+	"apierror-linter-invalid-ip": "Error message when IP address has not been whitelisted to report lint errors",
+	"apierror-linter-invalid-data": "Error message when there is invalid data",
+	"apierror-linter-invalid-title": "Error message when there is invalid, non-existent, or outdated title"
 }

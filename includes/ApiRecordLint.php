@@ -40,15 +40,12 @@ class ApiRecordLint extends ApiBase {
 			array_keys( array_filter( $wgLinterSubmitterWhitelist ) )
 		);
 		if ( !$ipSet->match( $this->getRequest()->getIP() ) ) {
-			$this->dieUsage(
-				'Your IP address has not been whitelisted to report lint errors',
-				'invalid-ip'
-			);
+			$this->dieWithError( 'apierror-linter-invalid-ip', 'invalid-ip' );
 		}
 		$params = $this->extractRequestParams();
 		$data = FormatJson::decode( $params['data'], true );
 		if ( !is_array( $data ) ) {
-			$this->dieUsage( 'Invalid data', 'invalid-data' );
+			$this->dieWithError( 'apierror-linter-invalid-data', 'invalid-data' );
 		}
 
 		$errors = [];
@@ -56,7 +53,7 @@ class ApiRecordLint extends ApiBase {
 		if ( !$title || !$title->getArticleID()
 			|| $title->getLatestRevID() != $params['revision']
 		) {
-			$this->dieUsage( 'Invalid, non-existent, or outdated title', 'invalid-title' );
+			$this->dieWithError( 'apierror-linter-invalid-title', 'invalid-title' );
 		}
 		$categoryMgr = new CategoryManager();
 		foreach ( $data as $info ) {
