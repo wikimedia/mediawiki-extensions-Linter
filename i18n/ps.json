@@ -9,5 +9,6 @@
 	"linter-category-bogus-image-options": "د بوګ دوتنې انتخابونه",
 	"linter-category-missing-end-tag": "ورک پای ټکي",
 	"linter-category-stripped-tag": "لیرې شوي ټکي",
-	"linter-category-misnested-tag": "بې ځایه شوي ټګۍ"
+	"linter-category-misnested-tag": "بې ځایه شوي ټګۍ",
+	"pageinfo-linter": "پټ ساتل شوي تېروتنې"
 }
