@@ -65,5 +65,8 @@
 	"apihelp-query+linterrors-param-pageid": "Schließt nur Lint-Fehler von den angegebenen Seitenkennungen ein",
 	"apihelp-record-lint-param-page": "Seitentitel",
 	"apihelp-query+linterstats-description": "Ruft die Anzahl der Lint-Fehler in jeder Kategorie ab",
-	"apihelp-query+linterstats-example-1": "Ruft die Anzahl der Lint-Fehler in jeder Kategorie ab"
+	"apihelp-query+linterstats-example-1": "Ruft die Anzahl der Lint-Fehler in jeder Kategorie ab",
+	"apierror-linter-invalid-ip": "Deine IP-Adresse ist nicht weißgelistet, um Lint-Fehler zu melden.",
+	"apierror-linter-invalid-data": "Ungültige Daten",
+	"apierror-linter-invalid-title": "Ungültiger, nicht vorhandener oder veralteter Titel"
 }

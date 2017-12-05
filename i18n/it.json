@@ -76,5 +76,7 @@
 	"apihelp-record-lint-param-revision": "ID della versione in cui l'errore è stato trovato",
 	"apihelp-query+linterstats-description": "Ottieni il numero di errori di Lint in ciascuna categoria",
 	"apihelp-query+linterstats-summary": "Ottieni il numero di errori di Lint in ciascuna categoria",
-	"apihelp-query+linterstats-example-1": "Ottieni il numero di errori di Lint in ciascuna categoria"
+	"apihelp-query+linterstats-example-1": "Ottieni il numero di errori di Lint in ciascuna categoria",
+	"apierror-linter-invalid-data": "Dati non validi",
+	"apierror-linter-invalid-title": "Titolo non valido, inesistente o obsoleto"
 }

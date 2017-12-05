@@ -22,5 +22,7 @@
 	"linter-heading-low-priority": "낮은 우선순위",
 	"apihelp-record-lint-param-data": "오류에 대한 JSON 변환 데이터",
 	"apihelp-record-lint-param-page": "문서 제목",
-	"apihelp-record-lint-param-revision": "오류가 발견된 판 ID"
+	"apihelp-record-lint-param-revision": "오류가 발견된 판 ID",
+	"apierror-linter-invalid-data": "유효하지 않은 데이터",
+	"apierror-linter-invalid-title": "유효하지 않거나 존재하지 않거나 오래된 제목"
 }

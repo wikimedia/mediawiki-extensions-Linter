@@ -6,7 +6,8 @@
 			"Wladek92",
 			"Urhixidur",
 			"JackPotte",
-			"Thibaut120094"
+			"Thibaut120094",
+			"KATRINE1992"
 		]
 	},
 	"linterrors": "Erreurs de lint",
@@ -77,5 +78,8 @@
 	"apihelp-record-lint-param-revision": "ID de révision dans laquelle l’erreur a été trouvée",
 	"apihelp-query+linterstats-description": "Obtenir le nombre d’erreurs lint dans chaque catégorie",
 	"apihelp-query+linterstats-summary": "Obtenir le nombre d’erreurs lint dans chaque catégorie",
-	"apihelp-query+linterstats-example-1": "Obtenir le nombre d’erreurs lint dans chaque catégorie"
+	"apihelp-query+linterstats-example-1": "Obtenir le nombre d’erreurs lint dans chaque catégorie",
+	"apierror-linter-invalid-ip": "Votre adresse IP n'a pas été mise dans la liste blanche pour signaler les erreurs lint",
+	"apierror-linter-invalid-data": "Donnée invalide",
+	"apierror-linter-invalid-title": "Titre incorrect, non existant ou post-date"
 }

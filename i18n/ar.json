@@ -23,5 +23,6 @@
 	"apihelp-query+linterrors-summary": "احصل على قائمة بأخطاء لنت",
 	"apihelp-query+linterrors-param-categories": "تصنيفات أخطاء لنت",
 	"apihelp-query+linterrors-param-limit": "عدد النتائج للاستعلام",
-	"apihelp-record-lint-param-page": "عنوان الصفحة"
+	"apihelp-record-lint-param-page": "عنوان الصفحة",
+	"apierror-linter-invalid-data": "بيانات غير صالحة"
 }

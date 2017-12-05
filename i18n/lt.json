@@ -12,7 +12,5 @@
 	"linter-numerrors": "($1 {{PLURAL:$1|klaida|klaidos}})",
 	"linter-page-edit": "redaguoti",
 	"linter-page-history": "istorija",
-	"linter-heading-errors": "Klaidos",
-	"linter-heading-warnings": "Įspėjimai",
 	"apihelp-record-lint-param-page": "Puslapio pavadinimas"
 }
