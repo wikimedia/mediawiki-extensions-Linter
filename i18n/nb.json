@@ -51,6 +51,7 @@
 	"linter-category-tidy-font-bug-desc": "Tidy flytter disse font-taggene inn i lenketagger for å endre lenkefarge",
 	"linter-numerrors": "($1 {{PLURAL:$1|feil}})",
 	"linter-page-edit": "rediger",
+	"linter-page-viewsource": "vis kilde",
 	"linter-page-history": "historikk",
 	"linter-heading-high-priority": "Høy prioritet",
 	"linter-heading-medium-priority": "Middels prioritet",

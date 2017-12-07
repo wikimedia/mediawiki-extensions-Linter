@@ -69,5 +69,6 @@
 	"apihelp-query+linterstats-summary": "Obtener el número de errores de sintaxis en cada categoría",
 	"apihelp-query+linterstats-example-1": "Obtener el número de errores de sintaxis en cada categoría",
 	"apierror-linter-invalid-ip": "Tu dirección IP no está autorizada para informar sobre errores de sintaxis",
-	"apierror-linter-invalid-data": "Datos no válidos"
+	"apierror-linter-invalid-data": "Datos no válidos",
+	"apierror-linter-invalid-title": "Título no válido, inexistente o desactualizado"
 }

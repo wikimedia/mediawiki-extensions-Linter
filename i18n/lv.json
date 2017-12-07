@@ -4,8 +4,16 @@
 			"Papuass"
 		]
 	},
+	"linterrors": "Lint kļūdas",
+	"linterrors-subpage": "Lint kļūdas: $1",
 	"linter-form-namespace": "Vārdtelpa:",
+	"linter-pager-title": "Lapas nosaukums",
+	"linter-page-edit": "labot",
+	"linter-page-viewsource": "aplūkot kodu",
+	"linter-page-history": "vēsture",
 	"linter-heading-high-priority": "Augsta prioritāte",
 	"linter-heading-medium-priority": "Vidēja prioritāte",
-	"linter-heading-low-priority": "Zema prioritāte"
+	"linter-heading-low-priority": "Zema prioritāte",
+	"pageinfo-linter": "Lint kļūdas",
+	"apihelp-record-lint-param-page": "Lapas nosaukums"
 }
