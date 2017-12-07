@@ -43,6 +43,7 @@ class LintErrorTest extends \MediaWikiTestCase {
 			'obsolete-tag',
 			[ 10, 20 ],
 			[ 'name' => 'big' ],
+			null,
 			5
 		);
 		$this->assertInstanceOf( LintError::class, $error2 );

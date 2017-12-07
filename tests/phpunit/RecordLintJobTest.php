@@ -50,6 +50,7 @@ class RecordLintJobTest extends \MediaWikiTestCase {
 			'type' => 'fostered',
 			'location' => [ 0, 10 ],
 			'params' => [],
+			'dbid' => null,
 		];
 		$job = new RecordLintJob( $this->getMockTitle(), [
 			'errors' => [ $error ],

@@ -167,12 +167,23 @@ class CategoryManager {
 	 * Get the int id for the category in lint_categories table
 	 *
 	 * @param string $name
+	 * @param int|null $hint An optional hint, passed along from Parsoid.
+	 *   If the hint contains a suggested category ID but the Linter
+	 *   extension doesn't (yet) have one, use the ID from Parsoid's hint.
+	 *   This allows decoupling the Parsoid deploy of a new category
+	 *   from the corresponding Linter extension deploy.
 	 * @return int
 	 * @throws MissingCategoryException if we can't find the id for the name
+	 *   and there is no hint from Parsoid
 	 */
-	public function getCategoryId( $name ) {
+	public function getCategoryId( $name, $hint = null ) {
 		if ( isset( $this->categoryIds[$name] ) ) {
 			return $this->categoryIds[$name];
+		}
+
+		// Use hint from Parsoid, if available.
+		if ( $hint !== null ) {
+			return $hint;
 		}
 
 		throw new MissingCategoryException( "Cannot find id for '$name'" );

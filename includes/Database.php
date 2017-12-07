@@ -94,6 +94,7 @@ class Database {
 			$name,
 			[ (int)$row->linter_start, (int)$row->linter_end ],
 			$row->linter_params,
+			$row->linter_cat,
 			(int)$row->linter_id
 		);
 	}
@@ -135,7 +136,7 @@ class Database {
 	private function serializeError( LintError $error ) {
 		return [
 			'linter_page' => $this->pageId,
-			'linter_cat' => $this->categoryManager->getCategoryId( $error->category ),
+			'linter_cat' => $this->categoryManager->getCategoryId( $error->category, $error->catId ),
 			'linter_params' => FormatJson::encode( $error->params, false, FormatJson::ALL_OK ),
 			'linter_start' => $error->location[0],
 			'linter_end' => $error->location[1],
