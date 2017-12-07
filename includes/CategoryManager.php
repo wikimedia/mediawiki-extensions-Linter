@@ -35,25 +35,7 @@ class CategoryManager {
 	 *
 	 * @var int[]
 	 */
-	private $categoryIds = [
-		'fostered' => 1,
-		'obsolete-tag' => 2,
-		'bogus-image-options' => 3,
-		'missing-end-tag' => 4,
-		'stripped-tag' => 5,
-		'self-closed-tag' => 6,
-		'deletable-table-tag' => 7,
-		'misnested-tag' => 8,
-		'pwrap-bug-workaround' => 9,
-		'tidy-whitespace-bug' => 10,
-		'multi-colon-escape' => 11,
-		'html5-misnesting' => 12,
-		'tidy-font-bug' => 13,
-		'multiple-unclosed-formatting-tags' => 14,
-		'unclosed-quotes-in-heading' => 15,
-		'multiline-html-table-in-list' => 16,
-		'misc-tidy-replacement-issues' => 17,
-	];
+	private $categoryIds = [];
 
 	/**
 	 * @var string[][]
@@ -85,6 +67,12 @@ class CategoryManager {
 			}
 			if ( isset( $info['has-name'] ) ) {
 				$this->hasNameParam[$name] = true;
+			}
+			if ( isset( $info['dbid'] ) ) {
+				if ( isset( $this->categoryIds[$name] ) ) {
+					throw new InvalidArgumentException( "duplicate ID: $name" );
+				}
+				$this->categoryIds[$name] = $info['dbid'];
 			}
 		}
 
