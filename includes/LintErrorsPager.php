@@ -137,19 +137,8 @@ class LintErrorsPager extends TablePager {
 					->rawParams( $viewLink, $editHistLinks )
 					->escaped();
 			case 'details':
-				$hasNameCats = [
-					'deletable-table-tag',
-					'obsolete-tag',
-					'missing-end-tag',
-					'self-closed-tag',
-					'misnested-tag',
-					'stripped-tag',
-					'html5-misnesting',
-					'tidy-font-bug',
-					'multiple-unclosed-formatting-tags',
-					'unclosed-quotes-in-heading',
-				];
-				if ( in_array( $this->category, $hasNameCats ) && isset( $lintError->params['name'] ) ) {
+				if ( $this->categoryManager->hasNameParam( $this->category ) &&
+					isset( $lintError->params['name'] ) ) {
 					return Html::element( 'code', [], $lintError->params['name'] );
 				} elseif ( $this->category === 'bogus-image-options' && isset( $lintError->params['items'] ) ) {
 					$list = array_map( function ( $in ) {

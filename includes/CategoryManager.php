@@ -69,6 +69,11 @@ class CategoryManager {
 	 */
 	private $parserMigrationCategories = [];
 
+	/**
+	 * @var string[]
+	 */
+	private $hasNameParam = [];
+
 	public function __construct() {
 		global $wgLinterCategories;
 		foreach ( $wgLinterCategories as $name => $info ) {
@@ -77,6 +82,9 @@ class CategoryManager {
 			}
 			if ( isset( $info['parser-migration'] ) ) {
 				$this->parserMigrationCategories[$name] = true;
+			}
+			if ( isset( $info['has-name'] ) ) {
+				$this->hasNameParam[$name] = true;
 			}
 		}
 
@@ -87,6 +95,10 @@ class CategoryManager {
 
 	public function needsParserMigrationEdit( $name ) {
 		return isset( $this->parserMigrationCategories[$name] );
+	}
+
+	public function hasNameParam( $name ) {
+		return isset( $this->hasNameParam[$name] );
 	}
 
 	/**

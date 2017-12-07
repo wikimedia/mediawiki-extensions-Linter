@@ -70,7 +70,8 @@
 			},
 			"obsolete-tag": {
 				"enabled": true,
-				"priority": "low"
+				"priority": "low",
+				"has-name": true
 			},
 			"bogus-image-options": {
 				"enabled": true,
@@ -78,25 +79,30 @@
 			},
 			"missing-end-tag": {
 				"enabled": true,
-				"priority": "low"
+				"priority": "low",
+				"has-name": true
 			},
 			"stripped-tag": {
 				"enabled": true,
-				"priority": "low"
+				"priority": "low",
+				"has-name": true
 			},
 			"self-closed-tag": {
 				"enabled": true,
 				"priority": "high",
+				"has-name": true,
 				"parser-migration": true
 			},
 			"deletable-table-tag": {
 				"enabled": true,
 				"priority": "high",
+				"has-name": true,
 				"parser-migration": true
 			},
 			"misnested-tag": {
 				"enabled": true,
-				"priority": "medium"
+				"priority": "medium",
+				"has-name": true
 			},
 			"pwrap-bug-workaround": {
 				"enabled": true,
@@ -115,21 +121,25 @@
 			"html5-misnesting": {
 				"enabled": true,
 				"priority": "high",
+				"has-name": true,
 				"parser-migration": true
 			},
 			"tidy-font-bug": {
 				"enabled": true,
 				"priority": "high",
+				"has-name": true,
 				"parser-migration": true
 			},
 			"multiple-unclosed-formatting-tags": {
 				"enabled": true,
 				"priority": "high",
+				"has-name": true,
 				"parser-migration": true
 			},
 			"unclosed-quotes-in-heading": {
 				"enabled": true,
 				"priority": "high",
+				"has-name": true,
 				"parser-migration": true
 			},
 			"multiline-html-table-in-list": {
