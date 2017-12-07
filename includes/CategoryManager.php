@@ -49,6 +49,10 @@ class CategoryManager {
 		'multi-colon-escape' => 11,
 		'html5-misnesting' => 12,
 		'tidy-font-bug' => 13,
+		'multiple-unclosed-formatting-tags' => 14,
+		'unclosed-quotes-in-heading' => 15,
+		'multiline-html-table-in-list' => 16,
+		'misc-tidy-replacement-issues' => 17,
 	];
 
 	/**

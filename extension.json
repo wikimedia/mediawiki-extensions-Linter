@@ -121,6 +121,26 @@
 				"enabled": true,
 				"priority": "high",
 				"parser-migration": true
+			},
+			"multiple-unclosed-formatting-tags": {
+				"enabled": true,
+				"priority": "high",
+				"parser-migration": true
+			},
+			"unclosed-quotes-in-heading": {
+				"enabled": true,
+				"priority": "high",
+				"parser-migration": true
+			},
+			"multiline-html-table-in-list": {
+				"enabled": true,
+				"priority": "high",
+				"parser-migration": true
+			},
+			"misc-tidy-replacement-issues": {
+				"enabled": true,
+				"priority": "high",
+				"parser-migration": true
 			}
 		},
 		"LinterSubmitterWhitelist": {

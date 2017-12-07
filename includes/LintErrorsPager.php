@@ -146,6 +146,8 @@ class LintErrorsPager extends TablePager {
 					'stripped-tag',
 					'html5-misnesting',
 					'tidy-font-bug',
+					'multiple-unclosed-formatting-tags',
+					'unclosed-quotes-in-heading',
 				];
 				if ( in_array( $this->category, $hasNameCats ) && isset( $lintError->params['name'] ) ) {
 					return Html::element( 'code', [], $lintError->params['name'] );
@@ -167,6 +169,13 @@ class LintErrorsPager extends TablePager {
 				} elseif ( $this->category === 'multi-colon-escape' &&
 					isset( $lintError->params['href'] ) ) {
 					return Html::element( 'code', [], $lintError->params['href'] );
+				} elseif ( $this->category === 'multiline-html-table-in-list' ) {
+					/* ancestor and name will be set */
+					return Html::element( 'code', [],
+						$lintError->params['ancestorName'] . " > " . $lintError->params['name'] );
+				} elseif ( $this->category === 'misc-tidy-replacement-issues' ) {
+					/* There will be a 'subtype' param to disambiguate */
+					return Html::element( 'code', [], $lintError->params['subtype'] );
 				}
 				return '';
 			case 'template':
