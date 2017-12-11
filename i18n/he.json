@@ -60,6 +60,8 @@
 	"linter-category-unclosed-quotes-in-heading-desc": "בדפים האלה יש מירכה לא סגורה בכותרת, שזולגת מתוכן העניינים.",
 	"linter-category-multiline-html-table-in-list": "טבלה עם שורות מרובות ברשימה",
 	"linter-category-multiline-html-table-in-list-desc": "Tidy מעביר את הטבלה לתוך הרשימה או החוצה ממנה, ו־HTML5 מרחיב את הרשימה לשאר הדף.",
+	"linter-category-misc-tidy-replacement-issues": "בעיות שונות בהחלפת Tidy",
+	"linter-category-misc-tidy-replacement-issues-desc": "בדפים האלה יש בעיות אחרות שמשפיעות על תיצוג כאשר Tidy מוחלף",
 	"linter-numerrors": "({{PLURAL:$1|שגיאה אחת|$1 שגיאות}})",
 	"linter-page-edit": "עריכה",
 	"linter-page-viewsource": "הצגת מקור",

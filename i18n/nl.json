@@ -3,7 +3,8 @@
 		"authors": [
 			"Sjoerddebruin",
 			"Mainframe98",
-			"MarcoSwart"
+			"MarcoSwart",
+			"Mar(c)"
 		]
 	},
 	"linterrors": "Lint fouten",
@@ -43,10 +44,10 @@
 	"linter-heading-low-priority": "Lage prioriteit",
 	"multi-part-template-block": "Uitvoer komt niet van een enkel sjabloon",
 	"pageinfo-linter": "Lint fouten",
-	"apihelp-query+linterrors-description": "Toon een lijst van lint fouten",
-	"apihelp-query+linterrors-summary": "Toon een lijst van lint fouten",
-	"apihelp-query+linterrors-param-categories": "Lint foutcategorieën",
-	"apihelp-query+linterrors-param-namespace": "Alleen lint fouten in de opgegeven naamruimten tonen",
-	"apihelp-query+linterrors-example-1": "Toon alle lint fouten in de categorie met verouderde elementen",
+	"apihelp-query+linterrors-description": "Een lijst van lintfouten opvragen.",
+	"apihelp-query+linterrors-summary": "Een lijst van lintfouten opvragen.",
+	"apihelp-query+linterrors-param-categories": "Lintfoutcategorieën.",
+	"apihelp-query+linterrors-param-namespace": "Alleen lintfouten in de opgegeven naamruimten opnemen.",
+	"apihelp-query+linterrors-example-1": "Alle lintfouten in de categorie \"obsolete-tag\" ophalen.",
 	"apihelp-record-lint-param-page": "Paginanaam"
 }
