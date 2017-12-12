@@ -9,18 +9,8 @@
 	],
 	"descriptionmsg": "linter-desc",
 	"type": "specialpage",
-	"AutoloadClasses": {
-		"MediaWiki\\Linter\\CategoryManager": "includes/CategoryManager.php",
-		"MediaWiki\\Linter\\Hooks": "includes/Hooks.php",
-		"MediaWiki\\Linter\\Database": "includes/Database.php",
-		"MediaWiki\\Linter\\LintError": "includes/LintError.php",
-		"MediaWiki\\Linter\\ApiRecordLint": "includes/ApiRecordLint.php",
-		"MediaWiki\\Linter\\ApiQueryLintErrors": "includes/ApiQueryLintErrors.php",
-		"MediaWiki\\Linter\\ApiQueryLinterStats": "includes/ApiQueryLinterStats.php",
-		"MediaWiki\\Linter\\RecordLintJob": "includes/RecordLintJob.php",
-		"MediaWiki\\Linter\\SpecialLintErrors": "includes/SpecialLintErrors.php",
-		"MediaWiki\\Linter\\LintErrorsPager": "includes/LintErrorsPager.php",
-		"MediaWiki\\Linter\\TotalsLookup": "includes/TotalsLookup.php"
+	"AutoloadNamespaces": {
+		"MediaWiki\\Linter\\": "includes/"
 	},
 	"MessagesDirs": {
 		"Linter": "i18n"
