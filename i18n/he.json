@@ -24,7 +24,7 @@
 	"linter-pager-tidy-whitespace-bug-details": "תקלת רווח של Tidy",
 	"linter-pager-html5-misnesting-details": "קינון שגוי ב־HTML5 (אבל לא ב־Tidy)",
 	"linter-pager-tidy-font-bug-details": "תג font משנה את צבע הקישור ב־Tidy, אבל זה לא יעבוד ב־HTML5.",
-	"linter-pager-multiple-unclosed-formatting-tags-details": "תגי small או big לא סגורים מרובים בדף",
+	"linter-pager-multiple-unclosed-formatting-tags-details": "תגי עיצוב לא סגורים מרובים בדף",
 	"linter-pager-unclosed-quotes-in-heading-details": "מירכאות לא סגורות שזולגות מתוכן עניינים",
 	"linter-pager-multiline-html-table-in-list-details": "טבלת HTML5 בתוך רשימה, מתוצגת באופן שונה ב־HTML5 וב־Tidy",
 	"linter-pager-misc-tidy-replacement-issues-details": "שגיאות סימון שונות שמשפיעות על החלפת Tidy",

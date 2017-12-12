@@ -28,7 +28,7 @@
 	"linter-pager-tidy-whitespace-bug-details": "Bogue d'espace blanc Tidy",
 	"linter-pager-html5-misnesting-details": "Mauvaise inclusion en HTML5 (mais pas dans Tidy)",
 	"linter-pager-tidy-font-bug-details": "La balise font modifie la couleur du lien dans Tidy, mais pas en HTML5",
-	"linter-pager-multiple-unclosed-formatting-tags-details": "Nombreuses balises grandes ou petites non closes sur la page",
+	"linter-pager-multiple-unclosed-formatting-tags-details": "Nombreuses balises de mise en forme non closes sur la page",
 	"linter-pager-unclosed-quotes-in-heading-details": "Citation non close qui déborde de la table des matières",
 	"linter-pager-multiline-html-table-in-list-details": "Tableau HTML5 multilignes à l’intérieur d’une liste, rendu différemment en HTML5 et dans Tidy",
 	"linter-pager-misc-tidy-replacement-issues-details": "Diverses erreurs de balisage affectant le remplacement de Tidy",

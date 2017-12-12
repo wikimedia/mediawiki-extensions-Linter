@@ -23,7 +23,7 @@
 	"linter-pager-tidy-whitespace-bug-details": "Tidy-Leerzeichenfehler",
 	"linter-pager-html5-misnesting-details": "Falsch verschachtelt in HTML5 (jedoch nicht in Tidy)",
 	"linter-pager-tidy-font-bug-details": "Änderungen an Font-Tags verlinken auf Farben in Tidy, aber nicht in HTML5.",
-	"linter-pager-multiple-unclosed-formatting-tags-details": "Mehrere nicht geschlossene small- oder big-Tags auf der Seite",
+	"linter-pager-multiple-unclosed-formatting-tags-details": "Mehrere nicht geschlossene Formatierungstags auf der Seite",
 	"linter-pager-unclosed-quotes-in-heading-details": "Nicht geschlossenes Anführungszeichen, das das Inhaltsverzeichnis auslaufen lässt.",
 	"linter-pager-multiline-html-table-in-list-details": "Mehrzeilen-HTML5-Tabelle innerhalb einer Liste, unterschiedlich dargestellt in HTML5 und Tidy",
 	"linter-pager-misc-tidy-replacement-issues-details": "Verschiedene Auszeichnungsfehler, die die Tidy-Ersetzung beeinflussen.",

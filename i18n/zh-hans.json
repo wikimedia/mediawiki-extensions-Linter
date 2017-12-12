@@ -24,7 +24,7 @@
 	"linter-pager-tidy-whitespace-bug-details": "整理空格错误",
 	"linter-pager-html5-misnesting-details": "HTML5中的错误嵌套（但不在Tidy中）",
 	"linter-pager-tidy-font-bug-details": "字体标签在Tidy中会更改链接颜色，但不会在HTML5中更改",
-	"linter-pager-multiple-unclosed-formatting-tags-details": "页面上有多处未闭合的small或big标签",
+	"linter-pager-multiple-unclosed-formatting-tags-details": "页面上有多处未闭合的格式化标签",
 	"linter-pager-unclosed-quotes-in-heading-details": "超出目录的未闭合引用",
 	"linter-pager-multiline-html-table-in-list-details": "列表内存在多行HTML5表格，在HTML5和Tidy中有不同渲染效果",
 	"linter-pager-misc-tidy-replacement-issues-details": "其他涉及Tidy替换的标记错误",
