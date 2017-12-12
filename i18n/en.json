@@ -22,7 +22,7 @@
 	"linter-pager-tidy-whitespace-bug-details": "Tidy whitespace bug",
 	"linter-pager-html5-misnesting-details": "Misnesting in HTML5 (but not in Tidy)",
 	"linter-pager-tidy-font-bug-details": "Font tag changes link color in Tidy but won't in HTML5",
-	"linter-pager-multiple-unclosed-formatting-tags-details": "Multiple unclosed small or big tags on the page",
+	"linter-pager-multiple-unclosed-formatting-tags-details": "Multiple unclosed formatting tags on the page",
 	"linter-pager-unclosed-quotes-in-heading-details": "Unclosed quote which leaks out of the table of contents",
 	"linter-pager-multiline-html-table-in-list-details": "Multiline HTML5 table inside a list, rendered differently in HTML5 and Tidy",
 	"linter-pager-misc-tidy-replacement-issues-details": "Miscellaneous markup errors affecting Tidy replacement",
