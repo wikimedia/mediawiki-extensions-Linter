@@ -52,6 +52,7 @@
 	"linter-numerrors": "($1 {{PLURAL:$1|erro|erros}})",
 	"linter-page-title-edit": "$1 ($2)",
 	"linter-page-edit": "editar",
+	"linter-page-viewsource": "ver o código fonte",
 	"linter-page-history": "historial",
 	"linter-heading-high-priority": "Prioridade alta",
 	"linter-heading-medium-priority": "Prioridade media",
@@ -64,6 +65,7 @@
 	"apihelp-query+linterrors-param-limit": "Número de resultados a consultar",
 	"apihelp-query+linterrors-param-from": "Identificador do comprobador a partir do que comezar a consulta",
 	"apihelp-query+linterrors-param-namespace": "Só incluír erros do comprobador dos espazos de nomes especificados",
+	"apihelp-query+linterrors-param-pageid": "Só incluir erros de lint dos identificadores de páxina especificados",
 	"apihelp-query+linterrors-example-1": "Obter tódolos erros do comprobador da categoría da etiqueta obsoleta",
 	"apihelp-record-lint-description": "Gardar un erro do comprobador na base de datos",
 	"apihelp-record-lint-summary": "Gardar un erro do comprobador na base de datos",
@@ -72,5 +74,8 @@
 	"apihelp-record-lint-param-revision": "Identificación da modificación na que se atopou o erro",
 	"apihelp-query+linterstats-description": "Obter o número de erros do comprobador en cada categoría",
 	"apihelp-query+linterstats-summary": "Obter o número de erros do comprobador en cada categoría",
-	"apihelp-query+linterstats-example-1": "Obter o número de erros do comprobador en cada categoría"
+	"apihelp-query+linterstats-example-1": "Obter o número de erros do comprobador en cada categoría",
+	"apierror-linter-invalid-ip": "O seu enderezo IP non está na lista branca para informar sobre erros de lint",
+	"apierror-linter-invalid-data": "Datos non válidos",
+	"apierror-linter-invalid-title": "Título non válido, inexistente ou desactualizado"
 }
