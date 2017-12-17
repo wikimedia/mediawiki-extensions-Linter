@@ -9,6 +9,8 @@
 	"linter-pager-missing-end-tag-details": "Trūksta pabaigos žymės",
 	"linter-category-missing-end-tag": "Trūksta pabaigos žymės",
 	"linter-category-missing-end-tag-desc": "Šiems puslapiams trūksta pabaigos žymų.",
+	"linter-category-multiple-unclosed-formatting-tags": "Kelios neuždarytos formatavimo žymės",
+	"linter-category-multiple-unclosed-formatting-tags-desc": "Šie puslapiai turi kelias neuždarytas formatavimo žymes",
 	"linter-numerrors": "($1 {{PLURAL:$1|klaida|klaidos}})",
 	"linter-page-edit": "redaguoti",
 	"linter-page-history": "istorija",
