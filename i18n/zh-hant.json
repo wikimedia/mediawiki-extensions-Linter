@@ -4,10 +4,13 @@
 			"Cwlin0416",
 			"Liuxinyu970226",
 			"A2093064",
-			"Kanashimi"
+			"Kanashimi",
+			"LNDDYL"
 		]
 	},
-	"linterrors-subpage": "Lint錯誤：$1",
+	"linterrors": "Lint 錯誤",
+	"linterrors-subpage": "Lint 錯誤：$1",
+	"linter-desc": "自外部服務追蹤 lint 錯誤，並且對使用者顯示",
 	"linter-form-namespace": "命名空間：",
 	"linter-pager-title": "頁面標題",
 	"linter-pager-template": "通過模板？",
@@ -27,11 +30,25 @@
 	"linter-category-tidy-whitespace-bug": "Tidy空格錯誤",
 	"linter-category-html5-misnesting": "在HTML5和HTML4中對錯誤嵌套的標籤有不同的渲染",
 	"linter-category-tidy-font-bug": "涉及字體標籤包裹連結的Tidy錯誤",
+	"linter-category-multiline-html-table-in-list": "清單裡多行表格",
 	"linter-numerrors": "（$1個{{PLURAL:$1|錯誤}}）",
 	"linter-page-edit": "編輯",
 	"linter-page-history": "歷史",
 	"linter-heading-high-priority": "高優先級",
 	"linter-heading-medium-priority": "中優先級",
 	"linter-heading-low-priority": "低優先級",
-	"apihelp-record-lint-param-page": "頁面標題"
+	"pageinfo-linter": "Lint 錯誤",
+	"apihelp-query+linterrors-description": "取得 lint 錯誤的清單",
+	"apihelp-query+linterrors-summary": "取得 lint 錯誤的清單",
+	"apihelp-query+linterrors-param-categories": "lint 錯誤的分類",
+	"apihelp-query+linterrors-param-namespace": "僅包括來自指定命名空間的 lint 錯誤",
+	"apihelp-query+linterrors-param-pageid": "僅包括來自指定頁面 ID 的 lint 錯誤",
+	"apihelp-query+linterrors-example-1": "取得所有過時標籤分類的 lint 錯誤",
+	"apihelp-record-lint-description": "在資料庫內記錄 lint 錯誤",
+	"apihelp-record-lint-summary": "在資料庫內記錄 lint 錯誤",
+	"apihelp-record-lint-param-page": "頁面標題",
+	"apihelp-query+linterstats-description": "取得每個分類內的 lint 錯誤量",
+	"apihelp-query+linterstats-summary": "取得每個分類內的 lint 錯誤量",
+	"apihelp-query+linterstats-example-1": "取得每個分類內的 lint 錯誤量",
+	"apierror-linter-invalid-ip": "您的 IP 位址尚未被列為白名單，故不能回報 lint 錯誤"
 }

@@ -6,6 +6,7 @@
 			"StanProg"
 		]
 	},
+	"linterrors": "Грешки в статичния код",
 	"linter-form-namespace": "Именно пространство:",
 	"linter-pager-title": "Заглавие на страницата",
 	"linter-pager-template": "Чрез шаблон?",
@@ -18,6 +19,7 @@
 	"linter-category-bogus-image-options": "Неправилни параметри на файлове",
 	"linter-category-bogus-image-options-desc": "Следните страници съдържат файлове с неправилни параметри.",
 	"linter-category-missing-end-tag": "Липсващ затварящ таг",
+	"linter-category-stripped-tag": "Отстранени тагове",
 	"linter-category-self-closed-tag": "Самозатварящи се тагове",
 	"linter-category-self-closed-tag-desc": "Следните страници съдържат самозатварящи се тагове.",
 	"linter-category-deletable-table-tag": "Таг на таблица, който трябва да се изтрие",
@@ -25,6 +27,8 @@
 	"linter-category-misnested-tag": "Грешно вложени тагове",
 	"linter-category-html5-misnesting": "Неправилно вложен таг с различно визуализиране в HTML5 и HTML4",
 	"linter-category-html5-misnesting-desc": "Следните неправилно вложени тагове държат по различен начин в HTML5 в сравнение с HTML4.",
+	"linter-category-unclosed-quotes-in-heading": "Незатворена кавичка в заглавие на раздел",
+	"linter-category-unclosed-quotes-in-heading-desc": "Следните страници съдържат назатворана кавичка в заглавие на раздел, която в следствие на това има обхват  извън съдържанието (table of contents).",
 	"linter-page-edit": "редактиране",
 	"linter-heading-high-priority": "Висок приоритет",
 	"linter-heading-medium-priority": "Среден приоритет",
