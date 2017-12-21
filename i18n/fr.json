@@ -7,7 +7,8 @@
 			"Urhixidur",
 			"JackPotte",
 			"Thibaut120094",
-			"KATRINE1992"
+			"KATRINE1992",
+			"Ltrlg"
 		]
 	},
 	"linterrors": "Erreurs de lint",
@@ -93,5 +94,5 @@
 	"apihelp-query+linterstats-example-1": "Obtenir le nombre d’erreurs lint dans chaque catégorie",
 	"apierror-linter-invalid-ip": "Votre adresse IP n'a pas été mise dans la liste blanche pour signaler les erreurs lint",
 	"apierror-linter-invalid-data": "Donnée invalide",
-	"apierror-linter-invalid-title": "Titre incorrect, non existant ou post-date"
+	"apierror-linter-invalid-title": "Titre incorrect, non existant ou ancien"
 }
