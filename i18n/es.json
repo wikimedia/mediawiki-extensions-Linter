@@ -44,6 +44,7 @@
 	"linter-category-pwrap-bug-workaround-desc": "Estas páginas tienen un error de ajuste de párrafo que podría ser trabajado en varios lugares.",
 	"linter-category-html5-misnesting": "Etiqueta mal anidada con representación distinta en HTML5 y HTML4",
 	"linter-category-html5-misnesting-desc": "Estas etiquetas mal anidadas tendrán un comportamiento distinto en HTML5 en comparación con HTML4.",
+	"linter-category-multiple-unclosed-formatting-tags-desc": "Estas páginas incluyen varias etiquetas de formato sin cerrar",
 	"linter-category-multiline-html-table-in-list-desc": "Tidy desplaza la tabla dentro o fuera de la lista, mientras que HTML5 amplía la lista por el resto de la página.",
 	"linter-category-misc-tidy-replacement-issues": "Otros problemas relativos a la sustitución de Tidy",
 	"linter-numerrors": "($1 {{PLURAL:$1|error|errores}})",
