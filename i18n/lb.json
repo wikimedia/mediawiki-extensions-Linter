@@ -19,6 +19,7 @@
 	"linter-category-obsolete-tag-desc": "Dës Säite benotze vereelzt HTML-Tagen.",
 	"linter-category-missing-end-tag": "Schluss-Tag feelt",
 	"linter-category-missing-end-tag-desc": "Op dëse Säite feelen Schluss-Tagen.",
+	"linter-category-multiple-unclosed-formatting-tags-desc": "Dës Säiten hu méi net zougemaacht Formatéierungs-Tags",
 	"linter-numerrors": "({{PLURAL:$1|Ee|$1}} Feeler)",
 	"linter-page-edit": "änneren",
 	"linter-page-viewsource": "Quellcode kucken",
