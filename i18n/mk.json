@@ -50,6 +50,7 @@
 	"linter-category-tidy-font-bug-desc": "Tidy ги преместува овие ознаките за фонт во врските за да ја промени бојата на врските",
 	"linter-numerrors": "($1 {{PLURAL:$1|грешка|грешки}})",
 	"linter-page-edit": "уреди",
+	"linter-page-viewsource": "погл. извор",
 	"linter-page-history": "историја",
 	"linter-heading-high-priority": "Висок приоритет",
 	"linter-heading-medium-priority": "Среден приоритет",
@@ -70,5 +71,7 @@
 	"apihelp-record-lint-param-revision": "Назнака на преработката во која е пронајдена грешката",
 	"apihelp-query+linterstats-description": "Дај број на грешки во пречистувачот за секоја категорија",
 	"apihelp-query+linterstats-summary": "Дај број на грешки во пречистувачот за секоја категорија",
-	"apihelp-query+linterstats-example-1": "Дај број на грешки во пречистувачот за секоја категорија"
+	"apihelp-query+linterstats-example-1": "Дај број на грешки во пречистувачот за секоја категорија",
+	"apierror-linter-invalid-data": "Неважечки податоци",
+	"apierror-linter-invalid-title": "Неважечки, непостоечки или застарен наслов"
 }
