@@ -61,7 +61,7 @@
 	"linter-category-multiline-html-table-in-list": "列表中多行表格",
 	"linter-category-multiline-html-table-in-list-desc": "Tidy将表格移入或移除列表，而HTML5会扩充列表至页面剩余部分。",
 	"linter-category-misc-tidy-replacement-issues": "其他Tidy替换问题",
-	"linter-category-misc-tidy-replacement-issues-desc": "这些页面有其他在Tidy被替换期间涉及到的渲染问题",
+	"linter-category-misc-tidy-replacement-issues-desc": "这些页面有当Tidy被替换时会影响到渲染的问题",
 	"linter-numerrors": "（$1个{{PLURAL:$1|错误}}）",
 	"linter-page-edit": "编辑",
 	"linter-page-viewsource": "查看源代码",
