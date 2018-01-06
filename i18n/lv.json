@@ -8,6 +8,8 @@
 	"linterrors-subpage": "Lint kļūdas: $1",
 	"linter-form-namespace": "Vārdtelpa:",
 	"linter-pager-title": "Lapas nosaukums",
+	"linter-pager-template": "Izmantojot veidni?",
+	"linter-numerrors": "($1 {{PLURAL:$1|kļūdas|kļūda|kļūdas}})",
 	"linter-page-edit": "labot",
 	"linter-page-viewsource": "aplūkot kodu",
 	"linter-page-history": "vēsture",
@@ -15,5 +17,6 @@
 	"linter-heading-medium-priority": "Vidēja prioritāte",
 	"linter-heading-low-priority": "Zema prioritāte",
 	"pageinfo-linter": "Lint kļūdas",
-	"apihelp-record-lint-param-page": "Lapas nosaukums"
+	"apihelp-record-lint-param-page": "Lapas nosaukums",
+	"apierror-linter-invalid-data": "Nederīgi dati"
 }
