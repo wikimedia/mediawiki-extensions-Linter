@@ -164,7 +164,8 @@
 			}
 		},
 		"LinterSubmitterWhitelist": {
-			"127.0.0.1": true
+			"127.0.0.1": true,
+			"::1": true
 		},
 		"LinterStatsdSampleFactor": false
 	},
