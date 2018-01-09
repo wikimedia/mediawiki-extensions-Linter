@@ -180,6 +180,9 @@ class Hooks {
 				continue;
 			}
 			$info['location'] = array_slice( $info['dsr'], 0, 2 );
+			if ( !isset( $info['params'] ) ) {
+				$info['params'] = [];
+			}
 			if ( isset( $info['templateInfo'] ) && $info['templateInfo'] ) {
 				$info['params']['templateInfo'] = $info['templateInfo'];
 			}
