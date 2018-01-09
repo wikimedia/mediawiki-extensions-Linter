@@ -38,6 +38,7 @@
 	"linter-category-tidy-whitespace-bug-desc": "Deze pagina's veroorzaken een tidy witruimte bug die verholpen kan worden.",
 	"linter-numerrors": "($1 {{PLURAL:$1|fout|fouten}})",
 	"linter-page-edit": "bewerken",
+	"linter-page-viewsource": "brontekst bekijken",
 	"linter-page-history": "geschiedenis",
 	"linter-heading-high-priority": "Hoge prioriteit",
 	"linter-heading-medium-priority": "Normale prioriteit",
@@ -47,6 +48,7 @@
 	"apihelp-query+linterrors-description": "Een lijst van lintfouten opvragen.",
 	"apihelp-query+linterrors-summary": "Een lijst van lintfouten opvragen.",
 	"apihelp-query+linterrors-param-categories": "Lintfoutcategorieën.",
+	"apihelp-query+linterrors-param-limit": "Aantal resultaten om te tonen",
 	"apihelp-query+linterrors-param-namespace": "Alleen lintfouten in de opgegeven naamruimten opnemen.",
 	"apihelp-query+linterrors-example-1": "Alle lintfouten in de categorie \"obsolete-tag\" ophalen.",
 	"apihelp-record-lint-param-page": "Paginanaam"
