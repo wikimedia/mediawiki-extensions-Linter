@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Felipe L. Ewald",
-			"Opraco"
+			"Opraco",
+			"Eduardo Addad de Oliveira"
 		]
 	},
 	"linterrors": "Erros de Lint",
@@ -14,11 +15,13 @@
 	"linter-pager-obsolete-tag-details": "Tag HTML obsoleta",
 	"linter-pager-bogus-image-options-details": "Opção de arquivo Bogus",
 	"linter-pager-missing-end-tag-details": "Faltando tag final",
+	"linter-pager-multi-colon-escape-details": "Escape de vários dois pontos",
 	"linter-pager-stripped-tag-details": "Stripped tag",
 	"linter-pager-self-closed-tag-details": "Etiqueta auto-fechada",
 	"linter-pager-deletable-table-tag-details": "Etiqueta da tabela que deve ser excluída",
 	"linter-pager-misnested-tag-details": "Etiqueta Misnested que deve ser adequadamente aninhada",
 	"linter-pager-pwrap-bug-workaround-details": "Solução alternativa para o bug da quebra de linha de parágrafos",
+	"linter-pager-tidy-whitespace-bug-details": "Defeito do espaço em branco do Tidy",
 	"linter-category-fostered": "Conteúdo Fostered",
 	"linter-category-fostered-desc": "Essas páginas têm conteúdo promovido.",
 	"linter-category-obsolete-tag": "Tags HTML obsoletas",

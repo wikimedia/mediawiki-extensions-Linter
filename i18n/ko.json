@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ykhwong"
+			"Ykhwong",
+			"IRTC1015"
 		]
 	},
 	"linterrors": "린트 오류",
@@ -28,7 +29,7 @@
 	"linter-pager-misc-tidy-replacement-issues-details": "Tidy 치환에 영향을 주는 기타 마크업 오류",
 	"linter-category-obsolete-tag": "구식의 HTML 태그",
 	"linter-category-obsolete-tag-desc": "이 문서들은 구식의 HTML 태그를 사용합니다.",
-	"linter-category-bogus-image-options": "보거스 파일 옵션",
+	"linter-category-bogus-image-options": "무효한 파일 옵션",
 	"linter-category-bogus-image-options-desc": "이 문서들은 보거스 옵션을 가진 파일을 포함합니다.",
 	"linter-category-missing-end-tag": "존재하지 않는 종료 태그",
 	"linter-category-missing-end-tag-desc": "이 문서들에는 존재하지 않는 종료 태그가 있습니다.",
