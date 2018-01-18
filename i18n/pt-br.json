@@ -22,6 +22,7 @@
 	"linter-pager-misnested-tag-details": "Etiqueta Misnested que deve ser adequadamente aninhada",
 	"linter-pager-pwrap-bug-workaround-details": "Solução alternativa para o bug da quebra de linha de parágrafos",
 	"linter-pager-tidy-whitespace-bug-details": "Defeito do espaço em branco do Tidy",
+	"linter-pager-html5-misnesting-details": "Má intercalação de elementos em HTML5 (mas não em Tidy)",
 	"linter-category-fostered": "Conteúdo Fostered",
 	"linter-category-fostered-desc": "Essas páginas têm conteúdo promovido.",
 	"linter-category-obsolete-tag": "Tags HTML obsoletas",

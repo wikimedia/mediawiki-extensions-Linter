@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"WikiPhoenix",
-			"Bengtsson96"
+			"Bengtsson96",
+			"Skalman"
 		]
 	},
 	"linterrors": "Lint-fel",
@@ -12,7 +13,7 @@
 	"linter-pager-title": "Sidtitel",
 	"linter-pager-template": "Genom en mall?",
 	"linter-pager-obsolete-tag-details": "Föråldrad HTML-tagg",
-	"linter-pager-bogus-image-options-details": "Oäkta filalternativ",
+	"linter-pager-bogus-image-options-details": "Ogiltigt filalternativ",
 	"linter-pager-missing-end-tag-details": "Sluttagg saknas",
 	"linter-pager-stripped-tag-details": "Bortplockad tagg",
 	"linter-pager-self-closed-tag-details": "Självstängande tagg",
@@ -21,8 +22,8 @@
 	"linter-pager-html5-misnesting-details": "Felnästade taggar i HTML5 (men inte i Tidy)",
 	"linter-category-obsolete-tag": "Föråldrade HTML-taggar",
 	"linter-category-obsolete-tag-desc": "Dessa sidor använder föråldrade HTML-taggar.",
-	"linter-category-bogus-image-options": "Oäkta filalternativ",
-	"linter-category-bogus-image-options-desc": "Dessa sidor har filer med oäkta alternativ.",
+	"linter-category-bogus-image-options": "Ogiltiga filalternativ",
+	"linter-category-bogus-image-options-desc": "Dessa sidor har filer med ogiltiga alternativ.",
 	"linter-category-missing-end-tag": "Sluttagg saknas",
 	"linter-category-missing-end-tag-desc": "Dessa sidor saknar sluttaggar.",
 	"linter-category-stripped-tag": "Bortplockade taggar",
