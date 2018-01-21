@@ -22,10 +22,10 @@ namespace MediaWiki\Linter;
 
 use ApiBase;
 use FormatJson;
-use IPSet\IPSet;
 use JobQueueGroup;
 use MediaWiki\Logger\LoggerFactory;
 use Title;
+use Wikimedia\IPSet;
 
 /**
  * API module for an external service to record
