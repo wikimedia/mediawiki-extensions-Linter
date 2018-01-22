@@ -7,19 +7,9 @@
 			if ( $textbox.length ) {
 				$textbox.focus().textSelection( 'setSelection', { start: location[ 0 ], end: location[ 1 ] } );
 			}
-			// Register NWE code should it be loaded
-			// TODO: We should somehow force source mode if VE is opened
-			mw.hook( 've.activationComplete' ).add( function () {
-				// Selection is reset on a setTimeout after activation, so wait for that.
-				setTimeout( function () {
-					var range,
-						surface = ve.init.target.getSurface();
-
-					if ( surface.getMode() === 'source' ) {
-						range = surface.getModel().getRangeFromSourceOffsets( location[ 0 ], location[ 1 ] );
-						surface.getModel().setLinearSelection( range );
-					}
-				} );
+			mw.hook( 've.tempWikitextReady' ).add( function () {
+				mw.libs.ve.tempWikitextEditor.$element[ 0 ].setSelectionRange( location[ 0 ], location[ 1 ] );
+				mw.libs.ve.tempWikitextEditor.focus();
 			} );
 		}
 	} );
