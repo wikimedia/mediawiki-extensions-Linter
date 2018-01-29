@@ -6,12 +6,15 @@
 			"WTM"
 		]
 	},
+	"linterrors": "Błędy składniowe",
+	"linterrors-subpage": "Błędy składniowe: $1",
 	"linter-form-namespace": "Przestrzeń nazw:",
 	"linter-pager-title": "Tytuł strony",
 	"linter-pager-template": "Poprzez szablon?",
 	"linter-pager-obsolete-tag-details": "Przestarzały znacznik HTML",
 	"linter-pager-bogus-image-options-details": "Nieprawidłowa opcja pliku",
 	"linter-pager-missing-end-tag-details": "Brak znacznika zamykającego",
+	"linter-pager-multi-colon-escape-details": "Wiele dwukropków poprzedzających",
 	"linter-pager-self-closed-tag-details": "Znacznik samozamykający się",
 	"linter-pager-deletable-table-tag-details": "Nadmiarowe znaczniki tabeli do usunięcia",
 	"linter-category-obsolete-tag": "Przestarzałe znaczniki HTML",
@@ -19,10 +22,15 @@
 	"linter-category-bogus-image-options-desc": "Te strony odwołują się do plików z podaniem nieistniejących opcji.",
 	"linter-category-missing-end-tag": "Brak znacznika zamykającego",
 	"linter-category-missing-end-tag-desc": "Tym stronom brakuje znaczników zamykających",
+	"linter-category-multi-colon-escape": "Wiele dwukropków poprzedzających",
+	"linter-category-multi-colon-escape-desc": "Strony zawierające linki poprzedzone wieloma dwukropkami.",
 	"linter-category-self-closed-tag": "Samozamykające się znaczniki",
 	"linter-category-self-closed-tag-desc": "Te strony zawierają samozamykające się znaczniki.",
 	"linter-category-deletable-table-tag": "Nadmiarowe znaczniki tabeli do usunięcia",
 	"linter-category-deletable-table-tag-desc": "Te strony zawierają nadmiarowe znaczniki tabeli, zagnieżdżone w innej tabeli, które powinny zostać usunięte.",
+	"linter-category-multiple-unclosed-formatting-tags": "Wiele niezamkniętych tagów formatujących",
+	"linter-category-unclosed-quotes-in-heading": "Niezamknięty apostrof w nagłówku",
+	"linter-category-unclosed-quotes-in-heading-desc": "Strony mające niezamknięty apostrof w nagłówku, który następnie wycieka ze spisu treści.",
 	"linter-numerrors": "($1 {{PLURAL:$1|błąd|błędy|błędów}})",
 	"linter-page-edit": "edytuj",
 	"linter-page-history": "historia",
@@ -30,5 +38,6 @@
 	"linter-heading-medium-priority": "Średni priorytet",
 	"linter-heading-low-priority": "Niski priorytet",
 	"multi-part-template-block": "Wynik nie pochodzi z jednego szablonu",
+	"pageinfo-linter": "Błędy składniowe",
 	"apihelp-record-lint-param-page": "Tytuł strony"
 }
