@@ -230,14 +230,53 @@ class Database {
 	 * @return int[]
 	 */
 	public function getTotalsForPage() {
-		return $this->getTotals( [ 'linter_page' => $this->pageId ] );
+		return $this->getTotalsAccurate( [ 'linter_page' => $this->pageId ] );
 	}
 
 	/**
-	 * @param array $conds Query conditions
+	 * Get an estimate of how many rows are there for the
+	 * specified category with EXPLAIN SELECT COUNT(*).
+	 * If the category actually has no rows, then 0 will
+	 * be returned.
+	 *
+	 * @param int $catId
+	 *
+	 * @return int
+	 */
+	private function getTotalsEstimate( $catId ) {
+		$dbr = wfGetDB( DB_REPLICA );
+		// First see if there are no rows, since the distinction
+		// between 0 and 1 is important. And estimateRowCount seems
+		// to never return 0.
+		$rows = $dbr->selectRowCount(
+			'linter',
+			'*',
+			[ 'linter_cat' => $catId ],
+			__METHOD__,
+			[ 'LIMIT' => 1 ]
+		);
+		if ( $rows === 0 ) {
+			return 0;
+		}
+
+		// Now we can just estimate
+		return $dbr->estimateRowCount(
+			'linter',
+			'*',
+			[ 'linter_cat' => $catId ],
+			__METHOD__
+		);
+	}
+
+	/**
+	 * This uses COUNT(*), which is accurate, but can be significantly
+	 * slower depending upon how many rows are in the database.
+	 *
+	 * @param array $conds
+	 *
 	 * @return int[]
 	 */
-	public function getTotals( $conds = [] ) {
+	private function getTotalsAccurate( $conds = [] ) {
 		$rows = wfGetDB( DB_REPLICA )->select(
 			'linter',
 			[ 'linter_cat', 'COUNT(*) AS count' ],
@@ -255,6 +294,19 @@ class Database {
 				continue;
 			}
 			$ret[$catName] = (int)$row->count;
+		}
+
+		return $ret;
+	}
+
+	/**
+	 * @return int[]
+	 */
+	public function getTotals() {
+		$ret = [];
+		foreach ( $this->categoryManager->getVisibleCategories() as $cat ) {
+			$id = $this->categoryManager->getCategoryId( $cat );
+			$ret[$cat] = $this->getTotalsEstimate( $id );
 		}
 
 		return $ret;
