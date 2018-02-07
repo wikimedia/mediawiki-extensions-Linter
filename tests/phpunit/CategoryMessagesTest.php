@@ -21,18 +21,18 @@
 namespace MediaWiki\Linter\Test;
 
 use MediaWiki\Linter\CategoryManager;
-use MediaWikiTestCase;
+use MediaWikiLangTestCase;
 
 /**
  * Test that all of the messages for new categories
  * exist
  */
-class CategoryMessagesTest extends MediaWikiTestCase {
+class CategoryMessagesTest extends MediaWikiLangTestCase {
 
 	public static function provideCategoryNames() {
 		$manager = new CategoryManager();
 		$tests = [];
-		foreach ( $manager as $category ) {
+		foreach ( $manager->getVisibleCategories() as $category ) {
 			$tests[] = [ $category ];
 		}
 
@@ -40,11 +40,23 @@ class CategoryMessagesTest extends MediaWikiTestCase {
 	}
 
 	/**
+	 * @coversNothing
 	 * @dataProvider provideCategoryNames
 	 */
 	public function testMessagesExistence( $category ) {
-		$this->assertTrue( wfMessage( "linter-category-$category" )->exists() );
-		$this->assertTrue( wfMessage( "linter-category-$category-desc" )->exists() );
-		$this->assertTrue( wfMessage( "linter-pager-$category-details" )->exists() );
+		$msgs = [
+			"linter-category-$category",
+			"linter-category-$category-desc",
+		];
+		if ( $category !== 'fostered' ) {
+			// TODO: Don't hardcode this
+			$msgs[] = "linter-pager-$category-details";
+		}
+		foreach ( $msgs as $msg ) {
+			$this->assertTrue(
+				wfMessage( $msg )->exists(),
+				"Missing '$msg' message"
+			);
+		}
 	}
 }
