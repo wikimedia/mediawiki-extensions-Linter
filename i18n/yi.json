@@ -8,8 +8,15 @@
 	"linter-pager-title": "בלאַטנאָמען",
 	"linter-pager-template": "דורך א מוסטער?",
 	"linter-pager-obsolete-tag-details": "פֿאַרעלטערטער HTML-טאַג",
+	"linter-pager-deletable-table-tag-details": "טאבעלע־טאג וואס מען דארף אויסמעקן",
 	"linter-category-fostered": "אַדאפטירטער אינהאַלט",
+	"linter-category-obsolete-tag": "פֿאַרעלטערטער HTML-טאַגן",
 	"linter-category-self-closed-tag": "אליין־פֿאַרמאַכטע טאַגן",
+	"linter-category-deletable-table-tag": "טאבעלע־טאג וואס מען דארף אויסמעקן",
+	"linter-category-deletable-table-tag-desc": "די בלעטער האבן טאבעלע־טאגן וואס מען דארף אויסמעקן.",
+	"linter-page-edit": "רעדאַקטירן",
 	"linter-page-history": "היסטאריע",
-	"linter-heading-high-priority": "הויכער פריאריטעט"
+	"linter-heading-high-priority": "הויכער פריאריטעט",
+	"apihelp-record-lint-param-page": "בלאט־טיטל",
+	"apierror-linter-invalid-data": "אומגילטיקע דאטן"
 }
