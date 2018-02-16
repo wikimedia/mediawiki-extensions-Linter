@@ -6,7 +6,7 @@
 			"Acamicamacaraca"
 		]
 	},
-	"linterrors": "Пречишћивач грешки",
+	"linterrors": "Пречишћивач грешака",
 	"linter-form-namespace": "Именски простор:",
 	"linter-pager-missing-end-tag-details": "Недостаје затварајућа ознака",
 	"linter-pager-deletable-table-tag-details": "Table ознака коју би требало обрисати",
