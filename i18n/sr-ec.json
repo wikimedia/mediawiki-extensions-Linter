@@ -16,7 +16,7 @@
 	"linter-category-fostered-desc": "Ове странице имају наменски садржај.",
 	"linter-category-obsolete-tag": "Застарели HTML тагови",
 	"linter-category-obsolete-tag-desc": "Ове странице користе застареле HTML тагове.",
-	"linter-category-bogus-image-options": "Богусне опције датотека",
+	"linter-category-bogus-image-options": "Богусна подешавања датотека",
 	"linter-category-bogus-image-options-desc": "Ове странице имају датотеке с богусним опцијама.",
 	"linter-category-missing-end-tag": "Недостаје затварајућа ознака",
 	"linter-category-missing-end-tag-desc": "Ове странице имају недостајуће затварајуће тагове.",
