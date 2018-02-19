@@ -35,7 +35,9 @@ class RecordLintJob extends Job {
 	}
 
 	public function run() {
-		if ( $this->title->getLatestRevID() != $this->params['revision'] ) {
+		if ( isset( $this->params['revision'] )
+			&& $this->title->getLatestRevID() != $this->params['revision']
+		) {
 			// Outdated now, let a later job handle it
 			return true;
 		}

@@ -81,10 +81,12 @@ class Hooks {
 	public static function onWikiPageDeletionUpdates( WikiPage $wikiPage,
 		Content $content, array &$updates
 	) {
-		$id = $wikiPage->getId();
-		$updates[] = new MWCallableUpdate( function () use ( $id ) {
-			$database = new Database( $id );
-			$database->setForPage( [] );
+		$title = $wikiPage->getTitle();
+		$updates[] = new MWCallableUpdate( function () use ( $title ) {
+			$job = new RecordLintJob(
+				$title, [ 'errors' => [] ]
+			);
+			$job->run();
 		}, __METHOD__ );
 	}
 
