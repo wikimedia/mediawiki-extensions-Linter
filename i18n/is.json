@@ -1,9 +1,17 @@
 {
 	"@metadata": {
 		"authors": [
-			"MyraMidnight"
+			"MyraMidnight",
+			"Sveinn í Felli"
 		]
 	},
+	"linter-form-namespace": "Nafnrými:",
+	"linter-pager-title": "Titill síðu",
+	"linter-page-edit": "breyta",
+	"linter-page-viewsource": "skoða efni",
+	"linter-page-history": "breytingaskrá",
 	"linter-heading-high-priority": "Mikinn forgang",
-	"linter-heading-low-priority": "Lítinn forgang"
+	"linter-heading-medium-priority": "Miðlungs forgangur",
+	"linter-heading-low-priority": "Lítinn forgang",
+	"apihelp-record-lint-param-page": "Titill síðu"
 }
