@@ -13,7 +13,7 @@
 	"linter-pager-title": "문서 제목",
 	"linter-pager-template": "틀을 경유하는지의 여부",
 	"linter-pager-obsolete-tag-details": "구식의 HTML 태그",
-	"linter-pager-bogus-image-options-details": "보거스 파일 옵션",
+	"linter-pager-bogus-image-options-details": "무효한 파일 옵션",
 	"linter-pager-missing-end-tag-details": "존재하지 않는 종료 태그",
 	"linter-pager-multi-colon-escape-details": "다중 콜론 이스케이프",
 	"linter-pager-stripped-tag-details": "잘려나간 태그",
