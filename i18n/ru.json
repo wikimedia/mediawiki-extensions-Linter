@@ -5,7 +5,8 @@
 			"Redredsonia",
 			"Alexey zakharenkov",
 			"Okras",
-			"Facenapalm"
+			"Facenapalm",
+			"Kaganer"
 		]
 	},
 	"linterrors": "Ошибки статического анализатора",
@@ -22,6 +23,7 @@
 	"linter-pager-deletable-table-tag-details": "Тег таблицы, который следует удалить",
 	"linter-pager-misnested-tag-details": "Неверно вложенный тег, который должен быть правильно вложен",
 	"linter-pager-pwrap-bug-workaround-details": "Решение ошибки обёртки абзаца",
+	"linter-pager-multiple-unclosed-formatting-tags-details": "Несколько незакрытых тегов форматирования на странице",
 	"linter-category-fostered": "Присвоенное содержимое",
 	"linter-category-fostered-desc": "На этих страницах находится присвоенное содержимое.",
 	"linter-category-obsolete-tag": "Устаревшие HTML-теги",
@@ -40,8 +42,12 @@
 	"linter-category-misnested-tag-desc": "Эти страницы содержат неверно вложенные теги, которые можно исправить.",
 	"linter-category-pwrap-bug-workaround": "Решение ошибки обёртки абзаца",
 	"linter-category-pwrap-bug-workaround-desc": "На этих страницах проявляется ошибка обёртки абзаца, которая должна быть решена.",
+	"linter-category-multiple-unclosed-formatting-tags": "Несколько незакрытых тегов форматирования",
+	"linter-category-multiple-unclosed-formatting-tags-desc": "На этих страницах имеется несколько незакрытых тегов форматирования",
+	"linter-category-unclosed-quotes-in-heading": "Незакрытые кавычки в заголовке",
 	"linter-numerrors": "($1 {{PLURAL:$1|ошибка|ошибки|ошибок}})",
 	"linter-page-edit": "править",
+	"linter-page-viewsource": "просмотреть код",
 	"linter-page-history": "история",
 	"linter-heading-high-priority": "Высокий приоритет",
 	"linter-heading-medium-priority": "Средний приоритет",
