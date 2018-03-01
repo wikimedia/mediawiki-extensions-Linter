@@ -4,9 +4,11 @@
 			"GR",
 			"Geraki",
 			"Thodoris",
-			"KATRINE1992"
+			"KATRINE1992",
+			"Nikosgranturismogt"
 		]
 	},
+	"linterrors": "Σφάλματα Lint",
 	"linter-form-namespace": "Περιοχή:",
 	"linter-pager-missing-end-tag-details": "Λείπει η ετικέτα τέλους",
 	"linter-pager-multiple-unclosed-formatting-tags-details": "Πολλές μη κλειστές μικρές και μεγάλες επικεφαλίδες",
