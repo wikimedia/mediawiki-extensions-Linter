@@ -4,14 +4,25 @@
 			"Valtlait",
 			"Nike",
 			"Silvonen",
-			"BriskyBlizzard"
+			"BriskyBlizzard",
+			"Pyscowicz"
 		]
 	},
 	"linterrors": "Lint-virheet",
+	"linterrors-subpage": "Lint-virheet: $1",
+	"linter-form-namespace": "Nimiavaruus:",
 	"linter-pager-title": "Sivun otsikko",
+	"linter-pager-template": "Mallineen kautta?",
+	"linter-pager-missing-end-tag-details": "Puuttuva end-tunniste",
+	"linter-category-missing-end-tag": "Puuttuva end-tunniste",
+	"linter-category-missing-end-tag-desc": "Näillä sivuilla on puuttuvat end-tunnisteet.",
 	"linter-numerrors": "($1 {{PLURAL:$1|virhe|virhettä}})",
 	"linter-page-edit": "muokkaa",
 	"linter-page-viewsource": "näytä wikiteksti",
+	"linter-page-history": "historia",
+	"linter-heading-high-priority": "Korkea tärkeys",
+	"linter-heading-medium-priority": "Keskitason tärkeys",
+	"linter-heading-low-priority": "Alhainen tärkeys",
 	"pageinfo-linter": "Lint-virheet",
 	"apihelp-record-lint-param-page": "Sivun otsikko"
 }
