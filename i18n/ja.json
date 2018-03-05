@@ -6,9 +6,9 @@
 			"Yusuke1109"
 		]
 	},
-	"linterrors": "Lintエラー",
-	"linterrors-subpage": "Lintエラー: $1",
-	"linter-desc": "外部サービスからlintエラーを追跡し、ユーザーに表示する",
+	"linterrors": "Lint エラー",
+	"linterrors-subpage": "Lint エラー: $1",
+	"linter-desc": "外部サービスからlint エラーを追跡し、ユーザーに表示する",
 	"linter-form-namespace": "名前空間:",
 	"linter-pager-title": "ページ名",
 	"linter-pager-obsolete-tag-details": "廃止されたHTMLタグ",
@@ -31,5 +31,7 @@
 	"linter-numerrors": "($1 {{PLURAL:$1|件のエラー}})",
 	"linter-page-edit": "編集",
 	"linter-page-history": "履歴",
-	"apihelp-record-lint-param-page": "ページ名"
+	"apihelp-record-lint-param-page": "ページ名",
+	"apierror-linter-invalid-data": "無効なデータ",
+	"apierror-linter-invalid-title": "無効なタイトル、存在しないタイトル、または古いタイトル"
 }

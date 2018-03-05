@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mechanizatar"
+			"Mechanizatar",
+			"Artsiom91"
 		]
 	},
+	"linterrors": "Памылкі статычнага аналізатара",
+	"linter-category-missing-end-tag": "Адсутнічае закрываючы тэг",
 	"linter-page-edit": "правіць"
 }
