@@ -69,7 +69,7 @@
 	"linter-heading-high-priority": "高优先级",
 	"linter-heading-medium-priority": "中优先级",
 	"linter-heading-low-priority": "低优先级",
-	"multi-part-template-block": "输出并非来自一个模板",
+	"multi-part-template-block": "输出并非来自单一个模板",
 	"pageinfo-linter": "Lint错误",
 	"apihelp-query+linterrors-description": "获取lint错误的列表",
 	"apihelp-query+linterrors-summary": "获取lint错误的列表",
