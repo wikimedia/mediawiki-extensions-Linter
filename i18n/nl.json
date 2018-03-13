@@ -7,8 +7,8 @@
 			"Mar(c)"
 		]
 	},
-	"linterrors": "Lint fouten",
-	"linterrors-subpage": "Lint fouten: $1",
+	"linterrors": "Lintfouten",
+	"linterrors-subpage": "Lintfouten: $1",
 	"linter-desc": "Spoor lint fouten op met een externe service en toon deze aan de gebruikers",
 	"linter-form-namespace": "Naamruimte:",
 	"linter-pager-title": "Paginanaam",
@@ -44,7 +44,7 @@
 	"linter-heading-medium-priority": "Normale prioriteit",
 	"linter-heading-low-priority": "Lage prioriteit",
 	"multi-part-template-block": "Uitvoer komt niet van een enkel sjabloon",
-	"pageinfo-linter": "Lint fouten",
+	"pageinfo-linter": "Lintfouten",
 	"apihelp-query+linterrors-description": "Een lijst van lintfouten opvragen.",
 	"apihelp-query+linterrors-summary": "Een lijst van lintfouten opvragen.",
 	"apihelp-query+linterrors-param-categories": "Lintfoutcategorieën.",
