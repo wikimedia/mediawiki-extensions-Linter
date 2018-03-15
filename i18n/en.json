@@ -6,6 +6,7 @@
 	},
 	"linterrors": "Lint errors",
 	"linterrors-subpage": "Lint errors: $1",
+	"linterrors-summary": "NOTE: The counts for categories are not accurate counts, but are based on estimates",
 	"linter-desc": "Track lint errors from an external service and show them to users",
 	"linter-form-namespace": "Namespace:",
 	"linter-pager-title": "Page title",
