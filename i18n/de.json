@@ -7,6 +7,7 @@
 	},
 	"linterrors": "Lint-Fehler",
 	"linterrors-subpage": "Lint-Fehler: $1",
+	"linterrors-summary": "HINWEIS: Die Zähler für Kategorien sind nicht genau, basieren jedoch auf Schätzungen.",
 	"linter-desc": "Verfolgt Lint-Fehler von einem externen Dienst und zeigt sie Benutzern an",
 	"linter-form-namespace": "Namensraum:",
 	"linter-pager-title": "Seitentitel",
