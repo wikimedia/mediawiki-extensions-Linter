@@ -9,6 +9,7 @@
 	},
 	"linterrors": "أخطاء لنت",
 	"linterrors-subpage": "أخطاء لنت: $1",
+	"linterrors-summary": "ملاحظة: لا تُعَد أعداد التصنيفات عدا دقيقا، بل تستند إلى تقديرات",
 	"linter-desc": "تتبع أخطاء لنت من خدمة خارجية وعرضها للمستخدمين",
 	"linter-form-namespace": "النطاق:",
 	"linter-pager-title": "عنوان الصفحة",

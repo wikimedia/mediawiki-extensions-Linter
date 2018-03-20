@@ -13,6 +13,7 @@
 	},
 	"linterrors": "Erreurs de lint",
 	"linterrors-subpage": "Erreurs de lint : $1",
+	"linterrors-summary": "NOTE : Les compteurs pour les catégories ne sont pas justes, mais basés sur des estimations",
 	"linter-desc": "Tracer les erreurs de lint depuis un service externe et les afficher aux utilisateurs",
 	"linter-form-namespace": "Espace de noms :",
 	"linter-pager-title": "Titre de la page",
