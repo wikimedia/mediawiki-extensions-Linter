@@ -8,6 +8,7 @@
 	},
 	"linterrors": "린트 오류",
 	"linterrors-subpage": "린트 오류: $1",
+	"linterrors-summary": "알림: 분류 수는 정확한 개수가 아니며 추정치에 기반합니다",
 	"linter-desc": "외부 서비스로부터 린트 오류를 추적하고 사용자에게 보여줍니다",
 	"linter-form-namespace": "이름공간:",
 	"linter-pager-title": "문서 제목",

@@ -10,6 +10,7 @@
 	},
 	"linterrors": "Chyby nalezené Lintem",
 	"linterrors-subpage": "Chyby nalezené Lintem: $1",
+	"linterrors-summary": "Poznámka: Počty u kategorií nejsou přesné, jsou založeny na odhadech",
 	"linter-desc": "Sleduje chyby nalezené externím Lintem a zobrazuje je uživatelům",
 	"linter-form-namespace": "Jmenný prostor:",
 	"linter-pager-title": "Název stránky",
