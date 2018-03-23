@@ -5,11 +5,13 @@
 			"Ontsed",
 			"Candalua",
 			"Bultro",
-			"Sakretsu"
+			"Sakretsu",
+			"Daimona Eaytoy"
 		]
 	},
 	"linterrors": "Errori di Lint",
 	"linterrors-subpage": "Errori di Lint: $1",
+	"linterrors-summary": "NOTA: I conteggi degli errori non sono esatti, bensì stimati",
 	"linter-desc": "Traccia gli errori di validazione Lint da un servizio esterno e li mostra agli utenti.",
 	"linter-form-namespace": "Namespace:",
 	"linter-pager-title": "Titolo della pagina",
