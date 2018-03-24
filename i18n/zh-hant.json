@@ -10,6 +10,7 @@
 	},
 	"linterrors": "Lint 錯誤",
 	"linterrors-subpage": "Lint 錯誤：$1",
+	"linterrors-summary": "注意：分類的數量並不精確，這是估計值",
 	"linter-desc": "自外部服務追蹤 lint 錯誤，並且對使用者顯示",
 	"linter-form-namespace": "命名空間：",
 	"linter-pager-title": "頁面標題",
