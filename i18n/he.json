@@ -8,6 +8,7 @@
 	},
 	"linterrors": "שגיאות ניקיון",
 	"linterrors-subpage": "שגיאות ניקיון: $1",
+	"linterrors-summary": "הערה: הספירה של הקטגוריות אינה מדויקת, היא מבוססת על הערכות",
 	"linter-desc": "מעקב אחר שגיאות שנמצאו בבדיקת ניקיון על־ידי שירות חיצוני והצגתן למשתמשים",
 	"linter-form-namespace": "מרחב שם:",
 	"linter-pager-title": "כותרת הדף",
@@ -85,5 +86,7 @@
 	"apihelp-record-lint-param-revision": "מזהה גרסה שבה נמצאה השגיאה",
 	"apihelp-query+linterstats-description": "קבלת מספר שגיאות הניקיון בכל קטגוריה",
 	"apihelp-query+linterstats-summary": "קבלת מספר שגיאות הניקיון בכל קטגוריה",
-	"apihelp-query+linterstats-example-1": "קבלת מספר שגיאות הניקיון בכל קטגוריה"
+	"apihelp-query+linterstats-example-1": "קבלת מספר שגיאות הניקיון בכל קטגוריה",
+	"apierror-linter-invalid-data": "נתון בלתי־תקין",
+	"apierror-linter-invalid-title": "כותרת בלתי־תקינה, לא קיימת או לא מעודכנת"
 }

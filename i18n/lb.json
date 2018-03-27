@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Les Meloures"
 		]
 	},
 	"linterrors": "Lint-Feeler",
 	"linterrors-subpage": "Lint-Feeler: $1",
+	"linterrors-summary": "REMARQUE: D'Compteure fir d'Kategorië sinn net genee, mä baséieren op Schätzungen.",
 	"linter-form-namespace": "Nummraum:",
 	"linter-pager-title": "Titel vun der Säit",
 	"linter-pager-template": "Duerch eng Schabloun?",

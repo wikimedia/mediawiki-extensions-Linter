@@ -20,7 +20,7 @@
 	"linter-pager-missing-end-tag-details": "Chybějící koncová značka",
 	"linter-pager-multi-colon-escape-details": "Odkazy uvozené více dvojtečkami",
 	"linter-pager-stripped-tag-details": "Vyříznutý prvek",
-	"linter-pager-self-closed-tag-details": "Sebeuzavírající se značka",
+	"linter-pager-self-closed-tag-details": "Sebeuzavírající značka",
 	"linter-pager-deletable-table-tag-details": "Značka tabulky, která by měla být smazána",
 	"linter-pager-misnested-tag-details": "Prolínající se prvek, který je třeba správně zanořit",
 	"linter-pager-pwrap-bug-workaround-details": "Nowrap prvek s blokovým prvkem na jednom řádku",
