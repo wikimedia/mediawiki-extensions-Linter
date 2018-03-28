@@ -4,11 +4,13 @@
 			"Sjoerddebruin",
 			"Mainframe98",
 			"MarcoSwart",
-			"Mar(c)"
+			"Mar(c)",
+			"Patio"
 		]
 	},
 	"linterrors": "Lintfouten",
 	"linterrors-subpage": "Lintfouten: $1",
+	"linterrors-summary": "LET OP: De categorietellingen zijn niet exact, maar komen voort uit schattingen",
 	"linter-desc": "Spoor lint fouten op met een externe service en toon deze aan de gebruikers",
 	"linter-form-namespace": "Naamruimte:",
 	"linter-pager-title": "Paginanaam",
