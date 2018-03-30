@@ -30,6 +30,11 @@ $specialPageAliases['es'] = [
 	'LintErrors' => [ 'Errores_de_sintaxis' ],
 ];
 
+/** עברית (Hebrew) */
+$specialPageAliases['he'] = [
+	'LintErrors' => [ 'שגיאות_ניקיון' ],
+];
+
 /** 한국어 (Korean) */
 $specialPageAliases['ko'] = [
 	'LintErrors' => [ '린트오류' ],
