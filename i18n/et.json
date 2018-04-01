@@ -6,6 +6,7 @@
 	},
 	"linterrors": "Linteri vead",
 	"linterrors-subpage": "Linteri vead: $1",
+	"linterrors-summary": "Märkus: Kategooriatesse kuuluvate vigade arv on hinnanguline, mitte täpne.",
 	"linter-desc": "Võimaldab välisest teenusest pärit Linteri vigu jälgida ja neid kasutajatele näidata.",
 	"linter-form-namespace": "Nimeruum:",
 	"linter-pager-title": "Lehekülje pealkiri",
