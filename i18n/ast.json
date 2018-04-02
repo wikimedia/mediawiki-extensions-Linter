@@ -6,6 +6,7 @@
 	},
 	"linterrors": "Errores de lint",
 	"linterrors-subpage": "Errores de lintː $1",
+	"linterrors-summary": "NOTA: Les cuentes de les categoríes nun son precises, sinón que se basen n'estimaciones",
 	"linter-desc": "Siguir los errores de lint d'un serviciu esternu y amosalos a los usuarios",
 	"linter-form-namespace": "Espaciu de nomes:",
 	"linter-pager-title": "Títulu de la páxina",
