@@ -9,6 +9,7 @@
 		]
 	},
 	"linterrors": "Σφάλματα σύνταξης",
+	"linterrors-summary": "Σημείωση: Οι μετρήσεις για τις κατηγορίες δεν είναι ακριβείς μετρήσεις αλλά βασίζονται σε εκτιμήσεις.",
 	"linter-form-namespace": "Περιοχή:",
 	"linter-pager-missing-end-tag-details": "Λείπει η ετικέτα τέλους",
 	"linter-pager-multiple-unclosed-formatting-tags-details": "Πολλές μη κλειστές μικρές και μεγάλες επικεφαλίδες",
