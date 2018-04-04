@@ -20,6 +20,8 @@
 
 namespace MediaWiki\Linter;
 
+use InvalidArgumentException;
+
 /**
  * Functions for lint error categories
  */
