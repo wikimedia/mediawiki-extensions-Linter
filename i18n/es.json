@@ -11,7 +11,7 @@
 	},
 	"linterrors": "Errores de sintaxis",
 	"linterrors-subpage": "Errores de sintaxis: $1",
-	"linterrors-summary": "NOTA: los recuentos de los categorías no son precisos, pero se basan en estimaciones",
+	"linterrors-summary": "NOTA: los recuentos de los categorías no son precisos, ya que se basan en estimaciones",
 	"linter-desc": "Supervisa los errores informados por un servicio comprobador externo y los muestra a los usuarios",
 	"linter-form-namespace": "Espacio de nombres:",
 	"linter-pager-title": "Título de la página",
