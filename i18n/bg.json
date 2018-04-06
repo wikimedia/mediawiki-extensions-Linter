@@ -3,11 +3,13 @@
 		"authors": [
 			"Kareyac",
 			"Vodnokon4e",
-			"StanProg"
+			"StanProg",
+			"ShockD"
 		]
 	},
 	"linterrors": "Грешки в статичния код",
 	"linterrors-subpage": "Грешки в статичния код: $1",
+	"linterrors-summary": "Забележка: Бройките за категориите не са точни, а са базирани на оценки.",
 	"linter-form-namespace": "Именно пространство:",
 	"linter-pager-title": "Заглавие на страницата",
 	"linter-pager-template": "Чрез шаблон?",
