@@ -3,12 +3,19 @@
 		"authors": [
 			"Сербијана",
 			"Obsuser",
-			"Acamicamacaraca"
+			"Acamicamacaraca",
+			"Prevodim"
 		]
 	},
 	"linterrors": "Пречишћивач грешака",
+	"linterrors-summary": "ПАЖЊА: Број категорија није прецизан, већ заснован на проценама.",
 	"linter-form-namespace": "Именски простор:",
+	"linter-pager-title": "Наслов странице",
+	"linter-pager-template": "Потиче из шаблона?",
+	"linter-pager-obsolete-tag-details": "Застарели HTML таг",
 	"linter-pager-missing-end-tag-details": "Недостаје затварајући таг",
+	"linter-pager-stripped-tag-details": "Огољени таг",
+	"linter-pager-self-closed-tag-details": "Самозатварајући таг",
 	"linter-pager-deletable-table-tag-details": "Table таг који би требало обрисати",
 	"linter-pager-misnested-tag-details": "Погрешно уметнут таг који би требало правилно уметнути",
 	"linter-pager-pwrap-bug-workaround-details": "Алтернативно решење за баг око преламања параграфа",
@@ -36,10 +43,14 @@
 	"linter-category-tidy-whitespace-bug-desc": "Ове странице активирају баг чистих вајтспејса за који постоји алтернативно решење.",
 	"linter-category-html5-misnesting": "Погрешно угнежђени тагови с различитим рендеровањем у HTML5 и HTML4",
 	"linter-category-html5-misnesting-desc": "Ови погрешно угнежђени тагови ће се понашати другачије у HTML5 у односу на HTML4.",
+	"linter-page-edit": "уреди",
+	"linter-page-viewsource": "погледај извор",
 	"linter-page-history": "историја",
 	"linter-heading-high-priority": "Висок приоритет",
 	"linter-heading-medium-priority": "Средњи приоритет",
 	"linter-heading-low-priority": "Низак приоритет",
-	"multi-part-template-block": "Испис не из једног шаблона",
-	"pageinfo-linter": "Прочишћивач грешака"
+	"multi-part-template-block": "Потиче из више шаблона",
+	"pageinfo-linter": "Прочишћивач грешака",
+	"apihelp-record-lint-param-page": "Наслов странице",
+	"apierror-linter-invalid-data": "Неисправни подаци"
 }
