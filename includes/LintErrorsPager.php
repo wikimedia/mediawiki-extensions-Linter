@@ -106,7 +106,7 @@ class LintErrorsPager extends TablePager {
 			return '';
 		}
 		if ( $this->haveParserMigrationExt &&
-			$this->categoryManager->needsParserMigrationEdit( $name )
+			$this->categoryManager->needsParserMigrationEdit( $this->category )
 		) {
 			$editAction = 'parsermigration-edit';
 		} else {
