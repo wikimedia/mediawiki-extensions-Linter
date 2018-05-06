@@ -49,7 +49,7 @@
 	"linter-heading-high-priority": "Висок приоритет",
 	"linter-heading-medium-priority": "Средњи приоритет",
 	"linter-heading-low-priority": "Низак приоритет",
-	"multi-part-template-block": "Потиче из више шаблона",
+	"multi-part-template-block": "Испис није из једног шаблона",
 	"pageinfo-linter": "Прочишћивач грешака",
 	"apihelp-record-lint-param-page": "Наслов странице",
 	"apierror-linter-invalid-data": "Неисправни подаци"
