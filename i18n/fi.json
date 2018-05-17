@@ -5,7 +5,8 @@
 			"Nike",
 			"Silvonen",
 			"BriskyBlizzard",
-			"Pyscowicz"
+			"Pyscowicz",
+			"Pxos"
 		]
 	},
 	"linterrors": "Lint-virheet",
@@ -20,9 +21,9 @@
 	"linter-page-edit": "muokkaa",
 	"linter-page-viewsource": "näytä wikiteksti",
 	"linter-page-history": "historia",
-	"linter-heading-high-priority": "Korkea tärkeys",
-	"linter-heading-medium-priority": "Keskitason tärkeys",
-	"linter-heading-low-priority": "Alhainen tärkeys",
+	"linter-heading-high-priority": "Erittäin tärkeä",
+	"linter-heading-medium-priority": "Melko tärkeä",
+	"linter-heading-low-priority": "Vähän tärkeä",
 	"pageinfo-linter": "Lint-virheet",
 	"apihelp-record-lint-param-page": "Sivun otsikko"
 }
