@@ -7,7 +7,8 @@
 			"Okras",
 			"Facenapalm",
 			"Kaganer",
-			"Happy13241"
+			"Happy13241",
+			"Incnis Mrsi"
 		]
 	},
 	"linterrors": "Ошибки статического анализатора",
@@ -30,7 +31,7 @@
 	"linter-category-fostered-desc": "На этих страницах находится присвоенное содержимое.",
 	"linter-category-obsolete-tag": "Устаревшие HTML-теги",
 	"linter-category-obsolete-tag-desc": "Эти страницы используют устаревшие HTML-теги.",
-	"linter-category-bogus-image-options": "Фиктивные свойства файлов",
+	"linter-category-bogus-image-options": "Фиктивные параметры файлов",
 	"linter-category-bogus-image-options-desc": "Эти страницы содержат файлы с фиктивными свойствами.",
 	"linter-category-missing-end-tag": "Отсутствующий закрывающий тег",
 	"linter-category-missing-end-tag-desc": "На этих страницах не хватает закрывающих тегов.",
