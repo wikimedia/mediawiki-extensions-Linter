@@ -29,6 +29,8 @@
 	"linter-pager-unclosed-quotes-in-heading-details": "목차 밖으로 빠져나오는 닫히지 않은 인용 부호",
 	"linter-pager-multiline-html-table-in-list-details": "목록 내의 여러 줄의 HTML5 테이블은 HTML5와 Tidy에서 다르게 렌더링됩니다",
 	"linter-pager-misc-tidy-replacement-issues-details": "Tidy 치환에 영향을 주는 기타 마크업 오류",
+	"linter-category-fostered": "포스터 부모 요소에 상속되는 내용",
+	"linter-category-fostered-desc": "이 문서에는 포스터 부모 요소에 상속되는 내용이 있습니다.",
 	"linter-category-obsolete-tag": "구식의 HTML 태그",
 	"linter-category-obsolete-tag-desc": "이 문서들은 구식의 HTML 태그를 사용합니다.",
 	"linter-category-bogus-image-options": "무효한 파일 옵션",
