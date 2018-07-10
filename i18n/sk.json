@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Teslaton"
+		]
+	},
+	"linterrors": "Chyby nájdené Lintom",
+	"linterrors-subpage": "Chyby nájdené Lintom: $1",
+	"linterrors-summary": "Poznámka: Počty pri kategóriách nie sú exaktné, sú založené na odhadoch.",
+	"linter-numerrors": "($1 {{PLURAL:$1|chyba|chyby|chýb}})",
+	"linter-heading-high-priority": "Vysoká priorita",
+	"linter-heading-medium-priority": "Stredná priorita",
+	"linter-heading-low-priority": "Nízka priorita",
+	"pageinfo-linter": "Chyby nájdené Lintom"
+}
