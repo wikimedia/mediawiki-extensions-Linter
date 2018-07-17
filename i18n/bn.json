@@ -8,10 +8,15 @@
 	},
 	"linterrors": "লিন্ট ত্রুটি",
 	"linterrors-subpage": "লিন্ট ত্রুটি: $1",
+	"linterrors-summary": "টীকা: বিষয়শ্রেণীর সংখ্যাগুলি সঠিক গণনা নয়, তবে আনুমানিক হিসাবের উপর ভিত্তি করে।",
+	"linter-desc": "একটি বহিরাগত পরিষেবা থেকে লিন্ট ত্রুটি সন্ধান করে এবং তা ব্যবহারকারীদের কাছে প্রদর্শন করে",
 	"linter-form-namespace": "নামস্থান:",
 	"linter-pager-title": "পাতার শিরোনাম",
+	"linter-pager-template": "একটি টেমপ্লেটের মাধ্যমে?",
+	"linter-pager-obsolete-tag-details": "অপ্রচলিত HTML ট্যাগ",
 	"linter-pager-self-closed-tag-details": "স্ব-বন্ধকৃত ট্যাগ",
 	"linter-pager-deletable-table-tag-details": "টেবিল ট্যাগ যা মুছে ফেলা উচিত",
+	"linter-pager-tidy-whitespace-bug-details": "Tidy সাদাস্থানের বাগ",
 	"linter-category-self-closed-tag": "স্ব-বন্ধকৃত ট্যাগ",
 	"linter-category-self-closed-tag-desc": "এই সব পাতাগুলির স্ব-বন্ধকৃত ট্যাগ আছে।",
 	"linter-category-deletable-table-tag": "টেবিল ট্যাগ যা মুছে ফেলা উচিত",
@@ -24,6 +29,6 @@
 	"linter-heading-medium-priority": "মধ্যম অগ্রাধিকার",
 	"linter-heading-low-priority": "নিন্ম অগ্রাধিকার",
 	"multi-part-template-block": "একটি একক টেমপ্লেট থেকে আউটপুট নয়",
-	"pageinfo-linter": "Lint ত্রুটি",
+	"pageinfo-linter": "লিন্ট ত্রুটি",
 	"apihelp-record-lint-param-page": "পাতার শিরোনাম"
 }
