@@ -3,12 +3,13 @@
 		"authors": [
 			"He7d3r",
 			"Hamilton Abreu",
-			"Athena in Wonderland"
+			"Athena in Wonderland",
+			"Vitorvicentevalente"
 		]
 	},
 	"linterrors": "Erros de lint",
 	"linterrors-subpage": "Erros de lint: $1",
-	"linterrors-summary": "NOTA: As contagens para as categorias não são contagens precisas, são baseadas em estimativas.",
+	"linterrors-summary": "<strong>Nota:</strong> As contagens para as categorias não são precisas, mas sim baseadas em estimativas.",
 	"linter-desc": "Monitorizar erros de lint a partir de um serviço externo e mostrá-los aos utilizadores",
 	"linter-form-namespace": "Espaço nominal:",
 	"linter-pager-title": "Título da página",
