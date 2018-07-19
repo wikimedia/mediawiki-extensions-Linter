@@ -2,11 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Banjo",
-			"Elisardojm"
+			"Elisardojm",
+			"MarcoAurelio"
 		]
 	},
 	"linterrors": "Erros de lint",
 	"linterrors-subpage": "Erros de lintː $1",
+	"linterrors-summary": "<strong>Nota:</strong> O reconto para as categorías non é exacto pois se basea en estimacións.",
 	"linter-desc": "Supervisa erros informados por un servizo comprobador externo e móstraos ós usuarios",
 	"linter-form-namespace": "Espazo de nomes:",
 	"linter-pager-title": "Título da páxina",

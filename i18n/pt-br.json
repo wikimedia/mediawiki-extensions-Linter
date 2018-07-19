@@ -8,7 +8,7 @@
 	},
 	"linterrors": "Erros de Lint",
 	"linterrors-subpage": "Erros de Lint: $1",
-	"linterrors-summary": "NOTA: As contagens para as categorias não são contagens precisas, são baseadas em estimativas.",
+	"linterrors-summary": "<strong>Nota:</strong> As contagens para as categorias não são precisas, mas sim baseadas em estimativas.",
 	"linter-desc": "Acompanha erros de lint por meio de serviço externo e mostre-os aos usuários",
 	"linter-form-namespace": "Espaço nominal:",
 	"linter-pager-title": "Título da página",
