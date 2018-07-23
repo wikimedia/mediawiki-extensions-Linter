@@ -11,7 +11,7 @@
 	},
 	"linterrors": "Errori di Lint",
 	"linterrors-subpage": "Errori di Lint: $1",
-	"linterrors-summary": "NOTA: i conteggi degli errori non sono esatti, bensì stimati.",
+	"linterrors-summary": "<strong>Nota:</strong> i conteggi degli errori non sono esatti, bensì stimati.",
 	"linter-desc": "Traccia gli errori di validazione Lint da un servizio esterno e li mostra agli utenti.",
 	"linter-form-namespace": "Namespace:",
 	"linter-pager-title": "Titolo della pagina",
