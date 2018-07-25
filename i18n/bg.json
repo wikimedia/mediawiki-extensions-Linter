@@ -42,7 +42,7 @@
 	"linter-category-deletable-table-tag-desc": "Следните страници съдържат тагове на таблици, които трябва да бъдат изтрити.",
 	"linter-category-misnested-tag": "Грешно вложени тагове",
 	"linter-category-html5-misnesting": "Неправилно вложен таг с различно визуализиране в HTML5 и HTML4",
-	"linter-category-html5-misnesting-desc": "Следните неправилно вложени тагове държат по различен начин в HTML5 в сравнение с HTML4.",
+	"linter-category-html5-misnesting-desc": "Следните неправилно вложени тагове имат различно поведение в HTML5 в сравнение с HTML4.",
 	"linter-category-tidy-font-bug": "Грешка с font тагове обвиващи препратки",
 	"linter-category-multiple-unclosed-formatting-tags": "Множество незатворени тагове за форматиране",
 	"linter-category-multiple-unclosed-formatting-tags-desc": "Тези страници имат множество незатворени тагове за форматиране",
