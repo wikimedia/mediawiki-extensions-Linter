@@ -4,7 +4,8 @@
 			"Сербијана",
 			"Obsuser",
 			"Acamicamacaraca",
-			"Prevodim"
+			"Prevodim",
+			"BadDog"
 		]
 	},
 	"linterrors": "Пречишћивач грешака",
@@ -44,7 +45,7 @@
 	"linter-category-html5-misnesting": "Погрешно угнежђени тагови с различитим рендеровањем у HTML5 и HTML4",
 	"linter-category-html5-misnesting-desc": "Ови погрешно угнежђени тагови ће се понашати другачије у HTML5 у односу на HTML4.",
 	"linter-page-edit": "уреди",
-	"linter-page-viewsource": "погледај извор",
+	"linter-page-viewsource": "изворник",
 	"linter-page-history": "историја",
 	"linter-heading-high-priority": "Висок приоритет",
 	"linter-heading-medium-priority": "Средњи приоритет",
