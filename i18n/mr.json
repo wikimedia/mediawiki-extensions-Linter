@@ -6,6 +6,7 @@
 	},
 	"linterrors": "लिंट त्रुट्या",
 	"linterrors-subpage": "लिंट त्रुट्या: $1",
+	"linterrors-summary": "<strong>नोंद:</strong> या वर्गांमधील मोजणी ही अचूक नाही, पण अंदाजावर आधारीत आहेत.",
 	"linter-form-namespace": "नामविश्व:",
 	"linter-pager-title": "पान शीर्षक",
 	"linter-pager-template": "साच्यामार्फत?",
