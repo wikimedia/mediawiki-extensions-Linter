@@ -8,6 +8,7 @@
 	},
 	"linterrors": "Błędy składniowe",
 	"linterrors-subpage": "Błędy składniowe: $1",
+	"linterrors-summary": "<strong>Uwaga:</strong> Liczba kategorii nie jest dokładna, opiera się na szacunkach.",
 	"linter-form-namespace": "Przestrzeń nazw:",
 	"linter-pager-title": "Tytuł strony",
 	"linter-pager-template": "Poprzez szablon?",
@@ -18,6 +19,7 @@
 	"linter-pager-self-closed-tag-details": "Znacznik samozamykający się",
 	"linter-pager-deletable-table-tag-details": "Nadmiarowe znaczniki tabeli do usunięcia",
 	"linter-category-obsolete-tag": "Przestarzałe znaczniki HTML",
+	"linter-category-obsolete-tag-desc": "Te strony używają nieaktualnych tagów HTML.",
 	"linter-category-bogus-image-options": "Nieprawidłowe opcje pliku",
 	"linter-category-bogus-image-options-desc": "Te strony odwołują się do plików z podaniem nieistniejących opcji.",
 	"linter-category-missing-end-tag": "Brak znacznika zamykającego",
@@ -33,11 +35,14 @@
 	"linter-category-unclosed-quotes-in-heading-desc": "Strony mające niezamknięty apostrof w nagłówku, który następnie wycieka ze spisu treści.",
 	"linter-numerrors": "($1 {{PLURAL:$1|błąd|błędy|błędów}})",
 	"linter-page-edit": "edytuj",
+	"linter-page-viewsource": "pokaż źródło",
 	"linter-page-history": "historia",
 	"linter-heading-high-priority": "Wysoki priorytet",
 	"linter-heading-medium-priority": "Średni priorytet",
 	"linter-heading-low-priority": "Niski priorytet",
 	"multi-part-template-block": "Wynik nie pochodzi z jednego szablonu",
 	"pageinfo-linter": "Błędy składniowe",
-	"apihelp-record-lint-param-page": "Tytuł strony"
+	"apihelp-record-lint-param-page": "Tytuł strony",
+	"apierror-linter-invalid-data": "Nieprawidłowe dane",
+	"apierror-linter-invalid-title": "Nieprawidłowy, nieistniejący lub nieaktualny tytuł"
 }
