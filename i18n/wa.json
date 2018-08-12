@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Srtxg"
+		]
+	},
+	"linterrors": "Arokes di sintacse lint",
+	"linterrors-subpage": "Arokes di sintacse lint : $1",
+	"linterrors-summary": "<strong>Note:</strong> Les conteus d' categoreyes ni sont nén des contaedjes djusses, mins des estimaedjes.",
+	"linter-pager-title": "Tite del pådje",
+	"linter-pager-template": "Aviè on modele?",
+	"linter-heading-high-priority": "Prumiristé hôte",
+	"linter-heading-low-priority": "Prumiristé fwebe"
+}
