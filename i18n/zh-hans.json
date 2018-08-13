@@ -4,12 +4,13 @@
 			"Liuxinyu970226",
 			"NeverBehave",
 			"A2093064",
-			"WhitePhosphorus"
+			"WhitePhosphorus",
+			"Hanyanbo98"
 		]
 	},
 	"linterrors": "Lint错误",
 	"linterrors-subpage": "Lint错误：$1",
-	"linterrors-summary": "注意：分类计数并不精确，而是基于估计。",
+	"linterrors-summary": "<strong>注意：</strong>分类计数并不精确，而是基于估计。",
 	"linter-desc": "从外部服务追踪lint错误，并向用户显示",
 	"linter-form-namespace": "名字空间：",
 	"linter-pager-title": "页面标题",
