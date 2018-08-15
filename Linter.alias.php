@@ -40,6 +40,16 @@ $specialPageAliases['ko'] = [
 	'LintErrors' => [ '린트오류' ],
 ];
 
+/** Serbian (Cyrillic script) (српски (ћирилица)‎) */
+$specialPageAliases['sr-ec'] = [
+	'LintErrors' => [ 'Пречишћивање_грешака' ],
+];
+
+/** Serbian (Latin script) (srpski (latinica)‎) */
+$specialPageAliases['sr-el'] = [
+	'LintErrors' => [ 'Prečišćavanje_grešaka' ],
+];
+
 /** Urdu (اردو) */
 $specialPageAliases['ur'] = [
 	'LintErrors' => [ 'نحوی_نقائص' ],
