@@ -56,10 +56,17 @@ class ApiRecordLint extends ApiBase {
 			$this->dieWithError( 'apierror-linter-invalid-title', 'invalid-title' );
 		}
 		$categoryMgr = new CategoryManager();
+		$catCounts = [];
 		foreach ( $data as $info ) {
 			if ( !$categoryMgr->isKnownCategory( $info['type'] ) ) {
 				continue;
 			}
+			$count = $catCounts[$info['type']] ?? 0;
+			if ( $count > Database::MAX_PER_CAT ) {
+				// Drop
+				continue;
+			}
+			$catCounts[$info['type']] = $count + 1;
 			if ( !isset( $info['dsr'] ) ) {
 				LoggerFactory::getInstance( 'Linter' )->warning(
 					'dsr for {page} @ rev {revid}, for lint: {lint} is missing',
