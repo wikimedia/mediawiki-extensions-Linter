@@ -8,7 +8,7 @@
 	},
 	"linterrors": "Lint-fel",
 	"linterrors-subpage": "Lint-fel: $1",
-	"linterrors-summary": "<strong>OBS:</strong> Antalen för kategorier är inte noggranna antal, men baseras på uppskattningar.",
+	"linterrors-summary": "<strong>OBS:</strong> Antal fel i kategorierna är inte exakta utan baseras på uppskattningar.",
 	"linter-desc": "Spåra lint-fel från en extern tjänst och visa dem för användarna",
 	"linter-form-namespace": "Namnrymd:",
 	"linter-pager-title": "Sidtitel",
@@ -21,6 +21,7 @@
 	"linter-pager-deletable-table-tag-details": "Tabelltagg som bör raderas",
 	"linter-pager-misnested-tag-details": "Felplacerad tagg som bör placeras korrekt",
 	"linter-pager-html5-misnesting-details": "Felnästade taggar i HTML5 (men inte i Tidy)",
+	"linter-pager-multiple-unclosed-formatting-tags-details": "Flera ostängda formateringstaggar på sidan",
 	"linter-category-obsolete-tag": "Föråldrade HTML-taggar",
 	"linter-category-obsolete-tag-desc": "Dessa sidor använder föråldrade HTML-taggar.",
 	"linter-category-bogus-image-options": "Ogiltiga filalternativ",
@@ -38,6 +39,7 @@
 	"linter-category-html5-misnesting": "Felnästade taggar kommer visas annorlunda i HTML5 jämfört med HTML4",
 	"linter-category-html5-misnesting-desc": "Följande felnästade taggar uppför sig annorlunda i HTML5 jämfört med HTML4.",
 	"linter-numerrors": "($1 {{PLURAL:$1|fel}})",
+	"linter-page-title-edit": "$1 ($2)",
 	"linter-page-edit": "redigera",
 	"linter-page-viewsource": "visa wikitext",
 	"linter-page-history": "historik",
@@ -54,5 +56,8 @@
 	"apihelp-record-lint-description": "Registrera ett lint-fel i databasen",
 	"apihelp-record-lint-param-data": "JSON-kodad data om felet",
 	"apihelp-record-lint-param-page": "Sidtitel",
-	"apihelp-record-lint-param-revision": "Versions-ID som felet hittades i"
+	"apihelp-record-lint-param-revision": "Versions-ID som felet hittades i",
+	"apierror-linter-invalid-ip": "Din IP-adress har inte blivit vitlistat för att rapportera lintfel",
+	"apierror-linter-invalid-data": "Ogiltig data",
+	"apierror-linter-invalid-title": "Ogiltig, ej existerande eller föråldrad titel"
 }
