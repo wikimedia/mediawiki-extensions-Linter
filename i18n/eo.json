@@ -4,5 +4,15 @@
 			"Robin van der Vliet"
 		]
 	},
-	"linter-numerrors": "($1 {{PLURAL:$1|eraro|eraroj}})"
+	"linterrors": "Lint-eraroj",
+	"linterrors-subpage": "Lint-eraroj: $1",
+	"linter-form-namespace": "Nomspaco:",
+	"linter-pager-title": "Titolo de paĝo",
+	"linter-numerrors": "($1 {{PLURAL:$1|eraro|eraroj}})",
+	"linter-heading-high-priority": "Alta prioritato",
+	"linter-heading-medium-priority": "Meza prioritato",
+	"linter-heading-low-priority": "Malalta prioritato",
+	"pageinfo-linter": "Lint-eraroj",
+	"apihelp-query+linterrors-param-categories": "Kategorioj de lint-eraroj",
+	"apihelp-record-lint-param-page": "Titolo de paĝo"
 }
