@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joao Xavier"
+		]
+	},
+	"linterrors": "Erori pri 'Lint'",
+	"linterrors-subpage": "Erori pri 'Lint': $1",
+	"pageinfo-linter": "Erori pri 'Lint'",
+	"apihelp-query+linterrors-param-categories": "Kategorio di erori pri 'Lint'"
+}
