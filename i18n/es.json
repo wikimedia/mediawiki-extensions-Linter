@@ -28,7 +28,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Parche para el error en el ajuste de párrafos",
 	"linter-pager-tidy-whitespace-bug-details": "Defecto de espacio en blanco de Tidy",
 	"linter-pager-html5-misnesting-details": "Anidación errónea en HTML5 (pero no en Tidy)",
-	"linter-pager-tidy-font-bug-details": "La etiqueta font cambia el color del enlace en Tody, pero no en HTML5",
+	"linter-pager-tidy-font-bug-details": "La etiqueta font cambia el color del enlace en Tidy, pero no en HTML5",
 	"linter-pager-multiple-unclosed-formatting-tags-details": "Etiquetas múltiples de formato sin cerrar en la página",
 	"linter-pager-unclosed-quotes-in-heading-details": "Par de comillas sin cerrar que se propaga fuera de la tabla de contenidos",
 	"linter-pager-multiline-html-table-in-list-details": "Tabla multilínea HTML5 dentro de una lista, que se representa de forma diferente en HTML5 y en Tidy",
