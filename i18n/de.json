@@ -81,6 +81,7 @@
 	"apihelp-record-lint-summary": "Nimmt einen Lint-Fehler in die Datenbank auf",
 	"apihelp-record-lint-param-data": "JSON-kodierte Daten über den Fehler",
 	"apihelp-record-lint-param-page": "Seitentitel",
+	"apihelp-record-lint-param-revision": "Kennung der Version, in der der Fehler gefunden wurde.",
 	"apihelp-query+linterstats-description": "Ruft die Anzahl der Lint-Fehler in jeder Kategorie ab",
 	"apihelp-query+linterstats-summary": "Ruft die Anzahl der Lint-Fehler in jeder Kategorie ab",
 	"apihelp-query+linterstats-example-1": "Ruft die Anzahl der Lint-Fehler in jeder Kategorie ab",
