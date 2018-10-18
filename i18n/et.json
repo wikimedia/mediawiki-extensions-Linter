@@ -36,7 +36,7 @@
 	"linter-category-missing-end-tag": "Lõppsilt puudub",
 	"linter-category-missing-end-tag-desc": "Neil lehekülgedel puudub mõni lõppsilt.",
 	"linter-category-multi-colon-escape": "Mitme kooloni katkestamine",
-	"linter-category-multi-colon-escape-desc": "Neil lehekülgedel on linke, mille alguses mitu koolonit.",
+	"linter-category-multi-colon-escape-desc": "Neil lehekülgedel on linke, mille alguses on mitu koolonit.",
 	"linter-category-stripped-tag": "Eiratavad sildid",
 	"linter-category-stripped-tag-desc": "Neil lehekülgedel on eiratavaid silte.",
 	"linter-category-self-closed-tag": "Endassesuletud sildid",
