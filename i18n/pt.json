@@ -10,7 +10,7 @@
 	"linterrors": "Erros de lint",
 	"linterrors-subpage": "Erros de lint: $1",
 	"linterrors-summary": "<strong>Nota:</strong> As contagens para as categorias não são precisas, mas sim baseadas em estimativas.",
-	"linter-desc": "Monitorizar erros de lint a partir de um serviço externo e mostrá-los aos utilizadores",
+	"linter-desc": "Permite monitorizar erros de lint a partir de um serviço externo e mostrá-los aos utilizadores",
 	"linter-form-namespace": "Espaço nominal:",
 	"linter-pager-title": "Título da página",
 	"linter-pager-template": "Através de uma predefinição?",
