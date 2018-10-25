@@ -77,6 +77,7 @@
 	"apihelp-query+linterrors-param-limit": "Anzahl der abzurufenden Ergebnisse",
 	"apihelp-query+linterrors-param-from": "Lint-Kennung, ab der die Abfrage beginnen soll.",
 	"apihelp-query+linterrors-param-pageid": "Schließt nur Lint-Fehler von den angegebenen Seitenkennungen ein",
+	"apihelp-query+linterrors-example-1": "Ruft alle Lint-Fehler der Kategorie obsolete-tag ab",
 	"apihelp-record-lint-description": "Nimmt einen Lint-Fehler in die Datenbank auf",
 	"apihelp-record-lint-summary": "Nimmt einen Lint-Fehler in die Datenbank auf",
 	"apihelp-record-lint-param-data": "JSON-kodierte Daten über den Fehler",
