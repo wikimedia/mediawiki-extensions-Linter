@@ -5,7 +5,8 @@
 			"Mr. Ibrahem",
 			"Shbib Al-Subaie",
 			"ديفيد",
-			"علاء"
+			"علاء",
+			"Meno25"
 		]
 	},
 	"linterrors": "أخطاء لنت",
@@ -65,7 +66,7 @@
 	"linter-category-multiline-html-table-in-list-desc": "ترتب جدول أنيق داخل القائمة أو خارجها، بينما توسع HTML5 القائمة إلى باقي الصفحة.",
 	"linter-category-misc-tidy-replacement-issues": "مسائل استبدال تيدي متفرقة",
 	"linter-category-misc-tidy-replacement-issues-desc": "تحتوي هذه الصفحات على مشكلات أخرى تؤثر على العرض عند استبدال تيدي",
-	"linter-numerrors": "({{PLURAL:$1|خطأ|خطآن|$1 أخطاء}})",
+	"linter-numerrors": "($1 {{PLURAL:$1|خطأ|أخطاء}})",
 	"linter-page-edit": "تعديل",
 	"linter-page-viewsource": "عرض المصدر",
 	"linter-page-history": "تاريخ",
