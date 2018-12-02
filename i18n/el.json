@@ -5,7 +5,8 @@
 			"Geraki",
 			"Thodoris",
 			"KATRINE1992",
-			"Nikosgranturismogt"
+			"Nikosgranturismogt",
+			"Αντιγόνη"
 		]
 	},
 	"linterrors": "Σφάλματα σύνταξης",
@@ -24,6 +25,7 @@
 	"linter-category-multiline-html-table-in-list-desc": "Το Tidy μετακινεί τον πίνακα εντός και εκτός της λίστας, ενώ το HTML5 επεκτείνει την λίστα στο υπόλοιπο της σελίδας.",
 	"linter-category-misc-tidy-replacement-issues": "Διάφορα Μεμονωμένα ζητήματα αντικατάστασης",
 	"linter-category-misc-tidy-replacement-issues-desc": "Αυτές οι σελίδες έχουν άλλα προβλήματα που επηρεάζουν την απόδοση όταν αντικαθίσταται το Tidy",
+	"linter-numerrors": "($1 {{PLURAL:$1|σφάλμα|σφάλματα}})",
 	"linter-page-viewsource": "δέστε πηγή",
 	"linter-page-history": "ιστορικό",
 	"pageinfo-linter": "Σφάλματα Lint",
