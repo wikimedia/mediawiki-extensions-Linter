@@ -8,7 +8,7 @@
 	},
 	"linterrors": "Błędy składniowe",
 	"linterrors-subpage": "Błędy składniowe: $1",
-	"linterrors-summary": "<strong>Uwaga:</strong> Liczba kategorii nie jest dokładna, opiera się na szacunkach.",
+	"linterrors-summary": "<strong>Uwaga:</strong> Liczby elementów poszczególnych kategorii nie są dokładne, opierają się one na szacunkach.",
 	"linter-form-namespace": "Przestrzeń nazw:",
 	"linter-pager-title": "Tytuł strony",
 	"linter-pager-template": "Poprzez szablon?",
