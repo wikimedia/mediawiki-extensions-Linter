@@ -1,10 +1,11 @@
 $( function () {
 	var location = mw.config.get( 'wgLinterErrorLocation' ),
+		// eslint-disable-next-line jquery/no-global-selector
 		$textbox = $( '#wpTextbox1' );
 
 	if ( location ) {
 		if ( $textbox.length ) {
-			$textbox.focus().textSelection( 'setSelection', { start: location[ 0 ], end: location[ 1 ] } );
+			$textbox.trigger( 'focus' ).textSelection( 'setSelection', { start: location[ 0 ], end: location[ 1 ] } );
 		}
 		mw.hook( 've.tempWikitextReady' ).add( function () {
 			mw.libs.ve.tempWikitextEditor.$element[ 0 ].setSelectionRange(
