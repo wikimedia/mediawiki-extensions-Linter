@@ -161,6 +161,11 @@
 				"enabled": true,
 				"priority": "high",
 				"parser-migration": true
+			},
+			"wikilink-in-extlink": {
+				"dbid": 18,
+				"enabled": true,
+				"priority": "medium"
 			}
 		},
 		"LinterSubmitterWhitelist": {
