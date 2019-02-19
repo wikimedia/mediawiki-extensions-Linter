@@ -64,10 +64,10 @@ class CategoryManager {
 			if ( $info['enabled'] ) {
 				$this->categories[$info['priority']][] = $name;
 			}
-			if ( isset( $info['parser-migration'] ) ) {
+			if ( $info['parser-migration'] ?? false ) {
 				$this->parserMigrationCategories[$name] = true;
 			}
-			if ( isset( $info['has-name'] ) ) {
+			if ( $info['has-name'] ?? false ) {
 				$this->hasNameParam[$name] = true;
 			}
 			if ( isset( $info['dbid'] ) ) {
