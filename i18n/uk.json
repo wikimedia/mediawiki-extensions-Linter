@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Piramidion"
+			"Piramidion",
+			"Vlad5250"
 		]
 	},
 	"linterrors": "Lint-помилки",
@@ -27,6 +28,7 @@
 	"linter-pager-unclosed-quotes-in-heading-details": "Незакритий апостроф, який перетікає зі змісту",
 	"linter-pager-multiline-html-table-in-list-details": "Багаторядкова таблиця HTML5 всередині списку, яка по-різному візуалізується в HTML5 і в Tidy",
 	"linter-pager-misc-tidy-replacement-issues-details": "Різні помилки розмітки, які справляють вплив на заміну Tidy",
+	"linter-pager-wikilink-in-extlink-details": "Вкладені вікіпосилання та зовнішні посилання, що потребують виправлення",
 	"linter-category-fostered": "Присвоєний контент",
 	"linter-category-fostered-desc": "Ці сторінки містять присвоєний контент.",
 	"linter-category-obsolete-tag": "Застарілі HTML-теги",
@@ -61,6 +63,8 @@
 	"linter-category-multiline-html-table-in-list-desc": "Tidy переносить таблицю в список чи за його межі, тоді як HTML5 розширює список так, що він охоплює решту сторінки.",
 	"linter-category-misc-tidy-replacement-issues": "Різні проблеми, пов'язані із заміною Tidy",
 	"linter-category-misc-tidy-replacement-issues-desc": "Ці сторінки мають інші проблеми, які справляють вплив на візуалізацію коду після заміни Tidy",
+	"linter-category-wikilink-in-extlink": "Посилання в посиланнях",
+	"linter-category-wikilink-in-extlink-desc": "Ці сторінки мають вікіпосилання у зовнішніх посиланнях, які можна виправити",
 	"linter-numerrors": "($1 {{PLURAL:$1|помилка|помилки|помилок}})",
 	"linter-page-edit": "редагувати",
 	"linter-page-viewsource": "переглянути код",

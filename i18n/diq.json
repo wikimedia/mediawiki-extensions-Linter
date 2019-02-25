@@ -7,6 +7,7 @@
 	"linterrors": "Xeteyê linti",
 	"linterrors-subpage": "Xeteyê linti: $1",
 	"linter-form-namespace": "Heruna nameyan:",
+	"linter-category-wikilink-in-extlink": "Gıreyan de gıreyi",
 	"linter-page-edit": "bıvurne",
 	"pageinfo-linter": "Xeteyê linti"
 }
