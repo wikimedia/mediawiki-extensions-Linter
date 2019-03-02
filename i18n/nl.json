@@ -6,7 +6,8 @@
 			"MarcoSwart",
 			"Mar(c)",
 			"Patio",
-			"KlaasZ4usV"
+			"KlaasZ4usV",
+			"Bdijkstra"
 		]
 	},
 	"linterrors": "Lintfouten",
@@ -39,6 +40,7 @@
 	"linter-category-misnested-tag-desc": "Deze pagina's bevatten elementen die een ander element niet compleet insluiten.",
 	"linter-category-tidy-whitespace-bug": "Tidy witruimte-bug",
 	"linter-category-tidy-whitespace-bug-desc": "Deze pagina's veroorzaken een tidy witruimte bug die verholpen kan worden.",
+	"linter-category-wikilink-in-extlink": "Wikilink in externe link",
 	"linter-numerrors": "($1 {{PLURAL:$1|fout|fouten}})",
 	"linter-page-edit": "bewerken",
 	"linter-page-viewsource": "brontekst bekijken",
