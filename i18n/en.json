@@ -27,7 +27,6 @@
 	"linter-pager-unclosed-quotes-in-heading-details": "Unclosed quote which leaks out of the table of contents",
 	"linter-pager-multiline-html-table-in-list-details": "Multiline HTML5 table inside a list, rendered differently in HTML5 and Tidy",
 	"linter-pager-misc-tidy-replacement-issues-details": "Miscellaneous markup errors affecting Tidy replacement",
-	"linter-pager-wikilink-in-extlink-details": "Nested wikilinks in external links that need to be fixed",
 	"linter-category-fostered": "Fostered content",
 	"linter-category-fostered-desc": "These pages have fostered content.",
 	"linter-category-obsolete-tag": "Obsolete HTML tags",

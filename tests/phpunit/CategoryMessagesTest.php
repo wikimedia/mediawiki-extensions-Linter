@@ -48,7 +48,7 @@ class CategoryMessagesTest extends MediaWikiLangTestCase {
 			"linter-category-$category",
 			"linter-category-$category-desc",
 		];
-		if ( $category !== 'fostered' ) {
+		if ( $category !== 'fostered' && $category !== 'wikilink-in-extlink' ) {
 			// TODO: Don't hardcode this
 			$msgs[] = "linter-pager-$category-details";
 		}

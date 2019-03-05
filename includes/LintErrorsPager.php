@@ -201,7 +201,7 @@ class LintErrorsPager extends TablePager {
 		$names = [
 			'title' => $this->msg( 'linter-pager-title' )->text(),
 		];
-		if ( $this->category !== 'fostered' ) {
+		if ( $this->category !== 'fostered' && $this->category !== 'wikilink-in-extlink' ) {
 			// TODO: don't hardcode list of stuff with no parameters...?
 			$names['details'] = $this->msg( "linter-pager-{$this->category}-details" )->text();
 		}
