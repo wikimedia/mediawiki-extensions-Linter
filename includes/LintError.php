@@ -47,7 +47,7 @@ class LintError {
 	public $params;
 
 	/**
-	 * @var bool
+	 * @var string[]|null
 	 */
 	public $templateInfo;
 
