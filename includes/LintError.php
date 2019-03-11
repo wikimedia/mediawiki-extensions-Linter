@@ -66,8 +66,7 @@ class LintError {
 		$this->lintId = $lintId;
 		$this->location = $location;
 		// Convenient accessors for all errors
-		$this->templateInfo = isset( $params['templateInfo'] )
-			? $params['templateInfo'] : null;
+		$this->templateInfo = $params['templateInfo'] ?? null;
 	}
 
 	/**
