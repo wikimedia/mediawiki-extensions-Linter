@@ -6,7 +6,8 @@
 			"A2093064",
 			"Kanashimi",
 			"LNDDYL",
-			"Kly"
+			"Kly",
+			"蘭斯特"
 		]
 	},
 	"linterrors": "Lint 錯誤",
@@ -67,7 +68,7 @@
 	"linter-category-multiline-html-table-in-list-desc": "Tidy將表格移到列表之內或之外，而HTML5展開列表至頁面的其他部分。",
 	"linter-category-misc-tidy-replacement-issues": "其他Tidy替換問題",
 	"linter-category-misc-tidy-replacement-issues-desc": "這些頁面有當Tidy被替換時會影響到渲染的問題",
-	"linter-category-wikilink-in-extlink": "連結內的連結",
+	"linter-category-wikilink-in-extlink": "外部連結內的內部連結",
 	"linter-category-wikilink-in-extlink-desc": "這些頁面所擁有在外部連結裡的 wiki 連結可被修正",
 	"linter-numerrors": "（$1個{{PLURAL:$1|錯誤}}）",
 	"linter-page-edit": "編輯",
