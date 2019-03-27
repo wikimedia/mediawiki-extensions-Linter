@@ -28,7 +28,6 @@
 	"linter-pager-unclosed-quotes-in-heading-details": "نقل قول بسته شده که به خارج از جدول  محتویات نشت می‌کند",
 	"linter-pager-multiline-html-table-in-list-details": "چندین جدول اچ‌تی‌ام‌ال۵ در یک فهرست، که در اچ‌تی‌ام‌ال۵ و تایدی به شکلی متفاوت تصویر می‌شود",
 	"linter-pager-misc-tidy-replacement-issues-details": "خطاهای نشانه‌گذاری متعدد که روی جایگزینی تایدی اثر می‌گذارند",
-	"linter-pager-wikilink-in-extlink-details": "پیوند داخلی درون پیوند خارجی که باید درست شود",
 	"linter-category-fostered": "محتوایی که به جدول تعلق ندارد",
 	"linter-category-fostered-desc": "این صفحات دارای محتوایی است که به جدول تعلق ندارد.",
 	"linter-category-obsolete-tag": "برچسب‌های منسوخ اچ‌تی‌ام‌ال",

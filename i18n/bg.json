@@ -30,7 +30,6 @@
 	"linter-pager-unclosed-quotes-in-heading-details": "Незатворена кавичка в заглавие на раздел, която вследствие на това има обхват извън съдържанието",
 	"linter-pager-multiline-html-table-in-list-details": "Многоредова HTML5 таблица в списък, визуализирана по различен начин в HTML5 спрямо Tidy",
 	"linter-pager-misc-tidy-replacement-issues-details": "Разни грешки в кода, засягащи замяната на Tidy",
-	"linter-pager-wikilink-in-extlink-details": "Вложени уикипрепратки във външни препратки, които трябва да бъдат коригирани",
 	"linter-category-fostered": "Грешно разположено съдържание",
 	"linter-category-fostered-desc": "Тези страници съдържат грешно разположено съдържание.",
 	"linter-category-obsolete-tag": "Остарели HTML-тагове",

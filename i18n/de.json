@@ -28,7 +28,6 @@
 	"linter-pager-unclosed-quotes-in-heading-details": "Nicht geschlossenes Anführungszeichen, das das Inhaltsverzeichnis auslaufen lässt.",
 	"linter-pager-multiline-html-table-in-list-details": "Mehrzeilen-HTML5-Tabelle innerhalb einer Liste, unterschiedlich dargestellt in HTML5 und Tidy",
 	"linter-pager-misc-tidy-replacement-issues-details": "Verschiedene Auszeichnungsfehler, die die Tidy-Ersetzung beeinflussen.",
-	"linter-pager-wikilink-in-extlink-details": "Verschachtelte Wikilinks in externen Links, die korrigiert werden müssen",
 	"linter-category-fostered": "Falsch verschachtelter Inhalt",
 	"linter-category-fostered-desc": "Diese Seiten haben falsch verschachtelte Inhalte.",
 	"linter-category-obsolete-tag": "Veraltete HTML-Tags",

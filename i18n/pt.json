@@ -30,7 +30,6 @@
 	"linter-pager-unclosed-quotes-in-heading-details": "Aspas não fechadas que se propagam para fora do índice",
 	"linter-pager-multiline-html-table-in-list-details": "Tabela HTML5 multilinhas dentro de uma lista, representada de formas diferentes em HTML5 e no Tidy",
 	"linter-pager-misc-tidy-replacement-issues-details": "Diversos erros de notação que afetam a substituição no Tidy",
-	"linter-pager-wikilink-in-extlink-details": "Hiperligações da wiki contidas em hiperligações externas que precisam de ser corrigidas",
 	"linter-category-fostered": "Conteúdo fora do lugar",
 	"linter-category-fostered-desc": "Estas páginas têm conteúdo fora do lugar.",
 	"linter-category-obsolete-tag": "Elementos HTML obsoletos",

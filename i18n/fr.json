@@ -35,7 +35,6 @@
 	"linter-pager-unclosed-quotes-in-heading-details": "Citation non close qui déborde de la table des matières",
 	"linter-pager-multiline-html-table-in-list-details": "Tableau HTML5 multilignes à l’intérieur d’une liste, rendu différemment en HTML5 et dans Tidy",
 	"linter-pager-misc-tidy-replacement-issues-details": "Diverses erreurs de balisage affectant le remplacement de Tidy",
-	"linter-pager-wikilink-in-extlink-details": "Liens wiki inclus dans les liens externes devant être corrigés",
 	"linter-category-fostered": "Contenu mal placé",
 	"linter-category-fostered-desc": "Ces pages ont du contenu mal placé.",
 	"linter-category-obsolete-tag": "Balises HTML désuètes",

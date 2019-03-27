@@ -32,7 +32,6 @@
 	"linter-pager-unclosed-quotes-in-heading-details": "Apici non chiusi il cui effetto fuoriesce dall'indice",
 	"linter-pager-multiline-html-table-in-list-details": "Tabella HTML5 multilinea all'interno di una lista, resa diversamente in HTML5 e Tidy",
 	"linter-pager-misc-tidy-replacement-issues-details": "Vari errori di markup che influenzano la sostituzione di Tidy",
-	"linter-pager-wikilink-in-extlink-details": "Wikilink annidati in collegamenti esterni che devono essere corretti",
 	"linter-category-fostered": "Contenuto di tabella in posizione errata",
 	"linter-category-fostered-desc": "Queste pagine hanno tabelle con del contenuto in posizione non valida, che pertanto viene mostrato fuori dalla tabella.",
 	"linter-category-obsolete-tag": "Tag HTML obsoleti",

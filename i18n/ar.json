@@ -32,7 +32,6 @@
 	"linter-pager-unclosed-quotes-in-heading-details": "اقتباس غير مغلق يتسرب خارج جدول المحتويات",
 	"linter-pager-multiline-html-table-in-list-details": "جدول HTML5 متعدد الأسطر داخل قائمة، تم تقديمه بشكل مختلف في HTML5 وتيدي",
 	"linter-pager-misc-tidy-replacement-issues-details": "أخطاء ترميز متنوعة تؤثر على استبدال تيدي",
-	"linter-pager-wikilink-in-extlink-details": "وصلات الويكي المتداخلة في الوصلات الخارجية التي تحتاج إلى إصلاح",
 	"linter-category-fostered": "محتوى معزز",
 	"linter-category-fostered-desc": "هذه الصفحات عززت المحتوى.",
 	"linter-category-obsolete-tag": "علامات HTML قديمة",

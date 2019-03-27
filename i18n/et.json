@@ -27,7 +27,6 @@
 	"linter-pager-unclosed-quotes-in-heading-details": "Sulgemata silt, mis mõjutab sisu väljaspool sisukorda",
 	"linter-pager-multiline-html-table-in-list-details": "Loendi sees mitmerealine HTML5 tabel, mille viimistlus HTML5 ja Tidy puhul on erinev",
 	"linter-pager-misc-tidy-replacement-issues-details": "Mitmesugused märgistuskeele vead, mis mõjutavad Tidy asendamist",
-	"linter-pager-wikilink-in-extlink-details": "Pesastatud vikilingid välislinkides, mis tuleb parandada",
 	"linter-category-fostered": "Valesti paigutatud tabelisisu",
 	"linter-category-fostered-desc": "Neil lehekülgedel on tabeli sisu valesti paigutatud.",
 	"linter-category-obsolete-tag": "Aegunud HTML-sildid",

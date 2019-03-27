@@ -28,7 +28,6 @@
 	"linter-pager-unclosed-quotes-in-heading-details": "Незакритий апостроф, який перетікає зі змісту",
 	"linter-pager-multiline-html-table-in-list-details": "Багаторядкова таблиця HTML5 всередині списку, яка по-різному візуалізується в HTML5 і в Tidy",
 	"linter-pager-misc-tidy-replacement-issues-details": "Різні помилки розмітки, які справляють вплив на заміну Tidy",
-	"linter-pager-wikilink-in-extlink-details": "Вкладені вікіпосилання та зовнішні посилання, що потребують виправлення",
 	"linter-category-fostered": "Присвоєний контент",
 	"linter-category-fostered-desc": "Ці сторінки містять присвоєний контент.",
 	"linter-category-obsolete-tag": "Застарілі HTML-теги",

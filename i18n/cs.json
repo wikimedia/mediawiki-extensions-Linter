@@ -31,7 +31,6 @@
 	"linter-pager-unclosed-quotes-in-heading-details": "Neuzavřený apostrof, který vyteče z tabulky s obsahem",
 	"linter-pager-multiline-html-table-in-list-details": "Víceřádková HTML5 tabulka uvnitř seznamu, která se vykresluje odlišně v HTML5 a v Tidy",
 	"linter-pager-misc-tidy-replacement-issues-details": "Různé chyby syntaxe mající dopad na výměnu Tidy",
-	"linter-pager-wikilink-in-extlink-details": "Wikiodkazy vnořené do externích odkazů, které je nutné opravit",
 	"linter-category-fostered": "Chybně vnořený obsah",
 	"linter-category-fostered-desc": "Tyto stránky obsahují chybně vložený obsah do tabulky.",
 	"linter-category-obsolete-tag": "Zastaralé HTML značky",

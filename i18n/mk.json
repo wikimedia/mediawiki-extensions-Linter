@@ -27,7 +27,6 @@
 	"linter-pager-unclosed-quotes-in-heading-details": "Незатворен цитат што истекува од прегледот на содржината",
 	"linter-pager-multiline-html-table-in-list-details": "Повеќередна HTML5-табела во список, испишана различно во HTML5 и Tidy",
 	"linter-pager-misc-tidy-replacement-issues-details": "Разни грешки при означувањето што ја засегаат замената на Tidy",
-	"linter-pager-wikilink-in-extlink-details": "Вгнездени викиврски и надворешни врски на кои им треба поправка",
 	"linter-category-fostered": "Погрешно сместена содржина",
 	"linter-category-fostered-desc": "Овие страници имаат погрешно сместена содржина.",
 	"linter-category-obsolete-tag": "Застарени HTML-ознаки",
