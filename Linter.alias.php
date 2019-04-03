@@ -25,6 +25,11 @@ $specialPageAliases['en'] = [
 	'LintErrors' => [ 'LintErrors' ],
 ];
 
+/* Čeština (Czech) */
+$specialPageAliases['cs'] = [
+	'LintErrors' => [ 'Chyby_nalezené_lintem' ],
+];
+
 /** Español (Spanish) */
 $specialPageAliases['es'] = [
 	'LintErrors' => [ 'Errores_de_sintaxis' ],
