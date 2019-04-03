@@ -1,6 +1,6 @@
 $( function () {
 	var location = mw.config.get( 'wgLinterErrorLocation' ),
-		// eslint-disable-next-line jquery/no-global-selector
+		// eslint-disable-next-line no-jquery/no-global-selector
 		$textbox = $( '#wpTextbox1' );
 
 	if ( location ) {
