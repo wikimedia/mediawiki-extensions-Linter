@@ -5,10 +5,11 @@
 			"Dvorapa",
 			"Matěj Suchánek",
 			"Danny B.",
-			"Ilimanaq29"
+			"Ilimanaq29",
+			"Martin Urbanec"
 		]
 	},
-	"linterrors": "Chyby nalezené Lintem",
+	"linterrors": "Chyby nalezené lintem",
 	"linterrors-subpage": "Chyby nalezené Lintem: $1",
 	"linterrors-summary": "<strong>Poznámka:</strong> Počty u kategorií nejsou přesné, jsou založeny na odhadech.",
 	"linter-desc": "Sleduje chyby nalezené externím Lintem a zobrazuje je uživatelům",
