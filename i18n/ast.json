@@ -2,11 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Xuacu",
-			"MarcoAurelio"
+			"MarcoAurelio",
+			"Fitoschido"
 		]
 	},
 	"linterrors": "Errores de lint",
-	"linterrors-subpage": "Errores de lintː $1",
+	"linterrors-subpage": "Errores de lint: $1",
 	"linterrors-summary": "<strong>Nota:</strong> Les cuentes de les categoríes nun son precises, sinón que se basen n'estimaciones",
 	"linter-desc": "Siguir los errores de lint d'un serviciu esternu y amosalos a los usuarios",
 	"linter-form-namespace": "Espaciu de nomes:",
