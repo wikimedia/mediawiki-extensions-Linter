@@ -63,6 +63,8 @@
 	"linter-category-multiline-html-table-in-list-desc": "Tidy despraza a táboa dentro ou fora da lista, mentres que HTML5 extende a lista ó resto da páxina.",
 	"linter-category-misc-tidy-replacement-issues": "Problemas varios para a substitución de Tidy",
 	"linter-category-misc-tidy-replacement-issues-desc": "Estas páxinas teñen outros problemas que afectan á representación cando se substitúe Tidy",
+	"linter-category-wikilink-in-extlink": "Ligazóns wiki dentro de ligazóns externas",
+	"linter-category-wikilink-in-extlink-desc": "Estas páxinas teñene ligazóns wiki dentro de ligazóns externas e precisan ser correxidas",
 	"linter-numerrors": "($1 {{PLURAL:$1|erro|erros}})",
 	"linter-page-title-edit": "$1 ($2)",
 	"linter-page-edit": "editar",

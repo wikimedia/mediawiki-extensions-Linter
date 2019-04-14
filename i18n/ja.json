@@ -12,7 +12,7 @@
 	"linterrors": "Lint エラー",
 	"linterrors-subpage": "Lint エラー: $1",
 	"linterrors-summary": "<strong>Note:</strong> カテゴリの集計数は正確ではなく、推計値です。",
-	"linter-desc": "外部サービスからlint エラーを追跡し、ユーザーに表示する",
+	"linter-desc": "外部サービスから lint エラーを追跡し、利用者に表示する",
 	"linter-form-namespace": "名前空間:",
 	"linter-pager-title": "ページ名",
 	"linter-pager-template": "テンプレート経由かどうか？",
