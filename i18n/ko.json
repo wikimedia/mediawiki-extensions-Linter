@@ -63,6 +63,8 @@
 	"linter-category-multiline-html-table-in-list-desc": "Tidy는 테이블을 목록 안이나 밖으로 이동하지만 HTML5는 목록을 문서의 나머지 부분으로 확장합니다.",
 	"linter-category-misc-tidy-replacement-issues": "기타 Tidy 치환 문제",
 	"linter-category-misc-tidy-replacement-issues-desc": "이 문서는 Tidy가 치환될 때 렌더링에 영향을 주는 다른 문제들이 있습니다",
+	"linter-category-wikilink-in-extlink": "링크 안의 링크",
+	"linter-category-wikilink-in-extlink-desc": "이 문서들은 수정 가능한 외부 링크 내 위키링크가 있습니다",
 	"linter-numerrors": "({{PLURAL:$1|오류}} $1개)",
 	"linter-page-edit": "편집",
 	"linter-page-viewsource": "원본 보기",
