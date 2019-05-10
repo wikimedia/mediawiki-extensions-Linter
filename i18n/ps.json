@@ -11,5 +11,6 @@
 	"linter-category-missing-end-tag": "ورک پای ټکي",
 	"linter-category-stripped-tag": "لیرې شوي ټکي",
 	"linter-category-misnested-tag": "بې ځایه شوي ټګۍ",
+	"linter-page-edit": "سمول",
 	"pageinfo-linter": "پټ ساتل شوي تېروتنې"
 }

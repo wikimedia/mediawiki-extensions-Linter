@@ -26,6 +26,7 @@
 	"linter-category-misc-tidy-replacement-issues": "Διάφορα Μεμονωμένα ζητήματα αντικατάστασης",
 	"linter-category-misc-tidy-replacement-issues-desc": "Αυτές οι σελίδες έχουν άλλα προβλήματα που επηρεάζουν την απόδοση όταν αντικαθίσταται το Tidy",
 	"linter-numerrors": "($1 {{PLURAL:$1|σφάλμα|σφάλματα}})",
+	"linter-page-edit": "επεξεργασία",
 	"linter-page-viewsource": "προβολή κώδικα",
 	"linter-page-history": "ιστορικό",
 	"pageinfo-linter": "Σφάλματα Lint",
