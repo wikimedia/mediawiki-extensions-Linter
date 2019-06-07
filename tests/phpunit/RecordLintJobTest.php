@@ -27,6 +27,7 @@ use Title;
 
 /**
  * @group Database
+ * @group Broken
  * @covers MediaWiki\Linter\RecordLintJob
  */
 class RecordLintJobTest extends \MediaWikiTestCase {
