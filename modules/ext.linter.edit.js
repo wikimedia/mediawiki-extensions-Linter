@@ -8,7 +8,7 @@ $( function () {
 			$textbox.trigger( 'focus' ).textSelection( 'setSelection', { start: location[ 0 ], end: location[ 1 ] } );
 			$textbox.textSelection( 'scrollToCaretPosition' );
 		}
-		mw.hook( 've.tempWikitextReady' ).add( function () {
+		mw.hook( 've.wikitextInteractive' ).add( function () {
 			mw.libs.ve.tempWikitextEditor.$element[ 0 ].setSelectionRange(
 				location[ 0 ], location[ 1 ]
 			);
