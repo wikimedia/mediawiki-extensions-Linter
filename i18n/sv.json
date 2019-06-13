@@ -3,7 +3,8 @@
 		"authors": [
 			"WikiPhoenix",
 			"Bengtsson96",
-			"Skalman"
+			"Skalman",
+			"Mjälten"
 		]
 	},
 	"linterrors": "Lint-fel",
@@ -22,6 +23,7 @@
 	"linter-pager-misnested-tag-details": "Felplacerad tagg som bör placeras korrekt",
 	"linter-pager-html5-misnesting-details": "Felnästlade taggar i HTML5 (men inte i Tidy)",
 	"linter-pager-multiple-unclosed-formatting-tags-details": "Flera ostängda formateringstaggar på sidan",
+	"linter-category-fostered": "Utvalt innehåll",
 	"linter-category-obsolete-tag": "Föråldrade HTML-taggar",
 	"linter-category-obsolete-tag-desc": "Dessa sidor använder föråldrade HTML-taggar.",
 	"linter-category-bogus-image-options": "Ogiltiga filalternativ",
@@ -48,10 +50,12 @@
 	"linter-heading-low-priority": "Låg prioritet",
 	"pageinfo-linter": "Lint-fel",
 	"apihelp-query+linterrors-description": "Hämta en lista över lint-fel",
+	"apihelp-query+linterrors-summary": "Hämta en lista med luddfel",
 	"apihelp-query+linterrors-param-categories": "Kategorier över lint-fel",
 	"apihelp-query+linterrors-param-limit": "Antal resultat att fråga",
 	"apihelp-query+linterrors-param-from": "Link-ID att börja fråga från",
 	"apihelp-query+linterrors-param-namespace": "Inkludera endast lint-fel från specificerade namnrymder",
+	"apihelp-query+linterrors-param-pageid": "Inkludera endast luddfel från specificerade namnrymder",
 	"apihelp-query+linterrors-example-1": "Hämta alla lint-fel i kategorin föråldrade taggar",
 	"apihelp-record-lint-description": "Registrera ett lint-fel i databasen",
 	"apihelp-record-lint-param-data": "JSON-kodad data om felet",
