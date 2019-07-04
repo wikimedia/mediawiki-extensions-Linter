@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kunal Mehta",
+			"Liuxinyu970226",
+			"Fitoschido",
+			"Umherirrender",
+			"Amire80",
+			"Mormegil"
+		]
+	},
+	"apihelp-query+linterrors-description": "{{doc-apihelp-description|query+linterrors}}",
+	"apihelp-query+linterrors-summary": "{{doc-apihelp-summary|query+linterrors}}",
+	"apihelp-query+linterrors-param-categories": "{{doc-apihelp-param|query+linterrors|categories}}",
+	"apihelp-query+linterrors-param-limit": "{{doc-apihelp-param|query+linterrors|limit}}",
+	"apihelp-query+linterrors-param-from": "{{doc-apihelp-param|query+linterrors|from}}",
+	"apihelp-query+linterrors-param-namespace": "{{doc-apihelp-param|query+linterrors|namespace}}",
+	"apihelp-query+linterrors-param-pageid": "{{doc-apihelp-param|query+linterrors|pageid}}",
+	"apihelp-query+linterrors-example-1": "{{doc-apihelp-example|query+linterrors}}",
+	"apihelp-record-lint-description": "{{doc-apihelp-description|record-lint}}",
+	"apihelp-record-lint-summary": "{{doc-apihelp-summary|record-lint}}",
+	"apihelp-record-lint-param-data": "{{doc-apihelp-param|record-lint|data}}",
+	"apihelp-record-lint-param-page": "{{doc-apihelp-param|record-lint|page}}\n{{Identical|Page title}}",
+	"apihelp-record-lint-param-revision": "{{doc-apihelp-param|record-lint|revision}}",
+	"apihelp-query+linterstats-description": "{{doc-apihelp-description|query+linterstats}}",
+	"apihelp-query+linterstats-summary": "{{doc-apihelp-summary|query+linterstats}}",
+	"apihelp-query+linterstats-example-1": "{{doc-apihelp-example|query+linterstats}}",
+	"apierror-linter-invalid-ip": "{{doc-apierror|linter}}\nError message when IP address has not been whitelisted to report lint errors",
+	"apierror-linter-invalid-data": "{{doc-apierror|linter}}\nError message when there is invalid data",
+	"apierror-linter-invalid-title": "{{doc-apierror|linter}}\nError message when there is invalid, non-existent, or outdated title"
+}

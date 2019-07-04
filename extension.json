@@ -16,7 +16,10 @@
 		"MediaWiki\\Linter\\": "includes/"
 	},
 	"MessagesDirs": {
-		"Linter": "i18n"
+		"Linter": [
+			"i18n",
+			"i18n/api"
+		]
 	},
 	"ExtensionMessagesFiles": {
 		"LinterAlias": "Linter.alias.php"
