@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Praveenp"
+		]
+	},
+	"apihelp-record-lint-param-page": "താളിന്റെ തലക്കെട്ട്",
+	"apierror-linter-invalid-data": "അസാധുവായ ഡേറ്റ",
+	"apierror-linter-invalid-title": "അസാധുവായ, നിലവിലില്ലാത്ത, അല്ലെങ്കിൽ കാലഹരണപ്പെട്ട തലക്കെട്ട്"
+}

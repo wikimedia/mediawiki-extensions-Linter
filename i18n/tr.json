@@ -30,6 +30,5 @@
 	"linter-heading-high-priority": "Yüksek öncelik",
 	"linter-heading-medium-priority": "Orta seviye öncelik",
 	"linter-heading-low-priority": "Düşük öncelik",
-	"pageinfo-linter": "Lint hataları",
-	"apihelp-record-lint-param-page": "Sayfa başlığı"
+	"pageinfo-linter": "Lint hataları"
 }

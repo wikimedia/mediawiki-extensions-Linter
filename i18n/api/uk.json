@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Piramidion"
+		]
+	},
+	"apihelp-query+linterrors-description": "Отримати список Lint-помилок",
+	"apihelp-query+linterrors-summary": "Отримати список Lint-помилок",
+	"apihelp-query+linterrors-param-categories": "Категорії Lint-помилок",
+	"apihelp-query+linterrors-param-limit": "Кількість результатів, на яку надіслати запит",
+	"apihelp-query+linterrors-param-from": "Ідентифікатор Lint, куди треба надсилати запити",
+	"apihelp-query+linterrors-param-namespace": "Включати лише Lint-помилки із вказаних просторів назв",
+	"apihelp-query+linterrors-param-pageid": "Включати лише Lint-помилки із вказаних ідентифікаторів сторінок",
+	"apihelp-query+linterrors-example-1": "Отримати всі Lint-помилки із категорії застарілих тегів",
+	"apihelp-record-lint-description": "Записати Lint-помилку в базі даних",
+	"apihelp-record-lint-summary": "Записати Lint-помилку в базу даних",
+	"apihelp-record-lint-param-data": "Дані про помилку, зашифровані у JSON",
+	"apihelp-record-lint-param-page": "Назва сторінки",
+	"apihelp-record-lint-param-revision": "Ідентифікатор версії, в якій було виявлено помилку",
+	"apihelp-query+linterstats-description": "Отримати кількість Lint-помилок у кожній категорії",
+	"apihelp-query+linterstats-summary": "Отримати кількість Lint-помилок у кожній категорії",
+	"apihelp-query+linterstats-example-1": "Отримати кількість Lint-помилок у кожній категорії",
+	"apierror-linter-invalid-ip": "Вашу IP-адресу не було додано до білого списку для надсилання звітів про Lint-помилки",
+	"apierror-linter-invalid-data": "Недійсні дані",
+	"apierror-linter-invalid-title": "Недійсна, неіснуюча, або застаріла назва"
+}

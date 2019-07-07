@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Janezdrilc"
+		]
+	},
+	"apihelp-query+linterrors-description": "Poglej seznam kodnih napak",
+	"apihelp-query+linterrors-summary": "Poglej seznam kodnih napak",
+	"apihelp-query+linterrors-param-categories": "Kategorije kodnih napak",
+	"apihelp-query+linterrors-param-namespace": "Vključi samo kodne napake specifičnega imenskega prostora",
+	"apihelp-query+linterrors-example-1": "Poglej vse kodne napake kategorije za zastarele značke",
+	"apihelp-record-lint-description": "Zabeleži kodno napako v zbirko",
+	"apihelp-record-lint-summary": "Zabeleži kodno napako v zbirko",
+	"apihelp-record-lint-param-data": "Šifrirani podatki JSON o napaki",
+	"apihelp-record-lint-param-page": "Naslov strani",
+	"apihelp-record-lint-param-revision": "Številka redakcije, v kateri je bila odkrita napaka",
+	"apihelp-query+linterstats-description": "Poglej število kodnih napak za vsako kategorijo",
+	"apihelp-query+linterstats-summary": "Poglej število kodnih napak za vsako kategorijo",
+	"apihelp-query+linterstats-example-1": "Poglej število kodnih napak za vsako kategorijo"
+}

@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Tacsipacsi"
+		]
+	},
+	"apihelp-query+linterrors-description": "Lint-hibák listájának lekérése",
+	"apihelp-query+linterrors-summary": "Lint-hibák listájának lekérése",
+	"apihelp-query+linterrors-param-categories": "Lint-hibák kategóriái",
+	"apihelp-query+linterrors-param-limit": "Megjelenítendő találatok száma",
+	"apihelp-query+linterrors-param-from": "A listázás kezdetét jelentő Lint-azonosító",
+	"apihelp-query+linterrors-param-namespace": "Csak a megadott névterekben előforduló Lint-hibák lekérése",
+	"apihelp-query+linterrors-param-pageid": "Csak a megadott azonosítójú lapok Lint-hibáinak lekérése",
+	"apihelp-query+linterrors-example-1": "Az obsolete-tag kategória összes Lint-hibájának lekérése",
+	"apihelp-record-lint-description": "Egy Lint-hiba rögzítése az adatbázisban",
+	"apihelp-record-lint-summary": "Egy Lint-hiba rögzítése az adatbázisban",
+	"apihelp-record-lint-param-data": "JSON-kódolt adatok a hibáról",
+	"apihelp-record-lint-param-page": "Lapcím",
+	"apihelp-record-lint-param-revision": "Lapváltozat-azonosító, amiben a hiba található",
+	"apihelp-query+linterstats-description": "Az egyes kategóriákban található Lint-hibák számának lekérése",
+	"apihelp-query+linterstats-summary": "Az egyes kategóriákban található Lint-hibák számának lekérése",
+	"apihelp-query+linterstats-example-1": "Az egyes kategóriákban található Lint-hibák számának lekérése",
+	"apierror-linter-invalid-ip": "Az IP-címedről nem engedélyezett a Lint-hibák jelentése",
+	"apierror-linter-invalid-data": "Érvénytelen adatok",
+	"apierror-linter-invalid-title": "Érvénytelen, nem létező vagy elavult cím"
+}

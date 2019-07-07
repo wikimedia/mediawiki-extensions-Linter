@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jeblad",
+			"Jon Harald Søby"
+		]
+	},
+	"apihelp-query+linterrors-description": "Hent en liste av lint-feil",
+	"apihelp-query+linterrors-summary": "Hent en liste av lint-feil",
+	"apihelp-query+linterrors-param-categories": "Kategorier av lint-feil",
+	"apihelp-query+linterrors-param-limit": "Antall resultater i spørringen",
+	"apihelp-query+linterrors-param-from": "Lint-ID å starte spørringen fra",
+	"apihelp-query+linterrors-param-namespace": "Bare inkluder lint-feil fra de angitte navnerommene",
+	"apihelp-query+linterrors-param-pageid": "Inkluder bare lint-feil fra de gitte side-ID-ene",
+	"apihelp-query+linterrors-example-1": "Hent alle lint-feil for avleggs-tagg kategorien",
+	"apihelp-record-lint-description": "Oppta en lint-feil i databasen",
+	"apihelp-record-lint-summary": "Oppta en lint-feil i databasen",
+	"apihelp-record-lint-param-data": "JSON-kodet data om feilen",
+	"apihelp-record-lint-param-page": "Sidetittel",
+	"apihelp-record-lint-param-revision": "Revisjons-ID hvor feilen ble funnet i",
+	"apihelp-query+linterstats-description": "Hent antall lint-feil i hver kategori",
+	"apihelp-query+linterstats-summary": "Hent antall lint-feil i hver kategori",
+	"apihelp-query+linterstats-example-1": "Hent antall lint-feil i hver kategori",
+	"apierror-linter-invalid-ip": "IP-adressen din har ikke blitt hvitelistet for å rapportere lint-feil",
+	"apierror-linter-invalid-data": "Ugyldige data",
+	"apierror-linter-invalid-title": "Ugyldig, ikke-eksisterende eller utdatert tittel"
+}

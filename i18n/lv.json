@@ -18,7 +18,5 @@
 	"linter-heading-high-priority": "Augsta prioritāte",
 	"linter-heading-medium-priority": "Vidēja prioritāte",
 	"linter-heading-low-priority": "Zema prioritāte",
-	"pageinfo-linter": "Lint kļūdas",
-	"apihelp-record-lint-param-page": "Lapas nosaukums",
-	"apierror-linter-invalid-data": "Nederīgi dati"
+	"pageinfo-linter": "Lint kļūdas"
 }

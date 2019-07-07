@@ -13,6 +13,5 @@
 	"linter-category-multiple-unclosed-formatting-tags-desc": "Šie puslapiai turi kelias neuždarytas formatavimo žymes",
 	"linter-numerrors": "($1 {{PLURAL:$1|klaida|klaidos}})",
 	"linter-page-edit": "redaguoti",
-	"linter-page-history": "istorija",
-	"apihelp-record-lint-param-page": "Puslapio pavadinimas"
+	"linter-page-history": "istorija"
 }

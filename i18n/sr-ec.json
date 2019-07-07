@@ -58,7 +58,5 @@
 	"linter-heading-medium-priority": "Средњи приоритет",
 	"linter-heading-low-priority": "Низак приоритет",
 	"multi-part-template-block": "Излаз није из једног шаблона",
-	"pageinfo-linter": "Прочишћивање грешака",
-	"apihelp-record-lint-param-page": "Наслов странице",
-	"apierror-linter-invalid-data": "Неважећи подаци"
+	"pageinfo-linter": "Прочишћивање грешака"
 }

@@ -28,6 +28,5 @@
 	"linter-heading-high-priority": "Erittäin tärkeä",
 	"linter-heading-medium-priority": "Melko tärkeä",
 	"linter-heading-low-priority": "Vähän tärkeä",
-	"pageinfo-linter": "Lint-virheet",
-	"apihelp-record-lint-param-page": "Sivun otsikko"
+	"pageinfo-linter": "Lint-virheet"
 }

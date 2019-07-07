@@ -16,6 +16,5 @@
 	"linter-category-pwrap-bug-workaround-desc": "या पानांत परिच्छेद गुंडाळणारा गणकदोष आहे ज्यावर काम करता येऊ शकते.",
 	"linter-heading-high-priority": "उच्च प्राथमिकता",
 	"linter-heading-medium-priority": "मध्यम प्राथमिकता",
-	"linter-heading-low-priority": "कमी प्राथमिकता",
-	"apihelp-record-lint-param-page": "पान शीर्षक"
+	"linter-heading-low-priority": "कमी प्राथमिकता"
 }

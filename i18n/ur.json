@@ -41,9 +41,5 @@
 	"linter-heading-medium-priority": "درمیانی ترجیح",
 	"linter-heading-low-priority": "کم تر ترجیح",
 	"multi-part-template-block": "ایک سانچے سے آؤٹ پٹ نہیں ہے۔",
-	"pageinfo-linter": "پوشیدہ نحوی نقائص",
-	"apihelp-query+linterrors-description": "لنٹ خطاؤں کی ایک فہرست حاصل کریں",
-	"apihelp-query+linterrors-param-categories": "لنٹ خطاؤں کے لیے زمرہ",
-	"apihelp-query+linterrors-param-limit": "کیوری سے تعداد نتائج",
-	"apihelp-record-lint-param-page": "عنوان صفحہ"
+	"pageinfo-linter": "پوشیدہ نحوی نقائص"
 }

@@ -27,6 +27,5 @@
 	"linter-heading-medium-priority": "Srednja važnost",
 	"linter-heading-low-priority": "Mala važnost",
 	"multi-part-template-block": "Proizlazi iz više od jednog predloška",
-	"pageinfo-linter": "Pročišćivač pogrješčica",
-	"apihelp-query+linterrors-param-namespace": "Prikaži samo pročišćivačeve pogrješčice iz pojedinih imenskih prostora"
+	"pageinfo-linter": "Pročišćivač pogrješčica"
 }

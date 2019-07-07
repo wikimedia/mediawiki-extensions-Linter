@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"BadDog",
+			"Prevodim"
+		]
+	},
+	"apihelp-record-lint-param-page": "Наслов странице",
+	"apierror-linter-invalid-data": "Неважећи подаци"
+}

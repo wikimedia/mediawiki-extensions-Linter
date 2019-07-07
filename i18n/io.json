@@ -7,7 +7,5 @@
 	"linterrors": "Erori pri 'Lint'",
 	"linterrors-subpage": "Erori pri 'Lint': $1",
 	"linter-pager-title": "Titulo di la pagino",
-	"pageinfo-linter": "Erori pri 'Lint'",
-	"apihelp-query+linterrors-param-categories": "Kategorio di erori pri 'Lint'",
-	"apihelp-record-lint-param-page": "Titulo di pagino"
+	"pageinfo-linter": "Erori pri 'Lint'"
 }

@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Danny B.",
+			"Dvorapa"
+		]
+	},
+	"apihelp-query+linterrors-description": "Získat seznam chyb nalezených Lintem",
+	"apihelp-query+linterrors-summary": "Získat seznam chyb nalezených Lintem",
+	"apihelp-query+linterrors-param-categories": "Kategorie chyb nalezených Lintem",
+	"apihelp-query+linterrors-param-limit": "Počet výsledků dotazu",
+	"apihelp-query+linterrors-param-from": "ID chyby od níž se má začít",
+	"apihelp-query+linterrors-param-namespace": "Zahrnout pouze chyby nalezené Lintem v zadaných jmenných prostorech",
+	"apihelp-query+linterrors-param-pageid": "Zobrazit chyby nalezené Lintem pouze pro specifická ID stránek",
+	"apihelp-query+linterrors-example-1": "Získat všechny zastaralé HTML značky nalezené Lintem",
+	"apihelp-record-lint-description": "Zaznamenat chybu nalezenou Lintem do databáze",
+	"apihelp-record-lint-summary": "Zaznamenat chybu nalezenou Lintem do databáze",
+	"apihelp-record-lint-param-data": "Data o chybě ve formátu JSON",
+	"apihelp-record-lint-param-page": "Název stránky",
+	"apihelp-record-lint-param-revision": "ID revize, v níž byla nalezena chyba",
+	"apihelp-query+linterstats-description": "Získat počet chyb nalezených Lintem pro každou kategorii",
+	"apihelp-query+linterstats-summary": "Získat počet chyb nalezených Lintem pro každou kategorii",
+	"apihelp-query+linterstats-example-1": "Získat počet chyb nalezených Lintem pro každou kategorii",
+	"apierror-linter-invalid-ip": "Vaší IP adrese nebylo povoleno hlásit chyby nalezené Lintem",
+	"apierror-linter-invalid-data": "Chybná data",
+	"apierror-linter-invalid-title": "Chybný, neexistující nebo zastaralý název"
+}

@@ -7,6 +7,5 @@
 	},
 	"linter-pager-title": "Sernavê rûpelê",
 	"linter-numerrors": "($1 {{PLURAL:$1|çewtî}})",
-	"linter-page-edit": "biguherîne",
-	"apihelp-record-lint-param-page": "Sernavê rûpelê"
+	"linter-page-edit": "biguherîne"
 }

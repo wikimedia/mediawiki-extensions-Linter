@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Metalhead64"
+		]
+	},
+	"apihelp-query+linterrors-description": "Ruft eine Liste der Lint-Fehler ab",
+	"apihelp-query+linterrors-summary": "Ruft eine Liste der Lint-Fehler ab",
+	"apihelp-query+linterrors-param-categories": "Kategorien der Lint-Fehler",
+	"apihelp-query+linterrors-param-limit": "Anzahl der abzurufenden Ergebnisse",
+	"apihelp-query+linterrors-param-from": "Lint-Kennung, ab der die Abfrage beginnen soll.",
+	"apihelp-query+linterrors-param-namespace": "Schließt nur Lint-Fehler von den angegebenen Namensräumen ein",
+	"apihelp-query+linterrors-param-pageid": "Schließt nur Lint-Fehler von den angegebenen Seitenkennungen ein",
+	"apihelp-query+linterrors-example-1": "Ruft alle Lint-Fehler der Kategorie obsolete-tag ab",
+	"apihelp-record-lint-description": "Nimmt einen Lint-Fehler in die Datenbank auf",
+	"apihelp-record-lint-summary": "Nimmt einen Lint-Fehler in die Datenbank auf",
+	"apihelp-record-lint-param-data": "JSON-kodierte Daten über den Fehler",
+	"apihelp-record-lint-param-page": "Seitentitel",
+	"apihelp-record-lint-param-revision": "Kennung der Version, in der der Fehler gefunden wurde.",
+	"apihelp-query+linterstats-description": "Ruft die Anzahl der Lint-Fehler in jeder Kategorie ab",
+	"apihelp-query+linterstats-summary": "Ruft die Anzahl der Lint-Fehler in jeder Kategorie ab",
+	"apihelp-query+linterstats-example-1": "Ruft die Anzahl der Lint-Fehler in jeder Kategorie ab",
+	"apierror-linter-invalid-ip": "Deine IP-Adresse ist nicht weißgelistet, um Lint-Fehler zu melden.",
+	"apierror-linter-invalid-data": "Ungültige Daten",
+	"apierror-linter-invalid-title": "Ungültiger, nicht vorhandener oder veralteter Titel"
+}

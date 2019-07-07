@@ -12,7 +12,5 @@
 	"linter-heading-high-priority": "Alta prioritato",
 	"linter-heading-medium-priority": "Meza prioritato",
 	"linter-heading-low-priority": "Malalta prioritato",
-	"pageinfo-linter": "Lint-eraroj",
-	"apihelp-query+linterrors-param-categories": "Kategorioj de lint-eraroj",
-	"apihelp-record-lint-param-page": "Titolo de paĝo"
+	"pageinfo-linter": "Lint-eraroj"
 }

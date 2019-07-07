@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"2nd-player",
+			"Omotecho",
+			"Otokoume",
+			"Yusuke1109"
+		]
+	},
+	"apihelp-query+linterrors-description": "lintエラーの一覧を集計",
+	"apihelp-query+linterrors-summary": "カテゴリ別のlintエラー件数を表示",
+	"apihelp-query+linterrors-param-categories": "lintエラーのカテゴリ",
+	"apihelp-query+linterrors-param-limit": "返す結果の数",
+	"apihelp-query+linterrors-param-from": "クエリ開始のLint ID",
+	"apihelp-query+linterrors-param-namespace": "指定した名前空間のlintエラーのみ集計",
+	"apihelp-query+linterrors-param-pageid": "指定したページのlintエラーのみ集計",
+	"apihelp-record-lint-description": "lintエラーをデータベースに記録します",
+	"apihelp-record-lint-summary": "lintエラーをデータベースに記録",
+	"apihelp-record-lint-param-page": "ページ名",
+	"apihelp-record-lint-param-revision": "エラーが見つかった更新ID",
+	"apihelp-query+linterstats-description": "カテゴリ別のlintエラー件数を表示",
+	"apihelp-query+linterstats-summary": "カテゴリ別のlintエラー件数を表示",
+	"apihelp-query+linterstats-example-1": "カテゴリ別のlintエラー件数を表示",
+	"apierror-linter-invalid-ip": "ご利用のIPアドレスはホワイトリストに載っていないため、lintエラーの報告ができません。",
+	"apierror-linter-invalid-data": "無効なデータ",
+	"apierror-linter-invalid-title": "無効なタイトル、存在しないタイトル、または古いタイトル"
+}

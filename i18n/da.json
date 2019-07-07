@@ -11,7 +11,5 @@
 	"linter-page-history": "historik",
 	"linter-heading-high-priority": "Høj prioritet",
 	"linter-heading-medium-priority": "Middel prioritet",
-	"linter-heading-low-priority": "Lav prioritet",
-	"apihelp-record-lint-param-page": "Sidetitel",
-	"apierror-linter-invalid-data": "Ugyldige data"
+	"linter-heading-low-priority": "Lav prioritet"
 }

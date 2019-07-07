@@ -54,12 +54,5 @@
 	"linter-heading-medium-priority": "Normale prioriteit",
 	"linter-heading-low-priority": "Lage prioriteit",
 	"multi-part-template-block": "Uitvoer komt niet van een enkel sjabloon",
-	"pageinfo-linter": "Lintfouten",
-	"apihelp-query+linterrors-description": "Een lijst van lintfouten opvragen.",
-	"apihelp-query+linterrors-summary": "Een lijst van lintfouten opvragen.",
-	"apihelp-query+linterrors-param-categories": "Lintfoutcategorieën.",
-	"apihelp-query+linterrors-param-limit": "Aantal resultaten om te tonen",
-	"apihelp-query+linterrors-param-namespace": "Alleen lintfouten in de opgegeven naamruimten opnemen.",
-	"apihelp-query+linterrors-example-1": "Alle lintfouten in de categorie \"obsolete-tag\" ophalen.",
-	"apihelp-record-lint-param-page": "Paginanaam"
+	"pageinfo-linter": "Lintfouten"
 }

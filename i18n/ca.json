@@ -43,6 +43,5 @@
 	"linter-heading-high-priority": "Prioritat alta",
 	"linter-heading-medium-priority": "Prioritat mitjana",
 	"linter-heading-low-priority": "Prioritat baixa",
-	"pageinfo-linter": "Errors de lint",
-	"apihelp-record-lint-param-page": "Títol de la pàgina"
+	"pageinfo-linter": "Errors de lint"
 }

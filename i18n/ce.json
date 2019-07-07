@@ -41,9 +41,5 @@
 	"linter-heading-medium-priority": "Юкъара приоритет",
 	"linter-heading-low-priority": "Лахара приоритет",
 	"multi-part-template-block": "Масийтта кепа чура",
-	"pageinfo-linter": "Статикин анализаторан гӀалаташ",
-	"apihelp-query+linterrors-description": "Статикин анализаторан долу карина гӀалаташ",
-	"apihelp-query+linterrors-summary": "Статикин анализаторан долу карина гӀалаташ",
-	"apihelp-query+linterrors-param-categories": "Статикин анализаторан гӀалатийн категореш",
-	"apihelp-record-lint-param-page": "АгӀона корта"
+	"pageinfo-linter": "Статикин анализаторан гӀалаташ"
 }

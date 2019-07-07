@@ -29,6 +29,5 @@
 	"linter-heading-medium-priority": "মধ্যম অগ্রাধিকার",
 	"linter-heading-low-priority": "নিন্ম অগ্রাধিকার",
 	"multi-part-template-block": "একটি একক টেমপ্লেট থেকে আউটপুট নয়",
-	"pageinfo-linter": "লিন্ট ত্রুটি",
-	"apihelp-record-lint-param-page": "পাতার শিরোনাম"
+	"pageinfo-linter": "লিন্ট ত্রুটি"
 }

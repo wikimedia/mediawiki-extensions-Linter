@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"apihelp-query+linterrors-description": "Llogra la llista d'errores de lint",
+	"apihelp-query+linterrors-summary": "Llogra la llista d'errores de lint",
+	"apihelp-query+linterrors-param-categories": "Categoríes d'errores de lint",
+	"apihelp-query+linterrors-param-limit": "Númberu de resultaos a consultar",
+	"apihelp-query+linterrors-param-from": "Id. de lint del que principiar una consulta",
+	"apihelp-query+linterrors-param-namespace": "Incluir solo los errores de lint de los espacios de nomes especificaos",
+	"apihelp-query+linterrors-param-pageid": "Incluir sólo los errores de lint de les IDs de páxina especificaos",
+	"apihelp-query+linterrors-example-1": "Llograr tolos errores de lint de la categoría «obsolete-tag»",
+	"apihelp-record-lint-description": "Grabar un error de lint na base de datos",
+	"apihelp-record-lint-summary": "Grabar un error de lint na base de datos",
+	"apihelp-record-lint-param-data": "Datos codificaos en JSON sobro l'error",
+	"apihelp-record-lint-param-page": "Títulu de la páxina",
+	"apihelp-record-lint-param-revision": "Id. de la revisión na que s'atopó l'error",
+	"apihelp-query+linterstats-description": "Algamar el númberu d'errores de lint en cada categoría",
+	"apihelp-query+linterstats-summary": "Algamar el númberu d'errores de lint en cada categoría",
+	"apihelp-query+linterstats-example-1": "Algamar el númberu d'errores de lint en cada categoría",
+	"apierror-linter-invalid-ip": "La to dirección IP nun ta autorizada pa informar sobre errores de lint",
+	"apierror-linter-invalid-data": "Datos non válidos",
+	"apierror-linter-invalid-title": "Títulu non válidu, inesistente o anticuáu"
+}
