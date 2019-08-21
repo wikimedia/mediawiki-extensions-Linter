@@ -4,7 +4,8 @@
 			"WikiPhoenix",
 			"Bengtsson96",
 			"Skalman",
-			"Mjälten"
+			"Mjälten",
+			"Thurs"
 		]
 	},
 	"linterrors": "Lint-fel",
@@ -23,7 +24,7 @@
 	"linter-pager-misnested-tag-details": "Felplacerad tagg som bör placeras korrekt",
 	"linter-pager-html5-misnesting-details": "Felnästlade taggar i HTML5 (men inte i Tidy)",
 	"linter-pager-multiple-unclosed-formatting-tags-details": "Flera ostängda formateringstaggar på sidan",
-	"linter-category-fostered": "Utvalt innehåll",
+	"linter-category-fostered": "Fostrat innehåll",
 	"linter-category-obsolete-tag": "Föråldrade HTML-taggar",
 	"linter-category-obsolete-tag-desc": "Dessa sidor använder föråldrade HTML-taggar.",
 	"linter-category-bogus-image-options": "Ogiltiga filalternativ",
