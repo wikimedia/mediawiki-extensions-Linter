@@ -33,7 +33,7 @@ class SpecialLintErrors extends SpecialPage {
 		parent::__construct( 'LintErrors' );
 	}
 
-	protected function showNamespaceFilterForm( $ns ) {
+	protected function showNamespaceFilterForm( $ns, $nsinvert ) {
 		$fields = [
 			'namespace' => [
 				'type' => 'namespaceselect',
@@ -43,6 +43,13 @@ class SpecialLintErrors extends SpecialPage {
 				'id' => 'namespace',
 				'all' => '',
 				'cssclass' => 'namespaceselector',
+			],
+			'nsinvert' => [
+				'type' => 'check',
+				'name' => 'invert',
+				'label-message' => 'invert',
+				'default' => $nsinvert,
+				'tooltip' => 'invert',
 			],
 		];
 		$form = HTMLForm::factory( 'ooui', $fields, $this->getContext() );
@@ -73,10 +80,11 @@ class SpecialLintErrors extends SpecialPage {
 			);
 			$out->addBacklinkSubtitle( $this->getPageTitle() );
 			$ns = $this->getRequest()->getIntOrNull( 'namespace' );
-			$this->showNamespaceFilterForm( $ns );
+			$nsinvert = $this->getRequest()->getBool( 'invert' );
+			$this->showNamespaceFilterForm( $ns, $nsinvert );
 			$pager = new LintErrorsPager(
 				$this->getContext(), $this->category, $this->getLinkRenderer(),
-				$catManager, $ns
+				$catManager, $ns, $nsinvert
 			);
 			$out->addParserOutput( $pager->getFullOutput() );
 		}

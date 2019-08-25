@@ -54,14 +54,20 @@ class LintErrorsPager extends TablePager {
 	 */
 	private $namespace;
 
+	/**
+	 * @var bool|null
+	 */
+	private $invertnamespace;
+
 	public function __construct( IContextSource $context, $category, LinkRenderer $linkRenderer,
-		CategoryManager $catManager, $namespace
+		CategoryManager $catManager, $namespace, $invertnamespace
 	) {
 		$this->category = $category;
 		$this->categoryManager = $catManager;
 		$this->categoryId = $catManager->getCategoryId( $this->category );
 		$this->linkRenderer = $linkRenderer;
 		$this->namespace = $namespace;
+		$this->invertnamespace = $invertnamespace;
 		$this->haveParserMigrationExt = ExtensionRegistry::getInstance()->isLoaded( 'ParserMigration' );
 		parent::__construct( $context );
 	}
@@ -69,7 +75,8 @@ class LintErrorsPager extends TablePager {
 	public function getQueryInfo() {
 		$conds = [ 'linter_cat' => $this->categoryId ];
 		if ( $this->namespace !== null ) {
-			$conds['page_namespace'] = $this->namespace;
+			$eq_op = $this->invertnamespace ? '!=' : '=';
+			$conds[] = "page_namespace $eq_op " . $this->mDb->addQuotes( $this->namespace );
 		}
 		return [
 			'tables' => [ 'page', 'linter' ],
