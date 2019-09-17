@@ -3,7 +3,8 @@
 		"authors": [
 			"Vito Genovese",
 			"Bulgu",
-			"Incelemeelemani"
+			"Incelemeelemani",
+			"Mirzali"
 		]
 	},
 	"linterrors": "Lint hataları",
@@ -28,6 +29,7 @@
 	"linter-category-stripped-tag": "Kaldırılmış etiketler",
 	"linter-category-stripped-tag-desc": "Bu sayfalarda çıkarılmış etiketler var.",
 	"linter-category-self-closed-tag": "Kendiliğinden kapanan etiketler",
+	"linter-numerrors": "($1 {{PLURAL:$1|hata|hata}})",
 	"linter-page-edit": "düzenle",
 	"linter-page-viewsource": "kaynağı gör",
 	"linter-page-history": "geçmiş",
