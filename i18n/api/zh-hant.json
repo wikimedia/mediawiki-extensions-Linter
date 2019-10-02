@@ -3,7 +3,8 @@
 		"authors": [
 			"A2093064",
 			"Cwlin0416",
-			"LNDDYL"
+			"LNDDYL",
+			"Xiplus"
 		]
 	},
 	"apihelp-query+linterrors-description": "取得 lint 錯誤的清單",
