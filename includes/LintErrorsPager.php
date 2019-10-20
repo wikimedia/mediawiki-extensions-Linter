@@ -182,6 +182,7 @@ class LintErrorsPager extends TablePager {
 				if ( isset( $lintError->templateInfo['multiPartTemplateBlock'] ) ) {
 					return $this->msg( 'multi-part-template-block' )->escaped();
 				} else {
+					// @phan-suppress-next-line PhanTypeArraySuspiciousNullable Null checked above
 					$templateName = $lintError->templateInfo['name'];
 					// Parsoid provides us with fully qualified template title
 					// So, fallback to the default main namespace

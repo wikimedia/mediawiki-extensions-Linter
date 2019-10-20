@@ -47,6 +47,7 @@ class ApiRecordLint extends ApiBase {
 		if ( !is_array( $data ) ) {
 			$this->dieWithError( 'apierror-linter-invalid-data', 'invalid-data' );
 		}
+		'@phan-var array[] $data';
 
 		$errors = [];
 		$title = Title::newFromText( $params['page'] );
