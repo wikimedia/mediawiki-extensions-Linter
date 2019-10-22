@@ -38,7 +38,7 @@ class RecordLintJobTest extends \MediaWikiTestCase {
 	 * @return Title
 	 */
 	private function getMockTitle( $articleId = 1, $revId = 2 ) {
-		$mock = $this->getMock( Title::class, [ 'getLatestRevID', 'getArticleID' ] );
+		$mock = $this->createMock( Title::class );
 		$mock->expects( $this->any() )->method( 'getLatestRevID' )->willReturn( $revId );
 		$mock->expects( $this->any() )->method( 'getArticleID' )->willReturn( $articleId );
 
