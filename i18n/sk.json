@@ -1,12 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Teslaton"
+			"Teslaton",
+			"Luky001"
 		]
 	},
 	"linterrors": "Chyby nájdené Lintom",
 	"linterrors-subpage": "Chyby nájdené Lintom: $1",
 	"linterrors-summary": "Poznámka: Počty pri kategóriách nie sú exaktné, sú založené na odhadoch.",
+	"linter-desc": "Zaznamenáva chyby nájdené externým Lintom a zobrazuje ich používateľom",
 	"linter-numerrors": "($1 {{PLURAL:$1|chyba|chyby|chýb}})",
 	"linter-heading-high-priority": "Vysoká priorita",
 	"linter-heading-medium-priority": "Stredná priorita",
