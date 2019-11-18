@@ -63,6 +63,8 @@
 	"linter-category-multiline-html-table-in-list-desc": "Tidy mueve la tabla dientro o fora de la llista, ente que HTML5 amplía la llista pol restu de la páxina.",
 	"linter-category-misc-tidy-replacement-issues": "Otros problemes relativos a la sustitución de Tidy",
 	"linter-category-misc-tidy-replacement-issues-desc": "Estes páxines tienen otros problemes qu'afeuten a la representación cuando se sustituya Tidy",
+	"linter-category-wikilink-in-extlink": "Enllaces dientro d'enllaces",
+	"linter-category-wikilink-in-extlink-desc": "Estes páxines tienen enllaces wiki dientro d'enllaces esternos y precisen correxise",
 	"linter-numerrors": "($1 {{PLURAL:$1|error|errores}})",
 	"linter-page-edit": "editar",
 	"linter-page-viewsource": "ver fonte",
