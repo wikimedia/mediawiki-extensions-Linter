@@ -22,6 +22,9 @@ namespace MediaWiki\Linter;
 
 use ApiBase;
 use FormatJson;
+use JobQueueGroup;
+use MediaWiki\Logger\LoggerFactory;
+use Title;
 use Wikimedia\IPSet;
 
 /**
@@ -32,6 +35,7 @@ class ApiRecordLint extends ApiBase {
 
 	public function execute() {
 		global $wgLinterSubmitterWhitelist;
+
 		$ipSet = new IPSet(
 			array_keys( array_filter( $wgLinterSubmitterWhitelist ) )
 		);
@@ -43,13 +47,51 @@ class ApiRecordLint extends ApiBase {
 		if ( !is_array( $data ) ) {
 			$this->dieWithError( 'apierror-linter-invalid-data', 'invalid-data' );
 		}
-		if ( Hooks::onParserLogLinterData(
-			$params['page'], $params['revision'], $data
-		) ) {
-			$this->getResult()->addValue( $this->getModuleName(), 'success', true );
-		} else {
+		'@phan-var array[] $data';
+
+		$errors = [];
+		$title = Title::newFromText( $params['page'] );
+		if ( !$title || !$title->getArticleID()
+			|| $title->getLatestRevID() != $params['revision']
+		) {
 			$this->dieWithError( 'apierror-linter-invalid-title', 'invalid-title' );
 		}
+		$categoryMgr = new CategoryManager();
+		$catCounts = [];
+		foreach ( $data as $info ) {
+			if ( !$categoryMgr->isKnownCategory( $info['type'] ) ) {
+				continue;
+			}
+			$count = $catCounts[$info['type']] ?? 0;
+			if ( $count > Database::MAX_PER_CAT ) {
+				// Drop
+				continue;
+			}
+			$catCounts[$info['type']] = $count + 1;
+			if ( !isset( $info['dsr'] ) ) {
+				LoggerFactory::getInstance( 'Linter' )->warning(
+					'dsr for {page} @ rev {revid}, for lint: {lint} is missing',
+					[
+						'page' => $params['page'],
+						'revid' => $params['revision'],
+						'lint' => $info['type'],
+					]
+				);
+				continue;
+			}
+			$info['location'] = array_slice( $info['dsr'], 0, 2 );
+			if ( isset( $info['templateInfo'] ) && $info['templateInfo'] ) {
+				$info['params']['templateInfo'] = $info['templateInfo'];
+			}
+			$errors[] = $info;
+		}
+
+		$job = new RecordLintJob( $title, [
+			'errors' => $errors,
+			'revision' => $params['revision'],
+		] );
+		JobQueueGroup::singleton()->push( $job );
+		$this->getResult()->addValue( $this->getModuleName(), 'success', true );
 	}
 
 	public function isInternal() {

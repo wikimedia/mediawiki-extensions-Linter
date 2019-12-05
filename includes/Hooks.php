@@ -27,9 +27,6 @@ use IContextSource;
 use MWCallableUpdate;
 use OutputPage;
 use WikiPage;
-use JobQueueGroup;
-use MediaWiki\Logger\LoggerFactory;
-use Title;
 
 class Hooks {
 	/**
@@ -133,63 +130,5 @@ class Hooks {
 		foreach ( $totals as $name => $count ) {
 			$pageInfo['linter'][] = [ $context->msg( "linter-category-$name" ), htmlspecialchars( $count ) ];
 		}
-	}
-
-	/**
-	 * Hook: ParserLogLinterData
-	 *
-	 * To record a lint errors.
-	 *
-	 * @param string $page
-	 * @param int $revision
-	 * @param array[] $data
-	 * @return bool
-	 */
-	public static function onParserLogLinterData(
-		string $page, int $revision, array $data
-	): bool {
-		$errors = [];
-		$title = Title::newFromText( $page );
-		if (
-			!$title || !$title->getArticleID() ||
-			$title->getLatestRevID() != $revision
-		) {
-			return false;
-		}
-		$categoryMgr = new CategoryManager();
-		$catCounts = [];
-		foreach ( $data as $info ) {
-			if ( !$categoryMgr->isKnownCategory( $info['type'] ) ) {
-				continue;
-			}
-			$count = $catCounts[$info['type']] ?? 0;
-			if ( $count > Database::MAX_PER_CAT ) {
-				// Drop
-				continue;
-			}
-			$catCounts[$info['type']] = $count + 1;
-			if ( !isset( $info['dsr'] ) ) {
-				LoggerFactory::getInstance( 'Linter' )->warning(
-					'dsr for {page} @ rev {revid}, for lint: {lint} is missing',
-					[
-						'page' => $page,
-						'revid' => $revision,
-						'lint' => $info['type'],
-					]
-				);
-				continue;
-			}
-			$info['location'] = array_slice( $info['dsr'], 0, 2 );
-			if ( isset( $info['templateInfo'] ) && $info['templateInfo'] ) {
-				$info['params']['templateInfo'] = $info['templateInfo'];
-			}
-			$errors[] = $info;
-		}
-		$job = new RecordLintJob( $title, [
-			'errors' => $errors,
-			'revision' => $revision,
-		] );
-		JobQueueGroup::singleton()->push( $job );
-		return true;
 	}
 }
