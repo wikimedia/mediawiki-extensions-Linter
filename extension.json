@@ -29,8 +29,7 @@
 		"BeforePageDisplay": "MediaWiki\\Linter\\Hooks::onBeforePageDisplay",
 		"APIQuerySiteInfoGeneralInfo": "MediaWiki\\Linter\\Hooks::onAPIQuerySiteInfoGeneralInfo",
 		"InfoAction": "MediaWiki\\Linter\\Hooks::onInfoAction",
-		"WikiPageDeletionUpdates": "MediaWiki\\Linter\\Hooks::onWikiPageDeletionUpdates",
-		"ParserLogLinterData": "MediaWiki\\Linter\\Hooks::onParserLogLinterData"
+		"WikiPageDeletionUpdates": "MediaWiki\\Linter\\Hooks::onWikiPageDeletionUpdates"
 	},
 	"APIModules": {
 		"record-lint": "MediaWiki\\Linter\\ApiRecordLint"
