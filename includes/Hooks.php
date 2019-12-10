@@ -159,7 +159,9 @@ class Hooks {
 		$categoryMgr = new CategoryManager();
 		$catCounts = [];
 		foreach ( $data as $info ) {
-			if ( !$categoryMgr->isKnownCategory( $info['type'] ) ) {
+			if ( $categoryMgr->isKnownCategory( $info['type'] ) ) {
+				$info[ 'dbid' ] = null;
+			} elseif ( !isset( $info[ 'dbid' ] ) ) {
 				continue;
 			}
 			$count = $catCounts[$info['type']] ?? 0;

@@ -51,14 +51,25 @@ class LintError {
 	 */
 	public $templateInfo;
 
+	/*
+	 * Optional hint for the linter category ID.
+	 * Passed through from Parsoid when a new category has been added
+	 * that isn't known to PHP yet.
+	 * @var int|null
+	 */
+	public $catId;
+
 	/**
 	 * @param string $category
 	 * @param int[] $location [ start, end ]
 	 * @param string|array $params JSON string or already decoded array
-	 * @param int $lintId linter_id
+	 * @param int|null $catId Optional category ID hint
+	 * @param int $lintId Optional linter_id
 	 */
-	public function __construct( $category, $location, $params, $lintId = 0 ) {
+	public function __construct( $category, $location, $params, $catId = null, $lintId = 0 ) {
 		$this->category = $category;
+		$this->catId = $catId;
+
 		if ( is_string( $params ) ) {
 			$params = FormatJson::decode( $params, true );
 		}
@@ -92,5 +103,4 @@ class LintError {
 
 		return $params;
 	}
-
 }

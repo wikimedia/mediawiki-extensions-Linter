@@ -48,7 +48,8 @@ class RecordLintJob extends Job {
 			$error = new LintError(
 				$errorInfo['type'],
 				$errorInfo['location'],
-				$errorInfo['params']
+				$errorInfo['params'],
+				$errorInfo['dbid']
 			);
 			// Use unique id as key to get rid of exact dupes
 			// (e.g. same category of error in same template)
