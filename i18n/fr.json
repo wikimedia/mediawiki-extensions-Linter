@@ -18,7 +18,7 @@
 	"linter-desc": "Tracer les erreurs de lint depuis un service externe et les afficher aux utilisateurs",
 	"linter-form-namespace": "Espace de noms :",
 	"linter-pager-title": "Titre de la page",
-	"linter-pager-template": "Via un modèle ?",
+	"linter-pager-template": "Via un modèle ?",
 	"linter-pager-obsolete-tag-details": "Balise HTML désuète",
 	"linter-pager-bogus-image-options-details": "Option de fichier factices",
 	"linter-pager-missing-end-tag-details": "Balise de fin manquante",
