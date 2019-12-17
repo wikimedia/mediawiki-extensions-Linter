@@ -49,12 +49,14 @@ class CategoryManager {
 	];
 
 	/**
-	 * @var string[]
+	 * @var bool[]
+	 * @phan-var array<string,bool>
 	 */
 	private $parserMigrationCategories = [];
 
 	/**
-	 * @var string[]
+	 * @var bool[]
+	 * @phan-var array<string,bool>
 	 */
 	private $hasNameParam = [];
 
