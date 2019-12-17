@@ -131,7 +131,10 @@ class Hooks {
 		}
 
 		foreach ( $totals as $name => $count ) {
-			$pageInfo['linter'][] = [ $context->msg( "linter-category-$name" ), htmlspecialchars( $count ) ];
+			$pageInfo['linter'][] = [
+				$context->msg( "linter-category-$name" ),
+				htmlspecialchars( (string)$count )
+			];
 		}
 	}
 
