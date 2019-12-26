@@ -1,8 +1,27 @@
 {
 	"@metadata": {
 		"authors": [
-			"Incelemeelemani"
+			"Incelemeelemani",
+			"BaRaN6161 TURK"
 		]
 	},
-	"apihelp-record-lint-param-page": "Sayfa başlığı"
+	"apihelp-query+linterrors-description": "Tiftik hatalarının bir listesini alın",
+	"apihelp-query+linterrors-summary": "Tiftik hatalarının bir listesini alın",
+	"apihelp-query+linterrors-param-categories": "Lif hataları kategorileri",
+	"apihelp-query+linterrors-param-limit": "Sorgulanacak sonuç sayısı",
+	"apihelp-query+linterrors-param-from": "Sorgulamaya başlamak için Lint kimliği",
+	"apihelp-query+linterrors-param-namespace": "Yalnızca belirtilen ad alanlarından tiftik hataları ekle",
+	"apihelp-query+linterrors-param-pageid": "Yalnızca belirtilen sayfa kimliklerindeki tüy bırakma hatalarını dahil et",
+	"apihelp-query+linterrors-example-1": "Eski etiket kategorisindeki tüm tiftik hatalarını alın",
+	"apihelp-record-lint-description": "Veritabanına hav bırakma hatası kaydet",
+	"apihelp-record-lint-summary": "Veritabanına hav bırakma hatası kaydet",
+	"apihelp-record-lint-param-data": "Hata hakkında JSON kodlu veriler",
+	"apihelp-record-lint-param-page": "Sayfa başlığı",
+	"apihelp-record-lint-param-revision": "Hatanın bulunduğu düzeltme kimliği",
+	"apihelp-query+linterstats-description": "Her kategorideki tüy bırakma hatası sayısını alın",
+	"apihelp-query+linterstats-summary": "Her kategorideki tüy bırakma hatası sayısını alın",
+	"apihelp-query+linterstats-example-1": "Her kategorideki tüy bırakma hatası sayısını alın",
+	"apierror-linter-invalid-ip": "IP adresiniz tiftik hataları bildirmek için beyaz listeye eklenmedi",
+	"apierror-linter-invalid-data": "Geçersiz veri",
+	"apierror-linter-invalid-title": "Geçersiz, var olmayan veya güncel olmayan başlık"
 }

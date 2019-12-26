@@ -10,7 +10,7 @@
 	"linter-desc": "Следи грешки од пречистувачот од надворешна служба и ги прикажува на корисниците",
 	"linter-form-namespace": "Именски простор:",
 	"linter-pager-title": "Наслов на страницата",
-	"linter-pager-template": "Преку шаблон?",
+	"linter-pager-template": "Преку предлошка?",
 	"linter-pager-obsolete-tag-details": "Застарена HTML-ознака",
 	"linter-pager-bogus-image-options-details": "Лажна податотечна можност",
 	"linter-pager-missing-end-tag-details": "Отсутна завршна ознака",
@@ -70,6 +70,6 @@
 	"linter-heading-high-priority": "Висок приоритет",
 	"linter-heading-medium-priority": "Среден приоритет",
 	"linter-heading-low-priority": "Низок приоритет",
-	"multi-part-template-block": "Изводот не е од единствен шаблон",
+	"multi-part-template-block": "Изводот не е од единствена предлошка",
 	"pageinfo-linter": "Грешки од пречистувачот"
 }
