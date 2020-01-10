@@ -20,8 +20,8 @@
 
 namespace MediaWiki\Linter;
 
-use HTMLForm;
 use Html;
+use HTMLForm;
 use MediaWiki\MediaWikiServices;
 use SpecialPage;
 

@@ -24,12 +24,12 @@ use ApiQuerySiteInfo;
 use Content;
 use DatabaseUpdater;
 use IContextSource;
-use MWCallableUpdate;
-use OutputPage;
-use WikiPage;
 use JobQueueGroup;
 use MediaWiki\Logger\LoggerFactory;
+use MWCallableUpdate;
+use OutputPage;
 use Title;
+use WikiPage;
 
 class Hooks {
 	/**

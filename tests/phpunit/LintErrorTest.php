@@ -36,7 +36,7 @@ class LintErrorTest extends \MediaWikiTestCase {
 		$this->assertEquals( 'fostered', $error1->category );
 		$this->assertEquals( [ 0, 10 ], $error1->location );
 		$this->assertEquals( [], $error1->params );
-		$this->assertEquals( null, $error1->templateInfo );
+		$this->assertNull( $error1->templateInfo );
 		$this->assertEquals( 'fostered,0,10,[]', $error1->id() );
 
 		$error2 = new LintError(
@@ -51,7 +51,7 @@ class LintErrorTest extends \MediaWikiTestCase {
 		$this->assertEquals( [ 10, 20 ], $error2->location );
 		$this->assertEquals( [ 'name' => 'big' ], $error2->params );
 		$this->assertEquals( [ 'name' => 'big' ], $error2->getExtraParams() );
-		$this->assertEquals( null, $error2->templateInfo );
+		$this->assertNull( $error2->templateInfo );
 		$this->assertEquals( 5, $error2->lintId );
 		$this->assertEquals( 'obsolete-tag,10,20,{"name":"big"}', $error2->id() );
 

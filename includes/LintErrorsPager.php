@@ -21,15 +21,15 @@
 namespace MediaWiki\Linter;
 
 use ExtensionRegistry;
+use Html;
 use IContextSource;
 use InvalidArgumentException;
 use LinkCache;
-use Html;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\MediaWikiServices;
 use TablePager;
-use TitleValue;
 use Title;
+use TitleValue;
 
 class LintErrorsPager extends TablePager {
 
