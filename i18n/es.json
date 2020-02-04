@@ -7,7 +7,8 @@
 			"Luzcaru",
 			"MarcoAurelio",
 			"James",
-			"Astroemi"
+			"Astroemi",
+			"DannyS712"
 		]
 	},
 	"linterrors": "Errores de sintaxis",
@@ -67,6 +68,8 @@
 	"linter-category-multiline-html-table-in-list-desc": "Tidy desplaza la tabla dentro o fuera de la lista, mientras que HTML5 amplía la lista por el resto de la página.",
 	"linter-category-misc-tidy-replacement-issues": "Otros problemas relativos a la sustitución de Tidy",
 	"linter-category-misc-tidy-replacement-issues-desc": "Estas páginas tienen otros problemas que afectan a su representación al reemplazarse Tidy",
+	"linter-category-wikilink-in-extlink": "Enlaces en enlaces",
+	"linter-category-wikilink-in-extlink-desc": "Estas páginas tienen enlaces en enlaces externos que podría ser fijado",
 	"linter-numerrors": "($1 {{PLURAL:$1|error|errores}})",
 	"linter-page-edit": "editar",
 	"linter-page-viewsource": "ver código",
