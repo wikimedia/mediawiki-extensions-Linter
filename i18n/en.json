@@ -14,7 +14,7 @@
 	"linter-category-html5-misnesting": "Misnested tag with different rendering in HTML5 and HTML4",
 	"linter-category-html5-misnesting-desc": "These misnested tags will behave differently in HTML5 compared to HTML4.",
 	"linter-category-misc-tidy-replacement-issues": "Miscellaneous issues",
-	"linter-category-misc-tidy-replacement-issues-desc": "These pages have other issues that affect rendering compared to previously",
+	"linter-category-misc-tidy-replacement-issues-desc": "These pages have other issues that cause them to be rendered differently from how they appeared previously",
 	"linter-category-misnested-tag": "Misnested tags",
 	"linter-category-misnested-tag-desc": "These pages have misnested tags that could be fixed.",
 	"linter-category-missing-end-tag": "Missing end tag",
