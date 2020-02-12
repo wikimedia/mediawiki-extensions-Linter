@@ -5,8 +5,8 @@
 			"Wertuose"
 		]
 	},
-	"linter-pager-self-closed-tag-details": "Self-qapalı tag",
 	"linter-category-self-closed-tag": "Self-qapalı tags",
 	"linter-category-self-closed-tag-desc": "Bu pages özünü qapalı tags var.",
-	"linter-page-edit": "redaktə"
+	"linter-page-edit": "redaktə",
+	"linter-pager-self-closed-tag-details": "Self-qapalı tag"
 }

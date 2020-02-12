@@ -5,13 +5,13 @@
 		]
 	},
 	"linterrors": "لنٽِ چڪون",
-	"linterrors-subpage": "لنٽِ چڪون: $1",
-	"linter-form-namespace": "نانءُپولار:",
-	"linter-pager-title": "صفحي جو عنوان",
-	"linter-pager-obsolete-tag-details": "اوبسليٽ ايڇٽي.ايم.ايل ٽيگَ",
-	"linter-pager-missing-end-tag-details": "کٽل اختتام ٽيگ",
-	"linter-category-obsolete-tag": "اوبسليٽ ايڇٽي.ايم.ايل ٽيگَ",
 	"linter-category-missing-end-tag": "کٽل اختتام ٽيگ",
+	"linter-category-obsolete-tag": "اوبسليٽ ايڇٽي.ايم.ايل ٽيگَ",
+	"linter-form-namespace": "نانءُپولار:",
 	"linter-numerrors": "($1 {{PLURAL:$1|خرابي|خرابيون}})",
+	"linter-pager-missing-end-tag-details": "کٽل اختتام ٽيگ",
+	"linter-pager-obsolete-tag-details": "اوبسليٽ ايڇٽي.ايم.ايل ٽيگَ",
+	"linter-pager-title": "صفحي جو عنوان",
+	"linterrors-subpage": "لنٽِ چڪون: $1",
 	"pageinfo-linter": "لنٽِ چڪون"
 }

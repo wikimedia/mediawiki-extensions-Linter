@@ -5,8 +5,8 @@
 		]
 	},
 	"linterrors": "Erori pri 'Lint'",
-	"linterrors-subpage": "Erori pri 'Lint': $1",
 	"linter-form-namespace": "'Namespace:'",
 	"linter-pager-title": "Titulo di la pagino",
+	"linterrors-subpage": "Erori pri 'Lint': $1",
 	"pageinfo-linter": "Erori pri 'Lint'"
 }

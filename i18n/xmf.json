@@ -4,10 +4,10 @@
 			"Silovan"
 		]
 	},
-	"linterrors-subpage": "ანგეფიშ ჩილათეფიː$1",
-	"linter-pager-obsolete-tag-details": "მოჯვეშაფილი HTML ტეგი",
+	"linter-category-missing-end-tag-desc": "თე ხასჷლეფს ვარე მაკილარი თეგეფი",
+	"linter-page-edit": "რედაქტირაფა",
 	"linter-pager-bogus-image-options-details": "ფაილიშ ჩილათირი პარამეტრი",
 	"linter-pager-missing-end-tag-details": "ვარე მაკილარი ტეგი",
-	"linter-category-missing-end-tag-desc": "თე ხასჷლეფს ვარე მაკილარი თეგეფი",
-	"linter-page-edit": "რედაქტირაფა"
+	"linter-pager-obsolete-tag-details": "მოჯვეშაფილი HTML ტეგი",
+	"linterrors-subpage": "ანგეფიშ ჩილათეფიː$1"
 }

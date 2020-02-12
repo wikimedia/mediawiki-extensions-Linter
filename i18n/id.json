@@ -5,13 +5,13 @@
 		]
 	},
 	"linterrors": "Galat lint",
-	"linterrors-subpage": "Galat lint: $1",
-	"linterrors-summary": "<strong>Catatan:</strong> Hitungan untuk kategori bukan merupakan hitungan yang akurat, namun didasarkan dari estimasi.",
 	"linter-desc": "Melacak galat lint dari sebuah layanan eksternal dan menampilkannya kepada pengguna",
 	"linter-form-namespace": "Ruang nama:",
-	"linter-pager-title": "Judul halaman",
-	"linter-pager-template": "Melalui sebuah templat?",
-	"linter-pager-obsolete-tag-details": "Tag HTML yang tidak digunakan lagi",
 	"linter-pager-bogus-image-options-details": "Opsi berkas bogus",
-	"linter-pager-missing-end-tag-details": "Tidak memiliki tag penutup"
+	"linter-pager-missing-end-tag-details": "Tidak memiliki tag penutup",
+	"linter-pager-obsolete-tag-details": "Tag HTML yang tidak digunakan lagi",
+	"linter-pager-template": "Melalui sebuah templat?",
+	"linter-pager-title": "Judul halaman",
+	"linterrors-subpage": "Galat lint: $1",
+	"linterrors-summary": "<strong>Catatan:</strong> Hitungan untuk kategori bukan merupakan hitungan yang akurat, namun didasarkan dari estimasi."
 }

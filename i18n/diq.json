@@ -5,10 +5,10 @@
 		]
 	},
 	"linterrors": "Xeteyê linti",
-	"linterrors-subpage": "Xeteyê linti: $1",
-	"linter-form-namespace": "Heruna nameyan:",
-	"linter-pager-title": "Sernameyê pele",
 	"linter-category-wikilink-in-extlink": "Gıreyan de gıreyi",
+	"linter-form-namespace": "Heruna nameyan:",
 	"linter-page-edit": "bıvurne",
+	"linter-pager-title": "Sernameyê pele",
+	"linterrors-subpage": "Xeteyê linti: $1",
 	"pageinfo-linter": "Xeteyê linti"
 }

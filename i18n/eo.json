@@ -5,12 +5,12 @@
 		]
 	},
 	"linterrors": "Lint-eraroj",
-	"linterrors-subpage": "Lint-eraroj: $1",
 	"linter-form-namespace": "Nomspaco:",
-	"linter-pager-title": "Titolo de paĝo",
-	"linter-numerrors": "($1 {{PLURAL:$1|eraro|eraroj}})",
 	"linter-heading-high-priority": "Alta prioritato",
-	"linter-heading-medium-priority": "Meza prioritato",
 	"linter-heading-low-priority": "Malalta prioritato",
+	"linter-heading-medium-priority": "Meza prioritato",
+	"linter-numerrors": "($1 {{PLURAL:$1|eraro|eraroj}})",
+	"linter-pager-title": "Titolo de paĝo",
+	"linterrors-subpage": "Lint-eraroj: $1",
 	"pageinfo-linter": "Lint-eraroj"
 }
