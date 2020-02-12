@@ -123,7 +123,8 @@ class LintErrorsPager extends TablePager {
 			case 'title':
 				$title = Title::makeTitle( $row->page_namespace, $row->page_title );
 				$viewLink = $this->linkRenderer->makeLink( $title );
-				$editMsgKey = $title->quickUserCan( 'edit', $this->getUser() ) ?
+				$permManager = MediaWikiServices::getInstance()->getPermissionManager();
+				$editMsgKey = $permManager->quickUserCan( 'edit', $this->getUser(), $title ) ?
 					'linter-page-edit' : 'linter-page-viewsource';
 				$editLink = $this->linkRenderer->makeLink(
 					$title,
