@@ -5,6 +5,7 @@
 		]
 	},
 	"linterrors": "Lint kļūdas",
+	"linter-category-misc-tidy-replacement-issues": "Dažādas problēmas",
 	"linter-form-namespace": "Vārdtelpa:",
 	"linter-heading-high-priority": "Augsta prioritāte",
 	"linter-heading-low-priority": "Zema prioritāte",
