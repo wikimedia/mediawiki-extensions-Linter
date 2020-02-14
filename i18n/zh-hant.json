@@ -11,7 +11,7 @@
 			"Xiplus"
 		]
 	},
-	"linterrors": "Lint 錯誤",
+	"linterrors": "Lint錯誤",
 	"linter-category-bogus-image-options": "有問題的檔案選項",
 	"linter-category-bogus-image-options-desc": "這些頁面有些圖片或檔案含有錯誤的選項。",
 	"linter-category-deletable-table-tag": "應被刪除的表格標籤",
