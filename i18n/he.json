@@ -16,7 +16,7 @@
 	"linter-category-html5-misnesting": "תג עם קינון שגוי שמוצג באופן שונה ב־HTML5 וב־HTML4",
 	"linter-category-html5-misnesting-desc": "התגים האלה מקוננים באופן שגוי והם מתנהגים באופן שונה ב־HTML5 וב־HTML4.",
 	"linter-category-misc-tidy-replacement-issues": "בעיות שונות",
-	"linter-category-misc-tidy-replacement-issues-desc": "בדפים האלה יש בעיות אחרות שמשפיעות על תיצוג בהשוואה למצב קודם",
+	"linter-category-misc-tidy-replacement-issues-desc": "בדפים האלה יש בעיות אחרות שגורמים להם להיות מתוצגים באופן שונה מאיך שהם נראו קודם לכן",
 	"linter-category-misnested-tag": "תגים שמקוננים באופן שגוי",
 	"linter-category-misnested-tag-desc": "בדפים האלה יש תגים שמקוננים באופן שגוי שאפשר לתקן.",
 	"linter-category-missing-end-tag": "תג מסיים חסר",

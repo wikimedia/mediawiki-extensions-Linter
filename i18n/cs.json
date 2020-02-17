@@ -19,7 +19,7 @@
 	"linter-category-html5-misnesting": "Prolínající se prvek s odlišným renderováním v HTML5 a HTML4",
 	"linter-category-html5-misnesting-desc": "Tyto prolínající se prvky se budou chovat odlišně v HTML5 a HTML4",
 	"linter-category-misc-tidy-replacement-issues": "Nezatříděné problémy",
-	"linter-category-misc-tidy-replacement-issues-desc": "Tyto stránky mají jiné potíže, které v porovnání s dřívějším ovlivňují vykreslování",
+	"linter-category-misc-tidy-replacement-issues-desc": "Tyto stránky mají jiné potíže, které způsobují, že se vykreslují jinak vzhledem k jejich dřívějšímu vzhledu",
 	"linter-category-misnested-tag": "Prolínající se prvky",
 	"linter-category-misnested-tag-desc": "Tyto stránky obsahují prvky, které se navzájem prolínají, takže není možné určit, který je uvnitř kterého.",
 	"linter-category-missing-end-tag": "Chybějící koncové značky",

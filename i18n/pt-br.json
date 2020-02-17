@@ -16,7 +16,7 @@
 	"linter-category-html5-misnesting": "Elemento mal intercalado com composição gráfica diferente em HTML5 e HTML4",
 	"linter-category-html5-misnesting-desc": "Estes elementos mal intercalados terão comportamentos diferentes no HTML5 em comparação com o HTML4",
 	"linter-category-misc-tidy-replacement-issues": "Problemas diversos",
-	"linter-category-misc-tidy-replacement-issues-desc": "Essas páginas têm outros problemas que afetam a renderização em comparação com as versões anteriores.",
+	"linter-category-misc-tidy-replacement-issues-desc": "Essas páginas têm outros problemas que as tornam renderizadas de maneira diferente da aparência anterior",
 	"linter-category-misnested-tag": "Etiquetas Misnested",
 	"linter-category-misnested-tag-desc": "Essas páginas têm tags inadequadas que podem ser corrigidas.",
 	"linter-category-missing-end-tag": "Faltando tag final",

@@ -15,7 +15,7 @@
 	"linter-category-html5-misnesting": "Falsch verschachteltes Tag mit einer unterschiedlichen Darstellung in HTML5 und HTML4",
 	"linter-category-html5-misnesting-desc": "Diese falsch verschachtelten Tags werden sich in HTML5 im Vergleich zu HTML4 unterschiedlich verhalten.",
 	"linter-category-misc-tidy-replacement-issues": "Verschiedene Probleme",
-	"linter-category-misc-tidy-replacement-issues-desc": "Diese Seiten haben andere Probleme, die die Darstellung im Vergleich zu früher beeinflussen",
+	"linter-category-misc-tidy-replacement-issues-desc": "Diese Seiten haben andere Probleme, die dazu führen, dass sie anders dargestellt werden, als sie vorher erschienen sind",
 	"linter-category-misnested-tag": "Falsch verschachtelte Tags",
 	"linter-category-misnested-tag-desc": "Diese Seiten haben falsch verschachtelte Tags, die korrigiert werden könnten.",
 	"linter-category-missing-end-tag": "Fehlendes End-Tag",

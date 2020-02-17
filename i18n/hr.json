@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Bugoslav",
-			"SpeedyGonsales"
+			"SpeedyGonsales",
+			"Neptune, the Mystic"
 		]
 	},
 	"linterrors": "Pročišćivač pogrješčica",
@@ -25,6 +26,7 @@
 	"linter-pager-missing-end-tag-details": "Nedostaje zatvarajuća oznaka",
 	"linter-pager-obsolete-tag-details": "Zastarjela HTML oznaka",
 	"linter-pager-template": "Preko predloška?",
+	"linter-pager-tidy-font-bug-details": "Oznaka font pokušava promijeniti boju poveznice",
 	"linter-pager-title": "Ime stranice",
 	"linterrors-subpage": "Pročišćivač pogrješčica: $1",
 	"linterrors-summary": "<strong>Bilješka:</strong> Zbrojidbe za kategorije nisu dane precizno/točno, nego su dane približno prema procjenjenom broju članova kategorije.",

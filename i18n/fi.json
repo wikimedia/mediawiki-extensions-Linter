@@ -24,9 +24,10 @@
 	"linter-page-viewsource": "näytä wikiteksti",
 	"linter-pager-deletable-table-tag-details": "Table-tagi, joka pitäisi poistaa",
 	"linter-pager-missing-end-tag-details": "Missing end tag",
-	"linter-pager-template": "Mallineen kautta?",
-	"linter-pager-title": "Sivun otsikko",
+	"linter-pager-template": "Virhe tulee mallineesta...",
+	"linter-pager-title": "Sivun nimi",
 	"linterrors-subpage": "Lint-virheet: $1",
 	"linterrors-summary": "<strong>Huomaa:</strong> Luokkien sisältämät lukumäärät eivät ole tarkkoja vaan perustuvat arvioihin.",
+	"multi-part-template-block": "Tulos ei johdu vain yhdestä mallineesta",
 	"pageinfo-linter": "Lint-virheet"
 }
