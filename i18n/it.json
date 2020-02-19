@@ -19,7 +19,7 @@
 	"linter-category-html5-misnesting": "Tag annidati male con resa differente in HTML5 e HTML4",
 	"linter-category-html5-misnesting-desc": "Questi tag male annidati si comporteranno diversamente in HTML5 rispetto a HTML4.",
 	"linter-category-misc-tidy-replacement-issues": "Vari problemi di sostituzione",
-	"linter-category-misc-tidy-replacement-issues-desc": "Queste pagine hanno altri problemi che influenzano la resa rispetto a prima",
+	"linter-category-misc-tidy-replacement-issues-desc": "Queste pagine hanno altri problemi che causano un'aspetto differente rispetto a quanto appariva prima",
 	"linter-category-misnested-tag": "Tag annidati male",
 	"linter-category-misnested-tag-desc": "Queste pagine contengono tag annidati in maniera sbagliata.",
 	"linter-category-missing-end-tag": "Tag di chiusura mancante",
