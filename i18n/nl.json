@@ -19,7 +19,7 @@
 	"linter-category-fostered": "Misplaatste inhoud",
 	"linter-category-fostered-desc": "Deze pagina's hebben misplaatste inhoud.",
 	"linter-category-html5-misnesting": "Verkeerd geneste tag met andere weergave in HTML5 dan in HTML4",
-	"linter-category-misc-tidy-replacement-issues": "Verscheidene problemen met het vervangen van Tidy",
+	"linter-category-misc-tidy-replacement-issues": "Verscheidene problemen",
 	"linter-category-misnested-tag": "Elementen die elkaar niet compleet insluiten",
 	"linter-category-misnested-tag-desc": "Deze pagina's bevatten elementen die een ander element niet compleet insluiten.",
 	"linter-category-missing-end-tag": "Afsluitende tag ontbreekt",
