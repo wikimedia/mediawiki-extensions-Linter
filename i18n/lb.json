@@ -8,6 +8,7 @@
 	"linterrors": "Lint-Feeler",
 	"linter-category-fostered": "Qualitéits-Inhalt",
 	"linter-category-fostered-desc": "Dës Säiten hu Qualitéits-Inhalt.",
+	"linter-category-misc-tidy-replacement-issues": "Verschidde Probleemer",
 	"linter-category-missing-end-tag": "Schluss-Tag feelt",
 	"linter-category-missing-end-tag-desc": "Op dëse Säite feele Schluss-Tagen.",
 	"linter-category-multiple-unclosed-formatting-tags": "Méi Formatéierungs-Tags déi net zou sinn",
