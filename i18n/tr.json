@@ -44,7 +44,7 @@
 	"linter-category-unclosed-quotes-in-heading": "Başlıktaki kapatılmamış fiyat teklifi",
 	"linter-category-unclosed-quotes-in-heading-desc": "Bu sayfalar bir başlıkta kapatılmamış bir alıntı içeriyor ve bunlar daha sonra içindekiler tablosundan dışarı çıkıyor.",
 	"linter-category-wikilink-in-extlink": "Bağlantılardaki bağlantılar",
-	"linter-category-wikilink-in-extlink-desc": "Bu sayfalarda düzeltilebilen harici bağlantılarda wiki bağlantılar var",
+	"linter-category-wikilink-in-extlink-desc": "Bu sayfalarda düzeltilebilen harici bağlantılarda vikibağlantılar var",
 	"linter-desc": "Lint hatalarını harici bir hizmetten izleyin ve kullanıcılara gösterin",
 	"linter-form-namespace": "Ad alanı:",
 	"linter-heading-high-priority": "Yüksek öncelik",
