@@ -14,7 +14,7 @@
 	"linter-category-fostered-desc": "Disse sidene har fostret innhold.",
 	"linter-category-html5-misnesting": "Feilnøstede tagger med forskjellig gjengivelse i HTML5 og HTML4",
 	"linter-category-html5-misnesting-desc": "Disse feilnøstede taggene vil oppføre seg forskjellig i HTML5 sammenlifnet med HTML4.",
-	"linter-category-misc-tidy-replacement-issues": "Diverse Tidy-erstatningsproblemer",
+	"linter-category-misc-tidy-replacement-issues": "Diverse problemer",
 	"linter-category-misc-tidy-replacement-issues-desc": "Disse sidene har andre problemer som påvirker visning når Tidy erstattes",
 	"linter-category-misnested-tag": "Feilplasserte tagger",
 	"linter-category-misnested-tag-desc": "Disse sidene har feilplasserte tagger som kan fikses.",
