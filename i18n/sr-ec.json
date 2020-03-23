@@ -25,7 +25,7 @@
 	"linter-category-missing-end-tag-desc": "Ове странице имају недостајуће затварајуће ознаке.",
 	"linter-category-multi-colon-escape": "Escape с више двотачки",
 	"linter-category-multi-colon-escape-desc": "Ове странице имају везе с префиксима више двотачки.",
-	"linter-category-multiline-html-table-in-list": "Вишелинијска табела у листи",
+	"linter-category-multiline-html-table-in-list": "Вишередна табела на списку",
 	"linter-category-obsolete-tag": "Застареле HTML ознаке",
 	"linter-category-obsolete-tag-desc": "Ове странице користе застареле HTML ознаке.",
 	"linter-category-pwrap-bug-workaround": "Избегавање грешке у преламању пасуса",
