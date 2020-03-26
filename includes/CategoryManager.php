@@ -140,8 +140,8 @@ class CategoryManager {
 
 	/**
 	 * @param int $id
-	 * @throws MissingCategoryException if we can't find the name for the id
 	 * @return string
+	 * @throws MissingCategoryException if we can't find the name for the id
 	 */
 	public function getCategoryName( $id ) {
 		$flip = array_flip( $this->categoryIds );
