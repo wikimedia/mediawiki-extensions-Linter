@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Incelemeelemani",
-			"BaRaN6161 TURK"
+			"BaRaN6161 TURK",
+			"Incelemeelemani"
 		]
 	},
 	"apihelp-query+linterrors-description": "Tiftik hatalarının bir listesini alın",

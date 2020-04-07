@@ -1,12 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mormegil",
-			"Dvorapa",
-			"Matěj Suchánek",
 			"Danny B.",
+			"Dvorapa",
 			"Ilimanaq29",
-			"Martin Urbanec"
+			"Martin Urbanec",
+			"Matěj Suchánek",
+			"Mormegil"
 		]
 	},
 	"linterrors": "Chyby nalezené lintem",

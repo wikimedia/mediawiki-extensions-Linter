@@ -1,14 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Fitoschido",
-			"Macofe",
-			"Dgstranz",
-			"Luzcaru",
-			"MarcoAurelio",
-			"James",
 			"Astroemi",
-			"DannyS712"
+			"DannyS712",
+			"Dgstranz",
+			"Fitoschido",
+			"James",
+			"Luzcaru",
+			"Macofe",
+			"MarcoAurelio"
 		]
 	},
 	"linterrors": "Errores de sintaxis",

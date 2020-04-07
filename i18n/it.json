@@ -2,11 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Beta16",
-			"Ontsed",
-			"Candalua",
 			"Bultro",
-			"Sakretsu",
-			"Daimona Eaytoy"
+			"Candalua",
+			"Daimona Eaytoy",
+			"Ontsed",
+			"Sakretsu"
 		]
 	},
 	"linterrors": "Errori di Lint",

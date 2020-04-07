@@ -2,10 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Kareyac",
-			"Vodnokon4e",
-			"StanProg",
 			"ShockD",
-			"Ted Masters"
+			"StanProg",
+			"Ted Masters",
+			"Vodnokon4e"
 		]
 	},
 	"linterrors": "Грешки в статичния код",

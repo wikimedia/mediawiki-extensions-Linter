@@ -1,17 +1,17 @@
 {
 	"@metadata": {
 		"authors": [
+			"Derugon",
 			"Fitoschido",
 			"Gomoko",
-			"Wladek92",
-			"Urhixidur",
 			"JackPotte",
-			"Thibaut120094",
 			"KATRINE1992",
 			"Ltrlg",
 			"MarcoAurelio",
-			"Derugon",
-			"Pamputt"
+			"Pamputt",
+			"Thibaut120094",
+			"Urhixidur",
+			"Wladek92"
 		]
 	},
 	"linterrors": "Erreurs de lint",

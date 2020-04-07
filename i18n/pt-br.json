@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
+			"Eduardo Addad de Oliveira",
 			"Felipe L. Ewald",
-			"Opraco",
-			"Eduardo Addad de Oliveira"
+			"Opraco"
 		]
 	},
 	"linterrors": "Erros de Lint",

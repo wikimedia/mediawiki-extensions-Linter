@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Sfic",
-			"Rajatkatiyar10"
+			"Rajatkatiyar10",
+			"Sfic"
 		]
 	},
 	"linter-category-multiple-unclosed-formatting-tags": "एकाधिक असंबद्ध स्वरूपण टैग्स",

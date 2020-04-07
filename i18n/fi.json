@@ -1,12 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Valtlait",
-			"Nike",
-			"Silvonen",
 			"BriskyBlizzard",
+			"Nike",
+			"Pxos",
 			"Pyscowicz",
-			"Pxos"
+			"Silvonen",
+			"Valtlait"
 		]
 	},
 	"linterrors": "Lint-virheet",

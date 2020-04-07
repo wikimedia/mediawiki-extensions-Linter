@@ -1,14 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Sjoerddebruin",
-			"Mainframe98",
-			"MarcoSwart",
-			"Mar(c)",
-			"Patio",
-			"KlaasZ4usV",
 			"Bdijkstra",
-			"Klaas van Buiten"
+			"Klaas van Buiten",
+			"KlaasZ4usV",
+			"Mainframe98",
+			"Mar(c)",
+			"MarcoSwart",
+			"Patio",
+			"Sjoerddebruin"
 		]
 	},
 	"linterrors": "Lintfouten",

@@ -1,12 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
+			"Fitoschido",
 			"Kunal Mehta",
 			"Liuxinyu970226",
-			"Fitoschido",
-			"Umherirrender",
-			"Amire80",
-			"Mormegil"
+			"Mormegil",
+			"Umherirrender"
 		]
 	},
 	"linterrors": "{{doc-special|LintErrors}}",

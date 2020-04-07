@@ -1,11 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"WikiPhoenix",
 			"Bengtsson96",
-			"Skalman",
 			"Mjälten",
-			"Thurs"
+			"Skalman",
+			"Thurs",
+			"WikiPhoenix"
 		]
 	},
 	"linterrors": "Lint-fel",
