@@ -42,7 +42,7 @@
 	"linter-category-unclosed-quotes-in-heading-desc": "Diese Seiten haben ein nicht geschlossenes Anführungszeichen in einer Überschrift, das das Inhaltsverzeichnis auslaufen lässt.",
 	"linter-category-wikilink-in-extlink": "Links in Links",
 	"linter-category-wikilink-in-extlink-desc": "Diese Seiten haben Wikilinks in externen Links, die korrigiert werden können.",
-	"linter-desc": "Verfolgt Lint-Fehler von einem externen Dienst und zeigt sie Benutzern an",
+	"linter-desc": "Ermöglicht das Ermitteln von Wikitext-Fehlern mit Hilfe eines externen Dienstes und zeigt diese Benutzern an",
 	"linter-form-namespace": "Namensraum:",
 	"linter-heading-high-priority": "Hohe Priorität",
 	"linter-heading-low-priority": "Niedrige Priorität",
