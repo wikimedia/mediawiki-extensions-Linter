@@ -20,7 +20,7 @@
 
 namespace MediaWiki\Linter;
 
-use ApiQuerySiteInfo;
+use ApiQuerySiteinfo;
 use Content;
 use DatabaseUpdater;
 use IContextSource;
@@ -101,7 +101,7 @@ class Hooks {
 	 * @param ApiQuerySiteInfo $api
 	 * @param array &$data
 	 */
-	public static function onAPIQuerySiteInfoGeneralInfo( ApiQuerySiteInfo $api, array &$data ) {
+	public static function onAPIQuerySiteInfoGeneralInfo( ApiQuerySiteinfo $api, array &$data ) {
 		$catManager = new CategoryManager();
 		$data['linter'] = [
 			'high' => $catManager->getHighPriority(),
