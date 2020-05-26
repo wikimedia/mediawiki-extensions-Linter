@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Diki Ananta",
 			"NoiX180"
 		]
 	},
 	"linterrors": "Masalah lin",
-	"linter-desc": "Lacak masalah lin saka layanan njaba banjut tuduhaké masalahé nyang panganggo",
+	"linter-desc": "Lacak masalah lint saka layanan njaba banjut tuduhaké masalahé nyang naraguna",
 	"linter-form-namespace": "Mandhala aran:",
 	"linter-pager-obsolete-tag-details": "Tenger HTML lawas",
 	"linter-pager-template": "Sarana cithakan?",
