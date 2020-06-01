@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Alexey zakharenkov",
+			"Diman Russkov",
 			"Facenapalm",
 			"Happy13241",
 			"Incnis Mrsi",
@@ -31,7 +32,7 @@
 	"linter-category-multi-colon-escape": "Многократное экранирование двоеточием",
 	"linter-category-multi-colon-escape-desc": "На этих страницах есть ссылки, перед которыми стоит несколько двоеточий.",
 	"linter-category-multiline-html-table-in-list": "Многострочная таблица в списке",
-	"linter-category-multiline-html-table-in-list-desc": "Tidy перемещает таблицу внутрь или наружу списка, в то время как HTML5 расширяет список на оставшуюся часть страницы.",
+	"linter-category-multiline-html-table-in-list-desc": "Ранее таблицы перемещались внутрь или наружу списка, в настоящее время список расширяется на оставшуюся часть страницы.",
 	"linter-category-multiple-unclosed-formatting-tags": "Несколько незакрытых тегов форматирования",
 	"linter-category-multiple-unclosed-formatting-tags-desc": "На этих страницах имеется несколько незакрытых тегов форматирования",
 	"linter-category-obsolete-tag": "Устаревшие HTML-теги",
@@ -42,8 +43,8 @@
 	"linter-category-self-closed-tag-desc": "На этих страницах есть самозакрывающиеся теги.",
 	"linter-category-stripped-tag": "Разделённые теги",
 	"linter-category-stripped-tag-desc": "На этих страницах есть разделённые теги.",
-	"linter-category-tidy-font-bug": "Ошибка Tidy, затрагивающая теги font, обрамляющие ссылки",
-	"linter-category-tidy-font-bug-desc": "Tidy переносит эти теги font за пределы ссылок для смены цвета ссылки",
+	"linter-category-tidy-font-bug": "Старое поведение тегов font, обрамляющих ссылки",
+	"linter-category-tidy-font-bug-desc": "Ранее теги font переносились за пределы ссылок для смены цвета ссылки",
 	"linter-category-tidy-whitespace-bug": "Ошибка разбора пробельных символов",
 	"linter-category-tidy-whitespace-bug-desc": "Эти страницы вызывают ошибку разбора пробельных символов, что должно быть исправлено.",
 	"linter-category-unclosed-quotes-in-heading": "Незакрытые кавычки в заголовке",
