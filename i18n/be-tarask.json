@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Kareyac",
-			"Red Winged Duck"
+			"Red Winged Duck",
+			"Renessaince"
 		]
 	},
 	"linterrors": "Lint-памылкі",
@@ -12,10 +13,14 @@
 	"linter-category-deletable-table-tag-desc": "Гэтыя старонкі ўтрымліваюць тэгі табліцы, якія маюць быць выдаленыя.",
 	"linter-category-fostered": "Няслушна разьмешчаны зьмест",
 	"linter-category-fostered-desc": "Гэтыя старонкі маюць няслушна разьмешчаны зьмест.",
+	"linter-category-html5-misnesting": "Некарэктна ўкладзены цэтлік з розным адлюстраваньнем у HTML5 ды HTML4",
+	"linter-category-misc-tidy-replacement-issues": "Розныя праблемы",
 	"linter-category-misnested-tag": "Няслушна ўкладзеныя тэгі",
 	"linter-category-misnested-tag-desc": "Гэтыя старонкі маюць няслушна ўкладзеныя тэгі, якія можна выправіць.",
 	"linter-category-missing-end-tag": "Адсутнічае канцавы тэг",
 	"linter-category-missing-end-tag-desc": "На гэтых старонках адсутнічае канцавы тэг.",
+	"linter-category-multiline-html-table-in-list": "Шматрадковая табліца ў сьпісе",
+	"linter-category-multiple-unclosed-formatting-tags": "Шмат незакрытых цэтлікаў фарматаваньня",
 	"linter-category-obsolete-tag": "Састарэлыя HTML-тэгі",
 	"linter-category-obsolete-tag-desc": "Гэтыя старонкі ўтрымліваюць састарэлыя HTML-тэгі.",
 	"linter-category-pwrap-bug-workaround": "Пазьбяганьне памылкі абгорткі параграфу",
@@ -24,6 +29,8 @@
 	"linter-category-self-closed-tag-desc": "Гэтыя старонкі маюць самазакрытыя тэгі.",
 	"linter-category-stripped-tag": "Няпарныя тэгі",
 	"linter-category-stripped-tag-desc": "Гэтыя старонкі маюць няпарныя тэгі.",
+	"linter-category-tidy-font-bug": "Старыя паводзіны цэтлікаў font, якія агортваюць спасылкі",
+	"linter-category-unclosed-quotes-in-heading": "Незакрытыя двукосьсі ў загалоўку",
 	"linter-desc": "Сочыць за lint-памылкамі з вонкавага сэрвісу і паказвае іх удзельнікам",
 	"linter-form-namespace": "Прастора назваў:",
 	"linter-heading-high-priority": "Высокі прыярытэт",
@@ -41,8 +48,10 @@
 	"linter-pager-self-closed-tag-details": "Самазакрыты тэг",
 	"linter-pager-stripped-tag-details": "Няпарны тэг",
 	"linter-pager-template": "Праз шаблён?",
+	"linter-pager-tidy-whitespace-bug-details": "Памылка разбору пропустаў",
 	"linter-pager-title": "Назва старонкі",
 	"linterrors-subpage": "Lint-памылкі: $1",
+	"linterrors-summary": "<strong>Заўвага:</strong> Паказальнікі для катэгорыяў не дакладныя, а заснаваныя на ацэнках.",
 	"multi-part-template-block": "Атрымана не з аднаго шаблёну",
 	"pageinfo-linter": "Lint-памылкі"
 }

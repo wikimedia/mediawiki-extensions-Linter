@@ -6,7 +6,8 @@
 			"Liuxinyu970226",
 			"NeverBehave",
 			"WhitePhosphorus",
-			"Xiplus"
+			"Xiplus",
+			"铁桶"
 		]
 	},
 	"linterrors": "Lint错误",
@@ -40,7 +41,7 @@
 	"linter-category-stripped-tag-desc": "这些页面有剥去的标签。",
 	"linter-category-tidy-font-bug": "涉及字体标签包裹链接的Tidy错误",
 	"linter-category-tidy-font-bug-desc": "Tidy将这些字体标签移动到链接内以更改链接颜色",
-	"linter-category-tidy-whitespace-bug": "Tidy空格错误",
+	"linter-category-tidy-whitespace-bug": "空格解析错误",
 	"linter-category-tidy-whitespace-bug-desc": "这些页面触发了应处理的Tidy空格错误。",
 	"linter-category-unclosed-quotes-in-heading": "标题中未闭合引用",
 	"linter-category-unclosed-quotes-in-heading-desc": "这些页面在标题处存在未闭合的引用，这导致其超出目录范围。",
@@ -68,7 +69,7 @@
 	"linter-pager-stripped-tag-details": "剥去的标签",
 	"linter-pager-template": "通过模板？",
 	"linter-pager-tidy-font-bug-details": "字体标签在Tidy中会更改链接颜色，但不会在HTML5中更改",
-	"linter-pager-tidy-whitespace-bug-details": "整理空格错误",
+	"linter-pager-tidy-whitespace-bug-details": "空格解析错误",
 	"linter-pager-title": "页面标题",
 	"linter-pager-unclosed-quotes-in-heading-details": "超出目录的未闭合引用",
 	"linterrors-subpage": "Lint错误：$1",

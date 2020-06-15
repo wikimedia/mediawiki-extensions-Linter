@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Jeblad"
+			"Jeblad",
+			"Njardarlogar"
 		]
 	},
-	"linterrors": "Lint-feil",
+	"linterrors": "Rusk",
 	"linter-category-bogus-image-options": "Ugyldig filalternativ",
 	"linter-category-bogus-image-options-desc": "Desse sidene har ugyldig filalternativ.",
 	"linter-category-deletable-table-tag": "Tabelltagg som bør slettes",
