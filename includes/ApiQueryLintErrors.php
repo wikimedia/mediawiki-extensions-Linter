@@ -35,6 +35,9 @@ class ApiQueryLintErrors extends ApiQueryBase {
 		$params = $this->extractRequestParams();
 		$categoryMgr = new CategoryManager();
 
+		$this->requireMaxOneParameter( $params, 'pageid', 'title' );
+		$this->requireMaxOneParameter( $params, 'namespace', 'title' );
+
 		$this->addTables( 'linter' );
 		$this->addWhereFld( 'linter_cat', array_values( $categoryMgr->getCategoryIds(
 			$params['categories']
@@ -44,10 +47,16 @@ class ApiQueryLintErrors extends ApiQueryBase {
 			$this->addWhere( 'linter_id >= ' . $db->addQuotes( $params['from'] ) );
 		}
 		if ( $params['pageid'] !== null ) {
+			// This can be an array or a single pageid
 			$this->addWhereFld( 'linter_page', $params['pageid'] );
 		}
 		if ( $params['namespace'] !== null ) {
 			$this->addWhereFld( 'page_namespace', $params['namespace'] );
+		}
+		if ( $params['title'] !== null ) {
+			$title = $this->getTitleFromTitleOrPageId( [ 'title' => $params['title'] ] );
+			$this->addWhereFld( 'page_namespace', $title->getNamespace() );
+			$this->addWhereFld( 'page_title', $title->getDBkey() );
 		}
 		$this->addTables( 'page' );
 		$this->addJoinConds( [ 'page' => [ 'INNER JOIN', 'page_id=linter_page' ] ] );
@@ -120,6 +129,9 @@ class ApiQueryLintErrors extends ApiQueryBase {
 			'pageid' => [
 				ApiBase::PARAM_TYPE => 'integer',
 				ApiBase::PARAM_ISMULTI => true,
+			],
+			'title' => [
+				ApiBase::PARAM_TYPE => 'string',
 			],
 			'from' => [
 				ApiBase::PARAM_TYPE => 'integer',
