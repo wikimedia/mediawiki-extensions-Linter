@@ -3,6 +3,7 @@
 		"authors": [
 			"A2093064",
 			"Cwlin0416",
+			"Kly",
 			"LNDDYL",
 			"Xiplus"
 		]
@@ -14,6 +15,7 @@
 	"apihelp-query+linterrors-param-from": "起始查詢的Lint ID",
 	"apihelp-query+linterrors-param-namespace": "僅包括來自指定命名空間的 lint 錯誤",
 	"apihelp-query+linterrors-param-pageid": "僅包括來自指定頁面 ID 的 lint 錯誤",
+	"apihelp-query+linterrors-param-title": "僅包括來自指定頁面標題的 lint 錯誤",
 	"apihelp-query+linterrors-example-1": "取得所有過時標籤分類的 lint 錯誤",
 	"apihelp-record-lint-description": "在資料庫內記錄 lint 錯誤",
 	"apihelp-record-lint-summary": "在資料庫內記錄 lint 錯誤",

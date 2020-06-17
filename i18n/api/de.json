@@ -11,6 +11,7 @@
 	"apihelp-query+linterrors-param-from": "Lint-Kennung, ab der die Abfrage beginnen soll.",
 	"apihelp-query+linterrors-param-namespace": "Schließt nur Lint-Fehler von den angegebenen Namensräumen ein",
 	"apihelp-query+linterrors-param-pageid": "Schließt nur Lint-Fehler von den angegebenen Seitenkennungen ein",
+	"apihelp-query+linterrors-param-title": "Nur Lint-Fehler aus dem angegebenen Seitentitel einbeziehen",
 	"apihelp-query+linterrors-example-1": "Ruft alle Lint-Fehler der Kategorie obsolete-tag ab",
 	"apihelp-record-lint-description": "Nimmt einen Lint-Fehler in die Datenbank auf",
 	"apihelp-record-lint-summary": "Nimmt einen Lint-Fehler in die Datenbank auf",
