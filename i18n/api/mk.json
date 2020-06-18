@@ -11,6 +11,7 @@
 	"apihelp-query+linterrors-param-from": "Пречистувачка назнака од која ќе се почне барањето",
 	"apihelp-query+linterrors-param-namespace": "Давај само грешки од пречистувачот од укажаните именски простори",
 	"apihelp-query+linterrors-param-pageid": "Давај само грешки од Lint од укажаните назнаки на именски простори",
+	"apihelp-query+linterrors-param-title": "Давај само грешки од од укажаниот наслов",
 	"apihelp-query+linterrors-example-1": "Ги дава сите грешки од пречистувачот на категоријата со застарена ознака",
 	"apihelp-record-lint-description": "Заведување грешка од пречистувачот во базата",
 	"apihelp-record-lint-summary": "Зведување грешка од пречистувачот во базата",
