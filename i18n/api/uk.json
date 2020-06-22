@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Piramidion"
+			"Piramidion",
+			"Ата"
 		]
 	},
 	"apihelp-query+linterrors-description": "Отримати список Lint-помилок",
@@ -11,6 +12,7 @@
 	"apihelp-query+linterrors-param-from": "Ідентифікатор Lint, куди треба надсилати запити",
 	"apihelp-query+linterrors-param-namespace": "Включати лише Lint-помилки із вказаних просторів назв",
 	"apihelp-query+linterrors-param-pageid": "Включати лише Lint-помилки із вказаних ідентифікаторів сторінок",
+	"apihelp-query+linterrors-param-title": "Включати лише Lint-помилки із вказаної назви сторінки",
 	"apihelp-query+linterrors-example-1": "Отримати всі Lint-помилки із категорії застарілих тегів",
 	"apihelp-record-lint-description": "Записати Lint-помилку в базі даних",
 	"apihelp-record-lint-summary": "Записати Lint-помилку в базу даних",

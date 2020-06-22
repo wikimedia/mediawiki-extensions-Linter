@@ -12,6 +12,7 @@
 	"apihelp-query+linterrors-param-from": "Sorgulamaya başlamak için Lint kimliği",
 	"apihelp-query+linterrors-param-namespace": "Yalnızca belirtilen ad alanlarından tiftik hataları ekle",
 	"apihelp-query+linterrors-param-pageid": "Yalnızca belirtilen sayfa kimliklerindeki tüy bırakma hatalarını dahil et",
+	"apihelp-query+linterrors-param-title": "Yalnızca belirtilen sayfa başlığından lint hataları ekle",
 	"apihelp-query+linterrors-example-1": "Eski etiket kategorisindeki tüm tiftik hatalarını alın",
 	"apihelp-record-lint-description": "Veritabanına hav bırakma hatası kaydet",
 	"apihelp-record-lint-summary": "Veritabanına hav bırakma hatası kaydet",
