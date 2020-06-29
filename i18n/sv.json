@@ -46,6 +46,7 @@
 	"linter-pager-self-closed-tag-details": "Självstängande tagg",
 	"linter-pager-stripped-tag-details": "Bortplockad tagg",
 	"linter-pager-template": "Genom en mall?",
+	"linter-pager-tidy-font-bug-details": "Typsnittstaggen försöker ändra länkfärg",
 	"linter-pager-title": "Sidtitel",
 	"linterrors-subpage": "Lint-fel: $1",
 	"linterrors-summary": "<strong>OBS:</strong> Antal fel i kategorierna är inte exakta utan baseras på uppskattningar.",

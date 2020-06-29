@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"2nd-player",
+			"Aefgh39622",
 			"Kkairri",
 			"Omotecho",
 			"Otokoume",
@@ -40,6 +41,7 @@
 	"linter-page-history": "履歴",
 	"linter-page-title-edit": "$1 ($2)",
 	"linter-page-viewsource": "ソースを閲覧",
+	"linter-pager-bogus-image-options-details": "偽のファイルオプション",
 	"linter-pager-deletable-table-tag-details": "削除する必要があるTableタグ",
 	"linter-pager-html5-misnesting-details": "Misnesting in HTML5の入れ子のエラー（Tidyでは正常）",
 	"linter-pager-misc-tidy-replacement-issues-details": "Tidyからの移行を妨げるその他のマークアップエラー",
