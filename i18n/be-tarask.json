@@ -43,6 +43,7 @@
 	"linter-pager-deletable-table-tag-details": "Тэг табліцы, які мае быць выдалены",
 	"linter-pager-misnested-tag-details": "Няслушна ўкладзены тэг, які трэба ўкласьці правільна",
 	"linter-pager-missing-end-tag-details": "Адсутнічае канцавы тэг",
+	"linter-pager-multiline-html-table-in-list-details": "Шматрадковая табліца HTML5 унутры сьпісу",
 	"linter-pager-obsolete-tag-details": "Састарэлы HTML-тэг",
 	"linter-pager-pwrap-bug-workaround-details": "Пазьбяганьне памылкі абгорткі параграфу",
 	"linter-pager-self-closed-tag-details": "Самазакрыты тэг",
