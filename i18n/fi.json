@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Actuallyisjoha",
 			"BriskyBlizzard",
 			"Nike",
 			"Pxos",
@@ -24,6 +25,7 @@
 	"linter-page-viewsource": "näytä wikiteksti",
 	"linter-pager-deletable-table-tag-details": "Table-tagi, joka pitäisi poistaa",
 	"linter-pager-missing-end-tag-details": "Missing end tag",
+	"linter-pager-obsolete-tag-details": "Vanhentunut HTML-tagi",
 	"linter-pager-template": "Virhe tulee mallineesta...",
 	"linter-pager-title": "Sivun nimi",
 	"linterrors-subpage": "Lint-virheet: $1",
