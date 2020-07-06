@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Dbc334",
 			"Janezdrilc"
 		]
 	},
@@ -29,13 +30,22 @@
 	"linter-page-history": "zgodovina",
 	"linter-pager-bogus-image-options-details": "Napaka v zapisu datoteke",
 	"linter-pager-deletable-table-tag-details": "Značka tabele, ki jo je potrebno odstraniti",
+	"linter-pager-html5-misnesting-details": "Nepravilno gnezdenje (zdaj pokvarjeno)",
+	"linter-pager-misc-tidy-replacement-issues-details": "Mešane napake v označevanju",
 	"linter-pager-misnested-tag-details": "Napačno zgrajena značka, ki jo je treba popraviti",
 	"linter-pager-missing-end-tag-details": "Manjkajoč zaključek značke",
+	"linter-pager-multi-colon-escape-details": "Več dvopičij kot ubežni znak",
+	"linter-pager-multiline-html-table-in-list-details": "Večvrstična tabela HTML5 znotraj seznama",
+	"linter-pager-multiple-unclosed-formatting-tags-details": "Več nezaključenih oblikovnih oznak na strani",
 	"linter-pager-obsolete-tag-details": "Zastarela značka HTML",
+	"linter-pager-pwrap-bug-workaround-details": "Nadomestna rešitev hrošča pri ovijanju odstavkov",
 	"linter-pager-self-closed-tag-details": "Samozaključena značka",
 	"linter-pager-stripped-tag-details": "Ime značke",
 	"linter-pager-template": "Preko predloge?",
+	"linter-pager-tidy-font-bug-details": "Oznaka font poskuša spremeniti barvo pisave",
+	"linter-pager-tidy-whitespace-bug-details": "Hrošč pri razčlenjevanju presledkov",
 	"linter-pager-title": "Naslov strani",
+	"linter-pager-unclosed-quotes-in-heading-details": "Nezaključen navedek, ki pušča kazalo",
 	"linterrors-subpage": "Kodne napake: $1",
 	"pageinfo-linter": "Kodne napake"
 }

@@ -11,6 +11,8 @@
 	"linter-heading-high-priority": "Prioritate ridicată",
 	"linter-heading-low-priority": "Prioritate scăzută",
 	"linter-heading-medium-priority": "Prioritate medie",
+	"linter-pager-bogus-image-options-details": "Parametru de fișier invalid",
+	"linter-pager-missing-end-tag-details": "Tag de încheiere lipsă",
 	"linter-pager-self-closed-tag-details": "Tag auto-inchis",
 	"multi-part-template-block": "Rezultat din mai multe formate"
 }
