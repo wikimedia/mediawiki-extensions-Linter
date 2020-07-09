@@ -37,10 +37,10 @@ class SpecialLintErrorsTest extends \SpecialPageTestBase {
 
 		// Basic
 		$html = $this->executeSpecialPage( '', null, 'qqx' )[0];
-		$this->assertContains( '(linterrors-summary)', $html );
-		$this->assertContains( "(linter-category-$category)", $html );
+		$this->assertStringContainsString( '(linterrors-summary)', $html );
+		$this->assertStringContainsString( "(linter-category-$category)", $html );
 
-		$this->assertContains(
+		$this->assertStringContainsString(
 			"(linter-category-$category-desc)",
 			$this->executeSpecialPage( $category, null, 'qqx' )[0]
 		);
