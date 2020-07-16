@@ -12,6 +12,8 @@
 	"linter-category-misc-tidy-replacement-issues": "گرفتە جۆراوجۆرەکان",
 	"linter-category-missing-end-tag": "تاگی کۆتاییی ون",
 	"linter-category-missing-end-tag-desc": "ئەم پەڕانە تاگی کۆتاییی ونیان تێدایە.",
+	"linter-category-multi-colon-escape": "چوونەژوورەوەی چەند جووتخاڵێک",
+	"linter-category-multi-colon-escape-desc": "ئەم پەڕانە بەستەریان بە پێشگریی چەند جووتخاڵێک تێدایە.",
 	"linter-category-self-closed-tag": "تاگە خۆداخراوەکان",
 	"linter-category-self-closed-tag-desc": "ئەم پەڕانە تاگە خۆداخراوەکانیان تێدایە.",
 	"linter-category-unclosed-quotes-in-heading": "وتەی دانەخراوی نێو بەش",
@@ -37,5 +39,6 @@
 	"linter-pager-unclosed-quotes-in-heading-details": "وتەی دانەخراو کە دزە دەکاتە دەرەوەی خشتەی ناوەڕۆکەکان",
 	"linterrors-subpage": "ھەڵە شاشەکان: $1",
 	"linterrors-summary": "<strong>تێبینی:</strong> ژماردنەکانی پۆلەکان ورد نین بەڵکوو، بەپێی مەزندەن.",
+	"multi-part-template-block": "ئەنجامەکە لە داڕێژەوە نییە",
 	"pageinfo-linter": "ھەڵە شاشەکان"
 }
