@@ -6,5 +6,7 @@
 	},
 	"linterrors": "Pročišćivač grešaka",
 	"linter-category-self-closed-tag": "Samozatvorene oznake",
+	"linter-pager-obsolete-tag-details": "Zastarjela HTML oznaka",
+	"linter-pager-self-closed-tag-details": "Samozatvorena oznaka",
 	"linter-pager-tidy-font-bug-details": "Oznaka font pokušava promijeniti boju linka"
 }
