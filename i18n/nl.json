@@ -50,6 +50,7 @@
 	"linter-pager-misc-tidy-replacement-issues-details": "Diverse opmaakfouten",
 	"linter-pager-misnested-tag-details": "Element dat een ander element niet compleet insluit",
 	"linter-pager-missing-end-tag-details": "Afsluitende tag ontbreekt",
+	"linter-pager-multiline-html-table-in-list-details": "HTML5 tabel met meerdere regels in een lijst",
 	"linter-pager-multiple-unclosed-formatting-tags-details": "Meerdere niet-afgesloten opmaakelementen op de pagina",
 	"linter-pager-obsolete-tag-details": "Verouderd HTML element",
 	"linter-pager-self-closed-tag-details": "Zelfsluitend element",
