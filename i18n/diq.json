@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"1917 Ekim Devrimi",
 			"Mirzali",
 			"Orbot707"
 		]
@@ -26,6 +27,7 @@
 	"linter-pager-tidy-font-bug-details": "Etiketê tewrê nesteyi gırey rengi keno bıvırno",
 	"linter-pager-tidy-whitespace-bug-details": "Xetay agoznayışê venganey",
 	"linter-pager-title": "Sernameyê pele",
+	"linter-pager-unclosed-quotes-in-heading-details": "Tabloy zerreki ra rodaye nêgırote qıse",
 	"linterrors-subpage": "Xeteyê linti: $1",
 	"pageinfo-linter": "Xeteyê linti"
 }
