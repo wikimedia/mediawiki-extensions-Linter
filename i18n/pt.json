@@ -62,7 +62,7 @@
 	"linter-pager-multi-colon-escape-details": "Escape de vários dois pontos",
 	"linter-pager-multiline-html-table-in-list-details": "Tabela HTML5 multilinhas dentro de uma lista",
 	"linter-pager-multiple-unclosed-formatting-tags-details": "Várias etiquetas de formatação não fechadas na página",
-	"linter-pager-obsolete-tag-details": "Elemento HTML obsoleto",
+	"linter-pager-obsolete-tag-details": "Etiqueta HTML obsoleta",
 	"linter-pager-pwrap-bug-workaround-details": "Solução para o erro de quebra de linha de parágrafos",
 	"linter-pager-self-closed-tag-details": "Elemento auto-fechado",
 	"linter-pager-stripped-tag-details": "Elemento incompleto",
