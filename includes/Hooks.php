@@ -36,8 +36,20 @@ class Hooks {
 	 * @param DatabaseUpdater $updater
 	 */
 	public static function onLoadExtensionSchemaUpdates( DatabaseUpdater $updater ) {
-		$dir = dirname( __DIR__ ) . '/sql';
-		$updater->addExtensionTable( 'linter', "$dir/linter.sql" );
+		$dbType = $updater->getDB()->getType();
+		if ( $dbType === 'mysql' ) {
+			$updater->addExtensionTable( 'linter',
+				dirname( __DIR__ ) . '/sql/tables-generated.sql'
+			);
+		} elseif ( $dbType === 'sqlite' ) {
+			$updater->addExtensionTable( 'linter',
+				dirname( __DIR__ ) . '/sql/sqlite/tables-generated.sql'
+			);
+		} elseif ( $dbType === 'postgres' ) {
+			$updater->addExtensionTable( 'linter',
+				dirname( __DIR__ ) . '/sql/postgres/tables-generated.sql'
+			);
+		}
 	}
 
 	/**
