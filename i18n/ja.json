@@ -3,6 +3,7 @@
 		"authors": [
 			"2nd-player",
 			"Aefgh39622",
+			"Afaz",
 			"Hzy980512",
 			"Kkairri",
 			"Omotecho",
@@ -45,7 +46,7 @@
 	"linter-pager-bogus-image-options-details": "偽のファイルオプション",
 	"linter-pager-deletable-table-tag-details": "削除する必要があるTableタグ",
 	"linter-pager-html5-misnesting-details": "Misnesting（現在使用不可）",
-	"linter-pager-misc-tidy-replacement-issues-details": "Tidyからの移行を妨げるその他のマークアップエラー",
+	"linter-pager-misc-tidy-replacement-issues-details": "その他のマークアップエラー",
 	"linter-pager-misnested-tag-details": "適切に入れ子にされるべきである誤ったタグ",
 	"linter-pager-missing-end-tag-details": "不足している終了タグ",
 	"linter-pager-multi-colon-escape-details": "複数コロンのウィキ間リンク",
