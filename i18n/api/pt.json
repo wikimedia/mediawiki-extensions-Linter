@@ -12,6 +12,7 @@
 	"apihelp-query+linterrors-param-from": "Identificador de lint no qual iniciar a pesquisa",
 	"apihelp-query+linterrors-param-namespace": "Só incluir erros de lint dos espaços nominais especificados",
 	"apihelp-query+linterrors-param-pageid": "Só incluir erros de lint dos identificadores de página especificados",
+	"apihelp-query+linterrors-param-title": "Incluir só os erros de lint do título de página especificado",
 	"apihelp-query+linterrors-example-1": "Obter todos os erros de lint da categoria de elementos obsoletos",
 	"apihelp-record-lint-description": "Registar um erro de lint na base de dados",
 	"apihelp-record-lint-summary": "Registar um erro de lint na base de dados",
