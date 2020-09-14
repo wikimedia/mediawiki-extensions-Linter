@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Hhaboh162002",
 			"Meno25",
 			"Mr. Ibrahem",
 			"NEHAOUA",
@@ -58,7 +59,7 @@
 	"linter-page-viewsource": "عرض المصدر",
 	"linter-pager-bogus-image-options-details": "خيار ملف زائف",
 	"linter-pager-deletable-table-tag-details": "علامة الجدول التي ينبغي حذفها",
-	"linter-pager-html5-misnesting-details": "عدم تداخل HTML5 (لكن ليس في تيدي)",
+	"linter-pager-html5-misnesting-details": "عدم تداخل (معطوب الآن)",
 	"linter-pager-misc-tidy-replacement-issues-details": "أخطاء ترميز متنوعة تؤثر على استبدال تيدي",
 	"linter-pager-misnested-tag-details": "العلامة غير المتداخلة التي ينبغي أن تكون متداخلة بشكل صحيح",
 	"linter-pager-missing-end-tag-details": "علامة انتهاء مفقودة",
