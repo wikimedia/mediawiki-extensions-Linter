@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mohsin Ali"
+			"Mohsin Ali",
+			"Simbu123"
 		]
 	},
-	"linter-pager-missing-end-tag-details": "সমাপ্তি টেগ নিৰুদ্দেশ"
+	"linter-pager-missing-end-tag-details": "সমাপ্তি টেগ নিৰুদ্দেশ",
+	"linter-pager-title": "পৃষ্ঠাৰ শিৰোনাম"
 }
