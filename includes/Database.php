@@ -32,7 +32,7 @@ class Database {
 	 * Maximum number of errors to save per category,
 	 * for a page, the rest are just dropped
 	 */
-	const MAX_PER_CAT = 20;
+	public const MAX_PER_CAT = 20;
 
 	/**
 	 * @var int

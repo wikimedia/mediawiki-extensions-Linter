@@ -27,9 +27,9 @@ use InvalidArgumentException;
  */
 class CategoryManager {
 
-	const HIGH = 'high';
-	const MEDIUM = 'medium';
-	const LOW = 'low';
+	private const HIGH = 'high';
+	private const MEDIUM = 'medium';
+	private const LOW = 'low';
 
 	/**
 	 * Map of category names to their hardcoded
