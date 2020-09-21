@@ -17,6 +17,7 @@
 	"linter-category-deletable-table-tag-desc": "このページでは、削除する必要があるTableタグがあるページを掲載しています。",
 	"linter-category-html5-misnesting": "HTML5とHTML4のレンダリング差異によって誤った入れ子構造となっているタグ",
 	"linter-category-html5-misnesting-desc": "ここに上げるタグの入れ子のエラーは、HTML4とHTML5で挙動が異なります。",
+	"linter-category-misc-tidy-replacement-issues": "その他の問題点",
 	"linter-category-misnested-tag": "タグの入れ子のエラー",
 	"linter-category-misnested-tag-desc": "修正可能なタグの入れ子のエラーを含むページ。",
 	"linter-category-missing-end-tag": "終了タグの不足",
