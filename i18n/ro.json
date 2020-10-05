@@ -12,7 +12,13 @@
 	"linter-heading-low-priority": "Prioritate scăzută",
 	"linter-heading-medium-priority": "Prioritate medie",
 	"linter-pager-bogus-image-options-details": "Parametru de fișier invalid",
+	"linter-pager-misc-tidy-replacement-issues-details": "Diverse erori de markup",
 	"linter-pager-missing-end-tag-details": "Tag de încheiere lipsă",
+	"linter-pager-multiline-html-table-in-list-details": "Tabel HTML5 multilinie într-o listă",
+	"linter-pager-obsolete-tag-details": "Tag HTML învechit",
 	"linter-pager-self-closed-tag-details": "Tag auto-inchis",
+	"linter-pager-tidy-font-bug-details": "Tagul font încearcă să schimbe culoarea legăturii",
+	"linter-pager-tidy-whitespace-bug-details": "Bug de parsare a spațiilor goale",
+	"linter-pager-unclosed-quotes-in-heading-details": "Apostrof neînchis care iese din cuprins",
 	"multi-part-template-block": "Rezultat din mai multe formate"
 }

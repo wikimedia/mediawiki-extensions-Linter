@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Fitoschido",
+			"Toniher",
 			"Vriullop"
 		]
 	},
@@ -34,13 +35,16 @@
 	"linter-page-history": "historial",
 	"linter-pager-bogus-image-options-details": "Opció de fitxer no vàlida",
 	"linter-pager-deletable-table-tag-details": "Etiqueta de taula a suprimir",
+	"linter-pager-misc-tidy-replacement-issues-details": "Diversos errors de marcatge",
 	"linter-pager-misnested-tag-details": "Etiqueta mal imbricada a corregir",
 	"linter-pager-missing-end-tag-details": "Etiqueta de tancament absent",
+	"linter-pager-multi-colon-escape-details": "Escapament de dos punts múltiple",
 	"linter-pager-obsolete-tag-details": "Etiqueta HTML obsoleta",
 	"linter-pager-pwrap-bug-workaround-details": "Esquivament de l'error d'ajustament de paràgraf",
 	"linter-pager-self-closed-tag-details": "Etiqueta auto-tancada",
 	"linter-pager-stripped-tag-details": "Etiqueta no aparellada",
 	"linter-pager-template": "Mitjançant una plantilla?",
+	"linter-pager-tidy-whitespace-bug-details": "Incidència d'anàlisi d'espais en blanc",
 	"linter-pager-title": "Títol de la pàgina",
 	"linterrors-subpage": "Errors de lint: $1",
 	"pageinfo-linter": "Errors de lint"
