@@ -48,7 +48,7 @@
 	"linter-numerrors": "($1 {{PLURAL:$1|гӀалат}})",
 	"linter-page-edit": "нисъе",
 	"linter-page-history": "истори",
-	"linter-page-viewsource": "коде хьажар",
+	"linter-page-viewsource": "код хьажар",
 	"linter-pager-bogus-image-options-details": "Файлийн харц билгалонаш",
 	"linter-pager-deletable-table-tag-details": "ДӀаяккха еза таблицан тег",
 	"linter-pager-html5-misnesting-details": "HTML5 чохь харцахьа чуйихкар (Tidy чохь йоцуш)",
