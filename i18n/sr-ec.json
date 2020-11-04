@@ -65,7 +65,7 @@
 	"linter-pager-self-closed-tag-details": "Самозатварајућа ознака",
 	"linter-pager-stripped-tag-details": "Огољена ознака",
 	"linter-pager-template": "Преко шаблона?",
-	"linter-pager-tidy-font-bug-details": "Ознака font покушава да промени боју линка",
+	"linter-pager-tidy-font-bug-details": "Ознака font покушава да промени боју везе",
 	"linter-pager-tidy-whitespace-bug-details": "Грешка при рашчлањивању размака",
 	"linter-pager-title": "Наслов странице",
 	"linter-pager-unclosed-quotes-in-heading-details": "Незатворени апостроф који утиче на текст ван прегледа садржаја",
