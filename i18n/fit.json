@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Palmtree222"
+		]
+	},
+	"linter-pager-obsolete-tag-details": "Vanheentunu HTML-täki",
+	"linter-pager-self-closed-tag-details": "itte-kiinnittyvä täki",
+	"linter-pager-stripped-tag-details": "poistettu täki",
+	"linter-pager-tidy-font-bug-details": "Fontin täki pruuvaa vaihtaa linkin färiä"
+}
