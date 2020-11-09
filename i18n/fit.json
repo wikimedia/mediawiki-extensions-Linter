@@ -4,6 +4,7 @@
 			"Palmtree222"
 		]
 	},
+	"linter-pager-missing-end-tag-details": "kaonnu loppu taki",
 	"linter-pager-obsolete-tag-details": "Vanheentunu HTML-täki",
 	"linter-pager-self-closed-tag-details": "itte-kiinnittyvä täki",
 	"linter-pager-stripped-tag-details": "poistettu täki",
