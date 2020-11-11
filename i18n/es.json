@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"ArenaL5",
 			"Astroemi",
 			"DannyS712",
 			"Dgstranz",
@@ -21,7 +22,7 @@
 	"linter-category-fostered-desc": "Estas páginas incluyen contenido fuera de lugar.",
 	"linter-category-html5-misnesting": "Etiqueta mal anidada con representación distinta en HTML5 y HTML4",
 	"linter-category-html5-misnesting-desc": "Estas etiquetas mal anidadas tendrán un comportamiento distinto en HTML5 en comparación con HTML4.",
-	"linter-category-misc-tidy-replacement-issues": "Otros problemas relativos a la sustitución de Tidy",
+	"linter-category-misc-tidy-replacement-issues": "Otros problemas",
 	"linter-category-misc-tidy-replacement-issues-desc": "Estas páginas tienen otros problemas que afectan a su representación al reemplazarse Tidy",
 	"linter-category-misnested-tag": "Etiquetas mal anidadas",
 	"linter-category-misnested-tag-desc": "Estas páginas tienen etiquetas mal anidadas que se podrían arreglar.",
@@ -43,8 +44,8 @@
 	"linter-category-stripped-tag-desc": "Estas páginas tienen etiquetas desparejadas.",
 	"linter-category-tidy-font-bug": "Error de Tidy que afecta a las etiquetas font que contienen enlaces",
 	"linter-category-tidy-font-bug-desc": "Tidy mueve estas etiquetas font hacia dentro para cambiar el color del enlace",
-	"linter-category-tidy-whitespace-bug": "Defecto de Tidy con espacios en blanco",
-	"linter-category-tidy-whitespace-bug-desc": "Estas páginas provocan un error de espacio en blanco de Tidy que debería evitarse.",
+	"linter-category-tidy-whitespace-bug": "Defecto de espacio en blanco",
+	"linter-category-tidy-whitespace-bug-desc": "Estas páginas provocaron un error de espacio en blanco que debería evitarse.",
 	"linter-category-unclosed-quotes-in-heading": "Comilla sin cerrar en título",
 	"linter-category-unclosed-quotes-in-heading-desc": "Estas páginas tienen unas comillas sin cerrar en un encabezado que se propagan fuera de la tabla de contenidos.",
 	"linter-category-wikilink-in-extlink": "Enlaces en enlaces",
@@ -72,8 +73,8 @@
 	"linter-pager-self-closed-tag-details": "Etiqueta autocerrada",
 	"linter-pager-stripped-tag-details": "Etiqueta desparejada",
 	"linter-pager-template": "¿A través de una plantilla?",
-	"linter-pager-tidy-font-bug-details": "La etiqueta font cambia el color del enlace en Tidy, pero no en HTML5",
-	"linter-pager-tidy-whitespace-bug-details": "Defecto de espacio en blanco de Tidy",
+	"linter-pager-tidy-font-bug-details": "La etiqueta font intenta cambiar el color del enlace",
+	"linter-pager-tidy-whitespace-bug-details": "Defecto de espacio en blanco",
 	"linter-pager-title": "Título de la página",
 	"linter-pager-unclosed-quotes-in-heading-details": "Par de comillas sin cerrar que se propaga fuera de la tabla de contenidos",
 	"linterrors-subpage": "Errores de sintaxis: $1",
