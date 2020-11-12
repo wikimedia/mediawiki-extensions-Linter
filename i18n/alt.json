@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Батыр Комдошев"
+		]
+	},
+	"linter-pager-bogus-image-options-details": "Файлдыҥ куурмак темдеги",
+	"linter-pager-deletable-table-tag-details": "Таблицаныҥ кыратан теги",
+	"linter-pager-html5-misnesting-details": "Чындык эмес ичине салынган (иштебейт)",
+	"linter-pager-misc-tidy-replacement-issues-details": "Башка темдектештиҥ јастырыжы",
+	"linter-pager-misnested-tag-details": "Јастыра ичине салынган тег, чын салынар учурлу",
+	"linter-pager-missing-end-tag-details": "Јабып турган тег јок"
+}
