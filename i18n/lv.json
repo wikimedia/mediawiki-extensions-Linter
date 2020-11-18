@@ -15,6 +15,7 @@
 	"linter-page-history": "vēsture",
 	"linter-page-title-edit": "$1 ($2)",
 	"linter-page-viewsource": "aplūkot kodu",
+	"linter-pager-obsolete-tag-details": "Novecojusi HTML iezīme",
 	"linter-pager-template": "Izmantojot veidni?",
 	"linter-pager-title": "Lapas nosaukums",
 	"linterrors-subpage": "Lint kļūdas: $1",
