@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"01miki10",
 			"Actuallyisjoha",
 			"BriskyBlizzard",
 			"Nike",
@@ -25,7 +26,10 @@
 	"linter-page-viewsource": "näytä wikiteksti",
 	"linter-pager-deletable-table-tag-details": "Table-tagi, joka pitäisi poistaa",
 	"linter-pager-missing-end-tag-details": "Missing end tag",
+	"linter-pager-multiline-html-table-in-list-details": "Monirivinen HTML5-taulukko luettelon sisällä",
+	"linter-pager-multiple-unclosed-formatting-tags-details": "Useita sulkemattomia muotoilutunnisteita sivulla",
 	"linter-pager-obsolete-tag-details": "Vanhentunut HTML-tagi",
+	"linter-pager-self-closed-tag-details": "Itsensä sulkeva tunniste",
 	"linter-pager-template": "Virhe tulee mallineesta...",
 	"linter-pager-title": "Sivun nimi",
 	"linterrors-subpage": "Lint-virheet: $1",
