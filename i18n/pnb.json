@@ -4,5 +4,7 @@
 			"Abbas dhothar"
 		]
 	},
-	"linter-pager-title": "صفحہ عنوان"
+	"linterrors": "پوشیدہ نحوی نقائص",
+	"linter-pager-title": "صفحہ عنوان",
+	"pageinfo-linter": "پوشیدہ نحوی نقائص"
 }
