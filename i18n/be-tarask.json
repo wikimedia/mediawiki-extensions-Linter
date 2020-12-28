@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Kareyac",
+			"Nerogaf",
 			"Red Winged Duck",
 			"Renessaince"
 		]
@@ -41,6 +42,7 @@
 	"linter-page-history": "гісторыя",
 	"linter-pager-bogus-image-options-details": "Няслушны парамэтар файлу",
 	"linter-pager-deletable-table-tag-details": "Тэг табліцы, які мае быць выдалены",
+	"linter-pager-html5-misnesting-details": "Адсутнічае (цяпер зламаны)",
 	"linter-pager-misnested-tag-details": "Няслушна ўкладзены тэг, які трэба ўкласьці правільна",
 	"linter-pager-missing-end-tag-details": "Адсутнічае канцавы тэг",
 	"linter-pager-multiline-html-table-in-list-details": "Шматрадковая табліца HTML5 унутры сьпісу",
