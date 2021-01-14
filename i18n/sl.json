@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Dbc334",
+			"Eleassar",
 			"Janezdrilc"
 		]
 	},
@@ -36,7 +37,7 @@
 	"linter-pager-missing-end-tag-details": "Manjkajoč zaključek značke",
 	"linter-pager-multi-colon-escape-details": "Več dvopičij kot ubežni znak",
 	"linter-pager-multiline-html-table-in-list-details": "Večvrstična tabela HTML5 znotraj seznama",
-	"linter-pager-multiple-unclosed-formatting-tags-details": "Več nezaključenih oblikovnih oznak na strani",
+	"linter-pager-multiple-unclosed-formatting-tags-details": "Več nezaključenih oblikovnih značk na strani",
 	"linter-pager-obsolete-tag-details": "Zastarela značka HTML",
 	"linter-pager-pwrap-bug-workaround-details": "Nadomestna rešitev hrošča pri ovijanju odstavkov",
 	"linter-pager-self-closed-tag-details": "Samozaključena značka",
