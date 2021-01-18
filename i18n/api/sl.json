@@ -1,14 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
+			"Eleassar",
 			"Janezdrilc"
 		]
 	},
 	"apihelp-query+linterrors-description": "Poglej seznam kodnih napak",
 	"apihelp-query+linterrors-summary": "Poglej seznam kodnih napak",
 	"apihelp-query+linterrors-param-categories": "Kategorije kodnih napak",
-	"apihelp-query+linterrors-param-namespace": "Vključi samo kodne napake specifičnega imenskega prostora",
-	"apihelp-query+linterrors-example-1": "Poglej vse kodne napake kategorije za zastarele značke",
+	"apihelp-query+linterrors-param-namespace": "Vključi samo skladenjske napake v izbranem imenskem prostoru",
+	"apihelp-query+linterrors-example-1": "Pridobi vse skladenjske napake iz kategorije zastarelih značk",
 	"apihelp-record-lint-description": "Zabeleži kodno napako v zbirko",
 	"apihelp-record-lint-summary": "Zabeleži kodno napako v zbirko",
 	"apihelp-record-lint-param-data": "Šifrirani podatki JSON o napaki",
