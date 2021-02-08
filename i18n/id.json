@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Bagas Chrisara",
-			"Daud I.F. Argana"
+			"Daud I.F. Argana",
+			"Hidayatsrf"
 		]
 	},
 	"linterrors": "Galat lint",
@@ -40,6 +41,7 @@
 	"linter-pager-self-closed-tag-details": "Tag yang menutup sendiri",
 	"linter-pager-template": "Melalui sebuah templat?",
 	"linter-pager-tidy-font-bug-details": "Tag font mencoba untuk mengubah warna pranala",
+	"linter-pager-tidy-whitespace-bug-details": "Kekutu penguraian spasi",
 	"linter-pager-title": "Judul halaman",
 	"linter-pager-unclosed-quotes-in-heading-details": "Kutipan tidak tertutup yang keluar dari daftar isi",
 	"linterrors-subpage": "Galat lint: $1",
