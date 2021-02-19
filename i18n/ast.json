@@ -3,6 +3,7 @@
 		"authors": [
 			"Fitoschido",
 			"MarcoAurelio",
+			"Tokvo",
 			"Xuacu"
 		]
 	},
@@ -55,11 +56,11 @@
 	"linter-pager-bogus-image-options-details": "Mala opción de ficheru",
 	"linter-pager-deletable-table-tag-details": "Etiqueta de tabla que tien d'esborrase",
 	"linter-pager-html5-misnesting-details": "Añeramientu enquivocáu en HTML5 (pero non en Tidy)",
-	"linter-pager-misc-tidy-replacement-issues-details": "Distintos errores d'etiquetáu qu'afeuten a la sustitución de Tidy",
+	"linter-pager-misc-tidy-replacement-issues-details": "Distintos errores d'etiquetáu",
 	"linter-pager-misnested-tag-details": "Etiqueta mal añerada que tendría de correxise",
 	"linter-pager-missing-end-tag-details": "Etiqueta de zarramientu faltante",
 	"linter-pager-multi-colon-escape-details": "Escape de dos puntos múltiples",
-	"linter-pager-multiline-html-table-in-list-details": "Tabla HTML5 con delles llinies dientro d'una llista, representada de forma distinta en HTML5 y Tidy",
+	"linter-pager-multiline-html-table-in-list-details": "Tabla HTML5 con delles llinies dientro d'una llista",
 	"linter-pager-multiple-unclosed-formatting-tags-details": "Delles etiquetes de formatu sin zarrar na páxina",
 	"linter-pager-obsolete-tag-details": "Etiqueta HTML anticuada",
 	"linter-pager-pwrap-bug-workaround-details": "Atayu de l'error d'axuste de párrafu",
