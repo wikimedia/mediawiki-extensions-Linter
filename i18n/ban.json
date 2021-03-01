@@ -4,5 +4,10 @@
 			"Chinamoonroll"
 		]
 	},
-	"linter-pager-missing-end-tag-details": "Tanpa tag panutup"
+	"linter-pager-bogus-image-options-details": "Opsi berkas bogus",
+	"linter-pager-deletable-table-tag-details": "Tag tablé sané patut kausap",
+	"linter-pager-missing-end-tag-details": "Tanpa tag panutup",
+	"linter-pager-self-closed-tag-details": "Tag sané nutup ngaraga",
+	"linter-pager-tidy-font-bug-details": "Tag aksara nyoba antuk nguahin warna pranala",
+	"linter-pager-tidy-whitespace-bug-details": "Kakutu pabelas spasi"
 }
