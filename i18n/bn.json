@@ -22,6 +22,7 @@
 	"linter-page-edit": "সম্পাদনা",
 	"linter-page-history": "ইতিহাস",
 	"linter-page-viewsource": "উৎস দেখুন",
+	"linter-pager-bogus-image-options-details": "ভুয়া ফাইল অপশন",
 	"linter-pager-deletable-table-tag-details": "টেবিল ট্যাগ যা মুছে ফেলা উচিত",
 	"linter-pager-misc-tidy-replacement-issues-details": "বিবিধ মার্কআপ ত্রুটি",
 	"linter-pager-missing-end-tag-details": "সমাপ্তির ট্যাগ অনুপস্থিত",
