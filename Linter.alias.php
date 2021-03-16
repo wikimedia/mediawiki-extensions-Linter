@@ -45,6 +45,16 @@ $specialPageAliases['ko'] = [
 	'LintErrors' => [ '린트오류' ],
 ];
 
+/** Norwegian Bokmål (norsk bokmål) */
+$specialPageAliases['nb'] = [
+	'LintErrors' => [ 'Lint-feil' ],
+];
+
+/** Norwegian Nynorsk (norsk nynorsk) */
+$specialPageAliases['nn'] = [
+	'LintErrors' => [ 'Lint-feil' ],
+];
+
 /** Serbian (Cyrillic script) (српски (ћирилица)‎) */
 $specialPageAliases['sr-ec'] = [
 	'LintErrors' => [ 'Пречишћивање_грешака' ],
