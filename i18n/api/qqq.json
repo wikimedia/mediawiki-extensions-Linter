@@ -26,7 +26,7 @@
 	"apihelp-query+linterstats-description": "{{doc-apihelp-description|query+linterstats}}",
 	"apihelp-query+linterstats-summary": "{{doc-apihelp-summary|query+linterstats}}",
 	"apihelp-query+linterstats-example-1": "{{doc-apihelp-example|query+linterstats}}",
-	"apierror-linter-invalid-ip": "{{doc-apierror|linter}}\nError message when IP address has not been whitelisted to report lint errors",
+	"apierror-linter-invalid-ip": "{{doc-apierror|linter}}\nError message when IP address has not been allowed to report lint errors tries to report them",
 	"apierror-linter-invalid-data": "{{doc-apierror|linter}}\nError message when there is invalid data",
 	"apierror-linter-invalid-title": "{{doc-apierror|linter}}\nError message when there is invalid, non-existent, or outdated title"
 }

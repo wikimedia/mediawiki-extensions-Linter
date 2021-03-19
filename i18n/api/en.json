@@ -24,7 +24,7 @@
 	"apihelp-query+linterstats-description": "Get number of lint errors in each category",
 	"apihelp-query+linterstats-summary": "Get number of lint errors in each category",
 	"apihelp-query+linterstats-example-1": "Get number of lint errors in each category",
-	"apierror-linter-invalid-ip": "Your IP address has not been whitelisted to report lint errors",
+	"apierror-linter-invalid-ip": "Your IP address is not allowed to report lint errors",
 	"apierror-linter-invalid-data": "Invalid data",
 	"apierror-linter-invalid-title": "Invalid, non-existent, or outdated title"
 }
