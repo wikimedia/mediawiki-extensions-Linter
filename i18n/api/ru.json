@@ -21,7 +21,7 @@
 	"apihelp-query+linterstats-description": "Получение числа ошибок в каждой категории",
 	"apihelp-query+linterstats-summary": "Получение числа ошибок в каждой категории",
 	"apihelp-query+linterstats-example-1": "Получить число ошибок в каждой категории",
-	"apierror-linter-invalid-ip": "Ваш IP-адрес не включён в белый список для того, чтобы сообщать об ошибках статического анализаторы",
+	"apierror-linter-invalid-ip": "Ваш IP-адрес не включён в белый список для того, чтобы сообщать об ошибках статического анализатора",
 	"apierror-linter-invalid-data": "Некорректные данные",
 	"apierror-linter-invalid-title": "Некорректный, несуществующий или устаревший заголовок"
 }

@@ -23,7 +23,7 @@
 	"apihelp-query+linterstats-description": "קבלת מספר שגיאות הניקיון בכל קטגוריה",
 	"apihelp-query+linterstats-summary": "קבלת מספר שגיאות הניקיון בכל קטגוריה",
 	"apihelp-query+linterstats-example-1": "קבלת מספר שגיאות הניקיון בכל קטגוריה",
-	"apierror-linter-invalid-ip": "כתובת ה־IP שלך לא נמצאת ברשימה של הלבנה של הכתובות המורשות לדווח על שגיאות ניקיון",
+	"apierror-linter-invalid-ip": "כתובת ה־IP שלך אינה מורשית לדווח על שגיאות ניקיון",
 	"apierror-linter-invalid-data": "נתונים בלתי־תקינים",
 	"apierror-linter-invalid-title": "כותרת בלתי־תקינה, לא קיימת או לא מעודכנת"
 }

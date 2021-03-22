@@ -17,7 +17,7 @@
 	"apihelp-record-lint-param-data": "오류에 대한 JSON 변환 데이터",
 	"apihelp-record-lint-param-page": "문서 제목",
 	"apihelp-record-lint-param-revision": "오류가 발견된 판 ID",
-	"apierror-linter-invalid-ip": "당신의 IP 주소는 린트 오류 보고를 위해 화이트리스트에 등록되어 있지 않습니다",
+	"apierror-linter-invalid-ip": "당신의 IP 주소는 린트 오류를 보고할 권한이 없습니다",
 	"apierror-linter-invalid-data": "유효하지 않은 데이터",
 	"apierror-linter-invalid-title": "유효하지 않거나 존재하지 않거나 오래된 제목"
 }

@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Derugon",
+			"Epok",
 			"Fitoschido",
 			"Gomoko",
 			"JackPotte",
@@ -77,7 +78,7 @@
 	"linter-pager-self-closed-tag-details": "Balise auto-fermante",
 	"linter-pager-stripped-tag-details": "Balise vide",
 	"linter-pager-template": "Via un modèle ?",
-	"linter-pager-tidy-font-bug-details": "La balise de police essaye de modifier la couleur du lien",
+	"linter-pager-tidy-font-bug-details": "Balise de police essayant de modifier la couleur du lien",
 	"linter-pager-tidy-whitespace-bug-details": "Anomalie de l’analyse des blancs",
 	"linter-pager-title": "Titre de la page",
 	"linter-pager-unclosed-quotes-in-heading-details": "Apostrophes non fermées dans un titre, qui débordent de la table des matières",

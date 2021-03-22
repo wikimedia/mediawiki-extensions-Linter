@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Chrumps",
+			"Rail",
 			"Woytecr"
 		]
 	},
@@ -21,7 +22,7 @@
 	"apihelp-query+linterstats-description": "Pobiera liczbę błędów składniowych dla każdej kategorii lintera",
 	"apihelp-query+linterstats-summary": "Pobiera liczbę błędów składniowych dla każdej kategorii lintera",
 	"apihelp-query+linterstats-example-1": "Pobierz liczbę błędów składniowych dla każdej kategorii lintera",
-	"apierror-linter-invalid-ip": "Twój adres IP nie znajduje się na białej liście adresów, które mogą zgłaszać błędy lintera",
+	"apierror-linter-invalid-ip": "Twój adres IP nie może zgłaszać błędów lintera",
 	"apierror-linter-invalid-data": "Nieprawidłowe dane",
 	"apierror-linter-invalid-title": "Nieprawidłowy, nieistniejący lub nieaktualny tytuł"
 }

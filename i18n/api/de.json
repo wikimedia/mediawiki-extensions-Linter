@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Distel135",
 			"Metalhead64"
 		]
 	},
@@ -21,7 +22,7 @@
 	"apihelp-query+linterstats-description": "Ruft die Anzahl der Lint-Fehler in jeder Kategorie ab",
 	"apihelp-query+linterstats-summary": "Ruft die Anzahl der Lint-Fehler in jeder Kategorie ab",
 	"apihelp-query+linterstats-example-1": "Ruft die Anzahl der Lint-Fehler in jeder Kategorie ab",
-	"apierror-linter-invalid-ip": "Deine IP-Adresse ist nicht weißgelistet, um Lint-Fehler zu melden.",
+	"apierror-linter-invalid-ip": "Deine IP-Adresse hat nicht die Erlaubnis, Lint-Fehler zu melden.",
 	"apierror-linter-invalid-data": "Ungültige Daten",
 	"apierror-linter-invalid-title": "Ungültiger, nicht vorhandener oder veralteter Titel"
 }

@@ -4,6 +4,7 @@
 			"BaRaN6161 TURK",
 			"Incelemeelemani",
 			"MuratTheTurkish",
+			"SaldırganSincap",
 			"Sezgin İbiş"
 		]
 	},
@@ -24,7 +25,7 @@
 	"apihelp-query+linterstats-description": "Her kategorideki lint hatası sayısını alın",
 	"apihelp-query+linterstats-summary": "Her kategorideki lint hatası sayısını alın",
 	"apihelp-query+linterstats-example-1": "Her kategorideki lint hatası sayısını alın",
-	"apierror-linter-invalid-ip": "IP adresiniz lint hataları bildirmek için beyaz listeye eklenmedi",
+	"apierror-linter-invalid-ip": "IP adresinizin lint hataları bildirmesine izin verilmiyor",
 	"apierror-linter-invalid-data": "Geçersiz veri",
 	"apierror-linter-invalid-title": "Geçersiz, var olmayan veya güncel olmayan başlık"
 }
