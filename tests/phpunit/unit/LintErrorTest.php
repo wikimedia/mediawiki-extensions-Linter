@@ -18,14 +18,14 @@
  * @file
  */
 
-namespace MediaWiki\Linter\Test;
+namespace MediaWiki\Linter\Test\Unit;
 
 use MediaWiki\Linter\LintError;
 
 /**
  * @covers MediaWiki\Linter\LintError
  */
-class LintErrorTest extends \MediaWikiTestCase {
+class LintErrorTest extends \MediaWikiUnitTestCase {
 	public function testLintError() {
 		$error1 = new LintError(
 			'fostered',
