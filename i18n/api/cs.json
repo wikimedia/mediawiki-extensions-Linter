@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Danny B.",
-			"Dvorapa"
+			"Dvorapa",
+			"Matěj Suchánek"
 		]
 	},
 	"apihelp-query+linterrors-description": "Získat seznam chyb nalezených Lintem",
@@ -21,7 +22,7 @@
 	"apihelp-query+linterstats-description": "Získat počet chyb nalezených Lintem pro každou kategorii",
 	"apihelp-query+linterstats-summary": "Získat počet chyb nalezených Lintem pro každou kategorii",
 	"apihelp-query+linterstats-example-1": "Získat počet chyb nalezených Lintem pro každou kategorii",
-	"apierror-linter-invalid-ip": "Vaší IP adrese nebylo povoleno hlásit chyby nalezené Lintem",
+	"apierror-linter-invalid-ip": "Vaší IP adrese není povoleno hlásit chyby nalezené Lintem",
 	"apierror-linter-invalid-data": "Chybná data",
 	"apierror-linter-invalid-title": "Chybný, neexistující nebo zastaralý název"
 }
