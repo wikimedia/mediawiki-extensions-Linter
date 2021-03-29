@@ -9,6 +9,7 @@
 			"Omotecho",
 			"Otokoume",
 			"Shirayuki",
+			"Whym",
 			"Yusuke1109"
 		]
 	},
@@ -31,9 +32,11 @@
 	"linter-category-obsolete-tag-desc": "これらのページでは、廃止されたHTMLタグが使用されています。",
 	"linter-category-self-closed-tag": "自己終了タグ",
 	"linter-category-self-closed-tag-desc": "これらのページには自己終了タグがあります。",
-	"linter-category-tidy-whitespace-bug": "Tidyの空白バグ",
-	"linter-category-tidy-whitespace-bug-desc": "回避が必要なTidyの空白バグを含むページ。",
+	"linter-category-tidy-whitespace-bug": "空白文字解析のバグ",
+	"linter-category-tidy-whitespace-bug-desc": "これらのページは空白文字解析のバグを引き起こしたため、回避法を適用すべきです。",
 	"linter-category-unclosed-quotes-in-heading": "閉じられていない見出しの引用符",
+	"linter-category-wikilink-in-extlink": "リンク内リンク",
+	"linter-category-wikilink-in-extlink-desc": "これらのページには外部リンク内に置かれたウィキリンクがあり、修正が可能です",
 	"linter-desc": "外部サービスから lint エラーを追跡し、利用者に表示する",
 	"linter-form-namespace": "名前空間:",
 	"linter-heading-high-priority": "優先度 高",
