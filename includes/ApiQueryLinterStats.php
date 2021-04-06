@@ -25,6 +25,9 @@ use ApiResult;
 use MediaWiki\MediaWikiServices;
 
 class ApiQueryLinterStats extends ApiQueryBase {
+	/**
+	 * @param ApiQuery $queryModule
+	 */
 	public function __construct( ApiQuery $queryModule ) {
 		parent::__construct( $queryModule, 'linterstats', 'ls' );
 	}
@@ -43,6 +46,7 @@ class ApiQueryLinterStats extends ApiQueryBase {
 		$this->getResult()->addValue( [ 'query', 'linterstats' ], 'totals', $totals );
 	}
 
+	/** @inheritDoc */
 	public function getExamplesMessages() {
 		return [
 			'action=query&meta=linterstats' =>

@@ -27,6 +27,10 @@ use ApiResult;
 use Title;
 
 class ApiQueryLintErrors extends ApiQueryBase {
+	/**
+	 * @param ApiQuery $queryModule
+	 * @param string $moduleName
+	 */
 	public function __construct( ApiQuery $queryModule, $moduleName ) {
 		parent::__construct( $queryModule, $moduleName, 'lnt' );
 	}
@@ -106,6 +110,7 @@ class ApiQueryLintErrors extends ApiQueryBase {
 		}
 	}
 
+	/** @inheritDoc */
 	public function getAllowedParams() {
 		$visibleCats = ( new CategoryManager() )->getVisibleCategories();
 		return [
@@ -139,6 +144,7 @@ class ApiQueryLintErrors extends ApiQueryBase {
 		];
 	}
 
+	/** @inheritDoc */
 	public function getExamplesMessages() {
 		return [
 			'action=query&list=linterrors&lntcategories=obsolete-tag' =>
