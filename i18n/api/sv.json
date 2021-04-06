@@ -3,6 +3,7 @@
 		"authors": [
 			"Bengtsson96",
 			"Mjälten",
+			"Sabelöga",
 			"WikiPhoenix"
 		]
 	},
@@ -18,7 +19,7 @@
 	"apihelp-record-lint-param-data": "JSON-kodad data om felet",
 	"apihelp-record-lint-param-page": "Sidtitel",
 	"apihelp-record-lint-param-revision": "Versions-ID som felet hittades i",
-	"apierror-linter-invalid-ip": "Din IP-adress har inte blivit vitlistat för att rapportera lintfel",
+	"apierror-linter-invalid-ip": "Din IP-adress får inte att rapportera lintfel",
 	"apierror-linter-invalid-data": "Ogiltig data",
 	"apierror-linter-invalid-title": "Ogiltig, ej existerande eller föråldrad titel"
 }
