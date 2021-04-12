@@ -46,7 +46,7 @@
 	"linter-category-tidy-font-bug": "链接包裹字体标签的旧行为",
 	"linter-category-tidy-font-bug-desc": "Tidy将这些字体标签移动到链接内以更改链接颜色",
 	"linter-category-tidy-whitespace-bug": "空格解析错误",
-	"linter-category-tidy-whitespace-bug-desc": "这些页面触发了应处理的Tidy空格错误。",
+	"linter-category-tidy-whitespace-bug-desc": "这些页面在解析时触发了应处理的空格错误。",
 	"linter-category-unclosed-quotes-in-heading": "标题中未闭合引用",
 	"linter-category-unclosed-quotes-in-heading-desc": "这些页面在标题处存在未闭合的引用，这导致其超出目录范围。",
 	"linter-desc": "从外部服务追踪lint错误，并向用户显示",

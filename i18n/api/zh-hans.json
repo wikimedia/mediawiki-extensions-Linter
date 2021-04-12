@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Func",
 			"Liuxinyu970226",
 			"列维劳德"
 		]
@@ -22,7 +23,7 @@
 	"apihelp-query+linterstats-description": "获取每个分类中的lint错误数",
 	"apihelp-query+linterstats-summary": "获取每个分类中的lint错误数",
 	"apihelp-query+linterstats-example-1": "获取每个分类中的lint错误数",
-	"apierror-linter-invalid-ip": "您的IP地址尚未列入白名单，不能报告lint错误",
+	"apierror-linter-invalid-ip": "您的IP地址不被允许报告lint错误",
 	"apierror-linter-invalid-data": "无效数据",
 	"apierror-linter-invalid-title": "无效、不存在或过时的标题"
 }
