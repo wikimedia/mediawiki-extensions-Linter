@@ -39,6 +39,10 @@ class TotalsLookup {
 	 */
 	private $catManager;
 
+	/**
+	 * @param CategoryManager $catManager
+	 * @param WANObjectCache $cache
+	 */
 	public function __construct( CategoryManager $catManager, WANObjectCache $cache ) {
 		$this->cache = $cache;
 		$this->catManager = $catManager;

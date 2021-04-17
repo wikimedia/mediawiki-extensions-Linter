@@ -33,10 +33,19 @@ use TitleValue;
 
 class LintErrorsPager extends TablePager {
 
+	/**
+	 * @var CategoryManager
+	 */
 	private $categoryManager;
 
+	/**
+	 * @var string
+	 */
 	private $category;
 
+	/**
+	 * @var int|null
+	 */
 	private $categoryId;
 
 	/**
@@ -55,10 +64,18 @@ class LintErrorsPager extends TablePager {
 	private $namespace;
 
 	/**
-	 * @var bool|null
+	 * @var bool
 	 */
 	private $invertnamespace;
 
+	/**
+	 * @param IContextSource $context
+	 * @param string $category
+	 * @param LinkRenderer $linkRenderer
+	 * @param CategoryManager $catManager
+	 * @param int|null $namespace
+	 * @param bool $invertnamespace
+	 */
 	public function __construct( IContextSource $context, $category, LinkRenderer $linkRenderer,
 		CategoryManager $catManager, $namespace, $invertnamespace
 	) {
@@ -72,6 +89,7 @@ class LintErrorsPager extends TablePager {
 		parent::__construct( $context );
 	}
 
+	/** @inheritDoc */
 	public function getQueryInfo() {
 		$conds = [ 'linter_cat' => $this->categoryId ];
 		if ( $this->namespace !== null ) {
@@ -101,10 +119,17 @@ class LintErrorsPager extends TablePager {
 		}
 	}
 
+	/** @inheritDoc */
 	public function isFieldSortable( $field ) {
 		return false;
 	}
 
+	/**
+	 * @param string $name
+	 * @param string $value
+	 * @return string
+	 * @throws InvalidArgumentException
+	 */
 	public function formatValue( $name, $value ) {
 		$row = $this->mCurrentRow;
 		$row->linter_cat = $this->categoryId;
@@ -202,10 +227,14 @@ class LintErrorsPager extends TablePager {
 		}
 	}
 
+	/** @inheritDoc */
 	public function getDefaultSort() {
 		return 'linter_id';
 	}
 
+	/**
+	 * @return string[]
+	 */
 	public function getFieldNames() {
 		$names = [
 			'title' => $this->msg( 'linter-pager-title' )->text(),

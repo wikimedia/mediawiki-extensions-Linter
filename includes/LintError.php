@@ -51,7 +51,7 @@ class LintError {
 	 */
 	public $templateInfo;
 
-	/*
+	/**
 	 * Optional hint for the linter category ID.
 	 * Passed through from Parsoid when a new category has been added
 	 * that isn't known to PHP yet.

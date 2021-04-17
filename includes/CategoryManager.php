@@ -85,10 +85,18 @@ class CategoryManager {
 		sort( $this->categories[self::LOW] );
 	}
 
+	/**
+	 * @param string $name
+	 * @return bool
+	 */
 	public function needsParserMigrationEdit( $name ) {
 		return isset( $this->parserMigrationCategories[$name] );
 	}
 
+	/**
+	 * @param string $name
+	 * @return bool
+	 */
 	public function hasNameParam( $name ) {
 		return isset( $this->hasNameParam[$name] );
 	}

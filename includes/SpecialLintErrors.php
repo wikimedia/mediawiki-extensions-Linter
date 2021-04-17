@@ -27,12 +27,19 @@ use SpecialPage;
 
 class SpecialLintErrors extends SpecialPage {
 
+	/**
+	 * @var string
+	 */
 	private $category;
 
 	public function __construct() {
 		parent::__construct( 'LintErrors' );
 	}
 
+	/**
+	 * @param int|null $ns
+	 * @param bool $nsinvert
+	 */
 	protected function showNamespaceFilterForm( $ns, $nsinvert ) {
 		$fields = [
 			'namespace' => [
@@ -59,6 +66,9 @@ class SpecialLintErrors extends SpecialPage {
 		$form->prepareForm()->displayForm( false );
 	}
 
+	/**
+	 * @param string|null $par
+	 */
 	public function execute( $par ) {
 		$this->setHeaders();
 		$this->outputHeader();
@@ -102,6 +112,9 @@ class SpecialLintErrors extends SpecialPage {
 		$out->addHTML( $this->buildCategoryList( $categories, $totals ) );
 	}
 
+	/**
+	 * @param CategoryManager $catManager
+	 */
 	private function showCategoryListings( CategoryManager $catManager ) {
 		$lookup = new TotalsLookup(
 			$catManager,
@@ -136,10 +149,14 @@ class SpecialLintErrors extends SpecialPage {
 		return $html;
 	}
 
+	/** @inheritDoc */
 	public function getGroupName() {
 		return 'maintenance';
 	}
 
+	/**
+	 * @return string[]
+	 */
 	protected function getSubpagesForPrefixSearch() {
 		return ( new CategoryManager() )->getVisibleCategories();
 	}
