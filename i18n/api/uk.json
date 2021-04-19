@@ -22,7 +22,7 @@
 	"apihelp-query+linterstats-description": "Отримати кількість Lint-помилок у кожній категорії",
 	"apihelp-query+linterstats-summary": "Отримати кількість Lint-помилок у кожній категорії",
 	"apihelp-query+linterstats-example-1": "Отримати кількість Lint-помилок у кожній категорії",
-	"apierror-linter-invalid-ip": "Вашу IP-адресу не було додано до білого списку для надсилання звітів про Lint-помилки",
+	"apierror-linter-invalid-ip": "Вашій IP-адресі не дозволено надсилати звіти про Lint-помилки",
 	"apierror-linter-invalid-data": "Недійсні дані",
 	"apierror-linter-invalid-title": "Недійсна, неіснуюча, або застаріла назва"
 }
