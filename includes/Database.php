@@ -33,6 +33,7 @@ class Database {
 	 * for a page, the rest are just dropped
 	 */
 	public const MAX_PER_CAT = 20;
+	public const MAX_ACCURATE_COUNT = 20;
 
 	/**
 	 * @var int
@@ -246,21 +247,25 @@ class Database {
 	 */
 	private function getTotalsEstimate( $catId ) {
 		$dbr = wfGetDB( DB_REPLICA );
-		// First see if there are no rows, since the distinction
-		// between 0 and 1 is important. And estimateRowCount seems
-		// to never return 0.
+		// First see if there are no rows, or a moderate number
+		// within the limit specified by the MAX_ACCURATE_COUNT.
+		// The distinction between 0, a few and a lot is important
+		// to determine first, as estimateRowCount seem to never
+		// return 0 or accurate low error counts.
 		$rows = $dbr->selectRowCount(
 			'linter',
 			'*',
 			[ 'linter_cat' => $catId ],
 			__METHOD__,
-			[ 'LIMIT' => 1 ]
+			[ 'LIMIT' => self::MAX_ACCURATE_COUNT ]
 		);
-		if ( $rows === 0 ) {
-			return 0;
+		// Return an accurate count if the number of errors is
+		// below the maximum accurate count limit
+		if ( $rows < self::MAX_ACCURATE_COUNT ) {
+			return $rows;
 		}
-
-		// Now we can just estimate
+		// Now we can just estimate if the maximum accurate count limit
+		// was returned, which isn't the actual count but the limit reached
 		return $dbr->estimateRowCount(
 			'linter',
 			'*',
