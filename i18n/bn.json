@@ -33,6 +33,7 @@
 	"linter-pager-obsolete-tag-details": "অপ্রচলিত HTML ট্যাগ",
 	"linter-pager-self-closed-tag-details": "স্ব-বন্ধকৃত ট্যাগ",
 	"linter-pager-template": "একটি টেমপ্লেটের মাধ্যমে?",
+	"linter-pager-tidy-font-bug-details": "ফন্ট ট্যাগ লিঙ্কের রঙ পরিবর্তন করার চেষ্টা করে",
 	"linter-pager-tidy-whitespace-bug-details": "হোয়াইটস্পেস পার্সিং বাগ",
 	"linter-pager-title": "পাতার শিরোনাম",
 	"linterrors-subpage": "লিন্ট ত্রুটি: $1",
