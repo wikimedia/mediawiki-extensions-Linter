@@ -69,7 +69,7 @@ class TotalsLookup {
 			$totals[$cat] = $this->cache->getWithSetCallback(
 				$this->makeKey( $cat ),
 				WANObjectCache::TTL_INDEFINITE,
-				function ( $oldValue, &$ttl, &$setOpts, $oldAsOf ) use ( $cat, &$fetchedTotals ) {
+				static function ( $oldValue, &$ttl, &$setOpts, $oldAsOf ) use ( $cat, &$fetchedTotals ) {
 					$setOpts += MWDatabase::getCacheSetOptions( wfGetDB( DB_REPLICA ) );
 					if ( $fetchedTotals === false ) {
 						$fetchedTotals = ( new Database( 0 ) )->getTotals();

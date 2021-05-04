@@ -170,7 +170,7 @@ class Database {
 	 */
 	public function setForPage( $errors ) {
 		$previous = $this->getForPage();
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		if ( !$previous && !$errors ) {
 			return [ 'deleted' => [], 'added' => [] ];
 		} elseif ( !$previous && $errors ) {

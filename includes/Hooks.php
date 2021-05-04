@@ -97,7 +97,7 @@ class Hooks {
 		Content $content, array &$updates
 	) {
 		$title = $wikiPage->getTitle();
-		$updates[] = new MWCallableUpdate( function () use ( $title ) {
+		$updates[] = new MWCallableUpdate( static function () use ( $title ) {
 			$job = new RecordLintJob(
 				$title, [ 'errors' => [] ]
 			);
