@@ -40,6 +40,7 @@
 	"linter-page-viewsource": "pokaż źródło",
 	"linter-pager-bogus-image-options-details": "Nieprawidłowa opcja pliku",
 	"linter-pager-deletable-table-tag-details": "Nadmiarowe znaczniki tabeli do usunięcia",
+	"linter-pager-html5-misnesting-details": "Źle zagnieżdżone (i widoczne uszkodzenia)",
 	"linter-pager-misc-tidy-replacement-issues-details": "Różnorakie błędy składni",
 	"linter-pager-misnested-tag-details": "Źle zagnieżdżony znacznik, który należy poprawnie zagnieździć",
 	"linter-pager-missing-end-tag-details": "Brak znacznika zamykającego",
