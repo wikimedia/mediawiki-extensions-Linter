@@ -20,29 +20,42 @@
 
 namespace MediaWiki\Linter\Test;
 
+use ContentHandler;
 use MediaWiki\Linter\Database;
 use MediaWiki\Linter\LintError;
 use MediaWiki\Linter\RecordLintJob;
 use Title;
+use User;
+use WikiPage;
 
 /**
  * @group Database
- * @group Broken
  * @covers MediaWiki\Linter\RecordLintJob
  */
 class RecordLintJobTest extends \MediaWikiTestCase {
-
 	/**
-	 * @param int $articleId
-	 * @param int $revId
-	 * @return Title
+	 * @return array
 	 */
-	private function getMockTitle( $articleId = 1, $revId = 2 ) {
-		$mock = $this->createMock( Title::class );
-		$mock->expects( $this->any() )->method( 'getLatestRevID' )->willReturn( $revId );
-		$mock->expects( $this->any() )->method( 'getArticleID' )->willReturn( $articleId );
+	private function createTitleAndPage() {
+		$titleText = 'TestPage';
+		$userName = 'LinterUser';
+		$baseText = 'wikitext test content';
 
-		return $mock;
+		$ns = $this->getDefaultWikitextNS();
+		$title = Title::newFromText( $titleText, $ns );
+		$user = User::newFromName( $userName );
+		if ( $user->getId() === 0 ) {
+			$user->addToDatabase();
+		}
+		$page = WikiPage::factory( $title );
+
+		$content = ContentHandler::makeContent( $baseText, $title );
+		$page->doUserEditContent( $content, $user, "base text for test" );
+
+		return [ 'title' => $title,
+			'pageID' => $page->getRevisionRecord()->getPageId(),
+			'revID' => $page->getRevisionRecord()->getID()
+		];
 	}
 
 	public function testRun() {
@@ -52,13 +65,14 @@ class RecordLintJobTest extends \MediaWikiTestCase {
 			'params' => [],
 			'dbid' => null,
 		];
-		$job = new RecordLintJob( $this->getMockTitle(), [
+		$titleAndPage = $this->createTitleAndPage();
+		$job = new RecordLintJob( $titleAndPage['title'], [
 			'errors' => [ $error ],
-			'revision' => 2,
+			'revision' => $titleAndPage['revID']
 		] );
 		$this->assertTrue( $job->run() );
 		/** @var LintError[] $errorsFromDb */
-		$errorsFromDb = array_values( ( new Database( 1 ) )->getForPage() );
+		$errorsFromDb = array_values( ( new Database( $titleAndPage['pageID'] ) )->getForPage() );
 		$this->assertCount( 1, $errorsFromDb );
 		$this->assertInstanceOf( LintError::class, $errorsFromDb[0] );
 		$this->assertEquals( $error['type'], $errorsFromDb[0]->category );
