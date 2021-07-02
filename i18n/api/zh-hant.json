@@ -25,7 +25,7 @@
 	"apihelp-query+linterstats-description": "取得每個分類內的 lint 錯誤量",
 	"apihelp-query+linterstats-summary": "取得每個分類內的 lint 錯誤量",
 	"apihelp-query+linterstats-example-1": "取得每個分類內的 lint 錯誤量",
-	"apierror-linter-invalid-ip": "您的 IP 位址尚未被列為白名單，故不能回報 lint 錯誤",
+	"apierror-linter-invalid-ip": "您的 IP 位址未被允許回報 lint 錯誤",
 	"apierror-linter-invalid-data": "無效資料",
 	"apierror-linter-invalid-title": "無效、不存在或過時的標題"
 }
