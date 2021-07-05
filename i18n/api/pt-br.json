@@ -3,7 +3,8 @@
 		"authors": [
 			"Eduardo Addad de Oliveira",
 			"Eduardoaddad",
-			"Felipe L. Ewald"
+			"Felipe L. Ewald",
+			"Isabelle Belato"
 		]
 	},
 	"apihelp-query+linterrors-description": "Obter uma lista de erros de lint",
@@ -23,7 +24,7 @@
 	"apihelp-query+linterstats-description": "Obter número de erros de lint em cada categoria",
 	"apihelp-query+linterstats-summary": "Obter número de erros de lint em cada categoria",
 	"apihelp-query+linterstats-example-1": "Obter número de erros de lint em cada categoria",
-	"apierror-linter-invalid-ip": "O seu endereço IP não consta da lista branca para reportar erros de lint.",
+	"apierror-linter-invalid-ip": "O seu endereço IP não possui permissão para reportar erros de lint.",
 	"apierror-linter-invalid-data": "Dados inválidos",
 	"apierror-linter-invalid-title": "Título inválido, inexistente ou desatualizado"
 }
