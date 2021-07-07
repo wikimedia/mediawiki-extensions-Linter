@@ -1,10 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Minh Nguyen"
+			"Minh Nguyen",
+			"Vinhtantran"
 		]
 	},
 	"linterrors": "Lỗi cú pháp",
+	"linter-category-bogus-image-options": "Tùy chọn tập tin không có thật",
+	"linter-category-bogus-image-options-desc": "Những trang này có tập tin với những tùy chọn không có thật.",
 	"linter-category-deletable-table-tag": "Thẻ bảng cần xóa",
 	"linter-category-deletable-table-tag-desc": "Các trang này chứa thẻ bảng cần được xóa.",
 	"linter-category-missing-end-tag": "Thiếu thẻ kết thúc",
