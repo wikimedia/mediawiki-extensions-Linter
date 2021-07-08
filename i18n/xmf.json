@@ -1,13 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
+			"Narazeni",
 			"Silovan"
 		]
 	},
 	"linter-category-missing-end-tag-desc": "თე ხასჷლეფს ვარე მაკილარი თეგეფი",
 	"linter-page-edit": "რედაქტირაფა",
 	"linter-pager-bogus-image-options-details": "ფაილიშ ჩილათირი პარამეტრი",
-	"linter-pager-missing-end-tag-details": "ვარე მაკილარი ტეგი",
+	"linter-pager-missing-end-tag-details": "ვა რე მაკილარი ხინტკი (ტეგი)",
 	"linter-pager-obsolete-tag-details": "მოჯვეშაფილი HTML ტეგი",
 	"linterrors-subpage": "ანგეფიშ ჩილათეფიː$1"
 }
