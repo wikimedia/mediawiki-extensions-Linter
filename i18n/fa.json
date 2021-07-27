@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Huji",
+			"Jeeputer",
 			"Reza1615"
 		]
 	},
@@ -40,7 +41,7 @@
 	"linter-category-tidy-whitespace-bug-desc": "این صفحه‌ها خطاهای مرتبط با فصای سفید دارند که باید روی آنها کار شود.",
 	"linter-category-unclosed-quotes-in-heading": "نقل قول بسته نشده در عنوان",
 	"linter-category-unclosed-quotes-in-heading-desc": "این صفحات دارای علامت نقل قول بسته نشده در عنوان است که باعث می‌شود محتوای جدول محتوی نادرست دیده شود.",
-	"linter-category-wikilink-in-extlink": "پیوند در پیوند",
+	"linter-category-wikilink-in-extlink": "ویکی‌پیوند در پیوند بیرونی",
 	"linter-category-wikilink-in-extlink-desc": "این صفحات پیوند داخلی درون پیوند خارجی دارند که باید درست شود",
 	"linter-desc": "پیگیری خطاهای نحوی پنهان از یک سامانه خارجی و نمایش آن‌ها به کاربران",
 	"linter-form-namespace": "فضای نام:",
