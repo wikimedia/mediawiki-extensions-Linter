@@ -108,18 +108,18 @@ class DatabaseTest extends MediaWikiTestCase {
 		$resultEstimatedTotals = $lintDb->getTotals();
 		$this->assertEquals( $resultTotals, $resultEstimatedTotals );
 
-		// For error counts below the MAX_ACCURATE_COUNT, both error
+		// For error counts <= MAX_ACCURATE_COUNT, both error
 		// count methods should return the same count.
-		self::createManyLintErrors( $lintDb, Database::MAX_ACCURATE_COUNT - 1 );
+		self::createManyLintErrors( $lintDb, Database::MAX_ACCURATE_COUNT );
 		$resultTotals = $lintDb->getTotalsForPage();
 		$resultEstimatedTotals = $lintDb->getTotals();
 		$this->assertEquals( $resultTotals, $resultEstimatedTotals );
 
-		// For error counts equal to or above the MAX_ACCURATE_COUNT, both error
+		// For error counts greater than MAX_ACCURATE_COUNT, both error
 		// count methods should NOT return the same count in this test scenario
 		// because previously added and deleted records will be included
 		// in the estimated count which is normal.
-		self::createManyLintErrors( $lintDb, Database::MAX_ACCURATE_COUNT );
+		self::createManyLintErrors( $lintDb, Database::MAX_ACCURATE_COUNT + 1 );
 		$resultTotals = $lintDb->getTotalsForPage();
 		$resultEstimatedTotals = $lintDb->getTotals();
 		$this->assertNotEquals( $resultTotals, $resultEstimatedTotals );

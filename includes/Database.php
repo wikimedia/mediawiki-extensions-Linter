@@ -257,11 +257,12 @@ class Database {
 			'*',
 			[ 'linter_cat' => $catId ],
 			__METHOD__,
-			[ 'LIMIT' => self::MAX_ACCURATE_COUNT ]
+			// Select 1 more so we can see if we're over the max limit
+			[ 'LIMIT' => self::MAX_ACCURATE_COUNT + 1 ]
 		);
 		// Return an accurate count if the number of errors is
 		// below the maximum accurate count limit
-		if ( $rows < self::MAX_ACCURATE_COUNT ) {
+		if ( $rows <= self::MAX_ACCURATE_COUNT ) {
 			return $rows;
 		}
 		// Now we can just estimate if the maximum accurate count limit
