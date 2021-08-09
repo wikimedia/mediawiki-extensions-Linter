@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Ahonc",
+			"DDPAT",
 			"Piramidion",
 			"Vlad5250"
 		]
@@ -51,6 +52,7 @@
 	"linter-numerrors": "($1 {{PLURAL:$1|помилка|помилки|помилок}})",
 	"linter-page-edit": "редагувати",
 	"linter-page-history": "історія",
+	"linter-page-title-edit": "$1 ($2)",
 	"linter-page-viewsource": "переглянути код",
 	"linter-pager-bogus-image-options-details": "Фальшива опція файлу",
 	"linter-pager-deletable-table-tag-details": "Тег таблиці, який слід вилучити",

@@ -4,5 +4,6 @@
 			"Ajeje Brazorf"
 		]
 	},
+	"linter-form-namespace": "Namespace:",
 	"linter-numerrors": "($1 {{PLURAL:$1|erruri|errura}})"
 }
