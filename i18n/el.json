@@ -59,6 +59,7 @@
 	"linter-pager-multiline-html-table-in-list-details": "Πίνακας πολλών σειρών HTML5 σε μια λίστα",
 	"linter-pager-multiple-unclosed-formatting-tags-details": "Πολλές μη κλειστές ετικέτες μορφοποίησης στη σελίδα",
 	"linter-pager-obsolete-tag-details": "Καταργημένη ετικέτα HTML",
+	"linter-pager-pwrap-bug-workaround-details": "Παράκαμψη σφάλματος αναδίπλωσης παραγράφων",
 	"linter-pager-self-closed-tag-details": "Αυτόκλειστη ετικέτα",
 	"linter-pager-stripped-tag-details": "Ελλιπής ετικέτα",
 	"linter-pager-template": "Μέσω προτύπου;",
