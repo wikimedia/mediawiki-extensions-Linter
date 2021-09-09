@@ -10,6 +10,8 @@ CREATE TABLE linter (
   linter_start INT NOT NULL,
   linter_end INT NOT NULL,
   linter_params TEXT DEFAULT NULL,
+  linter_template TEXT DEFAULT '' NOT NULL,
+  linter_tag TEXT DEFAULT '' NOT NULL,
   PRIMARY KEY(linter_id)
 );
 
@@ -21,3 +23,7 @@ CREATE UNIQUE INDEX linter_cat_page_position ON linter (
   linter_cat, linter_page, linter_start,
   linter_end
 );
+
+CREATE INDEX linter_cat_template ON linter (linter_cat, linter_template);
+
+CREATE INDEX linter_cat_tag ON linter (linter_cat, linter_tag);

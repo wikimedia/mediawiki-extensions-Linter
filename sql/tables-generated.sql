@@ -10,11 +10,15 @@ CREATE TABLE /*_*/linter (
   linter_start INT UNSIGNED NOT NULL,
   linter_end INT UNSIGNED NOT NULL,
   linter_params BLOB DEFAULT NULL,
+  linter_template VARBINARY(255) DEFAULT '' NOT NULL,
+  linter_tag VARBINARY(32) DEFAULT '' NOT NULL,
   INDEX linter_page (linter_page),
   INDEX linter_cat_namespace (linter_cat, linter_namespace),
   UNIQUE INDEX linter_cat_page_position (
     linter_cat, linter_page, linter_start,
     linter_end
   ),
+  INDEX linter_cat_template (linter_cat, linter_template),
+  INDEX linter_cat_tag (linter_cat, linter_tag),
   PRIMARY KEY(linter_id)
 ) /*$wgDBTableOptions*/;

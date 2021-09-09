@@ -9,7 +9,8 @@ CREATE TABLE /*_*/linter (
   linter_cat INTEGER UNSIGNED NOT NULL,
   linter_start INTEGER UNSIGNED NOT NULL,
   linter_end INTEGER UNSIGNED NOT NULL,
-  linter_params BLOB DEFAULT NULL
+  linter_params BLOB DEFAULT NULL, linter_template BLOB DEFAULT '' NOT NULL,
+  linter_tag BLOB DEFAULT '' NOT NULL
 );
 
 CREATE INDEX linter_page ON /*_*/linter (linter_page);
@@ -20,3 +21,7 @@ CREATE UNIQUE INDEX linter_cat_page_position ON /*_*/linter (
   linter_cat, linter_page, linter_start,
   linter_end
 );
+
+CREATE INDEX linter_cat_template ON /*_*/linter (linter_cat, linter_template);
+
+CREATE INDEX linter_cat_tag ON /*_*/linter (linter_cat, linter_tag);
