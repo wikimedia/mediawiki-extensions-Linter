@@ -69,19 +69,31 @@ class LintErrorsPager extends TablePager {
 	private $invertnamespace;
 
 	/**
+	 * @var int|null
+	 */
+	private $pageId;
+
+	/**
 	 * @param IContextSource $context
-	 * @param string $category
+	 * @param string|null $category
 	 * @param LinkRenderer $linkRenderer
 	 * @param CategoryManager $catManager
 	 * @param int|null $namespace
 	 * @param bool $invertnamespace
+	 * @param int|null $pageId
 	 */
 	public function __construct( IContextSource $context, $category, LinkRenderer $linkRenderer,
-		CategoryManager $catManager, $namespace, $invertnamespace
+		CategoryManager $catManager, $namespace, $invertnamespace, $pageId = null
 	) {
 		$this->category = $category;
 		$this->categoryManager = $catManager;
-		$this->categoryId = $catManager->getCategoryId( $this->category );
+		if ( $category !== null ) {
+			$this->categoryId = $catManager->getCategoryId( $this->category );
+			$this->pageId = null;
+		} else {
+			$this->categoryId = null;
+			$this->pageId = $pageId;
+		}
 		$this->linkRenderer = $linkRenderer;
 		$this->namespace = $namespace;
 		$this->invertnamespace = $invertnamespace;
@@ -91,7 +103,11 @@ class LintErrorsPager extends TablePager {
 
 	/** @inheritDoc */
 	public function getQueryInfo() {
-		$conds = [ 'linter_cat' => $this->categoryId ];
+		if ( $this->categoryId !== null ) {
+			$conds = [ 'linter_cat' => $this->categoryId ];
+		} else {
+			$conds = [ 'linter_page' => $this->pageId ];
+		}
 		if ( $this->namespace !== null ) {
 			$eq_op = $this->invertnamespace ? '!=' : '=';
 			$conds[] = "page_namespace $eq_op " . $this->mDb->addQuotes( $this->namespace );
@@ -104,6 +120,7 @@ class LintErrorsPager extends TablePager {
 					'page_namespace', 'page_title',
 					'linter_id', 'linter_params',
 					'linter_start', 'linter_end',
+					'linter_cat'
 				]
 			),
 			'conds' => $conds,
@@ -132,13 +149,23 @@ class LintErrorsPager extends TablePager {
 	 */
 	public function formatValue( $name, $value ) {
 		$row = $this->mCurrentRow;
-		$row->linter_cat = $this->categoryId;
+
+		// To support multiple lint errors of varying types for a single page, the
+		// category is set each time based on the category set in the lint error $row
+		// not by the class when lints are being reported by type for many pages
+		if ( $this->category === null && $row->linter_cat !== null ) {
+			$category = $this->categoryManager->getCategoryName( $row->linter_cat );
+		} else {
+			$category = $this->category;
+			$row->linter_cat = $this->categoryId;
+		}
 		$lintError = Database::makeLintError( $row );
+
 		if ( !$lintError ) {
 			return '';
 		}
 		if ( $this->haveParserMigrationExt &&
-			$this->categoryManager->needsParserMigrationEdit( $this->category )
+			$this->categoryManager->needsParserMigrationEdit( $category )
 		) {
 			$editAction = 'parsermigration-edit';
 		} else {
@@ -170,32 +197,32 @@ class LintErrorsPager extends TablePager {
 					->rawParams( $viewLink, $editHistLinks )
 					->escaped();
 			case 'details':
-				if ( $this->categoryManager->hasNameParam( $this->category ) &&
+				if ( $this->categoryManager->hasNameParam( $category ) &&
 					isset( $lintError->params['name'] ) ) {
 					return Html::element( 'code', [], $lintError->params['name'] );
-				} elseif ( $this->category === 'bogus-image-options' && isset( $lintError->params['items'] ) ) {
+				} elseif ( $category === 'bogus-image-options' && isset( $lintError->params['items'] ) ) {
 					$list = array_map( static function ( $in ) {
 						return Html::element( 'code', [], $in );
 					}, $lintError->params['items'] );
 					return $this->getLanguage()->commaList( $list );
-				} elseif ( $this->category === 'pwrap-bug-workaround' &&
+				} elseif ( $category === 'pwrap-bug-workaround' &&
 					isset( $lintError->params['root'] ) &&
 					isset( $lintError->params['child'] ) ) {
 					return Html::element( 'code', [],
 						$lintError->params['root'] . " > " . $lintError->params['child'] );
-				} elseif ( $this->category === 'tidy-whitespace-bug' &&
+				} elseif ( $category === 'tidy-whitespace-bug' &&
 					isset( $lintError->params['node'] ) &&
 					isset( $lintError->params['sibling'] ) ) {
 					return Html::element( 'code', [],
 						$lintError->params['node'] . " + " . $lintError->params['sibling'] );
-				} elseif ( $this->category === 'multi-colon-escape' &&
+				} elseif ( $category === 'multi-colon-escape' &&
 					isset( $lintError->params['href'] ) ) {
 					return Html::element( 'code', [], $lintError->params['href'] );
-				} elseif ( $this->category === 'multiline-html-table-in-list' ) {
+				} elseif ( $category === 'multiline-html-table-in-list' ) {
 					/* ancestor and name will be set */
 					return Html::element( 'code', [],
 						$lintError->params['ancestorName'] . " > " . $lintError->params['name'] );
-				} elseif ( $this->category === 'misc-tidy-replacement-issues' ) {
+				} elseif ( $category === 'misc-tidy-replacement-issues' ) {
 					/* There will be a 'subtype' param to disambiguate */
 					return Html::element( 'code', [], $lintError->params['subtype'] );
 				}
@@ -222,6 +249,8 @@ class LintErrorsPager extends TablePager {
 				return $this->linkRenderer->makeLink(
 					$templateTitle
 				);
+			case 'category':
+				return Html::element( 'code', [], $category );
 			default:
 				throw new InvalidArgumentException( "Unexpected name: $name" );
 		}
@@ -239,6 +268,9 @@ class LintErrorsPager extends TablePager {
 		$names = [
 			'title' => $this->msg( 'linter-pager-title' )->text(),
 		];
+		if ( isset( $this->pageId ) ) {
+			$names['category'] = 'Category';
+		}
 		if ( !$this->categoryManager->hasNoParams( $this->category ) ) {
 			$names['details'] = $this->msg( "linter-pager-{$this->category}-details" )->text();
 		}
