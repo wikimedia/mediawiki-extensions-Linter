@@ -22,13 +22,13 @@ namespace MediaWiki\Linter\Test;
 
 use MediaWiki\Linter\Database;
 use MediaWiki\Linter\LintError;
-use MediaWikiTestCase;
+use MediaWikiIntegrationTestCase;
 
 /**
  * @group Database
  * @covers MediaWiki\Linter\Database
  */
-class DatabaseTest extends MediaWikiTestCase {
+class DatabaseTest extends MediaWikiIntegrationTestCase {
 	public function testConstructor() {
 		$this->assertInstanceOf( Database::class, new Database( 5 ) );
 	}

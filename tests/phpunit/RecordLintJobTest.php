@@ -32,7 +32,7 @@ use WikiPage;
  * @group Database
  * @covers MediaWiki\Linter\RecordLintJob
  */
-class RecordLintJobTest extends \MediaWikiTestCase {
+class RecordLintJobTest extends \MediaWikiIntegrationTestCase {
 	/**
 	 * @return array
 	 */
