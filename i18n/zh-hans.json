@@ -53,7 +53,7 @@
 	"linter-category-wikilink-in-extlink": "链接中的链接",
 	"linter-category-wikilink-in-extlink-desc": "这些页面在可以修复的外部链接中有维基链接",
 	"linter-desc": "从外部服务追踪lint错误，并向用户显示",
-	"linter-form-namespace": "名字空间：",
+	"linter-form-namespace": "命名空间：",
 	"linter-heading-high-priority": "高优先级",
 	"linter-heading-low-priority": "低优先级",
 	"linter-heading-medium-priority": "中优先级",
