@@ -8,7 +8,7 @@
 	"linterrors": "Lint-Fehler",
 	"linter-category-bogus-image-options": "Fehlerhafte Dateioptionen",
 	"linter-category-bogus-image-options-desc": "Diese Seiten haben Dateien mit fehlerhaften Optionen.",
-	"linter-category-deletable-table-tag": "Tabellen-Tag, das gelöscht werden soll.",
+	"linter-category-deletable-table-tag": "Tabellen-Tag, das gelöscht werden soll",
 	"linter-category-deletable-table-tag-desc": "Diese Seiten haben Tabellen-Tags, die gelöscht werden sollen.",
 	"linter-category-fostered": "Falsch verschachtelter Inhalt",
 	"linter-category-fostered-desc": "Diese Seiten haben falsch verschachtelte Inhalte.",
