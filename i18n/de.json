@@ -34,7 +34,7 @@
 	"linter-category-self-closed-tag-desc": "Diese Seiten enthalten selbstschließende Tags.",
 	"linter-category-stripped-tag": "Ignorierte Tags",
 	"linter-category-stripped-tag-desc": "Diese Seiten haben ignorierte Tags.",
-	"linter-category-tidy-font-bug": "Altes Verhalten von Link-Wrapping Font-Tags",
+	"linter-category-tidy-font-bug": "Altes Verhalten von Link-Wrapping-Font-Tags",
 	"linter-category-tidy-font-bug-desc": "Zuvor wurden diese Font-Tags innerhalb von Links verschoben, um die Linkfarbe zu ändern",
 	"linter-category-tidy-whitespace-bug": "Leerzeichenfehler",
 	"linter-category-tidy-whitespace-bug-desc": "Diese Seiten lösten einen Whitespace-Fehler beim Parsen aus, den man umgehen sollte.",
