@@ -27,6 +27,7 @@
 	"linter-category-obsolete-tag": "Przestarzałe znaczniki HTML",
 	"linter-category-obsolete-tag-desc": "Te strony używają nieaktualnych tagów HTML.",
 	"linter-category-pwrap-bug-workaround": "Obejście błędnego generowania akapitów",
+	"linter-category-pwrap-bug-workaround-desc": "Na tych stronach występuje błąd podziału akapitu, który można ominąć.",
 	"linter-category-self-closed-tag": "Samozamykające się znaczniki",
 	"linter-category-self-closed-tag-desc": "Te strony zawierają samozamykające się znaczniki.",
 	"linter-category-stripped-tag": "Niekompletne znaczniki",
