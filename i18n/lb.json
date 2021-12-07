@@ -15,6 +15,8 @@
 	"linter-category-multiple-unclosed-formatting-tags-desc": "Dës Säiten hu méi net zougemaacht Formatéierungs-Tags",
 	"linter-category-obsolete-tag": "Vereelzt HTML-Tagen",
 	"linter-category-obsolete-tag-desc": "Dës Säite benotze vereelzt HTML-Tagen.",
+	"linter-category-stripped-tag": "Ignoréiert Taggen",
+	"linter-category-stripped-tag-desc": "Dës Säiten hunn ignoréiert Taggen.",
 	"linter-form-namespace": "Nummraum:",
 	"linter-heading-high-priority": "Héich Prioritéit",
 	"linter-heading-low-priority": "Niddreg Prioritéit",

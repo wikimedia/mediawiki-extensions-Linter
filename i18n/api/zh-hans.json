@@ -2,7 +2,9 @@
 	"@metadata": {
 		"authors": [
 			"Liuxinyu970226",
-			"列维劳德"
+			"列维劳德",
+			"Func",
+			"Xiplus"
 		]
 	},
 	"apihelp-query+linterrors-description": "获取lint错误的列表",
@@ -10,7 +12,7 @@
 	"apihelp-query+linterrors-param-categories": "lint错误的分类",
 	"apihelp-query+linterrors-param-limit": "要查询的结果数",
 	"apihelp-query+linterrors-param-from": "查询的起始Lint ID",
-	"apihelp-query+linterrors-param-namespace": "只包含来自指定名字空间的lint错误",
+	"apihelp-query+linterrors-param-namespace": "只包含来自指定命名空间的lint错误",
 	"apihelp-query+linterrors-param-pageid": "只包含来自指定页面ID的lint错误",
 	"apihelp-query+linterrors-param-title": "只包含来自指定页面标题的lint错误",
 	"apihelp-query+linterrors-example-1": "获取所有废弃标签分类的lint错误",
@@ -22,7 +24,7 @@
 	"apihelp-query+linterstats-description": "获取每个分类中的lint错误数",
 	"apihelp-query+linterstats-summary": "获取每个分类中的lint错误数",
 	"apihelp-query+linterstats-example-1": "获取每个分类中的lint错误数",
-	"apierror-linter-invalid-ip": "您的IP地址尚未列入白名单，不能报告lint错误",
+	"apierror-linter-invalid-ip": "您的IP地址不被允许报告lint错误",
 	"apierror-linter-invalid-data": "无效数据",
 	"apierror-linter-invalid-title": "无效、不存在或过时的标题"
 }

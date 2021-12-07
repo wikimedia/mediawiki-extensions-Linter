@@ -21,7 +21,7 @@
 	"apihelp-query+linterstats-description": "Pigghie 'u numere de errore de Liont jndr'à ogne categorije",
 	"apihelp-query+linterstats-summary": "Pigghie 'u numere de errore de Liont jndr'à ogne categorije",
 	"apihelp-query+linterstats-example-1": "Pigghie 'u numere de errore de Liont jndr'à ogne categorije",
-	"apierror-linter-invalid-ip": "L'indirizze IP tune non g'ha state mise jndr'à l'elenghe bbuène pe segnalà le errore de Lint",
+	"apierror-linter-invalid-ip": "L'indirizze IP tune non g'è permesse pe segnalà le errore de Lint",
 	"apierror-linter-invalid-data": "Date invalide",
 	"apierror-linter-invalid-title": "Titole invalide, inesistende o vecchie"
 }

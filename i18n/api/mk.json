@@ -21,7 +21,7 @@
 	"apihelp-query+linterstats-description": "Дај број на грешки во пречистувачот за секоја категорија",
 	"apihelp-query+linterstats-summary": "Дај број на грешки во пречистувачот за секоја категорија",
 	"apihelp-query+linterstats-example-1": "Дај број на грешки во пречистувачот за секоја категорија",
-	"apierror-linter-invalid-ip": "Вашата IP-адреса не е ставена на белиот список за пријава на грешки во Lint",
+	"apierror-linter-invalid-ip": "На вашата IP-адреса не ѝ е дозволено да пријавува грешки во Lint",
 	"apierror-linter-invalid-data": "Неважечки податоци",
 	"apierror-linter-invalid-title": "Неважечки, непостоечки или застарен наслов"
 }

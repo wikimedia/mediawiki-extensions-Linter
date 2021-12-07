@@ -4,7 +4,8 @@
 			"ArenaL5",
 			"Banjo",
 			"Elisardojm",
-			"MarcoAurelio"
+			"MarcoAurelio",
+			"Maria zaos"
 		]
 	},
 	"linterrors": "Erros de lint",
@@ -55,7 +56,7 @@
 	"linter-page-title-edit": "$1 ($2)",
 	"linter-page-viewsource": "ver o código fonte",
 	"linter-pager-bogus-image-options-details": "Opción de ficheiro inútil",
-	"linter-pager-deletable-table-tag-details": "Etiqueta de táboa a eliminar",
+	"linter-pager-deletable-table-tag-details": "Etiqueta de táboa que debe ser eliminada",
 	"linter-pager-html5-misnesting-details": "Aniñación errónea (agora rota)",
 	"linter-pager-misc-tidy-replacement-issues-details": "Erros varios de marcaxe",
 	"linter-pager-misnested-tag-details": "Etiqueta mal aniñada",
