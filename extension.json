@@ -173,6 +173,12 @@
 					"enabled": true,
 					"priority": "medium",
 					"no-params": true
+				},
+				"inline-media-caption": {
+					"dbid": 19,
+					"enabled": true,
+					"priority": "high",
+					"no-params": true
 				}
 			}
 		},
