@@ -2,7 +2,9 @@
 	"@metadata": {
 		"authors": [
 			"Piramidion",
-			"Vlad5250"
+			"Vlad5250",
+			"Ahonc",
+			"DDPAT"
 		]
 	},
 	"linterrors": "Lint-помилки",
@@ -29,7 +31,7 @@
 	"linter-category-obsolete-tag": "Застарілі HTML-теги",
 	"linter-category-obsolete-tag-desc": "Ці сторінки використовують застарілі HTML-теги.",
 	"linter-category-pwrap-bug-workaround": "Вирішення багу з обгортанням абзацу",
-	"linter-category-pwrap-bug-workaround-desc": "Ці сторінки мають баг з обгортанням абзацу, який можна виправити.",
+	"linter-category-pwrap-bug-workaround-desc": "Ці сторінки мають помилки із обгортанням абзацу, який можна виправити.",
 	"linter-category-self-closed-tag": "Самозакривальні теги",
 	"linter-category-self-closed-tag-desc": "Ці сторінки містять самозакривальні теги",
 	"linter-category-stripped-tag": "Відкриті теги",
@@ -50,6 +52,7 @@
 	"linter-numerrors": "($1 {{PLURAL:$1|помилка|помилки|помилок}})",
 	"linter-page-edit": "редагувати",
 	"linter-page-history": "історія",
+	"linter-page-title-edit": "$1 ($2)",
 	"linter-page-viewsource": "переглянути код",
 	"linter-pager-bogus-image-options-details": "Фальшива опція файлу",
 	"linter-pager-deletable-table-tag-details": "Тег таблиці, який слід вилучити",
@@ -66,7 +69,7 @@
 	"linter-pager-stripped-tag-details": "Відкритий тег",
 	"linter-pager-template": "Через шаблон?",
 	"linter-pager-tidy-font-bug-details": "Тег «font» намагається змінити колір посилання",
-	"linter-pager-tidy-whitespace-bug-details": "Баг із парсингом пробілу",
+	"linter-pager-tidy-whitespace-bug-details": "Помилка із парсингом пробілу",
 	"linter-pager-title": "Назва сторінки",
 	"linter-pager-unclosed-quotes-in-heading-details": "Незакритий апостроф, який перетікає зі змісту",
 	"linterrors-subpage": "Lint-помилки: $1",

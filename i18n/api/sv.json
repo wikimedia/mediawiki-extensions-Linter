@@ -3,7 +3,9 @@
 		"authors": [
 			"Bengtsson96",
 			"Mjälten",
-			"WikiPhoenix"
+			"WikiPhoenix",
+			"Ayaibrahim",
+			"Sabelöga"
 		]
 	},
 	"apihelp-query+linterrors-description": "Hämta en lista över lint-fel",
@@ -13,11 +15,16 @@
 	"apihelp-query+linterrors-param-from": "Link-ID att börja fråga från",
 	"apihelp-query+linterrors-param-namespace": "Inkludera endast lint-fel från specificerade namnrymder",
 	"apihelp-query+linterrors-param-pageid": "Inkludera endast luddfel från specificerade namnrymder",
+	"apihelp-query+linterrors-param-title": "Inkludera endast fel från specificerade sidtitlar.",
 	"apihelp-query+linterrors-example-1": "Hämta alla lint-fel i kategorin föråldrade taggar",
 	"apihelp-record-lint-description": "Registrera ett lint-fel i databasen",
+	"apihelp-record-lint-summary": "Registrera ett fel i databasen",
 	"apihelp-record-lint-param-data": "JSON-kodad data om felet",
 	"apihelp-record-lint-param-page": "Sidtitel",
 	"apihelp-record-lint-param-revision": "Versions-ID som felet hittades i",
+	"apihelp-query+linterstats-description": "Få antalet fel i varje kategori",
+	"apihelp-query+linterstats-summary": "Få antalet fel i varje kategori.",
+	"apihelp-query+linterstats-example-1": "Få antal feli varje kategori",
 	"apierror-linter-invalid-ip": "Din IP-adress har inte blivit vitlistat för att rapportera lintfel",
 	"apierror-linter-invalid-data": "Ogiltig data",
 	"apierror-linter-invalid-title": "Ogiltig, ej existerande eller föråldrad titel"

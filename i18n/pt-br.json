@@ -3,7 +3,8 @@
 		"authors": [
 			"Eduardo Addad de Oliveira",
 			"Felipe L. Ewald",
-			"Opraco"
+			"Opraco",
+			"Eduardoaddad"
 		]
 	},
 	"linterrors": "Erros de Lint",
@@ -58,14 +59,14 @@
 	"linter-pager-html5-misnesting-details": "Má intercalação de elementos (agora quebrado)",
 	"linter-pager-misc-tidy-replacement-issues-details": "Erros de marcação diversos",
 	"linter-pager-misnested-tag-details": "Etiqueta Misnested que deve ser adequadamente aninhada",
-	"linter-pager-missing-end-tag-details": "Faltando tag final",
+	"linter-pager-missing-end-tag-details": "Faltando etiqueta final",
 	"linter-pager-multi-colon-escape-details": "Escape de vários dois pontos",
 	"linter-pager-multiline-html-table-in-list-details": "Tabela HTML5 multilinha dentro de uma lista",
 	"linter-pager-multiple-unclosed-formatting-tags-details": "Várias etiquetas de formatação não fechadas na página",
-	"linter-pager-obsolete-tag-details": "Tag HTML obsoleta",
-	"linter-pager-pwrap-bug-workaround-details": "Solução alternativa para o bug da quebra de linha de parágrafos",
+	"linter-pager-obsolete-tag-details": "Etiqueta HTML obsoleta",
+	"linter-pager-pwrap-bug-workaround-details": "Solução alternativa para o erro da quebra de linha de parágrafos",
 	"linter-pager-self-closed-tag-details": "Etiqueta auto-fechada",
-	"linter-pager-stripped-tag-details": "Stripped tag",
+	"linter-pager-stripped-tag-details": "Elemento incompleto",
 	"linter-pager-template": "Através de uma predefinição?",
 	"linter-pager-tidy-font-bug-details": "A etiqueta da fonte tenta alterar a cor do link",
 	"linter-pager-tidy-whitespace-bug-details": "Erro de análise de espaço em branco",

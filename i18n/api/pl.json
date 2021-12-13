@@ -2,7 +2,9 @@
 	"@metadata": {
 		"authors": [
 			"Chrumps",
-			"Woytecr"
+			"Woytecr",
+			"Matma Rex",
+			"Rail"
 		]
 	},
 	"apihelp-query+linterrors-description": "Pobiera listę błędów lintera",
@@ -10,8 +12,9 @@
 	"apihelp-query+linterrors-param-categories": "Kategorie błędów składniowych",
 	"apihelp-query+linterrors-param-limit": "Liczba zwracanych wyników",
 	"apihelp-query+linterrors-param-from": "ID błędu od którego zacząć wymieniać",
-	"apihelp-query+linterrors-param-namespace": "Tylko błędy występujące we wskazanych przestrzeniach nazw",
-	"apihelp-query+linterrors-param-pageid": "Tylko błędy lintera ze stron o określonych identyfikatorach",
+	"apihelp-query+linterrors-param-namespace": "Tylko błędy występujące w podanych przestrzeniach nazw",
+	"apihelp-query+linterrors-param-pageid": "Tylko błędy lintera ze stron o podanych ID",
+	"apihelp-query+linterrors-param-title": "Tylko błędy lintera ze strony o podanym tytule",
 	"apihelp-query+linterrors-example-1": "Pobierz listę błędów typu obsolete-tag",
 	"apihelp-record-lint-description": "Dodaje wpis o błędzie lintera do bazy danych",
 	"apihelp-record-lint-summary": "Dodaje wpis o błędzie lintera do bazy danych",

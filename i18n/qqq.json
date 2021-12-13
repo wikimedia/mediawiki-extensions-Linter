@@ -54,7 +54,7 @@
 	"linter-numerrors": "Shown after a category link to indicate how many errors are in that category. $1 is the number of errors, and can be used for PLURAL.\n{{Identical|Error}}",
 	"linter-page-edit": "Link text for edit link in {{msg-mw|linter-page-title-edit}}\n{{Identical|Edit}}",
 	"linter-page-history": "Link text for history link in {{msg-mw|linter-page-title-edit}}\n{{Identical|History}}",
-	"linter-page-title-edit": "Used in a table cell. $1 is a link to the page, $2 is pipe separated links to the edit and history pages, the link text is {{msg-mw|linter-page-edit}} and {{msg-mw|linter-page-history}}",
+	"linter-page-title-edit": "{{optional}}\nUsed in a table cell. $1 is a link to the page, $2 is pipe separated links to the edit and history pages, the link text is {{msg-mw|linter-page-edit}} and {{msg-mw|linter-page-history}}",
 	"linter-page-viewsource": "Link text for view source link when user does not have permission to edit in {{msg-mw|linter-page-title-edit}}",
 	"linter-pager-bogus-image-options-details": "Table column heading",
 	"linter-pager-deletable-table-tag-details": "Table column heading",

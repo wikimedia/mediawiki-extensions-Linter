@@ -3,7 +3,8 @@
 		"authors": [
 			"Kareyac",
 			"Red Winged Duck",
-			"Renessaince"
+			"Renessaince",
+			"Nerogaf"
 		]
 	},
 	"linterrors": "Lint-памылкі",
@@ -41,16 +42,22 @@
 	"linter-page-history": "гісторыя",
 	"linter-pager-bogus-image-options-details": "Няслушны парамэтар файлу",
 	"linter-pager-deletable-table-tag-details": "Тэг табліцы, які мае быць выдалены",
+	"linter-pager-html5-misnesting-details": "Адсутнічае (цяпер зламаны)",
+	"linter-pager-misc-tidy-replacement-issues-details": "Разнастайныя памылкі разьметкі",
 	"linter-pager-misnested-tag-details": "Няслушна ўкладзены тэг, які трэба ўкласьці правільна",
 	"linter-pager-missing-end-tag-details": "Адсутнічае канцавы тэг",
+	"linter-pager-multi-colon-escape-details": "Мноства выкарыстаных двухкроп’яў",
 	"linter-pager-multiline-html-table-in-list-details": "Шматрадковая табліца HTML5 унутры сьпісу",
+	"linter-pager-multiple-unclosed-formatting-tags-details": "Мноства незакрытых цэтлікаў фарматаваньня на старонцы",
 	"linter-pager-obsolete-tag-details": "Састарэлы HTML-тэг",
 	"linter-pager-pwrap-bug-workaround-details": "Пазьбяганьне памылкі абгорткі параграфу",
 	"linter-pager-self-closed-tag-details": "Самазакрыты тэг",
 	"linter-pager-stripped-tag-details": "Няпарны тэг",
 	"linter-pager-template": "Праз шаблён?",
+	"linter-pager-tidy-font-bug-details": "Спроба зьмяніць колер цэтлікам „font“",
 	"linter-pager-tidy-whitespace-bug-details": "Памылка разбору пропустаў",
 	"linter-pager-title": "Назва старонкі",
+	"linter-pager-unclosed-quotes-in-heading-details": "Незакрытая цытата, якая выходзіць па-за табліцу зьместу",
 	"linterrors-subpage": "Lint-памылкі: $1",
 	"linterrors-summary": "<strong>Заўвага:</strong> Паказальнікі для катэгорыяў не дакладныя, а заснаваныя на ацэнках.",
 	"multi-part-template-block": "Атрымана не з аднаго шаблёну",
