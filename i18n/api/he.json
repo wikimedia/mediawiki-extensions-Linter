@@ -18,7 +18,7 @@
 	"apihelp-record-lint-description": "רישום שגיאת ניקיון במסד הנתונים",
 	"apihelp-record-lint-summary": "רישום שגיאת ניקיון במסד הנתונים",
 	"apihelp-record-lint-param-data": "נתונים מקודדים ב־JSON על השגיאה",
-	"apihelp-record-lint-param-page": "כותרת דף",
+	"apihelp-record-lint-param-page": "כותרת הדף",
 	"apihelp-record-lint-param-revision": "מזהה גרסה שבה נמצאה השגיאה",
 	"apihelp-query+linterstats-description": "קבלת מספר שגיאות הניקיון בכל קטגוריה",
 	"apihelp-query+linterstats-summary": "קבלת מספר שגיאות הניקיון בכל קטגוריה",
