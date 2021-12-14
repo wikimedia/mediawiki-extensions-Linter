@@ -60,6 +60,12 @@ class CategoryManager {
 	 */
 	private $hasNameParam = [];
 
+	/**
+	 * @var bool[]
+	 * @phan-var array<string,bool>
+	 */
+	private $hasNoParams = [];
+
 	public function __construct() {
 		global $wgLinterCategories;
 		foreach ( $wgLinterCategories as $name => $info ) {
@@ -71,6 +77,9 @@ class CategoryManager {
 			}
 			if ( $info['has-name'] ?? false ) {
 				$this->hasNameParam[$name] = true;
+			}
+			if ( $info['no-params'] ?? false ) {
+				$this->hasNoParams[$name] = true;
 			}
 			if ( isset( $info['dbid'] ) ) {
 				if ( isset( $this->categoryIds[$name] ) ) {
@@ -99,6 +108,14 @@ class CategoryManager {
 	 */
 	public function hasNameParam( $name ) {
 		return isset( $this->hasNameParam[$name] );
+	}
+
+	/**
+	 * @param string $name
+	 * @return bool
+	 */
+	public function hasNoParams( $name ) {
+		return isset( $this->hasNoParams[$name] );
 	}
 
 	/**

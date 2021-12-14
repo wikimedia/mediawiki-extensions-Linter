@@ -65,7 +65,8 @@
 				"fostered": {
 					"dbid": 1,
 					"enabled": true,
-					"priority": "medium"
+					"priority": "medium",
+					"no-params": true
 				},
 				"obsolete-tag": {
 					"dbid": 2,
@@ -170,7 +171,8 @@
 				"wikilink-in-extlink": {
 					"dbid": 18,
 					"enabled": true,
-					"priority": "medium"
+					"priority": "medium",
+					"no-params": true
 				}
 			}
 		},

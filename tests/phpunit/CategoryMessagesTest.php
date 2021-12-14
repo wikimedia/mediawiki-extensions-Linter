@@ -44,12 +44,12 @@ class CategoryMessagesTest extends MediaWikiLangTestCase {
 	 * @dataProvider provideCategoryNames
 	 */
 	public function testMessagesExistence( $category ) {
+		$manager = new CategoryManager();
 		$msgs = [
 			"linter-category-$category",
 			"linter-category-$category-desc",
 		];
-		if ( $category !== 'fostered' && $category !== 'wikilink-in-extlink' ) {
-			// TODO: Don't hardcode this
+		if ( !$manager->hasNoParams( $category ) ) {
 			$msgs[] = "linter-pager-$category-details";
 		}
 		foreach ( $msgs as $msg ) {
