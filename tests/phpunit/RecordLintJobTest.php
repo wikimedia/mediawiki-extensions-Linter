@@ -26,7 +26,6 @@ use MediaWiki\Linter\LintError;
 use MediaWiki\Linter\RecordLintJob;
 use Title;
 use User;
-use WikiPage;
 
 /**
  * @group Database
@@ -47,7 +46,7 @@ class RecordLintJobTest extends \MediaWikiIntegrationTestCase {
 		if ( $user->getId() === 0 ) {
 			$user->addToDatabase();
 		}
-		$page = WikiPage::factory( $title );
+		$page = $this->getServiceContainer()->getWikiPageFactory()->newFromTitle( $title );
 
 		$content = ContentHandler::makeContent( $baseText, $title );
 		$page->doUserEditContent( $content, $user, "base text for test" );
