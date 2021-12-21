@@ -23,6 +23,7 @@ namespace MediaWiki\Linter;
 use Job;
 use MediaWiki\MediaWikiServices;
 use Title;
+use WikiMap;
 
 class RecordLintJob extends Job {
 	/**
@@ -102,7 +103,7 @@ class RecordLintJob extends Job {
 		}
 
 		$totals = $lintDb->getTotals();
-		$wiki = wfWikiID();
+		$wiki = WikiMap::getCurrentWikiId();
 
 		$stats = $mwServices->getStatsdDataFactory();
 		foreach ( $totals as $name => $count ) {
