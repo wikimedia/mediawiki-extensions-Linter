@@ -24,8 +24,8 @@ use ApiQuerySiteinfo;
 use Content;
 use DatabaseUpdater;
 use IContextSource;
-use JobQueueGroup;
 use MediaWiki\Logger\LoggerFactory;
+use MediaWiki\MediaWikiServices;
 use MWCallableUpdate;
 use OutputPage;
 use Title;
@@ -209,7 +209,7 @@ class Hooks {
 			'errors' => $errors,
 			'revision' => $revision,
 		] );
-		JobQueueGroup::singleton()->push( $job );
+		MediaWikiServices::getInstance()->getJobQueueGroup()->push( $job );
 		return true;
 	}
 }
