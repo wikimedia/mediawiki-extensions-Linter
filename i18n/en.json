@@ -44,6 +44,8 @@
 	"linter-category-wikilink-in-extlink": "Links in links",
 	"linter-category-wikilink-in-extlink-desc": "These pages have wikilinks in external links that could be fixed",
 	"linter-desc": "Track lint errors from an external service and show them to users",
+	"linter-lints-for-single-page-desc": "Show all linter errors for a specific page",
+	"linter-invalid-title": "Namespace and/or pagename not found or malformed",
 	"linter-form-namespace": "Namespace:",
 	"linter-heading-high-priority": "High priority",
 	"linter-heading-low-priority": "Low priority",

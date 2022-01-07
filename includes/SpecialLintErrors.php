@@ -24,11 +24,12 @@ use Html;
 use HTMLForm;
 use MediaWiki\MediaWikiServices;
 use SpecialPage;
+use Title;
 
 class SpecialLintErrors extends SpecialPage {
 
 	/**
-	 * @var string
+	 * @var string|null
 	 */
 	private $category;
 
@@ -67,9 +68,55 @@ class SpecialLintErrors extends SpecialPage {
 	}
 
 	/**
+	 */
+	protected function showPageNameFilterForm() {
+		$fields = [
+			'pagename' => [
+				'type' => 'text',
+				'name' => 'pagename',
+				'label-message' => 'linter-pager-title',
+				'default' => '',
+				'id' => 'pagename',
+				'size' => 255,
+			]
+		];
+		$form = HTMLForm::factory( 'ooui', $fields, $this->getContext() );
+		$form->setWrapperLegend( true );
+		$form->setMethod( 'get' );
+		$form->prepareForm()->displayForm( false );
+	}
+
+	/**
 	 * @param string|null $par
 	 */
 	public function execute( $par ) {
+		// if the request contains a pagename parameter, then the user entered a pagename
+		// and pressed the Submit button to display of all lints for a single page.
+		$params = $this->mContext->getRequest()->getQueryValues();
+		$pageName = $params['pagename'] ?? null;
+		if ( $par === null && $pageName !== null ) {
+			$out = $this->getOutput();
+
+			$title = Title::newFromText( $pageName );
+			if ( $title !== null ) {
+				$pageArticleID = $title->getArticleID();
+				if ( $pageArticleID !== 0 ) {
+					$ns = $title->getNamespace();
+					$catManager = new CategoryManager();
+					$pager = new LintErrorsPager(
+						$this->getContext(), null, $this->getLinkRenderer(),
+						$catManager, $ns, false, $pageArticleID
+					);
+					$out->addParserOutput( $pager->getFullOutput() );
+					return;
+				}
+			}
+
+			$out->addHTML( Html::element( 'span class="error"', [],
+				$this->msg( "linter-invalid-title" )->text() ) );
+			return;
+		}
+
 		$this->setHeaders();
 		$this->outputHeader();
 		$catManager = new CategoryManager();
@@ -113,6 +160,15 @@ class SpecialLintErrors extends SpecialPage {
 	}
 
 	/**
+	 */
+	private function displaySearchPage() {
+		$out = $this->getOutput();
+		$out->addHTML( Html::element( 'h2', [],
+			$this->msg( "linter-lints-for-single-page-desc" )->text() ) );
+		$this->showPageNameFilterForm();
+	}
+
+	/**
 	 * @param CategoryManager $catManager
 	 */
 	private function showCategoryListings( CategoryManager $catManager ) {
@@ -126,6 +182,8 @@ class SpecialLintErrors extends SpecialPage {
 		$this->displayList( 'high', $totals, $catManager->getHighPriority() );
 		$this->displayList( 'medium', $totals, $catManager->getMediumPriority() );
 		$this->displayList( 'low', $totals, $catManager->getLowPriority() );
+
+		$this->displaySearchPage();
 	}
 
 	/**

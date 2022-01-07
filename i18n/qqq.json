@@ -49,6 +49,8 @@
 	"linter-category-wikilink-in-extlink": "Name of lint error category. See [[:mw:Help:Lint errors/wikilink-in-extlink]]",
 	"linter-category-wikilink-in-extlink-desc": "Description of category\n\nSimilar messages:\n* {{msg-mw|Linter-category-bogus-image-options-desc}}\n* {{msg-mw|Linter-category-deletable-table-tag-desc}}\n* {{msg-mw|Linter-category-fostered-desc}}\netc.",
 	"linter-desc": "{{desc|name=Linter|url=https://www.mediawiki.org/wiki/Extension:Linter}}",
+	"linter-lints-for-single-page-desc": "Heading for form section that allows user to show all linter errors for a specific page",
+	"linter-invalid-title": "Error message for linter for single page - not found or malformed namespace and-or pagename",
 	"linter-form-namespace": "Label for select field on Special:LintErrors\n{{Identical|Namespace}}",
 	"linter-heading-high-priority": "Heading on [[Special:LintErrors]]",
 	"linter-heading-low-priority": "Heading on [[Special:LintErrors]]",
