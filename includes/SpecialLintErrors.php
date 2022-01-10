@@ -96,6 +96,7 @@ class SpecialLintErrors extends SpecialPage {
 		$pageName = $params['pagename'] ?? null;
 		if ( $par === null && $pageName !== null ) {
 			$out = $this->getOutput();
+			$out->setPageTitle( $this->msg( 'linterrors-subpage', $pageName ) );
 
 			$title = Title::newFromText( $pageName );
 			if ( $title !== null ) {
