@@ -44,6 +44,8 @@
 	"linter-category-wikilink-in-extlink": "Врски во врски",
 	"linter-category-wikilink-in-extlink-desc": "Овие страници имаат викиврски во надворешни врски кои можат да се поправат",
 	"linter-desc": "Следи грешки од пречистувачот од надворешна служба и ги прикажува на корисниците",
+	"linter-lints-for-single-page-desc": "Прикажи ги сите грешки од Linter за укажана страница",
+	"linter-invalid-title": "Не го најдов именскиот простор и/или името на страницата, или пак стата е лошо срочена",
 	"linter-form-namespace": "Именски простор:",
 	"linter-heading-high-priority": "Висок приоритет",
 	"linter-heading-low-priority": "Низок приоритет",

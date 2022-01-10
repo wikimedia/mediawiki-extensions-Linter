@@ -46,6 +46,8 @@
 	"linter-category-wikilink-in-extlink": "קישורים בתוך קישורים",
 	"linter-category-wikilink-in-extlink-desc": "בדפים האלה יש קישורי ויקי מקוננים בתוך קישורים חיצוניים שאפשר לתקן",
 	"linter-desc": "מעקב אחר שגיאות שנמצאו בבדיקת ניקיון על־ידי שירות חיצוני והצגתן למשתמשים",
+	"linter-lints-for-single-page-desc": "הצגת כל שגיאות הניקיון לדף מסוים",
+	"linter-invalid-title": "מרחב שם או שם דף לא נמצא או אינו תקין",
 	"linter-form-namespace": "מרחב שם:",
 	"linter-heading-high-priority": "עדיפות גבוהה",
 	"linter-heading-low-priority": "עדיפות נמוכה",
