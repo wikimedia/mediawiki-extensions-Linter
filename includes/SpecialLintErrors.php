@@ -90,6 +90,9 @@ class SpecialLintErrors extends SpecialPage {
 	 * @param string|null $par
 	 */
 	public function execute( $par ) {
+		$this->setHeaders();
+		$this->outputHeader();
+
 		// if the request contains a pagename parameter, then the user entered a pagename
 		// and pressed the Submit button to display of all lints for a single page.
 		$params = $this->mContext->getRequest()->getQueryValues();
@@ -118,8 +121,6 @@ class SpecialLintErrors extends SpecialPage {
 			return;
 		}
 
-		$this->setHeaders();
-		$this->outputHeader();
 		$catManager = new CategoryManager();
 		if ( in_array( $par, $catManager->getVisibleCategories() ) ) {
 			$this->category = $par;
