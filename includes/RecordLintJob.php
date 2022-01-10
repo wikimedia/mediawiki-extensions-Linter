@@ -21,9 +21,7 @@
 namespace MediaWiki\Linter;
 
 use Job;
-use MediaWiki\MediaWikiServices;
 use Title;
-use WikiMap;
 
 class RecordLintJob extends Job {
 	/**
@@ -36,9 +34,7 @@ class RecordLintJob extends Job {
 	}
 
 	public function run() {
-		if ( isset( $this->params['revision'] )
-			&& $this->title->getLatestRevID() != $this->params['revision']
-		) {
+		if ( $this->title->getLatestRevID() != $this->params['revision'] ) {
 			// Outdated now, let a later job handle it
 			return true;
 		}
@@ -56,63 +52,11 @@ class RecordLintJob extends Job {
 			// (e.g. same category of error in same template)
 			$errors[$error->id()] = $error;
 		}
+
 		$lintDb = new Database( $this->title->getArticleID() );
-		$changes = $lintDb->setForPage( $errors );
-		$this->updateStats( $lintDb, $changes );
+		$lintDb->updateStats( $lintDb->setForPage( $errors ) );
 
 		return true;
-	}
-
-	/**
-	 * Send stats to statsd and update totals cache
-	 *
-	 * @param Database $lintDb
-	 * @param array $changes
-	 */
-	protected function updateStats( Database $lintDb, array $changes ) {
-		global $wgLinterStatsdSampleFactor;
-
-		$mwServices = MediaWikiServices::getInstance();
-
-		$totalsLookup = new TotalsLookup(
-			new CategoryManager(),
-			$mwServices->getMainWANObjectCache()
-		);
-
-		if ( $wgLinterStatsdSampleFactor === false ) {
-			// Don't send to statsd, but update cache with $changes
-			$raw = $changes['added'];
-			foreach ( $changes['deleted'] as $cat => $count ) {
-				if ( isset( $raw[$cat] ) ) {
-					$raw[$cat] -= $count;
-				} else {
-					// Negative value
-					$raw[$cat] = 0 - $count;
-				}
-			}
-
-			foreach ( $raw as $cat => $count ) {
-				if ( $count != 0 ) {
-					// There was a change in counts, invalidate the cache
-					$totalsLookup->touchCategoryCache( $cat );
-				}
-			}
-			return;
-		} elseif ( mt_rand( 1, $wgLinterStatsdSampleFactor ) != 1 ) {
-			return;
-		}
-
-		$totals = $lintDb->getTotals();
-		$wiki = WikiMap::getCurrentWikiId();
-
-		$stats = $mwServices->getStatsdDataFactory();
-		foreach ( $totals as $name => $count ) {
-			$stats->gauge( "linter.category.$name.$wiki", $count );
-		}
-
-		$stats->gauge( "linter.totals.$wiki", array_sum( $totals ) );
-
-		$totalsLookup->touchAllCategoriesCache();
 	}
 
 }

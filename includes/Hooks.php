@@ -96,12 +96,10 @@ class Hooks {
 	public static function onWikiPageDeletionUpdates( WikiPage $wikiPage,
 		Content $content, array &$updates
 	) {
-		$title = $wikiPage->getTitle();
-		$updates[] = new MWCallableUpdate( static function () use ( $title ) {
-			$job = new RecordLintJob(
-				$title, [ 'errors' => [] ]
-			);
-			$job->run();
+		$id = $wikiPage->getId();
+		$updates[] = new MWCallableUpdate( static function () use ( $id ) {
+			$database = new Database( $id );
+			$database->updateStats( $database->setForPage( [] ) );
 		}, __METHOD__ );
 	}
 
