@@ -269,7 +269,7 @@ class LintErrorsPager extends TablePager {
 			'title' => $this->msg( 'linter-pager-title' )->text(),
 		];
 		if ( isset( $this->pageId ) ) {
-			$names['category'] = 'Category';
+			$names['category'] = $this->msg( 'linter-pager-category-header' )->text();
 		}
 		if ( !$this->category ) {
 			$names['details'] = $this->msg( "linter-pager-details-header" )->text();
