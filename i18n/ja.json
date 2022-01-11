@@ -10,10 +10,12 @@
 			"Otokoume",
 			"Shirayuki",
 			"Whym",
-			"Yusuke1109"
+			"Yusuke1109",
+			"ひまり"
 		]
 	},
 	"linterrors": "Lint エラー",
+	"linter-category-bogus-image-options": "偽のファイルオプション",
 	"linter-category-deletable-table-tag": "削除する必要があるTableタグ",
 	"linter-category-deletable-table-tag-desc": "このページでは、削除する必要があるTableタグがあるページを掲載しています。",
 	"linter-category-html5-misnesting": "HTML5とHTML4のレンダリング差異によって誤った入れ子構造となっているタグ",
