@@ -35,7 +35,7 @@
 	"linter-pager-obsolete-tag-details": "Zastarjela HTML oznaka",
 	"linter-pager-self-closed-tag-details": "Samozatvarajuća oznaka",
 	"linter-pager-template-header": "Preko šablona?",
-	"linter-pager-title": "Naslov stranice",
+	"linter-pager-title-header": "Naslov stranice",
 	"linterrors-subpage": "Pročišćivač grešaka: $1",
 	"multi-part-template-block": "Proizlazi iz više od jednog šablona",
 	"pageinfo-linter": "Pročišćivač grešaka"

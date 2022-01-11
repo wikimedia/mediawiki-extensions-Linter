@@ -47,7 +47,7 @@
 	"linter-pager-template-header": "Qua bản mẫu?",
 	"linter-pager-tidy-font-bug-details": "Thẻ font cố thay đổi màu liên kết",
 	"linter-pager-tidy-whitespace-bug-details": "Lỗi phân tích ký tự khoảng cách",
-	"linter-pager-title": "Tên trang",
+	"linter-pager-title-header": "Tên trang",
 	"linter-pager-unclosed-quotes-in-heading-details": "Dấu ngoặc đơn/kép thoát ra bảng mục lục",
 	"linterrors-subpage": "Lỗi cú pháp: $1",
 	"multi-part-template-block": "Đầu ra không chỉ do một bản mẫu nào đó",

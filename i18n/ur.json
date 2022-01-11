@@ -38,7 +38,7 @@
 	"linter-pager-self-closed-tag-details": "خود بستہ ٹیگ",
 	"linter-pager-stripped-tag-details": "برہنہ ٹیگ",
 	"linter-pager-template-header": "سانچے کے ذریعے؟",
-	"linter-pager-title": "صفحہ کا عنوان",
+	"linter-pager-title-header": "صفحہ کا عنوان",
 	"linterrors-subpage": "پوشیدہ نحوی نقائص: $1",
 	"multi-part-template-block": "ایک سانچے سے آؤٹ پٹ نہیں ہے۔",
 	"pageinfo-linter": "پوشیدہ نحوی نقائص"

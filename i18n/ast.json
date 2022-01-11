@@ -69,7 +69,7 @@
 	"linter-pager-template-header": "¿Dientro d'una plantía?",
 	"linter-pager-tidy-font-bug-details": "La etiqueta font cambia'l color del enllaz en Tidy pero non en HTML5",
 	"linter-pager-tidy-whitespace-bug-details": "Error d'espaciu en blancu de Tidy",
-	"linter-pager-title": "Títulu de la páxina",
+	"linter-pager-title-header": "Títulu de la páxina",
 	"linter-pager-unclosed-quotes-in-heading-details": "Comines sin zarrar que salen fuera de la tabla de conteníu",
 	"linterrors-subpage": "Errores de lint: $1",
 	"linterrors-summary": "<strong>Nota:</strong> Les cuentes de les categoríes nun son precises, sinón que se basen n'estimaciones",

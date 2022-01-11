@@ -62,7 +62,7 @@
 	"linter-pager-template-header": "Poprzez szablon?",
 	"linter-pager-tidy-font-bug-details": "Znacznik font próbuje zmienić kolor linku",
 	"linter-pager-tidy-whitespace-bug-details": "Błąd parsowania spacji",
-	"linter-pager-title": "Tytuł strony",
+	"linter-pager-title-header": "Tytuł strony",
 	"linter-pager-unclosed-quotes-in-heading-details": "Niedomknięty cytat powodujący wyciek spisu treści",
 	"linterrors-subpage": "Błędy składniowe: $1",
 	"linterrors-summary": "<strong>Uwaga:</strong> Liczby elementów poszczególnych kategorii nie są dokładne, opierają się one na szacunkach.",

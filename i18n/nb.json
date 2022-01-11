@@ -67,7 +67,7 @@
 	"linter-pager-template-header": "Via en mal?",
 	"linter-pager-tidy-font-bug-details": "Font-tagg prøver å endre lenkefarge",
 	"linter-pager-tidy-whitespace-bug-details": "Tomromsfeil",
-	"linter-pager-title": "Sidetittel",
+	"linter-pager-title-header": "Sidetittel",
 	"linter-pager-unclosed-quotes-in-heading-details": "Ikke-lukket sitattegn som lekker ut av innholdsfortegnelsen",
 	"linterrors-subpage": "Lint-feil: $1",
 	"linterrors-summary": "<strong>Merk:</strong> Antallet i kategoriene er ikke nøyaktige, men basert på estimater.",

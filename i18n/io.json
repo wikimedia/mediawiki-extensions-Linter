@@ -8,7 +8,7 @@
 	"linter-form-namespace": "'Namespace:'",
 	"linter-page-edit": "redaktar",
 	"linter-pager-obsolete-tag-details": "etiketo HTML obsoleta",
-	"linter-pager-title": "Titulo di la pagino",
+	"linter-pager-title-header": "Titulo di la pagino",
 	"linterrors-subpage": "Erori pri 'Lint': $1",
 	"pageinfo-linter": "Erori pri 'Lint'"
 }

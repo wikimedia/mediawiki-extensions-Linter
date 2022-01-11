@@ -74,7 +74,7 @@ class SpecialLintErrors extends SpecialPage {
 			'pagename' => [
 				'type' => 'text',
 				'name' => 'pagename',
-				'label-message' => 'linter-pager-title',
+				'label-message' => 'linter-pager-title-header',
 				'default' => '',
 				'id' => 'pagename',
 				'size' => 255,

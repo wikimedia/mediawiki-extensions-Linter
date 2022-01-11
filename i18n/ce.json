@@ -65,7 +65,7 @@
 	"linter-pager-template-header": "Кеп тӀехь?",
 	"linter-pager-tidy-font-bug-details": "Тег \"font\" гӀерта хьажорган бос хийца",
 	"linter-pager-tidy-whitespace-bug-details": "Сизийн символийн гӀалаташ Tidy",
-	"linter-pager-title": "АгӀонан корта",
+	"linter-pager-title-header": "АгӀонан корта",
 	"linter-pager-unclosed-quotes-in-heading-details": "ДӀачӀаьгӀна йоцу къовлар, чулацаман арайолуш йолу",
 	"linterrors-subpage": "Статикин анализаторан гӀалаташ: $1",
 	"linterrors-summary": "<strong>Билгалдахарш:</strong> Билгала лерина йоцу категорешна гайтамаш, уьш йу мах-хадорийн тӀехь кхоьллина.",

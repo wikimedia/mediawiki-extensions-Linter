@@ -76,7 +76,7 @@
 	"linter-pager-template-header": "Через шаблон?",
 	"linter-pager-tidy-font-bug-details": "Тег \"font\" пробует сменить цвет ссылки",
 	"linter-pager-tidy-whitespace-bug-details": "Ошибка разбора пробельных символов",
-	"linter-pager-title": "Заголовок страницы",
+	"linter-pager-title-header": "Заголовок страницы",
 	"linter-pager-unclosed-quotes-in-heading-details": "Незакрытая кавычка, выходящая за содержание",
 	"linterrors-subpage": "Ошибки статического анализатора: $1",
 	"linterrors-summary": "<strong>Примечание:</strong> Показатели для категорий не являются точными подсчетами, а основаны на оценках.",

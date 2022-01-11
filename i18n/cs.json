@@ -71,7 +71,7 @@
 	"linter-pager-template-header": "Prostřednictvím šablony?",
 	"linter-pager-tidy-font-bug-details": "HTML značka font pokoušející se o změnu barvy odkazu",
 	"linter-pager-tidy-whitespace-bug-details": "Chyba při parsování bílých znaků",
-	"linter-pager-title": "Název stránky",
+	"linter-pager-title-header": "Název stránky",
 	"linter-pager-unclosed-quotes-in-heading-details": "Neuzavřený apostrof, který vyteče z tabulky s obsahem",
 	"linterrors-subpage": "Chyby nalezené Lintem: $1",
 	"linterrors-summary": "<strong>Poznámka:</strong> Počty u kategorií nejsou přesné, jsou založeny na odhadech.",

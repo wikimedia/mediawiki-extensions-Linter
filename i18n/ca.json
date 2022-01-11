@@ -50,7 +50,7 @@
 	"linter-pager-template-header": "Mitjançant una plantilla?",
 	"linter-pager-tidy-font-bug-details": "L'etiqueta font intenta canviar el color d'enllaç",
 	"linter-pager-tidy-whitespace-bug-details": "Incidència d'anàlisi d'espais en blanc",
-	"linter-pager-title": "Títol de la pàgina",
+	"linter-pager-title-header": "Títol de la pàgina",
 	"linter-pager-unclosed-quotes-in-heading-details": "Cometes sense tancar que desborden la taula de continguts",
 	"linterrors-subpage": "Errors de lint: $1",
 	"pageinfo-linter": "Errors de lint"

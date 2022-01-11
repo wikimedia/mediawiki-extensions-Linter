@@ -71,7 +71,7 @@
 	"linter-pager-template-header": "틀을 경유하는지의 여부",
 	"linter-pager-tidy-font-bug-details": "font 태그가 링크 색 변경을 시도함",
 	"linter-pager-tidy-whitespace-bug-details": "공백 구문 분석 버그",
-	"linter-pager-title": "문서 제목",
+	"linter-pager-title-header": "문서 제목",
 	"linter-pager-unclosed-quotes-in-heading-details": "목차 밖으로 빠져나오는 닫히지 않은 인용 부호",
 	"linterrors-subpage": "린트 오류: $1",
 	"linterrors-summary": "<strong>알림</strong>: 분류 수는 정확한 개수가 아니며 추정치에 기반합니다.",

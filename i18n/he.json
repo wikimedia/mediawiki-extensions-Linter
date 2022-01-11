@@ -73,7 +73,7 @@
 	"linter-pager-template-header": "דרך תבנית?",
 	"linter-pager-tidy-font-bug-details": "תג font מנסה לשנות צבע של קישור",
 	"linter-pager-tidy-whitespace-bug-details": "תקלת פענוח רווח",
-	"linter-pager-title": "כותרת הדף",
+	"linter-pager-title-header": "כותרת הדף",
 	"linter-pager-unclosed-quotes-in-heading-details": "מירכאות לא סגורות שזולגות מתוכן עניינים",
 	"linterrors-subpage": "שגיאות ניקיון: $1",
 	"linterrors-summary": "<strong>הערה:</strong> הספירה של הקטגוריות אינה מדויקת, היא מבוססת על אומדנים.",

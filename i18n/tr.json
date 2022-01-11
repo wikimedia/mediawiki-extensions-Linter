@@ -72,7 +72,7 @@
 	"linter-pager-template-header": "Bir şablon aracılığıyla mı?",
 	"linter-pager-tidy-font-bug-details": "Yazı tipi etiketi bağlantı rengini değiştirmeye çalışır",
 	"linter-pager-tidy-whitespace-bug-details": "Boşluk ayrıştırma hatası",
-	"linter-pager-title": "Sayfa başlığı",
+	"linter-pager-title-header": "Sayfa başlığı",
 	"linter-pager-unclosed-quotes-in-heading-details": "İçindekiler tablosundan sızan kapatılmamış tırnak işareti",
 	"linterrors-subpage": "Lint hataları: $1",
 	"linterrors-summary": "<strong>Not:</strong> Kategorilerde gösterilen sayımlar tam değildir, tahmine dayalıdır.",

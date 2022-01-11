@@ -56,7 +56,7 @@
 	"linter-pager-template-header": "Праз шаблён?",
 	"linter-pager-tidy-font-bug-details": "Спроба зьмяніць колер цэтлікам „font“",
 	"linter-pager-tidy-whitespace-bug-details": "Памылка разбору пропустаў",
-	"linter-pager-title": "Назва старонкі",
+	"linter-pager-title-header": "Назва старонкі",
 	"linter-pager-unclosed-quotes-in-heading-details": "Незакрытая цытата, якая выходзіць па-за табліцу зьместу",
 	"linterrors-subpage": "Lint-памылкі: $1",
 	"linterrors-summary": "<strong>Заўвага:</strong> Паказальнікі для катэгорыяў не дакладныя, а заснаваныя на ацэнках.",

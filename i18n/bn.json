@@ -35,7 +35,7 @@
 	"linter-pager-template-header": "একটি টেমপ্লেটের মাধ্যমে?",
 	"linter-pager-tidy-font-bug-details": "ফন্ট ট্যাগ লিঙ্কের রঙ পরিবর্তন করার চেষ্টা করে",
 	"linter-pager-tidy-whitespace-bug-details": "হোয়াইটস্পেস পার্সিং বাগ",
-	"linter-pager-title": "পাতার শিরোনাম",
+	"linter-pager-title-header": "পাতার শিরোনাম",
 	"linterrors-subpage": "লিন্ট ত্রুটি: $1",
 	"linterrors-summary": "<strong>টীকা:</strong> বিষয়শ্রেণীর সংখ্যাগুলি সঠিক গণনা নয়, তবে আনুমানিক হিসাবের উপর ভিত্তি করে।",
 	"multi-part-template-block": "একটি একক টেমপ্লেট থেকে আউটপুট নয়",

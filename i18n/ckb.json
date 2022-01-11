@@ -35,7 +35,7 @@
 	"linter-pager-self-closed-tag-details": "تاگی خۆداخراو",
 	"linter-pager-template-header": "بەناو داڕێژە؟",
 	"linter-pager-tidy-font-bug-details": "تاگی «font» ھەوڵی گۆڕینی ڕەنگی بەستەر دەدات",
-	"linter-pager-title": "ناونیشانی پەڕە",
+	"linter-pager-title-header": "ناونیشانی پەڕە",
 	"linter-pager-unclosed-quotes-in-heading-details": "وتەی دانەخراو کە دزە دەکاتە دەرەوەی خشتەی ناوەڕۆکەکان",
 	"linterrors-subpage": "ھەڵە شاشەکان: $1",
 	"linterrors-summary": "<strong>تێبینی:</strong> ژماردنەکانی پۆلەکان ورد نین بەڵکوو، بەپێی مەزندەن.",

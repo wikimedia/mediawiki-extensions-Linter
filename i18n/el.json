@@ -65,7 +65,7 @@
 	"linter-pager-template-header": "Μέσω προτύπου;",
 	"linter-pager-tidy-font-bug-details": "Ετικέτα font προσπαθεί να αλλάξει χρώμα συνδέσμου",
 	"linter-pager-tidy-whitespace-bug-details": "Σφάλμα ανάλυσης χαρακτήρα κενού χώρου",
-	"linter-pager-title": "Τίτλος σελίδας",
+	"linter-pager-title-header": "Τίτλος σελίδας",
 	"linter-pager-unclosed-quotes-in-heading-details": "Μη εσώκλειστη σημείωση που εξέχει από την λίστα περιεχομένων",
 	"linterrors-subpage": "Σφάλματα σύνταξης: $1",
 	"linterrors-summary": "<strong>Σημείωση:</strong> Οι μετρήσεις για τις κατηγορίες δεν είναι ακριβείς μετρήσεις αλλά βασίζονται σε εκτιμήσεις.",

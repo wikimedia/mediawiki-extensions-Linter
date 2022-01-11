@@ -77,7 +77,7 @@
 	"linter-pager-template-header": "通过模板？",
 	"linter-pager-tidy-font-bug-details": "字体标签试图改变链接颜色",
 	"linter-pager-tidy-whitespace-bug-details": "空格解析错误",
-	"linter-pager-title": "页面标题",
+	"linter-pager-title-header": "页面标题",
 	"linter-pager-unclosed-quotes-in-heading-details": "超出表格内容的未闭合引用",
 	"linterrors-subpage": "Lint错误：$1",
 	"linterrors-summary": "<strong>注意：</strong>分类计数并不精确，而是基于估计。",

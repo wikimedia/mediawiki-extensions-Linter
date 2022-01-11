@@ -70,7 +70,7 @@
 	"linter-pager-template-header": "Чрез шаблон?",
 	"linter-pager-tidy-font-bug-details": "Font тагът опитва да промени цвета на препратката",
 	"linter-pager-tidy-whitespace-bug-details": "Грешка при обработката на интервал",
-	"linter-pager-title": "Заглавие на страницата",
+	"linter-pager-title-header": "Заглавие на страницата",
 	"linter-pager-unclosed-quotes-in-heading-details": "Незатворена кавичка в заглавие на раздел, която вследствие на това има обхват извън съдържанието",
 	"linterrors-subpage": "Грешки в статичния код: $1",
 	"linterrors-summary": "<strong>Забележка:</strong> Бройките за категориите не са точни, а са базирани на оценки.",

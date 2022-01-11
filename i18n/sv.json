@@ -72,7 +72,7 @@
 	"linter-pager-template-header": "Genom en mall?",
 	"linter-pager-tidy-font-bug-details": "Typsnittstaggen försöker ändra länkfärg",
 	"linter-pager-tidy-whitespace-bug-details": "Blankstegsbugg",
-	"linter-pager-title": "Sidtitel",
+	"linter-pager-title-header": "Sidtitel",
 	"linter-pager-unclosed-quotes-in-heading-details": "Ostängt citationstecken som läcker ut i innehållsförteckningen",
 	"linterrors-subpage": "Lint-fel: $1",
 	"linterrors-summary": "<strong>OBS:</strong> Antal fel i kategorierna är inte exakta utan baseras på uppskattningar.",

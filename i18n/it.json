@@ -71,7 +71,7 @@
 	"linter-pager-template-header": "Tramite un template?",
 	"linter-pager-tidy-font-bug-details": "Il tag font prova a cambiare il colore a un collegamento",
 	"linter-pager-tidy-whitespace-bug-details": "Problema di parsing con gli spazi",
-	"linter-pager-title": "Titolo della pagina",
+	"linter-pager-title-header": "Titolo della pagina",
 	"linter-pager-unclosed-quotes-in-heading-details": "Apici non chiusi il cui effetto fuoriesce dall'indice",
 	"linterrors-subpage": "Errori di Lint: $1",
 	"linterrors-summary": "<strong>Nota:</strong> i conteggi degli errori non sono esatti, bensì stimati.",

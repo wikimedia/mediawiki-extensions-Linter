@@ -34,7 +34,7 @@
 	"linter-pager-self-closed-tag-details": "സ്വയം-അടച്ച റ്റാഗ്",
 	"linter-pager-stripped-tag-details": "വെട്ടിയ റ്റാഗുകൾ",
 	"linter-pager-template-header": "ഒരു ഫലകം വഴി?",
-	"linter-pager-title": "താളിന്റെ തലക്കെട്ട്",
+	"linter-pager-title-header": "താളിന്റെ തലക്കെട്ട്",
 	"linterrors-subpage": "ലിന്റ് പിഴവുകൾ: $1",
 	"linterrors-summary": "<strong>കുറിപ്പ്:</strong> വർഗ്ഗങ്ങളുടെ എണ്ണങ്ങൾ കൃത്യമായ എണ്ണങ്ങളല്ല, മറിച്ച് മതിപ്പ് എണ്ണങ്ങളാണ്.",
 	"pageinfo-linter": "ലിന്റ് പിഴവുകൾ"

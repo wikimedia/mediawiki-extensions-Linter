@@ -44,7 +44,7 @@
 	"linter-pager-stripped-tag-details": "Fjerna tagg",
 	"linter-pager-template-header": "Via ein mal?",
 	"linter-pager-tidy-whitespace-bug-details": "Tidy tomromfeil",
-	"linter-pager-title": "Sidetittel",
+	"linter-pager-title-header": "Sidetittel",
 	"linterrors-subpage": "Lint-feil: $1",
 	"multi-part-template-block": "Resultatet kjem ikkje frå ein enkelt mal",
 	"pageinfo-linter": "Lint-feil"

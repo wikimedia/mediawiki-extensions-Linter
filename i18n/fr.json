@@ -85,7 +85,7 @@
 	"linter-pager-template-header": "Via un modèle ?",
 	"linter-pager-tidy-font-bug-details": "Balise de police essayant de modifier la couleur du lien",
 	"linter-pager-tidy-whitespace-bug-details": "Anomalie de l’analyse des blancs",
-	"linter-pager-title": "Titre de la page",
+	"linter-pager-title-header": "Titre de la page",
 	"linter-pager-unclosed-quotes-in-heading-details": "Apostrophes non fermées dans un titre, qui débordent de la table des matières",
 	"linterrors-subpage": "Erreurs de lint : $1",
 	"linterrors-summary": "<strong>Note</strong> : Les compteurs pour les catégories ne sont pas justes, mais basés sur des estimations.",

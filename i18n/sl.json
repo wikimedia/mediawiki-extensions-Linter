@@ -60,7 +60,7 @@
 	"linter-pager-template-header": "V predlogi?",
 	"linter-pager-tidy-font-bug-details": "Značka »font« poskuša spremeniti barvo pisave",
 	"linter-pager-tidy-whitespace-bug-details": "Hrošč pri razčlenjevanju presledkov",
-	"linter-pager-title": "Naslov strani",
+	"linter-pager-title-header": "Naslov strani",
 	"linter-pager-unclosed-quotes-in-heading-details": "Neparni narekovaj, ki izstopa iz vsebinskega kazala",
 	"linterrors-subpage": "Skladenjske napake: $1",
 	"linterrors-summary": "<strong>Opomba:</strong> Za posamezne kategorije so navedena ocenjena števila.",

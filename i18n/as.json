@@ -34,7 +34,7 @@
 	"linter-page-viewsource": "উৎস চাওক",
 	"linter-pager-bogus-image-options-details": "ভুৱা ফাইল বিকল্প",
 	"linter-pager-missing-end-tag-details": "সমাপ্তি টেগ নিৰুদ্দেশ",
-	"linter-pager-title": "পৃষ্ঠাৰ শিৰোনাম",
+	"linter-pager-title-header": "পৃষ্ঠাৰ শিৰোনাম",
 	"linterrors-subpage": "লিণ্ট ত্ৰুটি: $1",
 	"linterrors-summary": "<strong>টোকা:</strong> শ্ৰেণীবোৰৰ বাবে গণনাবোৰ সঠিক গণনা নহয়, এয়া কেৱল আনুমানিকহে।",
 	"pageinfo-linter": "লিণ্ট ত্ৰুটিসমূহ"

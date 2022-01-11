@@ -65,7 +65,7 @@
 	"linter-pager-template-header": "テンプレート経由かどうか？",
 	"linter-pager-tidy-font-bug-details": "fontタグはリンクカラーを変更しようと試みます",
 	"linter-pager-tidy-whitespace-bug-details": "ホワイトスペース解析エラー",
-	"linter-pager-title": "ページ名",
+	"linter-pager-title-header": "ページ名",
 	"linter-pager-unclosed-quotes-in-heading-details": "目次から漏れた閉じられていない引用",
 	"linterrors-subpage": "Lint エラー: $1",
 	"linterrors-summary": "<strong>Note:</strong> カテゴリの集計数は正確ではなく、推計値です。",

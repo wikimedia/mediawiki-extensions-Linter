@@ -26,7 +26,7 @@
 	"linter-pager-stripped-tag-details": "Mankanta parto de para etikedo",
 	"linter-pager-tidy-font-bug-details": "Fonta etikedo provas ŝanĝi koloron de ligilo",
 	"linter-pager-tidy-whitespace-bug-details": "Cimo pri sintaksa analizo de blankspacoj",
-	"linter-pager-title": "Titolo de paĝo",
+	"linter-pager-title-header": "Titolo de paĝo",
 	"linter-pager-unclosed-quotes-in-heading-details": "Nefermita citaĵo kiu likas for de la tabelo de enhavo",
 	"linterrors-subpage": "Lint-eraroj: $1",
 	"pageinfo-linter": "Lint-eraroj"

@@ -66,7 +66,7 @@
 	"linter-pager-template-header": "Tramite 'nu template?",
 	"linter-pager-tidy-font-bug-details": "'U tag font prove a cangià 'u culore de 'nu collegamende",
 	"linter-pager-tidy-whitespace-bug-details": "Probbleme de parsing cu le spazie",
-	"linter-pager-title": "Titole d'a vôsce",
+	"linter-pager-title-header": "Titole d'a vôsce",
 	"linter-pager-unclosed-quotes-in-heading-details": "Apice non achiuse addò l'effette iesse fore da l'indice",
 	"linterrors-subpage": "Errore de Lint: $1",
 	"linterrors-summary": "<strong>Note:</strong> le condegge de le errore non ge sò satte-satte, ma stimate.",

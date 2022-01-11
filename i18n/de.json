@@ -73,7 +73,7 @@
 	"linter-pager-template-header": "Durch eine Vorlage?",
 	"linter-pager-tidy-font-bug-details": "Font-Tag versucht die Linkfarbe zu ändern",
 	"linter-pager-tidy-whitespace-bug-details": "Leerzeichenfehler",
-	"linter-pager-title": "Seitentitel",
+	"linter-pager-title-header": "Seitentitel",
 	"linter-pager-unclosed-quotes-in-heading-details": "Nicht geschlossenes Anführungszeichen, das das Inhaltsverzeichnis auslaufen lässt.",
 	"linterrors-subpage": "Lint-Fehler: $1",
 	"linterrors-summary": "<strong>Hinweis:</strong> Die Zähler für Kategorien sind nicht genau, basieren jedoch auf Schätzungen.",

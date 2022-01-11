@@ -11,7 +11,7 @@
 	"linter-numerrors": "($1 {{PLURAL:$1|خرابي|خرابيون}})",
 	"linter-pager-missing-end-tag-details": "کٽل اختتام ٽيگ",
 	"linter-pager-obsolete-tag-details": "اوبسليٽ ايڇٽي.ايم.ايل ٽيگَ",
-	"linter-pager-title": "صفحي جو عنوان",
+	"linter-pager-title-header": "صفحي جو عنوان",
 	"linterrors-subpage": "لنٽِ چڪون: $1",
 	"pageinfo-linter": "لنٽِ چڪون"
 }

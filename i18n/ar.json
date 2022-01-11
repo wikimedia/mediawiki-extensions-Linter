@@ -73,7 +73,7 @@
 	"linter-pager-template-header": "من خلال قالب؟",
 	"linter-pager-tidy-font-bug-details": "تغير لون علامة لون الارتباط في تيدي ولكنها لن تظهر في HTML5",
 	"linter-pager-tidy-whitespace-bug-details": "علة مسافة بيضاء تيدي",
-	"linter-pager-title": "عنوان الصفحة",
+	"linter-pager-title-header": "عنوان الصفحة",
 	"linter-pager-unclosed-quotes-in-heading-details": "اقتباس غير مغلق يتسرب خارج جدول المحتويات",
 	"linterrors-subpage": "أخطاء لنت: $1",
 	"linterrors-summary": "<strong>ملاحظة:</strong> إنَّ أعداد التصنيفات ليست دقيقة، ولكنها تستند إلى التقديرات.",

@@ -69,7 +69,7 @@
 	"linter-pager-template-header": "Através de uma predefinição?",
 	"linter-pager-tidy-font-bug-details": "A etiqueta font tenta muda a cor das hiperligações",
 	"linter-pager-tidy-whitespace-bug-details": "Defeito na análise sintática do espaço em branco",
-	"linter-pager-title": "Título da página",
+	"linter-pager-title-header": "Título da página",
 	"linter-pager-unclosed-quotes-in-heading-details": "Aspas não fechadas que se propagam para fora do índice",
 	"linterrors-subpage": "Erros de lint: $1",
 	"linterrors-summary": "<strong>Nota:</strong> As contagens para as categorias não são precisas, mas sim baseadas em estimativas.",

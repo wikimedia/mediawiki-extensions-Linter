@@ -70,7 +70,7 @@
 	"linter-pager-template-header": "Через шаблон?",
 	"linter-pager-tidy-font-bug-details": "Тег «font» намагається змінити колір посилання",
 	"linter-pager-tidy-whitespace-bug-details": "Помилка із парсингом пробілу",
-	"linter-pager-title": "Назва сторінки",
+	"linter-pager-title-header": "Назва сторінки",
 	"linter-pager-unclosed-quotes-in-heading-details": "Незакритий апостроф, який перетікає зі змісту",
 	"linterrors-subpage": "Lint-помилки: $1",
 	"linterrors-summary": "<strong>Примітка:</strong> підрахунок для категорій не є точним — він базується на приблизних значеннях.",

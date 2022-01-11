@@ -67,7 +67,7 @@
 	"linter-pager-template-header": "Преко шаблона?",
 	"linter-pager-tidy-font-bug-details": "Ознака font покушава да промени боју везе",
 	"linter-pager-tidy-whitespace-bug-details": "Грешка при рашчлањивању размака",
-	"linter-pager-title": "Наслов странице",
+	"linter-pager-title-header": "Наслов странице",
 	"linter-pager-unclosed-quotes-in-heading-details": "Незатворени апостроф који утиче на текст ван прегледа садржаја",
 	"linterrors-subpage": "Пречишћивање грешака: $1",
 	"linterrors-summary": "<strong>Напомена:</strong> Број категорија није прецизан, већ се заснива на проценама.",

@@ -66,7 +66,7 @@
 	"linter-pager-template-header": "Malli vahendusel?",
 	"linter-pager-tidy-font-bug-details": "Silt \"font\" proovib muuta lingi värvust",
 	"linter-pager-tidy-whitespace-bug-details": "Tühemiku parsimisviga",
-	"linter-pager-title": "Lehekülje pealkiri",
+	"linter-pager-title-header": "Lehekülje pealkiri",
 	"linter-pager-unclosed-quotes-in-heading-details": "Sulgemata silt, mis mõjutab sisu väljaspool sisukorda",
 	"linterrors-subpage": "Linteri vead: $1",
 	"linterrors-summary": "<strong>Märkus:</strong> Kategooriatesse kuuluvate vigade arv on hinnanguline, mitte täpne.",
