@@ -42,7 +42,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Løysing på paragrafinnpakningsfeil",
 	"linter-pager-self-closed-tag-details": "Sjølvstengende taggar",
 	"linter-pager-stripped-tag-details": "Fjerna tagg",
-	"linter-pager-template": "Via ein mal?",
+	"linter-pager-template-header": "Via ein mal?",
 	"linter-pager-tidy-whitespace-bug-details": "Tidy tomromfeil",
 	"linter-pager-title": "Sidetittel",
 	"linterrors-subpage": "Lint-feil: $1",

@@ -66,7 +66,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "پاراگرافی که خطایی را در خود دارد",
 	"linter-pager-self-closed-tag-details": "برچسب خودبسته",
 	"linter-pager-stripped-tag-details": "برچسب برهنه",
-	"linter-pager-template": "از طریق یک الگو؟",
+	"linter-pager-template-header": "از طریق یک الگو؟",
 	"linter-pager-tidy-font-bug-details": "برچسب font که تلاش می‌کند رنگ پیوند را تغییر دهد",
 	"linter-pager-tidy-whitespace-bug-details": "خطای تحلیل فضای سفید",
 	"linter-pager-title": "عنوان صفحه",

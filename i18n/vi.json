@@ -44,7 +44,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Khắc phục lỗi ngắt dòng đoạn văn",
 	"linter-pager-self-closed-tag-details": "Thẻ tự đóng",
 	"linter-pager-stripped-tag-details": "Thẻ bị bỏ",
-	"linter-pager-template": "Qua bản mẫu?",
+	"linter-pager-template-header": "Qua bản mẫu?",
 	"linter-pager-tidy-font-bug-details": "Thẻ font cố thay đổi màu liên kết",
 	"linter-pager-tidy-whitespace-bug-details": "Lỗi phân tích ký tự khoảng cách",
 	"linter-pager-title": "Tên trang",

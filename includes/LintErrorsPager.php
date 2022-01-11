@@ -276,7 +276,7 @@ class LintErrorsPager extends TablePager {
 		} elseif ( !$this->categoryManager->hasNoParams( $this->category ) ) {
 			$names['details'] = $this->msg( "linter-pager-{$this->category}-details" )->text();
 		}
-		$names['template'] = $this->msg( "linter-pager-template" )->text();
+		$names['template'] = $this->msg( "linter-pager-template-header" )->text();
 		return $names;
 	}
 }

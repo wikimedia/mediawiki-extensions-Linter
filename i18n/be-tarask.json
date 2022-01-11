@@ -53,7 +53,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Пазьбяганьне памылкі абгорткі параграфу",
 	"linter-pager-self-closed-tag-details": "Самазакрыты тэг",
 	"linter-pager-stripped-tag-details": "Няпарны тэг",
-	"linter-pager-template": "Праз шаблён?",
+	"linter-pager-template-header": "Праз шаблён?",
 	"linter-pager-tidy-font-bug-details": "Спроба зьмяніць колер цэтлікам „font“",
 	"linter-pager-tidy-whitespace-bug-details": "Памылка разбору пропустаў",
 	"linter-pager-title": "Назва старонкі",

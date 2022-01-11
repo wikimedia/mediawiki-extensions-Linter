@@ -74,7 +74,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "段落包裹错误解决",
 	"linter-pager-self-closed-tag-details": "自封闭标签",
 	"linter-pager-stripped-tag-details": "剥去的标签",
-	"linter-pager-template": "通过模板？",
+	"linter-pager-template-header": "通过模板？",
 	"linter-pager-tidy-font-bug-details": "字体标签试图改变链接颜色",
 	"linter-pager-tidy-whitespace-bug-details": "空格解析错误",
 	"linter-pager-title": "页面标题",

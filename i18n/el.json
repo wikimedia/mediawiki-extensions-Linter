@@ -62,7 +62,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Παράκαμψη σφάλματος αναδίπλωσης παραγράφων",
 	"linter-pager-self-closed-tag-details": "Αυτόκλειστη ετικέτα",
 	"linter-pager-stripped-tag-details": "Ελλιπής ετικέτα",
-	"linter-pager-template": "Μέσω προτύπου;",
+	"linter-pager-template-header": "Μέσω προτύπου;",
 	"linter-pager-tidy-font-bug-details": "Ετικέτα font προσπαθεί να αλλάξει χρώμα συνδέσμου",
 	"linter-pager-tidy-whitespace-bug-details": "Σφάλμα ανάλυσης χαρακτήρα κενού χώρου",
 	"linter-pager-title": "Τίτλος σελίδας",

@@ -64,7 +64,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Избегавање грешке у преламању пасуса",
 	"linter-pager-self-closed-tag-details": "Самозатварајућа ознака",
 	"linter-pager-stripped-tag-details": "Огољена ознака",
-	"linter-pager-template": "Преко шаблона?",
+	"linter-pager-template-header": "Преко шаблона?",
 	"linter-pager-tidy-font-bug-details": "Ознака font покушава да промени боју везе",
 	"linter-pager-tidy-whitespace-bug-details": "Грешка при рашчлањивању размака",
 	"linter-pager-title": "Наслов странице",

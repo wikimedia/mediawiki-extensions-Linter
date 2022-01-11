@@ -13,7 +13,7 @@
 	"linter-heading-low-priority": "कमी प्राथमिकता",
 	"linter-heading-medium-priority": "मध्यम प्राथमिकता",
 	"linter-pager-deletable-table-tag-details": "वगळणे आवश्यक असणारी 'टेबल' खूणपताका",
-	"linter-pager-template": "साच्यामार्फत?",
+	"linter-pager-template-header": "साच्यामार्फत?",
 	"linter-pager-title": "पान शीर्षक",
 	"linterrors-subpage": "लिंट त्रुट्या: $1",
 	"linterrors-summary": "<strong>नोंद:</strong> या वर्गांमधील मोजणी ही अचूक नाही, पण अंदाजावर आधारीत आहेत."

@@ -69,7 +69,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Paragraf kaydırma hatası geçici çözümü",
 	"linter-pager-self-closed-tag-details": "Kendiliğinden kapanan etiket",
 	"linter-pager-stripped-tag-details": "Kaldırılmış etiket",
-	"linter-pager-template": "Bir şablon aracılığıyla mı?",
+	"linter-pager-template-header": "Bir şablon aracılığıyla mı?",
 	"linter-pager-tidy-font-bug-details": "Yazı tipi etiketi bağlantı rengini değiştirmeye çalışır",
 	"linter-pager-tidy-whitespace-bug-details": "Boşluk ayrıştırma hatası",
 	"linter-pager-title": "Sayfa başlığı",

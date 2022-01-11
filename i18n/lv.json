@@ -16,7 +16,7 @@
 	"linter-page-title-edit": "$1 ($2)",
 	"linter-page-viewsource": "aplūkot kodu",
 	"linter-pager-obsolete-tag-details": "Novecojusi HTML iezīme",
-	"linter-pager-template": "Izmantojot veidni?",
+	"linter-pager-template-header": "Izmantojot veidni?",
 	"linter-pager-title": "Lapas nosaukums",
 	"linterrors-subpage": "Lint kļūdas: $1",
 	"linterrors-summary": "<strong>Piezīme:</strong> Skaits kategorijās nav precīzs, bet ir balstīts uz aprēķiniem.",

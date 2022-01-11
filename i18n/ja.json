@@ -62,7 +62,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "段落折り返しバグの回避策",
 	"linter-pager-self-closed-tag-details": "自己終了タグ",
 	"linter-pager-stripped-tag-details": "タグを省略",
-	"linter-pager-template": "テンプレート経由かどうか？",
+	"linter-pager-template-header": "テンプレート経由かどうか？",
 	"linter-pager-tidy-font-bug-details": "fontタグはリンクカラーを変更しようと試みます",
 	"linter-pager-tidy-whitespace-bug-details": "ホワイトスペース解析エラー",
 	"linter-pager-title": "ページ名",

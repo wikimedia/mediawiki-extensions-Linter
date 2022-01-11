@@ -23,7 +23,7 @@
 	"linter-pager-deletable-table-tag-details": "แท็กตารางที่ควรลบ",
 	"linter-pager-missing-end-tag-details": "ขาดแท็กปิด",
 	"linter-pager-obsolete-tag-details": "แท็ก HTML ที่เลิกใช้",
-	"linter-pager-template": "ผ่านแม่แบบ?",
+	"linter-pager-template-header": "ผ่านแม่แบบ?",
 	"linter-pager-title": "ชื่อหน้า",
 	"linterrors-subpage": "ข้อผิดพลาดลินท์: $1",
 	"pageinfo-linter": "ข้อผิดพลาดลินท์"

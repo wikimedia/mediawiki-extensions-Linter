@@ -68,7 +68,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Tijdelijke oplossing voor de alinea-omwikkelingsbug",
 	"linter-pager-self-closed-tag-details": "Zelfsluitend element",
 	"linter-pager-stripped-tag-details": "Genegeerd element",
-	"linter-pager-template": "Door middel van een sjabloon?",
+	"linter-pager-template-header": "Door middel van een sjabloon?",
 	"linter-pager-tidy-font-bug-details": "Font element probeert de koppelingkleur te wijzigingen",
 	"linter-pager-tidy-whitespace-bug-details": "Witruimte intepretatiebug",
 	"linter-pager-title": "Paginanaam",

@@ -70,7 +70,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Workaround für einen Absatzumbruchfehler",
 	"linter-pager-self-closed-tag-details": "Selbstschließendes Tag",
 	"linter-pager-stripped-tag-details": "Ignoriertes Tag",
-	"linter-pager-template": "Durch eine Vorlage?",
+	"linter-pager-template-header": "Durch eine Vorlage?",
 	"linter-pager-tidy-font-bug-details": "Font-Tag versucht die Linkfarbe zu ändern",
 	"linter-pager-tidy-whitespace-bug-details": "Leerzeichenfehler",
 	"linter-pager-title": "Seitentitel",

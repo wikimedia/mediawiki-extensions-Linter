@@ -70,7 +70,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "حل علة التفاف الفقرة",
 	"linter-pager-self-closed-tag-details": "علامة مغلقة ذاتيا",
 	"linter-pager-stripped-tag-details": "علامة مجهولة",
-	"linter-pager-template": "من خلال قالب؟",
+	"linter-pager-template-header": "من خلال قالب؟",
 	"linter-pager-tidy-font-bug-details": "تغير لون علامة لون الارتباط في تيدي ولكنها لن تظهر في HTML5",
 	"linter-pager-tidy-whitespace-bug-details": "علة مسافة بيضاء تيدي",
 	"linter-pager-title": "عنوان الصفحة",

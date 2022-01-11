@@ -73,7 +73,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Решение ошибки обёртки абзаца",
 	"linter-pager-self-closed-tag-details": "Самозакрывающийся тег",
 	"linter-pager-stripped-tag-details": "Разделённый тег",
-	"linter-pager-template": "Через шаблон?",
+	"linter-pager-template-header": "Через шаблон?",
 	"linter-pager-tidy-font-bug-details": "Тег \"font\" пробует сменить цвет ссылки",
 	"linter-pager-tidy-whitespace-bug-details": "Ошибка разбора пробельных символов",
 	"linter-pager-title": "Заголовок страницы",

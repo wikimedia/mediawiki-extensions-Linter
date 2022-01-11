@@ -57,7 +57,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Nadomestna rešitev hrošča pri ovijanju odstavkov",
 	"linter-pager-self-closed-tag-details": "Samozaključena značka",
 	"linter-pager-stripped-tag-details": "Ime značke",
-	"linter-pager-template": "V predlogi?",
+	"linter-pager-template-header": "V predlogi?",
 	"linter-pager-tidy-font-bug-details": "Značka »font« poskuša spremeniti barvo pisave",
 	"linter-pager-tidy-whitespace-bug-details": "Hrošč pri razčlenjevanju presledkov",
 	"linter-pager-title": "Naslov strani",

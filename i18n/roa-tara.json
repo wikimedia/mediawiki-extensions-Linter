@@ -63,7 +63,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Errore de capeverse aggirabbele",
 	"linter-pager-self-closed-tag-details": "Tag aute-achiuse",
 	"linter-pager-stripped-tag-details": "Tag scucchiate",
-	"linter-pager-template": "Tramite 'nu template?",
+	"linter-pager-template-header": "Tramite 'nu template?",
 	"linter-pager-tidy-font-bug-details": "'U tag font prove a cangià 'u culore de 'nu collegamende",
 	"linter-pager-tidy-whitespace-bug-details": "Probbleme de parsing cu le spazie",
 	"linter-pager-title": "Titole d'a vôsce",

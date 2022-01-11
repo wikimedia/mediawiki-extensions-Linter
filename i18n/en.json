@@ -71,7 +71,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Paragraph wrapping bug workaround",
 	"linter-pager-self-closed-tag-details": "Self-closed tag",
 	"linter-pager-stripped-tag-details": "Stripped tag",
-	"linter-pager-template": "Through a template?",
+	"linter-pager-template-header": "Through a template?",
 	"linter-pager-tidy-font-bug-details": "Font tag tries to change link color",
 	"linter-pager-tidy-whitespace-bug-details": "Whitespace parsing bug",
 	"linter-pager-title": "Page title",

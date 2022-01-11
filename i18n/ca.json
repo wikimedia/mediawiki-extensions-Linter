@@ -47,7 +47,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Esquivament de l'error d'ajustament de paràgraf",
 	"linter-pager-self-closed-tag-details": "Etiqueta auto-tancada",
 	"linter-pager-stripped-tag-details": "Etiqueta no aparellada",
-	"linter-pager-template": "Mitjançant una plantilla?",
+	"linter-pager-template-header": "Mitjançant una plantilla?",
 	"linter-pager-tidy-font-bug-details": "L'etiqueta font intenta canviar el color d'enllaç",
 	"linter-pager-tidy-whitespace-bug-details": "Incidència d'anàlisi d'espais en blanc",
 	"linter-pager-title": "Títol de la pàgina",

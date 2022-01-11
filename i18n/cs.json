@@ -68,7 +68,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Nowrap prvek s blokovým prvkem na jednom řádku",
 	"linter-pager-self-closed-tag-details": "Sebeuzavírající značka",
 	"linter-pager-stripped-tag-details": "Vyříznutý prvek",
-	"linter-pager-template": "Prostřednictvím šablony?",
+	"linter-pager-template-header": "Prostřednictvím šablony?",
 	"linter-pager-tidy-font-bug-details": "HTML značka font pokoušející se o změnu barvy odkazu",
 	"linter-pager-tidy-whitespace-bug-details": "Chyba při parsování bílých znaků",
 	"linter-pager-title": "Název stránky",

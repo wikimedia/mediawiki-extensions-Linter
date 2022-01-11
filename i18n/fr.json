@@ -82,7 +82,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Contournement de l’anomalie de délimitation de paragraphe",
 	"linter-pager-self-closed-tag-details": "Balise auto-fermante",
 	"linter-pager-stripped-tag-details": "Balise vide",
-	"linter-pager-template": "Via un modèle ?",
+	"linter-pager-template-header": "Via un modèle ?",
 	"linter-pager-tidy-font-bug-details": "Balise de police essayant de modifier la couleur du lien",
 	"linter-pager-tidy-whitespace-bug-details": "Anomalie de l’analyse des blancs",
 	"linter-pager-title": "Titre de la page",

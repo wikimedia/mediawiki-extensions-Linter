@@ -66,7 +66,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Atayu de l'error d'axuste de párrafu",
 	"linter-pager-self-closed-tag-details": "Etiqueta auto-zarrada",
 	"linter-pager-stripped-tag-details": "Etiqueta quitada",
-	"linter-pager-template": "¿Dientro d'una plantía?",
+	"linter-pager-template-header": "¿Dientro d'una plantía?",
 	"linter-pager-tidy-font-bug-details": "La etiqueta font cambia'l color del enllaz en Tidy pero non en HTML5",
 	"linter-pager-tidy-whitespace-bug-details": "Error d'espaciu en blancu de Tidy",
 	"linter-pager-title": "Títulu de la páxina",

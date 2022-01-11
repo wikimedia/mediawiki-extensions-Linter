@@ -68,7 +68,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "문단 래핑 버그 우회 처리",
 	"linter-pager-self-closed-tag-details": "스스로 닫는 태그",
 	"linter-pager-stripped-tag-details": "잘려나간 태그",
-	"linter-pager-template": "틀을 경유하는지의 여부",
+	"linter-pager-template-header": "틀을 경유하는지의 여부",
 	"linter-pager-tidy-font-bug-details": "font 태그가 링크 색 변경을 시도함",
 	"linter-pager-tidy-whitespace-bug-details": "공백 구문 분석 버그",
 	"linter-pager-title": "문서 제목",

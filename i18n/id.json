@@ -39,7 +39,7 @@
 	"linter-pager-multiple-unclosed-formatting-tags-details": "Beberapa tag pemformatan yang tidak ditutup  pada halaman",
 	"linter-pager-obsolete-tag-details": "Tag HTML yang tidak digunakan lagi",
 	"linter-pager-self-closed-tag-details": "Tag yang menutup sendiri",
-	"linter-pager-template": "Melalui sebuah templat?",
+	"linter-pager-template-header": "Melalui sebuah templat?",
 	"linter-pager-tidy-font-bug-details": "Tag font mencoba untuk mengubah warna pranala",
 	"linter-pager-tidy-whitespace-bug-details": "Kekutu penguraian spasi",
 	"linter-pager-title": "Judul halaman",

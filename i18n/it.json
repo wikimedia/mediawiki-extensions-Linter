@@ -68,7 +68,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Errore di capoverso aggirabile",
 	"linter-pager-self-closed-tag-details": "Tag auto-chiusi",
 	"linter-pager-stripped-tag-details": "Tag spaiato",
-	"linter-pager-template": "Tramite un template?",
+	"linter-pager-template-header": "Tramite un template?",
 	"linter-pager-tidy-font-bug-details": "Il tag font prova a cambiare il colore a un collegamento",
 	"linter-pager-tidy-whitespace-bug-details": "Problema di parsing con gli spazi",
 	"linter-pager-title": "Titolo della pagina",

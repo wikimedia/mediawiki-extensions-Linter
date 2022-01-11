@@ -66,7 +66,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Solução para o erro de quebra de linha de parágrafos",
 	"linter-pager-self-closed-tag-details": "Elemento auto-fechado",
 	"linter-pager-stripped-tag-details": "Elemento incompleto",
-	"linter-pager-template": "Através de uma predefinição?",
+	"linter-pager-template-header": "Através de uma predefinição?",
 	"linter-pager-tidy-font-bug-details": "A etiqueta font tenta muda a cor das hiperligações",
 	"linter-pager-tidy-whitespace-bug-details": "Defeito na análise sintática do espaço em branco",
 	"linter-pager-title": "Título da página",

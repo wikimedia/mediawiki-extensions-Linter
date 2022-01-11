@@ -62,7 +62,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "МогӀанан тӀехьарчоран гӀалат нисдар",
 	"linter-pager-self-closed-tag-details": "ШадӀакъовлуш йолу тег",
 	"linter-pager-stripped-tag-details": "Екъна тег",
-	"linter-pager-template": "Кеп тӀехь?",
+	"linter-pager-template-header": "Кеп тӀехь?",
 	"linter-pager-tidy-font-bug-details": "Тег \"font\" гӀерта хьажорган бос хийца",
 	"linter-pager-tidy-whitespace-bug-details": "Сизийн символийн гӀалаташ Tidy",
 	"linter-pager-title": "АгӀонан корта",

@@ -70,7 +70,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "מעקף באג גלישת פסקה",
 	"linter-pager-self-closed-tag-details": "תג שסוגר את עצמו",
 	"linter-pager-stripped-tag-details": "תג ערום",
-	"linter-pager-template": "דרך תבנית?",
+	"linter-pager-template-header": "דרך תבנית?",
 	"linter-pager-tidy-font-bug-details": "תג font מנסה לשנות צבע של קישור",
 	"linter-pager-tidy-whitespace-bug-details": "תקלת פענוח רווח",
 	"linter-pager-title": "כותרת הדף",

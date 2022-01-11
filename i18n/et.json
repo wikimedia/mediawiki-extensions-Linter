@@ -63,7 +63,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Vastukaal reamurdeta lõigu veale",
 	"linter-pager-self-closed-tag-details": "Endassesuletud silt",
 	"linter-pager-stripped-tag-details": "Eiratav silt",
-	"linter-pager-template": "Malli vahendusel?",
+	"linter-pager-template-header": "Malli vahendusel?",
 	"linter-pager-tidy-font-bug-details": "Silt \"font\" proovib muuta lingi värvust",
 	"linter-pager-tidy-whitespace-bug-details": "Tühemiku parsimisviga",
 	"linter-pager-title": "Lehekülje pealkiri",

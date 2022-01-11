@@ -64,7 +64,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Løsning på paragrafinnpakningsfeil",
 	"linter-pager-self-closed-tag-details": "Selvslukkende tagger",
 	"linter-pager-stripped-tag-details": "Fjernet tagg",
-	"linter-pager-template": "Via en mal?",
+	"linter-pager-template-header": "Via en mal?",
 	"linter-pager-tidy-font-bug-details": "Font-tagg prøver å endre lenkefarge",
 	"linter-pager-tidy-whitespace-bug-details": "Tomromsfeil",
 	"linter-pager-title": "Sidetittel",

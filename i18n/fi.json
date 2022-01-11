@@ -31,7 +31,7 @@
 	"linter-pager-multiple-unclosed-formatting-tags-details": "Useita sulkemattomia muotoilutunnisteita sivulla",
 	"linter-pager-obsolete-tag-details": "Vanhentunut HTML-tagi",
 	"linter-pager-self-closed-tag-details": "Itsensä sulkeva tunniste",
-	"linter-pager-template": "Virhe tulee mallineesta...",
+	"linter-pager-template-header": "Virhe tulee mallineesta...",
 	"linter-pager-tidy-font-bug-details": "Font-elementti yrittää muuttaa linkin väriä",
 	"linter-pager-title": "Sivun nimi",
 	"linterrors-subpage": "Lint-virheet: $1",

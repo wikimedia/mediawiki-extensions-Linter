@@ -59,7 +59,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Obejście błędnego generowania akapitów",
 	"linter-pager-self-closed-tag-details": "Znacznik samozamykający się",
 	"linter-pager-stripped-tag-details": "Niekompletne znaczniki",
-	"linter-pager-template": "Poprzez szablon?",
+	"linter-pager-template-header": "Poprzez szablon?",
 	"linter-pager-tidy-font-bug-details": "Znacznik font próbuje zmienić kolor linku",
 	"linter-pager-tidy-whitespace-bug-details": "Błąd parsowania spacji",
 	"linter-pager-title": "Tytuł strony",

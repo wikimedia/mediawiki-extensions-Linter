@@ -67,7 +67,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Заобиколен проблем с грешка при обвиване на параграф",
 	"linter-pager-self-closed-tag-details": "Самозатварящ се таг",
 	"linter-pager-stripped-tag-details": "Игнориран таг",
-	"linter-pager-template": "Чрез шаблон?",
+	"linter-pager-template-header": "Чрез шаблон?",
 	"linter-pager-tidy-font-bug-details": "Font тагът опитва да промени цвета на препратката",
 	"linter-pager-tidy-whitespace-bug-details": "Грешка при обработката на интервал",
 	"linter-pager-title": "Заглавие на страницата",

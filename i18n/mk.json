@@ -68,7 +68,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Заобиколка на грешка во пасусниот прелом",
 	"linter-pager-self-closed-tag-details": "Самозатворена ознака",
 	"linter-pager-stripped-tag-details": "Откриена ознака",
-	"linter-pager-template": "Преку предлошка?",
+	"linter-pager-template-header": "Преку предлошка?",
 	"linter-pager-tidy-font-bug-details": "Ознаката за фонт пробува да ја смени бојата на врската",
 	"linter-pager-tidy-whitespace-bug-details": "Грешка во расчленувањето на празното место",
 	"linter-pager-title": "Наслов на страницата",

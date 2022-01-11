@@ -69,7 +69,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Lösning på paragrafbrytningsbugg",
 	"linter-pager-self-closed-tag-details": "Självstängande tagg",
 	"linter-pager-stripped-tag-details": "Bortplockad tagg",
-	"linter-pager-template": "Genom en mall?",
+	"linter-pager-template-header": "Genom en mall?",
 	"linter-pager-tidy-font-bug-details": "Typsnittstaggen försöker ändra länkfärg",
 	"linter-pager-tidy-whitespace-bug-details": "Blankstegsbugg",
 	"linter-pager-title": "Sidtitel",

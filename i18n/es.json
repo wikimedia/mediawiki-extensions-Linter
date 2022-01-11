@@ -72,7 +72,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Parche para el error en el ajuste de párrafos",
 	"linter-pager-self-closed-tag-details": "Etiqueta autocerrada",
 	"linter-pager-stripped-tag-details": "Etiqueta desparejada",
-	"linter-pager-template": "¿A través de una plantilla?",
+	"linter-pager-template-header": "¿A través de una plantilla?",
 	"linter-pager-tidy-font-bug-details": "La etiqueta font intenta cambiar el color del enlace",
 	"linter-pager-tidy-whitespace-bug-details": "Defecto de espacio en blanco",
 	"linter-pager-title": "Título de la página",

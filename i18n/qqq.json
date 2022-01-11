@@ -76,7 +76,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Table column heading",
 	"linter-pager-self-closed-tag-details": "Table column heading",
 	"linter-pager-stripped-tag-details": "Table column heading",
-	"linter-pager-template": "Table column heading for column with template title in it or an em dash if lint error is not inside a template",
+	"linter-pager-template-header": "Table column heading for column with template title in it or an em dash if lint error is not inside a template",
 	"linter-pager-tidy-font-bug-details": "Table column heading. Don't translate \"font\".",
 	"linter-pager-tidy-whitespace-bug-details": "Table column heading. For information about the bug, see the commit message https://gerrit.wikimedia.org/r/#/c/371068 .",
 	"linter-pager-title": "Table column heading for the column with page titles in it\n{{Identical|Page title}}",

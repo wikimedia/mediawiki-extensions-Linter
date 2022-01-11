@@ -68,7 +68,7 @@
 	"linter-pager-pwrap-bug-workaround-details": "Solución de erros de axuste de parágrafo",
 	"linter-pager-self-closed-tag-details": "Etiqueta auto-pechada",
 	"linter-pager-stripped-tag-details": "Etiquetas mal situadas",
-	"linter-pager-template": "Vía un modelo?",
+	"linter-pager-template-header": "Vía un modelo?",
 	"linter-pager-tidy-font-bug-details": "A etiqueta font intenta cambiar a cor da ligazón",
 	"linter-pager-tidy-whitespace-bug-details": "Erro ao procesar os espazos en branco",
 	"linter-pager-title": "Título da páxina",
