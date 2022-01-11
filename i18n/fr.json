@@ -57,6 +57,8 @@
 	"linter-category-wikilink-in-extlink": "Liens dans les liens",
 	"linter-category-wikilink-in-extlink-desc": "Ces pages ont des liens wiki dans des liens externes devant être corrigés",
 	"linter-desc": "Tracer les erreurs de lint depuis un service externe et les afficher aux utilisateurs",
+	"linter-lints-for-single-page-desc": "Afficher toutes les erreurs du linteur pour une page spécifique",
+	"linter-invalid-title": "Espace de noms ou nom de page introuvable ou mal formé",
 	"linter-form-namespace": "Espace de noms :",
 	"linter-heading-high-priority": "Priorité haute",
 	"linter-heading-low-priority": "Priorité basse",
