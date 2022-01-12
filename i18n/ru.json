@@ -61,6 +61,7 @@
 	"linter-page-history": "история",
 	"linter-page-viewsource": "просмотреть код",
 	"linter-pager-bogus-image-options-details": "Фиктивное свойство файла",
+	"linter-pager-category-header": "Категория",
 	"linter-pager-deletable-table-tag-details": "Тег таблицы, который следует удалить",
 	"linter-pager-html5-misnesting-details": "Некорректная вложенность (не работает)",
 	"linter-pager-misc-tidy-replacement-issues-details": "Различные ошибки разметки",

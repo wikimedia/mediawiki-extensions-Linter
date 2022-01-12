@@ -58,6 +58,7 @@
 	"linter-page-viewsource": "הצגת מקור",
 	"linter-pager-bogus-image-options-details": "אפשרות קובץ שגויה",
 	"linter-pager-deletable-table-tag-details": "תג טבלה שאמור להימחק",
+	"linter-pager-details-header": "מידע נוסף",
 	"linter-pager-html5-misnesting-details": "קינון שגוי (גורם לתצוגה מקולקלת עכשיו)",
 	"linter-pager-inline-media-caption-details": "מדיה בתוך שורה עם כיתוב",
 	"linter-pager-misc-tidy-replacement-issues-details": "שגיאות סימון שונות",
