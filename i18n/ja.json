@@ -51,6 +51,7 @@
 	"linter-page-title-edit": "$1 ($2)",
 	"linter-page-viewsource": "ソースを閲覧",
 	"linter-pager-bogus-image-options-details": "偽のファイルオプション",
+	"linter-pager-category-header": "カテゴリ",
 	"linter-pager-deletable-table-tag-details": "削除する必要があるTableタグ",
 	"linter-pager-details-header": "追加情報",
 	"linter-pager-html5-misnesting-details": "Misnesting（現在使用不可）",

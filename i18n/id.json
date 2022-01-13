@@ -3,6 +3,7 @@
 		"authors": [
 			"Bagas Chrisara",
 			"Daud I.F. Argana",
+			"EkoITS94",
 			"Hidayatsrf"
 		]
 	},
@@ -30,6 +31,7 @@
 	"linter-page-title-edit": "$1 ($2)",
 	"linter-page-viewsource": "lihat sumber",
 	"linter-pager-bogus-image-options-details": "Opsi berkas bogus",
+	"linter-pager-category-header": "Kategori",
 	"linter-pager-deletable-table-tag-details": "Tag table yang harus dihapus",
 	"linter-pager-html5-misnesting-details": "Salah penyarangan (sekarang rusak)",
 	"linter-pager-misc-tidy-replacement-issues-details": "Galat markup lainnya",

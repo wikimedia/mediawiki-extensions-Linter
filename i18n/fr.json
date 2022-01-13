@@ -69,6 +69,7 @@
 	"linter-page-title-edit": "$1 ($2)",
 	"linter-page-viewsource": "voir la source",
 	"linter-pager-bogus-image-options-details": "Option de fichier erronée",
+	"linter-pager-category-header": "Catégorie",
 	"linter-pager-deletable-table-tag-details": "Balise de tableau qui devrait être supprimée",
 	"linter-pager-details-header": "Information supplémentaire",
 	"linter-pager-html5-misnesting-details": "Mauvaise imbrication (maintenant hors service)",

@@ -60,6 +60,7 @@
 	"linter-page-history": "historial",
 	"linter-page-viewsource": "ver código",
 	"linter-pager-bogus-image-options-details": "Opción de archivo inútil",
+	"linter-pager-category-header": "Categoría",
 	"linter-pager-deletable-table-tag-details": "Etiqueta de tabla que se debería borrar",
 	"linter-pager-html5-misnesting-details": "Anidación errónea (ahora rota)",
 	"linter-pager-misc-tidy-replacement-issues-details": "Errores varios de marcado",

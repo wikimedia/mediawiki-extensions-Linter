@@ -6,6 +6,7 @@
 			"Kunal Mehta",
 			"Liuxinyu970226",
 			"Mormegil",
+			"Robby",
 			"Umherirrender"
 		]
 	},
@@ -61,7 +62,7 @@
 	"linter-page-title-edit": "{{optional}}\nUsed in a table cell. $1 is a link to the page, $2 is pipe separated links to the edit and history pages, the link text is {{msg-mw|linter-page-edit}} and {{msg-mw|linter-page-history}}",
 	"linter-page-viewsource": "Link text for view source link when user does not have permission to edit in {{msg-mw|linter-page-title-edit}}",
 	"linter-pager-bogus-image-options-details": "Table column heading",
-	"linter-pager-category-header": "Heading of a table column showing the category of a lint error.",
+	"linter-pager-category-header": "Heading of a table column showing the category of a lint error.\n{{identical|Category}}",
 	"linter-pager-deletable-table-tag-details": "Table column heading",
 	"linter-pager-details-header": "Table column heading for the linter error details",
 	"linter-pager-html5-misnesting-details": "Table column heading.",

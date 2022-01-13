@@ -56,6 +56,7 @@
 	"linter-page-history": "cronologia",
 	"linter-page-viewsource": "visualizza wikitesto",
 	"linter-pager-bogus-image-options-details": "Parametro di \"File:\" inesistente",
+	"linter-pager-category-header": "Categoria",
 	"linter-pager-deletable-table-tag-details": "Tag \"table\" che dovrebbe essere cancellato",
 	"linter-pager-html5-misnesting-details": "Annidamento (ora errato)",
 	"linter-pager-misc-tidy-replacement-issues-details": "Vari errori di markup",
