@@ -17,6 +17,7 @@
 	"linter-category-obsolete-tag-desc": "Dës Säite benotze vereelzt HTML-Tagen.",
 	"linter-category-stripped-tag": "Ignoréiert Taggen",
 	"linter-category-stripped-tag-desc": "Dës Säiten hunn ignoréiert Taggen.",
+	"linter-lints-for-single-page-desc": "All Linterfeeler fir eng spezifesch Säit weisen",
 	"linter-form-namespace": "Nummraum:",
 	"linter-heading-high-priority": "Héich Prioritéit",
 	"linter-heading-low-priority": "Niddreg Prioritéit",

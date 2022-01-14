@@ -52,6 +52,7 @@
 	"linter-page-history": "historikk",
 	"linter-page-viewsource": "vis kilde",
 	"linter-pager-bogus-image-options-details": "Uekte filalternativ",
+	"linter-pager-category-header": "Kategori",
 	"linter-pager-deletable-table-tag-details": "Tabelltagg som bør slettes",
 	"linter-pager-html5-misnesting-details": "Feilnøsting (nå ødelagt)",
 	"linter-pager-misc-tidy-replacement-issues-details": "Diverse oppmerkingsfeil",
