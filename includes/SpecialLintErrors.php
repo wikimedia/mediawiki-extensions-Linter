@@ -116,7 +116,7 @@ class SpecialLintErrors extends SpecialPage {
 				}
 			}
 
-			$out->addHTML( Html::element( 'span class="error"', [],
+			$out->addHTML( Html::element( 'span', [ 'class' => 'error' ],
 				$this->msg( "linter-invalid-title" )->text() ) );
 			return;
 		}
