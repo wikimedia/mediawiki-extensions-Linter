@@ -176,7 +176,7 @@
 				},
 				"inline-media-caption": {
 					"dbid": 19,
-					"enabled": true,
+					"enabled": false,
 					"priority": "high",
 					"no-params": true
 				}
