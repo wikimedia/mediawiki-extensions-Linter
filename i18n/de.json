@@ -52,7 +52,7 @@
 	"linter-page-history": "Versionsgeschichte",
 	"linter-page-viewsource": "Quelltext ansehen",
 	"linter-pager-bogus-image-options-details": "Fehlerhafte Dateioption",
-	"linter-pager-deletable-table-tag-details": "Tabellen-Tag, das gelöscht werden soll.",
+	"linter-pager-deletable-table-tag-details": "Tabellen-Tag, das gelöscht werden soll",
 	"linter-pager-html5-misnesting-details": "Missbräuchliche Verschachtelung (jetzt kaputt)",
 	"linter-pager-misc-tidy-replacement-issues-details": "Verschiedene Auszeichnungsfehler",
 	"linter-pager-misnested-tag-details": "Falsch verschachtelte Tags, die ordnungsgemäß verschachtelt werden sollten.",
