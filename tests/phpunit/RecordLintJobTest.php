@@ -78,4 +78,22 @@ class RecordLintJobTest extends \MediaWikiIntegrationTestCase {
 		$this->assertEquals( $error['location'], $errorsFromDb[0]->location );
 		$this->assertEquals( $error['params'], $errorsFromDb[0]->params );
 	}
+
+	public function testDropInlineMediaCaptionLints() {
+		$error = [
+			'type' => 'inline-media-caption',
+			'location' => [ 0, 10 ],
+			'params' => [],
+			'dbid' => null,
+		];
+		$titleAndPage = $this->createTitleAndPage();
+		$job = new RecordLintJob( $titleAndPage['title'], [
+			'errors' => [ $error ],
+			'revision' => $titleAndPage['revID']
+		] );
+		$this->assertTrue( $job->run() );
+		/** @var LintError[] $errorsFromDb */
+		$errorsFromDb = array_values( ( new Database( $titleAndPage['pageID'] ) )->getForPage() );
+		$this->assertCount( 0, $errorsFromDb );
+	}
 }
