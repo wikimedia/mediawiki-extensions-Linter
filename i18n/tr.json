@@ -3,6 +3,7 @@
 		"authors": [
 			"BaRaN6161 TURK",
 			"Bulgu",
+			"Can",
 			"Incelemeelemani",
 			"Mirzali",
 			"MuratTheTurkish",
@@ -57,7 +58,9 @@
 	"linter-page-history": "geçmiş",
 	"linter-page-viewsource": "kaynağı gör",
 	"linter-pager-bogus-image-options-details": "Sahte dosya seçeneği",
+	"linter-pager-category-header": "Kategori",
 	"linter-pager-deletable-table-tag-details": "Silinecek tablo etiketi",
+	"linter-pager-details-header": "Ek bilgi",
 	"linter-pager-html5-misnesting-details": "Yanlış yerleştirme (şimdi bozuk)",
 	"linter-pager-misc-tidy-replacement-issues-details": "Çeşitli biçimlendirme hataları",
 	"linter-pager-misnested-tag-details": "İç içe geçmiş ve hatalı yerleştirilmiş etiket",

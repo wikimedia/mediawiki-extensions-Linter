@@ -63,6 +63,7 @@
 	"linter-pager-bogus-image-options-details": "Фиктивное свойство файла",
 	"linter-pager-category-header": "Категория",
 	"linter-pager-deletable-table-tag-details": "Тег таблицы, который следует удалить",
+	"linter-pager-details-header": "Дополнительная информация",
 	"linter-pager-html5-misnesting-details": "Некорректная вложенность (не работает)",
 	"linter-pager-misc-tidy-replacement-issues-details": "Различные ошибки разметки",
 	"linter-pager-misnested-tag-details": "Неверно вложенный тег, который должен быть правильно вложен",
