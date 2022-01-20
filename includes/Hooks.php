@@ -41,13 +41,22 @@ class Hooks {
 			$updater->addExtensionTable( 'linter',
 				dirname( __DIR__ ) . '/sql/tables-generated.sql'
 			);
+			$updater->addExtensionField( 'linter', 'linter_namespace',
+				dirname( __DIR__ ) . '/sql/patch-linter-add-namespace.sql'
+			);
 		} elseif ( $dbType === 'sqlite' ) {
 			$updater->addExtensionTable( 'linter',
 				dirname( __DIR__ ) . '/sql/sqlite/tables-generated.sql'
 			);
+			$updater->addExtensionField( 'linter', 'linter_namespace',
+				dirname( __DIR__ ) . '/sql/sqlite/patch-linter-add-namespace.sql'
+			);
 		} elseif ( $dbType === 'postgres' ) {
 			$updater->addExtensionTable( 'linter',
 				dirname( __DIR__ ) . '/sql/postgres/tables-generated.sql'
+			);
+			$updater->addExtensionField( 'linter', 'linter_namespace',
+				dirname( __DIR__ ) . '/sql/postgres/patch-linter-add-namespace.sql'
 			);
 		}
 	}
