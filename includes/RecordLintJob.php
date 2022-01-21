@@ -56,8 +56,7 @@ class RecordLintJob extends Job {
 			// (e.g. same category of error in same template)
 			$errors[$error->id()] = $error;
 		}
-
-		$lintDb = new Database( $this->title->getArticleID() );
+		$lintDb = new Database( $this->title->getArticleID(), $this->title->getNamespace() );
 		$lintDb->updateStats( $lintDb->setForPage( $errors ) );
 
 		return true;

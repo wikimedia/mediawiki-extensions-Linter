@@ -43,15 +43,28 @@ class Database {
 	private $pageId;
 
 	/**
+	 * During the addition of this column to the table, the initial value of null allows the migrate stage code to
+	 * determine the needs to fill in the field for that record, as the record was created prior to
+	 * the write stage code being active and filling it in during record creation. Once the migrate code runs once
+	 * no nulls should exist in this field for any record, and if the migrate code times out during execution,
+	 * can be restarted and continue without duplicating work. The final code that enables the use of this field
+	 * during records search will depend on this fields index being valid for all records.
+	 * @var int|null
+	 */
+	private $namespaceID;
+
+	/**
 	 * @var CategoryManager
 	 */
 	private $categoryManager;
 
 	/**
 	 * @param int $pageId
+	 * @param int|null $namespaceID
 	 */
-	public function __construct( $pageId ) {
+	public function __construct( $pageId, $namespaceID = null ) {
 		$this->pageId = $pageId;
+		$this->namespaceID = $namespaceID;
 		$this->categoryManager = new CategoryManager();
 	}
 
@@ -137,13 +150,42 @@ class Database {
 	 * @return array
 	 */
 	private function serializeError( LintError $error ) {
-		return [
-			'linter_page' => $this->pageId,
-			'linter_cat' => $this->categoryManager->getCategoryId( $error->category, $error->catId ),
-			'linter_params' => FormatJson::encode( $error->params, false, FormatJson::ALL_OK ),
-			'linter_start' => $error->location[0],
-			'linter_end' => $error->location[1],
-		];
+		// To enable 756101 for select test wikis, set the following code in wmf-config/InitializeSetting.php
+		// to enable the Linter database code to write the namespace info into the recently added column.
+		// 'wgLinterWriteNamespaceColumnStage' => [
+		//		'default' => false,
+		//		'labswiki' => true,
+		//		'testwiki' => true
+		// ]
+		// To debug on a local installation, add the "LinterWriteNamespaceColumnsStage" definition in extension.json
+
+		if ( array_key_exists( 'wgLinterWriteNamespaceColumnStage', $GLOBALS ) ) {
+			$enableWriteNamespaceColumn = $GLOBALS[ 'wgLinterWriteNamespaceColumnStage' ];
+		} else {
+			$enableWriteNamespaceColumn = false;
+		}
+
+		// Yes this code is duplicated at this stage, and will be unduplicated once the migrate stage patch set
+		// is completed and all dual mode code is removed.
+		if ( $enableWriteNamespaceColumn === false || $this->namespaceID === null ) {
+			return [
+				'linter_page' => $this->pageId,
+				'linter_cat' => $this->categoryManager->getCategoryId( $error->category, $error->catId ),
+				'linter_params' => FormatJson::encode( $error->params, false, FormatJson::ALL_OK ),
+				'linter_start' => $error->location[0],
+				'linter_end' => $error->location[1],
+			];
+		} else {
+			return [
+				'linter_page' => $this->pageId,
+				// set the linter_namespace field if the capability is enabled by wgLinterWriteNamespaceColumnStage
+				'linter_namespace' => $this->namespaceID,
+				'linter_cat' => $this->categoryManager->getCategoryId( $error->category, $error->catId ),
+				'linter_params' => FormatJson::encode( $error->params, false, FormatJson::ALL_OK ),
+				'linter_start' => $error->location[0],
+				'linter_end' => $error->location[1],
+			];
+		}
 	}
 
 	/**
