@@ -114,8 +114,16 @@ class LintErrorsPager extends TablePager {
 			$conds[ 'linter_cat' ] = $this->categoryId;
 		}
 		if ( $this->namespace !== null ) {
-			$eq_op = $this->invertNamespace ? '!=' : '=';
-			$conds[] = "page_namespace $eq_op " . $this->mDb->addQuotes( $this->namespace );
+			$comp_op = $this->invertNamespace ? '!=' : '=';
+			$mwServices = MediaWikiServices::getInstance();
+			$config = $mwServices->getMainConfig();
+			$enableUseNamespaceColumnStage = $config->get( 'LinterUseNamespaceColumnStage' );
+			$fieldExists = $this->mDb->fieldExists( 'linter', 'linter_namespace', __METHOD__ );
+			if ( !$enableUseNamespaceColumnStage || !$fieldExists ) {
+				$conds[] = "page_namespace $comp_op " . $this->mDb->addQuotes( $this->namespace );
+			} else {
+				$conds[] = "linter_namespace $comp_op " . $this->mDb->addQuotes( $this->namespace );
+			}
 		}
 		if ( $this->exactMatch ) {
 			if ( $this->title !== '' ) {
