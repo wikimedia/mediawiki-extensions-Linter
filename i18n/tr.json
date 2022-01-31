@@ -7,6 +7,7 @@
 			"Incelemeelemani",
 			"Mirzali",
 			"MuratTheTurkish",
+			"SaldırganSincap",
 			"Sezgin İbiş",
 			"Vito Genovese"
 		]
@@ -20,6 +21,8 @@
 	"linter-category-fostered-desc": "Bu sayfaların içeriği teşvik edilmiştir.",
 	"linter-category-html5-misnesting": "HTML5 ve HTML4'te farklı oluşturmaya sahip yanlış iç içe geçmiş etiket",
 	"linter-category-html5-misnesting-desc": "Bu yanlış yönlendirilmiş etiketler HTML5'te HTML4'e göre farklı şekilde davranacaktır.",
+	"linter-category-inline-media-caption": "Altyazılı satır içi medya",
+	"linter-category-inline-media-caption-desc": "Bu sayfalar, altyazılı satır içi medyaya sahiptir.",
 	"linter-category-misc-tidy-replacement-issues": "Çeşitli sorunlar",
 	"linter-category-misc-tidy-replacement-issues-desc": "Bu sayfaların, daha önce göründüklerinden farklı oluşturulmalarına neden olan başka sorunları var",
 	"linter-category-misnested-tag": "Yanlış iç içe geçmiş etiketler",
@@ -49,6 +52,8 @@
 	"linter-category-wikilink-in-extlink": "Bağlantılardaki bağlantılar",
 	"linter-category-wikilink-in-extlink-desc": "Bu sayfalarda düzeltilebilen harici bağlantılarda vikibağlantılar var",
 	"linter-desc": "Lint hatalarını harici bir hizmetten izleyin ve kullanıcılara gösterin",
+	"linter-lints-for-single-page-desc": "Belirli bir sayfa için tüm linter hatalarını gösterin",
+	"linter-invalid-title": "Ad alanı ve/veya sayfa adı bulunamadı veya hatalı biçimlendirilmiş",
 	"linter-form-namespace": "Ad alanı:",
 	"linter-heading-high-priority": "Yüksek öncelik",
 	"linter-heading-low-priority": "Düşük öncelik",
@@ -62,6 +67,7 @@
 	"linter-pager-deletable-table-tag-details": "Silinecek tablo etiketi",
 	"linter-pager-details-header": "Ek bilgi",
 	"linter-pager-html5-misnesting-details": "Yanlış yerleştirme (şimdi bozuk)",
+	"linter-pager-inline-media-caption-details": "Altyazılı satır içi medya",
 	"linter-pager-misc-tidy-replacement-issues-details": "Çeşitli biçimlendirme hataları",
 	"linter-pager-misnested-tag-details": "İç içe geçmiş ve hatalı yerleştirilmiş etiket",
 	"linter-pager-missing-end-tag-details": "Eksik bitiş etiketi",

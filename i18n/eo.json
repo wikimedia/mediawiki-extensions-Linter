@@ -12,6 +12,7 @@
 	"linter-heading-medium-priority": "Meza prioritato",
 	"linter-numerrors": "($1 {{PLURAL:$1|eraro|eraroj}})",
 	"linter-pager-bogus-image-options-details": "Malvalida dosiera opcio",
+	"linter-pager-category-header": "Kategorio",
 	"linter-pager-deletable-table-tag-details": "Tabla etikedo kiu devus esti forigita",
 	"linter-pager-html5-misnesting-details": "Misingado (nun rompita)",
 	"linter-pager-misc-tidy-replacement-issues-details": "Diversaj markadaj eraroj",
