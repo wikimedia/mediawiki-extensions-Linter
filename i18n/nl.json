@@ -9,6 +9,7 @@
 			"Mar(c)",
 			"MarcoSwart",
 			"Patio",
+			"Robin van der Vliet",
 			"Sjoerddebruin"
 		]
 	},
@@ -56,6 +57,7 @@
 	"linter-page-history": "geschiedenis",
 	"linter-page-viewsource": "brontekst bekijken",
 	"linter-pager-bogus-image-options-details": "Onjuist opgegeven optie mediabestand",
+	"linter-pager-category-header": "Categorie",
 	"linter-pager-deletable-table-tag-details": "Te verwijderen table-element",
 	"linter-pager-html5-misnesting-details": "Foutief genest (inmiddels defect)",
 	"linter-pager-misc-tidy-replacement-issues-details": "Diverse opmaakfouten",
