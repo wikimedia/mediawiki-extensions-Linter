@@ -45,7 +45,7 @@ class Hooks {
 				dirname( __DIR__ ) . '/sql/patch-linter-add-namespace.sql'
 			);
 			$updater->addExtensionField( 'linter', 'linter_template',
-				dirname( __DIR__ ) . '/sql/patch-linter-template_tag-fields.sql'
+				dirname( __DIR__ ) . '/sql/patch-linter-template-tag-fields.sql'
 			);
 		} elseif ( $dbType === 'sqlite' ) {
 			$updater->addExtensionTable( 'linter',
