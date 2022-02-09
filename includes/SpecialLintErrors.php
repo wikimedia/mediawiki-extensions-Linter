@@ -93,11 +93,13 @@ class SpecialLintErrors extends SpecialPage {
 		$this->setHeaders();
 		$this->outputHeader();
 
-		// if the request contains a pagename parameter, then the user entered a pagename
+		// If the request contains a `pagename` parameter, then the user entered a pagename
 		// and pressed the Submit button to display of all lints for a single page.
-		$params = $this->mContext->getRequest()->getQueryValues();
-		$pageName = $params['pagename'] ?? null;
-		if ( $par === null && $pageName !== null ) {
+		$params = $this->getRequest()->getQueryValues();
+		if ( $par === null && isset( $params['pagename'] ) ) {
+			// Use getText to ensure a string val
+			$pageName = $this->getRequest()->getText( 'pagename', '' );
+
 			$out = $this->getOutput();
 			$out->setPageTitle( $this->msg( 'linterrors-subpage', $pageName ) );
 
@@ -114,10 +116,13 @@ class SpecialLintErrors extends SpecialPage {
 					$out->addParserOutput( $pager->getFullOutput() );
 					return;
 				}
+				// No $pageArticleID or no $title go through
 			}
 
-			$out->addHTML( Html::element( 'span', [ 'class' => 'error' ],
-				$this->msg( "linter-invalid-title" )->text() ) );
+			$out->addHTML(
+				Html::element( 'span', [ 'class' => 'error' ],
+				$this->msg( "linter-invalid-title" )->text() )
+			);
 			return;
 		}
 
