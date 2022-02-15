@@ -38,7 +38,7 @@
 	"linter-category-multiline-html-table-in-list-desc": "Auparavant, les tableaux étaient déplacés dans ou hors de la liste, mais désormais, cela étend la liste au reste de la page.",
 	"linter-category-multiple-unclosed-formatting-tags": "Multiples balises de mise en forme non fermées",
 	"linter-category-multiple-unclosed-formatting-tags-desc": "Ces pages ont plusieurs balises de mise en forme non fermées",
-	"linter-category-obsolete-tag": "Balises HTML désuètes",
+	"linter-category-obsolete-tag": "Balises HTML obsolètes",
 	"linter-category-obsolete-tag-desc": "Ces pages utilisent des balises HTML désuètes.",
 	"linter-category-pwrap-bug-workaround": "Palliatif au bogue de délimitation de paragraphe",
 	"linter-category-pwrap-bug-workaround-desc": "Ces pages ont un bogue de délimitation de paragraphe qui  peut être contourné.",
