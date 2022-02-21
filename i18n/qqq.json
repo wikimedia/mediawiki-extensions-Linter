@@ -7,7 +7,9 @@
 			"Liuxinyu970226",
 			"Mormegil",
 			"Robby",
-			"Umherirrender"
+			"Sunpriat",
+			"Umherirrender",
+			"Verdy p"
 		]
 	},
 	"linterrors": "{{doc-special|LintErrors}}",
@@ -16,7 +18,7 @@
 	"linter-category-deletable-table-tag": "Name of lint error category. See [[:mw:Help:Lint errors/deletable-table-tag]]",
 	"linter-category-deletable-table-tag-desc": "Description of category\n\nSimilar messages:\n* {{msg-mw|Linter-category-bogus-image-options-desc}}\n* {{msg-mw|Linter-category-fostered-desc}}\netc.",
 	"linter-category-fostered": "Name of lint error category. See [[:mw:Help:Lint errors/fostered]]",
-	"linter-category-fostered-desc": "Description of category\n\nSimilar messages:\n* {{msg-mw|Linter-category-bogus-image-options-desc}}\n* {{msg-mw|Linter-category-deletable-table-tag-desc}}\netc.",
+	"linter-category-fostered-desc": "Description of category. This lint error is explained on [[mw:Special:MyLanguage/Help:Lint errors/fostered]].\n\nSimilar messages:\n* {{msg-mw|Linter-category-bogus-image-options-desc}}\n* {{msg-mw|Linter-category-deletable-table-tag-desc}}\netc.",
 	"linter-category-html5-misnesting": "Name of lint error category. See [[:mw:Help:Lint errors/html5-misnesting]]",
 	"linter-category-html5-misnesting-desc": "Description of category",
 	"linter-category-inline-media-caption": "Name of lint error category. See [[:mw:Help:Lint errors/inline-media-caption]]",
@@ -66,7 +68,7 @@
 	"linter-pager-deletable-table-tag-details": "Table column heading",
 	"linter-pager-details-header": "Table column heading for the linter error details",
 	"linter-pager-html5-misnesting-details": "Table column heading.",
-	"linter-pager-inline-media-caption-details": "Table column heading",
+	"linter-pager-inline-media-caption-details": "Table column heading\n\n[[mw:Help:Lint errors/inline-media-caption]]",
 	"linter-pager-misc-tidy-replacement-issues-details": "Table column heading",
 	"linter-pager-misnested-tag-details": "Table column heading",
 	"linter-pager-missing-end-tag-details": "Table column heading",

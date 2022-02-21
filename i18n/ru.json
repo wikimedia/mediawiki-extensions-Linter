@@ -11,6 +11,7 @@
 			"Movses",
 			"Okras",
 			"Redredsonia",
+			"Sunpriat",
 			"Vlad5250"
 		]
 	},
@@ -23,6 +24,8 @@
 	"linter-category-fostered-desc": "На этих страницах находится присвоенное содержимое.",
 	"linter-category-html5-misnesting": "Некорректно вложенный тег, который по-разному отображается в HTML5 и HTML4",
 	"linter-category-html5-misnesting-desc": "Эти некорректно вложенные теги имеют различное поведение в HTML5 и HTML4.",
+	"linter-category-inline-media-caption": "Внутристрочные медиафайлы с подписями",
+	"linter-category-inline-media-caption-desc": "Эти страницы содержат внутристрочные медиафайлы с подписями.",
 	"linter-category-misc-tidy-replacement-issues": "Различные проблемы",
 	"linter-category-misc-tidy-replacement-issues-desc": "На этих страницах есть другие проблемы, из-за которых они отображаются не так, как раньше",
 	"linter-category-misnested-tag": "Неверно вложенный тег",
@@ -52,6 +55,8 @@
 	"linter-category-wikilink-in-extlink": "Ссылки в ссылках",
 	"linter-category-wikilink-in-extlink-desc": "На этих страницах есть внутренние ссылки внутри внешних ссылок, что может быть исправлено",
 	"linter-desc": "Отслеживание ошибок статического анализатора из внешнего сервиса и показ их пользователям",
+	"linter-lints-for-single-page-desc": "Показать все ошибки статического анализатора для конкретной страницы",
+	"linter-invalid-title": "Пространство имён и/или имя страницы не найдено или некорректное",
 	"linter-form-namespace": "Пространство имён:",
 	"linter-heading-high-priority": "Высокий приоритет",
 	"linter-heading-low-priority": "Низкий приоритет",
@@ -65,6 +70,7 @@
 	"linter-pager-deletable-table-tag-details": "Тег таблицы, который следует удалить",
 	"linter-pager-details-header": "Дополнительная информация",
 	"linter-pager-html5-misnesting-details": "Некорректная вложенность (не работает)",
+	"linter-pager-inline-media-caption-details": "Внутристрочные медиафайлы с подписями",
 	"linter-pager-misc-tidy-replacement-issues-details": "Различные ошибки разметки",
 	"linter-pager-misnested-tag-details": "Неверно вложенный тег, который должен быть правильно вложен",
 	"linter-pager-missing-end-tag-details": "Отсутствующий закрывающий тег",
