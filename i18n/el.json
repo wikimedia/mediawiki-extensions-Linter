@@ -56,6 +56,7 @@
 	"linter-pager-misc-tidy-replacement-issues-details": "Διάφορα λάθη σύνταξης",
 	"linter-pager-misnested-tag-details": "Εσφαλμένα εμφωλευμένη ετικέτα που θα πρέπει να εμφωλευθεί σωστά",
 	"linter-pager-missing-end-tag-details": "Λείπει η ετικέτα τέλους",
+	"linter-pager-multi-colon-escape-details": "Διαφυγή πολλαπλής άνω κάτω τελείας",
 	"linter-pager-multiline-html-table-in-list-details": "Πίνακας πολλών σειρών HTML5 σε μια λίστα",
 	"linter-pager-multiple-unclosed-formatting-tags-details": "Πολλές μη κλειστές ετικέτες μορφοποίησης στη σελίδα",
 	"linter-pager-obsolete-tag-details": "Καταργημένη ετικέτα HTML",
