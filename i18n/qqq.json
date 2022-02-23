@@ -6,7 +6,10 @@
 			"Kunal Mehta",
 			"Liuxinyu970226",
 			"Mormegil",
-			"Umherirrender"
+			"Umherirrender",
+			"Robby",
+			"Sunpriat",
+			"Verdy p"
 		]
 	},
 	"linterrors": "{{doc-special|LintErrors}}",
@@ -15,7 +18,7 @@
 	"linter-category-deletable-table-tag": "Name of lint error category. See [[:mw:Help:Lint errors/deletable-table-tag]]",
 	"linter-category-deletable-table-tag-desc": "Description of category\n\nSimilar messages:\n* {{msg-mw|Linter-category-bogus-image-options-desc}}\n* {{msg-mw|Linter-category-fostered-desc}}\netc.",
 	"linter-category-fostered": "Name of lint error category. See [[:mw:Help:Lint errors/fostered]]",
-	"linter-category-fostered-desc": "Description of category\n\nSimilar messages:\n* {{msg-mw|Linter-category-bogus-image-options-desc}}\n* {{msg-mw|Linter-category-deletable-table-tag-desc}}\netc.",
+	"linter-category-fostered-desc": "Description of category. This lint error is explained on [[mw:Special:MyLanguage/Help:Lint errors/fostered]].\n\nSimilar messages:\n* {{msg-mw|Linter-category-bogus-image-options-desc}}\n* {{msg-mw|Linter-category-deletable-table-tag-desc}}\netc.",
 	"linter-category-html5-misnesting": "Name of lint error category. See [[:mw:Help:Lint errors/html5-misnesting]]",
 	"linter-category-html5-misnesting-desc": "Description of category",
 	"linter-category-misc-tidy-replacement-issues": "Name of lint error category. See [[:mw:Help:Lint errors/misc-tidy-replacement-issues]]",
