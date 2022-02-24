@@ -10,6 +10,7 @@
 			"MarcoSwart",
 			"Patio",
 			"Robin van der Vliet",
+			"Romaine",
 			"Sjoerddebruin"
 		]
 	},
@@ -59,6 +60,7 @@
 	"linter-pager-bogus-image-options-details": "Onjuist opgegeven optie mediabestand",
 	"linter-pager-category-header": "Categorie",
 	"linter-pager-deletable-table-tag-details": "Te verwijderen table-element",
+	"linter-pager-details-header": "Aanvullende informatie",
 	"linter-pager-html5-misnesting-details": "Foutief genest (inmiddels defect)",
 	"linter-pager-misc-tidy-replacement-issues-details": "Diverse opmaakfouten",
 	"linter-pager-misnested-tag-details": "Element dat een ander element niet compleet insluit",
