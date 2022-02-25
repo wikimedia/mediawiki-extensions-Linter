@@ -124,6 +124,11 @@ class Hooks {
 	}
 
 	/**
+	 * This should match Parsoid's PageConfig::hasLintableContentModel()
+	 */
+	public const LINTABLE_CONTENT_MODELS = [ CONTENT_MODEL_WIKITEXT, 'proofread-page' ];
+
+	/**
 	 * Hook: RevisionFromEditComplete
 	 *
 	 * Remove entries from the linter table upon page content model change away from wikitext
@@ -134,14 +139,16 @@ class Hooks {
 	 * @param UserIdentity $user
 	 * @param string[] &$tags
 	 */
-	public static function onRevisionFromEditComplete( WikiPage $wikiPage,
+	public static function onRevisionFromEditComplete(
+		WikiPage $wikiPage,
 		RevisionRecord $newRevisionRecord,
 		$originalRevId,
 		UserIdentity $user,
 		&$tags
 	) {
-		if ( in_array( "mw-contentmodelchange", $tags ) &&
-			$wikiPage->getContentModel() !== "wikitext"
+		if (
+			in_array( "mw-contentmodelchange", $tags ) &&
+			!in_array( $wikiPage->getContentModel(), self::LINTABLE_CONTENT_MODELS )
 		) {
 			$database = new Database( $wikiPage->getId() );
 			$database->updateStats( $database->setForPage( [] ) );
