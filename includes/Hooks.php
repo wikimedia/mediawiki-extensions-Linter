@@ -26,6 +26,8 @@ use DatabaseUpdater;
 use IContextSource;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Revision\RevisionRecord;
+use MediaWiki\User\UserIdentity;
 use MWCallableUpdate;
 use OutputPage;
 use Title;
@@ -119,6 +121,31 @@ class Hooks {
 			$database = new Database( $id );
 			$database->updateStats( $database->setForPage( [] ) );
 		}, __METHOD__ );
+	}
+
+	/**
+	 * Hook: RevisionFromEditComplete
+	 *
+	 * Remove entries from the linter table upon page content model change away from wikitext
+	 *
+	 * @param WikiPage $wikiPage
+	 * @param RevisionRecord $newRevisionRecord
+	 * @param bool|int $originalRevId
+	 * @param UserIdentity $user
+	 * @param string[] &$tags
+	 */
+	public static function onRevisionFromEditComplete( WikiPage $wikiPage,
+		RevisionRecord $newRevisionRecord,
+		$originalRevId,
+		UserIdentity $user,
+		&$tags
+	) {
+		if ( in_array( "mw-contentmodelchange", $tags ) &&
+			$wikiPage->getContentModel() !== "wikitext"
+		) {
+			$database = new Database( $wikiPage->getId() );
+			$database->updateStats( $database->setForPage( [] ) );
+		}
 	}
 
 	/**

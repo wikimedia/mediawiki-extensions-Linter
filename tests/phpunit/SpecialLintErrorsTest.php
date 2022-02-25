@@ -20,8 +20,14 @@
 
 namespace MediaWiki\Linter\Test;
 
+use ContentHandler;
 use MediaWiki\Linter\CategoryManager;
+use MediaWiki\Linter\Database;
+use MediaWiki\Linter\LintError;
+use MediaWiki\Linter\RecordLintJob;
 use MediaWiki\Linter\SpecialLintErrors;
+use Title;
+use User;
 
 /**
  * @covers MediaWiki\Linter\SpecialLintErrors
@@ -46,4 +52,111 @@ class SpecialLintErrorsTest extends \SpecialPageTestBase {
 		);
 	}
 
+	/**
+	 * @return array
+	 */
+	private function createTitleAndPage() {
+		$titleText = 'TestPage';
+		$userName = 'LinterUser';
+		$baseText = 'wikitext test content';
+
+		$ns = $this->getDefaultWikitextNS();
+		$title = Title::newFromText( $titleText, $ns );
+		$user = User::newFromName( $userName );
+		if ( $user->getId() === 0 ) {
+			$user->addToDatabase();
+		}
+		$page = $this->getServiceContainer()->getWikiPageFactory()->newFromTitle( $title );
+
+		$content = ContentHandler::makeContent( $baseText, $title );
+		$page->doUserEditContent( $content, $user, "base text for test" );
+
+		return [
+			'title' => $title,
+			'pageID' => $page->getRevisionRecord()->getPageId(),
+			'revID' => $page->getRevisionRecord()->getID(),
+			'page' => $page,
+			'user' => $user
+		];
+	}
+
+	public function testContentModelChange() {
+		$error = [
+			'type' => 'obsolete-tag',
+			'location' => [ 0, 10 ],
+			'params' => [],
+			'dbid' => null,
+		];
+		$titleAndPage = $this->createTitleAndPage();
+		$job = new RecordLintJob( $titleAndPage['title'], [
+			'errors' => [ $error ],
+			'revision' => $titleAndPage['revID']
+		] );
+		$this->assertTrue( $job->run() );
+
+		$db = new Database( $titleAndPage['pageID'] );
+
+		/** @var LintError[] $errorsFromDb */
+		$errorsFromDb = array_values( $db->getForPage() );
+		$this->assertCount( 1, $errorsFromDb );
+
+		$cssText = 'css content model change test page content';
+		$content = ContentHandler::makeContent(
+			$cssText,
+			$titleAndPage['title'],
+			'css'
+		);
+		$page = $titleAndPage['page'];
+		$page->doUserEditContent(
+			$content,
+			$titleAndPage['user'],
+			"update with css content model to trigger onRevisionFromEditComplete hook"
+		);
+
+		$errorsFromDb = array_values( $db->getForPage() );
+		$this->assertCount( 0, $errorsFromDb );
+	}
+
+	public function testContentModelChangeWithBlankPage() {
+		$error = [
+			'type' => 'obsolete-tag',
+			'location' => [ 0, 10 ],
+			'params' => [],
+			'dbid' => null,
+		];
+		$titleAndPage = $this->createTitleAndPage();
+		$job = new RecordLintJob( $titleAndPage['title'], [
+			'errors' => [ $error ],
+			'revision' => $titleAndPage['revID']
+		] );
+		$this->assertTrue( $job->run() );
+
+		$db = new Database( $titleAndPage['pageID'] );
+
+		/** @var LintError[] $errorsFromDb */
+		$errorsFromDb = array_values( $db->getForPage() );
+		$this->assertCount( 1, $errorsFromDb );
+
+		// This test recreates the doUserEditContent bug mentioned in T280193 of not
+		// calling the onRevisionFromEditComplete hook with the "mw-contentmodelchange"
+		// tag set when the new content text is literally blank.
+		$blankText = '';
+		$content = ContentHandler::makeContent(
+			$blankText,
+			$titleAndPage['title'],
+			'text'
+		);
+		$page = $titleAndPage['page'];
+		$page->doUserEditContent(
+			$content,
+			$titleAndPage['user'],
+			"update with blank text content model to trigger onRevisionFromEditComplete hook"
+		);
+
+		$errorsFromDb = array_values( $db->getForPage() );
+		$this->assertCount( 1, $errorsFromDb );
+		// After fixing https://phabricator.wikimedia.org/T280193 this should pass
+		// when the above line is removed and the following line enabled.
+		// $this->assertCount( 0, $errorsFromDb );
+	}
 }

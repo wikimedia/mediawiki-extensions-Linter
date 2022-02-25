@@ -30,6 +30,7 @@
 		"APIQuerySiteInfoGeneralInfo": "MediaWiki\\Linter\\Hooks::onAPIQuerySiteInfoGeneralInfo",
 		"InfoAction": "MediaWiki\\Linter\\Hooks::onInfoAction",
 		"WikiPageDeletionUpdates": "MediaWiki\\Linter\\Hooks::onWikiPageDeletionUpdates",
+		"RevisionFromEditComplete": "MediaWiki\\Linter\\Hooks::onRevisionFromEditComplete",
 		"ParserLogLinterData": "MediaWiki\\Linter\\Hooks::onParserLogLinterData"
 	},
 	"APIModules": {
