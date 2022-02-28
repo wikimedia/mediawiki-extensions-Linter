@@ -147,8 +147,9 @@ class Hooks {
 		&$tags
 	) {
 		if (
-			in_array( "mw-contentmodelchange", $tags ) &&
-			!in_array( $wikiPage->getContentModel(), self::LINTABLE_CONTENT_MODELS )
+			in_array( "mw-blank", $tags ) ||
+			( in_array( "mw-contentmodelchange", $tags ) &&
+			!in_array( $wikiPage->getContentModel(), self::LINTABLE_CONTENT_MODELS ) )
 		) {
 			$database = new Database( $wikiPage->getId() );
 			$database->updateStats( $database->setForPage( [] ) );

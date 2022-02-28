@@ -154,9 +154,6 @@ class SpecialLintErrorsTest extends \SpecialPageTestBase {
 		);
 
 		$errorsFromDb = array_values( $db->getForPage() );
-		$this->assertCount( 1, $errorsFromDb );
-		// After fixing https://phabricator.wikimedia.org/T280193 this should pass
-		// when the above line is removed and the following line enabled.
-		// $this->assertCount( 0, $errorsFromDb );
+		$this->assertCount( 0, $errorsFromDb );
 	}
 }
