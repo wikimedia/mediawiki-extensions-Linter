@@ -21,7 +21,7 @@
 	"linter-category-bogus-image-options-desc": "これらのページには、偽のオプションを含むファイルがあります。",
 	"linter-category-deletable-table-tag": "削除する必要があるTableタグ",
 	"linter-category-deletable-table-tag-desc": "このページでは、削除する必要があるTableタグがあるページを掲載しています。",
-	"linter-category-fostered-desc": "これらのページには偽のコンテンツがあります。",
+	"linter-category-fostered-desc": "これらのページでは、コンテンツが表の中の無効な位置にあるため、表の外に表示されています。",
 	"linter-category-html5-misnesting": "HTML5とHTML4のレンダリング差異によって誤った入れ子構造となっているタグ",
 	"linter-category-html5-misnesting-desc": "ここに上げるタグの入れ子のエラーは、HTML4とHTML5で挙動が異なります。",
 	"linter-category-misc-tidy-replacement-issues": "その他の問題点",
