@@ -146,6 +146,12 @@ class Hooks {
 		UserIdentity $user,
 		&$tags
 	) {
+		// This is just a stop-gap to deal with callers that aren't complying
+		// with the advertised hook signature.
+		if ( !is_array( $tags ) ) {
+			return;
+		}
+
 		if (
 			in_array( "mw-blank", $tags ) ||
 			( in_array( "mw-contentmodelchange", $tags ) &&
