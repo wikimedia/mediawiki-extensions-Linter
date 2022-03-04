@@ -74,6 +74,11 @@ class LintErrorsPager extends TablePager {
 	private $pageId;
 
 	/**
+	 * @var string|null
+	 */
+	private $titlePrefix;
+
+	/**
 	 * @param IContextSource $context
 	 * @param string|null $category
 	 * @param LinkRenderer $linkRenderer
@@ -81,9 +86,10 @@ class LintErrorsPager extends TablePager {
 	 * @param int|null $namespace
 	 * @param bool $invertnamespace
 	 * @param int|null $pageId
+	 * @param string $titlePrefix
 	 */
 	public function __construct( IContextSource $context, $category, LinkRenderer $linkRenderer,
-		CategoryManager $catManager, $namespace, $invertnamespace, $pageId = null
+		CategoryManager $catManager, $namespace, $invertnamespace, $pageId = null, $titlePrefix = ''
 	) {
 		$this->category = $category;
 		$this->categoryManager = $catManager;
@@ -97,6 +103,7 @@ class LintErrorsPager extends TablePager {
 		$this->linkRenderer = $linkRenderer;
 		$this->namespace = $namespace;
 		$this->invertnamespace = $invertnamespace;
+		$this->titlePrefix = $titlePrefix;
 		$this->haveParserMigrationExt = ExtensionRegistry::getInstance()->isLoaded( 'ParserMigration' );
 		parent::__construct( $context );
 	}
@@ -112,6 +119,10 @@ class LintErrorsPager extends TablePager {
 			$eq_op = $this->invertnamespace ? '!=' : '=';
 			$conds[] = "page_namespace $eq_op " . $this->mDb->addQuotes( $this->namespace );
 		}
+		if ( $this->titlePrefix !== '' ) {
+			$conds[] = 'page_title' . $this->mDb->buildLike( $this->titlePrefix, $this->mDb->anyString() );
+		}
+
 		return [
 			'tables' => [ 'page', 'linter' ],
 			'fields' => array_merge(

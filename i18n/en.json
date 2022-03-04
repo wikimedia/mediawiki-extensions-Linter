@@ -47,6 +47,7 @@
 	"linter-lints-for-single-page-desc": "Show all linter errors for a specific page",
 	"linter-invalid-title": "Namespace and/or pagename not found or malformed",
 	"linter-form-namespace": "Namespace:",
+	"linter-form-title-prefix": "Title prefix:",
 	"linter-heading-high-priority": "High priority",
 	"linter-heading-low-priority": "Low priority",
 	"linter-heading-medium-priority": "Medium priority",

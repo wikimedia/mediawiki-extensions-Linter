@@ -59,6 +59,14 @@ class SpecialLintErrors extends SpecialPage {
 				'default' => $nsinvert,
 				'tooltip' => 'invert',
 			],
+			'titleprefix' => [
+				'type' => 'text',
+				'name' => 'titleprefix',
+				'label-message' => 'linter-form-title-prefix',
+				'default' => '',
+				'id' => 'titleprefix',
+				'size' => 255,
+			],
 		];
 		$form = HTMLForm::factory( 'ooui', $fields, $this->getContext() );
 		$form->setWrapperLegend( true );
@@ -145,10 +153,14 @@ class SpecialLintErrors extends SpecialPage {
 			$out->addBacklinkSubtitle( $this->getPageTitle() );
 			$ns = $this->getRequest()->getIntOrNull( 'namespace' );
 			$nsinvert = $this->getRequest()->getBool( 'invert' );
+
+			$titlePrefix = $this->getRequest()->getText( 'titleprefix', '' );
+			// SQL injection risk is handled in LintErrorsPager.php, getQueryInfo( using buildLike( db function
+
 			$this->showNamespaceFilterForm( $ns, $nsinvert );
 			$pager = new LintErrorsPager(
 				$this->getContext(), $this->category, $this->getLinkRenderer(),
-				$catManager, $ns, $nsinvert
+				$catManager, $ns, $nsinvert, null, $titlePrefix
 			);
 			$out->addParserOutput( $pager->getFullOutput() );
 		}
