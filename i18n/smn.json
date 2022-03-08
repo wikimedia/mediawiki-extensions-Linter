@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Yupik"
+			"Yupik",
+			"Seipinne"
 		]
 	},
-	"linter-form-namespace": "Nommâkomovuotâ:"
+	"linter-form-namespace": "Nommâkomovuotâ:",
+	"linter-page-history": "historjá"
 }
