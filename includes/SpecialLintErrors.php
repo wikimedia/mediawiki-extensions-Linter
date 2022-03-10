@@ -22,9 +22,10 @@ namespace MediaWiki\Linter;
 
 use Html;
 use HTMLForm;
+use MalformedTitleException;
 use MediaWiki\MediaWikiServices;
+use OutputPage;
 use SpecialPage;
-use Title;
 
 class SpecialLintErrors extends SpecialPage {
 
@@ -39,9 +40,14 @@ class SpecialLintErrors extends SpecialPage {
 
 	/**
 	 * @param int|null $ns
-	 * @param bool $nsinvert
+	 * @param bool $invert
+	 * @param string $titleLabel
 	 */
-	protected function showNamespaceFilterForm( $ns, $nsinvert ) {
+	protected function showFilterForm( $ns, $invert, $titleLabel ) {
+		$selectOptions = [
+			(string)$this->msg( 'linter-form-exact-match' )->escaped() => true,
+			(string)$this->msg( 'linter-form-prefix-match' )->escaped() => false,
+		];
 		$fields = [
 			'namespace' => [
 				'type' => 'namespaceselect',
@@ -52,83 +58,141 @@ class SpecialLintErrors extends SpecialPage {
 				'all' => '',
 				'cssclass' => 'namespaceselector'
 			],
-			'nsinvert' => [
+			'invertnamespace' => [
 				'type' => 'check',
 				'name' => 'invert',
 				'label-message' => 'invert',
-				'default' => $nsinvert,
+				'default' => $invert,
 				'tooltip' => 'invert'
 			],
-			'titleprefix' => [
+			'titlefield' => [
 				'type' => 'title',
-				'name' => 'titleprefix',
+				'name' => $titleLabel,
 				'label-message' => 'linter-form-title-prefix',
 				'exists' => true,
 				'required' => false
 			],
+			'exactmatchradio' => [
+				'type' => 'radio',
+				'name' => 'exactmatch',
+				'options' => $selectOptions,
+				'label-message' => 'linter-form-exact-or-prefix',
+				'default' => true
+			]
 		];
 		$form = HTMLForm::factory( 'ooui', $fields, $this->getContext() );
 		$form->setWrapperLegend( true );
-		$form->addHeaderText( $this->msg( "linter-category-{$this->category}-desc" )->parse() );
+		if ( $this->category !== null ) {
+			$form->addHeaderText( $this->msg( "linter-category-{$this->category}-desc" )->parse() );
+		}
 		$form->setMethod( 'get' );
 		$form->prepareForm()->displayForm( false );
 	}
 
 	/**
+	 * cleanTitle parses a title and handles a malformed titles, namespaces that are mismatched
+	 * and exact title searches that find no matching records, and produce appropriate error messages
+	 *
+	 * @param string $title
+	 * @param int|null $namespace
+	 * @param bool $invert
+	 * @return array
 	 */
-	protected function showPageNameFilterForm() {
-		$fields = [
-			'pagename' => [
-				'type' => 'title',
-				'name' => 'pagename',
-				'label-message' => 'linter-pager-title-header',
-				'exists' => true,
-				'required' => false,
-			]
-		];
-		$form = HTMLForm::factory( 'ooui', $fields, $this->getContext() );
-		$form->setWrapperLegend( true );
-		$form->setMethod( 'get' );
-		$form->prepareForm()->displayForm( false );
+	public function cleanTitle( $title, $namespace, $invert ) {
+		// Check all titles for malformation regardless of exact match or prefix match
+		try {
+			$titleElements = MediaWikiServices::getInstance()->getTitleParser()->parseTitle( $title );
+		}
+		catch ( MalformedTitleException  $e ) {
+			return [ 'titlefield' => null, 'error' => 'linter-invalid-title' ];
+		}
+
+		// The drop-down namespace defaults to 'all' which is returned as a null, indicating match all namespaces.
+		// If 'main' is selected in the drop-down, int 0 is returned. Other namespaces are returned as int values > 0.
+		//
+		// If the user does not specify a namespace in the title text box, parseTitle sets it to int 0 as the default.
+		// If the user entered ':' (main) namespace as the namespace prefix of a title such as ":MyPageTitle",
+		// parseTitle will also return int 0 as the namespace. Other valid system namespaces entered as prefixes
+		// in the title text box are returned by parseTitle as int values > 0.
+		// To determine if the user entered the ':' (main) namespace when int 0 is returned, a separate check for
+		// the substring ':' at offset 0 must be performed.
+
+		$titleNamespace = $titleElements->getNamespace();
+		// Determine if the user entered ':' (resolves to main) as the namespace part of the title,
+		// or was it was set by default by parseTitle() to 0, but the user intended to search across 'all' namespaces.
+		if ( $titleNamespace === 0 && $title[0] !== ':' ) {
+			$titleNamespace = null;
+		}
+
+		if ( $namespace === null && $titleNamespace === null ) {
+			// if invert checkbox is set while the namespace drop-down is set to 'all' and no namespace was set in the
+			// title text box, then the invert check box being set is invalid as it would exclude all namespaces.
+			if ( $invert ) {
+				return [ 'titlefield' => null, 'error' => 'linter-namespace-invert-error' ];
+			}
+		}
+
+		if ( $namespace !== null && $titleNamespace !== null ) {
+			// Show the namespace mismatch error if the namespaces specified in drop-down and title text do not match.
+			if ( $namespace !== $titleNamespace ) {
+				return [ 'titlefield' => null, 'error' => 'linter-namespace-mismatch' ];
+			}
+		}
+
+		// If the namespace drop-down selection is 'all' (null), return the namespace from the title text
+		$ns = ( $namespace === null ) ? $titleNamespace : $namespace;
+
+		return [ 'titlefield' => $titleElements->getDBkey(), 'namespace' => $ns ];
+	}
+
+	/**
+	 * @param OutputPage $out
+	 * @param string|null $message
+	 */
+	private function displayError( $out, $message ) {
+		$out->addHTML(
+			Html::element( 'span', [ 'class' => 'error' ],
+				$this->msg( $message )->text() )
+		);
 	}
 
 	/**
 	 * @param string|null $par
 	 */
 	public function execute( $par ) {
-		$this->setHeaders();
-		$this->outputHeader();
-
-		// If the request contains a `pagename` parameter, then the user entered a pagename
-		// and pressed the Submit button to display of all lints for a single page.
 		$params = $this->getRequest()->getQueryValues();
-		if ( $par === null && isset( $params['pagename'] ) ) {
-			// Use getText to ensure a string val
-			$pageName = $this->getRequest()->getText( 'pagename', '' );
 
+		$this->setHeaders();
+		$this->outputHeader( $par || isset( $params[ 'titlesearch' ] ) ? 'disable-summary' : '' );
+
+		$ns = $this->getRequest()->getIntOrNull( 'namespace' );
+		$invert = $this->getRequest()->getBool( 'invert' );
+		$exactMatch = $this->getRequest()->getBool( 'exactmatch', true );
+
+		// If the request contains a 'titlesearch' parameter, then the user entered a page title
+		// or just the first few characters of the title. They also may have entered the first few characters
+		// of a custom namespace (just text before a :) to search for and pressed the associated Submit button.
+		if ( $par === null && isset( $params[ 'titlesearch' ] ) ) {
 			$out = $this->getOutput();
-			$out->setPageTitle( $this->msg( 'linterrors-subpage', $pageName ) );
 
-			$title = Title::newFromText( $pageName );
-			if ( $title !== null ) {
-				$pageArticleID = $title->getArticleID();
-				if ( $pageArticleID !== 0 ) {
-					$ns = $title->getNamespace();
-					$catManager = new CategoryManager();
-					$pager = new LintErrorsPager(
-						$this->getContext(), null, $this->getLinkRenderer(),
-						$catManager, $ns, false, $pageArticleID
-					);
-					$out->addParserOutput( $pager->getFullOutput() );
-					return;
-				}
-				// No $pageArticleID or no $title go through
+			$out->addBacklinkSubtitle( $this->getPageTitle() );
+
+			$title = $this->getRequest()->getText( 'titlesearch' );
+			$titleSearch = $this->cleanTitle( $title, $ns, $invert );
+
+			if ( $titleSearch[ 'titlefield' ] !== null ) {
+				$out->setPageTitle( $this->msg( 'linter-prefix-search-subpage', $titleSearch[ 'titlefield' ] ) );
+
+				$catManager = new CategoryManager();
+				$pager = new LintErrorsPager(
+					$this->getContext(), null, $this->getLinkRenderer(),
+					$catManager, $titleSearch[ 'namespace' ], $invert, $exactMatch,
+					$titleSearch[ 'titlefield' ]
+				);
+				$out->addParserOutput( $pager->getFullOutput() );
+			} else {
+				$this->displayError( $out, $titleSearch[ 'error' ] );
 			}
-
-			$out->addHTML(
-				Html::element( 'span', [ 'class' => 'error' ],
-				$this->msg( "linter-invalid-title" )->text() )
-			);
 			return;
 		}
 
@@ -149,18 +213,26 @@ class SpecialLintErrors extends SpecialPage {
 				)
 			);
 			$out->addBacklinkSubtitle( $this->getPageTitle() );
-			$ns = $this->getRequest()->getIntOrNull( 'namespace' );
-			$nsinvert = $this->getRequest()->getBool( 'invert' );
 
-			$titlePrefix = $this->getRequest()->getText( 'titleprefix', '' );
-			// SQL injection risk is handled in LintErrorsPager.php, getQueryInfo( using buildLike( db function
+			$title = $this->getRequest()->getText( 'titlecategorysearch' );
+			// For category based searches, allow an undefined title to display all records
+			if ( !isset( $params['titlecategorysearch'] ) && $title === '' ) {
+				$titleCategorySearch = [ 'titlefield' => '', 'namespace' => $ns, 'pageid' => null ];
+			} else {
+				$titleCategorySearch = $this->cleanTitle( $title, $ns, $invert );
+			}
 
-			$this->showNamespaceFilterForm( $ns, $nsinvert );
-			$pager = new LintErrorsPager(
-				$this->getContext(), $this->category, $this->getLinkRenderer(),
-				$catManager, $ns, $nsinvert, null, $titlePrefix
-			);
-			$out->addParserOutput( $pager->getFullOutput() );
+			if ( $titleCategorySearch[ 'titlefield' ] !== null ) {
+				$this->showFilterForm( null, $invert, 'titlecategorysearch' );
+				$pager = new LintErrorsPager(
+					$this->getContext(), $this->category, $this->getLinkRenderer(),
+					$catManager, $titleCategorySearch[ 'namespace' ], $invert, $exactMatch,
+					$titleCategorySearch[ 'titlefield' ]
+				);
+				$out->addParserOutput( $pager->getFullOutput() );
+			} else {
+				$this->displayError( $out, $titleCategorySearch[ 'error' ] );
+			}
 		}
 	}
 
@@ -181,8 +253,8 @@ class SpecialLintErrors extends SpecialPage {
 	private function displaySearchPage() {
 		$out = $this->getOutput();
 		$out->addHTML( Html::element( 'h2', [],
-			$this->msg( "linter-lints-for-single-page-desc" )->text() ) );
-		$this->showPageNameFilterForm();
+			$this->msg( "linter-lints-prefix-search-page-desc" )->text() ) );
+		$this->showFilterForm( null, false, 'titlesearch' );
 	}
 
 	/**
