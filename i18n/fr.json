@@ -60,6 +60,7 @@
 	"linter-lints-for-single-page-desc": "Afficher toutes les erreurs du linteur pour une page spécifique",
 	"linter-invalid-title": "Espace de noms ou nom de page introuvable ou mal formé",
 	"linter-form-namespace": "Espace de noms :",
+	"linter-form-title-prefix": "Préfixe du titre :",
 	"linter-heading-high-priority": "Priorité haute",
 	"linter-heading-low-priority": "Priorité basse",
 	"linter-heading-medium-priority": "Priorité moyenne",

@@ -48,6 +48,7 @@
 	"linter-lints-for-single-page-desc": "Alle Linterfehler für eine bestimmte Seite anzeigen",
 	"linter-invalid-title": "Namensraum und/oder Seitenname nicht gefunden oder falsch geformt",
 	"linter-form-namespace": "Namensraum:",
+	"linter-form-title-prefix": "Seitentitel-Prefix:",
 	"linter-heading-high-priority": "Hohe Priorität",
 	"linter-heading-low-priority": "Niedrige Priorität",
 	"linter-heading-medium-priority": "Mittlere Priorität",

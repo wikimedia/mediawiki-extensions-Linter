@@ -49,6 +49,7 @@
 	"linter-lints-for-single-page-desc": "הצגת כל שגיאות הניקיון לדף מסוים",
 	"linter-invalid-title": "מרחב שם או שם דף לא נמצא או אינו תקין",
 	"linter-form-namespace": "מרחב שם:",
+	"linter-form-title-prefix": "תחילית כותרת:",
 	"linter-heading-high-priority": "עדיפות גבוהה",
 	"linter-heading-low-priority": "עדיפות נמוכה",
 	"linter-heading-medium-priority": "עדיפות בינונית",

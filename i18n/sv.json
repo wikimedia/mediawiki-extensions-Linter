@@ -49,6 +49,7 @@
 	"linter-category-wikilink-in-extlink-desc": "Dessa sidor har wikilänker i externa länkar och som bör fixas",
 	"linter-desc": "Spåra lint-fel från en extern tjänst och visa dem för användarna",
 	"linter-form-namespace": "Namnrymd:",
+	"linter-form-title-prefix": "Titelprefix:",
 	"linter-heading-high-priority": "Hög prioritet",
 	"linter-heading-low-priority": "Låg prioritet",
 	"linter-heading-medium-priority": "Medelprioritet",
