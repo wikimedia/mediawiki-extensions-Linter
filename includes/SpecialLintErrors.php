@@ -80,12 +80,11 @@ class SpecialLintErrors extends SpecialPage {
 	protected function showPageNameFilterForm() {
 		$fields = [
 			'pagename' => [
-				'type' => 'text',
+				'type' => 'title',
 				'name' => 'pagename',
 				'label-message' => 'linter-pager-title-header',
-				'default' => '',
-				'id' => 'pagename',
-				'size' => 255,
+				'exists' => true,
+				'required' => false,
 			]
 		];
 		$form = HTMLForm::factory( 'ooui', $fields, $this->getContext() );
