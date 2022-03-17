@@ -52,6 +52,7 @@
 	"linter-lints-for-single-page-desc": "Показати усі linter-помилки для певної сторінки",
 	"linter-invalid-title": "Простір назв і/або назва сторінки не знайдені або деформовані",
 	"linter-form-namespace": "Простір назв:",
+	"linter-form-title-prefix": "Префікс назви:",
 	"linter-heading-high-priority": "Високий пріоритет",
 	"linter-heading-low-priority": "Низький пріоритет",
 	"linter-heading-medium-priority": "Середній пріоритет",

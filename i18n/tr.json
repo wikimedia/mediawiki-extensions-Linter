@@ -55,6 +55,7 @@
 	"linter-lints-for-single-page-desc": "Belirli bir sayfa için tüm linter hatalarını gösterin",
 	"linter-invalid-title": "Ad alanı ve/veya sayfa adı bulunamadı veya hatalı biçimlendirilmiş",
 	"linter-form-namespace": "Ad alanı:",
+	"linter-form-title-prefix": "Başlık öneki:",
 	"linter-heading-high-priority": "Yüksek öncelik",
 	"linter-heading-low-priority": "Düşük öncelik",
 	"linter-heading-medium-priority": "Orta öncelik",
