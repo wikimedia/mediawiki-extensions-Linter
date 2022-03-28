@@ -50,22 +50,21 @@ class SpecialLintErrors extends SpecialPage {
 				'default' => $ns,
 				'id' => 'namespace',
 				'all' => '',
-				'cssclass' => 'namespaceselector',
+				'cssclass' => 'namespaceselector'
 			],
 			'nsinvert' => [
 				'type' => 'check',
 				'name' => 'invert',
 				'label-message' => 'invert',
 				'default' => $nsinvert,
-				'tooltip' => 'invert',
+				'tooltip' => 'invert'
 			],
 			'titleprefix' => [
-				'type' => 'text',
+				'type' => 'title',
 				'name' => 'titleprefix',
 				'label-message' => 'linter-form-title-prefix',
-				'default' => '',
-				'id' => 'titleprefix',
-				'size' => 255,
+				'exists' => true,
+				'required' => false
 			],
 		];
 		$form = HTMLForm::factory( 'ooui', $fields, $this->getContext() );
