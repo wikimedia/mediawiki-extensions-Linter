@@ -9,6 +9,7 @@
 	"linter-category-obsolete-tag": "اوبسليٽ ايڇٽي.ايم.ايل ٽيگَ",
 	"linter-form-namespace": "نانءُپولار:",
 	"linter-numerrors": "($1 {{PLURAL:$1|خرابي|خرابيون}})",
+	"linter-page-viewsource": "ذريعو ڏسو",
 	"linter-pager-missing-end-tag-details": "کٽل اختتام ٽيگ",
 	"linter-pager-obsolete-tag-details": "اوبسليٽ ايڇٽي.ايم.ايل ٽيگَ",
 	"linter-pager-title": "صفحي جو عنوان",
