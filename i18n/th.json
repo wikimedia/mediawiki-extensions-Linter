@@ -19,6 +19,7 @@
 	"linter-numerrors": "($1 {{PLURAL:$1|ข้อผิดพลาด|ข้อผิดพลาด}})",
 	"linter-page-edit": "แก้ไข",
 	"linter-page-history": "ประวัติ",
+	"linter-page-viewsource": "ดูต้นฉบับ",
 	"linter-pager-bogus-image-options-details": "ตัวเลือกไฟล์ที่ไม่สมบูรณ์",
 	"linter-pager-deletable-table-tag-details": "แท็กตารางที่ควรลบ",
 	"linter-pager-missing-end-tag-details": "ขาดแท็กปิด",

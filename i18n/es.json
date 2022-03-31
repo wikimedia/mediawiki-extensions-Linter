@@ -10,7 +10,8 @@
 			"James",
 			"Luzcaru",
 			"Macofe",
-			"MarcoAurelio"
+			"MarcoAurelio",
+			"DiegoAmbrocio"
 		]
 	},
 	"linterrors": "Errores de sintaxis",
@@ -54,6 +55,7 @@
 	"linter-lints-for-single-page-desc": "Mostrar todos los errores de sintaxis para una página concreta",
 	"linter-invalid-title": "No se ha encontrado el espacio de nombres o el título de la página, o está mal formado",
 	"linter-form-namespace": "Espacio de nombres:",
+	"linter-form-title-prefix": "Prefijo del título:",
 	"linter-heading-high-priority": "Prioridad alta",
 	"linter-heading-low-priority": "Prioridad baja",
 	"linter-heading-medium-priority": "Prioridad media",
