@@ -4,7 +4,8 @@
 			"Eduardo Addad de Oliveira",
 			"Eduardoaddad",
 			"Felipe L. Ewald",
-			"Opraco"
+			"Opraco",
+			"YuriNikolai"
 		]
 	},
 	"linterrors": "Erros de Lint",
@@ -46,6 +47,7 @@
 	"linter-category-wikilink-in-extlink-desc": "Estas páginas têm wikilinks em links externos que podem ser corrigidos",
 	"linter-desc": "Acompanha erros de lint por meio de serviço externo e mostre-os aos usuários",
 	"linter-form-namespace": "Espaço nominal:",
+	"linter-form-title-prefix": "Prefixo do título:",
 	"linter-heading-high-priority": "Alta prioridade",
 	"linter-heading-low-priority": "Baixa prioridade",
 	"linter-heading-medium-priority": "Prioridade média",
