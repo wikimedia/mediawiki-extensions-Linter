@@ -23,6 +23,7 @@ namespace MediaWiki\Linter;
 use ApiBase;
 use FormatJson;
 use Wikimedia\IPSet;
+use Wikimedia\ParamValidator\ParamValidator;
 
 /**
  * API module for an external service to record
@@ -60,16 +61,16 @@ class ApiRecordLint extends ApiBase {
 	public function getAllowedParams() {
 		return [
 			'data' => [
-				ApiBase::PARAM_TYPE => 'string',
-				ApiBase::PARAM_REQUIRED => true,
+				ParamValidator::PARAM_TYPE => 'string',
+				ParamValidator::PARAM_REQUIRED => true,
 			],
 			'page' => [
-				ApiBase::PARAM_TYPE => 'string',
-				ApiBase::PARAM_REQUIRED => true,
+				ParamValidator::PARAM_TYPE => 'string',
+				ParamValidator::PARAM_REQUIRED => true,
 			],
 			'revision' => [
-				ApiBase::PARAM_TYPE => 'integer',
-				ApiBase::PARAM_REQUIRED => true,
+				ParamValidator::PARAM_TYPE => 'integer',
+				ParamValidator::PARAM_REQUIRED => true,
 			],
 		];
 	}

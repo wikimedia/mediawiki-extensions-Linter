@@ -25,6 +25,7 @@ use ApiQuery;
 use ApiQueryBase;
 use ApiResult;
 use Title;
+use Wikimedia\ParamValidator\ParamValidator;
 use Wikimedia\ParamValidator\TypeDef\IntegerDef;
 
 class ApiQueryLintErrors extends ApiQueryBase {
@@ -116,31 +117,31 @@ class ApiQueryLintErrors extends ApiQueryBase {
 		$visibleCats = ( new CategoryManager() )->getVisibleCategories();
 		return [
 			'categories' => [
-				ApiBase::PARAM_TYPE => $visibleCats,
-				ApiBase::PARAM_ISMULTI => true,
+				ParamValidator::PARAM_TYPE => $visibleCats,
+				ParamValidator::PARAM_ISMULTI => true,
 				// Default is to show all categories
-				ApiBase::PARAM_DFLT => implode( '|', $visibleCats ),
+				ParamValidator::PARAM_DEFAULT => implode( '|', $visibleCats ),
 			],
 			'limit' => [
-				ApiBase::PARAM_DFLT => 10,
-				ApiBase::PARAM_TYPE => 'limit',
+				ParamValidator::PARAM_DEFAULT => 10,
+				ParamValidator::PARAM_TYPE => 'limit',
 				IntegerDef::PARAM_MIN => 1,
 				IntegerDef::PARAM_MAX => ApiBase::LIMIT_BIG1,
 				IntegerDef::PARAM_MAX2 => ApiBase::LIMIT_BIG2
 			],
 			'namespace' => [
-				ApiBase::PARAM_TYPE => 'namespace',
-				ApiBase::PARAM_ISMULTI => true,
+				ParamValidator::PARAM_TYPE => 'namespace',
+				ParamValidator::PARAM_ISMULTI => true,
 			],
 			'pageid' => [
-				ApiBase::PARAM_TYPE => 'integer',
-				ApiBase::PARAM_ISMULTI => true,
+				ParamValidator::PARAM_TYPE => 'integer',
+				ParamValidator::PARAM_ISMULTI => true,
 			],
 			'title' => [
-				ApiBase::PARAM_TYPE => 'string',
+				ParamValidator::PARAM_TYPE => 'string',
 			],
 			'from' => [
-				ApiBase::PARAM_TYPE => 'integer',
+				ParamValidator::PARAM_TYPE => 'integer',
 			],
 		];
 	}
