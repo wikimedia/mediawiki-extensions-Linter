@@ -3,7 +3,8 @@
 		"authors": [
 			"IRTC1015",
 			"Ykhwong",
-			"밝은소년"
+			"밝은소년",
+			"메이"
 		]
 	},
 	"linterrors": "린트 오류",
@@ -46,6 +47,7 @@
 	"linter-category-wikilink-in-extlink": "링크 안의 링크",
 	"linter-category-wikilink-in-extlink-desc": "이 문서들은 수정 가능한 외부 링크 내 위키링크가 있습니다",
 	"linter-desc": "외부 서비스로부터 린트 오류를 추적하고 사용자에게 보여줍니다",
+	"linter-lints-for-single-page-desc": "특정 문서의 모든 린트 오류 보기",
 	"linter-form-namespace": "이름공간:",
 	"linter-heading-high-priority": "높은 우선순위",
 	"linter-heading-low-priority": "낮은 우선순위",
