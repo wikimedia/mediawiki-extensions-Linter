@@ -8,6 +8,7 @@
 	"linter-category-wikilink-in-extlink": "Liiŋk liiŋkin",
 	"linter-numerrors": "($1 {{PLURAL:$1|vââʹǩǩ|vââʹjj|vââʹǩǩed}})",
 	"linter-page-edit": "muuʹtt",
+	"linter-pager-category-header": "Kategoria",
 	"linterrors-subpage": "Lint-vââʹjj: $1",
 	"pageinfo-linter": "Lint-vââʹjj"
 }
