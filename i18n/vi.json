@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Minh Nguyen",
-			"Vinhtantran"
+			"Vinhtantran",
+			"NguoiDungKhongDinhDanh"
 		]
 	},
 	"linterrors": "Lỗi cú pháp",
@@ -24,6 +25,7 @@
 	"linter-category-tidy-whitespace-bug": "Lỗi ký tự khoảng cách Tidy",
 	"linter-category-tidy-whitespace-bug-desc": "Các trang này gây ra lỗi ký tự khoảng cách nên được khắc phục.",
 	"linter-desc": "Dò ra các lỗi cú pháp từ dịch vụ bên ngoài và hiển thị các lỗi cho người dùng",
+	"linter-lints-for-single-page-desc": "Hiển thị lỗi cú pháp của trang chỉ định",
 	"linter-form-namespace": "Không gian tên:",
 	"linter-heading-high-priority": "Ưu tiên cao",
 	"linter-heading-low-priority": "Ưu tiên thấp",
@@ -50,6 +52,7 @@
 	"linter-pager-title-header": "Tên trang",
 	"linter-pager-unclosed-quotes-in-heading-details": "Dấu ngoặc đơn/kép thoát ra bảng mục lục",
 	"linterrors-subpage": "Lỗi cú pháp: $1",
+	"linterrors-summary": "<strong>Ghi chú:</strong> Số lượng của mỗi thể loại chỉ là ước tính, không chính xác.",
 	"multi-part-template-block": "Đầu ra không chỉ do một bản mẫu nào đó",
 	"pageinfo-linter": "Lỗi cú pháp"
 }
