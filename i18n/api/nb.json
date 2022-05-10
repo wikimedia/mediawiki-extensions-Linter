@@ -22,7 +22,7 @@
 	"apihelp-query+linterstats-description": "Hent antall lint-feil i hver kategori",
 	"apihelp-query+linterstats-summary": "Hent antall lint-feil i hver kategori",
 	"apihelp-query+linterstats-example-1": "Hent antall lint-feil i hver kategori",
-	"apierror-linter-invalid-ip": "IP-adressen din har ikke blitt hvitelistet for å rapportere lint-feil",
+	"apierror-linter-invalid-ip": "IP-adressen din har ikke tillatelse til å rapportere lint-feil",
 	"apierror-linter-invalid-data": "Ugyldige data",
 	"apierror-linter-invalid-title": "Ugyldig, ikke-eksisterende eller utdatert tittel"
 }
