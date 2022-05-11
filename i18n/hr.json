@@ -36,7 +36,7 @@
 	"linter-pager-tidy-font-bug-details": "Oznaka font pokušava promijeniti boju poveznice",
 	"linter-pager-title": "Ime stranice",
 	"linterrors-subpage": "Pročišćivač pogrješčica: $1",
-	"linterrors-summary": "<strong>Bilješka:</strong> Zbrojidbe za kategorije nisu dane precizno/točno, nego su dane približno prema procjenjenom broju članova kategorije.",
+	"linterrors-summary": "<strong>Napomena:</strong> Brojevi pogrešaka po kategorijama samo su procijenjeni i nisu potpuno točni.",
 	"multi-part-template-block": "Proizlazi iz više od jednog predloška",
 	"pageinfo-linter": "Pročišćivač pogrješčica"
 }

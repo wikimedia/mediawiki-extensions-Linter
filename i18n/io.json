@@ -5,10 +5,19 @@
 		]
 	},
 	"linterrors": "Erori pri 'Lint'",
+	"linter-category-deletable-table-tag-desc": "Ca pagini havas etiketi en tabeli qui mustus efacesor.",
+	"linter-category-multiple-unclosed-formatting-tags-desc": "Ca pagini kontenas diversa etiketi (''tags'') neklozata",
+	"linter-category-tidy-font-bug": "Anciena konduto di fonto-etiketi kontenanta ligili",
 	"linter-form-namespace": "'Namespace:'",
+	"linter-heading-high-priority": "Alta prioreso",
+	"linter-heading-low-priority": "Basa prioreso",
+	"linter-heading-medium-priority": "Meza prioreso",
+	"linter-numerrors": "($1 {{PLURAL:$1|eroro|erori}})",
 	"linter-page-edit": "redaktar",
+	"linter-pager-deletable-table-tag-details": "Etiketo di tabelo qua mustas efacesar",
 	"linter-pager-obsolete-tag-details": "etiketo HTML obsoleta",
 	"linter-pager-title": "Titulo di la pagino",
 	"linterrors-subpage": "Erori pri 'Lint': $1",
+	"linterrors-summary": "<strong>Atencez:</strong> La quanti por kategorii ne esas exakta, tamen la nombri prizentata havas bazo statistikala.",
 	"pageinfo-linter": "Erori pri 'Lint'"
 }
