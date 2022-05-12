@@ -23,7 +23,6 @@
 	"linter-category-fostered-desc": "Estas páginas incluyen contenido fuera de lugar.",
 	"linter-category-html5-misnesting": "Etiqueta mal anidada con representación distinta en HTML5 y HTML4",
 	"linter-category-html5-misnesting-desc": "Estas etiquetas mal anidadas tendrán un comportamiento distinto en HTML5 en comparación con HTML4.",
-	"linter-category-inline-media-caption": "Medios de comunicación en línea con subtítulos",
 	"linter-category-misc-tidy-replacement-issues": "Otros problemas",
 	"linter-category-misc-tidy-replacement-issues-desc": "Estas páginas tienen otros problemas que afectan a su representación al reemplazarse Tidy",
 	"linter-category-misnested-tag": "Etiquetas mal anidadas",
