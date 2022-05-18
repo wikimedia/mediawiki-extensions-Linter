@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"פוילישער"
+			"פוילישער",
+			"Pacha Tchernof"
 		]
 	},
 	"linter-category-deletable-table-tag": "טאבעלע־טאג וואס מען דארף אויסמעקן",
@@ -12,7 +13,7 @@
 	"linter-form-namespace": "נאָמענטייל:",
 	"linter-heading-high-priority": "הויכער פריאריטעט",
 	"linter-page-edit": "רעדאַקטירן",
-	"linter-page-history": "היסטאריע",
+	"linter-page-history": "היסטאָריע",
 	"linter-pager-deletable-table-tag-details": "טאבעלע־טאג וואס מען דארף אויסמעקן",
 	"linter-pager-obsolete-tag-details": "פֿאַרעלטערטער HTML-טאַג",
 	"linter-pager-template": "דורך א מוסטער?",
