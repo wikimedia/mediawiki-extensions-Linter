@@ -5,6 +5,10 @@
 			"Seipinne"
 		]
 	},
+	"linterrors": "Lint-feeilah",
 	"linter-form-namespace": "Nommâkomovuotâ:",
-	"linter-page-history": "historjá"
+	"linter-numerrors": "($1 {{PLURAL:$1|feilâ|feeilâ|feilâd}})",
+	"linter-page-history": "historjá",
+	"linterrors-subpage": "Lint-feeilah: $1",
+	"pageinfo-linter": "Lint-feeilah"
 }
