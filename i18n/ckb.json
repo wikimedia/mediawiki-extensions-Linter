@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"ئارام بکر"
+			"ئارام بکر",
+			"Roj im"
 		]
 	},
 	"linterrors": "ھەڵە شاشەکان",
@@ -27,7 +28,7 @@
 	"linter-numerrors": "($1 {{PLURAL:$1|ھەڵە}})",
 	"linter-page-edit": "دەستکاری",
 	"linter-page-history": "مێژوو",
-	"linter-page-viewsource": "بینینی سەرچاوە",
+	"linter-page-viewsource": "سەرچاوەکەی ببینە",
 	"linter-pager-bogus-image-options-details": "بژاردەی قەڵبی پەڕگە",
 	"linter-pager-deletable-table-tag-details": "تاگی «table» کە پێویستە بسڕدرێتەوە",
 	"linter-pager-misc-tidy-replacement-issues-details": "ھەڵە جۆراوجۆرەکانی مارکئەپ",
