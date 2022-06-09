@@ -6,6 +6,7 @@
 		]
 	},
 	"linterrors": "Lint-eraroj",
+	"linter-category-deletable-table-tag": "Table-etikedo devus esti forigita",
 	"linter-form-namespace": "Nomspaco:",
 	"linter-heading-high-priority": "Alta prioritato",
 	"linter-heading-low-priority": "Malalta prioritato",
@@ -13,7 +14,7 @@
 	"linter-numerrors": "($1 {{PLURAL:$1|eraro|eraroj}})",
 	"linter-pager-bogus-image-options-details": "Malvalida dosiera opcio",
 	"linter-pager-category-header": "Kategorio",
-	"linter-pager-deletable-table-tag-details": "Tabla etikedo kiu devus esti forigita",
+	"linter-pager-deletable-table-tag-details": "Table-etikedo devus esti forigita",
 	"linter-pager-html5-misnesting-details": "Misingado (nun rompita)",
 	"linter-pager-misc-tidy-replacement-issues-details": "Diversaj markadaj eraroj",
 	"linter-pager-misnested-tag-details": "Misingita etikedo kiu devus esti ĝuste ingita",

@@ -16,6 +16,7 @@
 	"linter-heading-medium-priority": "Meza prioreso",
 	"linter-numerrors": "($1 {{PLURAL:$1|eroro|erori}})",
 	"linter-page-edit": "redaktar",
+	"linter-pager-category-header": "Kategorio",
 	"linter-pager-deletable-table-tag-details": "Etiketo di tabelo qua mustas efacesar",
 	"linter-pager-obsolete-tag-details": "etiketo HTML obsoleta",
 	"linter-pager-template-header": "Tra ula shablono?",
