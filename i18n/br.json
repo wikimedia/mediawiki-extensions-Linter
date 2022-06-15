@@ -15,6 +15,7 @@
 	"linter-heading-medium-priority": "Priorelezh etre",
 	"linter-numerrors": "$1 fazi",
 	"linter-pager-deletable-table-tag-details": "Balizenn taolenn a zlefe bezañ lamet",
+	"linter-pager-misc-tidy-replacement-issues-details": "Fazioù balizennoù liesseurt",
 	"linter-pager-misnested-tag-details": "Balizenn emboested fall",
 	"linterrors-subpage": "Fazioù HTML : $1",
 	"linterrors-summary": "<strong>Notenn</strong> : N’eo ket rik ar c’honterioù evit ar rummadoù, diazezet int war brasjedadennoù.",
