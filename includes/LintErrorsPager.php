@@ -66,17 +66,17 @@ class LintErrorsPager extends TablePager {
 	/**
 	 * @var bool
 	 */
-	private $invertnamespace;
+	private $invertNamespace;
 
 	/**
-	 * @var int|null
+	 * @var bool
 	 */
-	private $pageId;
+	private $exactMatch;
 
 	/**
-	 * @var string|null
+	 * @var string
 	 */
-	private $titlePrefix;
+	private $title;
 
 	/**
 	 * @param IContextSource $context
@@ -84,43 +84,45 @@ class LintErrorsPager extends TablePager {
 	 * @param LinkRenderer $linkRenderer
 	 * @param CategoryManager $catManager
 	 * @param int|null $namespace
-	 * @param bool $invertnamespace
-	 * @param int|null $pageId
-	 * @param string $titlePrefix
+	 * @param bool $invertNamespace
+	 * @param bool $exactMatch
+	 * @param string $title
 	 */
 	public function __construct( IContextSource $context, $category, LinkRenderer $linkRenderer,
-		CategoryManager $catManager, $namespace, $invertnamespace, $pageId = null, $titlePrefix = ''
+		CategoryManager $catManager, $namespace, $invertNamespace, $exactMatch, $title
 	) {
 		$this->category = $category;
 		$this->categoryManager = $catManager;
 		if ( $category !== null ) {
 			$this->categoryId = $catManager->getCategoryId( $this->category );
-			$this->pageId = null;
 		} else {
 			$this->categoryId = null;
-			$this->pageId = $pageId;
 		}
 		$this->linkRenderer = $linkRenderer;
 		$this->namespace = $namespace;
-		$this->invertnamespace = $invertnamespace;
-		$this->titlePrefix = $titlePrefix;
+		$this->invertNamespace = $invertNamespace;
+		$this->exactMatch = $exactMatch;
+		$this->title = $title;
 		$this->haveParserMigrationExt = ExtensionRegistry::getInstance()->isLoaded( 'ParserMigration' );
 		parent::__construct( $context );
 	}
 
 	/** @inheritDoc */
 	public function getQueryInfo() {
+		$conds = [];
 		if ( $this->categoryId !== null ) {
-			$conds = [ 'linter_cat' => $this->categoryId ];
-		} else {
-			$conds = [ 'linter_page' => $this->pageId ];
+			$conds[ 'linter_cat' ] = $this->categoryId;
 		}
 		if ( $this->namespace !== null ) {
-			$eq_op = $this->invertnamespace ? '!=' : '=';
+			$eq_op = $this->invertNamespace ? '!=' : '=';
 			$conds[] = "page_namespace $eq_op " . $this->mDb->addQuotes( $this->namespace );
 		}
-		if ( $this->titlePrefix !== '' ) {
-			$conds[] = 'page_title' . $this->mDb->buildLike( $this->titlePrefix, $this->mDb->anyString() );
+		if ( $this->exactMatch ) {
+			if ( $this->title !== '' ) {
+				$conds[] = "page_title = " . $this->mDb->addQuotes( $this->title );
+			}
+		} else {
+			$conds[] = 'page_title' . $this->mDb->buildLike( $this->title, $this->mDb->anyString() );
 		}
 
 		return [
@@ -182,6 +184,7 @@ class LintErrorsPager extends TablePager {
 		} else {
 			$editAction = 'edit';
 		}
+
 		switch ( $name ) {
 			case 'title':
 				$title = Title::makeTitle( $row->page_namespace, $row->page_title );
@@ -279,10 +282,8 @@ class LintErrorsPager extends TablePager {
 		$names = [
 			'title' => $this->msg( 'linter-pager-title-header' )->text(),
 		];
-		if ( isset( $this->pageId ) ) {
-			$names['category'] = $this->msg( 'linter-pager-category-header' )->text();
-		}
 		if ( !$this->category ) {
+			$names['category'] = $this->msg( 'linter-pager-category-header' )->text();
 			$names['details'] = $this->msg( "linter-pager-details-header" )->text();
 		} elseif ( !$this->categoryManager->hasNoParams( $this->category ) ) {
 			$names['details'] = $this->msg( "linter-pager-{$this->category}-details" )->text();
