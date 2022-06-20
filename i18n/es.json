@@ -10,7 +10,8 @@
 			"Macofe",
 			"MarcoAurelio",
 			"ArenaL5",
-			"Hasley"
+			"Hasley",
+			"DiegoAmbrocio"
 		]
 	},
 	"linterrors": "Errores de sintaxis",
@@ -23,7 +24,7 @@
 	"linter-category-html5-misnesting": "Etiqueta mal anidada con representación distinta en HTML5 y HTML4",
 	"linter-category-html5-misnesting-desc": "Estas etiquetas mal anidadas tendrán un comportamiento distinto en HTML5 en comparación con HTML4.",
 	"linter-category-misc-tidy-replacement-issues": "Otros problemas",
-	"linter-category-misc-tidy-replacement-issues-desc": "Estas páginas tienen otros problemas que afectan a su representación al reemplazarse Tidy",
+	"linter-category-misc-tidy-replacement-issues-desc": "Estas páginas tienen otros problemas que hacen que se muestren de manera distinta a como lo hacían anteriormente",
 	"linter-category-misnested-tag": "Etiquetas mal anidadas",
 	"linter-category-misnested-tag-desc": "Estas páginas tienen etiquetas mal anidadas que se podrían arreglar.",
 	"linter-category-missing-end-tag": "Etiqueta de cierre faltante",
