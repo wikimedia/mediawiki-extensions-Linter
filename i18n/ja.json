@@ -51,7 +51,6 @@
 	"linter-category-wikilink-in-extlink": "リンク内リンク",
 	"linter-category-wikilink-in-extlink-desc": "これらのページには外部リンク内に置かれたウィキリンクがあり、修正が可能です",
 	"linter-desc": "外部サービスから lint エラーを追跡し、利用者に表示する",
-	"linter-lints-for-single-page-desc": "特定のページのすべてのリンターエラーを表示する",
 	"linter-form-namespace": "名前空間:",
 	"linter-heading-high-priority": "優先度 高",
 	"linter-heading-low-priority": "優先度 低",

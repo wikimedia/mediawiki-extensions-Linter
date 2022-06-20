@@ -4,6 +4,7 @@
 			"Bagas Chrisara",
 			"Daud I.F. Argana",
 			"EkoITS94",
+			"Farras",
 			"Hidayatsrf"
 		]
 	},
@@ -21,7 +22,9 @@
 	"linter-category-wikilink-in-extlink": "Pranala dalam tautan",
 	"linter-category-wikilink-in-extlink-desc": "Beberapa halaman berikut mengandung pranala wiki dalam tautan luar yang dapat diperbaiki",
 	"linter-desc": "Melacak galat lint dari sebuah layanan eksternal dan menampilkannya kepada pengguna",
+	"linter-form-exact-match": "Cari judul halaman tertentu",
 	"linter-form-namespace": "Ruang nama:",
+	"linter-form-title-prefix": "Masukkan awalan judul atau judul lengkap:",
 	"linter-heading-high-priority": "Prioritas tinggi",
 	"linter-heading-low-priority": "Prioritas rendah",
 	"linter-heading-medium-priority": "Prioritas normal",

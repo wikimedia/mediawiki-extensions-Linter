@@ -47,7 +47,6 @@
 	"linter-category-wikilink-in-extlink": "Посилання в посиланнях",
 	"linter-category-wikilink-in-extlink-desc": "Ці сторінки мають вікіпосилання у зовнішніх посиланнях, які можна виправити",
 	"linter-desc": "Відстежування Lint-помилок із зовнішнього сервісу і показ їх користувачам",
-	"linter-lints-for-single-page-desc": "Показати усі linter-помилки для певної сторінки",
 	"linter-invalid-title": "Простір назв і/або назва сторінки не знайдені або деформовані",
 	"linter-form-namespace": "Простір назв:",
 	"linter-form-title-prefix": "Префікс назви:",

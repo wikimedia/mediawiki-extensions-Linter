@@ -45,7 +45,6 @@
 	"linter-category-wikilink-in-extlink": "Hiperligações em hiperligações",
 	"linter-category-wikilink-in-extlink-desc": "Estas páginas têm hiperligações da wiki em hiperligações externas que precisam de ser corrigidas",
 	"linter-desc": "Permite monitorizar erros de lint a partir de um serviço externo e mostrá-los aos utilizadores",
-	"linter-lints-for-single-page-desc": "Mostrar todos os erros de lint de uma página específica",
 	"linter-invalid-title": "O espaço nominal ou o nome da página não foram encontrados ou estão malformados",
 	"linter-form-namespace": "Espaço nominal:",
 	"linter-form-title-prefix": "Prefixo do título:",

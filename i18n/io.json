@@ -8,7 +8,6 @@
 	"linter-category-deletable-table-tag-desc": "Ca pagini havas etiketi en tabeli qui mustus efacesor.",
 	"linter-category-multiple-unclosed-formatting-tags-desc": "Ca pagini kontenas diversa etiketi (''tags'') neklozata",
 	"linter-category-tidy-font-bug": "Anciena konduto di fonto-etiketi kontenanta ligili",
-	"linter-lints-for-single-page-desc": "Montrez omna erori pri ''lint'' por specifika pagino",
 	"linter-form-namespace": "'Namespace:'",
 	"linter-form-title-prefix": "Prefixo dil titulo:",
 	"linter-heading-high-priority": "Alta prioreso",

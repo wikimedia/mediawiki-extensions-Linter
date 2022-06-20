@@ -47,7 +47,6 @@
 	"linter-category-wikilink-in-extlink": "Collegamenti in collegamenti",
 	"linter-category-wikilink-in-extlink-desc": "Queste pagine hanno wikilink in collegamenti esterni che potrebbero essere corretti",
 	"linter-desc": "Traccia gli errori di validazione Lint da un servizio esterno e li mostra agli utenti.",
-	"linter-lints-for-single-page-desc": "Mostra tutti gli errori di sintassi per una pagina specifica",
 	"linter-form-namespace": "Namespace:",
 	"linter-form-title-prefix": "Lettere iniziali:",
 	"linter-heading-high-priority": "Alta priorità",

@@ -25,7 +25,6 @@
 	"linter-category-tidy-whitespace-bug": "Lỗi ký tự khoảng cách Tidy",
 	"linter-category-tidy-whitespace-bug-desc": "Các trang này gây ra lỗi ký tự khoảng cách nên được khắc phục.",
 	"linter-desc": "Dò ra các lỗi cú pháp từ dịch vụ bên ngoài và hiển thị các lỗi cho người dùng",
-	"linter-lints-for-single-page-desc": "Hiển thị lỗi cú pháp của trang chỉ định",
 	"linter-form-namespace": "Không gian tên:",
 	"linter-heading-high-priority": "Ưu tiên cao",
 	"linter-heading-low-priority": "Ưu tiên thấp",

@@ -41,7 +41,6 @@
 	"linter-category-unclosed-quotes-in-heading-desc": "Αυτές οι σελίδες περιέχουν μια μισοτελειωμένη σημείωση σε κεφαλίδα, που μετά βγαίνει εκτός λίστας περιεχομένων.",
 	"linter-category-wikilink-in-extlink": "Σύνδεσμοι σε συνδέσμους",
 	"linter-category-wikilink-in-extlink-desc": "Αυτές οι σελίδες έχουν συνδέσμους wiki σε εξωτερικούς συνδέσμους που θα μπορούσαν να διορθωθούν",
-	"linter-lints-for-single-page-desc": "Εμφάνιση όλων των σφαλμάτων σύνταξης συγκεκριμένης σελίδας",
 	"linter-form-namespace": "Ονοματοχώρος:",
 	"linter-heading-high-priority": "Υψηλή προτεραιότητα",
 	"linter-heading-low-priority": "Χαμηλή προτεραιότητα",

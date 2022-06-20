@@ -60,7 +60,7 @@
 	"linter-heading-high-priority": "Heading on [[Special:LintErrors]]",
 	"linter-heading-low-priority": "Heading on [[Special:LintErrors]]",
 	"linter-heading-medium-priority": "Heading on [[Special:LintErrors]]",
-	"linter-namespace-invert-error": "Error message for lint errors for title search where the invert selection checkbox conflicts with the 'all' namespace criteria",
+	"linter-namespace-invert-error": "Error message for lint errors for title search where the invert selection checkbox conflicts with the 'all' namespace criteria.\n\n* \"Invert selection\" is {{msg-mw|invert}}\n* \"all\" is {{msg-mw|namespacesall}}",
 	"linter-namespace-mismatch": "Error message for lint errors for title search where the drop-down list selection of namespace and the namespace in title text are mismatched",
 	"linter-numerrors": "Shown after a category link to indicate how many errors are in that category. $1 is the number of errors, and can be used for PLURAL.\n{{Identical|Error}}",
 	"linter-page-edit": "Link text for edit link in {{msg-mw|linter-page-title-edit}}\n{{Identical|Edit}}",

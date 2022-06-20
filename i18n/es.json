@@ -52,7 +52,6 @@
 	"linter-category-wikilink-in-extlink": "Enlaces en enlaces",
 	"linter-category-wikilink-in-extlink-desc": "Estas páginas tienen enlaces en enlaces externos que podría ser fijado",
 	"linter-desc": "Supervisa los errores informados por un servicio comprobador externo y los muestra a los usuarios",
-	"linter-lints-for-single-page-desc": "Mostrar todos los errores de sintaxis para una página concreta",
 	"linter-invalid-title": "No se ha encontrado el espacio de nombres o el título de la página, o está mal formado",
 	"linter-form-namespace": "Espacio de nombres:",
 	"linter-form-title-prefix": "Prefijo del título:",

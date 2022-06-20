@@ -45,7 +45,6 @@
 	"linter-category-unclosed-quotes-in-heading-desc": "Следните страници съдържат незатворена кавичка в заглавие на раздел, която вследствие на това има обхват  извън съдържанието (table of contents).",
 	"linter-category-wikilink-in-extlink": "Препратки в препратки",
 	"linter-category-wikilink-in-extlink-desc": "Тези страници съдържат уикипрепратки във външни препратки, които могат да бъдат коригирани",
-	"linter-lints-for-single-page-desc": "Показване на всички грешки за определена страница",
 	"linter-form-namespace": "Именно пространство:",
 	"linter-heading-high-priority": "Висок приоритет",
 	"linter-heading-low-priority": "Нисък приоритет",
