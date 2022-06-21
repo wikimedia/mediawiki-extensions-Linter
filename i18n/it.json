@@ -48,7 +48,7 @@
 	"linter-category-wikilink-in-extlink-desc": "Queste pagine hanno wikilink in collegamenti esterni che potrebbero essere corretti",
 	"linter-desc": "Traccia gli errori di validazione Lint da un servizio esterno e li mostra agli utenti.",
 	"linter-form-namespace": "Namespace:",
-	"linter-form-title-prefix": "Lettere iniziali:",
+	"linter-form-title-prefix": "Inserisci il prefisso o un titolo completo:",
 	"linter-heading-high-priority": "Alta priorità",
 	"linter-heading-low-priority": "Bassa priorità",
 	"linter-heading-medium-priority": "Priorità media",
