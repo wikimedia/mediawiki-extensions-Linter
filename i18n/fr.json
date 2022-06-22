@@ -17,7 +17,7 @@
 			"Wladek92"
 		]
 	},
-	"linterrors": "Erreurs de lint",
+	"linterrors": "Erreurs d’analyse Lint",
 	"linter-category-bogus-image-options": "Options de fichier factices",
 	"linter-category-bogus-image-options-desc": "Ces pages ont des fichiers avec des options factices.",
 	"linter-category-deletable-table-tag": "Balise de tableau qui devrait être supprimée",
@@ -54,7 +54,7 @@
 	"linter-category-unclosed-quotes-in-heading-desc": "Ces pages ont une citation non close dans l’entête, qui amène un débordement de la table des matières.",
 	"linter-category-wikilink-in-extlink": "Liens dans les liens",
 	"linter-category-wikilink-in-extlink-desc": "Ces pages ont des liens wiki dans des liens externes devant être corrigés",
-	"linter-desc": "Tracer les erreurs de lint depuis un service externe et les afficher aux utilisateurs",
+	"linter-desc": "Tracer les erreurs d’analyse Lint depuis un service externe et les afficher aux utilisateurs",
 	"linter-form-namespace": "Espace de noms :",
 	"linter-heading-high-priority": "Priorité haute",
 	"linter-heading-low-priority": "Priorité basse",
@@ -82,8 +82,8 @@
 	"linter-pager-tidy-whitespace-bug-details": "Anomalie de l’analyse des blancs",
 	"linter-pager-title": "Titre de la page",
 	"linter-pager-unclosed-quotes-in-heading-details": "Apostrophes non fermées dans un titre, qui débordent de la table des matières",
-	"linterrors-subpage": "Erreurs de lint : $1",
+	"linterrors-subpage": "Erreurs d’analyse Lint : $1",
 	"linterrors-summary": "<strong>Note</strong> : Les compteurs pour les catégories ne sont pas justes, mais basés sur des estimations.",
 	"multi-part-template-block": "Résultat fourni par plus d'un modèle",
-	"pageinfo-linter": "Erreurs de Lint"
+	"pageinfo-linter": "Erreurs d’analyse Lint"
 }
