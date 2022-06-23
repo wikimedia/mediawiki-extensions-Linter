@@ -102,8 +102,7 @@ class SpecialLintErrors extends SpecialPage {
 		// Check all titles for malformation regardless of exact match or prefix match
 		try {
 			$titleElements = MediaWikiServices::getInstance()->getTitleParser()->parseTitle( $title );
-		}
-		catch ( MalformedTitleException  $e ) {
+		} catch ( MalformedTitleException  $e ) {
 			return [ 'titlefield' => null, 'error' => 'linter-invalid-title' ];
 		}
 
