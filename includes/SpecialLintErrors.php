@@ -215,7 +215,7 @@ class SpecialLintErrors extends SpecialPage {
 
 			$title = $this->getRequest()->getText( 'titlecategorysearch' );
 			// For category based searches, allow an undefined title to display all records
-			if ( !isset( $params['titlecategorysearch'] ) && $title === '' ) {
+			if ( $title === '' ) {
 				$titleCategorySearch = [ 'titlefield' => '', 'namespace' => $ns, 'pageid' => null ];
 			} else {
 				$titleCategorySearch = $this->cleanTitle( $title, $ns, $invert );
