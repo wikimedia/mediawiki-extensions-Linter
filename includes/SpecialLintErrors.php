@@ -159,24 +159,25 @@ class SpecialLintErrors extends SpecialPage {
 	 * @param string|null $par
 	 */
 	public function execute( $par ) {
-		$params = $this->getRequest()->getQueryValues();
+		$request = $this->getRequest();
+		$out = $this->getOutput();
+
+		$params = $request->getQueryValues();
 
 		$this->setHeaders();
 		$this->outputHeader( $par || isset( $params[ 'titlesearch' ] ) ? 'disable-summary' : '' );
 
-		$ns = $this->getRequest()->getIntOrNull( 'namespace' );
-		$invert = $this->getRequest()->getBool( 'invert' );
-		$exactMatch = $this->getRequest()->getBool( 'exactmatch', true );
+		$ns = $request->getIntOrNull( 'namespace' );
+		$invert = $request->getBool( 'invert' );
+		$exactMatch = $request->getBool( 'exactmatch', true );
 
 		// If the request contains a 'titlesearch' parameter, then the user entered a page title
 		// or just the first few characters of the title. They also may have entered the first few characters
 		// of a custom namespace (just text before a :) to search for and pressed the associated Submit button.
 		if ( $par === null && isset( $params[ 'titlesearch' ] ) ) {
-			$out = $this->getOutput();
-
 			$out->addBacklinkSubtitle( $this->getPageTitle() );
 
-			$title = $this->getRequest()->getText( 'titlesearch' );
+			$title = $request->getText( 'titlesearch' );
 			$titleSearch = $this->cleanTitle( $title, $ns, $invert );
 
 			if ( $titleSearch[ 'titlefield' ] !== null ) {
@@ -205,7 +206,6 @@ class SpecialLintErrors extends SpecialPage {
 			$this->showCategoryListings( $catManager );
 		} else {
 			$this->addHelpLink( "Help:Extension:Linter/{$this->category}" );
-			$out = $this->getOutput();
 			$out->setPageTitle(
 				$this->msg( 'linterrors-subpage',
 					$this->msg( "linter-category-{$this->category}" )->text()
@@ -213,7 +213,7 @@ class SpecialLintErrors extends SpecialPage {
 			);
 			$out->addBacklinkSubtitle( $this->getPageTitle() );
 
-			$title = $this->getRequest()->getText( 'titlecategorysearch' );
+			$title = $request->getText( 'titlecategorysearch' );
 			// For category based searches, allow an undefined title to display all records
 			if ( $title === '' ) {
 				$titleCategorySearch = [ 'titlefield' => '', 'namespace' => $ns, 'pageid' => null ];
