@@ -12,5 +12,6 @@
 	"apihelp-query+linterrors-param-namespace": "Solo includer errores Lint del spatios de nomines specificate",
 	"apihelp-query+linterrors-param-pageid": "Solo includer errores Lint del paginas specificate per lor ID",
 	"apihelp-query+linterrors-param-title": "Solo includer errores Lint del pagina con le titulo specificate",
-	"apihelp-query+linterrors-example-1": "Obtener tote le errores Lint del categoria obsolete-tag"
+	"apihelp-query+linterrors-example-1": "Obtener tote le errores Lint del categoria obsolete-tag",
+	"apihelp-record-lint-param-page": "Titulo del pagina"
 }
