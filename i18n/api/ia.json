@@ -13,5 +13,14 @@
 	"apihelp-query+linterrors-param-pageid": "Solo includer errores Lint del paginas specificate per lor ID",
 	"apihelp-query+linterrors-param-title": "Solo includer errores Lint del pagina con le titulo specificate",
 	"apihelp-query+linterrors-example-1": "Obtener tote le errores Lint del categoria obsolete-tag",
-	"apihelp-record-lint-param-page": "Titulo del pagina"
+	"apihelp-record-lint-description": "Registrar un error de analyse Lint in le base de datos",
+	"apihelp-record-lint-summary": "Registrar un error de analyse Lint in le base de datos",
+	"apihelp-record-lint-param-data": "Datos sur le error, codificate in JSON",
+	"apihelp-record-lint-param-page": "Titulo del pagina",
+	"apihelp-record-lint-param-revision": "Le ID del version in que le error ha essite trovate",
+	"apihelp-query+linterstats-description": "Obtener le numero de errores de analyse Lint in cata categoria",
+	"apihelp-query+linterstats-summary": "Obtener le numero de errores Lint in cata categoria",
+	"apihelp-query+linterstats-example-1": "Obtener le numero de errores de analyse Lint in cata categoria",
+	"apierror-linter-invalid-data": "Datos invalide",
+	"apierror-linter-invalid-title": "Titulo invalide, inexistente o obsolete"
 }
