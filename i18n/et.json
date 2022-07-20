@@ -43,6 +43,7 @@
 	"linter-category-wikilink-in-extlink-desc": "Neil lehekülgedel on välislinkide sees vikilinke, mille saab parandada.",
 	"linter-desc": "Võimaldab välisest teenusest pärit Linteri vigu jälgida ja neid kasutajatele näidata.",
 	"linter-lints-for-single-page-desc": "Kõik linteri vead kindlal leheküljel",
+	"linter-invalid-title": "Nimeruum ja/või lehekülje pealkiri leidmatu või väärdunud",
 	"linter-form-namespace": "Nimeruum:",
 	"linter-form-title-prefix": "Pealkirja eesliide:",
 	"linter-heading-high-priority": "Esmajärgulise tähtsusega",
