@@ -46,6 +46,7 @@
 	"linter-pager-tidy-whitespace-bug-details": "Tidy tomromfeil",
 	"linter-pager-title": "Sidetittel",
 	"linterrors-subpage": "Lint-feil: $1",
+	"linterrors-summary": "<strong>Merk:</strong> Tala for kategoriane er ikkje nøyaktige, men baserte på estimat.",
 	"multi-part-template-block": "Resultatet kjem ikkje frå ein enkelt mal",
 	"pageinfo-linter": "Lint-feil"
 }
