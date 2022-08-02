@@ -24,6 +24,7 @@ use FormatJson;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use WikiMap;
+use Wikimedia\Rdbms\DBConnRef;
 
 /**
  * Database logic
@@ -69,13 +70,21 @@ class Database {
 	}
 
 	/**
+	 * @param int $mode DB_PRIMARY or DB_REPLICA
+	 * @return DBConnRef
+	 */
+	public static function getDBConnectionRef( int $mode ): DBConnRef {
+		return MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnectionRef( $mode );
+	}
+
+	/**
 	 * Get a specific LintError by id
 	 *
 	 * @param int $id linter_id
 	 * @return bool|LintError
 	 */
 	public function getFromId( $id ) {
-		$row = wfGetDB( DB_REPLICA )->selectRow(
+		$row = self::getDBConnectionRef( DB_REPLICA )->selectRow(
 			'linter',
 			[ 'linter_cat', 'linter_params', 'linter_start', 'linter_end' ],
 			[ 'linter_id' => $id, 'linter_page' => $this->pageId ],
@@ -121,7 +130,7 @@ class Database {
 	 * @return LintError[]
 	 */
 	public function getForPage() {
-		$rows = wfGetDB( DB_REPLICA )->select(
+		$rows = self::getDBConnectionRef( DB_REPLICA )->select(
 			'linter',
 			[
 				'linter_id', 'linter_cat', 'linter_start',
@@ -214,7 +223,7 @@ class Database {
 	 */
 	public function setForPage( $errors ) {
 		$previous = $this->getForPage();
-		$dbw = wfGetDB( DB_PRIMARY );
+		$dbw = self::getDBConnectionRef( DB_PRIMARY );
 		if ( !$previous && !$errors ) {
 			return [ 'deleted' => [], 'added' => [] ];
 		} elseif ( !$previous && $errors ) {
@@ -290,7 +299,7 @@ class Database {
 	 * @return int
 	 */
 	private function getTotalsEstimate( $catId ) {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = self::getDBConnectionRef( DB_REPLICA );
 		// First see if there are no rows, or a moderate number
 		// within the limit specified by the MAX_ACCURATE_COUNT.
 		// The distinction between 0, a few and a lot is important
@@ -328,7 +337,7 @@ class Database {
 	 * @return int[]
 	 */
 	private function getTotalsAccurate( $conds = [] ) {
-		$rows = wfGetDB( DB_REPLICA )->select(
+		$rows = self::getDBConnectionRef( DB_REPLICA )->select(
 			'linter',
 			[ 'linter_cat', 'COUNT(*) AS count' ],
 			$conds,
