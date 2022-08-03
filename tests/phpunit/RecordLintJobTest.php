@@ -24,6 +24,7 @@ use ContentHandler;
 use MediaWiki\Linter\Database;
 use MediaWiki\Linter\LintError;
 use MediaWiki\Linter\RecordLintJob;
+use stdClass;
 use Title;
 use User;
 
@@ -33,10 +34,10 @@ use User;
  */
 class RecordLintJobTest extends \MediaWikiIntegrationTestCase {
 	/**
+	 * @param string $titleText
 	 * @return array
 	 */
-	private function createTitleAndPage() {
-		$titleText = 'TestPage';
+	private function createTitleAndPage( string $titleText ) {
 		$userName = 'LinterUser';
 		$baseText = 'wikitext test content';
 
@@ -57,6 +58,40 @@ class RecordLintJobTest extends \MediaWikiIntegrationTestCase {
 		];
 	}
 
+	/**
+	 * Get just the lint error linter_tag field value for a page
+	 *
+	 * @param int $pageId
+	 * @return stdClass|bool
+	 */
+	private static function getTagForPage( int $pageId ) {
+		return Database::getDBConnectionRef( DB_REPLICA )->selectRow(
+			'linter',
+			[
+				'linter_tag'
+			],
+			[ 'linter_page' => $pageId ],
+			__METHOD__
+		);
+	}
+
+	/**
+	 * Get just the lint error linter_template field value for a page
+	 *
+	 * @param int $pageId
+	 * @return stdClass|bool
+	 */
+	private static function getTemplateForPage( int $pageId ) {
+		return Database::getDBConnectionRef( DB_REPLICA )->selectRow(
+			'linter',
+			[
+				'linter_template'
+			],
+			[ 'linter_page' => $pageId ],
+			__METHOD__
+		);
+	}
+
 	public function testRun() {
 		$error = [
 			'type' => 'fostered',
@@ -64,19 +99,52 @@ class RecordLintJobTest extends \MediaWikiIntegrationTestCase {
 			'params' => [],
 			'dbid' => null,
 		];
-		$titleAndPage = $this->createTitleAndPage();
-		$job = new RecordLintJob( $titleAndPage['title'], [
+		$titleAndPage = $this->createTitleAndPage( 'TestPage' );
+		$job = new RecordLintJob( $titleAndPage[ 'title' ], [
 			'errors' => [ $error ],
-			'revision' => $titleAndPage['revID']
+			'revision' => $titleAndPage[ 'revID' ]
 		] );
 		$this->assertTrue( $job->run() );
+
+		$db = new Database( $titleAndPage[ 'pageID' ] );
 		/** @var LintError[] $errorsFromDb */
-		$errorsFromDb = array_values( ( new Database( $titleAndPage['pageID'] ) )->getForPage() );
+		$errorsFromDb = array_values( $db->getForPage() );
+		$this->assertCount( 1, $errorsFromDb );
+		$this->assertInstanceOf( LintError::class, $errorsFromDb[ 0 ] );
+		$this->assertEquals( $error[ 'type' ], $errorsFromDb[ 0 ]->category );
+		$this->assertEquals( $error[ 'location' ], $errorsFromDb[ 0 ]->location );
+		$this->assertEquals( $error[ 'params' ], $errorsFromDb[ 0 ]->params );
+	}
+
+	public function testWriteTagAndTemplate() {
+		$this->overrideConfigValue( 'LinterWriteTagAndTemplateColumnsStage', true );
+
+		$error = [
+			'type' => 'obsolete-tag',
+			'location' => [ 0, 10 ],
+			'params' => [ "name" => "center",
+				"templateInfo" => [ "name" => "Template:Echo" ] ],
+			'dbid' => null,
+		];
+		$titleAndPage = $this->createTitleAndPage( 'TestPage2' );
+		$job = new RecordLintJob( $titleAndPage[ 'title' ], [
+			'errors' => [ $error ],
+			'revision' => $titleAndPage[ 'revID' ]
+		] );
+		$this->assertTrue( $job->run() );
+
+		$pageId = $titleAndPage[ 'pageID' ];
+		$db = new Database( $pageId );
+		$errorsFromDb = array_values( $db->getForPage() );
 		$this->assertCount( 1, $errorsFromDb );
 		$this->assertInstanceOf( LintError::class, $errorsFromDb[0] );
-		$this->assertEquals( $error['type'], $errorsFromDb[0]->category );
-		$this->assertEquals( $error['location'], $errorsFromDb[0]->location );
-		$this->assertEquals( $error['params'], $errorsFromDb[0]->params );
+		$this->assertEquals( $error[ 'type' ], $errorsFromDb[0]->category );
+		$this->assertEquals( $error[ 'location' ], $errorsFromDb[0]->location );
+		$this->assertEquals( $error[ 'params' ], $errorsFromDb[0]->params );
+		$tag = self::getTagForPage( $pageId )->linter_tag ?? '';
+		$this->assertEquals( $error[ 'params' ][ 'name' ], $tag );
+		$template = self::getTemplateForPage( $pageId )->linter_template ?? '';
+		$this->assertEquals( $error[ 'params' ][ 'templateInfo' ][ 'name' ], $template );
 	}
 
 	public function testDropInlineMediaCaptionLints() {
@@ -86,7 +154,7 @@ class RecordLintJobTest extends \MediaWikiIntegrationTestCase {
 			'params' => [],
 			'dbid' => null,
 		];
-		$titleAndPage = $this->createTitleAndPage();
+		$titleAndPage = $this->createTitleAndPage( 'TestPage3' );
 		$job = new RecordLintJob( $titleAndPage['title'], [
 			'errors' => [ $error ],
 			'revision' => $titleAndPage['revID']

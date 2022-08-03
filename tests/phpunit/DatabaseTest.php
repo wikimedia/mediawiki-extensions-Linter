@@ -64,8 +64,10 @@ class DatabaseTest extends MediaWikiIntegrationTestCase {
 	private function createManyLintErrors( $lintDb, $errorCount ) {
 		$manyLintErrors = [];
 		for ( $i = 0; $i < $errorCount; $i++ ) {
+			$templateName = "Template:Echo";
 			$manyLintErrors[] = new LintError(
-				'obsolete-tag', [ 15, 20 + $i ], [ 'name' => 'big' ]
+				'obsolete-tag', [ 15, 20 + $i ], [ 'name' => 'big',
+					"templateInfo" => [ "name" => $templateName ] ]
 			);
 		}
 		$lintDb->setForPage( $manyLintErrors );

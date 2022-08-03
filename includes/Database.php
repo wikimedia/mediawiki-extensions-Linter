@@ -159,40 +159,39 @@ class Database {
 	 * @return array
 	 */
 	private function serializeError( LintError $error ) {
-		// To enable 756101 for select test wikis, set the following code in wmf-config/InitializeSetting.php
-		// to enable the Linter database code to write the namespace info into the recently added column.
-		// 'wgLinterWriteNamespaceColumnStage' => [
-		//		'default' => false,
-		//		'labswiki' => true,
-		//		'testwiki' => true
-		// ]
-		// To debug on a local installation, add the "LinterWriteNamespaceColumnsStage" definition in extension.json
-
 		$mwServices = MediaWikiServices::getInstance();
 		$config = $mwServices->getMainConfig();
-		$enableWriteNamespaceColumn = $config->get( 'LinterWriteNamespaceColumnStage' );
 
-		// Yes this code is duplicated at this stage, and will be unduplicated once the migrate stage patch set
-		// is completed and all dual mode code is removed.
-		if ( $enableWriteNamespaceColumn === false || $this->namespaceID === null ) {
-			return [
-				'linter_page' => $this->pageId,
-				'linter_cat' => $this->categoryManager->getCategoryId( $error->category, $error->catId ),
-				'linter_params' => FormatJson::encode( $error->params, false, FormatJson::ALL_OK ),
-				'linter_start' => $error->location[0],
-				'linter_end' => $error->location[1],
-			];
-		} else {
-			return [
-				'linter_page' => $this->pageId,
-				// set the linter_namespace field if the capability is enabled by wgLinterWriteNamespaceColumnStage
-				'linter_namespace' => $this->namespaceID,
-				'linter_cat' => $this->categoryManager->getCategoryId( $error->category, $error->catId ),
-				'linter_params' => FormatJson::encode( $error->params, false, FormatJson::ALL_OK ),
-				'linter_start' => $error->location[0],
-				'linter_end' => $error->location[1],
-			];
+		$result = [
+			'linter_page' => $this->pageId,
+			'linter_cat' => $this->categoryManager->getCategoryId( $error->category, $error->catId ),
+			'linter_params' => FormatJson::encode( $error->params, false, FormatJson::ALL_OK ),
+			'linter_start' => $error->location[ 0 ],
+			'linter_end' => $error->location[ 1 ]
+		];
+
+		// To enable 756101
+		$enableWriteNamespaceColumn = $config->get( 'LinterWriteNamespaceColumnStage' );
+		if ( $enableWriteNamespaceColumn && $this->namespaceID !== null ) {
+			$result[ 'linter_namespace' ] = $this->namespaceID;
 		}
+
+		// To enable 720130
+		$enableWriteTagAndTemplateColumns = $config->get( 'LinterWriteTagAndTemplateColumnsStage' );
+		if ( $enableWriteTagAndTemplateColumns ) {
+			$templateInfo = $error->templateInfo ?? '';
+			if ( is_array( $templateInfo ) ) {
+				if ( isset( $templateInfo[ 'multiPartTemplateBlock' ] ) ) {
+					$templateInfo = 'multi-part-template-block';
+				} else {
+					$templateInfo = $templateInfo[ 'name' ] ?? '';
+				}
+			}
+			$result[ 'linter_template' ] = $templateInfo;
+			$result[ 'linter_tag' ] = $error->tagInfo ?? '';
+		}
+
+		return $result;
 	}
 
 	/**

@@ -47,9 +47,14 @@ class LintError {
 	public $params;
 
 	/**
-	 * @var string[]|null
+	 * @var array|null
 	 */
 	public $templateInfo;
+
+	/**
+	 * @var string|null
+	 */
+	public $tagInfo;
 
 	/**
 	 * Optional hint for the linter category ID.
@@ -78,6 +83,7 @@ class LintError {
 		$this->location = $location;
 		// Convenient accessors for all errors
 		$this->templateInfo = $params['templateInfo'] ?? null;
+		$this->tagInfo = $params['name'] ?? null;
 	}
 
 	/**
