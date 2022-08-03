@@ -168,11 +168,9 @@ class Database {
 		// ]
 		// To debug on a local installation, add the "LinterWriteNamespaceColumnsStage" definition in extension.json
 
-		if ( array_key_exists( 'wgLinterWriteNamespaceColumnStage', $GLOBALS ) ) {
-			$enableWriteNamespaceColumn = $GLOBALS[ 'wgLinterWriteNamespaceColumnStage' ];
-		} else {
-			$enableWriteNamespaceColumn = false;
-		}
+		$mwServices = MediaWikiServices::getInstance();
+		$config = $mwServices->getMainConfig();
+		$enableWriteNamespaceColumn = $config->get( 'LinterWriteNamespaceColumnStage' );
 
 		// Yes this code is duplicated at this stage, and will be unduplicated once the migrate stage patch set
 		// is completed and all dual mode code is removed.
@@ -378,8 +376,6 @@ class Database {
 	 * @param array $changes
 	 */
 	public function updateStats( array $changes ) {
-		global $wgLinterStatsdSampleFactor;
-
 		$mwServices = MediaWikiServices::getInstance();
 
 		$totalsLookup = new TotalsLookup(
@@ -387,7 +383,9 @@ class Database {
 			$mwServices->getMainWANObjectCache()
 		);
 
-		if ( $wgLinterStatsdSampleFactor === false ) {
+		$linterStatsdSampleFactor = $mwServices->getMainConfig()->get( 'LinterStatsdSampleFactor' );
+
+		if ( $linterStatsdSampleFactor === false ) {
 			// Don't send to statsd, but update cache with $changes
 			$raw = $changes['added'];
 			foreach ( $changes['deleted'] as $cat => $count ) {
@@ -406,7 +404,7 @@ class Database {
 				}
 			}
 			return;
-		} elseif ( mt_rand( 1, $wgLinterStatsdSampleFactor ) != 1 ) {
+		} elseif ( mt_rand( 1, $linterStatsdSampleFactor ) != 1 ) {
 			return;
 		}
 

@@ -21,6 +21,7 @@
 namespace MediaWiki\Linter;
 
 use InvalidArgumentException;
+use MediaWiki\MediaWikiServices;
 
 /**
  * Functions for lint error categories
@@ -67,8 +68,10 @@ class CategoryManager {
 	private $hasNoParams = [];
 
 	public function __construct() {
-		global $wgLinterCategories;
-		foreach ( $wgLinterCategories as $name => $info ) {
+		$mwServices = MediaWikiServices::getInstance();
+		$linterCategories = $mwServices->getMainConfig()->get( 'LinterCategories' );
+
+		foreach ( $linterCategories as $name => $info ) {
 			if ( $info['enabled'] ) {
 				$this->categories[$info['priority']][] = $name;
 			}

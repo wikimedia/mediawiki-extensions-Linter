@@ -22,6 +22,7 @@ namespace MediaWiki\Linter;
 
 use ApiBase;
 use FormatJson;
+use MediaWiki\MediaWikiServices;
 use Wikimedia\IPSet;
 use Wikimedia\ParamValidator\ParamValidator;
 
@@ -32,9 +33,10 @@ use Wikimedia\ParamValidator\ParamValidator;
 class ApiRecordLint extends ApiBase {
 
 	public function execute() {
-		global $wgLinterSubmitterWhitelist;
+		$mwServices = MediaWikiServices::getInstance();
+		$linterSubmitterAllowlist = $mwServices->getMainConfig()->get( 'LinterSubmitterWhitelist' );
 		$ipSet = new IPSet(
-			array_keys( array_filter( $wgLinterSubmitterWhitelist ) )
+			array_keys( array_filter( $linterSubmitterAllowlist ) )
 		);
 		if ( !$ipSet->match( $this->getRequest()->getIP() ) ) {
 			$this->dieWithError( 'apierror-linter-invalid-ip', 'invalid-ip' );
