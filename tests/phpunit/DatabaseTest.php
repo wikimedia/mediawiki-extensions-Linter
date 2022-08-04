@@ -115,23 +115,28 @@ class DatabaseTest extends MediaWikiIntegrationTestCase {
 		$resultEstimatedTotals = $lintDb->getTotals();
 		$this->assertEquals( $resultTotals, $resultEstimatedTotals );
 
-		// For error counts greater than MAX_ACCURATE_COUNT, both error
-		// count methods should NOT return the same count in this test scenario
-		// because previously added and deleted records will be included
-		// in the estimated count which is normal.
-		self::createManyLintErrors( $lintDb, Database::MAX_ACCURATE_COUNT + 1 );
-		$resultTotals = $lintDb->getTotalsForPage();
-		$resultEstimatedTotals = $lintDb->getTotals();
-		$this->assertNotEquals( $resultTotals, $resultEstimatedTotals );
-
-		// For error counts greatly above the MAX_ACCURATE_COUNT, the estimated
-		// count method should return a greater count in this test scenario
-		// because previously added and deleted records will be included
-		// in the estimated count which is normal.
-		self::createManyLintErrors( $lintDb, Database::MAX_ACCURATE_COUNT * 10 );
-		$resultTotals = $lintDb->getTotalsForPage();
-		$resultEstimatedTotals = $lintDb->getTotals();
-		$this->assertGreaterThan( $resultTotals, $resultEstimatedTotals );
+		// FIXME: These tests seem to be making false assumptions about
+		// `estimateRowCount()`.  "EXPLAIN" is just going to give an estimate of
+		// the row count, it doesn't seem like there's any guarantee that it'll
+		// be higher or lower.
+		//
+		// // For error counts greater than MAX_ACCURATE_COUNT, both error
+		// // count methods should NOT return the same count in this test scenario
+		// // because previously added and deleted records will be included
+		// // in the estimated count which is normal.
+		// self::createManyLintErrors( $lintDb, Database::MAX_ACCURATE_COUNT + 1 );
+		// $resultTotals = $lintDb->getTotalsForPage();
+		// $resultEstimatedTotals = $lintDb->getTotals();
+		// $this->assertNotEquals( $resultTotals, $resultEstimatedTotals );
+		//
+		// // For error counts greatly above the MAX_ACCURATE_COUNT, the estimated
+		// // count method should return a greater count in this test scenario
+		// // because previously added and deleted records will be included
+		// // in the estimated count which is normal.
+		// self::createManyLintErrors( $lintDb, Database::MAX_ACCURATE_COUNT * 10 );
+		// $resultTotals = $lintDb->getTotalsForPage();
+		// $resultEstimatedTotals = $lintDb->getTotals();
+		// $this->assertGreaterThan( $resultTotals, $resultEstimatedTotals );
 	}
 
 }
