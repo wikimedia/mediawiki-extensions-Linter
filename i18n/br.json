@@ -13,7 +13,7 @@
 	"linter-heading-high-priority": "Priorelezh uhel",
 	"linter-heading-low-priority": "Priorelezh izhel",
 	"linter-heading-medium-priority": "Priorelezh etre",
-	"linter-numerrors": "$1 fazi",
+	"linter-numerrors": "($1 {{PLURAL:$1|fazi}})",
 	"linter-pager-deletable-table-tag-details": "Balizenn taolenn a zlefe bezañ lamet",
 	"linter-pager-misc-tidy-replacement-issues-details": "Fazioù balizennoù liesseurt",
 	"linter-pager-misnested-tag-details": "Balizenn emboested fall",
