@@ -80,6 +80,34 @@ class SpecialLintErrors extends SpecialPage {
 				'default' => true
 			]
 		];
+
+		$mwServices = MediaWikiServices::getInstance();
+		$config = $mwServices->getMainConfig();
+		$enableUserInterfaceTagAndTemplateStage = $config->get( 'LinterUserInterfaceTagAndTemplateStage' );
+		if ( $enableUserInterfaceTagAndTemplateStage ) {
+			$selectTemplateOptions = [
+				(string)$this->msg( 'linter-form-template-option-all' )->escaped() => 'all',
+				(string)$this->msg( 'linter-form-template-option-with' )->escaped() => 'with',
+				(string)$this->msg( 'linter-form-template-option-without' )->escaped() => 'without',
+			];
+			$htmlTags = new HtmlTags( $this );
+			$tagAndTemplateFields = [
+				'tag' => [
+					'type' => 'select',
+					'name' => 'tag',
+					'label-message' => 'linter-form-tag',
+					'options' => $htmlTags->getAllowedHTMLTags()
+				],
+				'template' => [
+					'type' => 'select',
+					'name' => 'template',
+					'label-message' => 'linter-form-template',
+					'options' => $selectTemplateOptions
+				]
+			];
+			$fields = array_merge( $fields, $tagAndTemplateFields );
+		}
+
 		$form = HTMLForm::factory( 'ooui', $fields, $this->getContext() );
 		$form->setWrapperLegend( true );
 		if ( $this->category !== null ) {
@@ -170,12 +198,22 @@ class SpecialLintErrors extends SpecialPage {
 		$ns = $request->getIntOrNull( 'namespace' );
 		$invert = $request->getBool( 'invert' );
 		$exactMatch = $request->getBool( 'exactmatch', true );
+		$tagName = $this->getRequest()->getText( 'tag' );
+		// map command line tag name through associative array to protect request from a SQL injection security risk
+		$htmlTags = new HtmlTags( $this );
+		$allowedHtmlTags = $htmlTags->getAllowedHTMLTags();
+		$tag = $allowedHtmlTags[ $tagName ] ?? 'all';
+		$template = $this->getRequest()->getText( 'template' );
 
 		// If the request contains a 'titlesearch' parameter, then the user entered a page title
 		// or just the first few characters of the title. They also may have entered the first few characters
 		// of a custom namespace (just text before a :) to search for and pressed the associated Submit button.
-		if ( $par === null && isset( $params[ 'titlesearch' ] ) ) {
-			$out->addBacklinkSubtitle( $this->getPageTitle() );
+		// Added the pageback parameter to inform the code that the '<- Special:LintErrors' link had be used to allow
+		// the UI to redisplay with previous form values, instead of just resubmitting the query.
+		if ( $par === null && isset( $params[ 'titlesearch' ] ) && !isset( $params[ 'pageback'] ) ) {
+			array_shift( $params );
+			$params = array_merge( [ 'pageback' => true ], $params );
+			$out->addBacklinkSubtitle( $this->getPageTitle(), $params );
 
 			$title = $request->getText( 'titlesearch' );
 			$titleSearch = $this->cleanTitle( $title, $ns, $invert );
@@ -187,7 +225,7 @@ class SpecialLintErrors extends SpecialPage {
 				$pager = new LintErrorsPager(
 					$this->getContext(), null, $this->getLinkRenderer(),
 					$catManager, $titleSearch[ 'namespace' ], $invert, $exactMatch,
-					$titleSearch[ 'titlefield' ]
+					$titleSearch[ 'titlefield' ], $template, $tag
 				);
 				$out->addParserOutput( $pager->getFullOutput() );
 			} else {
@@ -226,7 +264,7 @@ class SpecialLintErrors extends SpecialPage {
 				$pager = new LintErrorsPager(
 					$this->getContext(), $this->category, $this->getLinkRenderer(),
 					$catManager, $titleCategorySearch[ 'namespace' ], $invert, $exactMatch,
-					$titleCategorySearch[ 'titlefield' ]
+					$titleCategorySearch[ 'titlefield' ], $template, $tag
 				);
 				$out->addParserOutput( $pager->getFullOutput() );
 			} else {

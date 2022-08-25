@@ -79,6 +79,17 @@ class LintErrorsPager extends TablePager {
 	private $title;
 
 	/**
+	 * Allowed values are keys 'all', 'with' or 'without'
+	 * @var string
+	 */
+	private $throughTemplate;
+
+	/**
+	 * @var string
+	 */
+	private $tag;
+
+	/**
 	 * @param IContextSource $context
 	 * @param string|null $category
 	 * @param LinkRenderer $linkRenderer
@@ -87,9 +98,11 @@ class LintErrorsPager extends TablePager {
 	 * @param bool $invertNamespace
 	 * @param bool $exactMatch
 	 * @param string $title
+	 * @param string $throughTemplate
+	 * @param string $tag
 	 */
 	public function __construct( IContextSource $context, $category, LinkRenderer $linkRenderer,
-		CategoryManager $catManager, $namespace, $invertNamespace, $exactMatch, $title
+		CategoryManager $catManager, $namespace, $invertNamespace, $exactMatch, $title, $throughTemplate, $tag
 	) {
 		$this->category = $category;
 		$this->categoryManager = $catManager;
@@ -103,6 +116,8 @@ class LintErrorsPager extends TablePager {
 		$this->invertNamespace = $invertNamespace;
 		$this->exactMatch = $exactMatch;
 		$this->title = $title;
+		$this->throughTemplate = $throughTemplate;
+		$this->tag = $tag;
 		$this->haveParserMigrationExt = ExtensionRegistry::getInstance()->isLoaded( 'ParserMigration' );
 		parent::__construct( $context );
 	}
@@ -131,6 +146,33 @@ class LintErrorsPager extends TablePager {
 			}
 		} else {
 			$conds[] = 'page_title' . $this->mDb->buildLike( $this->title, $this->mDb->anyString() );
+		}
+
+		$mwServices = MediaWikiServices::getInstance();
+		$config = $mwServices->getMainConfig();
+		$enableUserInterfaceTagAndTemplateStage = $config->get( 'LinterUserInterfaceTagAndTemplateStage' );
+		$fieldTagExists = $this->mDb->fieldExists( 'linter', 'linter_tag', __METHOD__ );
+		if ( $enableUserInterfaceTagAndTemplateStage && $fieldTagExists ) {
+			switch ( $this->throughTemplate ) {
+				case 'with':
+					$conds[] = "linter_template != ''";
+					break;
+				case 'without':
+					$conds[] = "linter_template = ''";
+					break;
+				case 'all':
+				default:
+					break;
+			}
+			switch ( $this->tag ) {
+				case 'all':
+					break;
+				default:
+					$htmlTags = new HtmlTags( $this );
+					if ( $htmlTags->checkAllowedHTMLTags( $this->tag ) ) {
+						$conds[] = 'linter_tag = ' . $this->mDb->addQuotes( $this->tag );
+					}
+			}
 		}
 
 		return [

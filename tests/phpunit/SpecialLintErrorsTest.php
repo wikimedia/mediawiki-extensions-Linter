@@ -53,6 +53,12 @@ class SpecialLintErrorsTest extends SpecialPageTestBase {
 			"(linter-category-$category-desc)",
 			$this->executeSpecialPage( $category, null, 'qqx' )[0]
 		);
+
+		$this->overrideConfigValue( 'LinterUserInterfaceTagAndTemplateStage', true );
+		// Verify new tag and template interfaces are present
+		$html = $this->executeSpecialPage( 'misnested-tag', null, 'qqx' )[0];
+		$this->assertStringContainsString( 'linter-form-template', $html );
+		$this->assertStringContainsString( 'linter-form-tag', $html );
 	}
 
 	/**
