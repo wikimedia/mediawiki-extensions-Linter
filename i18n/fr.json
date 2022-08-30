@@ -19,7 +19,7 @@
 	},
 	"linterrors": "Erreurs d’analyse Lint",
 	"linter-category-bogus-image-options": "Options de fichier erronées",
-	"linter-category-bogus-image-options-desc": "Ces pages ont des fichiers avec des options factices.",
+	"linter-category-bogus-image-options-desc": "Ces pages ont des fichiers avec des options erronées.",
 	"linter-category-deletable-table-tag": "Balise de tableau qui devrait être supprimée",
 	"linter-category-deletable-table-tag-desc": "Ces pages ont des balises de tableau qui devraient être supprimées.",
 	"linter-category-fostered": "Contenu mal placé",
