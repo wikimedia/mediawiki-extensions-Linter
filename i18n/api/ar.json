@@ -4,7 +4,8 @@
 			"Mr. Ibrahem",
 			"Shbib Al-Subaie",
 			"ديفيد",
-			"محمد أحمد عبد الفتاح"
+			"محمد أحمد عبد الفتاح",
+			"Cigaryno"
 		]
 	},
 	"apihelp-query+linterrors-description": "احصل على قائمة بأخطاء لنت",
@@ -23,7 +24,7 @@
 	"apihelp-query+linterstats-description": "الحصول على عدد من أخطاء lint في كل تصنيف",
 	"apihelp-query+linterstats-summary": "الحصول على عدد من أخطاء lint في كل تصنيف",
 	"apihelp-query+linterstats-example-1": "الحصول على عدد من أخطاء lint في كل تصنيف",
-	"apierror-linter-invalid-ip": "لم يكن عنوان اآيبي الخاص بك مدرجا في القائمة البيضاء للإبلاغ عن أخطاء lint",
+	"apierror-linter-invalid-ip": "عنوان اآيبي الخاص بك غير مسموح له للإبلاغ عن أخطاء lint",
 	"apierror-linter-invalid-data": "بيانات غير صالحة",
 	"apierror-linter-invalid-title": "عنوان غير صالح أو غير موجود أو قديم"
 }

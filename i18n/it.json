@@ -61,7 +61,7 @@
 	"linter-pager-bogus-image-options-details": "Parametro di \"File:\" inesistente",
 	"linter-pager-category-header": "Categoria",
 	"linter-pager-deletable-table-tag-details": "Tag \"table\" che dovrebbe essere cancellato",
-	"linter-pager-details-header": "Informazioni aggiuntive",
+	"linter-pager-details-header": "Ulteriori informazioni",
 	"linter-pager-html5-misnesting-details": "Annidamento (ora errato)",
 	"linter-pager-misc-tidy-replacement-issues-details": "Vari errori di markup",
 	"linter-pager-misnested-tag-details": "Tag annidato male",
