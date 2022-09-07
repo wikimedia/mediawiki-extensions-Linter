@@ -21,19 +21,21 @@
 namespace MediaWiki\Linter\Test;
 
 use ContentHandler;
+use Exception;
 use FauxRequest;
 use MediaWiki\Linter\CategoryManager;
 use MediaWiki\Linter\Database;
 use MediaWiki\Linter\LintError;
 use MediaWiki\Linter\RecordLintJob;
 use MediaWiki\Linter\SpecialLintErrors;
+use SpecialPageTestBase;
 use Title;
 use User;
 
 /**
- * @covers MediaWiki\Linter\SpecialLintErrors
+ * @covers \MediaWiki\Linter\SpecialLintErrors
  */
-class SpecialLintErrorsTest extends \SpecialPageTestBase {
+class SpecialLintErrorsTest extends SpecialPageTestBase {
 
 	protected function newSpecialPage() {
 		return new SpecialLintErrors();
@@ -190,19 +192,25 @@ class SpecialLintErrorsTest extends \SpecialPageTestBase {
 	private function createTitleAndPageAndLintErrorData(): array {
 		$pageData = [];
 		$pageData[] = [ 'name' => 'Lint Error One', 'ns' => 0,
-			'lintErrors' => [ [ 'type' => 'obsolete-tag', 'location' => [ 0, 10 ] ],
-							  [ 'type' => 'misnested-tag', 'location' => [ 20, 30 ] ] ]
+			'lintErrors' => [
+				[ 'type' => 'obsolete-tag', 'location' => [ 0, 10 ] ],
+				[ 'type' => 'misnested-tag', 'location' => [ 20, 30 ] ]
+			]
 		];
 		$pageData[] = [ 'name' => 'LintErrorTwo', 'ns' => 3,
 			'lintErrors' => [ [ 'type' => 'obsolete-tag', 'location' => [ 0, 10 ] ] ]
 		];
 		$pageData[] = [ 'name' => 'NotANamespace:LintErrorThree', 'ns' => 0,
-			'lintErrors' => [ [ 'type' => 'obsolete-tag', 'location' => [ 0, 10 ] ],
-							  [ 'type' => 'misnested-tag', 'location' => [ 20, 30 ] ] ]
+			'lintErrors' => [
+				[ 'type' => 'obsolete-tag', 'location' => [ 0, 10 ] ],
+				[ 'type' => 'misnested-tag', 'location' => [ 20, 30 ] ]
+			]
 		];
 		$pageData[] = [ 'name' => 'NotANamespace:LintErrorFour', 'ns' => 0,
-			'lintErrors' => [ [ 'type' => 'obsolete-tag', 'location' => [ 0, 10 ] ],
-							  [ 'type' => 'misnested-tag', 'location' => [ 20, 30 ] ] ]
+			'lintErrors' => [
+				[ 'type' => 'obsolete-tag', 'location' => [ 0, 10 ] ],
+				[ 'type' => 'misnested-tag', 'location' => [ 20, 30 ] ]
+			]
 		];
 		$pageData[] = [ 'name' => 'Some other page', 'ns' => 0,
 			'lintErrors' => [ [ 'type' => 'bogus-image-options', 'location' => [ 30, 40 ] ] ]
@@ -325,7 +333,7 @@ class SpecialLintErrorsTest extends \SpecialPageTestBase {
 	 * @param string|null $subPage
 	 * @param string $titleSearchString
 	 * @return void
-	 * @throws \Exception
+	 * @throws Exception
 	 */
 	private function performLinterSearchTests( array $testConfig, ?string $subPage, string $titleSearchString ): void {
 		foreach ( $testConfig as $configIndex => $group ) {
@@ -369,7 +377,7 @@ class SpecialLintErrorsTest extends \SpecialPageTestBase {
 	}
 
 	/**
-	 * @throws \Exception
+	 * @throws Exception
 	 */
 	public function testLinterSearchVariations(): void {
 		$this->createTitleAndPage();

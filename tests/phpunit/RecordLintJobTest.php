@@ -24,15 +24,16 @@ use ContentHandler;
 use MediaWiki\Linter\Database;
 use MediaWiki\Linter\LintError;
 use MediaWiki\Linter\RecordLintJob;
+use MediaWikiIntegrationTestCase;
 use stdClass;
 use Title;
 use User;
 
 /**
  * @group Database
- * @covers MediaWiki\Linter\RecordLintJob
+ * @covers \MediaWiki\Linter\RecordLintJob
  */
-class RecordLintJobTest extends \MediaWikiIntegrationTestCase {
+class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 	/**
 	 * @param string $titleText
 	 * @return array
@@ -122,8 +123,10 @@ class RecordLintJobTest extends \MediaWikiIntegrationTestCase {
 		$error = [
 			'type' => 'obsolete-tag',
 			'location' => [ 0, 10 ],
-			'params' => [ "name" => "center",
-				"templateInfo" => [ "name" => "Template:Echo" ] ],
+			'params' => [
+				"name" => "center",
+				"templateInfo" => [ "name" => "Template:Echo" ]
+			],
 			'dbid' => null,
 		];
 		$titleAndPage = $this->createTitleAndPage( 'TestPage2' );

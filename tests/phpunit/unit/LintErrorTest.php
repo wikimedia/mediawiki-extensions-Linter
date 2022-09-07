@@ -21,11 +21,12 @@
 namespace MediaWiki\Linter\Test\Unit;
 
 use MediaWiki\Linter\LintError;
+use MediaWikiUnitTestCase;
 
 /**
- * @covers MediaWiki\Linter\LintError
+ * @covers \MediaWiki\Linter\LintError
  */
-class LintErrorTest extends \MediaWikiUnitTestCase {
+class LintErrorTest extends MediaWikiUnitTestCase {
 	public function testLintError() {
 		$error1 = new LintError(
 			'fostered',

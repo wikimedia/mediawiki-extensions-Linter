@@ -141,7 +141,7 @@ class Database {
 		);
 		$result = [];
 		foreach ( $rows as $row ) {
-			$error = $this->makeLintError( $row );
+			$error = self::makeLintError( $row );
 			if ( !$error ) {
 				continue;
 			}

@@ -26,7 +26,7 @@ use MediaWikiIntegrationTestCase;
 
 /**
  * @group Database
- * @covers MediaWiki\Linter\Database
+ * @covers \MediaWiki\Linter\Database
  */
 class DatabaseTest extends MediaWikiIntegrationTestCase {
 	public function testConstructor() {
@@ -112,7 +112,7 @@ class DatabaseTest extends MediaWikiIntegrationTestCase {
 
 		// For error counts <= MAX_ACCURATE_COUNT, both error
 		// count methods should return the same count.
-		self::createManyLintErrors( $lintDb, Database::MAX_ACCURATE_COUNT );
+		$this->createManyLintErrors( $lintDb, Database::MAX_ACCURATE_COUNT );
 		$resultTotals = $lintDb->getTotalsForPage();
 		$resultEstimatedTotals = $lintDb->getTotals();
 		$this->assertEquals( $resultTotals, $resultEstimatedTotals );
@@ -126,7 +126,7 @@ class DatabaseTest extends MediaWikiIntegrationTestCase {
 		// // count methods should NOT return the same count in this test scenario
 		// // because previously added and deleted records will be included
 		// // in the estimated count which is normal.
-		// self::createManyLintErrors( $lintDb, Database::MAX_ACCURATE_COUNT + 1 );
+		// $this->createManyLintErrors( $lintDb, Database::MAX_ACCURATE_COUNT + 1 );
 		// $resultTotals = $lintDb->getTotalsForPage();
 		// $resultEstimatedTotals = $lintDb->getTotals();
 		// $this->assertNotEquals( $resultTotals, $resultEstimatedTotals );
@@ -135,7 +135,7 @@ class DatabaseTest extends MediaWikiIntegrationTestCase {
 		// // count method should return a greater count in this test scenario
 		// // because previously added and deleted records will be included
 		// // in the estimated count which is normal.
-		// self::createManyLintErrors( $lintDb, Database::MAX_ACCURATE_COUNT * 10 );
+		// $this->createManyLintErrors( $lintDb, Database::MAX_ACCURATE_COUNT * 10 );
 		// $resultTotals = $lintDb->getTotalsForPage();
 		// $resultEstimatedTotals = $lintDb->getTotals();
 		// $this->assertGreaterThan( $resultTotals, $resultEstimatedTotals );
