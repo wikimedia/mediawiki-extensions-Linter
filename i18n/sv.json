@@ -7,7 +7,8 @@
 			"Thurs",
 			"WikiPhoenix",
 			"Ayaibrahim",
-			"Lejonel"
+			"Lejonel",
+			"JohanahoJ"
 		]
 	},
 	"linterrors": "Lint-fel",
@@ -25,11 +26,11 @@
 	"linter-category-misnested-tag-desc": "Dessa sidor har felplacerade taggar som kan åtgärdas.",
 	"linter-category-missing-end-tag": "Sluttagg saknas",
 	"linter-category-missing-end-tag-desc": "Dessa sidor saknar sluttaggar.",
-	"linter-category-multi-colon-escape": "Flera kolon flykt",
+	"linter-category-multi-colon-escape": "Flera kolon i escape-kod",
 	"linter-category-multi-colon-escape-desc": "Dessa sidorna har länkar med fler kolon som prefix.",
-	"linter-category-multiline-html-table-in-list": "Flerradig tabell i listan",
+	"linter-category-multiline-html-table-in-list": "Flerradig tabell i lista",
 	"linter-category-multiline-html-table-in-list-desc": "Tidigare har tabeller flyttats inuti eller utanför listan, men nu utökas listan till resten av sidan.",
-	"linter-category-multiple-unclosed-formatting-tags": "Flera ostängda formatteringstaggar",
+	"linter-category-multiple-unclosed-formatting-tags": "Flera ostängda formateringstaggar",
 	"linter-category-multiple-unclosed-formatting-tags-desc": "Dessa sidor har flera ostängda formateringstaggar.",
 	"linter-category-obsolete-tag": "Föråldrade HTML-taggar",
 	"linter-category-obsolete-tag-desc": "Dessa sidor använder föråldrade HTML-taggar.",
@@ -41,7 +42,7 @@
 	"linter-category-stripped-tag-desc": "Dessa sidor har bortplockade taggar.",
 	"linter-category-tidy-font-bug": "Gammalt beteende för font-taggar runt länkar",
 	"linter-category-tidy-font-bug-desc": "Dessa font-taggar flyttades tidigare in i länkar för att ändra länkfärg",
-	"linter-category-tidy-whitespace-bug": "Blankteckens analysfel",
+	"linter-category-tidy-whitespace-bug": "Blanktecken-fel",
 	"linter-category-tidy-whitespace-bug-desc": "Dessasidor triggar en bug för blanktecken vid analys och bör göras om.",
 	"linter-category-unclosed-quotes-in-heading": "Oavslutad apostrof i rubrik",
 	"linter-category-unclosed-quotes-in-heading-desc": "Dessa sidor har en oavslutad apostrof i en rubrik, som kan läcka ut från innehållsförteckningen.",
