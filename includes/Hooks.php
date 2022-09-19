@@ -24,20 +24,36 @@ use ApiQuerySiteinfo;
 use Content;
 use DatabaseUpdater;
 use IContextSource;
+use MediaWiki\Api\Hook\APIQuerySiteInfoGeneralInfoHook;
+use MediaWiki\Hook\BeforePageDisplayHook;
+use MediaWiki\Hook\InfoActionHook;
+use MediaWiki\Hook\ParserLogLinterDataHook;
+use MediaWiki\Installer\Hook\LoadExtensionSchemaUpdatesHook;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Page\Hook\RevisionFromEditCompleteHook;
+use MediaWiki\Page\Hook\WikiPageDeletionUpdatesHook;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\User\UserIdentity;
 use MWCallableUpdate;
 use OutputPage;
+use Skin;
 use Title;
 use WikiPage;
 
-class Hooks {
+class Hooks implements
+	APIQuerySiteInfoGeneralInfoHook,
+	BeforePageDisplayHook,
+	InfoActionHook,
+	LoadExtensionSchemaUpdatesHook,
+	ParserLogLinterDataHook,
+	RevisionFromEditCompleteHook,
+	WikiPageDeletionUpdatesHook
+{
 	/**
 	 * @param DatabaseUpdater $updater
 	 */
-	public static function onLoadExtensionSchemaUpdates( DatabaseUpdater $updater ) {
+	public function onLoadExtensionSchemaUpdates( $updater ) {
 		$dbType = $updater->getDB()->getType();
 		if ( $dbType === 'mysql' ) {
 			$updater->addExtensionTable( 'linter',
@@ -78,9 +94,10 @@ class Hooks {
 	 * If there is a lintid parameter, look up that error in the database
 	 * and setup and output our client-side helpers
 	 *
-	 * @param OutputPage &$out
+	 * @param OutputPage $out
+	 * @param Skin $skin
 	 */
-	public static function onBeforePageDisplay( OutputPage &$out ) {
+	public function onBeforePageDisplay( $out, $skin ): void {
 		$request = $out->getRequest();
 		$lintId = $request->getInt( 'lintid' );
 		if ( !$lintId ) {
@@ -113,9 +130,7 @@ class Hooks {
 	 * @param Content $content
 	 * @param array &$updates
 	 */
-	public static function onWikiPageDeletionUpdates( WikiPage $wikiPage,
-		Content $content, array &$updates
-	) {
+	public function onWikiPageDeletionUpdates( $wikiPage, $content, &$updates ) {
 		$id = $wikiPage->getId();
 		$updates[] = new MWCallableUpdate( static function () use ( $id ) {
 			$database = new Database( $id );
@@ -139,12 +154,8 @@ class Hooks {
 	 * @param UserIdentity $user
 	 * @param string[] &$tags
 	 */
-	public static function onRevisionFromEditComplete(
-		WikiPage $wikiPage,
-		RevisionRecord $newRevisionRecord,
-		$originalRevId,
-		UserIdentity $user,
-		&$tags
+	public function onRevisionFromEditComplete(
+		$wikiPage, $newRevisionRecord, $originalRevId, $user, &$tags
 	) {
 		// This is just a stop-gap to deal with callers that aren't complying
 		// with the advertised hook signature.
@@ -170,7 +181,7 @@ class Hooks {
 	 * @param ApiQuerySiteInfo $api
 	 * @param array &$data
 	 */
-	public static function onAPIQuerySiteInfoGeneralInfo( ApiQuerySiteinfo $api, array &$data ) {
+	public function onAPIQuerySiteInfoGeneralInfo( $api, &$data ) {
 		$catManager = new CategoryManager();
 		$data['linter'] = [
 			'high' => $catManager->getHighPriority(),
@@ -187,7 +198,7 @@ class Hooks {
 	 * @param IContextSource $context
 	 * @param array &$pageInfo
 	 */
-	public static function onInfoAction( IContextSource $context, array &$pageInfo ) {
+	public function onInfoAction( $context, &$pageInfo ) {
 		$pageId = $context->getTitle()->getArticleID();
 		if ( !$pageId ) {
 			return;
@@ -217,7 +228,7 @@ class Hooks {
 	 * @param array[] $data
 	 * @return bool
 	 */
-	public static function onParserLogLinterData(
+	public function onParserLogLinterData(
 		string $page, int $revision, array $data
 	): bool {
 		$errors = [];

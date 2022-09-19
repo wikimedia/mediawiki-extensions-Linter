@@ -46,7 +46,7 @@ class ApiRecordLint extends ApiBase {
 		if ( !is_array( $data ) ) {
 			$this->dieWithError( 'apierror-linter-invalid-data', 'invalid-data' );
 		}
-		if ( Hooks::onParserLogLinterData(
+		if ( ( new Hooks )->onParserLogLinterData(
 			$params['page'], $params['revision'], $data
 		) ) {
 			$this->getResult()->addValue( $this->getModuleName(), 'success', true );

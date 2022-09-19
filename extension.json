@@ -24,14 +24,19 @@
 	"ExtensionMessagesFiles": {
 		"LinterAlias": "Linter.alias.php"
 	},
+	"HookHandlers": {
+		"main": {
+			"class": "MediaWiki\\Linter\\Hooks"
+		}
+	},
 	"Hooks": {
-		"LoadExtensionSchemaUpdates": "MediaWiki\\Linter\\Hooks::onLoadExtensionSchemaUpdates",
-		"BeforePageDisplay": "MediaWiki\\Linter\\Hooks::onBeforePageDisplay",
-		"APIQuerySiteInfoGeneralInfo": "MediaWiki\\Linter\\Hooks::onAPIQuerySiteInfoGeneralInfo",
-		"InfoAction": "MediaWiki\\Linter\\Hooks::onInfoAction",
-		"WikiPageDeletionUpdates": "MediaWiki\\Linter\\Hooks::onWikiPageDeletionUpdates",
-		"RevisionFromEditComplete": "MediaWiki\\Linter\\Hooks::onRevisionFromEditComplete",
-		"ParserLogLinterData": "MediaWiki\\Linter\\Hooks::onParserLogLinterData"
+		"LoadExtensionSchemaUpdates": "main",
+		"BeforePageDisplay": "main",
+		"APIQuerySiteInfoGeneralInfo": "main",
+		"InfoAction": "main",
+		"WikiPageDeletionUpdates": "main",
+		"RevisionFromEditComplete": "main",
+		"ParserLogLinterData": "main"
 	},
 	"APIModules": {
 		"record-lint": "MediaWiki\\Linter\\ApiRecordLint"
