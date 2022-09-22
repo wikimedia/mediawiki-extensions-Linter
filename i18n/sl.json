@@ -37,7 +37,12 @@
 	"linter-category-unclosed-quotes-in-heading-desc": "Te strani vsebujejo v podnaslovu neparni narekovaj, zato podnaslov izstopa iz vsebinskega kazala.",
 	"linter-category-wikilink-in-extlink": "Povezave v povezavah",
 	"linter-desc": "Poišči skladenjske napake z zunanjim orodjem in jih prikaži uporabnikom",
+	"linter-lints-prefix-search-page-desc": "Poiščite strani s skladenjskimi napakami po predponi naslova ali popolnem naslovu",
+	"linter-form-exact-match": "Iskanje posameznega naslova strani",
+	"linter-form-prefix-match": "Iskanje vseh strani, ki se ujemajo s predpono naslova",
+	"linter-form-exact-or-prefix": "Poiščite posamezen naslov strani ali vse strani s skupno predpono v naslovu",
 	"linter-form-namespace": "Imenski prostor:",
+	"linter-form-title-prefix": "Vnesite predpono naslova ali celotni naslov:",
 	"linter-heading-high-priority": "Visoka prioriteta",
 	"linter-heading-low-priority": "Nizka prioriteta",
 	"linter-heading-medium-priority": "Srednja prioriteta",
@@ -64,5 +69,6 @@
 	"linter-pager-unclosed-quotes-in-heading-details": "Neparni narekovaj, ki izstopa iz vsebinskega kazala",
 	"linterrors-subpage": "Skladenjske napake: $1",
 	"linterrors-summary": "<strong>Opomba:</strong> Za posamezne kategorije so navedena ocenjena števila.",
+	"multi-part-template-block": "Izhod ni iz ene same predloge",
 	"pageinfo-linter": "Skladenjske napake"
 }
