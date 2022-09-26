@@ -50,6 +50,7 @@
 	"linter-page-edit": "uredi",
 	"linter-page-history": "zgodovina",
 	"linter-pager-bogus-image-options-details": "Napaka v zapisu datoteke",
+	"linter-pager-category-header": "Kategorija",
 	"linter-pager-deletable-table-tag-details": "Značka tabele, ki jo je potrebno odstraniti",
 	"linter-pager-html5-misnesting-details": "Nepravilno gnezdenje (zdaj pokvarjeno)",
 	"linter-pager-misc-tidy-replacement-issues-details": "Razne napake označevanja",
