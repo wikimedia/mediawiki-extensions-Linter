@@ -45,6 +45,7 @@
 	"linter-page-edit": "uredi",
 	"linter-page-history": "zgodovina",
 	"linter-pager-bogus-image-options-details": "Napaka v zapisu datoteke",
+	"linter-pager-category-header": "Kategorija",
 	"linter-pager-deletable-table-tag-details": "Značka tabele, ki jo je potrebno odstraniti",
 	"linter-pager-html5-misnesting-details": "Nepravilno gnezdenje (zdaj pokvarjeno)",
 	"linter-pager-misc-tidy-replacement-issues-details": "Razne napake označevanja",
@@ -64,5 +65,6 @@
 	"linter-pager-unclosed-quotes-in-heading-details": "Neparni narekovaj, ki izstopa iz vsebinskega kazala",
 	"linterrors-subpage": "Skladenjske napake: $1",
 	"linterrors-summary": "<strong>Opomba:</strong> Za posamezne kategorije so navedena ocenjena števila.",
+	"multi-part-template-block": "Izhod ni iz ene same predloge",
 	"pageinfo-linter": "Skladenjske napake"
 }
