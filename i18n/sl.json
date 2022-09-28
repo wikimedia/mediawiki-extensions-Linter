@@ -36,7 +36,7 @@
 	"linter-category-unclosed-quotes-in-heading": "Neparni narekovaj v podnaslovu",
 	"linter-category-unclosed-quotes-in-heading-desc": "Te strani vsebujejo v podnaslovu neparni narekovaj, zato podnaslov izstopa iz vsebinskega kazala.",
 	"linter-category-wikilink-in-extlink": "Povezave v povezavah",
-	"linter-desc": "Poišči skladenjske napake z zunanjim orodjem in jih prikaži uporabnikom",
+	"linter-desc": "Iskanje skladenjskih napak z zunanjim orodjem in njihov prikaz uporabnikom",
 	"linter-lints-prefix-search-page-desc": "Poiščite strani s skladenjskimi napakami po predponi naslova ali popolnem naslovu",
 	"linter-form-exact-match": "Iskanje posameznega naslova strani",
 	"linter-form-prefix-match": "Iskanje vseh strani, ki se ujemajo s predpono naslova",
