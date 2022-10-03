@@ -36,7 +36,7 @@
 	"linter-category-unclosed-quotes-in-heading": "Neparni narekovaj v podnaslovu",
 	"linter-category-unclosed-quotes-in-heading-desc": "Te strani vsebujejo v podnaslovu neparni narekovaj, zato podnaslov izstopa iz vsebinskega kazala.",
 	"linter-category-wikilink-in-extlink": "Povezave v povezavah",
-	"linter-desc": "Poišči skladenjske napake z zunanjim orodjem in jih prikaži uporabnikom",
+	"linter-desc": "Iskanje skladenjskih napak z zunanjim orodjem in njihov prikaz uporabnikom",
 	"linter-form-namespace": "Imenski prostor:",
 	"linter-heading-high-priority": "Visoka prioriteta",
 	"linter-heading-low-priority": "Nizka prioriteta",
