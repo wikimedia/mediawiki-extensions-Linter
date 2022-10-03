@@ -26,7 +26,7 @@ use MediaWiki\MediaWikiServices;
 
 class ApiQueryLinterStats extends ApiQueryBase {
 	public function __construct( ApiQuery $queryModule ) {
-		parent::__construct( $queryModule, 'linterstats', 'ls' );
+		parent::__construct( $queryModule, 'linterstats', 'lntrst' );
 	}
 
 	/**
