@@ -29,7 +29,7 @@ class ApiQueryLinterStats extends ApiQueryBase {
 	 * @param ApiQuery $queryModule
 	 */
 	public function __construct( ApiQuery $queryModule ) {
-		parent::__construct( $queryModule, 'linterstats', 'ls' );
+		parent::__construct( $queryModule, 'linterstats', 'lntrst' );
 	}
 
 	/**
