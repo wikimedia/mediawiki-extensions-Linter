@@ -3,7 +3,8 @@
 		"authors": [
 			"Fitoschido",
 			"Macofe",
-			"MarcoAurelio"
+			"MarcoAurelio",
+			"Dgstranz"
 		]
 	},
 	"apihelp-query+linterrors-description": "Obtener una lista de errores de sintaxis",
@@ -13,6 +14,7 @@
 	"apihelp-query+linterrors-param-from": "Identificador de sintaxis a partir del cual comenzar una consulta",
 	"apihelp-query+linterrors-param-namespace": "Incluir solo errores de sintaxis de los espacios de nombres especificados",
 	"apihelp-query+linterrors-param-pageid": "Incluir solo errores de sintaxis de los identificadores de páginas especificados",
+	"apihelp-query+linterrors-param-title": "Incluir solo errores de sintaxis para el título de página especificado",
 	"apihelp-query+linterrors-example-1": "Obtener todos los errores de sintaxis de la categoría «obsolete-tag»",
 	"apihelp-record-lint-description": "Registrar un error de sintaxis en la base de datos",
 	"apihelp-record-lint-summary": "Registrar un error de sintaxis en la base de datos",
