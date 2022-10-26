@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Jeblad",
-			"Jon Harald Søby"
+			"Jon Harald Søby",
+			"Njardarlogar"
 		]
 	},
 	"linterrors": "Lint-feil",
@@ -43,6 +44,7 @@
 	"linter-category-wikilink-in-extlink": "Lenker i lenker",
 	"linter-category-wikilink-in-extlink-desc": "Disse sidene har wikilenker i eksterne lenker som bør fikses",
 	"linter-desc": "Spor lint-feil fra en ekstern tjeneste og vis dem for brukerne",
+	"linter-invalid-title": "Navnerom og/eller sidenavn ikke funnet",
 	"linter-form-namespace": "Navnerom:",
 	"linter-heading-high-priority": "Høy prioritet",
 	"linter-heading-low-priority": "Lav prioritet",
