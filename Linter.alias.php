@@ -55,6 +55,11 @@ $specialPageAliases['nn'] = [
 	'LintErrors' => [ 'Lint-feil' ],
 ];
 
+/** Polish (polski) */
+$specialPageAliases['pl'] = [
+	'LintErrors' => [ 'Błędy_składniowe', 'Błędy_lintera' ],
+];
+
 /** Serbian (Cyrillic script) (српски (ћирилица)‎) */
 $specialPageAliases['sr-ec'] = [
 	'LintErrors' => [ 'Пречишћивање_грешака' ],
