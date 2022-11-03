@@ -5,7 +5,8 @@
 			"Matma Rex",
 			"Rail",
 			"WTM",
-			"Woytecr"
+			"Woytecr",
+			"Msz2001"
 		]
 	},
 	"linterrors": "Błędy składniowe",
@@ -38,7 +39,11 @@
 	"linter-category-unclosed-quotes-in-heading-desc": "Strony mające niezamknięty apostrof w nagłówku, który następnie wycieka ze spisu treści.",
 	"linter-category-wikilink-in-extlink": "Linki w linkach",
 	"linter-category-wikilink-in-extlink-desc": "Te strony mają wstawione linki wewnętrzne w kodzie linków zewnętrznych",
+	"linter-lints-prefix-search-page-desc": "Wyszukaj strony z błędami składniowymi według tytułu",
 	"linter-invalid-title": "Nieprawidłowy tytuł lub przestrzeń nazw",
+	"linter-form-exact-match": "Dokładnie ten tytuł",
+	"linter-form-prefix-match": "Wszystkie strony o tytule rozpoczynającym się od tego przedrostka",
+	"linter-form-exact-or-prefix": "Wyszukaj strony o dokładnie takim tytule lub rozpoczynające się od wpisanego przedrostka",
 	"linter-form-namespace": "Przestrzeń nazw:",
 	"linter-form-title-prefix": "Prefiks tytułu:",
 	"linter-heading-high-priority": "Wysoki priorytet",
