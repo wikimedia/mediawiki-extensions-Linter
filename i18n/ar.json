@@ -8,7 +8,8 @@
 			"Shbib Al-Subaie",
 			"ديفيد",
 			"علاء",
-			"محمد أحمد عبد الفتاح"
+			"محمد أحمد عبد الفتاح",
+			"FShbib"
 		]
 	},
 	"linterrors": "أخطاء لنت",
@@ -20,7 +21,7 @@
 	"linter-category-fostered-desc": "هذه الصفحات عززت المحتوى.",
 	"linter-category-html5-misnesting": "علامة غير متداخلة مع عرض مختلف في HTML5 وHTML4",
 	"linter-category-html5-misnesting-desc": "ستتصرف هذه العلامات غير المتداخلة بشكل مختلف في HTML5 مقارنة بـHTML4.",
-	"linter-category-misc-tidy-replacement-issues": "مسائل استبدال تيدي متفرقة",
+	"linter-category-misc-tidy-replacement-issues": "أسبابٌ مُتنوِّعةٌ",
 	"linter-category-misc-tidy-replacement-issues-desc": "تحتوي هذه الصفحات على مشكلات أخرى تؤثر على العرض عند استبدال تيدي",
 	"linter-category-misnested-tag": "علامات غير متداخلة",
 	"linter-category-misnested-tag-desc": "تحتوي هذه الصفحات على علامات غير متداخلة يمكن إصلاحها.",
