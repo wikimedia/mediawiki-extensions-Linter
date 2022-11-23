@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"George Animal",
-			"Ghybu"
+			"Ghybu",
+			"Balyozxane"
 		]
 	},
 	"linter-numerrors": "($1 {{PLURAL:$1|çewtî}})",
-	"linter-page-edit": "biguherîne",
+	"linter-page-edit": "biguhêre",
 	"linter-pager-title-header": "Sernavê rûpelê"
 }
