@@ -14,7 +14,7 @@
 	"linter-category-html5-misnesting": "Харцахьа чуйиллина тег, HTML5 а, HTML4 а чохь тайп-тайпанара гуш йолу",
 	"linter-category-html5-misnesting-desc": "ХӀокху хаьрцахьа чуйихкиначу тегийн ду тайп-тайпана леларш HTML5 а, HTML4 а чохь.",
 	"linter-category-misc-tidy-replacement-issues": "Tidy хуьйцуш даьлла тайп-тайпанара гӀалаташ",
-	"linter-category-misc-tidy-replacement-issues-desc": "ХӀокху агӀонгахь ду кхидолу гӀалаташ, Tidy хийцинчул тӀехьа гайтаман Ӏаткъам бира болу",
+	"linter-category-misc-tidy-replacement-issues-desc": "ХӀокху агӀонгахь ду кхидолу гӀалаташ, Tidy хийцинчул тӀаьхьа гайтаман Ӏаткъам бира болу",
 	"linter-category-misnested-tag": "Чуйиллина нийса йоцу тег",
 	"linter-category-misnested-tag-desc": "ХӀокху агӀонашкахь йу нийса чуйихкинца тегаш, нисйан мегар долу.",
 	"linter-category-missing-end-tag": "ДӀакъовлуш йолу тег йац",
