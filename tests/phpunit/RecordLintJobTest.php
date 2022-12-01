@@ -28,6 +28,7 @@ use MediaWikiIntegrationTestCase;
 use stdClass;
 use Title;
 use User;
+use Wikimedia\Rdbms\SelectQueryBuilder;
 
 /**
  * @group Database
@@ -36,13 +37,13 @@ use User;
 class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 	/**
 	 * @param string $titleText
+	 * @param int|null $ns
 	 * @return array
 	 */
-	private function createTitleAndPage( string $titleText ) {
+	private function createTitleAndPage( string $titleText, ?int $ns = 0 ) {
 		$userName = 'LinterUser';
 		$baseText = 'wikitext test content';
 
-		$ns = $this->getDefaultWikitextNS();
 		$title = Title::newFromText( $titleText, $ns );
 		$user = User::newFromName( $userName );
 		if ( $user->getId() === 0 ) {
@@ -91,6 +92,22 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 			[ 'linter_page' => $pageId ],
 			__METHOD__
 		);
+	}
+
+	/**
+	 * Get just the linter_namespace field value from the linter table for a page
+	 *
+	 * @param int $pageId
+	 * @return mixed
+	 */
+	private function getNamespaceForPage( int $pageId ) {
+		$queryLinterPageNamespace = new SelectQueryBuilder( $this->db );
+		$queryLinterPageNamespace
+			->select( 'linter_namespace' )
+			->table( 'linter' )
+			->where( [ 'linter_page' => $pageId ] )
+			->caller( __METHOD__ );
+		return $queryLinterPageNamespace->fetchField();
 	}
 
 	public function testRun() {
@@ -148,6 +165,79 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 		$this->assertEquals( $error[ 'params' ][ 'name' ], $tag );
 		$template = self::getTemplateForPage( $pageId )->linter_template ?? '';
 		$this->assertEquals( $error[ 'params' ][ 'templateInfo' ][ 'name' ], $template );
+	}
+
+	/**
+	 * @param string $titleText
+	 * @param int $namespace
+	 * @return array
+	 */
+	private function createTitleAndPageAndRunJob( string $titleText, int $namespace ): array {
+		$titleAndPage = $this->createTitleAndPage( $titleText, $namespace );
+		$error = [
+			'type' => 'fostered',
+			'location' => [ 0, 10 ],
+			'params' => [],
+			'dbid' => null,
+		];
+		$job = new RecordLintJob( $titleAndPage[ 'title' ], [
+			'errors' => [ $error ],
+			'revision' => $titleAndPage[ 'revID' ]
+		] );
+		$this->assertTrue( $job->run() );
+		return $titleAndPage;
+	}
+
+	/**
+	 * @param array $namespaceIds
+	 * @param array $writeEnables
+	 * @return array
+	 */
+	private function createPagesWithNamespace( array $namespaceIds, array $writeEnables ): array {
+		$titleAndPages = [];
+		foreach ( $namespaceIds as $index => $namespaceId ) {
+			// enable/disable writing the namespace field in the linter table during page creation
+			$this->overrideConfigValue( 'LinterWriteNamespaceColumnStage', $writeEnables[ $index ] );
+			$titleAndPages[] = $this->createTitleAndPageAndRunJob(
+				'TestPageNamespace' . $index,
+				intval( $namespaceId ) );
+		}
+		return $titleAndPages;
+	}
+
+	/**
+	 * @param array $pages
+	 * @param array $namespaceIds
+	 * @return void
+	 */
+	private function checkPagesNamespace( array $pages, array $namespaceIds ) {
+		foreach ( $pages as $index => $page ) {
+			$pageId = $page[ 'pageID' ];
+			$namespace = $this->getNamespaceForPage( $pageId );
+			$namespaceId = $namespaceIds[ $index ];
+			$this->assertSame( "$namespaceId", $namespace );
+		}
+	}
+
+	public function testMigrateNamespace() {
+		$this->overrideConfigValue( 'LinterMigrateNamespaceStage', true );
+
+		// Create groups of records that do not need migrating to ensure batching works properly
+		$namespaceIds = [ '0', '1', '2', '3', '4', '5', '4', '3', '2', '1', '0', '1', '2' ];
+		$writeEnables = [ false, true, true, true, false, false, true, true, false, false, false, true, false ];
+
+		$titleAndPages = $this->createPagesWithNamespace( $namespaceIds, $writeEnables );
+
+		// Verify the create page function did not populate the linter_namespace field for TestPageNamespace0
+		$pageId = $titleAndPages[ 0 ][ 'pageID' ];
+		$namespace = $this->getNamespaceForPage( $pageId );
+		$this->assertNull( $namespace );
+
+		// migrate unpopulated namespace_id(s) from the page table to linter table
+		Database::migrateNamespace( 2, 3, 0, false );
+
+		// Verify all linter records now have proper namespace IDs in the linter_namespace field
+		$this->checkPagesNamespace( $titleAndPages, $namespaceIds );
 	}
 
 	public function testDropInlineMediaCaptionLints() {

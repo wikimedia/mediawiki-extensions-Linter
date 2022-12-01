@@ -25,6 +25,7 @@ use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use WikiMap;
 use Wikimedia\Rdbms\DBConnRef;
+use Wikimedia\Rdbms\SelectQueryBuilder;
 
 /**
  * Database logic
@@ -418,6 +419,114 @@ class Database {
 		$stats->gauge( "linter.totals.$wiki", array_sum( $totals ) );
 
 		$totalsLookup->touchAllCategoriesCache();
+	}
+
+	/**
+	 * This code migrates namespace ID identified by the Linter records linter_page
+	 * field and populates the new linter_namespace field if it is unpopulated.
+	 * This code is intended to be run once though it could be run multiple times
+	 * using `--force` if needed via the maintenance script.
+	 * It is safe to run more than once, and will quickly exit if no records need updating.
+	 * @param int $pageBatchSize
+	 * @param int $linterBatchSize
+	 * @param int $sleep
+	 * @param bool $bypassConfig
+	 * @return int number of pages updated, each with one or more linter records
+	 */
+	public static function migrateNamespace( int $pageBatchSize,
+		 int $linterBatchSize,
+		 int $sleep,
+		 bool $bypassConfig = false ): int {
+		// code used by phpunit test, bypassed when run as a maintenance script
+		if ( !$bypassConfig ) {
+			$mwServices = MediaWikiServices::getInstance();
+			$config = $mwServices->getMainConfig();
+			$enableMigrateNamespaceStage = $config->get( 'LinterMigrateNamespaceStage' );
+			if ( !$enableMigrateNamespaceStage ) {
+				return 0;
+			}
+		}
+		if ( gettype( $sleep ) !== 'integer' || $sleep < 0 ) {
+			$sleep = 0;
+		}
+
+		$logger = LoggerFactory::getInstance( 'MigrateNamespaceChannel' );
+
+		$lbFactory = MediaWikiServices::getInstance()->getDBLoadBalancerFactory();
+		$dbw = self::getDBConnectionRef( DB_PRIMARY );
+		$dbread = self::getDBConnectionRef( DB_REPLICA );
+
+		$logger->info( "Migrate namespace starting\n" );
+
+		$updated = 0;
+		$lastElement = 0;
+		do {
+			// Gather some unique pageId values in linter table records into an array
+			$linterPages = [];
+
+			$queryLinterTable = new SelectQueryBuilder( $dbw );
+			$queryLinterTable
+				->select( 'DISTINCT linter_page' )
+				->from( 'linter' )
+				->where( [ 'linter_namespace IS NULL', 'linter_page > ' . $lastElement ] )
+				->orderBy( 'linter_page' )
+				->limit( $linterBatchSize )
+				->caller( __METHOD__ );
+			$result = $queryLinterTable->fetchResultSet();
+
+			foreach ( $result as $row ) {
+				$lastElement = intval( $row->linter_page );
+				$linterPages[] = $lastElement;
+			}
+			$linterPagesLength = count( $linterPages );
+
+			$pageStartIndex = 0;
+			do {
+				$pageIdBatch = array_slice( $linterPages, $pageStartIndex, $pageBatchSize );
+
+				if ( count( $pageIdBatch ) > 0 ) {
+
+					$queryPageTable = new SelectQueryBuilder( $dbread );
+					$queryPageTable
+						->fields( [ 'page_id', 'page_namespace' ] )
+						->from( 'page' )
+						->where( [ 'page_id' => $pageIdBatch ] )
+						->caller( __METHOD__ );
+
+					$pageResults = $queryPageTable->fetchResultSet();
+
+					foreach ( $pageResults as $pageRow ) {
+						$pageId = intval( $pageRow->page_id );
+						$namespaceID = intval( $pageRow->page_namespace );
+
+						// If a record about to be updated has been removed by another process,
+						// the update will not error, and continue updating the existing records.
+						$dbw->update(
+							'linter',
+							[
+								'linter_namespace' => $namespaceID
+							],
+							[ 'linter_namespace IS NULL', 'linter_page = ' . $pageId ],
+							__METHOD__
+						);
+						$updated++;
+					}
+
+					// Sleep between batches for replication to catch up
+					$lbFactory->waitForReplication();
+					sleep( $sleep );
+				}
+
+				$pageStartIndex += $pageBatchSize;
+			} while ( $linterPagesLength > $pageStartIndex );
+
+			$logger->info( 'Migrated ' . $updated . " page IDs\n" );
+
+		} while ( $linterPagesLength > 0 );
+
+		$logger->info( "Migrate namespace finished!\n" );
+
+		return $updated;
 	}
 
 }
