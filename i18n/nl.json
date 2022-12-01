@@ -12,7 +12,8 @@
 			"Patio",
 			"Robin van der Vliet",
 			"Romaine",
-			"Sjoerddebruin"
+			"Sjoerddebruin",
+			"HanV"
 		]
 	},
 	"linterrors": "Lintfouten",
@@ -85,7 +86,7 @@
 	"linter-pager-self-closed-tag-details": "Zelfsluitend element",
 	"linter-pager-stripped-tag-details": "Genegeerd element",
 	"linter-pager-template-header": "Door middel van een sjabloon?",
-	"linter-pager-tidy-font-bug-details": "Font element probeert de koppelingkleur te wijzigingen",
+	"linter-pager-tidy-font-bug-details": "Font element probeert de koppelingskleur te wijzigingen",
 	"linter-pager-tidy-whitespace-bug-details": "Witruimte intepretatiebug",
 	"linter-pager-title-header": "Paginanaam",
 	"linter-pager-unclosed-quotes-in-heading-details": "Niet-afgesloten aanhalingsteken dat uit de inhoudsopgave lekt",
