@@ -205,6 +205,9 @@
 		},
 		"LinterWriteTagAndTemplateColumnsStage": {
 			"value": false
+		},
+		"LinterMigrateTagAndTemplateColumnsStage": {
+			"value": false
 		}
 	},
 	"manifest_version": 2

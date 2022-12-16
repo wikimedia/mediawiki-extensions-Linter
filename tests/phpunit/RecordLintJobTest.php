@@ -25,7 +25,6 @@ use MediaWiki\Linter\Database;
 use MediaWiki\Linter\LintError;
 use MediaWiki\Linter\RecordLintJob;
 use MediaWikiIntegrationTestCase;
-use stdClass;
 use Title;
 use User;
 use Wikimedia\Rdbms\SelectQueryBuilder;
@@ -64,34 +63,32 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 	 * Get just the lint error linter_tag field value for a page
 	 *
 	 * @param int $pageId
-	 * @return stdClass|bool
+	 * @return mixed
 	 */
-	private static function getTagForPage( int $pageId ) {
-		return Database::getDBConnectionRef( DB_REPLICA )->selectRow(
-			'linter',
-			[
-				'linter_tag'
-			],
-			[ 'linter_page' => $pageId ],
-			__METHOD__
-		);
+	private function getTagForPage( int $pageId ) {
+		$queryPageTag = new SelectQueryBuilder( $this->db );
+		$queryPageTag
+			->select( 'linter_tag' )
+			->table( 'linter' )
+			->where( [ 'linter_page' => $pageId ] )
+			->caller( __METHOD__ );
+		return $queryPageTag->fetchField();
 	}
 
 	/**
 	 * Get just the lint error linter_template field value for a page
 	 *
 	 * @param int $pageId
-	 * @return stdClass|bool
+	 * @return mixed
 	 */
-	private static function getTemplateForPage( int $pageId ) {
-		return Database::getDBConnectionRef( DB_REPLICA )->selectRow(
-			'linter',
-			[
-				'linter_template'
-			],
-			[ 'linter_page' => $pageId ],
-			__METHOD__
-		);
+	private function getTemplateForPage( int $pageId ) {
+		$queryPageTemplate = new SelectQueryBuilder( $this->db );
+		$queryPageTemplate
+			->select( 'linter_template' )
+			->table( 'linter' )
+			->where( [ 'linter_page' => $pageId ] )
+			->caller( __METHOD__ );
+		return $queryPageTemplate->fetchField();
 	}
 
 	/**
@@ -123,7 +120,6 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 			'revision' => $titleAndPage[ 'revID' ]
 		] );
 		$this->assertTrue( $job->run() );
-
 		$db = new Database( $titleAndPage[ 'pageID' ] );
 		/** @var LintError[] $errorsFromDb */
 		$errorsFromDb = array_values( $db->getForPage() );
@@ -136,7 +132,6 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 
 	public function testWriteTagAndTemplate() {
 		$this->overrideConfigValue( 'LinterWriteTagAndTemplateColumnsStage', true );
-
 		$error = [
 			'type' => 'obsolete-tag',
 			'location' => [ 0, 10 ],
@@ -152,7 +147,6 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 			'revision' => $titleAndPage[ 'revID' ]
 		] );
 		$this->assertTrue( $job->run() );
-
 		$pageId = $titleAndPage[ 'pageID' ];
 		$db = new Database( $pageId );
 		$errorsFromDb = array_values( $db->getForPage() );
@@ -161,9 +155,9 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 		$this->assertEquals( $error[ 'type' ], $errorsFromDb[0]->category );
 		$this->assertEquals( $error[ 'location' ], $errorsFromDb[0]->location );
 		$this->assertEquals( $error[ 'params' ], $errorsFromDb[0]->params );
-		$tag = self::getTagForPage( $pageId )->linter_tag ?? '';
+		$tag = $this->getTagForPage( $pageId );
 		$this->assertEquals( $error[ 'params' ][ 'name' ], $tag );
-		$template = self::getTemplateForPage( $pageId )->linter_template ?? '';
+		$template = $this->getTemplateForPage( $pageId );
 		$this->assertEquals( $error[ 'params' ][ 'templateInfo' ][ 'name' ], $template );
 	}
 
@@ -240,6 +234,114 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 		$this->checkPagesNamespace( $titleAndPages, $namespaceIds );
 	}
 
+	/**
+	 * @param string $titleText
+	 * @param array $error
+	 * @return array
+	 */
+	private function createTitleAndPageForTagsAndRunJob( string $titleText, array $error ): array {
+		$titleAndPage = $this->createTitleAndPage( $titleText );
+		$job = new RecordLintJob( $titleAndPage[ 'title' ], [
+			'errors' => [ $error ],
+			'revision' => $titleAndPage[ 'revID' ]
+		] );
+		$this->assertTrue( $job->run() );
+		return $titleAndPage;
+	}
+
+	/**
+	 * @param array $writeEnables
+	 * @param array $error
+	 * @return array
+	 */
+	private function createPagesWithTagAndTemplate( array $writeEnables, array $error ): array {
+		$titleAndPages = [];
+		foreach ( $writeEnables as $index => $enable ) {
+			// enable/disable writing the tag and template fields in the linter table during page creation
+			$this->overrideConfigValue( 'LinterWriteTagAndTemplateColumnsStage', $enable );
+			$titleAndPages[] = $this->createTitleAndPageForTagsAndRunJob( 'TestPage' . $index, $error );
+		}
+		return $titleAndPages;
+	}
+
+	/**
+	 * @param array $pages
+	 * @return void
+	 */
+	private function checkPagesTagAndTemplate( array $pages ) {
+		foreach ( $pages as $page ) {
+			$pageId = $page[ 'pageID' ];
+			$tag = $this->getTagForPage( $pageId );
+			$this->assertEquals( "center", $tag );
+			$template = $this->getTemplateForPage( $pageId );
+			$this->assertEquals( "Template:Echo", $template );
+		}
+	}
+
+	public function testMigrateTagAndTemplate() {
+		$this->overrideConfigValue( 'LinterMigrateTagAndTemplateColumnsStage', true );
+
+		$error = [
+			'type' => 'obsolete-tag',
+			'location' => [ 0, 10 ],
+			'params' => [ "name" => "center",
+				"templateInfo" => [ "name" => "Template:Echo" ] ],
+			'dbid' => null,
+		];
+
+		// Create groups of records that do not need migrating to ensure batching works properly
+		$writeEnables = [ false, true, true, true, false, false, true, true, false, false, false, true, false ];
+		$titleAndPages = $this->createPagesWithTagAndTemplate( $writeEnables, $error );
+
+		// Create special case test of migrate code encountering brackets - linter_params = '[]'
+		$this->overrideConfigValue( 'LinterWriteTagAndTemplateColumnsStage', false );
+		$error = [
+			'type' => 'wikilink-in-extlink',
+			'location' => [ 0, 10 ],
+			'params' => [],
+			'dbid' => null,
+		];
+		$titleAndPageBrackets = $this->createTitleAndPageForTagsAndRunJob(
+			'TestPageTagAndTemplateBrackets',
+			$error );
+
+		// Create special case test for migrate code encountering 'multi-part-template-block'
+		$error = [
+			'type' => 'obsolete-tag',
+			'location' => [ 0, 10 ],
+			'params' => '{"name":"center","templateInfo":{"multiPartTemplateBlock":true}}',
+			'dbid' => null,
+		];
+		$titleAndPageMultipart = $this->createTitleAndPageForTagsAndRunJob(
+			'TestPageTagAndTemplateMultipart',
+			$error );
+
+		// Verify the create page function did not populate the linter_tag and linter_template field for TestPage0
+		$pageId = $titleAndPages[ 0 ][ 'pageID' ];
+		$tag = $this->getTagForPage( $pageId );
+		$this->assertSame( "", $tag );
+		$template = $this->getTemplateForPage( $pageId );
+		$this->assertSame( "", $template );
+
+		// Migrate unpopulated tag and template info from the params field
+		Database::migrateTemplateAndTagInfo( 3, 0, false );
+
+		// Verify all linter records have the proper tag and template field info migrated from the params field
+		$this->checkPagesTagAndTemplate( $titleAndPages );
+
+		// Verify special case test of migrate code encountering brackets - linter_params = '[]'
+		$tag = $this->getTagForPage( $titleAndPageBrackets[ 'pageID' ] );
+		$this->assertSame( "", $tag );
+		$template = $this->getTemplateForPage( $titleAndPageBrackets[ 'pageID' ] );
+		$this->assertSame( "", $template );
+
+		// Verify special case test for migrate code encountering 'multi-part-template-block'
+		$tag = $this->getTagForPage( $titleAndPageMultipart[ 'pageID' ] );
+		$this->assertEquals( "center", $tag );
+		$template = $this->getTemplateForPage( $titleAndPageMultipart[ 'pageID' ] );
+		$this->assertEquals( "multi-part-template-block", $template );
+	}
+
 	public function testDropInlineMediaCaptionLints() {
 		$error = [
 			'type' => 'inline-media-caption',
@@ -247,10 +349,10 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 			'params' => [],
 			'dbid' => null,
 		];
-		$titleAndPage = $this->createTitleAndPage( 'TestPage3' );
-		$job = new RecordLintJob( $titleAndPage['title'], [
+		$titleAndPage = $this->createTitleAndPage( 'TestPageMediaCaption' );
+		$job = new RecordLintJob( $titleAndPage[ 'title' ], [
 			'errors' => [ $error ],
-			'revision' => $titleAndPage['revID']
+			'revision' => $titleAndPage[ 'revID' ]
 		] );
 		$this->assertTrue( $job->run() );
 		/** @var LintError[] $errorsFromDb */

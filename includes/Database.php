@@ -23,6 +23,7 @@ namespace MediaWiki\Linter;
 use FormatJson;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
+use stdClass;
 use WikiMap;
 use Wikimedia\Rdbms\DBConnRef;
 use Wikimedia\Rdbms\SelectQueryBuilder;
@@ -103,7 +104,7 @@ class Database {
 	/**
 	 * Turn a database row into a LintError object
 	 *
-	 * @param \stdClass $row
+	 * @param stdClass $row
 	 * @return LintError|bool false on error
 	 */
 	public static function makeLintError( $row ) {
@@ -525,6 +526,110 @@ class Database {
 		} while ( $linterPagesLength > 0 );
 
 		$logger->info( "Migrate namespace finished!\n" );
+
+		return $updated;
+	}
+
+	/**
+	 * This code migrates the content of Linter record linter_params to linter_template and
+	 * linter_tag fields if they are unpopulated or stale.
+	 * This code should only be run once and thereafter disabled but must run to completion.
+	 * It can be restarted if interrupted and will pick up where new divergences are found.
+	 * Note: When linter_params are not set, the content is set to '[]' indicating no content
+	 * and the code also handles a null linter_params field if found.
+	 * This code is only run once by maintenance script migrateTagTemplate.php
+	 * @param int $batchSize
+	 * @param int $sleep
+	 * @param bool $bypassConfig
+	 * @return int
+	 */
+	public static function migrateTemplateAndTagInfo( int $batchSize,
+		int $sleep,
+		bool $bypassConfig = false
+	): int {
+		// code used by phpunit test, bypassed when run as a maintenance script
+		if ( !$bypassConfig ) {
+			$mwServices = MediaWikiServices::getInstance();
+			$config = $mwServices->getMainConfig();
+			$enableMigrateTagAndTemplateColumnsStage = $config->get( 'LinterMigrateTagAndTemplateColumnsStage' );
+			if ( !$enableMigrateTagAndTemplateColumnsStage ) {
+				return 0;
+			}
+		}
+		if ( gettype( $sleep ) !== 'integer' || $sleep < 0 ) {
+			$sleep = 0;
+		}
+
+		$logger = LoggerFactory::getInstance( 'MigrateTagAndTemplateChannel' );
+
+		$lbFactory = MediaWikiServices::getInstance()->getDBLoadBalancerFactory();
+		$dbw = self::getDBConnectionRef( DB_PRIMARY );
+
+		$logger->info( "Migration of linter_params field to linter_tag and linter_template fields starting\n" );
+
+		$updated = 0;
+		$lastElement = 0;
+		do {
+			$queryLinterTable = new SelectQueryBuilder( $dbw );
+			$queryLinterTable
+				->table( 'linter' )
+				->fields( [ 'linter_id', 'linter_params', 'linter_template', 'linter_tag' ] )
+				->where( [ 'linter_params != \'[]\'', 'linter_params IS NOT NULL', 'linter_id > ' . $lastElement ] )
+				->orderBy( 'linter_id', selectQueryBuilder::SORT_ASC )
+				->limit( $batchSize )
+				->caller( __METHOD__ );
+			$results = $queryLinterTable->fetchResultSet();
+
+			$linterBatchLength = 0;
+
+			foreach ( $results as $row ) {
+				$linter_id = intval( $row->linter_id );
+				$lastElement = $linter_id;
+				$linter_params = FormatJson::decode( $row->linter_params );
+				$templateInfo = $linter_params->templateInfo ?? '';
+				if ( is_object( $templateInfo ) ) {
+					if ( isset( $templateInfo->multiPartTemplateBlock ) ) {
+						$templateInfo = 'multi-part-template-block';
+					} else {
+						$templateInfo = $templateInfo->name ?? '';
+					}
+				}
+				$tagInfo = $linter_params->name ?? '';
+
+				// compare the content of linter_params to the template and tag field contents
+				// and if they diverge, update the field with the correct template and tag info.
+				// This behavior allows this function to be restarted should it be interrupted
+				// and avoids repeating database record updates that are already correct due to
+				// having been populated when the error record was created with the new recordLintError
+				// write code that populates the template and tag fields, or for records populated
+				// during a previous but interrupted run of this migrate code.
+				if ( $templateInfo != $row->linter_template || $tagInfo != $row->linter_tag ) {
+					// If the record about to be updated has been removed by another process,
+					// the update will not do anything and just return with no records updated.
+					$dbw->update(
+						'linter',
+						[
+							'linter_template' => $templateInfo, 'linter_tag' => $tagInfo
+						],
+						[ 'linter_id' => $linter_id ],
+						__METHOD__
+					);
+					$updated++;
+				}
+				$linterBatchLength++;
+			}
+
+			// Sleep between batches for replication to catch up
+			$lbFactory->waitForReplication();
+			if ( $sleep > 0 ) {
+				sleep( $sleep );
+			}
+
+			$logger->info( 'Migrated ' . $updated . " linter IDs\n" );
+
+		} while ( $linterBatchLength > 0 );
+
+		$logger->info( "Migrate linter_params to linter_tag and linter_template fields finished!\n" );
 
 		return $updated;
 	}
