@@ -8,7 +8,8 @@
 			"LNDDYL",
 			"Liuxinyu970226",
 			"Xiplus",
-			"蘭斯特"
+			"蘭斯特",
+			"捍粵者"
 		]
 	},
 	"linterrors": "Lint錯誤",
@@ -38,7 +39,7 @@
 	"linter-category-pwrap-bug-workaround-desc": "這些頁面有可以解決的段落換行錯誤。",
 	"linter-category-self-closed-tag": "自封閉標籤",
 	"linter-category-self-closed-tag-desc": "這些頁面有自封閉標籤。",
-	"linter-category-stripped-tag": "被忽略的標籤",
+	"linter-category-stripped-tag": "已忽略標籤",
 	"linter-category-stripped-tag-desc": "這些頁面有被忽略的標籤。",
 	"linter-category-tidy-font-bug": "連結包裹字體標籤的舊行為",
 	"linter-category-tidy-font-bug-desc": "之前，這些字體標籤已移動到連結內以更改連結顏色",
@@ -69,7 +70,7 @@
 	"linter-pager-obsolete-tag-details": "過時的HTML標籤",
 	"linter-pager-pwrap-bug-workaround-details": "可以解決的段落換行錯誤",
 	"linter-pager-self-closed-tag-details": "自封閉標籤",
-	"linter-pager-stripped-tag-details": "被忽略的標籤",
+	"linter-pager-stripped-tag-details": "已忽略標籤",
 	"linter-pager-template": "通過模板？",
 	"linter-pager-tidy-font-bug-details": "Font標籤嘗試改變連結顏色",
 	"linter-pager-tidy-whitespace-bug-details": "空格解析錯誤",
