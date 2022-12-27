@@ -83,7 +83,7 @@ class SpecialLintErrors extends SpecialPage {
 		$form = HTMLForm::factory( 'ooui', $fields, $this->getContext() );
 		$form->setWrapperLegend( true );
 		if ( $this->category !== null ) {
-			$form->addHeaderText( $this->msg( "linter-category-{$this->category}-desc" )->parse() );
+			$form->addHeaderHtml( $this->msg( "linter-category-{$this->category}-desc" )->parse() );
 		}
 		$form->setMethod( 'get' );
 		$form->prepareForm()->displayForm( false );

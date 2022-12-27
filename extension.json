@@ -10,7 +10,7 @@
 	"descriptionmsg": "linter-desc",
 	"type": "specialpage",
 	"requires": {
-		"MediaWiki": ">= 1.36.0"
+		"MediaWiki": ">= 1.38.0"
 	},
 	"AutoloadNamespaces": {
 		"MediaWiki\\Linter\\": "includes/"
