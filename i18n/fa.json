@@ -45,6 +45,7 @@
 	"linter-category-wikilink-in-extlink": "ویکی‌پیوند در پیوند بیرونی",
 	"linter-category-wikilink-in-extlink-desc": "این صفحات پیوند داخلی درون پیوند خارجی دارند که باید درست شود",
 	"linter-desc": "پیگیری خطاهای نحوی پنهان از یک سامانه خارجی و نمایش آن‌ها به کاربران",
+	"linter-invalid-title": "فضای نام و/یا نام صفحه یافت نشد یا بدشکل است",
 	"linter-form-namespace": "فضای نام:",
 	"linter-heading-high-priority": "اهمیت بالا",
 	"linter-heading-low-priority": "اهمیت کم",
