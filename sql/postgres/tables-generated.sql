@@ -9,7 +9,7 @@ CREATE TABLE linter (
   linter_cat INT NOT NULL,
   linter_start INT NOT NULL,
   linter_end INT NOT NULL,
-  linter_params TEXT DEFAULT NULL,
+  linter_params TEXT NOT NULL,
   linter_template TEXT DEFAULT '' NOT NULL,
   linter_tag TEXT DEFAULT '' NOT NULL,
   PRIMARY KEY(linter_id)

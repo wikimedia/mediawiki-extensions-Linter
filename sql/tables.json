@@ -41,7 +41,7 @@
 				"name": "linter_params",
 				"comment": "extra parameters about the error, JSON encoded",
 				"type": "blob",
-				"options": { "length": 65530, "notnull": false }
+				"options": { "length": 65530, "notnull": true }
 			},
 			{
 				"name": "linter_template",

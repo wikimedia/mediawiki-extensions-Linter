@@ -65,6 +65,9 @@ class Hooks implements
 			$updater->addExtensionField( 'linter', 'linter_template',
 				dirname( __DIR__ ) . '/sql/patch-linter-template-tag-fields.sql'
 			);
+			$updater->modifyExtensionField( 'linter', 'linter_params',
+				dirname( __DIR__ ) . '/sql/patch-linter-fix-params-null-definition.sql'
+			);
 		} elseif ( $dbType === 'sqlite' ) {
 			$updater->addExtensionTable( 'linter',
 				dirname( __DIR__ ) . '/sql/sqlite/tables-generated.sql'
@@ -75,6 +78,9 @@ class Hooks implements
 			$updater->addExtensionField( 'linter', 'linter_template',
 				dirname( __DIR__ ) . '/sql/sqlite/patch-linter-template-tag-fields.sql'
 			);
+			$updater->modifyExtensionField( 'linter', 'linter_params',
+				dirname( __DIR__ ) . '/sql/sqlite/patch-linter-fix-params-null-definition.sql'
+			);
 		} elseif ( $dbType === 'postgres' ) {
 			$updater->addExtensionTable( 'linter',
 				dirname( __DIR__ ) . '/sql/postgres/tables-generated.sql'
@@ -84,6 +90,9 @@ class Hooks implements
 			);
 			$updater->addExtensionField( 'linter', 'linter_template',
 				dirname( __DIR__ ) . '/sql/postgres/patch-linter-template-tag-fields.sql'
+			);
+			$updater->modifyExtensionField( 'linter', 'linter_params',
+				dirname( __DIR__ ) . '/sql/postgres/patch-linter-fix-params-null-definition.sql'
 			);
 		}
 	}

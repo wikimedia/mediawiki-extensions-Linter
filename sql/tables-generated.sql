@@ -9,7 +9,7 @@ CREATE TABLE /*_*/linter (
   linter_cat INT UNSIGNED NOT NULL,
   linter_start INT UNSIGNED NOT NULL,
   linter_end INT UNSIGNED NOT NULL,
-  linter_params BLOB DEFAULT NULL,
+  linter_params BLOB NOT NULL,
   linter_template VARBINARY(255) DEFAULT '' NOT NULL,
   linter_tag VARBINARY(32) DEFAULT '' NOT NULL,
   INDEX linter_page (linter_page),
