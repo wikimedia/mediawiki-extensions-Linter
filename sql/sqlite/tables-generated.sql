@@ -9,7 +9,7 @@ CREATE TABLE /*_*/linter (
   linter_cat INTEGER UNSIGNED NOT NULL,
   linter_start INTEGER UNSIGNED NOT NULL,
   linter_end INTEGER UNSIGNED NOT NULL,
-  linter_params BLOB DEFAULT NULL, linter_template BLOB DEFAULT '' NOT NULL,
+  linter_params BLOB NOT NULL, linter_template BLOB DEFAULT '' NOT NULL,
   linter_tag BLOB DEFAULT '' NOT NULL
 );
 
