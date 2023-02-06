@@ -41,6 +41,13 @@ class Database {
 	public const MAX_ACCURATE_COUNT = 20;
 
 	/**
+	 * The linter_tag field has a maximum length of 32 characters, linter_template field a maximum of 255 characters
+	 * so to ensure the length is not exceeded, the tag and template strings are truncated a few bytes below that limit
+	 */
+	public const MAX_TAG_LENGTH = 30;
+	public const MAX_TEMPLATE_LENGTH = 250;
+
+	/**
 	 * @var int
 	 */
 	private $pageId;
@@ -189,7 +196,10 @@ class Database {
 					$templateInfo = $templateInfo[ 'name' ] ?? '';
 				}
 			}
+			$templateInfo = mb_strcut( $templateInfo, 0, self::MAX_TEMPLATE_LENGTH );
 			$result[ 'linter_template' ] = $templateInfo;
+
+			$error->tagInfo = mb_strcut( $error->tagInfo, 0, self::MAX_TAG_LENGTH );
 			$result[ 'linter_tag' ] = $error->tagInfo ?? '';
 		}
 

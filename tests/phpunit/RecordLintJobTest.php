@@ -161,6 +161,46 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 		$this->assertEquals( $error[ 'params' ][ 'templateInfo' ][ 'name' ], $template );
 	}
 
+	public function testWriteTagAndTemplateLengthExceeded() {
+		$this->overrideConfigValue( 'LinterWriteTagAndTemplateColumnsStage', true );
+
+		// Verify special case test for write code encountering params with tag and template string lengths exceeded
+		$tagWithMoreThan30Characters = "center tag exceeding 30 characters";
+		$tagTruncated = "center tag exceeding 30 charac";
+		$templateWithMoreThan250Characters = str_repeat( "Template:Echo longer than 250 characters ", 8 );
+		$templateTruncated = "Template:Echo longer than 250 characters Template:Echo longer than 250 characters " .
+			"Template:Echo longer than 250 characters Template:Echo longer than 250 characters " .
+			"Template:Echo longer than 250 characters Template:Echo longer than 250 characters Temp";
+
+		$error = [
+			'type' => 'obsolete-tag',
+			'location' => [ 0, 10 ],
+			'params' => [
+				"name" => $tagWithMoreThan30Characters,
+				"templateInfo" => [ "name" => $templateWithMoreThan250Characters ]
+			],
+			'dbid' => null,
+		];
+		$titleAndPage = $this->createTitleAndPage( 'TestPage2' );
+		$job = new RecordLintJob( $titleAndPage[ 'title' ], [
+			'errors' => [ $error ],
+			'revision' => $titleAndPage[ 'revID' ]
+		] );
+		$this->assertTrue( $job->run() );
+		$pageId = $titleAndPage[ 'pageID' ];
+		$db = new Database( $pageId );
+		$errorsFromDb = array_values( $db->getForPage() );
+		$this->assertCount( 1, $errorsFromDb );
+		$this->assertInstanceOf( LintError::class, $errorsFromDb[0] );
+		$this->assertEquals( $error[ 'type' ], $errorsFromDb[0]->category );
+		$this->assertEquals( $error[ 'location' ], $errorsFromDb[0]->location );
+		$this->assertEquals( $error[ 'params' ], $errorsFromDb[0]->params );
+		$tag = $this->getTagForPage( $pageId );
+		$this->assertEquals( $tagTruncated, $tag );
+		$template = $this->getTemplateForPage( $pageId );
+		$this->assertEquals( $templateTruncated, $template );
+	}
+
 	/**
 	 * @param string $titleText
 	 * @param int $namespace
