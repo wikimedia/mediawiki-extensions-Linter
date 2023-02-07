@@ -27,6 +27,7 @@ use MediaWiki\Api\Hook\APIQuerySiteInfoGeneralInfoHook;
 use MediaWiki\Hook\BeforePageDisplayHook;
 use MediaWiki\Hook\InfoActionHook;
 use MediaWiki\Hook\ParserLogLinterDataHook;
+use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Page\Hook\RevisionFromEditCompleteHook;
@@ -36,6 +37,7 @@ use MediaWiki\User\UserIdentity;
 use MWCallableUpdate;
 use OutputPage;
 use Skin;
+use SpecialPage;
 use Title;
 use WikiPage;
 
@@ -47,6 +49,16 @@ class Hooks implements
 	RevisionFromEditCompleteHook,
 	WikiPageDeletionUpdatesHook
 {
+	/** @var LinkRenderer */
+	private $linkRenderer;
+
+	/**
+	 * @param LinkRenderer $linkRenderer
+	 */
+	public function __construct( LinkRenderer $linkRenderer ) {
+		$this->linkRenderer = $linkRenderer;
+	}
+
 	/**
 	 * Hook: BeforePageDisplay
 	 *
@@ -158,7 +170,8 @@ class Hooks implements
 	 * @param array &$pageInfo
 	 */
 	public function onInfoAction( $context, &$pageInfo ) {
-		$pageId = $context->getTitle()->getArticleID();
+		$title = $context->getTitle();
+		$pageId = $title->getArticleID();
 		if ( !$pageId ) {
 			return;
 		}
@@ -175,6 +188,16 @@ class Hooks implements
 				htmlspecialchars( (string)$count )
 			];
 		}
+
+		$pageInfo['linter'][] = [
+			'below',
+			$this->linkRenderer->makeKnownLink(
+				SpecialPage::getTitleFor( 'LintErrors' ),
+				$context->msg( 'pageinfo-linter-moreinfo' )->text(),
+				[],
+				[ 'namespace' => $title->getNamespace(), 'titlesearch' => $title->getText(), 'exactmatch' => 1 ]
+			),
+		];
 	}
 
 	/**

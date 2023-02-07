@@ -91,5 +91,6 @@
 	"linterrors-subpage": "Page title for Special:LintErrors, $1 is the localized category description",
 	"linterrors-summary": "Summary message for Special:LintErrors",
 	"multi-part-template-block": "Table cell on [[Special:LintErrors]] indicating that content block is not produced by a single template",
-	"pageinfo-linter": "Heading on ?action=info for a page if it has lint errors"
+	"pageinfo-linter": "Heading on ?action=info for a page if it has lint errors",
+	"pageinfo-linter-moreinfo": "Link text below a summary table on ?action=info that goes to Special:LintErrors for that specific page"
 }

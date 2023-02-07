@@ -46,7 +46,9 @@ class ApiRecordLint extends ApiBase {
 		if ( !is_array( $data ) ) {
 			$this->dieWithError( 'apierror-linter-invalid-data', 'invalid-data' );
 		}
-		if ( ( new Hooks )->onParserLogLinterData(
+		// FIXME: Don't call Hooks like this, refactor it into a common method
+		$hooks = new Hooks( MediaWikiServices::getInstance()->getLinkRenderer() );
+		if ( $hooks->onParserLogLinterData(
 			$params['page'], $params['revision'], $data
 		) ) {
 			$this->getResult()->addValue( $this->getModuleName(), 'success', true );

@@ -26,7 +26,10 @@
 	},
 	"HookHandlers": {
 		"main": {
-			"class": "MediaWiki\\Linter\\Hooks"
+			"class": "MediaWiki\\Linter\\Hooks",
+			"services": [
+				"LinkRenderer"
+			]
 		},
 		"schema": {
 			"class": "MediaWiki\\Linter\\SchemaHooks"

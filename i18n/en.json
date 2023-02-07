@@ -83,5 +83,6 @@
 	"linterrors-subpage": "Lint errors: $1",
 	"linterrors-summary": "<strong>Note:</strong> The counts for categories are not accurate counts, but are based on estimates.",
 	"multi-part-template-block": "Output not from a single template",
-	"pageinfo-linter": "Lint errors"
+	"pageinfo-linter": "Lint errors",
+	"pageinfo-linter-moreinfo": "View detailed information on the lint errors."
 }
