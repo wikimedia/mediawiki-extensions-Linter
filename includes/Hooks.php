@@ -22,13 +22,11 @@ namespace MediaWiki\Linter;
 
 use ApiQuerySiteinfo;
 use Content;
-use DatabaseUpdater;
 use IContextSource;
 use MediaWiki\Api\Hook\APIQuerySiteInfoGeneralInfoHook;
 use MediaWiki\Hook\BeforePageDisplayHook;
 use MediaWiki\Hook\InfoActionHook;
 use MediaWiki\Hook\ParserLogLinterDataHook;
-use MediaWiki\Installer\Hook\LoadExtensionSchemaUpdatesHook;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Page\Hook\RevisionFromEditCompleteHook;
@@ -45,58 +43,10 @@ class Hooks implements
 	APIQuerySiteInfoGeneralInfoHook,
 	BeforePageDisplayHook,
 	InfoActionHook,
-	LoadExtensionSchemaUpdatesHook,
 	ParserLogLinterDataHook,
 	RevisionFromEditCompleteHook,
 	WikiPageDeletionUpdatesHook
 {
-	/**
-	 * @param DatabaseUpdater $updater
-	 */
-	public function onLoadExtensionSchemaUpdates( $updater ) {
-		$dbType = $updater->getDB()->getType();
-		if ( $dbType === 'mysql' ) {
-			$updater->addExtensionTable( 'linter',
-				dirname( __DIR__ ) . '/sql/tables-generated.sql'
-			);
-			$updater->addExtensionField( 'linter', 'linter_namespace',
-				dirname( __DIR__ ) . '/sql/patch-linter-add-namespace.sql'
-			);
-			$updater->addExtensionField( 'linter', 'linter_template',
-				dirname( __DIR__ ) . '/sql/patch-linter-template-tag-fields.sql'
-			);
-			$updater->modifyExtensionField( 'linter', 'linter_params',
-				dirname( __DIR__ ) . '/sql/patch-linter-fix-params-null-definition.sql'
-			);
-		} elseif ( $dbType === 'sqlite' ) {
-			$updater->addExtensionTable( 'linter',
-				dirname( __DIR__ ) . '/sql/sqlite/tables-generated.sql'
-			);
-			$updater->addExtensionField( 'linter', 'linter_namespace',
-				dirname( __DIR__ ) . '/sql/sqlite/patch-linter-add-namespace.sql'
-			);
-			$updater->addExtensionField( 'linter', 'linter_template',
-				dirname( __DIR__ ) . '/sql/sqlite/patch-linter-template-tag-fields.sql'
-			);
-			$updater->modifyExtensionField( 'linter', 'linter_params',
-				dirname( __DIR__ ) . '/sql/sqlite/patch-linter-fix-params-null-definition.sql'
-			);
-		} elseif ( $dbType === 'postgres' ) {
-			$updater->addExtensionTable( 'linter',
-				dirname( __DIR__ ) . '/sql/postgres/tables-generated.sql'
-			);
-			$updater->addExtensionField( 'linter', 'linter_namespace',
-				dirname( __DIR__ ) . '/sql/postgres/patch-linter-add-namespace.sql'
-			);
-			$updater->addExtensionField( 'linter', 'linter_template',
-				dirname( __DIR__ ) . '/sql/postgres/patch-linter-template-tag-fields.sql'
-			);
-			$updater->modifyExtensionField( 'linter', 'linter_params',
-				dirname( __DIR__ ) . '/sql/postgres/patch-linter-fix-params-null-definition.sql'
-			);
-		}
-	}
-
 	/**
 	 * Hook: BeforePageDisplay
 	 *
