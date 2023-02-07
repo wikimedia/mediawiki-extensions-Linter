@@ -10,7 +10,8 @@
 			"MuratTheTurkish",
 			"SaldırganSincap",
 			"Sezgin İbiş",
-			"Vito Genovese"
+			"Vito Genovese",
+			"Rapsar"
 		]
 	},
 	"linterrors": "Lint hataları",
@@ -64,7 +65,7 @@
 	"linter-namespace-invert-error": "\"Seçimi tersine çevir\" onay kutusu, \"tümü\" ad alanı ölçütleriyle çakışıyor.",
 	"linter-namespace-mismatch": "Açılır listede belirtilen ad alanı, sağlanan başlık metnindeki ad alanıyla eşleşmiyor.",
 	"linter-numerrors": "($1 hata)",
-	"linter-page-edit": "düzenle",
+	"linter-page-edit": "değiştir",
 	"linter-page-history": "geçmiş",
 	"linter-page-viewsource": "kaynağı gör",
 	"linter-pager-bogus-image-options-details": "Sahte dosya seçeneği",
