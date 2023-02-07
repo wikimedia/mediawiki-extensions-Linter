@@ -356,6 +356,20 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 			'TestPageTagAndTemplateMultipart',
 			$error );
 
+		// Create special case test for params containing tag and template info strings exceeding the fields lengths
+		$tagWithMoreThan30Characters = "center tag exceeding 30 characters";
+		$templateWithMoreThan250Characters = str_repeat( "Template:Echo longer than 250 characters ", 8 );
+		$error = [
+			'type' => 'obsolete-tag',
+			'location' => [ 0, 10 ],
+			'params' => [ "name" => $tagWithMoreThan30Characters,
+				"templateInfo" => $templateWithMoreThan250Characters ],
+			'dbid' => null,
+		];
+		$titleAndPageLengthExceeded = $this->createTitleAndPageForTagsAndRunJob(
+			'TestPageTagAndTemplateLengthExceeded',
+			$error );
+
 		// Verify the create page function did not populate the linter_tag and linter_template field for TestPage0
 		$pageId = $titleAndPages[ 0 ][ 'pageID' ];
 		$tag = $this->getTagForPage( $pageId );
@@ -380,6 +394,17 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 		$this->assertEquals( "center", $tag );
 		$template = $this->getTemplateForPage( $titleAndPageMultipart[ 'pageID' ] );
 		$this->assertEquals( "multi-part-template-block", $template );
+
+		// Verify special case test for migrate code encountering params with tag and template string length exceeded
+		$tagTruncated = "center tag exceeding 30 charac";
+		$templateTruncated = "Template:Echo longer than 250 characters Template:Echo longer than 250 characters " .
+			"Template:Echo longer than 250 characters Template:Echo longer than 250 characters " .
+			"Template:Echo longer than 250 characters Template:Echo longer than 250 characters Temp";
+
+		$tag = $this->getTagForPage( $titleAndPageLengthExceeded[ 'pageID' ] );
+		$this->assertEquals( $tagTruncated, $tag );
+		$template = $this->getTemplateForPage( $titleAndPageLengthExceeded[ 'pageID' ] );
+		$this->assertEquals( $templateTruncated, $template );
 	}
 
 	public function testDropInlineMediaCaptionLints() {

@@ -604,7 +604,10 @@ class Database {
 						$templateInfo = $templateInfo->name ?? '';
 					}
 				}
+				$templateInfo = mb_strcut( $templateInfo, 0, self::MAX_TEMPLATE_LENGTH );
+
 				$tagInfo = $linter_params->name ?? '';
+				$tagInfo = mb_strcut( $tagInfo, 0, self::MAX_TAG_LENGTH );
 
 				// compare the content of linter_params to the template and tag field contents
 				// and if they diverge, update the field with the correct template and tag info.
