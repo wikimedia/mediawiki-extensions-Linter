@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Kghbln",
-			"Metalhead64"
+			"Metalhead64",
+			"Brettchenweber"
 		]
 	},
 	"linterrors": "Lint-Fehler",
@@ -78,7 +79,7 @@
 	"linter-pager-title-header": "Seitentitel",
 	"linter-pager-unclosed-quotes-in-heading-details": "Nicht geschlossenes Anführungszeichen, das das Inhaltsverzeichnis auslaufen lässt.",
 	"linterrors-subpage": "Lint-Fehler: $1",
-	"linterrors-summary": "<strong>Hinweis:</strong> Die Zähler für Kategorien sind nicht genau, basieren jedoch auf Schätzungen.",
+	"linterrors-summary": "<strong>Hinweis:</strong> Die Zähler für Kategorien sind nicht genau, sondern basieren auf Schätzungen.",
 	"multi-part-template-block": "Ausgabe nicht von einer einzelnen Vorlage",
 	"pageinfo-linter": "Lint-Fehler"
 }
