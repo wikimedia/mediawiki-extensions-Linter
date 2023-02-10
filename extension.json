@@ -27,10 +27,13 @@
 	"HookHandlers": {
 		"main": {
 			"class": "MediaWiki\\Linter\\Hooks"
+		},
+		"schema": {
+			"class": "MediaWiki\\Linter\\SchemaHooks"
 		}
 	},
 	"Hooks": {
-		"LoadExtensionSchemaUpdates": "main",
+		"LoadExtensionSchemaUpdates": "schema",
 		"BeforePageDisplay": "main",
 		"APIQuerySiteInfoGeneralInfo": "main",
 		"InfoAction": "main",
