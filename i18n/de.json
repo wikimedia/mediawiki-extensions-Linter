@@ -84,5 +84,6 @@
 	"linterrors-subpage": "Lint-Fehler: $1",
 	"linterrors-summary": "<strong>Hinweis:</strong> Die Zähler für Kategorien sind nicht genau, sondern basieren auf Schätzungen.",
 	"multi-part-template-block": "Ausgabe nicht von einer einzelnen Vorlage",
-	"pageinfo-linter": "Lint-Fehler"
+	"pageinfo-linter": "Lint-Fehler",
+	"pageinfo-linter-moreinfo": "Detaillierte Informationen zu den Lint-Fehlern anzeigen"
 }
