@@ -7,7 +7,11 @@
 			"Mirzali",
 			"Vito Genovese",
 			"MuratTheTurkish",
-			"Sezgin İbiş"
+			"Sezgin İbiş",
+			"Can",
+			"Khalvar",
+			"Rapsar",
+			"SaldırganSincap"
 		]
 	},
 	"linterrors": "Lint hataları",
@@ -53,7 +57,7 @@
 	"linter-heading-low-priority": "Düşük öncelik",
 	"linter-heading-medium-priority": "Orta öncelik",
 	"linter-numerrors": "($1 hata)",
-	"linter-page-edit": "düzenle",
+	"linter-page-edit": "değiştir",
 	"linter-page-history": "geçmiş",
 	"linter-page-viewsource": "kaynağı gör",
 	"linter-pager-bogus-image-options-details": "Sahte dosya seçeneği",
