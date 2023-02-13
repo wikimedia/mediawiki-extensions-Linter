@@ -96,5 +96,6 @@
 	"linterrors-subpage": "Erreurs d’analyse Lint : $1",
 	"linterrors-summary": "<strong>Note :</strong> les compteurs pour les catégories ne sont pas forcément exacts, mais basés sur des estimations.",
 	"multi-part-template-block": "Résultat fourni par plus d'un modèle",
-	"pageinfo-linter": "Erreurs d’analyse Lint"
+	"pageinfo-linter": "Erreurs d’analyse Lint",
+	"pageinfo-linter-moreinfo": "Afficher les informations détaillées sur les erreurs d’analyse lint."
 }

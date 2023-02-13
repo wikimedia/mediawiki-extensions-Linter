@@ -84,5 +84,6 @@
 	"linterrors-subpage": "שגיאות ניקיון: $1",
 	"linterrors-summary": "<strong>הערה:</strong> הספירה של הקטגוריות אינה מדויקת, היא מבוססת על אומדנים.",
 	"multi-part-template-block": "פלט שלא נוצר מתבנית בודדת",
-	"pageinfo-linter": "שגיאות ניקיון"
+	"pageinfo-linter": "שגיאות ניקיון",
+	"pageinfo-linter-moreinfo": "הצגת מידע מפורט על שגיאות ניקיון."
 }

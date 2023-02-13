@@ -85,5 +85,6 @@
 	"linterrors-subpage": "Skladenjske napake: $1",
 	"linterrors-summary": "<strong>Opomba:</strong> Za posamezne kategorije so navedena ocenjena števila.",
 	"multi-part-template-block": "Izhod ni iz ene same predloge",
-	"pageinfo-linter": "Skladenjske napake"
+	"pageinfo-linter": "Skladenjske napake",
+	"pageinfo-linter-moreinfo": "Oglejte si podrobne informacije o skladenjskih napakah."
 }

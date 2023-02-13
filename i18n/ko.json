@@ -79,5 +79,6 @@
 	"linterrors-subpage": "린트 오류: $1",
 	"linterrors-summary": "<strong>알림</strong>: 분류 수는 정확한 개수가 아니며 추정치에 기반합니다.",
 	"multi-part-template-block": "하나의 틀에서 비롯되지 않는 출력",
-	"pageinfo-linter": "린트 오류"
+	"pageinfo-linter": "린트 오류",
+	"pageinfo-linter-moreinfo": "린트 오류에 관한 자세한 정보를 봅니다."
 }
