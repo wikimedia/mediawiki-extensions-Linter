@@ -42,9 +42,9 @@ class MigrateNamespace extends LoggedUpdateMaintenance {
 	 */
 	protected function doDBUpdates() {
 		$config = $this->getConfig();
-		$enableMigrateNamespaceStage = $config->get( 'LinterMigrateNamespaceStage' );
+		$enableMigrateNamespaceStage = $config->get( 'LinterWriteNamespaceColumnStage' );
 		if ( !$enableMigrateNamespaceStage ) {
-			$this->output( "LinterMigrateNamespaceStage config value is false, code is disabled, exiting\n" );
+			$this->output( "LinterWriteNamespaceColumnStage config value is false, code is disabled, exiting\n" );
 			return false;
 		}
 

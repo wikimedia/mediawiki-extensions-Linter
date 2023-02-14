@@ -40,9 +40,9 @@ class MigrateTagTemplate extends LoggedUpdateMaintenance {
 	 */
 	protected function doDBUpdates() {
 		$config = $this->getConfig();
-		$enableMigrateTagAndTemplateStage = $config->get( 'LinterMigrateTagAndTemplateColumnsStage' );
+		$enableMigrateTagAndTemplateStage = $config->get( 'LinterWriteTagAndTemplateColumnsStage' );
 		if ( !$enableMigrateTagAndTemplateStage ) {
-			$this->output( "LinterMigrateTagAndTemplateColumnsStage config value is false, code disabled\n" );
+			$this->output( "LinterWriteTagAndTemplateColumnsStage config value is false, code disabled\n" );
 			return false;
 		}
 
