@@ -452,7 +452,7 @@ class Database {
 		if ( !$bypassConfig ) {
 			$mwServices = MediaWikiServices::getInstance();
 			$config = $mwServices->getMainConfig();
-			$enableMigrateNamespaceStage = $config->get( 'LinterMigrateNamespaceStage' );
+			$enableMigrateNamespaceStage = $config->get( 'LinterWriteNamespaceColumnStage' );
 			if ( !$enableMigrateNamespaceStage ) {
 				return 0;
 			}
@@ -561,7 +561,7 @@ class Database {
 		if ( !$bypassConfig ) {
 			$mwServices = MediaWikiServices::getInstance();
 			$config = $mwServices->getMainConfig();
-			$enableMigrateTagAndTemplateColumnsStage = $config->get( 'LinterMigrateTagAndTemplateColumnsStage' );
+			$enableMigrateTagAndTemplateColumnsStage = $config->get( 'LinterWriteTagAndTemplateColumnsStage' );
 			if ( !$enableMigrateTagAndTemplateColumnsStage ) {
 				return 0;
 			}
