@@ -254,8 +254,6 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 	}
 
 	public function testMigrateNamespace() {
-		$this->overrideConfigValue( 'LinterMigrateNamespaceStage', true );
-
 		// Create groups of records that do not need migrating to ensure batching works properly
 		$namespaceIds = [ '0', '1', '2', '3', '4', '5', '4', '3', '2', '1', '0', '1', '2' ];
 		$writeEnables = [ false, true, true, true, false, false, true, true, false, false, false, true, false ];
@@ -268,7 +266,7 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 		$this->assertNull( $namespace );
 
 		// migrate unpopulated namespace_id(s) from the page table to linter table
-		Database::migrateNamespace( 2, 3, 0, false );
+		Database::migrateNamespace( 2, 3, 0, true );
 
 		// Verify all linter records now have proper namespace IDs in the linter_namespace field
 		$this->checkPagesNamespace( $titleAndPages, $namespaceIds );
@@ -319,8 +317,6 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 	}
 
 	public function testMigrateTagAndTemplate() {
-		$this->overrideConfigValue( 'LinterMigrateTagAndTemplateColumnsStage', true );
-
 		$error = [
 			'type' => 'obsolete-tag',
 			'location' => [ 0, 10 ],
@@ -378,7 +374,7 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 		$this->assertSame( "", $template );
 
 		// Migrate unpopulated tag and template info from the params field
-		Database::migrateTemplateAndTagInfo( 3, 0, false );
+		Database::migrateTemplateAndTagInfo( 3, 0, true );
 
 		// Verify all linter records have the proper tag and template field info migrated from the params field
 		$this->checkPagesTagAndTemplate( $titleAndPages );

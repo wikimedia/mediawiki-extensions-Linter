@@ -206,13 +206,7 @@
 		"LinterWriteNamespaceColumnStage": {
 			"value": false
 		},
-		"LinterMigrateNamespaceStage": {
-			"value": false
-		},
 		"LinterWriteTagAndTemplateColumnsStage": {
-			"value": false
-		},
-		"LinterMigrateTagAndTemplateColumnsStage": {
 			"value": false
 		}
 	},
