@@ -44,9 +44,6 @@
 		"RevisionFromEditComplete": "main",
 		"ParserLogLinterData": "main"
 	},
-	"APIModules": {
-		"record-lint": "MediaWiki\\Linter\\ApiRecordLint"
-	},
 	"APIListModules": {
 		"linterrors": "MediaWiki\\Linter\\ApiQueryLintErrors"
 	},
@@ -192,12 +189,6 @@
 					"priority": "high",
 					"no-params": true
 				}
-			}
-		},
-		"LinterSubmitterWhitelist": {
-			"value": {
-				"127.0.0.1": true,
-				"::1": true
 			}
 		},
 		"LinterStatsdSampleFactor": {
