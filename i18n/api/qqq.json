@@ -18,15 +18,7 @@
 	"apihelp-query+linterrors-param-pageid": "{{doc-apihelp-param|query+linterrors|pageid}}",
 	"apihelp-query+linterrors-param-title": "{{doc-apihelp-param|query+linterrors|title}}",
 	"apihelp-query+linterrors-example-1": "{{doc-apihelp-example|query+linterrors}}",
-	"apihelp-record-lint-description": "{{doc-apihelp-description|record-lint}}",
-	"apihelp-record-lint-summary": "{{doc-apihelp-summary|record-lint}}",
-	"apihelp-record-lint-param-data": "{{doc-apihelp-param|record-lint|data}}",
-	"apihelp-record-lint-param-page": "{{doc-apihelp-param|record-lint|page}}\n{{Identical|Page title}}",
-	"apihelp-record-lint-param-revision": "{{doc-apihelp-param|record-lint|revision}}",
 	"apihelp-query+linterstats-description": "{{doc-apihelp-description|query+linterstats}}",
 	"apihelp-query+linterstats-summary": "{{doc-apihelp-summary|query+linterstats}}",
-	"apihelp-query+linterstats-example-1": "{{doc-apihelp-example|query+linterstats}}",
-	"apierror-linter-invalid-ip": "{{doc-apierror|linter}}\nError message when IP address has not been allowed to report lint errors tries to report them",
-	"apierror-linter-invalid-data": "{{doc-apierror|linter}}\nError message when there is invalid data",
-	"apierror-linter-invalid-title": "{{doc-apierror|linter}}\nError message when there is invalid, non-existent, or outdated title"
+	"apihelp-query+linterstats-example-1": "{{doc-apihelp-example|query+linterstats}}"
 }

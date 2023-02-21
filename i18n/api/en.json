@@ -16,15 +16,7 @@
 	"apihelp-query+linterrors-param-pageid": "Only include lint errors from the specified page IDs",
 	"apihelp-query+linterrors-param-title": "Only include lint errors from the specified page title",
 	"apihelp-query+linterrors-example-1": "Get all lint errors of the obsolete-tag category",
-	"apihelp-record-lint-description": "Record a lint error in the database",
-	"apihelp-record-lint-summary": "Record a lint error in the database",
-	"apihelp-record-lint-param-data": "JSON encoded data about the error",
-	"apihelp-record-lint-param-page": "Page title",
-	"apihelp-record-lint-param-revision": "Revision ID that the error was found in",
 	"apihelp-query+linterstats-description": "Get number of lint errors in each category",
 	"apihelp-query+linterstats-summary": "Get number of lint errors in each category",
-	"apihelp-query+linterstats-example-1": "Get number of lint errors in each category",
-	"apierror-linter-invalid-ip": "Your IP address is not allowed to report lint errors",
-	"apierror-linter-invalid-data": "Invalid data",
-	"apierror-linter-invalid-title": "Invalid, non-existent, or outdated title"
+	"apihelp-query+linterstats-example-1": "Get number of lint errors in each category"
 }
