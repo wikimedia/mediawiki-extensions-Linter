@@ -17,15 +17,7 @@
 	"apihelp-query+linterrors-param-pageid": "Yalnızca belirtilen sayfa kimliklerindeki lint hatalarını dahil edin",
 	"apihelp-query+linterrors-param-title": "Yalnızca belirtilen sayfa başlığından lint hataları ekleyin",
 	"apihelp-query+linterrors-example-1": "Eski etiket kategorisindeki tüm lint hatalarını alın",
-	"apihelp-record-lint-description": "Veritabanına lint hatası kaydedin",
-	"apihelp-record-lint-summary": "Veritabanına lint hatası kaydedin",
-	"apihelp-record-lint-param-data": "Hata hakkında JSON kodlu veriler",
-	"apihelp-record-lint-param-page": "Sayfa başlığı",
-	"apihelp-record-lint-param-revision": "Hatanın bulunduğu revizyon kimliği",
 	"apihelp-query+linterstats-description": "Her kategorideki lint hatası sayısını alın",
 	"apihelp-query+linterstats-summary": "Her kategorideki lint hatası sayısını alın",
-	"apihelp-query+linterstats-example-1": "Her kategorideki lint hatası sayısını alın",
-	"apierror-linter-invalid-ip": "IP adresinizin lint hataları bildirmesine izin verilmiyor",
-	"apierror-linter-invalid-data": "Geçersiz veri",
-	"apierror-linter-invalid-title": "Geçersiz, var olmayan veya güncel olmayan başlık"
+	"apihelp-query+linterstats-example-1": "Her kategorideki lint hatası sayısını alın"
 }

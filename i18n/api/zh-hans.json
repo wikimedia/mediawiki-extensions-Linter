@@ -16,15 +16,7 @@
 	"apihelp-query+linterrors-param-pageid": "只包含来自指定页面ID的lint错误",
 	"apihelp-query+linterrors-param-title": "只包含来自指定页面标题的lint错误",
 	"apihelp-query+linterrors-example-1": "获取所有废弃标签分类的lint错误",
-	"apihelp-record-lint-description": "在数据库中记录lint错误",
-	"apihelp-record-lint-summary": "在数据库中记录lint错误",
-	"apihelp-record-lint-param-data": "有关错误的JSON编码数据",
-	"apihelp-record-lint-param-page": "页面标题",
-	"apihelp-record-lint-param-revision": "找到错误的修订版本ID",
 	"apihelp-query+linterstats-description": "获取每个分类中的lint错误数",
 	"apihelp-query+linterstats-summary": "获取每个分类中的lint错误数",
-	"apihelp-query+linterstats-example-1": "获取每个分类中的lint错误数",
-	"apierror-linter-invalid-ip": "您的IP地址不被允许报告lint错误",
-	"apierror-linter-invalid-data": "无效数据",
-	"apierror-linter-invalid-title": "无效、不存在或过时的标题"
+	"apihelp-query+linterstats-example-1": "获取每个分类中的lint错误数"
 }

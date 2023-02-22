@@ -12,7 +12,5 @@
 	"apihelp-query+linterrors-param-limit": "Aantal resultaten om te tonen",
 	"apihelp-query+linterrors-param-namespace": "Alleen lintfouten in de opgegeven naamruimten opnemen.",
 	"apihelp-query+linterrors-param-title": "Alleen lintfouten van de opgegeven paginatitel opnemen",
-	"apihelp-query+linterrors-example-1": "Alle lintfouten in de categorie \"obsolete-tag\" ophalen.",
-	"apihelp-record-lint-param-page": "Paginanaam",
-	"apierror-linter-invalid-data": "Ongeldige data"
+	"apihelp-query+linterrors-example-1": "Alle lintfouten in de categorie \"obsolete-tag\" ophalen."
 }

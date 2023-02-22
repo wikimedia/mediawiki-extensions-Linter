@@ -11,13 +11,5 @@
 	"apihelp-query+linterrors-param-from": "조회를 시작할 린트 ID",
 	"apihelp-query+linterrors-param-namespace": "지정된 이름공간의 린트 오류만 포함합니다",
 	"apihelp-query+linterrors-param-pageid": "특정 문서 ID의 린트 오류만 포함합니다",
-	"apihelp-query+linterrors-example-1": "구식 태그 분류의 모든 린트 오류를 가져옵니다",
-	"apihelp-record-lint-description": "데이터베이스에 린트 오류를 기록합니다",
-	"apihelp-record-lint-summary": "데이터베이스에 린트 오류를 기록합니다",
-	"apihelp-record-lint-param-data": "오류에 대한 JSON 변환 데이터",
-	"apihelp-record-lint-param-page": "문서 제목",
-	"apihelp-record-lint-param-revision": "오류가 발견된 판 ID",
-	"apierror-linter-invalid-ip": "당신의 IP 주소는 린트 오류를 보고할 권한이 없습니다",
-	"apierror-linter-invalid-data": "유효하지 않은 데이터",
-	"apierror-linter-invalid-title": "유효하지 않거나 존재하지 않거나 오래된 제목"
+	"apihelp-query+linterrors-example-1": "구식 태그 분류의 모든 린트 오류를 가져옵니다"
 }

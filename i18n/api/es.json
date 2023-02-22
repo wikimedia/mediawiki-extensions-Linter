@@ -16,15 +16,7 @@
 	"apihelp-query+linterrors-param-pageid": "Incluir solo errores de sintaxis de los identificadores de páginas especificados",
 	"apihelp-query+linterrors-param-title": "Incluir solo errores de sintaxis para el título de página especificado",
 	"apihelp-query+linterrors-example-1": "Obtener todos los errores de sintaxis de la categoría «obsolete-tag»",
-	"apihelp-record-lint-description": "Registrar un error de sintaxis en la base de datos",
-	"apihelp-record-lint-summary": "Registrar un error de sintaxis en la base de datos",
-	"apihelp-record-lint-param-data": "Datos codificados en JSON acerca del error",
-	"apihelp-record-lint-param-page": "Título de la página",
-	"apihelp-record-lint-param-revision": "Id. de la revisión en que se encontró el error",
 	"apihelp-query+linterstats-description": "Obtener el número de errores de sintaxis en cada categoría",
 	"apihelp-query+linterstats-summary": "Obtener el número de errores de sintaxis en cada categoría",
-	"apihelp-query+linterstats-example-1": "Obtener el número de errores de sintaxis en cada categoría",
-	"apierror-linter-invalid-ip": "Tu dirección IP no está autorizada para informar sobre errores de sintaxis",
-	"apierror-linter-invalid-data": "Datos no válidos",
-	"apierror-linter-invalid-title": "Título no válido, inexistente o desactualizado"
+	"apihelp-query+linterstats-example-1": "Obtener el número de errores de sintaxis en cada categoría"
 }

@@ -14,15 +14,7 @@
 	"apihelp-query+linterrors-param-pageid": "Vključi samo napake analize Lint identifikatorjev izbranih strani",
 	"apihelp-query+linterrors-param-title": "Vključi samo napake Lint iz določenega naslova strani",
 	"apihelp-query+linterrors-example-1": "Pridobi vse skladenjske napake iz kategorije zastarelih značk",
-	"apihelp-record-lint-description": "Zabeleži kodno napako v zbirko",
-	"apihelp-record-lint-summary": "Zabeleži kodno napako v zbirko",
-	"apihelp-record-lint-param-data": "Šifrirani podatki JSON o napaki",
-	"apihelp-record-lint-param-page": "Naslov strani",
-	"apihelp-record-lint-param-revision": "Številka redakcije, v kateri je bila odkrita napaka",
 	"apihelp-query+linterstats-description": "Prikaži število kodnih napak v posameznih kategorijah",
 	"apihelp-query+linterstats-summary": "Prikaži število kodnih napak v posameznih kategorijah",
-	"apihelp-query+linterstats-example-1": "Prikaži število kodnih napak v posameznih kategorijah",
-	"apierror-linter-invalid-ip": "Vaš IP-naslov nima dovoljenja za poročanje o napakah Lint",
-	"apierror-linter-invalid-data": "Neveljavni podatki",
-	"apierror-linter-invalid-title": "Neveljaven, neobstoječ ali zastarel naslov"
+	"apihelp-query+linterstats-example-1": "Prikaži število kodnih napak v posameznih kategorijah"
 }

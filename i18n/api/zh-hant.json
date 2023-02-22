@@ -17,15 +17,7 @@
 	"apihelp-query+linterrors-param-pageid": "僅包括來自指定頁面 ID 的 lint 錯誤",
 	"apihelp-query+linterrors-param-title": "僅包括來自指定頁面標題的 lint 錯誤",
 	"apihelp-query+linterrors-example-1": "取得所有過時標籤分類的 lint 錯誤",
-	"apihelp-record-lint-description": "在資料庫內記錄 lint 錯誤",
-	"apihelp-record-lint-summary": "在資料庫內記錄 lint 錯誤",
-	"apihelp-record-lint-param-data": "有關錯誤的JSON編碼資料",
-	"apihelp-record-lint-param-page": "頁面標題",
-	"apihelp-record-lint-param-revision": "發現錯誤的修訂版本ID",
 	"apihelp-query+linterstats-description": "取得每個分類內的 lint 錯誤量",
 	"apihelp-query+linterstats-summary": "取得每個分類內的 lint 錯誤量",
-	"apihelp-query+linterstats-example-1": "取得每個分類內的 lint 錯誤量",
-	"apierror-linter-invalid-ip": "您的 IP 位址未被允許回報 lint 錯誤",
-	"apierror-linter-invalid-data": "無效資料",
-	"apierror-linter-invalid-title": "無效、不存在或過時的標題"
+	"apihelp-query+linterstats-example-1": "取得每個分類內的 lint 錯誤量"
 }

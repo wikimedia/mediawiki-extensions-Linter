@@ -13,15 +13,7 @@
 	"apihelp-query+linterrors-param-pageid": "Давај само грешки од Lint од укажаните назнаки на именски простори",
 	"apihelp-query+linterrors-param-title": "Давај само грешки од од укажаниот наслов",
 	"apihelp-query+linterrors-example-1": "Ги дава сите грешки од пречистувачот на категоријата со застарена ознака",
-	"apihelp-record-lint-description": "Заведување грешка од пречистувачот во базата",
-	"apihelp-record-lint-summary": "Зведување грешка од пречистувачот во базата",
-	"apihelp-record-lint-param-data": "Податоци за грешката кодирани во JSON",
-	"apihelp-record-lint-param-page": "Наслов на страницата",
-	"apihelp-record-lint-param-revision": "Назнака на преработката во која е пронајдена грешката",
 	"apihelp-query+linterstats-description": "Дај број на грешки во пречистувачот за секоја категорија",
 	"apihelp-query+linterstats-summary": "Дај број на грешки во пречистувачот за секоја категорија",
-	"apihelp-query+linterstats-example-1": "Дај број на грешки во пречистувачот за секоја категорија",
-	"apierror-linter-invalid-ip": "На вашата IP-адреса не ѝ е дозволено да пријавува грешки во Lint",
-	"apierror-linter-invalid-data": "Неважечки податоци",
-	"apierror-linter-invalid-title": "Неважечки, непостоечки или застарен наслов"
+	"apihelp-query+linterstats-example-1": "Дај број на грешки во пречистувачот за секоја категорија"
 }

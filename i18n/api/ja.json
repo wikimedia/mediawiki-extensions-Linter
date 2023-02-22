@@ -17,15 +17,7 @@
 	"apihelp-query+linterrors-param-pageid": "指定したページのlintエラーのみ集計",
 	"apihelp-query+linterrors-param-title": "指定されたページタイトルからのlintエラーのみを含む",
 	"apihelp-query+linterrors-example-1": "廃止されたタグカテゴリのすべてのlintエラーを取得します",
-	"apihelp-record-lint-description": "lintエラーをデータベースに記録します",
-	"apihelp-record-lint-summary": "lintエラーをデータベースに記録",
-	"apihelp-record-lint-param-data": "エラーに関するJSONエンコードされたデータ",
-	"apihelp-record-lint-param-page": "ページ名",
-	"apihelp-record-lint-param-revision": "エラーが見つかった更新ID",
 	"apihelp-query+linterstats-description": "カテゴリ別のlintエラー件数を表示",
 	"apihelp-query+linterstats-summary": "カテゴリ別のlintエラー件数を表示",
-	"apihelp-query+linterstats-example-1": "カテゴリ別のlintエラー件数を表示",
-	"apierror-linter-invalid-ip": "ご利用のIPアドレスは、lintエラーの報告が許可されていません。",
-	"apierror-linter-invalid-data": "無効なデータ",
-	"apierror-linter-invalid-title": "無効なタイトル、存在しないタイトル、または古いタイトル"
+	"apihelp-query+linterstats-example-1": "カテゴリ別のlintエラー件数を表示"
 }

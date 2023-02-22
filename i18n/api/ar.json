@@ -19,15 +19,7 @@
 	"apihelp-query+linterrors-param-pageid": "قم بتضمين أخطاء lint من الصفحات المحددة فقط",
 	"apihelp-query+linterrors-param-title": "قم فقط بتضمين أخطاء النسالة من عنوان الصفحة المحدد",
 	"apihelp-query+linterrors-example-1": "الحصول على جميع أخطاء lint من تصنيف العلامة القديمة",
-	"apihelp-record-lint-description": "سجل خطأ lint في قاعدة البيانات",
-	"apihelp-record-lint-summary": "سجل خطأ lint في قاعدة البيانات",
-	"apihelp-record-lint-param-data": "شفر JSON البيانات حول الخطأ",
-	"apihelp-record-lint-param-page": "عنوان الصفحة",
-	"apihelp-record-lint-param-revision": "معرف المراجعة الذي تم العثور على الخطأ فيها",
 	"apihelp-query+linterstats-description": "الحصول على عدد من أخطاء lint في كل تصنيف",
 	"apihelp-query+linterstats-summary": "الحصول على عدد من أخطاء lint في كل تصنيف",
-	"apihelp-query+linterstats-example-1": "الحصول على عدد من أخطاء lint في كل تصنيف",
-	"apierror-linter-invalid-ip": "عنوان اآيبي الخاص بك غير مسموح له للإبلاغ عن أخطاء lint",
-	"apierror-linter-invalid-data": "بيانات غير صالحة",
-	"apierror-linter-invalid-title": "عنوان غير صالح أو غير موجود أو قديم"
+	"apihelp-query+linterstats-example-1": "الحصول على عدد من أخطاء lint في كل تصنيف"
 }

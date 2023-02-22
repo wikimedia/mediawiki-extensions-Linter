@@ -13,15 +13,7 @@
 	"apihelp-query+linterrors-param-pageid": "'Nglude sulamende le errore de Lint da le ID de le pàggene specificate",
 	"apihelp-query+linterrors-param-title": "'Nglude sulamende le errore de lint fa 'nu titole de pàgene specificate",
 	"apihelp-query+linterrors-example-1": "Pigghie tutte le errore de Lint d'a categorije \"obsolete-tag\"",
-	"apihelp-record-lint-description": "Reggìstre 'n'errore de Lint jndr'à 'u database",
-	"apihelp-record-lint-summary": "Reggìstre 'n'errore de Lint jndr'à 'u database",
-	"apihelp-record-lint-param-data": "Date sus a l'errore codifecate JSON",
-	"apihelp-record-lint-param-page": "Titole d'a vôsce",
-	"apihelp-record-lint-param-revision": "ID d'a revisione addò l'errore ha state acchiate",
 	"apihelp-query+linterstats-description": "Pigghie 'u numere de errore de Liont jndr'à ogne categorije",
 	"apihelp-query+linterstats-summary": "Pigghie 'u numere de errore de Liont jndr'à ogne categorije",
-	"apihelp-query+linterstats-example-1": "Pigghie 'u numere de errore de Liont jndr'à ogne categorije",
-	"apierror-linter-invalid-ip": "L'indirizze IP tune non g'è permesse pe segnalà le errore de Lint",
-	"apierror-linter-invalid-data": "Date invalide",
-	"apierror-linter-invalid-title": "Titole invalide, inesistende o vecchie"
+	"apihelp-query+linterstats-example-1": "Pigghie 'u numere de errore de Liont jndr'à ogne categorije"
 }

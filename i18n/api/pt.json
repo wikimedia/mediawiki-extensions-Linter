@@ -14,15 +14,7 @@
 	"apihelp-query+linterrors-param-pageid": "Só incluir erros de lint dos identificadores de página especificados",
 	"apihelp-query+linterrors-param-title": "Incluir só os erros de lint do título de página especificado",
 	"apihelp-query+linterrors-example-1": "Obter todos os erros de lint da categoria de elementos obsoletos",
-	"apihelp-record-lint-description": "Registar um erro de lint na base de dados",
-	"apihelp-record-lint-summary": "Registar um erro de lint na base de dados",
-	"apihelp-record-lint-param-data": "Dados codificados em JSON sobre o erro",
-	"apihelp-record-lint-param-page": "Título da página",
-	"apihelp-record-lint-param-revision": "Identificador da revisão na qual o erro foi encontrado",
 	"apihelp-query+linterstats-description": "Obter o número de erros de lint em cada categoria",
 	"apihelp-query+linterstats-summary": "Obter o número de erros de lint em cada categoria",
-	"apihelp-query+linterstats-example-1": "Obter o número de erros de lint em cada categoria",
-	"apierror-linter-invalid-ip": "O seu endereço IP não está autorizado a reportar erros de lint.",
-	"apierror-linter-invalid-data": "Dados inválidos",
-	"apierror-linter-invalid-title": "Título inválido, inexistente ou desatualizado"
+	"apihelp-query+linterstats-example-1": "Obter o número de erros de lint em cada categoria"
 }

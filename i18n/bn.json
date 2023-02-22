@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Aftabuzzaman",
+			"Ahmad Kanik",
 			"Elias Ahmmad",
 			"YahyA",
 			"Yahya",
@@ -41,5 +42,6 @@
 	"linterrors-subpage": "লিন্ট ত্রুটি: $1",
 	"linterrors-summary": "<strong>টীকা:</strong> বিষয়শ্রেণীর সংখ্যাগুলি সঠিক গণনা নয়, তবে আনুমানিক হিসাবের উপর ভিত্তি করে।",
 	"multi-part-template-block": "একটি একক টেমপ্লেট থেকে আউটপুট নয়",
-	"pageinfo-linter": "লিন্ট ত্রুটি"
+	"pageinfo-linter": "লিন্ট ত্রুটি",
+	"pageinfo-linter-moreinfo": "লিন্ট ত্রুটিগুলোর বিস্তারিত তথ্য দেখুন"
 }
