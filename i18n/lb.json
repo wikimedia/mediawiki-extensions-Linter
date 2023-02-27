@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Les Meloures",
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
 	"linterrors": "Lint-Feeler",
@@ -11,7 +12,7 @@
 	"linter-category-misc-tidy-replacement-issues": "Verschidde Probleemer",
 	"linter-category-missing-end-tag": "Schluss-Tag feelt",
 	"linter-category-missing-end-tag-desc": "Op dëse Säite feele Schluss-Tagen.",
-	"linter-category-multiple-unclosed-formatting-tags": "Méi Formatéierungs-Tags déi net zou sinn",
+	"linter-category-multiple-unclosed-formatting-tags": "Méi Formatéierungs-Tags, déi net zou sinn",
 	"linter-category-multiple-unclosed-formatting-tags-desc": "Dës Säiten hu méi net zougemaacht Formatéierungs-Tags",
 	"linter-category-obsolete-tag": "Vereelzt HTML-Tagen",
 	"linter-category-obsolete-tag-desc": "Dës Säite benotze vereelzt HTML-Tagen.",
