@@ -25,6 +25,7 @@
 	"linter-pager-misc-tidy-replacement-issues-details": "Diversa erori pri ''markup''",
 	"linter-pager-misnested-tag-details": "Etiketo nekorekte inkluzita, qua mustos inkluzesar korekte",
 	"linter-pager-multi-colon-escape-details": "Multopla uzo di bi-punti",
+	"linter-pager-multiple-unclosed-formatting-tags-details": "Diversa etiketi sen klozuri en la pagino",
 	"linter-pager-obsolete-tag-details": "etiketo HTML obsoleta",
 	"linter-pager-template-header": "Tra ula shablono?",
 	"linter-pager-tidy-whitespace-bug-details": "Problemi pri ecesanta blanka spaci",
