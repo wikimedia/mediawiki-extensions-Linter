@@ -7,6 +7,8 @@
 	"linterrors": "Lint kļūdas",
 	"linter-category-misc-tidy-replacement-issues": "Dažādas problēmas",
 	"linter-form-namespace": "Vārdtelpa:",
+	"linter-form-template-option-with": "Ar veidnēm",
+	"linter-form-template-option-without": "Bez veidnēm",
 	"linter-heading-high-priority": "Augsta prioritāte",
 	"linter-heading-low-priority": "Zema prioritāte",
 	"linter-heading-medium-priority": "Vidēja prioritāte",
