@@ -14,7 +14,8 @@
 			"Shirayuki",
 			"Whym",
 			"Yusuke1109",
-			"ひまり"
+			"ひまり",
+			"もなー(偽物)"
 		]
 	},
 	"linterrors": "Lint エラー",
@@ -56,6 +57,12 @@
 	"linter-form-prefix-match": "タイトルの接頭辞に一致するすべてのページを検索する",
 	"linter-form-exact-or-prefix": "特定のページタイトルを検索するか、共通のタイトル接頭辞を持つすべてのページを検索するか",
 	"linter-form-namespace": "名前空間:",
+	"linter-form-tag": "タグで絞り込み",
+	"linter-form-tag-option-all": "絞り込みなし",
+	"linter-form-template": "テンプレートの状態で絞り込み",
+	"linter-form-template-option-all": "絞り込みなし",
+	"linter-form-template-option-with": "テンプレートあり",
+	"linter-form-template-option-without": "テンプレートなし",
 	"linter-form-title-prefix": "タイトルの接頭辞または完全なタイトルを入力してください:",
 	"linter-heading-high-priority": "優先度 高",
 	"linter-heading-low-priority": "優先度 低",
