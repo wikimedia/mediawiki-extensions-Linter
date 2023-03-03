@@ -5,7 +5,8 @@
 			"Daud I.F. Argana",
 			"EkoITS94",
 			"Farras",
-			"Hidayatsrf"
+			"Hidayatsrf",
+			"Veracious"
 		]
 	},
 	"linterrors": "Galat lint",
@@ -24,6 +25,11 @@
 	"linter-desc": "Melacak galat lint dari sebuah layanan eksternal dan menampilkannya kepada pengguna",
 	"linter-form-exact-match": "Cari judul halaman tertentu",
 	"linter-form-namespace": "Ruang nama:",
+	"linter-form-tag": "Saring berdasarkan nama tag",
+	"linter-form-tag-option-all": "Tanpa filter",
+	"linter-form-template-option-all": "Tanpa filter",
+	"linter-form-template-option-with": "Dengan templat",
+	"linter-form-template-option-without": "Tanpa templat",
 	"linter-form-title-prefix": "Masukkan awalan judul atau judul lengkap:",
 	"linter-heading-high-priority": "Prioritas tinggi",
 	"linter-heading-low-priority": "Prioritas rendah",
