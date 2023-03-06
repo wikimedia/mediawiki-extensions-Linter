@@ -50,6 +50,7 @@
 	"linter-form-namespace": "Espaço nominal:",
 	"linter-form-tag": "Filtrar por nome de etiqueta",
 	"linter-form-tag-option-all": "Sem filtro",
+	"linter-form-template": "Filtrar por estado de predefinição",
 	"linter-form-template-option-all": "Sem filtro",
 	"linter-form-template-option-with": "Com predefinições",
 	"linter-form-template-option-without": "Sem predefinições",
