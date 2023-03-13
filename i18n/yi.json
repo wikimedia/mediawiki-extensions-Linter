@@ -12,6 +12,7 @@
 	"linter-category-self-closed-tag": "אליין־פֿאַרמאַכטע טאַגן",
 	"linter-form-namespace": "נאָמענטייל:",
 	"linter-heading-high-priority": "הויכער פריאריטעט",
+	"linter-numerrors": "($1 {{PLURAL:$1|פֿעלער|פֿעלערן}})",
 	"linter-page-edit": "רעדאַקטירן",
 	"linter-page-history": "היסטאָריע",
 	"linter-pager-deletable-table-tag-details": "טאבעלע־טאג וואס מען דארף אויסמעקן",
