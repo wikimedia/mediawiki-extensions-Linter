@@ -5,7 +5,8 @@
 			"Matma Rex",
 			"Rail",
 			"WTM",
-			"Woytecr"
+			"Woytecr",
+			"Msz2001"
 		]
 	},
 	"linterrors": "Błędy składniowe",
@@ -24,6 +25,7 @@
 	"linter-category-multi-colon-escape-desc": "Strony zawierające linki poprzedzone wieloma dwukropkami.",
 	"linter-category-multiline-html-table-in-list": "Wielolinijkowa tabela w elemencie listy",
 	"linter-category-multiple-unclosed-formatting-tags": "Wiele niezamkniętych tagów formatujących",
+	"linter-category-multiple-unclosed-formatting-tags-desc": "Te strony mają wiele niezamkniętych znaczników formatowania",
 	"linter-category-obsolete-tag": "Przestarzałe znaczniki HTML",
 	"linter-category-obsolete-tag-desc": "Te strony używają nieaktualnych tagów HTML.",
 	"linter-category-pwrap-bug-workaround": "Obejście błędnego generowania akapitów",
