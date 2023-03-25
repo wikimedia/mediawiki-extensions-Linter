@@ -26,6 +26,7 @@ use MediaWiki\MediaWikiServices;
 use stdClass;
 use WikiMap;
 use Wikimedia\Rdbms\DBConnRef;
+use Wikimedia\Rdbms\IReadableDatabase;
 use Wikimedia\Rdbms\SelectQueryBuilder;
 
 /**
@@ -87,18 +88,25 @@ class Database {
 	}
 
 	/**
+	 * @return IReadableDatabase
+	 */
+	public static function getReplicaDBConnection(): IReadableDatabase {
+		return MediaWikiServices::getInstance()->getDBLoadBalancerFactory()->getReplicaDatabase();
+	}
+
+	/**
 	 * Get a specific LintError by id
 	 *
 	 * @param int $id linter_id
 	 * @return bool|LintError
 	 */
 	public function getFromId( $id ) {
-		$row = self::getDBConnectionRef( DB_REPLICA )->selectRow(
-			'linter',
-			[ 'linter_cat', 'linter_params', 'linter_start', 'linter_end' ],
-			[ 'linter_id' => $id, 'linter_page' => $this->pageId ],
-			__METHOD__
-		);
+		$row = self::getReplicaDBConnection()->newSelectQueryBuilder()
+			->select( [ 'linter_cat', 'linter_params', 'linter_start', 'linter_end' ] )
+			->from( 'linter' )
+			->where( [ 'linter_id' => $id, 'linter_page' => $this->pageId ] )
+			->caller( __METHOD__ )
+			->fetchRow();
 
 		if ( $row ) {
 			$row->linter_id = $id;
@@ -139,15 +147,13 @@ class Database {
 	 * @return LintError[]
 	 */
 	public function getForPage() {
-		$rows = self::getDBConnectionRef( DB_REPLICA )->select(
-			'linter',
-			[
-				'linter_id', 'linter_cat', 'linter_start',
-				'linter_end', 'linter_params'
-			],
-			[ 'linter_page' => $this->pageId ],
-			__METHOD__
-		);
+		$rows = self::getReplicaDBConnection()->newSelectQueryBuilder()
+			->select( [ 'linter_id', 'linter_cat', 'linter_start', 'linter_end', 'linter_params' ] )
+			->from( 'linter' )
+			->where( [ 'linter_page' => $this->pageId ] )
+			->caller( __METHOD__ )
+			->fetchResultSet();
+
 		$result = [];
 		foreach ( $rows as $row ) {
 			$error = self::makeLintError( $row );
@@ -346,13 +352,13 @@ class Database {
 	 * @return int[]
 	 */
 	private function getTotalsAccurate( $conds = [] ) {
-		$rows = self::getDBConnectionRef( DB_REPLICA )->select(
-			'linter',
-			[ 'linter_cat', 'COUNT(*) AS count' ],
-			$conds,
-			__METHOD__,
-			[ 'GROUP BY' => 'linter_cat' ]
-		);
+		$rows = self::getReplicaDBConnection()->newSelectQueryBuilder()
+			->select( [ 'linter_cat', 'COUNT(*) AS count' ] )
+			->from( 'linter' )
+			->where( $conds )
+			->caller( __METHOD__ )
+			->groupBy( 'linter_cat' )
+			->fetchResultSet();
 
 		// Initialize zero values
 		$ret = array_fill_keys( $this->categoryManager->getVisibleCategories(), 0 );
