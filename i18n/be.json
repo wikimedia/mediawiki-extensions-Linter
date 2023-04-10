@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Artsiom91",
+			"Maksim L.",
 			"Mechanizatar"
 		]
 	},
 	"linterrors": "Памылкі статычнага аналізатара",
-	"linter-category-missing-end-tag": "Адсутнічае закрываючы тэг",
+	"linter-category-missing-end-tag": "Бракуе завяршальнага тэга",
 	"linter-page-edit": "правіць"
 }
