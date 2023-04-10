@@ -32,7 +32,7 @@
 	"linter-category-misnested-tag-desc": "Ces pages ont des balises mal emboîtées qui devraient être corrigées.",
 	"linter-category-missing-end-tag": "Balise de fin manquante",
 	"linter-category-missing-end-tag-desc": "Ces pages ont des balises de fin manquante.",
-	"linter-category-multi-colon-escape": "Échappement de double-points multiple",
+	"linter-category-multi-colon-escape": "Échappement de deux-points multiples",
 	"linter-category-multi-colon-escape-desc": "Ces pages ont des liens préfixés par des double-points multiples.",
 	"linter-category-multiline-html-table-in-list": "Tableau multilignes dans une liste",
 	"linter-category-multiline-html-table-in-list-desc": "Auparavant, les tableaux étaient déplacés dans ou hors de la liste, mais désormais, cela étend la liste au reste de la page.",
