@@ -188,6 +188,13 @@
 					"enabled": false,
 					"priority": "high",
 					"no-params": true
+				},
+				"large-tables": {
+					"dbid": 20,
+					"enabled": false,
+					"priority": "low",
+					"has-name": true,
+					"parser-migration": true
 				}
 			}
 		},
