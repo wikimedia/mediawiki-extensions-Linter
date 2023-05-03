@@ -115,12 +115,19 @@ class ApiQueryLintErrors extends ApiQueryBase {
 	/** @inheritDoc */
 	public function getAllowedParams() {
 		$visibleCats = ( new CategoryManager() )->getVisibleCategories();
+		$invisibleCats = ( new CategoryManager() )->getinvisibleCategories();
 		return [
 			'categories' => [
 				ParamValidator::PARAM_TYPE => $visibleCats,
 				ParamValidator::PARAM_ISMULTI => true,
 				// Default is to show all categories
 				ParamValidator::PARAM_DEFAULT => implode( '|', $visibleCats ),
+			],
+			'invisible-categories' => [
+				ParamValidator::PARAM_TYPE => $invisibleCats,
+				ParamValidator::PARAM_ISMULTI => true,
+				// Default is to show all categories
+				ParamValidator::PARAM_DEFAULT => implode( '|', $invisibleCats ),
 			],
 			'limit' => [
 				ParamValidator::PARAM_DEFAULT => 10,
