@@ -193,6 +193,12 @@
 					"dbid": 20,
 					"enabled": true,
 					"priority": "none"
+				},
+				"missing-end-tag-in-heading": {
+					"dbid": 21,
+					"enabled": true,
+					"priority": "none",
+					"has-name": true
 				}
 			}
 		},
