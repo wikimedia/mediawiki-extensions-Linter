@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Alshamiri1",
 			"FShbib",
 			"Hhaboh162002",
 			"Meno25",
@@ -15,6 +16,8 @@
 	"linterrors": "أخطاء لنت",
 	"linter-category-bogus-image-options": "خيارات ملف زائفة",
 	"linter-category-bogus-image-options-desc": "تحتوي هذه الصفحات على ملفات بخيارات زائفة.",
+	"linter-category-large-tables": "جداول كبيرة يصعب عرضها على الهاتف المحمول",
+	"linter-category-large-tables-desc": "تحتوي هذه الصفحات على جداول يصعب عرضها على الهاتف المحمول",
 	"linter-category-deletable-table-tag": "علامة الجدول التي ينبغي حذفها",
 	"linter-category-deletable-table-tag-desc": "تحتوي هذه الصفحات على علامات جدول ينبغي حذفها.",
 	"linter-category-fostered": "محتوى معزز",
@@ -27,6 +30,7 @@
 	"linter-category-misnested-tag-desc": "تحتوي هذه الصفحات على علامات غير متداخلة يمكن إصلاحها.",
 	"linter-category-missing-end-tag": "علامة انتهاء مفقودة",
 	"linter-category-missing-end-tag-desc": "تحتوي هذه الصفحات على علامات انتهاء مفقودة.",
+	"linter-category-missing-end-tag-in-heading": "وسم النهاية مفقود في العنوان",
 	"linter-category-multi-colon-escape": "هروب متعدد النقاط الرأسية",
 	"linter-category-multi-colon-escape-desc": "تحتوي هذه الصفحات على وصلات مسبوقة بنقاط رأسية متعددة.",
 	"linter-category-multiline-html-table-in-list": "جدول متعدد في القائمة",
@@ -59,6 +63,7 @@
 	"linter-page-history": "تاريخ",
 	"linter-page-viewsource": "عرض المصدر",
 	"linter-pager-bogus-image-options-details": "خيار ملف زائف",
+	"linter-pager-large-tables-details": "جدول كبير لعرض الجوال",
 	"linter-pager-deletable-table-tag-details": "علامة الجدول التي ينبغي حذفها",
 	"linter-pager-html5-misnesting-details": "عدم تداخل (معطوب الآن)",
 	"linter-pager-misc-tidy-replacement-issues-details": "أخطاء ترميز متنوعة تؤثر على استبدال تيدي",
