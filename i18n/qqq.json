@@ -87,7 +87,7 @@
 	"linter-pager-tidy-whitespace-bug-details": "Table column heading. For information about the bug, see the commit message https://gerrit.wikimedia.org/r/#/c/371068 .",
 	"linter-pager-title-header": "Table column heading for the column with page titles in it\n{{Identical|Page title}}",
 	"linter-pager-unclosed-quotes-in-heading-details": "Table column heading. See [[:mw:Help:Lint errors/unclosed-quotes-in-heading]].",
-	"linter-prefix-search-subpage": "Page title for title prefix search, $1 is the title prefix or complete title entered by user",
+	"linter-prefix-search-subpage": "Page title for title prefix search, $1 is the title prefix or complete title entered by user\n\nSee also: {{msg-mw|linterrors}}",
 	"linterrors-subpage": "Page title for Special:LintErrors, $1 is the localized category description",
 	"linterrors-summary": "Summary message for Special:LintErrors",
 	"multi-part-template-block": "Table cell on [[Special:LintErrors]] indicating that content block is not produced by a single template",
