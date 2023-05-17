@@ -9,7 +9,7 @@
 			"Mormegil"
 		]
 	},
-	"linterrors": "Chyby nalezené lintem",
+	"linterrors": "Chyby nalezené Lintem",
 	"linter-category-bogus-image-options": "Chybné parametry souboru",
 	"linter-category-bogus-image-options-desc": "Tyto stránky obsahují soubory s chybnými parametry.",
 	"linter-category-deletable-table-tag": "Značka tabulky, která by měla být smazána",
@@ -47,6 +47,7 @@
 	"linter-category-wikilink-in-extlink": "Odkazy v odkazech",
 	"linter-category-wikilink-in-extlink-desc": "Tyto stránky obsahují wikiodkazy uvnitř externích odkazů, které lze opravit",
 	"linter-desc": "Sleduje chyby nalezené externím Lintem a zobrazuje je uživatelům",
+	"linter-invalid-title": "Jmenný prostor nebo název stránky nebyly nalezeny nebo mají chybný tvar",
 	"linter-form-namespace": "Jmenný prostor:",
 	"linter-heading-high-priority": "Vysoká priorita",
 	"linter-heading-low-priority": "Nízká priorita",
@@ -56,7 +57,9 @@
 	"linter-page-history": "historie",
 	"linter-page-viewsource": "zobrazit zdroj",
 	"linter-pager-bogus-image-options-details": "Chybný parametr souboru",
+	"linter-pager-category-header": "Kategorie",
 	"linter-pager-deletable-table-tag-details": "Značka tabulky, která by měla být smazána",
+	"linter-pager-details-header": "Doplňující informace",
 	"linter-pager-html5-misnesting-details": "Prolínání prvků (nyní nefunkční)",
 	"linter-pager-misc-tidy-replacement-issues-details": "Různé chyby syntaxe",
 	"linter-pager-misnested-tag-details": "Prolínající se prvek, který je třeba správně zanořit",
