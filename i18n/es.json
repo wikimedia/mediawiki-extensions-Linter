@@ -11,7 +11,8 @@
 			"James",
 			"Luzcaru",
 			"Macofe",
-			"MarcoAurelio"
+			"MarcoAurelio",
+			"No se"
 		]
 	},
 	"linterrors": "Errores de sintaxis",
@@ -74,6 +75,7 @@
 	"linter-page-history": "historial",
 	"linter-page-viewsource": "ver código",
 	"linter-pager-bogus-image-options-details": "Opción de archivo inútil",
+	"linter-pager-large-tables-details": "Tabla que es grande para la vista móvil",
 	"linter-pager-category-header": "Categoría",
 	"linter-pager-deletable-table-tag-details": "Etiqueta de tabla que se debería borrar",
 	"linter-pager-details-header": "Información adicional",
