@@ -22,12 +22,12 @@ namespace MediaWiki\Linter\Test;
 
 use ContentHandler;
 use Exception;
-use FauxRequest;
 use MediaWiki\Linter\CategoryManager;
 use MediaWiki\Linter\Database;
 use MediaWiki\Linter\LintError;
 use MediaWiki\Linter\RecordLintJob;
 use MediaWiki\Linter\SpecialLintErrors;
+use MediaWiki\Request\FauxRequest;
 use SpecialPageTestBase;
 use Title;
 use User;
