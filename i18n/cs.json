@@ -9,7 +9,7 @@
 			"Mormegil"
 		]
 	},
-	"linterrors": "Chyby nalezené lintem",
+	"linterrors": "Chyby nalezené Lintem",
 	"linter-category-bogus-image-options": "Chybné parametry souboru",
 	"linter-category-bogus-image-options-desc": "Tyto stránky obsahují soubory s chybnými parametry.",
 	"linter-category-deletable-table-tag": "Značka tabulky, která by měla být smazána",
