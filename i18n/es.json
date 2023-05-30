@@ -18,6 +18,8 @@
 	"linterrors": "Errores de sintaxis",
 	"linter-category-bogus-image-options": "Opciones de archivo inútiles",
 	"linter-category-bogus-image-options-desc": "Estas páginas contienen archivos con opciones inútiles.",
+	"linter-category-large-tables": "Tablas grandes que son difíciles de ver en dispositivos móviles",
+	"linter-category-large-tables-desc": "Estas páginas tienen tablas que son difíciles de ver en dispositivos móviles.",
 	"linter-category-deletable-table-tag": "Etiqueta de tabla que debería ser borrada",
 	"linter-category-deletable-table-tag-desc": "Estas páginas tienen etiquetas de tabla que se deberían borrar.",
 	"linter-category-fostered": "Contenido fuera de lugar",
