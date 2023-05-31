@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Eitvys200"
+			"Eitvys200",
+			"Nokeoo"
 		]
 	},
+	"apihelp-query+linterrors-param-limit": "Užklausos rezultatų skaičius",
 	"apihelp-record-lint-param-page": "Puslapio pavadinimas"
 }
