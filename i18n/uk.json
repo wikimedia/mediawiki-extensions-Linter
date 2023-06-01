@@ -53,6 +53,12 @@
 	"linter-form-prefix-match": "Шукати усі сторінки, які відповідають префіксу назви",
 	"linter-form-exact-or-prefix": "Шукати конкретну назву сторінки або всі сторінки зі спільним префіксом назви",
 	"linter-form-namespace": "Простір назв:",
+	"linter-form-tag": "Фільтрувати за назвою тегу",
+	"linter-form-tag-option-all": "Без фільтру",
+	"linter-form-template": "Фільтрувати за станом шаблону",
+	"linter-form-template-option-all": "Без фільтру",
+	"linter-form-template-option-with": "З шаблонами",
+	"linter-form-template-option-without": "Без шаблонів",
 	"linter-form-title-prefix": "Будь ласка, введіть префікс назви або повну назву:",
 	"linter-heading-high-priority": "Високий пріоритет",
 	"linter-heading-low-priority": "Низький пріоритет",
@@ -88,5 +94,6 @@
 	"linterrors-subpage": "Lint-помилки: $1",
 	"linterrors-summary": "<strong>Примітка:</strong> підрахунок для категорій не є точним — він базується на приблизних значеннях.",
 	"multi-part-template-block": "Результати з двох або більше шаблонів",
-	"pageinfo-linter": "Lint-помилки"
+	"pageinfo-linter": "Lint-помилки",
+	"pageinfo-linter-moreinfo": "Переглянути детальну інформацію про lint-помилки."
 }
