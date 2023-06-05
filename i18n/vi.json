@@ -3,7 +3,8 @@
 		"authors": [
 			"Minh Nguyen",
 			"Vinhtantran",
-			"NguoiDungKhongDinhDanh"
+			"NguoiDungKhongDinhDanh",
+			"Thienhau2003"
 		]
 	},
 	"linterrors": "Lỗi cú pháp",
@@ -16,6 +17,9 @@
 	"linter-category-html5-misnesting": "Thẻ lồng nhau bị sai và hiển thị khác nhau trong HTML5 và HTML4",
 	"linter-category-html5-misnesting-desc": "Những thẻ lồng nhau bị sai này sẽ hiển thị khác nhau trong HTML5 so với HTML4.",
 	"linter-category-misc-tidy-replacement-issues": "Các vấn đề khác",
+	"linter-category-misc-tidy-replacement-issues-desc": "Những trang này có các vấn đề khác khiến chúng hiển thị khác với cách chúng xuất hiện trước đây",
+	"linter-category-misnested-tag": "Lồng thẻ sai",
+	"linter-category-misnested-tag-desc": "Những trang này có các thẻ bị lồng sai và có thể sửa được.",
 	"linter-category-missing-end-tag": "Thiếu thẻ kết thúc",
 	"linter-category-missing-end-tag-desc": "Các trang này thiếu thẻ kết thúc.",
 	"linter-category-obsolete-tag": "Thẻ HTML cũ",
@@ -32,6 +36,8 @@
 	"linter-numerrors": "$1 lỗi",
 	"linter-page-edit": "sửa đổi",
 	"linter-page-history": "lịch sử",
+	"linter-page-title-edit": "$1 ($2)",
+	"linter-page-viewsource": "xem mã nguồn",
 	"linter-pager-bogus-image-options-details": "Tùy chọn tập tin giả",
 	"linter-pager-deletable-table-tag-details": "Thẻ bảng cần xóa",
 	"linter-pager-html5-misnesting-details": "Thẻ lồng sai (hiện nay bị hư)",
