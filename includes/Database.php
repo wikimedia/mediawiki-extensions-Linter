@@ -205,8 +205,9 @@ class Database {
 			$templateInfo = mb_strcut( $templateInfo, 0, self::MAX_TEMPLATE_LENGTH );
 			$result[ 'linter_template' ] = $templateInfo;
 
-			$error->tagInfo = mb_strcut( $error->tagInfo, 0, self::MAX_TAG_LENGTH );
-			$result[ 'linter_tag' ] = $error->tagInfo ?? '';
+			$tagInfo = $error->tagInfo ?? '';
+			$tagInfo = mb_strcut( $tagInfo, 0, self::MAX_TAG_LENGTH );
+			$result[ 'linter_tag' ] = $tagInfo;
 		}
 
 		return $result;

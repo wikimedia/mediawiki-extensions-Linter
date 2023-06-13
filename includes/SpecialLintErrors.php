@@ -20,12 +20,13 @@
 
 namespace MediaWiki\Linter;
 
-use Html;
 use HTMLForm;
 use MalformedTitleException;
+use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 use OutputPage;
 use SpecialPage;
+use WebRequest;
 
 class SpecialLintErrors extends SpecialPage {
 
@@ -39,31 +40,22 @@ class SpecialLintErrors extends SpecialPage {
 	}
 
 	/**
-	 * @param int|null $ns
-	 * @param bool $invert
 	 * @param string $titleLabel
 	 */
-	protected function showFilterForm( $ns, $invert, $titleLabel ) {
+	protected function showFilterForm( $titleLabel ) {
 		$selectOptions = [
 			(string)$this->msg( 'linter-form-exact-match' )->escaped() => true,
 			(string)$this->msg( 'linter-form-prefix-match' )->escaped() => false,
 		];
+		$namespaces = $this->getContext()->getRequest()->getVal( "wpNamespaceRestrictions" );
 		$fields = [
-			'namespace' => [
-				'type' => 'namespaceselect',
-				'name' => 'namespace',
-				'label-message' => 'linter-form-namespace',
-				'default' => $ns,
-				'id' => 'namespace',
-				'all' => '',
-				'cssclass' => 'namespaceselector'
-			],
-			'invertnamespace' => [
-				'type' => 'check',
-				'name' => 'invert',
-				'label-message' => 'invert',
-				'default' => $invert,
-				'tooltip' => 'invert'
+			'NamespaceRestrictions' => [
+				'type' => 'namespacesmultiselect',
+				'label' => $this->msg( 'linter-form-namespace' )->text(),
+				'exists' => true,
+				'cssclass' => 'mw-block-partial-restriction',
+				'default' => $namespaces,
+				'input' => [ 'autocomplete' => false ]
 			],
 			'titlefield' => [
 				'type' => 'title',
@@ -122,11 +114,10 @@ class SpecialLintErrors extends SpecialPage {
 	 * and exact title searches that find no matching records, and produce appropriate error messages
 	 *
 	 * @param string $title
-	 * @param int|null $namespace
-	 * @param bool $invert
+	 * @param array $namespaces
 	 * @return array
 	 */
-	public function cleanTitle( $title, $namespace, $invert ) {
+	public function cleanTitle( string $title, $namespaces ): array {
 		// Check all titles for malformation regardless of exact match or prefix match
 		try {
 			$titleElements = MediaWikiServices::getInstance()->getTitleParser()->parseTitle( $title );
@@ -151,25 +142,17 @@ class SpecialLintErrors extends SpecialPage {
 			$titleNamespace = null;
 		}
 
-		if ( $namespace === null && $titleNamespace === null ) {
-			// if invert checkbox is set while the namespace drop-down is set to 'all' and no namespace was set in the
-			// title text box, then the invert check box being set is invalid as it would exclude all namespaces.
-			if ( $invert ) {
-				return [ 'titlefield' => null, 'error' => 'linter-namespace-invert-error' ];
-			}
-		}
-
-		if ( $namespace !== null && $titleNamespace !== null ) {
+		if ( !empty( $namespaces ) && $titleNamespace !== null ) {
 			// Show the namespace mismatch error if the namespaces specified in drop-down and title text do not match.
-			if ( $namespace !== $titleNamespace ) {
+			if ( in_array( $titleNamespace, $namespaces ) === false ) {
 				return [ 'titlefield' => null, 'error' => 'linter-namespace-mismatch' ];
 			}
 		}
 
-		// If the namespace drop-down selection is 'all' (null), return the namespace from the title text
-		$ns = ( $namespace === null ) ? $titleNamespace : $namespace;
+		// If no namespaces are selected (null), return the namespace from the title text
+		$namespaces = ( empty( $namespaces ) ) ? [ $titleNamespace ] : $namespaces;
 
-		return [ 'titlefield' => $titleElements->getDBkey(), 'namespace' => $ns ];
+		return [ 'titlefield' => $titleElements->getDBkey(), 'namespace' => $namespaces ];
 	}
 
 	/**
@@ -184,6 +167,32 @@ class SpecialLintErrors extends SpecialPage {
 	}
 
 	/**
+	 * Extract namespace settings from the request object,
+	 * returning an array of namespace id numbers
+	 *
+	 * @param WebRequest $request
+	 * @return array
+	 */
+	protected function findNamespaces( $request ) {
+		$namespaces = [];
+		$activeNamespaces = array_keys(
+			MediaWikiServices::getInstance()->getNamespaceInfo()->getCanonicalNamespaces() );
+		// Remove -2 = "media" and -1 = "Special" namespace elements
+		$activeNamespaces = array_filter( $activeNamespaces,
+			static function ( $x ) {
+				return $x >= 0;
+			}
+		);
+		if ( $request->getCheck( 'wpNamespaceRestrictions' ) ) {
+			$namespaceRequestValues = $request->getRawVal( 'wpNamespaceRestrictions' );
+			$namespaceIDs = array_map( 'intval', explode( "\n", $namespaceRequestValues ) );
+			// Security measure: only allow active namespace IDs to reach the query
+			$namespaces = array_values( array_intersect( $activeNamespaces, $namespaceIDs ) );
+		}
+		return $namespaces;
+	}
+
+	/**
 	 * @param string|null $par
 	 */
 	public function execute( $par ) {
@@ -195,8 +204,8 @@ class SpecialLintErrors extends SpecialPage {
 		$this->setHeaders();
 		$this->outputHeader( $par || isset( $params[ 'titlesearch' ] ) ? 'disable-summary' : '' );
 
-		$ns = $request->getIntOrNull( 'namespace' );
-		$invert = $request->getBool( 'invert' );
+		$namespaces = $this->findNamespaces( $request );
+
 		$exactMatch = $request->getBool( 'exactmatch', true );
 		$tagName = $this->getRequest()->getText( 'tag' );
 		// map command line tag name through associative array to protect request from a SQL injection security risk
@@ -211,21 +220,20 @@ class SpecialLintErrors extends SpecialPage {
 		// Added the pageback parameter to inform the code that the '<- Special:LintErrors' link had be used to allow
 		// the UI to redisplay with previous form values, instead of just resubmitting the query.
 		if ( $par === null && isset( $params[ 'titlesearch' ] ) && !isset( $params[ 'pageback'] ) ) {
-			array_shift( $params );
+			unset( $params[ 'title' ] );
 			$params = array_merge( [ 'pageback' => true ], $params );
 			$out->addBacklinkSubtitle( $this->getPageTitle(), $params );
 
 			$title = $request->getText( 'titlesearch' );
-			$titleSearch = $this->cleanTitle( $title, $ns, $invert );
+			$titleSearch = $this->cleanTitle( $title, $namespaces );
 
 			if ( $titleSearch[ 'titlefield' ] !== null ) {
 				$out->setPageTitle( $this->msg( 'linter-prefix-search-subpage', $titleSearch[ 'titlefield' ] ) );
 
 				$catManager = new CategoryManager();
 				$pager = new LintErrorsPager(
-					$this->getContext(), null, $this->getLinkRenderer(),
-					$catManager, $titleSearch[ 'namespace' ], $invert, $exactMatch,
-					$titleSearch[ 'titlefield' ], $template, $tag
+					$this->getContext(), null, $this->getLinkRenderer(), $catManager, $namespaces,
+					$exactMatch, $titleSearch[ 'titlefield' ], $template, $tag
 				);
 				$out->addParserOutput( $pager->getFullOutput() );
 			} else {
@@ -254,17 +262,16 @@ class SpecialLintErrors extends SpecialPage {
 			$title = $request->getText( 'titlecategorysearch' );
 			// For category based searches, allow an undefined title to display all records
 			if ( $title === '' ) {
-				$titleCategorySearch = [ 'titlefield' => '', 'namespace' => $ns, 'pageid' => null ];
+				$titleCategorySearch = [ 'titlefield' => '', 'namespace' => $namespaces, 'pageid' => null ];
 			} else {
-				$titleCategorySearch = $this->cleanTitle( $title, $ns, $invert );
+				$titleCategorySearch = $this->cleanTitle( $title, $namespaces );
 			}
 
 			if ( $titleCategorySearch[ 'titlefield' ] !== null ) {
-				$this->showFilterForm( null, $invert, 'titlecategorysearch' );
+				$this->showFilterForm( 'titlecategorysearch' );
 				$pager = new LintErrorsPager(
-					$this->getContext(), $this->category, $this->getLinkRenderer(),
-					$catManager, $titleCategorySearch[ 'namespace' ], $invert, $exactMatch,
-					$titleCategorySearch[ 'titlefield' ], $template, $tag
+					$this->getContext(), $this->category, $this->getLinkRenderer(), $catManager, $namespaces,
+					$exactMatch, $titleCategorySearch[ 'titlefield' ], $template, $tag
 				);
 				$out->addParserOutput( $pager->getFullOutput() );
 			} else {
@@ -291,7 +298,7 @@ class SpecialLintErrors extends SpecialPage {
 		$out = $this->getOutput();
 		$out->addHTML( Html::element( 'h2', [],
 			$this->msg( "linter-lints-prefix-search-page-desc" )->text() ) );
-		$this->showFilterForm( null, false, 'titlesearch' );
+		$this->showFilterForm( 'titlesearch' );
 	}
 
 	/**

@@ -53,14 +53,9 @@ class LintErrorsPager extends TablePager {
 	private $linkRenderer;
 
 	/**
-	 * @var int|null
+	 * @var array
 	 */
-	private $namespace;
-
-	/**
-	 * @var bool
-	 */
-	private $invertNamespace;
+	private $namespaces;
 
 	/**
 	 * @var bool
@@ -88,15 +83,14 @@ class LintErrorsPager extends TablePager {
 	 * @param string|null $category
 	 * @param LinkRenderer $linkRenderer
 	 * @param CategoryManager $catManager
-	 * @param int|null $namespace
-	 * @param bool $invertNamespace
+	 * @param array $namespaces
 	 * @param bool $exactMatch
 	 * @param string $title
 	 * @param string $throughTemplate
 	 * @param string $tag
 	 */
 	public function __construct( IContextSource $context, $category, LinkRenderer $linkRenderer,
-		CategoryManager $catManager, $namespace, $invertNamespace, $exactMatch, $title, $throughTemplate, $tag
+		CategoryManager $catManager, $namespaces, $exactMatch, $title, $throughTemplate, $tag
 	) {
 		$this->category = $category;
 		$this->categoryManager = $catManager;
@@ -106,8 +100,7 @@ class LintErrorsPager extends TablePager {
 			$this->categoryId = null;
 		}
 		$this->linkRenderer = $linkRenderer;
-		$this->namespace = $namespace;
-		$this->invertNamespace = $invertNamespace;
+		$this->namespaces = $namespaces;
 		$this->exactMatch = $exactMatch;
 		$this->title = $title;
 		$this->throughTemplate = $throughTemplate;
@@ -121,19 +114,20 @@ class LintErrorsPager extends TablePager {
 		if ( $this->categoryId !== null ) {
 			$conds[ 'linter_cat' ] = $this->categoryId;
 		}
+
 		$mwServices = MediaWikiServices::getInstance();
 		$config = $mwServices->getMainConfig();
 		$dbMaintenance = $mwServices->getDBLoadBalancer()->getMaintenanceConnectionRef( DB_REPLICA );
-		if ( $this->namespace !== null ) {
-			$comp_op = $this->invertNamespace ? '!=' : '=';
+		if ( !empty( $this->namespaces ) ) {
 			$enableUseNamespaceColumnStage = $config->get( 'LinterUseNamespaceColumnStage' );
 			$fieldExists = $dbMaintenance->fieldExists( 'linter', 'linter_namespace', __METHOD__ );
 			if ( !$enableUseNamespaceColumnStage || !$fieldExists ) {
-				$conds[] = "page_namespace $comp_op " . $this->mDb->addQuotes( $this->namespace );
+				$conds[ "page_namespace" ] = $this->namespaces;
 			} else {
-				$conds[] = "linter_namespace $comp_op " . $this->mDb->addQuotes( $this->namespace );
+				$conds[ "linter_namespace" ] = $this->namespaces;
 			}
 		}
+
 		if ( $this->exactMatch ) {
 			if ( $this->title !== '' ) {
 				$conds[] = "page_title = " . $this->mDb->addQuotes( $this->title );
