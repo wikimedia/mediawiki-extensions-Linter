@@ -47,7 +47,7 @@
 	"linter-category-stripped-tag-desc": "Deze pagina's hebben elementen die genegeerd worden.",
 	"linter-category-tidy-font-bug": "Oud gedrag van font-tags die een link omgeven",
 	"linter-category-tidy-font-bug-desc": "Deze font-elementen werden eerder binnen de koppeling geplaatst om de kleur van de koppeling te veranderen",
-	"linter-category-tidy-whitespace-bug": "Witruimte intepretatiebug",
+	"linter-category-tidy-whitespace-bug": "Witruimte-intepretatiebug",
 	"linter-category-tidy-whitespace-bug-desc": "Deze pagina's veroorzaken een Witruimte intepretatiebug die verholpen kan worden.",
 	"linter-category-unclosed-quotes-in-heading": "Niet-afgesloten apostrof in kopje",
 	"linter-category-unclosed-quotes-in-heading-desc": "Deze pagina's hebben niet niet-afgesloten apostrof in een kop, die uit de inhoudsopgave lekt.",
