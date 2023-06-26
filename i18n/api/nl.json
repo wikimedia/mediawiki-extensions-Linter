@@ -6,7 +6,6 @@
 			"Romaine"
 		]
 	},
-	"apihelp-query+linterrors-description": "Een lijst van lintfouten opvragen.",
 	"apihelp-query+linterrors-summary": "Een lijst van lintfouten opvragen.",
 	"apihelp-query+linterrors-param-categories": "Lintfoutcategorieën.",
 	"apihelp-query+linterrors-param-limit": "Aantal resultaten om te tonen",

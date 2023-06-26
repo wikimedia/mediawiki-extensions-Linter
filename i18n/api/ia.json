@@ -4,7 +4,6 @@
 			"McDutchie"
 		]
 	},
-	"apihelp-query+linterrors-description": "Obtener un lista de errores de analyse Lint",
 	"apihelp-query+linterrors-summary": "Obtener un lista de errores de analyse Lint",
 	"apihelp-query+linterrors-param-categories": "Categorias de errores de analyse Lint",
 	"apihelp-query+linterrors-param-limit": "Numero de resultatos a consultar",
@@ -13,7 +12,6 @@
 	"apihelp-query+linterrors-param-pageid": "Solo includer errores Lint del paginas specificate per lor ID",
 	"apihelp-query+linterrors-param-title": "Solo includer errores Lint del pagina con le titulo specificate",
 	"apihelp-query+linterrors-example-1": "Obtener tote le errores Lint del categoria obsolete-tag",
-	"apihelp-query+linterstats-description": "Obtener le numero de errores de analyse Lint in cata categoria",
 	"apihelp-query+linterstats-summary": "Obtener le numero de errores Lint in cata categoria",
 	"apihelp-query+linterstats-example-1": "Obtener le numero de errores de analyse Lint in cata categoria"
 }

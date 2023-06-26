@@ -9,7 +9,6 @@
 			"Wladek92"
 		]
 	},
-	"apihelp-query+linterrors-description": "Obtenir une liste des erreurs d’analyse statique",
 	"apihelp-query+linterrors-summary": "Fournit une liste des erreurs d’analyse statique",
 	"apihelp-query+linterrors-param-categories": "Catégories d’erreurs d’analyse statique",
 	"apihelp-query+linterrors-param-limit": "Nombre de résultats à demander",
@@ -18,7 +17,6 @@
 	"apihelp-query+linterrors-param-pageid": "Inclure uniquement les erreurs d’analyse Lint des identifiants de pages spécifiés",
 	"apihelp-query+linterrors-param-title": "Inclure uniquement les erreurs d’analyse statique depuis le titre de page spécifié",
 	"apihelp-query+linterrors-example-1": "Obtenir toutes les erreurs d’analyse statique de la catégorie des balises désuètes",
-	"apihelp-query+linterstats-description": "Obtenir le nombre d’erreurs d’analyse statique dans chaque catégorie",
 	"apihelp-query+linterstats-summary": "Obtenir le nombre d’erreurs d’analyse statique dans chaque catégorie",
 	"apihelp-query+linterstats-example-1": "Obtenir le nombre d’erreurs d’analyse statique dans chaque catégorie"
 }

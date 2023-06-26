@@ -4,7 +4,6 @@
 			"Vlad5250"
 		]
 	},
-	"apihelp-query+linterrors-description": "Dobijanje spisak grešaka pročišćivanja",
 	"apihelp-query+linterrors-summary": "Dobijanje spisak grešaka pročišćivanja",
 	"apihelp-query+linterrors-param-categories": "Kategorije grešaka pročišćivanja",
 	"apihelp-query+linterrors-param-limit": "Broj stavki u ishodu upita",
