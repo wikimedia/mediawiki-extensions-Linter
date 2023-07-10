@@ -3,12 +3,13 @@
 		"authors": [
 			"Ayaibrahim",
 			"Bengtsson96",
+			"Lejonel",
 			"Mjälten",
 			"Sabelöga",
 			"WikiPhoenix"
 		]
 	},
-	"apihelp-query+linterrors-summary": "Hämta en lista med luddfel",
+	"apihelp-query+linterrors-summary": "Hämta en lista med lint-fel",
 	"apihelp-query+linterrors-param-categories": "Kategorier över lint-fel",
 	"apihelp-query+linterrors-param-limit": "Antal resultat att fråga",
 	"apihelp-query+linterrors-param-from": "Link-ID att börja fråga från",
