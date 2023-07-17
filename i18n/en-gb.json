@@ -6,6 +6,5 @@
 		]
 	},
 	"linter-category-tidy-font-bug-desc": "Previously, these font tags were moved inside links to change link colour",
-	"linter-namespace-invert-error": "The 'Invert selection' checkbox conflicts with the 'all' namespace criteria.",
 	"linter-pager-tidy-font-bug-details": "Font tag tries to change link colour"
 }
