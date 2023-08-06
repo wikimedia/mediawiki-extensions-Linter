@@ -25,7 +25,7 @@ use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\WikiMap\WikiMap;
 use stdClass;
-use Wikimedia\Rdbms\DBConnRef;
+use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\Rdbms\IReadableDatabase;
 use Wikimedia\Rdbms\SelectQueryBuilder;
 
@@ -81,10 +81,10 @@ class Database {
 
 	/**
 	 * @param int $mode DB_PRIMARY or DB_REPLICA
-	 * @return DBConnRef
+	 * @return IDatabase
 	 */
-	public static function getDBConnectionRef( int $mode ): DBConnRef {
-		return MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnectionRef( $mode );
+	public static function getDBConnectionRef( int $mode ): IDatabase {
+		return MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( $mode );
 	}
 
 	/**
