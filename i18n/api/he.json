@@ -8,6 +8,7 @@
 	},
 	"apihelp-query+linterrors-summary": "קבלת רשימת שגיאות ניקיון",
 	"apihelp-query+linterrors-param-categories": "סוגים של שגיאות ניקיון",
+	"apihelp-query+linterrors-param-invisible-categories": "קטגוריות בלתי־נראות של שגיאות ניקיון",
 	"apihelp-query+linterrors-param-limit": "מספר התוצאות לשאילתה",
 	"apihelp-query+linterrors-param-from": "מאיזה מזהה ניקיון להתחיל את השאילתה",
 	"apihelp-query+linterrors-param-namespace": "לכלול רק שגיאות ניקיון ממרחבי שם שצוינו",

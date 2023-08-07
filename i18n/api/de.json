@@ -7,6 +7,7 @@
 	},
 	"apihelp-query+linterrors-summary": "Ruft eine Liste der Lint-Fehler ab",
 	"apihelp-query+linterrors-param-categories": "Kategorien der Lint-Fehler",
+	"apihelp-query+linterrors-param-invisible-categories": "Unsichtbare Kategorien von Lint-Fehlern",
 	"apihelp-query+linterrors-param-limit": "Anzahl der abzurufenden Ergebnisse",
 	"apihelp-query+linterrors-param-from": "Lint-Kennung, ab der die Abfrage beginnen soll.",
 	"apihelp-query+linterrors-param-namespace": "Schließt nur Lint-Fehler von den angegebenen Namensräumen ein",
