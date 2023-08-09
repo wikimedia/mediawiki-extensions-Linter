@@ -6,6 +6,7 @@
 	},
 	"apihelp-query+linterrors-summary": "Добивање список на грешки од пречистувачот",
 	"apihelp-query+linterrors-param-categories": "Категории на грешки од пречистувачот",
+	"apihelp-query+linterrors-param-invisible-categories": "Невидливи категории за грешки во Lint.",
 	"apihelp-query+linterrors-param-limit": "Број на ставки во исходот од барањето",
 	"apihelp-query+linterrors-param-from": "Пречистувачка назнака од која ќе се почне барањето",
 	"apihelp-query+linterrors-param-namespace": "Давај само грешки од пречистувачот од укажаните именски простори",
