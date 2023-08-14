@@ -4,5 +4,7 @@
 			"Bosogo"
 		]
 	},
-	"linter-form-namespace": "Аталыш мейкиндиги:"
+	"linter-form-namespace": "Аталыш мейкиндиги:",
+	"linter-page-edit": "түзөтүү",
+	"linter-page-history": "тарых"
 }
