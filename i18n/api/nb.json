@@ -7,6 +7,7 @@
 	},
 	"apihelp-query+linterrors-summary": "Hent en liste av lint-feil",
 	"apihelp-query+linterrors-param-categories": "Kategorier av lint-feil",
+	"apihelp-query+linterrors-param-invisible-categories": "Usynlige kategorier med lint-feil",
 	"apihelp-query+linterrors-param-limit": "Antall resultater i spørringen",
 	"apihelp-query+linterrors-param-from": "Lint-ID å starte spørringen fra",
 	"apihelp-query+linterrors-param-namespace": "Bare inkluder lint-feil fra de angitte navnerommene",
