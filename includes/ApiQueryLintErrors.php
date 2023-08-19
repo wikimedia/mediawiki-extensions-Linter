@@ -24,7 +24,7 @@ use ApiBase;
 use ApiQuery;
 use ApiQueryBase;
 use ApiResult;
-use Title;
+use MediaWiki\Title\Title;
 use Wikimedia\ParamValidator\ParamValidator;
 use Wikimedia\ParamValidator\TypeDef\IntegerDef;
 

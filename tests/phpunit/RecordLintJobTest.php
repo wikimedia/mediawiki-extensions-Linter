@@ -24,8 +24,8 @@ use ContentHandler;
 use MediaWiki\Linter\Database;
 use MediaWiki\Linter\LintError;
 use MediaWiki\Linter\RecordLintJob;
+use MediaWiki\Title\Title;
 use MediaWikiIntegrationTestCase;
-use Title;
 use User;
 use Wikimedia\Rdbms\SelectQueryBuilder;
 

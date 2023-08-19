@@ -33,12 +33,12 @@ use MediaWiki\MediaWikiServices;
 use MediaWiki\Page\Hook\RevisionFromEditCompleteHook;
 use MediaWiki\Page\Hook\WikiPageDeletionUpdatesHook;
 use MediaWiki\Revision\RevisionRecord;
+use MediaWiki\Title\Title;
 use MediaWiki\User\UserIdentity;
 use MWCallableUpdate;
 use OutputPage;
 use Skin;
 use SpecialPage;
-use Title;
 use WikiPage;
 
 class Hooks implements

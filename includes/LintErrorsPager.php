@@ -27,8 +27,8 @@ use InvalidArgumentException;
 use LinkCache;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 use TablePager;
-use Title;
 use TitleValue;
 
 class LintErrorsPager extends TablePager {

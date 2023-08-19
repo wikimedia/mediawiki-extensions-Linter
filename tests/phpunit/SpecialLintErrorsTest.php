@@ -28,8 +28,8 @@ use MediaWiki\Linter\LintError;
 use MediaWiki\Linter\RecordLintJob;
 use MediaWiki\Linter\SpecialLintErrors;
 use MediaWiki\Request\FauxRequest;
+use MediaWiki\Title\Title;
 use SpecialPageTestBase;
-use Title;
 use User;
 
 /**
