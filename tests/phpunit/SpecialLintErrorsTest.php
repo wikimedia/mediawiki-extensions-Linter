@@ -34,6 +34,8 @@ use User;
 
 /**
  * @covers \MediaWiki\Linter\SpecialLintErrors
+ *
+ * @group Database
  */
 class SpecialLintErrorsTest extends SpecialPageTestBase {
 
