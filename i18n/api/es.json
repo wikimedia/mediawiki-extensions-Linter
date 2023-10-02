@@ -9,6 +9,7 @@
 	},
 	"apihelp-query+linterrors-summary": "Obtener una lista de errores de sintaxis",
 	"apihelp-query+linterrors-param-categories": "Categorías de errores de sintaxis",
+	"apihelp-query+linterrors-param-invisible-categories": "Categorías invisibles de errores de sintaxis",
 	"apihelp-query+linterrors-param-limit": "Cantidad de resultados que consultar",
 	"apihelp-query+linterrors-param-from": "Identificador de sintaxis a partir del cual comenzar una consulta",
 	"apihelp-query+linterrors-param-namespace": "Incluir solo errores de sintaxis de los espacios de nombres especificados",
