@@ -11,7 +11,8 @@
 			"James",
 			"Luzcaru",
 			"Macofe",
-			"MarcoAurelio"
+			"MarcoAurelio",
+			"No se"
 		]
 	},
 	"linterrors": "Errores de sintaxis",
@@ -97,5 +98,6 @@
 	"linterrors-subpage": "Errores de sintaxis: $1",
 	"linterrors-summary": "<strong>Nota:</strong> los recuentos de los categorías no son precisos, ya que se basan en estimaciones.",
 	"multi-part-template-block": "Salida proporcionada por más de una plantilla",
-	"pageinfo-linter": "Errores de sintaxis"
+	"pageinfo-linter": "Errores de sintaxis",
+	"pageinfo-linter-moreinfo": "Ver información detallada sobre los errores de sintaxis."
 }
