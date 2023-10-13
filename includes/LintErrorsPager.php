@@ -20,7 +20,6 @@
 
 namespace MediaWiki\Linter;
 
-use ExtensionRegistry;
 use Html;
 use IContextSource;
 use InvalidArgumentException;
@@ -52,11 +51,6 @@ class LintErrorsPager extends TablePager {
 	 * @var LinkRenderer
 	 */
 	private $linkRenderer;
-
-	/**
-	 * @var bool
-	 */
-	private $haveParserMigrationExt;
 
 	/**
 	 * @var int|null
@@ -118,7 +112,6 @@ class LintErrorsPager extends TablePager {
 		$this->title = $title;
 		$this->throughTemplate = $throughTemplate;
 		$this->tag = $tag;
-		$this->haveParserMigrationExt = ExtensionRegistry::getInstance()->isLoaded( 'ParserMigration' );
 		parent::__construct( $context );
 	}
 
@@ -226,13 +219,6 @@ class LintErrorsPager extends TablePager {
 		if ( !$lintError ) {
 			return '';
 		}
-		if ( $this->haveParserMigrationExt &&
-			$this->categoryManager->needsParserMigrationEdit( $category )
-		) {
-			$editAction = 'parsermigration-edit';
-		} else {
-			$editAction = 'edit';
-		}
 
 		switch ( $name ) {
 			case 'title':
@@ -245,7 +231,7 @@ class LintErrorsPager extends TablePager {
 					$title,
 					$this->msg( $editMsgKey )->text(),
 					[],
-					[ 'action' => $editAction, 'lintid' => $lintError->lintId, ]
+					[ 'action' => 'edit', 'lintid' => $lintError->lintId, ]
 				);
 
 				$historyLink = $this->linkRenderer->makeLink(
