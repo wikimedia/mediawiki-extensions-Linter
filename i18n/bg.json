@@ -66,7 +66,6 @@
 	"linter-heading-high-priority": "Висок приоритет",
 	"linter-heading-low-priority": "Нисък приоритет",
 	"linter-heading-medium-priority": "Среден приоритет",
-	"linter-namespace-invert-error": "Отметката „Обръщане на избора“ е в конфликт с критериите за пространство от имена „всички“.",
 	"linter-namespace-mismatch": "Пространството от имена, посочено в падащия списък, не съответства на пространството от имена в предоставения текст на заглавието.",
 	"linter-numerrors": "($1 {{PLURAL:$1|грешка|грешки}})",
 	"linter-page-edit": "редактиране",

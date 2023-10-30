@@ -47,7 +47,6 @@
 	"linter-heading-high-priority": "Ưu tiên cao",
 	"linter-heading-low-priority": "Ưu tiên thấp",
 	"linter-heading-medium-priority": "Ưu tiên trung bình",
-	"linter-namespace-invert-error": "Hộp kiểm \"Đảo ngược lựa chọn\" xung đột với tiêu chí không gian tên \"tất cả\".",
 	"linter-namespace-mismatch": "Không gian tên được chỉ định trong danh sách thả xuống không khớp với không gian tên trong văn bản tiêu đề được nhập vào.",
 	"linter-numerrors": "$1 lỗi",
 	"linter-page-edit": "sửa đổi",

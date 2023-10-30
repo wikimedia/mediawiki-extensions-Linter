@@ -67,7 +67,6 @@
 	"linter-heading-high-priority": "Vysoká priorita",
 	"linter-heading-low-priority": "Nízká priorita",
 	"linter-heading-medium-priority": "Střední priorita",
-	"linter-namespace-invert-error": "Pole „Obrátit výběr“ je v rozporu s požadovaným jmenným prostorem „všechny“.",
 	"linter-namespace-mismatch": "Jmenný prostor vybraný v nabídce neodpovídá jmennému prostoru v uvedeném textovém názvu.",
 	"linter-numerrors": "($1 {{PLURAL:$1|chyba|chyby|chyb}})",
 	"linter-page-edit": "editovat",

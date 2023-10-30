@@ -64,7 +64,6 @@
 	"linter-heading-high-priority": "Visoka prioriteta",
 	"linter-heading-low-priority": "Nizka prioriteta",
 	"linter-heading-medium-priority": "Srednja prioriteta",
-	"linter-namespace-invert-error": "Potrditveno polje »Obrni izbor« je v navzkrižju z merili imenskih prostorov »Vsi«.",
 	"linter-namespace-mismatch": "Imenki prostor, določen na spustnem seznamu, se ne ujema z imenskim prostorom v navedenem besedilu naslova.",
 	"linter-numerrors": "($1 {{PLURAL:$1|napaka|napaki|napake|napak}})",
 	"linter-page-edit": "uredi",

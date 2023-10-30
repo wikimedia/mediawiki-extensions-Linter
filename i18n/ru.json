@@ -67,7 +67,6 @@
 	"linter-heading-high-priority": "Высокий приоритет",
 	"linter-heading-low-priority": "Низкий приоритет",
 	"linter-heading-medium-priority": "Средний приоритет",
-	"linter-namespace-invert-error": "Галочка «Скрыть выбранное» конфликтует с поиском по пространству имён «все».",
 	"linter-namespace-mismatch": "Пространство имён, выбранное в выпадающем списке, не соответствует пространству имён указанного названия.",
 	"linter-numerrors": "($1 {{PLURAL:$1|ошибка|ошибки|ошибок}})",
 	"linter-page-edit": "править",

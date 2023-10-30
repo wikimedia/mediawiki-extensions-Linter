@@ -67,7 +67,6 @@
 	"linter-heading-high-priority": "Високий пріоритет",
 	"linter-heading-low-priority": "Низький пріоритет",
 	"linter-heading-medium-priority": "Середній пріоритет",
-	"linter-namespace-invert-error": "Прапорець «Інвертувати вибір» конфліктує з критеріями простору назв «усі».",
 	"linter-namespace-mismatch": "Простір імен, указаний у випадному списку, не відповідає простору назв у вказаному тексті заголовка.",
 	"linter-numerrors": "($1 {{PLURAL:$1|помилка|помилки|помилок}})",
 	"linter-page-edit": "редагувати",

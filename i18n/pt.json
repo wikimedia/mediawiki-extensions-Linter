@@ -55,7 +55,6 @@
 	"linter-heading-high-priority": "Alta prioridade",
 	"linter-heading-low-priority": "Baixa prioridade",
 	"linter-heading-medium-priority": "Média prioridade",
-	"linter-namespace-invert-error": "A caixa de seleção \"Inverter seleção\" está em conflito com o critério de espaço nominal \"todos\".",
 	"linter-namespace-mismatch": "O espaço nominal especificado na lista descendente não corresponde ao espaço nominal do texto do título fornecido.",
 	"linter-numerrors": "($1 {{PLURAL:$1|erro|erros}})",
 	"linter-page-edit": "editar",

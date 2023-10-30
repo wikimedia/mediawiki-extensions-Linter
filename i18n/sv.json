@@ -69,7 +69,6 @@
 	"linter-heading-high-priority": "Hög prioritet",
 	"linter-heading-low-priority": "Låg prioritet",
 	"linter-heading-medium-priority": "Medelprioritet",
-	"linter-namespace-invert-error": "Kryssrutan \"Invertera markering\" är i konflikt med namnrymdskriteriet \"alla\".",
 	"linter-namespace-mismatch": "Namnrymden som anges i rullisten matchar inte namnrymden i den angivna titeltexten.",
 	"linter-numerrors": "($1 {{PLURAL:$1|fel}})",
 	"linter-page-edit": "redigera",

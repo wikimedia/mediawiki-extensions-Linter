@@ -64,7 +64,6 @@
 	"linter-heading-high-priority": "Høy prioritet",
 	"linter-heading-low-priority": "Lav prioritet",
 	"linter-heading-medium-priority": "Middels prioritet",
-	"linter-namespace-invert-error": "Avmerkningsboksen «Inverter valg» er i konflikt med kriteriet for alle navnerom.",
 	"linter-namespace-mismatch": "Navnerommet som angis i nedtrekkslista matcher ikke navnerommet som angis i tittelteksten.",
 	"linter-numerrors": "({{PLURAL:$1|$1|0=ingen}} feil)",
 	"linter-page-edit": "rediger",

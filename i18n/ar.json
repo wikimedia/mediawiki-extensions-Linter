@@ -71,7 +71,6 @@
 	"linter-heading-high-priority": "أولوية عالية",
 	"linter-heading-low-priority": "أولوية قليلة",
 	"linter-heading-medium-priority": "أولوية متوسطة",
-	"linter-namespace-invert-error": "يتعارض مربع الاختيار \"عكس التحديد\" مع معايير النطاق \"الكل\".",
 	"linter-namespace-mismatch": "النطاق المحدد في القائمة المنسدلة لا يتطابق مع النطاق في نص العنوان المقدم.",
 	"linter-numerrors": "($1 {{PLURAL:$1|خطأ|أخطاء}})",
 	"linter-page-edit": "تعديل",

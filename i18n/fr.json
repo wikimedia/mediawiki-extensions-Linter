@@ -75,7 +75,6 @@
 	"linter-heading-high-priority": "Priorité haute",
 	"linter-heading-low-priority": "Priorité basse",
 	"linter-heading-medium-priority": "Priorité moyenne",
-	"linter-namespace-invert-error": "La case à cocher « Inverser la sélection » est en conflit avec le critère pour « tout » espace de noms.",
 	"linter-namespace-mismatch": "L’espace de noms spécifié dans la liste de sélection ne correspond pas à celui fourni dans le texte du titre.",
 	"linter-numerrors": "($1 erreur{{PLURAL:$1||s}})",
 	"linter-page-edit": "modifier",

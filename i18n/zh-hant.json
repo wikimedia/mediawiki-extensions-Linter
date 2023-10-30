@@ -71,7 +71,6 @@
 	"linter-heading-high-priority": "高優先級",
 	"linter-heading-low-priority": "低優先級",
 	"linter-heading-medium-priority": "中優先級",
-	"linter-namespace-invert-error": "「反向選擇」方框與「所有」命名空間條件衝突。",
 	"linter-namespace-mismatch": "下拉清單中特定的命名空間與提供的標題文字裡的命名空間不匹配。",
 	"linter-numerrors": "（$1個{{PLURAL:$1|錯誤}}）",
 	"linter-page-edit": "編輯",

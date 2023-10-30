@@ -70,7 +70,6 @@
 	"linter-heading-high-priority": "Prioridad alta",
 	"linter-heading-low-priority": "Prioridad baja",
 	"linter-heading-medium-priority": "Prioridad media",
-	"linter-namespace-invert-error": "La casilla «Invertir selección» entra en conflicto con el criterio de espacio de nombres «todos».",
 	"linter-namespace-mismatch": "El espacio de nombres especificado en la lista desplegable no coincide con el espacio de nombres en el texto del título proporcionado.",
 	"linter-numerrors": "($1 {{PLURAL:$1|error|errores}})",
 	"linter-page-edit": "editar",
