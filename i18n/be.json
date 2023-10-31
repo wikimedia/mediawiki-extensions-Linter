@@ -3,10 +3,16 @@
 		"authors": [
 			"Artsiom91",
 			"Mechanizatar",
-			"Maksim L."
+			"Maksim L.",
+			"Chadyka"
 		]
 	},
 	"linterrors": "Памылкі статычнага аналізатара",
+	"linter-category-bogus-image-options": "Няслушныя парамэтры файлу",
+	"linter-category-bogus-image-options-desc": "Гэтыя старонкі ўтрымліваюць файлы з няслушнымі параметрамі.",
 	"linter-category-missing-end-tag": "Бракуе завяршальнага тэга",
-	"linter-page-edit": "правіць"
+	"linter-category-wikilink-in-extlink": "Спасылкі ў спасылках",
+	"linter-page-edit": "правіць",
+	"linter-page-history": "гісторыя",
+	"linter-pager-title-header": "Назва старонкі"
 }
