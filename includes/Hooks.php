@@ -196,7 +196,8 @@ class Hooks implements
 				SpecialPage::getTitleFor( 'LintErrors' ),
 				$context->msg( 'pageinfo-linter-moreinfo' )->text(),
 				[],
-				[ 'namespace' => $title->getNamespace(), 'titlesearch' => $title->getText(), 'exactmatch' => 1 ]
+				[ 'wpNamespaceRestrictions' => $title->getNamespace(),
+					'titlesearch' => $title->getText(), 'exactmatch' => 1 ]
 			),
 		];
 	}
