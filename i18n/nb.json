@@ -64,7 +64,7 @@
 	"linter-heading-high-priority": "Høy prioritet",
 	"linter-heading-low-priority": "Lav prioritet",
 	"linter-heading-medium-priority": "Middels prioritet",
-	"linter-namespace-mismatch": "Navnerommet som angis i nedtrekkslista matcher ikke navnerommet som angis i tittelteksten.",
+	"linter-namespace-mismatch": "Navnerommene som angis i nedtrekkslista matcher ikke navnerommet som angis i tittelteksten.",
 	"linter-numerrors": "({{PLURAL:$1|$1|0=ingen}} feil)",
 	"linter-page-edit": "rediger",
 	"linter-page-history": "historikk",
