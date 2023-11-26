@@ -142,11 +142,9 @@ class SpecialLintErrors extends SpecialPage {
 			$titleNamespace = null;
 		}
 
-		if ( !empty( $namespaces ) && $titleNamespace !== null ) {
+		if ( !empty( $namespaces ) && $titleNamespace !== null && in_array( $titleNamespace, $namespaces ) === false ) {
 			// Show the namespace mismatch error if the namespaces specified in drop-down and title text do not match.
-			if ( in_array( $titleNamespace, $namespaces ) === false ) {
-				return [ 'titlefield' => null, 'error' => 'linter-namespace-mismatch' ];
-			}
+			return [ 'titlefield' => null, 'error' => 'linter-namespace-mismatch' ];
 		}
 
 		// If no namespaces are selected (null), return the namespace from the title text
@@ -208,7 +206,7 @@ class SpecialLintErrors extends SpecialPage {
 
 		$exactMatch = $request->getBool( 'exactmatch', true );
 		$tagName = $this->getRequest()->getText( 'tag' );
-		// map command line tag name through associative array to protect request from a SQL injection security risk
+		// map command line tag name through an associative array to protect request from an SQL injection security risk
 		$htmlTags = new HtmlTags( $this );
 		$allowedHtmlTags = $htmlTags->getAllowedHTMLTags();
 		$tag = $allowedHtmlTags[ $tagName ] ?? 'all';
@@ -216,8 +214,8 @@ class SpecialLintErrors extends SpecialPage {
 
 		// If the request contains a 'titlesearch' parameter, then the user entered a page title
 		// or just the first few characters of the title. They also may have entered the first few characters
-		// of a custom namespace (just text before a :) to search for and pressed the associated Submit button.
-		// Added the pageback parameter to inform the code that the '<- Special:LintErrors' link had be used to allow
+		// of a custom namespace (just the text before a ':') to search for and pressed the associated Submit button.
+		// Added the pageback parameter to inform the code that the '<- Special:LintErrors' link had been used to allow
 		// the UI to redisplay with previous form values, instead of just resubmitting the query.
 		if ( $par === null && isset( $params[ 'titlesearch' ] ) && !isset( $params[ 'pageback'] ) ) {
 			unset( $params[ 'title' ] );
@@ -260,7 +258,7 @@ class SpecialLintErrors extends SpecialPage {
 			$out->addBacklinkSubtitle( $this->getPageTitle() );
 
 			$title = $request->getText( 'titlecategorysearch' );
-			// For category based searches, allow an undefined title to display all records
+			// For category-based searches, allow an undefined title to display all records
 			if ( $title === '' ) {
 				$titleCategorySearch = [ 'titlefield' => '', 'namespace' => $namespaces, 'pageid' => null ];
 			} else {
