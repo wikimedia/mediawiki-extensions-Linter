@@ -64,7 +64,7 @@
 	"linter-heading-high-priority": "Visoka prioriteta",
 	"linter-heading-low-priority": "Nizka prioriteta",
 	"linter-heading-medium-priority": "Srednja prioriteta",
-	"linter-namespace-mismatch": "Imenki prostor, določen na spustnem seznamu, se ne ujema z imenskim prostorom v navedenem besedilu naslova.",
+	"linter-namespace-mismatch": "Imenski prostori, določeni na spustnem seznamu, se ne ujemajo z imenskim prostorom v navedenem naslovnem besedilu.",
 	"linter-numerrors": "($1 {{PLURAL:$1|napaka|napaki|napake|napak}})",
 	"linter-page-edit": "uredi",
 	"linter-page-history": "zgodovina",
