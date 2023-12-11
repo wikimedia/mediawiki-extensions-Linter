@@ -29,6 +29,9 @@ use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 use TablePager;
 use TitleValue;
+use Wikimedia\Rdbms\IExpression;
+use Wikimedia\Rdbms\LikeValue;
+use Wikimedia\Rdbms\SelectQueryBuilder;
 
 class LintErrorsPager extends TablePager {
 
@@ -103,78 +106,59 @@ class LintErrorsPager extends TablePager {
 		$this->namespaces = $namespaces;
 		$this->exactMatch = $exactMatch;
 		$this->title = $title;
-		$this->throughTemplate = $throughTemplate;
-		$this->tag = $tag;
+		$this->throughTemplate = empty( $throughTemplate ) ? 'all' : $throughTemplate;
+		$this->tag = empty( $tag ) ? 'all' : $tag;
 		parent::__construct( $context );
 	}
 
-	/** @inheritDoc */
-	public function getQueryInfo() {
-		$conds = [];
+	private function fillQueryBuilder( SelectQueryBuilder $queryBuilder ): void {
+		$mainConfig = MediaWikiServices::getInstance()->getMainConfig();
+		$queryBuilder
+			->table( 'page' )->leftJoin( 'linter', null, 'page_id=linter_page' )
+			->fields( LinkCache::getSelectFields() )
+			->fields( [
+				'page_namespace', 'page_title',
+				'linter_id', 'linter_params',
+				'linter_start', 'linter_end',
+				'linter_cat'
+			] );
+
 		if ( $this->categoryId !== null ) {
-			$conds[ 'linter_cat' ] = $this->categoryId;
+			$queryBuilder->where( [ 'linter_cat' => $this->categoryId ] );
 		}
 
-		$mwServices = MediaWikiServices::getInstance();
-		$config = $mwServices->getMainConfig();
-		$dbMaintenance = $mwServices->getDBLoadBalancer()->getMaintenanceConnectionRef( DB_REPLICA );
 		if ( !empty( $this->namespaces ) ) {
-			$enableUseNamespaceColumnStage = $config->get( 'LinterUseNamespaceColumnStage' );
-			$fieldExists = $dbMaintenance->fieldExists( 'linter', 'linter_namespace', __METHOD__ );
-			if ( !$enableUseNamespaceColumnStage || !$fieldExists ) {
-				$conds[ "page_namespace" ] = $this->namespaces;
-			} else {
-				$conds[ "linter_namespace" ] = $this->namespaces;
-			}
+				$namespaceCol = $mainConfig->get( 'LinterUseNamespaceColumnStage' )
+					? "linter_namespace" : "page_namespace";
+				$queryBuilder->where( [ $namespaceCol => $this->namespaces ] );
 		}
 
 		if ( $this->exactMatch ) {
-			if ( $this->title !== '' ) {
-				$conds[] = "page_title = " . $this->mDb->addQuotes( $this->title );
-			}
+			$queryBuilder->where( [ "page_title" => $this->title ] );
 		} else {
-			$conds[] = 'page_title' . $this->mDb->buildLike( $this->title, $this->mDb->anyString() );
+			$queryBuilder->where( $this->mDb->expr(
+				'page_title', IExpression::LIKE, new LikeValue( $this->title, $this->mDb->anyString() )
+				)
+			);
 		}
-
-		$enableUserInterfaceTagAndTemplateStage = $config->get( 'LinterUserInterfaceTagAndTemplateStage' );
-		$fieldTagExists = $dbMaintenance->fieldExists( 'linter', 'linter_tag', __METHOD__ );
-		if ( $enableUserInterfaceTagAndTemplateStage && $fieldTagExists ) {
-			switch ( $this->throughTemplate ) {
-				case 'with':
-					$conds[] = "linter_template != ''";
-					break;
-				case 'without':
-					$conds[] = "linter_template = ''";
-					break;
-				case 'all':
-				default:
-					break;
+		if ( $mainConfig->get( 'LinterUserInterfaceTagAndTemplateStage' ) ) {
+			if ( $this->throughTemplate !== 'all' ) {
+				$op = ( $this->throughTemplate === 'with' ) ? '!=' : '=';
+				$queryBuilder->where( $this->mDb->expr( 'linter_template', $op, '' ) );
 			}
-			switch ( $this->tag ) {
-				case 'all':
-					break;
-				default:
-					$htmlTags = new HtmlTags( $this );
-					if ( $htmlTags->checkAllowedHTMLTags( $this->tag ) ) {
-						$conds[] = 'linter_tag = ' . $this->mDb->addQuotes( $this->tag );
-					}
+			if ( $this->tag !== 'all' && ( new HtmlTags( $this ) )->checkAllowedHTMLTags( $this->tag ) ) {
+				$queryBuilder->where( [ 'linter_tag'  => $this->tag ] );
 			}
 		}
+	}
 
-		return [
-			'tables' => [ 'page', 'linter' ],
-			'fields' => array_merge(
-				LinkCache::getSelectFields(),
-				[
-					'page_namespace', 'page_title',
-					'linter_id', 'linter_params',
-					'linter_start', 'linter_end',
-					'linter_cat'
-				]
-			),
-			'conds' => $conds,
-			'join_conds' => [ 'page' => [ 'INNER JOIN', 'page_id=linter_page' ] ]
-		];
+	/**
+	 * @inheritDoc
+	 */
+	public function getQueryInfo() {
+		$queryBuilder = $this->mDb->newSelectQueryBuilder();
+		$this->fillQueryBuilder( $queryBuilder );
+		return $queryBuilder->getQueryInfo();
 	}
 
 	protected function doBatchLookups() {
