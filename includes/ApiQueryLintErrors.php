@@ -50,7 +50,7 @@ class ApiQueryLintErrors extends ApiQueryBase {
 		) ) );
 		$db = $this->getDB();
 		if ( $params['from'] !== null ) {
-			$this->addWhere( 'linter_id >= ' . $db->addQuotes( $params['from'] ) );
+			$this->addWhere( $db->expr( "linter_id", '>=', $params['from'] ) );
 		}
 		if ( $params['pageid'] !== null ) {
 			// This can be an array or a single pageid
