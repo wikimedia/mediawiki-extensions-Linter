@@ -5,11 +5,13 @@
 			"Cwlin0416",
 			"Kly",
 			"LNDDYL",
+			"SunAfterRain",
 			"Xiplus"
 		]
 	},
 	"apihelp-query+linterrors-summary": "取得 lint 錯誤的清單",
 	"apihelp-query+linterrors-param-categories": "lint 錯誤的分類",
+	"apihelp-query+linterrors-param-invisible-categories": "不可見的lint錯誤類別",
 	"apihelp-query+linterrors-param-limit": "要查詢的結果數量",
 	"apihelp-query+linterrors-param-from": "起始查詢的Lint ID",
 	"apihelp-query+linterrors-param-namespace": "僅包括來自指定命名空間的 lint 錯誤",
