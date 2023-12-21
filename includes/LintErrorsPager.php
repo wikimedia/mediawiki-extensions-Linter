@@ -134,12 +134,13 @@ class LintErrorsPager extends TablePager {
 		}
 
 		if ( $this->exactMatch ) {
-			$queryBuilder->where( [ "page_title" => $this->title ] );
+			if ( $this->title !== '' ) {
+				$queryBuilder->where( [ "page_title" => $this->title ] );
+			}
 		} else {
 			$queryBuilder->where( $this->mDb->expr(
 				'page_title', IExpression::LIKE, new LikeValue( $this->title, $this->mDb->anyString() )
-				)
-			);
+			) );
 		}
 		if ( $mainConfig->get( 'LinterUserInterfaceTagAndTemplateStage' ) ) {
 			if ( $this->throughTemplate !== 'all' ) {
