@@ -2,10 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Balajijagadesh",
-			"ElangoRamanujam"
+			"ElangoRamanujam",
+			"Fahimrazick",
+			"Siddhan"
 		]
 	},
-	"linter-page-viewsource": "மூலத்தை காட்டுக",
+	"linter-page-viewsource": "மூலத்தைப் பார்",
 	"linter-pager-missing-end-tag-details": "முடிவுக் குறிச்சொல் காணவில்லை",
 	"linter-pager-self-closed-tag-details": "சுய-மூடப்பட்ட குறி"
 }
