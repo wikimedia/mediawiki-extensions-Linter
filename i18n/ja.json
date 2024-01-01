@@ -13,7 +13,10 @@
 			"Whym",
 			"MathXplore",
 			"ひまり",
-			"MirukuPC"
+			"MirukuPC",
+			"Ant176",
+			"Kokage si",
+			"もなー(偽物)"
 		]
 	},
 	"linterrors": "Lint エラー",
@@ -42,7 +45,7 @@
 	"linter-category-pwrap-bug-workaround-desc": "これらのページには、段落の折り返しのバグがあり、それを回避できる場合があります。",
 	"linter-category-self-closed-tag": "自己終了タグ",
 	"linter-category-self-closed-tag-desc": "これらのページには自己終了タグがあります。",
-	"linter-category-stripped-tag-desc": "これらのページでは、タグを除去しています。",
+	"linter-category-stripped-tag-desc": "これらのページでは開始タグが省略されています。",
 	"linter-category-tidy-font-bug-desc": "従来は、これらのフォントタグをリンクの内側に移動してリンクカラーを変更していました。",
 	"linter-category-tidy-whitespace-bug": "空白文字解析のバグ",
 	"linter-category-tidy-whitespace-bug-desc": "これらのページは空白文字解析のバグを引き起こしたため、回避法を適用すべきです。",
