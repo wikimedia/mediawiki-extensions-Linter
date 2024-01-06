@@ -20,15 +20,15 @@
 
 namespace MediaWiki\Linter;
 
-use Html;
 use IContextSource;
 use InvalidArgumentException;
 use LinkCache;
+use MediaWiki\Html\Html;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Pager\TablePager;
 use MediaWiki\Title\Title;
-use TablePager;
-use TitleValue;
+use MediaWiki\Title\TitleValue;
 use Wikimedia\Rdbms\IExpression;
 use Wikimedia\Rdbms\LikeValue;
 use Wikimedia\Rdbms\SelectQueryBuilder;

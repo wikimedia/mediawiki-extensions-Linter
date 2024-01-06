@@ -21,12 +21,12 @@
 namespace MediaWiki\Linter;
 
 use HTMLForm;
-use MalformedTitleException;
 use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
-use OutputPage;
-use SpecialPage;
-use WebRequest;
+use MediaWiki\Output\OutputPage;
+use MediaWiki\Request\WebRequest;
+use MediaWiki\SpecialPage\SpecialPage;
+use MediaWiki\Title\MalformedTitleException;
 
 class SpecialLintErrors extends SpecialPage {
 
