@@ -51,6 +51,12 @@
 	"linter-form-prefix-match": "Procurar todas as páginas que correspondem a um prefixo de título",
 	"linter-form-exact-or-prefix": "Procurar um título de página específico ou todas as páginas com um prefixo de título comum",
 	"linter-form-namespace": "Espaço nominal:",
+	"linter-form-tag": "Filtrar pelo nome do elemento",
+	"linter-form-tag-option-all": "Sem filtro",
+	"linter-form-template": "Filtrar pelo estado da predefinição",
+	"linter-form-template-option-all": "Sem filtro",
+	"linter-form-template-option-with": "Com predefinições",
+	"linter-form-template-option-without": "Sem predefinições",
 	"linter-form-title-prefix": "Introduza um prefixo de título ou um título completo:",
 	"linter-heading-high-priority": "Alta prioridade",
 	"linter-heading-low-priority": "Baixa prioridade",
@@ -85,5 +91,6 @@
 	"linterrors-subpage": "Erros de lint: $1",
 	"linterrors-summary": "<strong>Nota:</strong> As contagens para as categorias não são precisas, mas sim baseadas em estimativas.",
 	"multi-part-template-block": "Resultado de mais do que uma predefinição",
-	"pageinfo-linter": "Erros de lint"
+	"pageinfo-linter": "Erros de lint",
+	"pageinfo-linter-moreinfo": "Ver informações detalhadas sobre os erros de lint."
 }
