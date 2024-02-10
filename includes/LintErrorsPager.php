@@ -106,8 +106,8 @@ class LintErrorsPager extends TablePager {
 		$this->namespaces = $namespaces;
 		$this->exactMatch = $exactMatch;
 		$this->title = $title;
-		$this->throughTemplate = empty( $throughTemplate ) ? 'all' : $throughTemplate;
-		$this->tag = empty( $tag ) ? 'all' : $tag;
+		$this->throughTemplate = $throughTemplate ?: 'all';
+		$this->tag = $tag ?: 'all';
 		parent::__construct( $context );
 	}
 
@@ -127,7 +127,7 @@ class LintErrorsPager extends TablePager {
 			$queryBuilder->where( [ 'linter_cat' => $this->categoryId ] );
 		}
 
-		if ( !empty( $this->namespaces ) ) {
+		if ( $this->namespaces ) {
 				$namespaceCol = $mainConfig->get( 'LinterUseNamespaceColumnStage' )
 					? "linter_namespace" : "page_namespace";
 				$queryBuilder->where( [ $namespaceCol => $this->namespaces ] );

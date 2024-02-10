@@ -142,13 +142,13 @@ class SpecialLintErrors extends SpecialPage {
 			$titleNamespace = null;
 		}
 
-		if ( !empty( $namespaces ) && $titleNamespace !== null && !in_array( $titleNamespace, $namespaces ) ) {
+		if ( $namespaces && $titleNamespace !== null && !in_array( $titleNamespace, $namespaces ) ) {
 			// Show the namespace mismatch error if the namespaces specified in drop-down and title text do not match.
 			return [ 'titlefield' => null, 'error' => 'linter-namespace-mismatch' ];
 		}
 
 		// If no namespaces are selected (null), return the namespace from the title text
-		$namespaces = ( empty( $namespaces ) ) ? [ $titleNamespace ] : $namespaces;
+		$namespaces = $namespaces ?: [ $titleNamespace ];
 
 		return [ 'titlefield' => $titleElements->getDBkey(), 'namespace' => $namespaces ];
 	}
