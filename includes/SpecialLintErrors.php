@@ -226,7 +226,7 @@ class SpecialLintErrors extends SpecialPage {
 			$titleSearch = $this->cleanTitle( $title, $namespaces );
 
 			if ( $titleSearch[ 'titlefield' ] !== null ) {
-				$out->setPageTitle( $this->msg( 'linter-prefix-search-subpage', $titleSearch[ 'titlefield' ] ) );
+				$out->setPageTitleMsg( $this->msg( 'linter-prefix-search-subpage', $titleSearch[ 'titlefield' ] ) );
 
 				$catManager = new CategoryManager();
 				$pager = new LintErrorsPager(
@@ -250,7 +250,7 @@ class SpecialLintErrors extends SpecialPage {
 			$this->showCategoryListings( $catManager );
 		} else {
 			$this->addHelpLink( "Help:Extension:Linter/{$this->category}" );
-			$out->setPageTitle(
+			$out->setPageTitleMsg(
 				$this->msg( 'linterrors-subpage',
 					$this->msg( "linter-category-{$this->category}" )->text()
 				)
