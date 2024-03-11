@@ -621,7 +621,7 @@ class Database {
 					// the update will not do anything and just return with no records updated.
 					$dbw->newUpdateQueryBuilder()
 						->update( 'linter' )
-						->set( [ 'linter_template' => $templateInfo,  'linter_tag' => $tagInfo, ] )
+						->set( [ 'linter_template' => $templateInfo, 'linter_tag' => $tagInfo, ] )
 						->where( [ 'linter_id' => $linter_id ] )
 						->caller( __METHOD__ )
 						->execute();
