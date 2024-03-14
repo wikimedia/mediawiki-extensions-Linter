@@ -149,14 +149,12 @@ class CategoryManager {
 	}
 
 	/**
-	 * Categories that are configured to be displayed to users
+	 * Categories that are configured to not be displayed to users
 	 *
 	 * @return string[]
 	 */
 	public function getInvisibleCategories() {
-		return array_merge(
-			$this->categories[self::NONE]
-		);
+		return $this->categories[self::NONE];
 	}
 
 	/**
