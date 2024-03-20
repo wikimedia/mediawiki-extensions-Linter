@@ -189,11 +189,6 @@
 					"enabled": true,
 					"priority": "low",
 					"has-name": true
-				},
-				"night-mode-unaware-background-color": {
-					"dbid": 22,
-					"enabled": true,
-					"priority": "none"
 				}
 			}
 		},
