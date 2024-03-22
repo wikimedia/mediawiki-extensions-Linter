@@ -249,7 +249,7 @@ class SpecialLintErrors extends SpecialPage {
 			$this->addHelpLink( 'Help:Extension:Linter' );
 			$this->showCategoryListings( $catManager );
 		} else {
-			$this->addHelpLink( "Help:Extension:Linter/{$this->category}" );
+			$this->addHelpLink( "Help:Lint_errors/{$this->category}" );
 			$out->setPageTitleMsg(
 				$this->msg( 'linterrors-subpage',
 					$this->msg( "linter-category-{$this->category}" )->text()
