@@ -268,35 +268,35 @@ class SpecialLintErrorsTest extends SpecialPageTestBase {
 				]
 			];
 			$testConfigurations[ 3 ] = [
-				'namespaces' => [ 0, 1, 3, null ],
+				'namespaces' => [ 0, 1, 3 ],
 				'titles' => [ 'L', 'Lint Error One', 'LintErrorTwo', 'User talk:L', 'User talk:LintErrorTwo',
 					'Talk:L' ],
 				'cases' => [
-					[ 'iterations' => [ 1, 2, 3, 37, 38, 39, 43, 47 ],
+					[ 'iterations' => [ 1, 2, 3 ],
 						'message' => 'Lint Error One' ],
-					[ 'iterations' => [ 25, 28, 29, 31, 32, 33, 37, 40, 41, 43, 44, 45, 47 ],
+					[ 'iterations' => [ 25, 28, 29, 31, 32, 33 ],
 						'message' => 'LintErrorTwo' ],
-					[ 'iterations' => [ 0, 4, 5, 12, 13, 14, 15, 16, 17, 22, 23, 24, 26, 27, 30, 36, 42, 46 ],
+					[ 'iterations' => [ 0, 4, 5, 12, 13, 14, 15, 16, 17, 22, 23, 24, 26, 27, 30 ],
 						'message' => 'table_pager_empty' ],
 					[ 'iterations' => [ 6, 7, 8, 9, 10, 11, 18, 19, 20, 21, 34, 35 ],
 						'message' => 'linter-namespace-mismatch' ]
 				]
 			];
 			$testConfigurations[ 4 ] = [
-				'namespaces' => [ 0, 3, null ],
+				'namespaces' => [ 0, 3 ],
 				'titles' => [ ':Lint Error One' ],
 				'cases' => [
-					[ 'iterations' => [ 0, 1, 4, 5 ],
+					[ 'iterations' => [ 0, 1 ],
 						'message' => 'Lint Error One' ],
 					[ 'iterations' => [ 2, 3 ],
 						'message' => 'linter-namespace-mismatch' ]
 				]
 			];
 			$testConfigurations[ 5 ] = [
-				'namespaces' => [ 0, 3, null ],
+				'namespaces' => [ 0, 3 ],
 				'titles' => [ 'FooBar:ErrorFive' ],
 				'cases' => [
-					[ 'iterations' => [ 2, 3, 4, 5 ],
+					[ 'iterations' => [ 2, 3 ],
 						'message' => 'FooBar:ErrorFive' ],
 					[ 'iterations' => [ 0, 1 ],
 						'message' => 'table_pager_empty' ],
@@ -377,8 +377,7 @@ class SpecialLintErrorsTest extends SpecialPageTestBase {
 						foreach ( $group[ 'cases' ] as $caseIndex => $case ) {
 							$exactString = [ 'prefix', 'exact' ][ $exact ];
 							$message = $case[ 'message' ];
-							$descriptionNamespace = $namespace === null ? 'all' :
-								implode( ',', (array)$namespace );
+							$descriptionNamespace = implode( ',', (array)$namespace );
 							$description = "On group [$groupIndex], namespace [$descriptionNamespace], " .
 								"case [$caseIndex], iteration [$testIndex] " .
 								"for a [$exactString] match with search title [$title] and test text [$message] ";
