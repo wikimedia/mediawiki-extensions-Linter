@@ -114,7 +114,8 @@ class LintErrorsPager extends TablePager {
 	private function fillQueryBuilder( SelectQueryBuilder $queryBuilder ): void {
 		$mainConfig = MediaWikiServices::getInstance()->getMainConfig();
 		$queryBuilder
-			->table( 'page' )->leftJoin( 'linter', null, 'page_id=linter_page' )
+			->table( 'page' )
+			->join( 'linter', null, 'page_id=linter_page' )
 			->fields( LinkCache::getSelectFields() )
 			->fields( [
 				'page_namespace', 'page_title',
@@ -127,21 +128,30 @@ class LintErrorsPager extends TablePager {
 			$queryBuilder->where( [ 'linter_cat' => $this->categoryId ] );
 		}
 
-		if ( $this->namespaces ) {
-				$namespaceCol = $mainConfig->get( 'LinterUseNamespaceColumnStage' )
-					? "linter_namespace" : "page_namespace";
-				$queryBuilder->where( [ $namespaceCol => $this->namespaces ] );
+		if ( $this->title !== '' ) {
+			$namespaces = $this->namespaces ?: [ NS_MAIN ];
+			// Specify page_namespace so that the index can be used (T360865)
+			$queryBuilder->where( [ 'page_namespace' => $namespaces ] );
+			if ( $mainConfig->get( 'LinterUseNamespaceColumnStage' ) ) {
+				// Also put a condition on linter_namespace, in case the DB
+				// decides to put the linter table first
+				$queryBuilder->where( [ 'linter_namespace' => $namespaces ] );
+			}
+			if ( $this->exactMatch ) {
+				$queryBuilder->where( [
+					'page_title' => $this->title
+				] );
+			} else {
+				$queryBuilder->where( $this->mDb->expr(
+					'page_title', IExpression::LIKE, new LikeValue( $this->title, $this->mDb->anyString() )
+				) );
+			}
+		} elseif ( $this->namespaces ) {
+			$namespaceCol = $mainConfig->get( 'LinterUseNamespaceColumnStage' )
+				? "linter_namespace" : "page_namespace";
+			$queryBuilder->where( [ $namespaceCol => $this->namespaces ] );
 		}
 
-		if ( $this->exactMatch ) {
-			if ( $this->title !== '' ) {
-				$queryBuilder->where( [ "page_title" => $this->title ] );
-			}
-		} else {
-			$queryBuilder->where( $this->mDb->expr(
-				'page_title', IExpression::LIKE, new LikeValue( $this->title, $this->mDb->anyString() )
-			) );
-		}
 		if ( $mainConfig->get( 'LinterUserInterfaceTagAndTemplateStage' ) ) {
 			if ( $this->throughTemplate !== 'all' ) {
 				$op = ( $this->throughTemplate === 'with' ) ? '!=' : '=';
