@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Beginneruser",
+			"Ebraminio",
 			"Huji",
 			"Jeeputer",
 			"Reza1615",
@@ -26,7 +27,7 @@
 	"linter-category-multi-colon-escape": "رهایی از چند دونقطه",
 	"linter-category-multi-colon-escape-desc": "این صفحه‌ها پیوندهایی دارند که با چندین دونقطه پیشوندگذاری شدند",
 	"linter-category-multiline-html-table-in-list": "جدول چند خطی در فهرست",
-	"linter-category-multiline-html-table-in-list-desc": "در گذشته، جدول‌ها به داخل یا خارج از فهرست منتقل می‌شدند اما الآن فهرست به بقیهٔ صفحه گسترش می‌یابد.",
+	"linter-category-multiline-html-table-in-list-desc": "در گذشته، جدول‌ها به داخل یا خارج از فهرست منتقل می‌شدند اما الان فهرست به بقیهٔ صفحه گسترش می‌یابد.",
 	"linter-category-multiple-unclosed-formatting-tags": "چندین برچسب قالب‌بندی بسته‌نشده",
 	"linter-category-multiple-unclosed-formatting-tags-desc": "این صفحات دارای چندین برچسب فرمت‌دهندهٔ بسته نشده است",
 	"linter-category-obsolete-tag": "برچسب‌های منسوخ اچ‌تی‌ام‌ال",
