@@ -21,6 +21,7 @@
 namespace MediaWiki\Linter;
 
 use Job;
+use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 
 class RecordLintJob extends Job {
@@ -56,8 +57,14 @@ class RecordLintJob extends Job {
 			// (e.g. same category of error in same template)
 			$errors[$error->id()] = $error;
 		}
+
 		$lintDb = new Database( $this->title->getArticleID(), $this->title->getNamespace() );
-		$lintDb->updateStats( $lintDb->setForPage( $errors ) );
+		$totalsLookup = new TotalsLookup(
+			new CategoryManager(),
+			MediaWikiServices::getInstance()->getMainWANObjectCache(),
+			$lintDb
+		);
+		$totalsLookup->updateStats( $lintDb->setForPage( $errors ) );
 
 		return true;
 	}
