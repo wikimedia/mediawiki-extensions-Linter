@@ -7,7 +7,7 @@
 	"linterrors": "Linteri vead",
 	"linter-category-bogus-image-options": "Vigased failisuvandid",
 	"linter-category-bogus-image-options-desc": "Neil lehekülgedel on faile, mille süntaksis on vigane failisuvand.",
-	"linter-category-large-tables": "Suured tabelid, mida on mobiilis raske vaadata",
+	"linter-category-large-tables": "Suured tabelid, mida on mobiilis tülikas vaadata",
 	"linter-category-large-tables-desc": "Neil lehekülgedel on tabeleid, mida on mobiilis raske vaadata.",
 	"linter-category-deletable-table-tag": "Tabelisilt tuleks kustutada",
 	"linter-category-deletable-table-tag-desc": "Neil lehekülgedel on tabelisilte, mis tuleks kustutada.",
