@@ -83,6 +83,7 @@
 	"linter-pager-tidy-whitespace-bug-details": "خطای تحلیل فضای سفید",
 	"linter-pager-title-header": "عنوان صفحه",
 	"linter-pager-unclosed-quotes-in-heading-details": "نقل قول بسته شده که به خارج از جدول  محتویات نشت می‌کند",
+	"linter-pager-wikilink-in-extlink-details": "پیوند داخلی درون پیوند خارجی که باید درست شود",
 	"linter-prefix-search-subpage": "صفحه‌های دارای خطاهای نحوی پنهان که با پیشوند عنوان یا عنوان کامل $1 منطبق هستند.",
 	"linterrors-subpage": "خطاهای نحوی پنهان: $1",
 	"linterrors-summary": "<strong>توجه</strong>: تعداد موارد موجود در رده‌ها دقیق نیست و بر اساس تخمین است.",
