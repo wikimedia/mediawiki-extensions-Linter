@@ -28,7 +28,9 @@
 		"main": {
 			"class": "MediaWiki\\Linter\\Hooks",
 			"services": [
-				"LinkRenderer"
+				"LinkRenderer",
+				"MainWANObjectCache",
+				"JobQueueGroup"
 			]
 		},
 		"schema": {

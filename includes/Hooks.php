@@ -23,6 +23,7 @@ namespace MediaWiki\Linter;
 use ApiQuerySiteinfo;
 use Content;
 use IContextSource;
+use JobQueueGroup;
 use MediaWiki\Api\Hook\APIQuerySiteInfoGeneralInfoHook;
 use MediaWiki\Deferred\MWCallableUpdate;
 use MediaWiki\Hook\BeforePageDisplayHook;
@@ -30,7 +31,6 @@ use MediaWiki\Hook\InfoActionHook;
 use MediaWiki\Hook\ParserLogLinterDataHook;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Logger\LoggerFactory;
-use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Page\Hook\RevisionFromEditCompleteHook;
 use MediaWiki\Page\Hook\WikiPageDeletionUpdatesHook;
@@ -39,6 +39,7 @@ use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Title\Title;
 use MediaWiki\User\UserIdentity;
 use Skin;
+use WANObjectCache;
 use WikiPage;
 
 class Hooks implements
@@ -49,14 +50,23 @@ class Hooks implements
 	RevisionFromEditCompleteHook,
 	WikiPageDeletionUpdatesHook
 {
-	/** @var LinkRenderer */
-	private $linkRenderer;
+	private LinkRenderer $linkRenderer;
+	private WANObjectCache $cache;
+	private JobQueueGroup $jobQueueGroup;
 
 	/**
 	 * @param LinkRenderer $linkRenderer
+	 * @param WANObjectCache $cache
+	 * @param JobQueueGroup $jobQueueGroup
 	 */
-	public function __construct( LinkRenderer $linkRenderer ) {
+	public function __construct(
+		LinkRenderer $linkRenderer,
+		WANObjectCache $cache,
+		JobQueueGroup $jobQueueGroup
+	) {
 		$this->linkRenderer = $linkRenderer;
+		$this->cache = $cache;
+		$this->jobQueueGroup = $jobQueueGroup;
 	}
 
 	/**
@@ -103,11 +113,12 @@ class Hooks implements
 	 */
 	public function onWikiPageDeletionUpdates( $wikiPage, $content, &$updates ) {
 		$id = $wikiPage->getId();
-		$updates[] = new MWCallableUpdate( static function () use ( $id ) {
+		$cache = $this->cache;
+		$updates[] = new MWCallableUpdate( static function () use ( $id, $cache ) {
 			$database = new Database( $id );
 			$totalsLookup = new TotalsLookup(
 				new CategoryManager(),
-				MediaWikiServices::getInstance()->getMainWANObjectCache(),
+				$cache,
 				$database
 			);
 			$totalsLookup->updateStats( $database->setForPage( [] ) );
@@ -147,7 +158,7 @@ class Hooks implements
 			$database = new Database( $wikiPage->getId() );
 			$totalsLookup = new TotalsLookup(
 				new CategoryManager(),
-				MediaWikiServices::getInstance()->getMainWANObjectCache(),
+				$this->cache,
 				$database
 			);
 			$totalsLookup->updateStats( $database->setForPage( [] ) );
@@ -270,7 +281,7 @@ class Hooks implements
 			'errors' => $errors,
 			'revision' => $revision,
 		] );
-		MediaWikiServices::getInstance()->getJobQueueGroup()->push( $job );
+		$this->jobQueueGroup->push( $job );
 		return true;
 	}
 }
