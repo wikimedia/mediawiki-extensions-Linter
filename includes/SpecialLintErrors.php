@@ -22,21 +22,35 @@ namespace MediaWiki\Linter;
 
 use HTMLForm;
 use MediaWiki\Html\Html;
-use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Request\WebRequest;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Title\MalformedTitleException;
+use MediaWiki\Title\NamespaceInfo;
+use MediaWiki\Title\TitleParser;
+use WANObjectCache;
 
 class SpecialLintErrors extends SpecialPage {
+
+	private WANObjectCache $cache;
+	private NamespaceInfo $namespaceInfo;
+	private TitleParser $titleParser;
 
 	/**
 	 * @var string|null
 	 */
 	private $category;
 
-	public function __construct() {
+	/**
+	 * @param WANObjectCache $cache
+	 * @param NamespaceInfo $namespaceInfo
+	 * @param TitleParser $titleParser
+	 */
+	public function __construct( WANObjectCache $cache, NamespaceInfo $namespaceInfo, TitleParser $titleParser ) {
 		parent::__construct( 'LintErrors' );
+		$this->cache = $cache;
+		$this->namespaceInfo = $namespaceInfo;
+		$this->titleParser = $titleParser;
 	}
 
 	/**
@@ -73,9 +87,8 @@ class SpecialLintErrors extends SpecialPage {
 			]
 		];
 
-		$mwServices = MediaWikiServices::getInstance();
-		$config = $mwServices->getMainConfig();
-		$enableUserInterfaceTagAndTemplateStage = $config->get( 'LinterUserInterfaceTagAndTemplateStage' );
+		$enableUserInterfaceTagAndTemplateStage =
+			$this->getConfig()->get( 'LinterUserInterfaceTagAndTemplateStage' );
 		if ( $enableUserInterfaceTagAndTemplateStage ) {
 			$selectTemplateOptions = [
 				(string)$this->msg( 'linter-form-template-option-all' )->escaped() => 'all',
@@ -120,7 +133,7 @@ class SpecialLintErrors extends SpecialPage {
 	public function cleanTitle( string $title, $namespaces ): array {
 		// Check all titles for malformation regardless of exact match or prefix match
 		try {
-			$titleElements = MediaWikiServices::getInstance()->getTitleParser()->parseTitle( $title );
+			$titleElements = $this->titleParser->parseTitle( $title );
 		} catch ( MalformedTitleException  $e ) {
 			return [ 'titlefield' => null, 'error' => 'linter-invalid-title' ];
 		}
@@ -174,7 +187,8 @@ class SpecialLintErrors extends SpecialPage {
 	protected function findNamespaces( $request ) {
 		$namespaces = [];
 		$activeNamespaces = array_keys(
-			MediaWikiServices::getInstance()->getNamespaceInfo()->getCanonicalNamespaces() );
+			$this->namespaceInfo->getCanonicalNamespaces()
+		);
 		// Remove -2 = "media" and -1 = "Special" namespace elements
 		$activeNamespaces = array_filter( $activeNamespaces,
 			static function ( $x ) {
@@ -305,7 +319,7 @@ class SpecialLintErrors extends SpecialPage {
 	private function showCategoryListings( CategoryManager $catManager ) {
 		$lookup = new TotalsLookup(
 			$catManager,
-			MediaWikiServices::getInstance()->getMainWANObjectCache(),
+			$this->cache,
 			new Database( 0 )
 		);
 		$totals = $lookup->getTotals();
