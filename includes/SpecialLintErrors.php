@@ -305,7 +305,8 @@ class SpecialLintErrors extends SpecialPage {
 	private function showCategoryListings( CategoryManager $catManager ) {
 		$lookup = new TotalsLookup(
 			$catManager,
-			MediaWikiServices::getInstance()->getMainWANObjectCache()
+			MediaWikiServices::getInstance()->getMainWANObjectCache(),
+			new Database( 0 )
 		);
 		$totals = $lookup->getTotals();
 

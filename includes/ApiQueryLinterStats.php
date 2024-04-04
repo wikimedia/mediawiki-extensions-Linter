@@ -38,9 +38,9 @@ class ApiQueryLinterStats extends ApiQueryBase {
 	public function execute() {
 		$totalsLookup = new TotalsLookup(
 			new CategoryManager(),
-			MediaWikiServices::getInstance()->getMainWANObjectCache()
+			MediaWikiServices::getInstance()->getMainWANObjectCache(),
+			new Database( 0 )
 		);
-
 		$totals = $totalsLookup->getTotals();
 		ApiResult::setArrayType( $totals, 'assoc' );
 		$this->getResult()->addValue( [ 'query', 'linterstats' ], 'totals', $totals );

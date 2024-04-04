@@ -105,7 +105,12 @@ class Hooks implements
 		$id = $wikiPage->getId();
 		$updates[] = new MWCallableUpdate( static function () use ( $id ) {
 			$database = new Database( $id );
-			$database->updateStats( $database->setForPage( [] ) );
+			$totalsLookup = new TotalsLookup(
+				new CategoryManager(),
+				MediaWikiServices::getInstance()->getMainWANObjectCache(),
+				$database
+			);
+			$totalsLookup->updateStats( $database->setForPage( [] ) );
 		}, __METHOD__ );
 	}
 
@@ -140,7 +145,12 @@ class Hooks implements
 			!in_array( $wikiPage->getContentModel(), self::LINTABLE_CONTENT_MODELS ) )
 		) {
 			$database = new Database( $wikiPage->getId() );
-			$database->updateStats( $database->setForPage( [] ) );
+			$totalsLookup = new TotalsLookup(
+				new CategoryManager(),
+				MediaWikiServices::getInstance()->getMainWANObjectCache(),
+				$database
+			);
+			$totalsLookup->updateStats( $database->setForPage( [] ) );
 		}
 	}
 
