@@ -353,16 +353,21 @@ class Database {
 			->fetchResultSet();
 
 		// Initialize zero values
-		$ret = array_fill_keys( $this->categoryManager->getVisibleCategories(), 0 );
+		$categories = $this->categoryManager->getVisibleCategories();
+		$ret = array_fill_keys( $categories, 0 );
 		foreach ( $rows as $row ) {
 			try {
 				$catName = $this->categoryManager->getCategoryName( $row->linter_cat );
 			} catch ( MissingCategoryException $e ) {
 				continue;
 			}
+			// Only set visible categories.  Alternatively, we could add another
+			// where clause to the selection above.
+			if ( !in_array( $catName, $categories, true ) ) {
+				continue;
+			}
 			$ret[$catName] = (int)$row->count;
 		}
-
 		return $ret;
 	}
 
