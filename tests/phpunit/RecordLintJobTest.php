@@ -20,7 +20,6 @@
 
 namespace MediaWiki\Linter\Test;
 
-use MediaWiki\Linter\Database;
 use MediaWiki\Linter\LintError;
 use MediaWiki\Linter\RecordLintJob;
 use MediaWiki\Page\PageReference;
@@ -34,12 +33,20 @@ use Wikimedia\Rdbms\SelectQueryBuilder;
  */
 class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 
+	private function newDatabase( int $pageId, ?int $namespaceId = null ) {
+		$services = $this->getServiceContainer();
+		$databaseFactory = $services->get( 'Linter.DatabaseFactory' );
+		return $databaseFactory->newDatabase( $pageId, $namespaceId );
+	}
+
 	private function newRecordLintJob( PageReference $page, array $params ) {
 		$services = $this->getServiceContainer();
 		return new RecordLintJob(
 			$page,
 			$params,
-			$services->getMainWANObjectCache()
+			$services->getMainWANObjectCache(),
+			$services->get( 'Linter.CategoryManager' ),
+			$services->get( 'Linter.DatabaseFactory' )
 		);
 	}
 
@@ -120,7 +127,7 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 			'revision' => $titleAndPage[ 'revID' ]
 		] );
 		$this->assertTrue( $job->run() );
-		$db = new Database( $titleAndPage[ 'pageID' ] );
+		$db = $this->newDatabase( $titleAndPage[ 'pageID' ] );
 		$errorsFromDb = array_values( $db->getForPage() );
 		$this->assertCount( 1, $errorsFromDb );
 		$this->assertInstanceOf( LintError::class, $errorsFromDb[ 0 ] );
@@ -147,7 +154,7 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 		] );
 		$this->assertTrue( $job->run() );
 		$pageId = $titleAndPage[ 'pageID' ];
-		$db = new Database( $pageId );
+		$db = $this->newDatabase( $pageId );
 		$errorsFromDb = array_values( $db->getForPage() );
 		$this->assertCount( 1, $errorsFromDb );
 		$this->assertInstanceOf( LintError::class, $errorsFromDb[0] );
@@ -187,7 +194,7 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 		] );
 		$this->assertTrue( $job->run() );
 		$pageId = $titleAndPage[ 'pageID' ];
-		$db = new Database( $pageId );
+		$db = $this->newDatabase( $pageId );
 		$errorsFromDb = array_values( $db->getForPage() );
 		$this->assertCount( 1, $errorsFromDb );
 		$this->assertInstanceOf( LintError::class, $errorsFromDb[0] );
@@ -265,7 +272,8 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 		$this->assertNull( $namespace );
 
 		// migrate unpopulated namespace_id(s) from the page table to linter table
-		Database::migrateNamespace( 2, 3, 0, true );
+		$database = $this->newDatabase( 0 );
+		$database->migrateNamespace( 2, 3, 0, true );
 
 		// Verify all linter records now have proper namespace IDs in the linter_namespace field
 		$this->checkPagesNamespace( $titleAndPages, $namespaceIds );
@@ -373,7 +381,8 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 		$this->assertSame( "", $template );
 
 		// Migrate unpopulated tag and template info from the params field
-		Database::migrateTemplateAndTagInfo( 3, 0, true );
+		$database = $this->newDatabase( 0 );
+		$database->migrateTemplateAndTagInfo( 3, 0, true );
 
 		// Verify all linter records have the proper tag and template field info migrated from the params field
 		$this->checkPagesTagAndTemplate( $titleAndPages );
@@ -415,7 +424,7 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 			'revision' => $titleAndPage[ 'revID' ]
 		] );
 		$this->assertTrue( $job->run() );
-		$errorsFromDb = array_values( ( new Database( $titleAndPage['pageID'] ) )->getForPage() );
+		$errorsFromDb = array_values( $this->newDatabase( $titleAndPage['pageID'] )->getForPage() );
 		$this->assertCount( 0, $errorsFromDb );
 	}
 }

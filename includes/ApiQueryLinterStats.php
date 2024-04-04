@@ -27,15 +27,27 @@ use WANObjectCache;
 class ApiQueryLinterStats extends ApiQueryBase {
 
 	private WANObjectCache $cache;
+	private CategoryManager $categoryManager;
+	private DatabaseFactory $databaseFactory;
 
 	/**
 	 * @param ApiQuery $queryModule
 	 * @param string $moduleName
 	 * @param WANObjectCache $cache
+	 * @param CategoryManager $categoryManager
+	 * @param DatabaseFactory $databaseFactory
 	 */
-	public function __construct( ApiQuery $queryModule, string $moduleName, WANObjectCache $cache ) {
+	public function __construct(
+		ApiQuery $queryModule,
+		string $moduleName,
+		WANObjectCache $cache,
+		CategoryManager $categoryManager,
+		DatabaseFactory $databaseFactory
+	) {
 		parent::__construct( $queryModule, $moduleName, 'lntrst' );
 		$this->cache = $cache;
+		$this->categoryManager = $categoryManager;
+		$this->databaseFactory = $databaseFactory;
 	}
 
 	/**
@@ -43,9 +55,9 @@ class ApiQueryLinterStats extends ApiQueryBase {
 	 */
 	public function execute() {
 		$totalsLookup = new TotalsLookup(
-			new CategoryManager(),
+			$this->categoryManager,
 			$this->cache,
-			new Database( 0 )
+			$this->databaseFactory->newDatabase( 0 )
 		);
 		$totals = $totalsLookup->getTotals();
 		ApiResult::setArrayType( $totals, 'assoc' );

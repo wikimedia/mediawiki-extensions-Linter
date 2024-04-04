@@ -22,8 +22,6 @@ namespace MediaWiki\Linter\Test;
 
 use ContentHandler;
 use Exception;
-use MediaWiki\Linter\CategoryManager;
-use MediaWiki\Linter\Database;
 use MediaWiki\Linter\RecordLintJob;
 use MediaWiki\Linter\SpecialLintErrors;
 use MediaWiki\Page\PageReference;
@@ -38,12 +36,20 @@ use SpecialPageTestBase;
  */
 class SpecialLintErrorsTest extends SpecialPageTestBase {
 
+	private function newDatabase( int $pageId, ?int $namespaceId = null ) {
+		$services = $this->getServiceContainer();
+		$databaseFactory = $services->get( 'Linter.DatabaseFactory' );
+		return $databaseFactory->newDatabase( $pageId, $namespaceId );
+	}
+
 	private function newRecordLintJob( PageReference $page, array $params ) {
 		$services = $this->getServiceContainer();
 		return new RecordLintJob(
 			$page,
 			$params,
-			$services->getMainWANObjectCache()
+			$services->getMainWANObjectCache(),
+			$services->get( 'Linter.CategoryManager' ),
+			$services->get( 'Linter.DatabaseFactory' )
 		);
 	}
 
@@ -52,12 +58,16 @@ class SpecialLintErrorsTest extends SpecialPageTestBase {
 		return new SpecialLintErrors(
 			$services->getMainWANObjectCache(),
 			$services->getNamespaceInfo(),
-			$services->getTitleParser()
+			$services->getTitleParser(),
+			$services->get( 'Linter.CategoryManager' ),
+			$services->get( 'Linter.DatabaseFactory' )
 		);
 	}
 
 	public function testExecute() {
-		$category = ( new CategoryManager() )->getVisibleCategories()[0];
+		$categoryManager =
+			$this->getServiceContainer()->get( 'Linter.CategoryManager' );
+		$category = $categoryManager->getVisibleCategories()[0];
 
 		// Basic
 		$html = $this->executeSpecialPage( '', null, 'qqx' )[0];
@@ -111,7 +121,7 @@ class SpecialLintErrorsTest extends SpecialPageTestBase {
 		] );
 		$this->assertTrue( $job->run() );
 
-		$db = new Database( $titleAndPage['pageID'] );
+		$db = $this->newDatabase( $titleAndPage['pageID'] );
 
 		$errorsFromDb = array_values( $db->getForPage() );
 		$this->assertCount( 1, $errorsFromDb );
@@ -147,7 +157,7 @@ class SpecialLintErrorsTest extends SpecialPageTestBase {
 		] );
 		$this->assertTrue( $job->run() );
 
-		$db = new Database( $titleAndPage['pageID'] );
+		$db = $this->newDatabase( $titleAndPage['pageID'] );
 
 		$errorsFromDb = array_values( $db->getForPage() );
 		$this->assertCount( 1, $errorsFromDb );

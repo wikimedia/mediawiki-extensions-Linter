@@ -29,28 +29,35 @@ use Wikimedia\ParamValidator\ParamValidator;
 use Wikimedia\ParamValidator\TypeDef\IntegerDef;
 
 class ApiQueryLintErrors extends ApiQueryBase {
+	private CategoryManager $categoryManager;
+
 	/**
 	 * @param ApiQuery $queryModule
 	 * @param string $moduleName
+	 * @param CategoryManager $categoryManager
 	 */
-	public function __construct( ApiQuery $queryModule, $moduleName ) {
+	public function __construct(
+		ApiQuery $queryModule,
+		string $moduleName,
+		CategoryManager $categoryManager
+	) {
 		parent::__construct( $queryModule, $moduleName, 'lnt' );
+		$this->categoryManager = $categoryManager;
 	}
 
 	public function execute() {
 		$params = $this->extractRequestParams();
-		$categoryMgr = new CategoryManager();
 
 		$this->requireMaxOneParameter( $params, 'pageid', 'title' );
 		$this->requireMaxOneParameter( $params, 'namespace', 'title' );
 
 		$categories = $params['categories'];
 		if ( !$categories ) {
-			$categories = $categoryMgr->getVisibleCategories();
+			$categories = $this->categoryManager->getVisibleCategories();
 		}
 
 		$this->addTables( 'linter' );
-		$this->addWhereFld( 'linter_cat', array_values( $categoryMgr->getCategoryIds(
+		$this->addWhereFld( 'linter_cat', array_values( $this->categoryManager->getCategoryIds(
 			$categories
 		) ) );
 		$db = $this->getDB();
@@ -84,7 +91,7 @@ class ApiQueryLintErrors extends ApiQueryBase {
 		$result = $this->getResult();
 		$count = 0;
 		foreach ( $rows as $row ) {
-			$lintError = Database::makeLintError( $row );
+			$lintError = Database::makeLintError( $this->categoryManager, $row );
 			if ( !$lintError ) {
 				continue;
 			}
@@ -119,9 +126,8 @@ class ApiQueryLintErrors extends ApiQueryBase {
 
 	/** @inheritDoc */
 	public function getAllowedParams() {
-		$categoryMgr = new CategoryManager();
-		$visibleCats = $categoryMgr->getVisibleCategories();
-		$invisibleCats = $categoryMgr->getinvisibleCategories();
+		$visibleCats = $this->categoryManager->getVisibleCategories();
+		$invisibleCats = $this->categoryManager->getinvisibleCategories();
 		$categories = array_merge( $visibleCats, $invisibleCats );
 		return [
 			'categories' => [

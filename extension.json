@@ -30,7 +30,9 @@
 			"services": [
 				"LinkRenderer",
 				"MainWANObjectCache",
-				"JobQueueGroup"
+				"JobQueueGroup",
+				"Linter.CategoryManager",
+				"Linter.DatabaseFactory"
 			]
 		},
 		"schema": {
@@ -47,13 +49,20 @@
 		"ParserLogLinterData": "main"
 	},
 	"APIListModules": {
-		"linterrors": "MediaWiki\\Linter\\ApiQueryLintErrors"
+		"linterrors": {
+			"class": "MediaWiki\\Linter\\ApiQueryLintErrors",
+			"services": [
+				"Linter.CategoryManager"
+			]
+		}
 	},
 	"APIMetaModules": {
 		"linterstats": {
 			"class": "MediaWiki\\Linter\\ApiQueryLinterStats",
 			"services": [
-				"MainWANObjectCache"
+				"MainWANObjectCache",
+				"Linter.CategoryManager",
+				"Linter.DatabaseFactory"
 			]
 		}
 	},
@@ -63,7 +72,9 @@
 			"services": [
 				"MainWANObjectCache",
 				"NamespaceInfo",
-				"TitleParser"
+				"TitleParser",
+				"Linter.CategoryManager",
+				"Linter.DatabaseFactory"
 			]
 		}
 	},
@@ -71,7 +82,9 @@
 		"RecordLintJob": {
 			"class": "MediaWiki\\Linter\\RecordLintJob",
 			"services": [
-				"MainWANObjectCache"
+				"MainWANObjectCache",
+				"Linter.CategoryManager",
+				"Linter.DatabaseFactory"
 			]
 		}
 	},
@@ -233,5 +246,8 @@
 			"value": false
 		}
 	},
+	"ServiceWiringFiles": [
+		"includes/ServiceWiring.php"
+	],
 	"manifest_version": 2
 }

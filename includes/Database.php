@@ -22,10 +22,10 @@ namespace MediaWiki\Linter;
 
 use FormatJson;
 use MediaWiki\Logger\LoggerFactory;
-use MediaWiki\MediaWikiServices;
 use stdClass;
 use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\Rdbms\IReadableDatabase;
+use Wikimedia\Rdbms\LBFactory;
 use Wikimedia\Rdbms\SelectQueryBuilder;
 
 /**
@@ -47,10 +47,7 @@ class Database {
 	public const MAX_TAG_LENGTH = 30;
 	public const MAX_TEMPLATE_LENGTH = 250;
 
-	/**
-	 * @var int
-	 */
-	private $pageId;
+	private int $pageId;
 
 	/**
 	 * During the addition of this column to the table, the initial value of null allows the migrate stage code to
@@ -59,38 +56,51 @@ class Database {
 	 * no nulls should exist in this field for any record, and if the migrate code times out during execution,
 	 * can be restarted and continue without duplicating work. The final code that enables the use of this field
 	 * during records search will depend on this fields index being valid for all records.
-	 * @var int|null
 	 */
-	private $namespaceID;
+	private ?int $namespaceID;
 
 	/**
-	 * @var CategoryManager
+	 * Configuration options.
 	 */
-	private $categoryManager;
+	private array $options = [];
+
+	private CategoryManager $categoryManager;
+	private LBFactory $dbLoadBalancerFactory;
 
 	/**
 	 * @param int $pageId
 	 * @param int|null $namespaceID
+	 * @param array $options
+	 * @param CategoryManager $categoryManager
+	 * @param LBFactory $dbLoadBalancerFactory
 	 */
-	public function __construct( $pageId, $namespaceID = null ) {
+	public function __construct(
+		int $pageId,
+		?int $namespaceID,
+		array $options,
+		CategoryManager $categoryManager,
+		LBFactory $dbLoadBalancerFactory
+	) {
 		$this->pageId = $pageId;
 		$this->namespaceID = $namespaceID;
-		$this->categoryManager = new CategoryManager();
+		$this->options = $options;
+		$this->categoryManager = $categoryManager;
+		$this->dbLoadBalancerFactory = $dbLoadBalancerFactory;
 	}
 
 	/**
 	 * @param int $mode DB_PRIMARY or DB_REPLICA
 	 * @return IDatabase
 	 */
-	public static function getDBConnectionRef( int $mode ): IDatabase {
-		return MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( $mode );
+	public function getDBConnectionRef( int $mode ): IDatabase {
+		return $this->dbLoadBalancerFactory->getMainLB()->getConnection( $mode );
 	}
 
 	/**
 	 * @return IReadableDatabase
 	 */
-	public static function getReplicaDBConnection(): IReadableDatabase {
-		return MediaWikiServices::getInstance()->getDBLoadBalancerFactory()->getReplicaDatabase();
+	public function getReplicaDBConnection(): IReadableDatabase {
+		return $this->dbLoadBalancerFactory->getReplicaDatabase();
 	}
 
 	/**
@@ -100,7 +110,7 @@ class Database {
 	 * @return bool|LintError
 	 */
 	public function getFromId( $id ) {
-		$row = self::getReplicaDBConnection()->newSelectQueryBuilder()
+		$row = $this->getReplicaDBConnection()->newSelectQueryBuilder()
 			->select( [ 'linter_cat', 'linter_params', 'linter_start', 'linter_end' ] )
 			->from( 'linter' )
 			->where( [ 'linter_id' => $id, 'linter_page' => $this->pageId ] )
@@ -109,7 +119,7 @@ class Database {
 
 		if ( $row ) {
 			$row->linter_id = $id;
-			return $this->makeLintError( $row );
+			return self::makeLintError( $this->categoryManager, $row );
 		} else {
 			return false;
 		}
@@ -118,12 +128,13 @@ class Database {
 	/**
 	 * Turn a database row into a LintError object
 	 *
+	 * @param CategoryManager $categoryManager
 	 * @param stdClass $row
 	 * @return LintError|bool false on error
 	 */
-	public static function makeLintError( $row ) {
+	public static function makeLintError( CategoryManager $categoryManager, $row ) {
 		try {
-			$name = ( new CategoryManager() )->getCategoryName( $row->linter_cat );
+			$name = $categoryManager->getCategoryName( $row->linter_cat );
 		} catch ( MissingCategoryException $e ) {
 			LoggerFactory::getInstance( 'Linter' )->error(
 				'Could not find name for id: {linter_cat}',
@@ -146,7 +157,7 @@ class Database {
 	 * @return LintError[]
 	 */
 	public function getForPage() {
-		$rows = self::getReplicaDBConnection()->newSelectQueryBuilder()
+		$rows = $this->getReplicaDBConnection()->newSelectQueryBuilder()
 			->select( [ 'linter_id', 'linter_cat', 'linter_start', 'linter_end', 'linter_params' ] )
 			->from( 'linter' )
 			->where( [ 'linter_page' => $this->pageId ] )
@@ -155,7 +166,7 @@ class Database {
 
 		$result = [];
 		foreach ( $rows as $row ) {
-			$error = self::makeLintError( $row );
+			$error = self::makeLintError( $this->categoryManager, $row );
 			if ( !$error ) {
 				continue;
 			}
@@ -173,9 +184,6 @@ class Database {
 	 * @return array
 	 */
 	private function buildErrorRow( LintError $error ) {
-		$mwServices = MediaWikiServices::getInstance();
-		$config = $mwServices->getMainConfig();
-
 		$result = [
 			'linter_page' => $this->pageId,
 			'linter_cat' => $this->categoryManager->getCategoryId( $error->category, $error->catId ),
@@ -185,13 +193,15 @@ class Database {
 		];
 
 		// To enable 756101
-		$enableWriteNamespaceColumn = $config->get( 'LinterWriteNamespaceColumnStage' );
+		$enableWriteNamespaceColumn =
+			$this->options['writeNamespaceColumn'] ?? false;
 		if ( $enableWriteNamespaceColumn && $this->namespaceID !== null ) {
 			$result[ 'linter_namespace' ] = $this->namespaceID;
 		}
 
 		// To enable 720130
-		$enableWriteTagAndTemplateColumns = $config->get( 'LinterWriteTagAndTemplateColumnsStage' );
+		$enableWriteTagAndTemplateColumns =
+			$this->options['writeTagAndTemplateColumns'] ?? false;
 		if ( $enableWriteTagAndTemplateColumns ) {
 			$templateInfo = $error->templateInfo ?? '';
 			if ( is_array( $templateInfo ) ) {
@@ -238,7 +248,7 @@ class Database {
 	 */
 	public function setForPage( $errors ) {
 		$previous = $this->getForPage();
-		$dbw = self::getDBConnectionRef( DB_PRIMARY );
+		$dbw = $this->getDBConnectionRef( DB_PRIMARY );
 		if ( !$previous && !$errors ) {
 			return [ 'deleted' => [], 'added' => [] ];
 		} elseif ( !$previous && $errors ) {
@@ -307,7 +317,7 @@ class Database {
 	 * @return int
 	 */
 	private function getTotalsEstimate( $catId ) {
-		$dbr = self::getReplicaDBConnection();
+		$dbr = $this->getReplicaDBConnection();
 		// First see if there are no rows, or a moderate number
 		// within the limit specified by the MAX_ACCURATE_COUNT.
 		// The distinction between 0, a few and a lot is important
@@ -343,7 +353,7 @@ class Database {
 	 * @return int[]
 	 */
 	public function getTotalsForPage(): array {
-		$rows = self::getReplicaDBConnection()->newSelectQueryBuilder()
+		$rows = $this->getReplicaDBConnection()->newSelectQueryBuilder()
 			->select( [ 'linter_cat', 'COUNT(*) AS count' ] )
 			->from( 'linter' )
 			->where( [ 'linter_page' => $this->pageId ] )
@@ -395,15 +405,14 @@ class Database {
 	 * @param bool $bypassConfig
 	 * @return int number of pages updated, each with one or more linter records
 	 */
-	public static function migrateNamespace( int $pageBatchSize,
+	public function migrateNamespace( int $pageBatchSize,
 		 int $linterBatchSize,
 		 int $sleep,
 		 bool $bypassConfig = false ): int {
 		// code used by phpunit test, bypassed when run as a maintenance script
 		if ( !$bypassConfig ) {
-			$mwServices = MediaWikiServices::getInstance();
-			$config = $mwServices->getMainConfig();
-			$enableMigrateNamespaceStage = $config->get( 'LinterWriteNamespaceColumnStage' );
+			$enableMigrateNamespaceStage =
+				$this->options['writeNamespaceColumn'] ?? false;
 			if ( !$enableMigrateNamespaceStage ) {
 				return 0;
 			}
@@ -414,9 +423,9 @@ class Database {
 
 		$logger = LoggerFactory::getInstance( 'MigrateNamespaceChannel' );
 
-		$lbFactory = MediaWikiServices::getInstance()->getDBLoadBalancerFactory();
-		$dbw = self::getDBConnectionRef( DB_PRIMARY );
-		$dbread = self::getDBConnectionRef( DB_REPLICA );
+		$lbFactory = $this->dbLoadBalancerFactory;
+		$dbw = $this->getDBConnectionRef( DB_PRIMARY );
+		$dbread = $this->getDBConnectionRef( DB_REPLICA );
 
 		$logger->info( "Migrate namespace starting\n" );
 
@@ -504,15 +513,14 @@ class Database {
 	 * @param bool $bypassConfig
 	 * @return int
 	 */
-	public static function migrateTemplateAndTagInfo( int $batchSize,
+	public function migrateTemplateAndTagInfo( int $batchSize,
 		int $sleep,
 		bool $bypassConfig = false
 	): int {
 		// code used by phpunit test, bypassed when run as a maintenance script
 		if ( !$bypassConfig ) {
-			$mwServices = MediaWikiServices::getInstance();
-			$config = $mwServices->getMainConfig();
-			$enableMigrateTagAndTemplateColumnsStage = $config->get( 'LinterWriteTagAndTemplateColumnsStage' );
+			$enableMigrateTagAndTemplateColumnsStage =
+				$this->options['writeTagAndTemplateColumns'] ?? false;
 			if ( !$enableMigrateTagAndTemplateColumnsStage ) {
 				return 0;
 			}
@@ -523,8 +531,8 @@ class Database {
 
 		$logger = LoggerFactory::getInstance( 'MigrateTagAndTemplateChannel' );
 
-		$lbFactory = MediaWikiServices::getInstance()->getDBLoadBalancerFactory();
-		$dbw = self::getDBConnectionRef( DB_PRIMARY );
+		$lbFactory = $this->dbLoadBalancerFactory;
+		$dbw = $this->getDBConnectionRef( DB_PRIMARY );
 
 		$logger->info( "Migration of linter_params field to linter_tag and linter_template fields starting\n" );
 

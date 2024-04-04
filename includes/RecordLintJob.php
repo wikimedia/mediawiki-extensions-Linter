@@ -26,20 +26,28 @@ use WANObjectCache;
 
 class RecordLintJob extends Job {
 	private WANObjectCache $cache;
+	private CategoryManager $categoryManager;
+	private DatabaseFactory $databaseFactory;
 
 	/**
 	 * RecordLintJob constructor.
 	 * @param PageReference $page
 	 * @param array $params
 	 * @param WANObjectCache $cache
+	 * @param CategoryManager $categoryManager
+	 * @param DatabaseFactory $databaseFactory
 	 */
 	public function __construct(
 		PageReference $page,
 		array $params,
-		WANObjectCache $cache
+		WANObjectCache $cache,
+		CategoryManager $categoryManager,
+		DatabaseFactory $databaseFactory
 	) {
 		parent::__construct( 'RecordLintJob', $page, $params );
 		$this->cache = $cache;
+		$this->categoryManager = $categoryManager;
+		$this->databaseFactory = $databaseFactory;
 	}
 
 	public function run() {
@@ -66,9 +74,11 @@ class RecordLintJob extends Job {
 			$errors[$error->id()] = $error;
 		}
 
-		$lintDb = new Database( $this->title->getArticleID(), $this->title->getNamespace() );
+		$lintDb = $this->databaseFactory->newDatabase(
+			$this->title->getArticleID(), $this->title->getNamespace()
+		);
 		$totalsLookup = new TotalsLookup(
-			new CategoryManager(),
+			$this->categoryManager,
 			$this->cache,
 			$lintDb
 		);

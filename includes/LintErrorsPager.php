@@ -203,7 +203,7 @@ class LintErrorsPager extends TablePager {
 			$category = $this->category;
 			$row->linter_cat = $this->categoryId;
 		}
-		$lintError = Database::makeLintError( $row );
+		$lintError = Database::makeLintError( $this->categoryManager, $row );
 
 		if ( !$lintError ) {
 			return '';

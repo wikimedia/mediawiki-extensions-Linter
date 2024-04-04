@@ -35,6 +35,8 @@ class SpecialLintErrors extends SpecialPage {
 	private WANObjectCache $cache;
 	private NamespaceInfo $namespaceInfo;
 	private TitleParser $titleParser;
+	private CategoryManager $categoryManager;
+	private DatabaseFactory $databaseFactory;
 
 	/**
 	 * @var string|null
@@ -45,12 +47,22 @@ class SpecialLintErrors extends SpecialPage {
 	 * @param WANObjectCache $cache
 	 * @param NamespaceInfo $namespaceInfo
 	 * @param TitleParser $titleParser
+	 * @param CategoryManager $categoryManager
+	 * @param DatabaseFactory $databaseFactory
 	 */
-	public function __construct( WANObjectCache $cache, NamespaceInfo $namespaceInfo, TitleParser $titleParser ) {
+	public function __construct(
+		WANObjectCache $cache,
+		NamespaceInfo $namespaceInfo,
+		TitleParser $titleParser,
+		CategoryManager $categoryManager,
+		DatabaseFactory $databaseFactory
+	) {
 		parent::__construct( 'LintErrors' );
 		$this->cache = $cache;
 		$this->namespaceInfo = $namespaceInfo;
 		$this->titleParser = $titleParser;
+		$this->categoryManager = $categoryManager;
+		$this->databaseFactory = $databaseFactory;
 	}
 
 	/**
@@ -242,9 +254,10 @@ class SpecialLintErrors extends SpecialPage {
 			if ( $titleSearch[ 'titlefield' ] !== null ) {
 				$out->setPageTitleMsg( $this->msg( 'linter-prefix-search-subpage', $titleSearch[ 'titlefield' ] ) );
 
-				$catManager = new CategoryManager();
 				$pager = new LintErrorsPager(
-					$this->getContext(), null, $this->getLinkRenderer(), $catManager, $namespaces,
+					$this->getContext(), null,
+					$this->getLinkRenderer(), $this->categoryManager,
+					$namespaces,
 					$exactMatch, $titleSearch[ 'titlefield' ], $template, $tag
 				);
 				$out->addParserOutput( $pager->getFullOutput() );
@@ -254,14 +267,13 @@ class SpecialLintErrors extends SpecialPage {
 			return;
 		}
 
-		$catManager = new CategoryManager();
 		if ( in_array( $par, $this->getSubpagesForPrefixSearch() ) ) {
 			$this->category = $par;
 		}
 
 		if ( !$this->category ) {
 			$this->addHelpLink( 'Help:Extension:Linter' );
-			$this->showCategoryListings( $catManager );
+			$this->showCategoryListings();
 		} else {
 			$this->addHelpLink( "Help:Lint_errors/{$this->category}" );
 			$out->setPageTitleMsg(
@@ -282,7 +294,9 @@ class SpecialLintErrors extends SpecialPage {
 			if ( $titleCategorySearch[ 'titlefield' ] !== null ) {
 				$this->showFilterForm( 'titlecategorysearch' );
 				$pager = new LintErrorsPager(
-					$this->getContext(), $this->category, $this->getLinkRenderer(), $catManager, $namespaces,
+					$this->getContext(), $this->category,
+					$this->getLinkRenderer(), $this->categoryManager,
+					$namespaces,
 					$exactMatch, $titleCategorySearch[ 'titlefield' ], $template, $tag
 				);
 				$out->addParserOutput( $pager->getFullOutput() );
@@ -313,21 +327,18 @@ class SpecialLintErrors extends SpecialPage {
 		$this->showFilterForm( 'titlesearch' );
 	}
 
-	/**
-	 * @param CategoryManager $catManager
-	 */
-	private function showCategoryListings( CategoryManager $catManager ) {
+	private function showCategoryListings() {
 		$lookup = new TotalsLookup(
-			$catManager,
+			$this->categoryManager,
 			$this->cache,
-			new Database( 0 )
+			$this->databaseFactory->newDatabase( 0 )
 		);
 		$totals = $lookup->getTotals();
 
 		// Display lint issues by priority
-		$this->displayList( 'high', $totals, $catManager->getHighPriority() );
-		$this->displayList( 'medium', $totals, $catManager->getMediumPriority() );
-		$this->displayList( 'low', $totals, $catManager->getLowPriority() );
+		$this->displayList( 'high', $totals, $this->categoryManager->getHighPriority() );
+		$this->displayList( 'medium', $totals, $this->categoryManager->getMediumPriority() );
+		$this->displayList( 'low', $totals, $this->categoryManager->getLowPriority() );
 
 		$this->displaySearchPage();
 	}
@@ -362,8 +373,10 @@ class SpecialLintErrors extends SpecialPage {
 	 * @return string[]
 	 */
 	protected function getSubpagesForPrefixSearch() {
-		$categoryManager = new CategoryManager();
-		return array_merge( $categoryManager->getVisibleCategories(), $categoryManager->getInvisibleCategories() );
+		return array_merge(
+			$this->categoryManager->getVisibleCategories(),
+			$this->categoryManager->getInvisibleCategories()
+		);
 	}
 
 }

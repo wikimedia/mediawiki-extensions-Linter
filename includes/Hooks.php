@@ -53,20 +53,28 @@ class Hooks implements
 	private LinkRenderer $linkRenderer;
 	private WANObjectCache $cache;
 	private JobQueueGroup $jobQueueGroup;
+	private CategoryManager $categoryManager;
+	private DatabaseFactory $databaseFactory;
 
 	/**
 	 * @param LinkRenderer $linkRenderer
 	 * @param WANObjectCache $cache
 	 * @param JobQueueGroup $jobQueueGroup
+	 * @param CategoryManager $categoryManager
+	 * @param DatabaseFactory $databaseFactory
 	 */
 	public function __construct(
 		LinkRenderer $linkRenderer,
 		WANObjectCache $cache,
-		JobQueueGroup $jobQueueGroup
+		JobQueueGroup $jobQueueGroup,
+		CategoryManager $categoryManager,
+		DatabaseFactory $databaseFactory
 	) {
 		$this->linkRenderer = $linkRenderer;
 		$this->cache = $cache;
 		$this->jobQueueGroup = $jobQueueGroup;
+		$this->categoryManager = $categoryManager;
+		$this->databaseFactory = $databaseFactory;
 	}
 
 	/**
@@ -89,7 +97,8 @@ class Hooks implements
 			return;
 		}
 
-		$lintError = ( new Database( $title->getArticleID() ) )->getFromId( $lintId );
+		$database = $this->databaseFactory->newDatabase( $title->getArticleID() );
+		$lintError = $database->getFromId( $lintId );
 		if ( !$lintError ) {
 			// Already fixed or bogus URL parameter?
 			return;
@@ -113,12 +122,11 @@ class Hooks implements
 	 */
 	public function onWikiPageDeletionUpdates( $wikiPage, $content, &$updates ) {
 		$id = $wikiPage->getId();
-		$cache = $this->cache;
-		$updates[] = new MWCallableUpdate( static function () use ( $id, $cache ) {
-			$database = new Database( $id );
+		$updates[] = new MWCallableUpdate( function () use ( $id ) {
+			$database = $this->databaseFactory->newDatabase( $id );
 			$totalsLookup = new TotalsLookup(
-				new CategoryManager(),
-				$cache,
+				$this->categoryManager,
+				$this->cache,
 				$database
 			);
 			$totalsLookup->updateStats( $database->setForPage( [] ) );
@@ -155,9 +163,9 @@ class Hooks implements
 			( in_array( "mw-contentmodelchange", $tags ) &&
 			!in_array( $wikiPage->getContentModel(), self::LINTABLE_CONTENT_MODELS ) )
 		) {
-			$database = new Database( $wikiPage->getId() );
+			$database = $this->databaseFactory->newDatabase( $wikiPage->getId() );
 			$totalsLookup = new TotalsLookup(
-				new CategoryManager(),
+				$this->categoryManager,
 				$this->cache,
 				$database
 			);
@@ -174,11 +182,10 @@ class Hooks implements
 	 * @param array &$data
 	 */
 	public function onAPIQuerySiteInfoGeneralInfo( $api, &$data ) {
-		$catManager = new CategoryManager();
 		$data['linter'] = [
-			'high' => $catManager->getHighPriority(),
-			'medium' => $catManager->getMediumPriority(),
-			'low' => $catManager->getLowPriority(),
+			'high' => $this->categoryManager->getHighPriority(),
+			'medium' => $this->categoryManager->getMediumPriority(),
+			'low' => $this->categoryManager->getLowPriority(),
 		];
 	}
 
@@ -196,7 +203,7 @@ class Hooks implements
 		if ( !$pageId ) {
 			return;
 		}
-		$database = new Database( $pageId );
+		$database = $this->databaseFactory->newDatabase( $pageId );
 		$totals = array_filter( $database->getTotalsForPage() );
 		if ( !$totals ) {
 			// No errors, yay!
@@ -243,10 +250,9 @@ class Hooks implements
 		) {
 			return false;
 		}
-		$categoryMgr = new CategoryManager();
 		$catCounts = [];
 		foreach ( $data as $info ) {
-			if ( $categoryMgr->isKnownCategory( $info['type'] ) ) {
+			if ( $this->categoryManager->isKnownCategory( $info['type'] ) ) {
 				$info[ 'dbid' ] = null;
 			} elseif ( !isset( $info[ 'dbid' ] ) ) {
 				continue;
@@ -280,7 +286,7 @@ class Hooks implements
 		$job = new RecordLintJob( $title, [
 			'errors' => $errors,
 			'revision' => $revision,
-		], $this->cache );
+		], $this->cache, $this->categoryManager, $this->databaseFactory );
 		$this->jobQueueGroup->push( $job );
 		return true;
 	}
