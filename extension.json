@@ -48,7 +48,12 @@
 		"linterrors": "MediaWiki\\Linter\\ApiQueryLintErrors"
 	},
 	"APIMetaModules": {
-		"linterstats": "MediaWiki\\Linter\\ApiQueryLinterStats"
+		"linterstats": {
+			"class": "MediaWiki\\Linter\\ApiQueryLinterStats",
+			"services": [
+				"MainWANObjectCache"
+			]
+		}
 	},
 	"SpecialPages": {
 		"LintErrors": {
