@@ -207,7 +207,8 @@
 				"night-mode-unaware-background-color": {
 					"dbid": 22,
 					"enabled": true,
-					"priority": "none"
+					"priority": "none",
+					"no-params": true
 				}
 			}
 		},
