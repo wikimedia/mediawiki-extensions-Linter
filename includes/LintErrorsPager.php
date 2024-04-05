@@ -22,11 +22,12 @@ namespace MediaWiki\Linter;
 
 use IContextSource;
 use InvalidArgumentException;
-use LinkCache;
+use MediaWiki\Cache\LinkCache;
 use MediaWiki\Html\Html;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Pager\TablePager;
+use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleValue;
 use Wikimedia\Rdbms\IExpression;
@@ -35,74 +36,60 @@ use Wikimedia\Rdbms\SelectQueryBuilder;
 
 class LintErrorsPager extends TablePager {
 
-	/**
-	 * @var CategoryManager
-	 */
-	private $categoryManager;
+	private CategoryManager $categoryManager;
+	private LinkCache $linkCache;
+	private LinkRenderer $linkRenderer;
+	private PermissionManager $permissionManager;
 
-	/**
-	 * @var string
-	 */
-	private $category;
-
-	/**
-	 * @var int|null
-	 */
-	private $categoryId;
-
-	/**
-	 * @var LinkRenderer
-	 */
-	private $linkRenderer;
-
-	/**
-	 * @var array
-	 */
-	private $namespaces;
-
-	/**
-	 * @var bool
-	 */
-	private $exactMatch;
-
-	/**
-	 * @var string
-	 */
-	private $title;
+	private ?string $category;
+	private ?int $categoryId;
+	private array $namespaces;
+	private bool $exactMatch;
+	private string $title;
+	private string $tag;
 
 	/**
 	 * Allowed values are keys 'all', 'with' or 'without'
-	 * @var string
 	 */
-	private $throughTemplate;
-
-	/**
-	 * @var string
-	 */
-	private $tag;
+	private string $throughTemplate;
 
 	/**
 	 * @param IContextSource $context
-	 * @param string|null $category
+	 * @param CategoryManager $categoryManager
+	 * @param LinkCache $linkCache
 	 * @param LinkRenderer $linkRenderer
-	 * @param CategoryManager $catManager
+	 * @param PermissionManager $permissionManager
+	 * @param ?string $category
 	 * @param array $namespaces
 	 * @param bool $exactMatch
 	 * @param string $title
 	 * @param string $throughTemplate
 	 * @param string $tag
 	 */
-	public function __construct( IContextSource $context, $category, LinkRenderer $linkRenderer,
-		CategoryManager $catManager, $namespaces, $exactMatch, $title, $throughTemplate, $tag
+	public function __construct(
+		IContextSource $context,
+		CategoryManager $categoryManager,
+		LinkCache $linkCache,
+		LinkRenderer $linkRenderer,
+		PermissionManager $permissionManager,
+		?string $category,
+		array $namespaces,
+		bool $exactMatch,
+		string $title,
+		string $throughTemplate,
+		string $tag
 	) {
+		$this->categoryManager = $categoryManager;
+		$this->linkCache = $linkCache;
+		$this->linkRenderer = $linkRenderer;
+		$this->permissionManager = $permissionManager;
+
 		$this->category = $category;
-		$this->categoryManager = $catManager;
 		if ( $category !== null ) {
-			$this->categoryId = $catManager->getCategoryId( $this->category );
+			$this->categoryId = $categoryManager->getCategoryId( $category );
 		} else {
 			$this->categoryId = null;
 		}
-		$this->linkRenderer = $linkRenderer;
 		$this->namespaces = $namespaces;
 		$this->exactMatch = $exactMatch;
 		$this->title = $title;
@@ -173,10 +160,9 @@ class LintErrorsPager extends TablePager {
 	}
 
 	protected function doBatchLookups() {
-		$linkCache = MediaWikiServices::getInstance()->getLinkCache();
 		foreach ( $this->mResult as $row ) {
 			$titleValue = new TitleValue( (int)$row->page_namespace, $row->page_title );
-			$linkCache->addGoodLinkObjFromRow( $titleValue, $row );
+			$this->linkCache->addGoodLinkObjFromRow( $titleValue, $row );
 		}
 	}
 
@@ -197,10 +183,10 @@ class LintErrorsPager extends TablePager {
 		// To support multiple lint errors of varying types for a single page, the
 		// category is set each time based on the category set in the lint error $row
 		// not by the class when lints are being reported by type for many pages
-		if ( $this->category === null && $row->linter_cat !== null ) {
+		$category = $this->category;
+		if ( $category === null && $row->linter_cat !== null ) {
 			$category = $this->categoryManager->getCategoryName( $row->linter_cat );
 		} else {
-			$category = $this->category;
 			$row->linter_cat = $this->categoryId;
 		}
 		$lintError = Database::makeLintError( $this->categoryManager, $row );
@@ -213,8 +199,7 @@ class LintErrorsPager extends TablePager {
 			case 'title':
 				$title = Title::makeTitle( $row->page_namespace, $row->page_title );
 				$viewLink = $this->linkRenderer->makeLink( $title );
-				$permManager = MediaWikiServices::getInstance()->getPermissionManager();
-				$editMsgKey = $permManager->quickUserCan( 'edit', $this->getUser(), $title ) ?
+				$editMsgKey = $this->permissionManager->quickUserCan( 'edit', $this->getUser(), $title ) ?
 					'linter-page-edit' : 'linter-page-viewsource';
 				$editLink = $this->linkRenderer->makeLink(
 					$title,
@@ -235,7 +220,7 @@ class LintErrorsPager extends TablePager {
 					->rawParams( $viewLink, $editHistLinks )
 					->escaped();
 			case 'details':
-				if ( $this->categoryManager->hasNameParam( $category ) &&
+				if ( $category !== null && $this->categoryManager->hasNameParam( $category ) &&
 					isset( $lintError->params['name'] ) ) {
 					return Html::element( 'code', [], $lintError->params['name'] );
 				} elseif ( $category === 'bogus-image-options' && isset( $lintError->params['items'] ) ) {
@@ -288,7 +273,7 @@ class LintErrorsPager extends TablePager {
 					$templateTitle
 				);
 			case 'category':
-				return Html::element( 'code', [], $category );
+				return Html::element( 'code', [], $category ?? '' );
 			default:
 				throw new InvalidArgumentException( "Unexpected name: $name" );
 		}

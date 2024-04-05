@@ -21,8 +21,10 @@
 namespace MediaWiki\Linter;
 
 use HTMLForm;
+use MediaWiki\Cache\LinkCache;
 use MediaWiki\Html\Html;
 use MediaWiki\Output\OutputPage;
+use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Request\WebRequest;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Title\MalformedTitleException;
@@ -33,6 +35,8 @@ class SpecialLintErrors extends SpecialPage {
 
 	private NamespaceInfo $namespaceInfo;
 	private TitleParser $titleParser;
+	private LinkCache $linkCache;
+	private PermissionManager $permissionManager;
 	private CategoryManager $categoryManager;
 	private TotalsLookup $totalsLookup;
 	private DatabaseFactory $databaseFactory;
@@ -45,6 +49,8 @@ class SpecialLintErrors extends SpecialPage {
 	/**
 	 * @param NamespaceInfo $namespaceInfo
 	 * @param TitleParser $titleParser
+	 * @param LinkCache $linkCache
+	 * @param PermissionManager $permissionManager
 	 * @param CategoryManager $categoryManager
 	 * @param TotalsLookup $totalsLookup
 	 * @param DatabaseFactory $databaseFactory
@@ -52,6 +58,8 @@ class SpecialLintErrors extends SpecialPage {
 	public function __construct(
 		NamespaceInfo $namespaceInfo,
 		TitleParser $titleParser,
+		LinkCache $linkCache,
+		PermissionManager $permissionManager,
 		CategoryManager $categoryManager,
 		TotalsLookup $totalsLookup,
 		DatabaseFactory $databaseFactory
@@ -59,6 +67,8 @@ class SpecialLintErrors extends SpecialPage {
 		parent::__construct( 'LintErrors' );
 		$this->namespaceInfo = $namespaceInfo;
 		$this->titleParser = $titleParser;
+		$this->linkCache = $linkCache;
+		$this->permissionManager = $permissionManager;
 		$this->categoryManager = $categoryManager;
 		$this->totalsLookup = $totalsLookup;
 		$this->databaseFactory = $databaseFactory;
@@ -254,8 +264,12 @@ class SpecialLintErrors extends SpecialPage {
 				$out->setPageTitleMsg( $this->msg( 'linter-prefix-search-subpage', $titleSearch[ 'titlefield' ] ) );
 
 				$pager = new LintErrorsPager(
-					$this->getContext(), null,
-					$this->getLinkRenderer(), $this->categoryManager,
+					$this->getContext(),
+					$this->categoryManager,
+					$this->linkCache,
+					$this->getLinkRenderer(),
+					$this->permissionManager,
+					null,
 					$namespaces,
 					$exactMatch, $titleSearch[ 'titlefield' ], $template, $tag
 				);
@@ -293,8 +307,12 @@ class SpecialLintErrors extends SpecialPage {
 			if ( $titleCategorySearch[ 'titlefield' ] !== null ) {
 				$this->showFilterForm( 'titlecategorysearch' );
 				$pager = new LintErrorsPager(
-					$this->getContext(), $this->category,
-					$this->getLinkRenderer(), $this->categoryManager,
+					$this->getContext(),
+					$this->categoryManager,
+					$this->linkCache,
+					$this->getLinkRenderer(),
+					$this->permissionManager,
+					$this->category,
 					$namespaces,
 					$exactMatch, $titleCategorySearch[ 'titlefield' ], $template, $tag
 				);

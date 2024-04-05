@@ -71,6 +71,8 @@
 			"services": [
 				"NamespaceInfo",
 				"TitleParser",
+				"LinkCache",
+				"PermissionManager",
 				"Linter.CategoryManager",
 				"Linter.TotalsLookup",
 				"Linter.DatabaseFactory"

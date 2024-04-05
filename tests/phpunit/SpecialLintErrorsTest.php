@@ -57,6 +57,8 @@ class SpecialLintErrorsTest extends SpecialPageTestBase {
 		return new SpecialLintErrors(
 			$services->getNamespaceInfo(),
 			$services->getTitleParser(),
+			$services->getLinkCache(),
+			$services->getPermissionManager(),
 			$services->get( 'Linter.CategoryManager' ),
 			$services->get( 'Linter.TotalsLookup' ),
 			$services->get( 'Linter.DatabaseFactory' )
