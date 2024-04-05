@@ -38,7 +38,12 @@ use SpecialPageTestBase;
 class SpecialLintErrorsTest extends SpecialPageTestBase {
 
 	protected function newSpecialPage() {
-		return new SpecialLintErrors();
+		$services = $this->getServiceContainer();
+		return new SpecialLintErrors(
+			$services->getMainWANObjectCache(),
+			$services->getNamespaceInfo(),
+			$services->getTitleParser()
+		);
 	}
 
 	public function testExecute() {

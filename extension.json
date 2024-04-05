@@ -51,7 +51,14 @@
 		"linterstats": "MediaWiki\\Linter\\ApiQueryLinterStats"
 	},
 	"SpecialPages": {
-		"LintErrors": "MediaWiki\\Linter\\SpecialLintErrors"
+		"LintErrors": {
+			"class": "MediaWiki\\Linter\\SpecialLintErrors",
+			"services": [
+				"MainWANObjectCache",
+				"NamespaceInfo",
+				"TitleParser"
+			]
+		}
 	},
 	"JobClasses": {
 		"RecordLintJob": "MediaWiki\\Linter\\RecordLintJob"
