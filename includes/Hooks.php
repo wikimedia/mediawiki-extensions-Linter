@@ -280,7 +280,7 @@ class Hooks implements
 		$job = new RecordLintJob( $title, [
 			'errors' => $errors,
 			'revision' => $revision,
-		] );
+		], $this->cache );
 		$this->jobQueueGroup->push( $job );
 		return true;
 	}

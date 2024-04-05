@@ -26,6 +26,7 @@ use MediaWiki\Linter\CategoryManager;
 use MediaWiki\Linter\Database;
 use MediaWiki\Linter\RecordLintJob;
 use MediaWiki\Linter\SpecialLintErrors;
+use MediaWiki\Page\PageReference;
 use MediaWiki\Request\FauxRequest;
 use MediaWiki\Title\Title;
 use SpecialPageTestBase;
@@ -36,6 +37,15 @@ use SpecialPageTestBase;
  * @group Database
  */
 class SpecialLintErrorsTest extends SpecialPageTestBase {
+
+	private function newRecordLintJob( PageReference $page, array $params ) {
+		$services = $this->getServiceContainer();
+		return new RecordLintJob(
+			$page,
+			$params,
+			$services->getMainWANObjectCache()
+		);
+	}
 
 	protected function newSpecialPage() {
 		$services = $this->getServiceContainer();
@@ -95,7 +105,7 @@ class SpecialLintErrorsTest extends SpecialPageTestBase {
 			'dbid' => null,
 		];
 		$titleAndPage = $this->createTitleAndPage();
-		$job = new RecordLintJob( $titleAndPage['title'], [
+		$job = $this->newRecordLintJob( $titleAndPage['title'], [
 			'errors' => [ $error ],
 			'revision' => $titleAndPage['revID']
 		] );
@@ -131,7 +141,7 @@ class SpecialLintErrorsTest extends SpecialPageTestBase {
 			'dbid' => null,
 		];
 		$titleAndPage = $this->createTitleAndPage();
-		$job = new RecordLintJob( $titleAndPage['title'], [
+		$job = $this->newRecordLintJob( $titleAndPage['title'], [
 			'errors' => [ $error ],
 			'revision' => $titleAndPage['revID']
 		] );
@@ -177,7 +187,7 @@ class SpecialLintErrorsTest extends SpecialPageTestBase {
 					'dbid' => null
 				];
 			}
-			$job = new RecordLintJob( $titleAndPage[ 'title' ], [
+			$job = $this->newRecordLintJob( $titleAndPage[ 'title' ], [
 				'errors' => $errors,
 				'revision' => $titleAndPage[ 'revID' ]
 			] );

@@ -68,7 +68,12 @@
 		}
 	},
 	"JobClasses": {
-		"RecordLintJob": "MediaWiki\\Linter\\RecordLintJob"
+		"RecordLintJob": {
+			"class": "MediaWiki\\Linter\\RecordLintJob",
+			"services": [
+				"MainWANObjectCache"
+			]
+		}
 	},
 	"ResourceModules": {
 		"ext.linter.edit": {

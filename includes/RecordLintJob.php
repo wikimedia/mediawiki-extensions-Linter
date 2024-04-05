@@ -21,17 +21,25 @@
 namespace MediaWiki\Linter;
 
 use Job;
-use MediaWiki\MediaWikiServices;
-use MediaWiki\Title\Title;
+use MediaWiki\Page\PageReference;
+use WANObjectCache;
 
 class RecordLintJob extends Job {
+	private WANObjectCache $cache;
+
 	/**
 	 * RecordLintJob constructor.
-	 * @param Title $title
+	 * @param PageReference $page
 	 * @param array $params
+	 * @param WANObjectCache $cache
 	 */
-	public function __construct( Title $title, array $params ) {
-		parent::__construct( 'RecordLintJob', $title, $params );
+	public function __construct(
+		PageReference $page,
+		array $params,
+		WANObjectCache $cache
+	) {
+		parent::__construct( 'RecordLintJob', $page, $params );
+		$this->cache = $cache;
 	}
 
 	public function run() {
@@ -61,7 +69,7 @@ class RecordLintJob extends Job {
 		$lintDb = new Database( $this->title->getArticleID(), $this->title->getNamespace() );
 		$totalsLookup = new TotalsLookup(
 			new CategoryManager(),
-			MediaWikiServices::getInstance()->getMainWANObjectCache(),
+			$this->cache,
 			$lintDb
 		);
 		$totalsLookup->updateStats( $lintDb->setForPage( $errors ) );
