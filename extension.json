@@ -29,9 +29,9 @@
 			"class": "MediaWiki\\Linter\\Hooks",
 			"services": [
 				"LinkRenderer",
-				"MainWANObjectCache",
 				"JobQueueGroup",
 				"Linter.CategoryManager",
+				"Linter.TotalsLookup",
 				"Linter.DatabaseFactory"
 			]
 		},
@@ -60,8 +60,7 @@
 		"linterstats": {
 			"class": "MediaWiki\\Linter\\ApiQueryLinterStats",
 			"services": [
-				"MainWANObjectCache",
-				"Linter.CategoryManager",
+				"Linter.TotalsLookup",
 				"Linter.DatabaseFactory"
 			]
 		}
@@ -70,10 +69,10 @@
 		"LintErrors": {
 			"class": "MediaWiki\\Linter\\SpecialLintErrors",
 			"services": [
-				"MainWANObjectCache",
 				"NamespaceInfo",
 				"TitleParser",
 				"Linter.CategoryManager",
+				"Linter.TotalsLookup",
 				"Linter.DatabaseFactory"
 			]
 		}
@@ -82,8 +81,7 @@
 		"RecordLintJob": {
 			"class": "MediaWiki\\Linter\\RecordLintJob",
 			"services": [
-				"MainWANObjectCache",
-				"Linter.CategoryManager",
+				"Linter.TotalsLookup",
 				"Linter.DatabaseFactory"
 			]
 		}

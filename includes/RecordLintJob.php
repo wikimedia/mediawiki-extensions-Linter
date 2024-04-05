@@ -22,31 +22,26 @@ namespace MediaWiki\Linter;
 
 use Job;
 use MediaWiki\Page\PageReference;
-use WANObjectCache;
 
 class RecordLintJob extends Job {
-	private WANObjectCache $cache;
-	private CategoryManager $categoryManager;
+	private TotalsLookup $totalsLookup;
 	private DatabaseFactory $databaseFactory;
 
 	/**
 	 * RecordLintJob constructor.
 	 * @param PageReference $page
 	 * @param array $params
-	 * @param WANObjectCache $cache
-	 * @param CategoryManager $categoryManager
+	 * @param TotalsLookup $totalsLookup
 	 * @param DatabaseFactory $databaseFactory
 	 */
 	public function __construct(
 		PageReference $page,
 		array $params,
-		WANObjectCache $cache,
-		CategoryManager $categoryManager,
+		TotalsLookup $totalsLookup,
 		DatabaseFactory $databaseFactory
 	) {
 		parent::__construct( 'RecordLintJob', $page, $params );
-		$this->cache = $cache;
-		$this->categoryManager = $categoryManager;
+		$this->totalsLookup = $totalsLookup;
 		$this->databaseFactory = $databaseFactory;
 	}
 
@@ -77,12 +72,7 @@ class RecordLintJob extends Job {
 		$lintDb = $this->databaseFactory->newDatabase(
 			$this->title->getArticleID(), $this->title->getNamespace()
 		);
-		$totalsLookup = new TotalsLookup(
-			$this->categoryManager,
-			$this->cache,
-			$lintDb
-		);
-		$totalsLookup->updateStats( $lintDb->setForPage( $errors ) );
+		$this->totalsLookup->updateStats( $lintDb, $lintDb->setForPage( $errors ) );
 
 		return true;
 	}

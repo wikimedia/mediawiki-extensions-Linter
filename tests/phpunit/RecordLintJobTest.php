@@ -44,8 +44,7 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 		return new RecordLintJob(
 			$page,
 			$params,
-			$services->getMainWANObjectCache(),
-			$services->get( 'Linter.CategoryManager' ),
+			$services->get( 'Linter.TotalsLookup' ),
 			$services->get( 'Linter.DatabaseFactory' )
 		);
 	}

@@ -28,14 +28,13 @@ use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Title\MalformedTitleException;
 use MediaWiki\Title\NamespaceInfo;
 use MediaWiki\Title\TitleParser;
-use WANObjectCache;
 
 class SpecialLintErrors extends SpecialPage {
 
-	private WANObjectCache $cache;
 	private NamespaceInfo $namespaceInfo;
 	private TitleParser $titleParser;
 	private CategoryManager $categoryManager;
+	private TotalsLookup $totalsLookup;
 	private DatabaseFactory $databaseFactory;
 
 	/**
@@ -44,24 +43,24 @@ class SpecialLintErrors extends SpecialPage {
 	private $category;
 
 	/**
-	 * @param WANObjectCache $cache
 	 * @param NamespaceInfo $namespaceInfo
 	 * @param TitleParser $titleParser
 	 * @param CategoryManager $categoryManager
+	 * @param TotalsLookup $totalsLookup
 	 * @param DatabaseFactory $databaseFactory
 	 */
 	public function __construct(
-		WANObjectCache $cache,
 		NamespaceInfo $namespaceInfo,
 		TitleParser $titleParser,
 		CategoryManager $categoryManager,
+		TotalsLookup $totalsLookup,
 		DatabaseFactory $databaseFactory
 	) {
 		parent::__construct( 'LintErrors' );
-		$this->cache = $cache;
 		$this->namespaceInfo = $namespaceInfo;
 		$this->titleParser = $titleParser;
 		$this->categoryManager = $categoryManager;
+		$this->totalsLookup = $totalsLookup;
 		$this->databaseFactory = $databaseFactory;
 	}
 
@@ -328,12 +327,7 @@ class SpecialLintErrors extends SpecialPage {
 	}
 
 	private function showCategoryListings() {
-		$lookup = new TotalsLookup(
-			$this->categoryManager,
-			$this->cache,
-			$this->databaseFactory->newDatabase( 0 )
-		);
-		$totals = $lookup->getTotals();
+		$totals = $this->totalsLookup->getTotals( $this->databaseFactory->newDatabase( 0 ) );
 
 		// Display lint issues by priority
 		$this->displayList( 'high', $totals, $this->categoryManager->getHighPriority() );

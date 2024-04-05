@@ -45,5 +45,16 @@ return [
 			$services->getDBLoadBalancerFactory()
 		);
 	},
+	'Linter.TotalsLookup' => static function ( MediaWikiServices $services ): TotalsLookup {
+		$config = $services->getMainConfig();
+		return new TotalsLookup(
+			[
+				'sampleFactor' => $config->get( 'LinterStatsdSampleFactor' ),
+			],
+			$services->getMainWANObjectCache(),
+			$services->getStatsdDataFactory(),
+			$services->get( 'Linter.CategoryManager' )
+		);
+	},
 ];
 // @codeCoverageIgnoreEnd

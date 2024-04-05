@@ -22,31 +22,26 @@ namespace MediaWiki\Linter;
 use ApiQuery;
 use ApiQueryBase;
 use ApiResult;
-use WANObjectCache;
 
 class ApiQueryLinterStats extends ApiQueryBase {
 
-	private WANObjectCache $cache;
-	private CategoryManager $categoryManager;
+	private TotalsLookup $totalsLookup;
 	private DatabaseFactory $databaseFactory;
 
 	/**
 	 * @param ApiQuery $queryModule
 	 * @param string $moduleName
-	 * @param WANObjectCache $cache
-	 * @param CategoryManager $categoryManager
+	 * @param TotalsLookup $totalsLookup
 	 * @param DatabaseFactory $databaseFactory
 	 */
 	public function __construct(
 		ApiQuery $queryModule,
 		string $moduleName,
-		WANObjectCache $cache,
-		CategoryManager $categoryManager,
+		TotalsLookup $totalsLookup,
 		DatabaseFactory $databaseFactory
 	) {
 		parent::__construct( $queryModule, $moduleName, 'lntrst' );
-		$this->cache = $cache;
-		$this->categoryManager = $categoryManager;
+		$this->totalsLookup = $totalsLookup;
 		$this->databaseFactory = $databaseFactory;
 	}
 
@@ -54,12 +49,7 @@ class ApiQueryLinterStats extends ApiQueryBase {
 	 * Add totals to output
 	 */
 	public function execute() {
-		$totalsLookup = new TotalsLookup(
-			$this->categoryManager,
-			$this->cache,
-			$this->databaseFactory->newDatabase( 0 )
-		);
-		$totals = $totalsLookup->getTotals();
+		$totals = $this->totalsLookup->getTotals( $this->databaseFactory->newDatabase( 0 ) );
 		ApiResult::setArrayType( $totals, 'assoc' );
 		$this->getResult()->addValue( [ 'query', 'linterstats' ], 'totals', $totals );
 	}

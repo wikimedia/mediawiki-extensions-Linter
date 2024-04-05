@@ -47,8 +47,7 @@ class SpecialLintErrorsTest extends SpecialPageTestBase {
 		return new RecordLintJob(
 			$page,
 			$params,
-			$services->getMainWANObjectCache(),
-			$services->get( 'Linter.CategoryManager' ),
+			$services->get( 'Linter.TotalsLookup' ),
 			$services->get( 'Linter.DatabaseFactory' )
 		);
 	}
@@ -56,10 +55,10 @@ class SpecialLintErrorsTest extends SpecialPageTestBase {
 	protected function newSpecialPage() {
 		$services = $this->getServiceContainer();
 		return new SpecialLintErrors(
-			$services->getMainWANObjectCache(),
 			$services->getNamespaceInfo(),
 			$services->getTitleParser(),
 			$services->get( 'Linter.CategoryManager' ),
+			$services->get( 'Linter.TotalsLookup' ),
 			$services->get( 'Linter.DatabaseFactory' )
 		);
 	}

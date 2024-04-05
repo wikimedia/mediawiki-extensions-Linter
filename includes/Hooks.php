@@ -39,7 +39,6 @@ use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Title\Title;
 use MediaWiki\User\UserIdentity;
 use Skin;
-use WANObjectCache;
 use WikiPage;
 
 class Hooks implements
@@ -51,29 +50,29 @@ class Hooks implements
 	WikiPageDeletionUpdatesHook
 {
 	private LinkRenderer $linkRenderer;
-	private WANObjectCache $cache;
 	private JobQueueGroup $jobQueueGroup;
 	private CategoryManager $categoryManager;
+	private TotalsLookup $totalsLookup;
 	private DatabaseFactory $databaseFactory;
 
 	/**
 	 * @param LinkRenderer $linkRenderer
-	 * @param WANObjectCache $cache
 	 * @param JobQueueGroup $jobQueueGroup
 	 * @param CategoryManager $categoryManager
+	 * @param TotalsLookup $totalsLookup
 	 * @param DatabaseFactory $databaseFactory
 	 */
 	public function __construct(
 		LinkRenderer $linkRenderer,
-		WANObjectCache $cache,
 		JobQueueGroup $jobQueueGroup,
 		CategoryManager $categoryManager,
+		TotalsLookup $totalsLookup,
 		DatabaseFactory $databaseFactory
 	) {
 		$this->linkRenderer = $linkRenderer;
-		$this->cache = $cache;
 		$this->jobQueueGroup = $jobQueueGroup;
 		$this->categoryManager = $categoryManager;
+		$this->totalsLookup = $totalsLookup;
 		$this->databaseFactory = $databaseFactory;
 	}
 
@@ -124,12 +123,7 @@ class Hooks implements
 		$id = $wikiPage->getId();
 		$updates[] = new MWCallableUpdate( function () use ( $id ) {
 			$database = $this->databaseFactory->newDatabase( $id );
-			$totalsLookup = new TotalsLookup(
-				$this->categoryManager,
-				$this->cache,
-				$database
-			);
-			$totalsLookup->updateStats( $database->setForPage( [] ) );
+			$this->totalsLookup->updateStats( $database, $database->setForPage( [] ) );
 		}, __METHOD__ );
 	}
 
@@ -164,12 +158,7 @@ class Hooks implements
 			!in_array( $wikiPage->getContentModel(), self::LINTABLE_CONTENT_MODELS ) )
 		) {
 			$database = $this->databaseFactory->newDatabase( $wikiPage->getId() );
-			$totalsLookup = new TotalsLookup(
-				$this->categoryManager,
-				$this->cache,
-				$database
-			);
-			$totalsLookup->updateStats( $database->setForPage( [] ) );
+			$this->totalsLookup->updateStats( $database, $database->setForPage( [] ) );
 		}
 	}
 
@@ -286,7 +275,7 @@ class Hooks implements
 		$job = new RecordLintJob( $title, [
 			'errors' => $errors,
 			'revision' => $revision,
-		], $this->cache, $this->categoryManager, $this->databaseFactory );
+		], $this->totalsLookup, $this->databaseFactory );
 		$this->jobQueueGroup->push( $job );
 		return true;
 	}
