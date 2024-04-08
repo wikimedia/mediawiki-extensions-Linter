@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Athena in Wonderland",
+			"B3rnas",
 			"Hamilton Abreu",
 			"He7d3r",
 			"Vitorvicentevalente"
@@ -75,7 +76,7 @@
 	"linter-pager-deletable-table-tag-details": "Elemento \"table\" que deve ser eliminado",
 	"linter-pager-details-header": "Informação adicional",
 	"linter-pager-html5-misnesting-details": "Má intercalação de elementos (agora incorreta)",
-	"linter-pager-inline-media-caption-details": "Multimédia incluído com legendas",
+	"linter-pager-inline-media-caption-details": "Legenda invisível",
 	"linter-pager-large-tables-details": "Tabela grande para visualização móvel",
 	"linter-pager-misc-tidy-replacement-issues-details": "Diversos erros de notação",
 	"linter-pager-misnested-tag-details": "Elemento mal intercalado que devia ser devidamente intercalado",
@@ -93,7 +94,7 @@
 	"linter-pager-tidy-whitespace-bug-details": "Defeito na análise sintática do espaço em branco",
 	"linter-pager-title-header": "Título da página",
 	"linter-pager-unclosed-quotes-in-heading-details": "Aspas não fechadas que se propagam para fora do índice",
-	"linter-pager-wikilink-in-extlink-details": "Hiperligações da wiki contidas em hiperligações externas que precisam de ser corrigidas",
+	"linter-pager-wikilink-in-extlink-details": "Hiperligações em hiperligações",
 	"linter-prefix-search-subpage": "Páginas com erros de lint que correspondem ao prefixo de título ou título completo: $1",
 	"linterrors-subpage": "Erros de lint: $1",
 	"linterrors-summary": "<strong>Nota:</strong> As contagens para as categorias não são precisas, mas sim baseadas em estimativas.",
