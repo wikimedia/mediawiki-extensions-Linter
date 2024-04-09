@@ -9,12 +9,12 @@
 			"Toliño"
 		]
 	},
-	"linterrors": "Erros de lint",
+	"linterrors": "Erros detectados por Lint",
 	"linter-category-bogus-image-options": "Opcións de ficheiro incorrectas",
 	"linter-category-bogus-image-options-desc": "Estas páxinas teñen ficheiros con opcións inútiles.",
 	"linter-category-deletable-table-tag": "Etiqueta de táboa que debería eliminarse",
 	"linter-category-deletable-table-tag-desc": "Estas páxinas teñen etiquetas de táboa que deberían eliminarse.",
-	"linter-category-fostered": "Contido incorrecto dentro de táboa",
+	"linter-category-fostered": "Contido fóra de lugar",
 	"linter-category-fostered-desc": "Estas páxinas inclúen contido fóra de lugar.",
 	"linter-category-html5-misnesting": "Etiqueta mal aniñada con representación distinta en HTML5 e HTML4",
 	"linter-category-html5-misnesting-desc": "Estas etiquetas mal aniñadas terán un comportamento distinto en HTML5 en comparación con HTML4.",
