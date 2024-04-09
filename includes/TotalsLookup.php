@@ -21,6 +21,7 @@
 namespace MediaWiki\Linter;
 
 use IBufferingStatsdDataFactory;
+use MediaWiki\Config\ServiceOptions;
 use MediaWiki\WikiMap\WikiMap;
 use WANObjectCache;
 use Wikimedia\Rdbms\Database as MWDatabase;
@@ -30,24 +31,28 @@ use Wikimedia\Rdbms\Database as MWDatabase;
  * lint errors in each category
  */
 class TotalsLookup {
+	public const CONSTRUCTOR_OPTIONS = [
+		'LinterStatsdSampleFactor',
+	];
 
-	private array $options;
+	private ServiceOptions $options;
 	private WANObjectCache $cache;
 	private IBufferingStatsdDataFactory $statsdDataFactory;
 	private CategoryManager $categoryManager;
 
 	/**
-	 * @param array $options
+	 * @param ServiceOptions $options
 	 * @param WANObjectCache $cache
 	 * @param IBufferingStatsdDataFactory $statsdDataFactory
 	 * @param CategoryManager $categoryManager
 	 */
 	public function __construct(
-		array $options,
+		ServiceOptions $options,
 		WANObjectCache $cache,
 		IBufferingStatsdDataFactory $statsdDataFactory,
 		CategoryManager $categoryManager
 	) {
+		$options->assertRequiredOptions( self::CONSTRUCTOR_OPTIONS );
 		$this->options = $options;
 		$this->cache = $cache;
 		$this->statsdDataFactory = $statsdDataFactory;
@@ -105,7 +110,7 @@ class TotalsLookup {
 	 * @param array $changes
 	 */
 	public function updateStats( Database $db, array $changes ) {
-		$linterStatsdSampleFactor = $this->options['sampleFactor'] ?? false;
+		$linterStatsdSampleFactor = $this->options->get( 'LinterStatsdSampleFactor' );
 
 		if ( $linterStatsdSampleFactor === false ) {
 			// Don't send to statsd, but update cache with $changes

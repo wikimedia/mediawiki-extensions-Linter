@@ -19,11 +19,12 @@
  */
 namespace MediaWiki\Linter;
 
+use MediaWiki\Config\ServiceOptions;
 use MediaWiki\MediaWikiServices;
 
 // PHP unit does not understand code coverage for this file
 // as the @covers annotation cannot cover a specific file
-// This is fully tested in CategoryManagerServiceWiringTest.php
+// This is fully tested in ServiceWiringTest.php
 // @codeCoverageIgnoreStart
 /**
  * Linter wiring for MediaWiki services.
@@ -35,22 +36,21 @@ return [
 		);
 	},
 	'Linter.DatabaseFactory' => static function ( MediaWikiServices $services ): DatabaseFactory {
-		$config = $services->getMainConfig();
 		return new DatabaseFactory(
-			[
-				'writeNamespaceColumn' => $config->get( 'LinterWriteNamespaceColumnStage' ),
-				'writeTagAndTemplateColumns' => $config->get( 'LinterWriteTagAndTemplateColumnsStage' ),
-			],
+			new ServiceOptions(
+				Database::CONSTRUCTOR_OPTIONS,
+				$services->getMainConfig()
+			),
 			$services->get( 'Linter.CategoryManager' ),
 			$services->getDBLoadBalancerFactory()
 		);
 	},
 	'Linter.TotalsLookup' => static function ( MediaWikiServices $services ): TotalsLookup {
-		$config = $services->getMainConfig();
 		return new TotalsLookup(
-			[
-				'sampleFactor' => $config->get( 'LinterStatsdSampleFactor' ),
-			],
+			new ServiceOptions(
+				TotalsLookup::CONSTRUCTOR_OPTIONS,
+				$services->getMainConfig()
+			),
 			$services->getMainWANObjectCache(),
 			$services->getStatsdDataFactory(),
 			$services->get( 'Linter.CategoryManager' )
