@@ -21,6 +21,7 @@
 namespace MediaWiki\Linter;
 
 use FormatJson;
+use MediaWiki\Config\ServiceOptions;
 use MediaWiki\Logger\LoggerFactory;
 use stdClass;
 use Wikimedia\Rdbms\IDatabase;
@@ -32,6 +33,10 @@ use Wikimedia\Rdbms\SelectQueryBuilder;
  * Database logic
  */
 class Database {
+	public const CONSTRUCTOR_OPTIONS = [
+		'LinterWriteNamespaceColumnStage',
+		'LinterWriteTagAndTemplateColumnsStage',
+	];
 
 	/**
 	 * Maximum number of errors to save per category,
@@ -59,30 +64,27 @@ class Database {
 	 */
 	private ?int $namespaceID;
 
-	/**
-	 * Configuration options.
-	 */
-	private array $options = [];
-
+	private ServiceOptions $options;
 	private CategoryManager $categoryManager;
 	private LBFactory $dbLoadBalancerFactory;
 
 	/**
 	 * @param int $pageId
 	 * @param int|null $namespaceID
-	 * @param array $options
+	 * @param ServiceOptions $options
 	 * @param CategoryManager $categoryManager
 	 * @param LBFactory $dbLoadBalancerFactory
 	 */
 	public function __construct(
 		int $pageId,
 		?int $namespaceID,
-		array $options,
+		ServiceOptions $options,
 		CategoryManager $categoryManager,
 		LBFactory $dbLoadBalancerFactory
 	) {
 		$this->pageId = $pageId;
 		$this->namespaceID = $namespaceID;
+		$options->assertRequiredOptions( self::CONSTRUCTOR_OPTIONS );
 		$this->options = $options;
 		$this->categoryManager = $categoryManager;
 		$this->dbLoadBalancerFactory = $dbLoadBalancerFactory;
@@ -193,16 +195,15 @@ class Database {
 		];
 
 		// To enable 756101
-		$enableWriteNamespaceColumn =
-			$this->options['writeNamespaceColumn'] ?? false;
-		if ( $enableWriteNamespaceColumn && $this->namespaceID !== null ) {
+		if (
+			$this->options->get( 'LinterWriteNamespaceColumnStage' ) &&
+			$this->namespaceID !== null
+		) {
 			$result[ 'linter_namespace' ] = $this->namespaceID;
 		}
 
 		// To enable 720130
-		$enableWriteTagAndTemplateColumns =
-			$this->options['writeTagAndTemplateColumns'] ?? false;
-		if ( $enableWriteTagAndTemplateColumns ) {
+		if ( $this->options->get( 'LinterWriteTagAndTemplateColumnsStage' ) ) {
 			$templateInfo = $error->templateInfo ?? '';
 			if ( is_array( $templateInfo ) ) {
 				if ( isset( $templateInfo[ 'multiPartTemplateBlock' ] ) ) {
@@ -411,9 +412,7 @@ class Database {
 		 bool $bypassConfig = false ): int {
 		// code used by phpunit test, bypassed when run as a maintenance script
 		if ( !$bypassConfig ) {
-			$enableMigrateNamespaceStage =
-				$this->options['writeNamespaceColumn'] ?? false;
-			if ( !$enableMigrateNamespaceStage ) {
+			if ( !$this->options->get( 'LinterWriteNamespaceColumnStage' ) ) {
 				return 0;
 			}
 		}
@@ -519,9 +518,7 @@ class Database {
 	): int {
 		// code used by phpunit test, bypassed when run as a maintenance script
 		if ( !$bypassConfig ) {
-			$enableMigrateTagAndTemplateColumnsStage =
-				$this->options['writeTagAndTemplateColumns'] ?? false;
-			if ( !$enableMigrateTagAndTemplateColumnsStage ) {
+			if ( !$this->options->get( 'LinterWriteTagAndTemplateColumnsStage' ) ) {
 				return 0;
 			}
 		}

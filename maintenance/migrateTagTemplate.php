@@ -6,8 +6,6 @@
  *   recordLintJob has been enabled by setting LinterWriteTagAndTemplateColumnsStage true.
  */
 
-use MediaWiki\MediaWikiServices;
-
 $IP = getenv( 'MW_INSTALL_PATH' );
 if ( $IP === false ) {
 	$IP = __DIR__ . '/../../..';
@@ -59,7 +57,7 @@ class MigrateTagTemplate extends LoggedUpdateMaintenance {
 
 		$this->output( "Migrating the linter_params field to the linter_tag and linter_template fields...\n" );
 
-		$database = MediaWikiServices::getInstance()->get( 'Linter.DatabaseFactory' )->getDatabase( 0 );
+		$database = $this->getServiceContainer()->get( 'Linter.DatabaseFactory' )->getDatabase( 0 );
 		$updated = $database->migrateTemplateAndTagInfo( $batchSize, $sleep, false );
 
 		$this->output(

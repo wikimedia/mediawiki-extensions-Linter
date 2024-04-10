@@ -20,23 +20,24 @@
 
 namespace MediaWiki\Linter;
 
+use MediaWiki\Config\ServiceOptions;
 use Wikimedia\Rdbms\LBFactory;
 
 /**
  * Create a Database helper specialized to a particular page id and namespace.
  */
 class DatabaseFactory {
-	private array $options;
+	private ServiceOptions $options;
 	private CategoryManager $categoryManager;
 	private LBFactory $dbLoadBalancerFactory;
 
 	/**
-	 * @param array $options
+	 * @param ServiceOptions $options
 	 * @param CategoryManager $categoryManager
 	 * @param LBFactory $dbLoadBalancerFactory
 	 */
 	public function __construct(
-		array $options,
+		ServiceOptions $options,
 		CategoryManager $categoryManager,
 		LBFactory $dbLoadBalancerFactory
 	) {

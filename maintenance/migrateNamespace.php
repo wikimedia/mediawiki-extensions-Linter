@@ -8,8 +8,6 @@
  * note: This code is based on migrateRevisionActorTemp.php and migrateLinksTable.php
  */
 
-use MediaWiki\MediaWikiServices;
-
 $IP = getenv( 'MW_INSTALL_PATH' );
 if ( $IP === false ) {
 	$IP = __DIR__ . '/../../..';
@@ -61,7 +59,7 @@ class MigrateNamespace extends LoggedUpdateMaintenance {
 
 		$this->output( "Migrating the page table page_namespace field to the linter table...\n" );
 
-		$database = MediaWikiServices::getInstance()->get( 'Linter.DatabaseFactory' )->getDatabase( 0 );
+		$database = $this->getServiceContainer()->get( 'Linter.DatabaseFactory' )->getDatabase( 0 );
 		$updated = $database->migrateNamespace( $batchSize, $batchSize, $sleep, false );
 
 		$this->output( "Completed migration of page_namespace data to the linter table, $updated rows updated.\n" );
