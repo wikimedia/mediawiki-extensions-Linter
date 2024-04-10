@@ -57,7 +57,7 @@ class MigrateTagTemplate extends LoggedUpdateMaintenance {
 
 		$this->output( "Migrating the linter_params field to the linter_tag and linter_template fields...\n" );
 
-		$database = $this->getServiceContainer()->get( 'Linter.DatabaseFactory' )->getDatabase( 0 );
+		$database = $this->getServiceContainer()->get( 'Linter.DatabaseFactory' )->newDatabase();
 		$updated = $database->migrateTemplateAndTagInfo( $batchSize, $sleep, false );
 
 		$this->output(

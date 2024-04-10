@@ -345,7 +345,7 @@ class SpecialLintErrors extends SpecialPage {
 	}
 
 	private function showCategoryListings() {
-		$totals = $this->totalsLookup->getTotals( $this->databaseFactory->newDatabase( 0 ) );
+		$totals = $this->totalsLookup->getTotals( $this->databaseFactory->newDatabase() );
 
 		// Display lint issues by priority
 		$this->displayList( 'high', $totals, $this->categoryManager->getHighPriority() );

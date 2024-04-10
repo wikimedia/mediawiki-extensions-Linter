@@ -52,38 +52,20 @@ class Database {
 	public const MAX_TAG_LENGTH = 30;
 	public const MAX_TEMPLATE_LENGTH = 250;
 
-	private int $pageId;
-
-	/**
-	 * During the addition of this column to the table, the initial value of null allows the migrate stage code to
-	 * determine the needs to fill in the field for that record, as the record was created prior to
-	 * the write stage code being active and filling it in during record creation. Once the migrate code runs once
-	 * no nulls should exist in this field for any record, and if the migrate code times out during execution,
-	 * can be restarted and continue without duplicating work. The final code that enables the use of this field
-	 * during records search will depend on this fields index being valid for all records.
-	 */
-	private ?int $namespaceID;
-
 	private ServiceOptions $options;
 	private CategoryManager $categoryManager;
 	private LBFactory $dbLoadBalancerFactory;
 
 	/**
-	 * @param int $pageId
-	 * @param int|null $namespaceID
 	 * @param ServiceOptions $options
 	 * @param CategoryManager $categoryManager
 	 * @param LBFactory $dbLoadBalancerFactory
 	 */
 	public function __construct(
-		int $pageId,
-		?int $namespaceID,
 		ServiceOptions $options,
 		CategoryManager $categoryManager,
 		LBFactory $dbLoadBalancerFactory
 	) {
-		$this->pageId = $pageId;
-		$this->namespaceID = $namespaceID;
 		$options->assertRequiredOptions( self::CONSTRUCTOR_OPTIONS );
 		$this->options = $options;
 		$this->categoryManager = $categoryManager;
@@ -111,11 +93,11 @@ class Database {
 	 * @param int $id linter_id
 	 * @return bool|LintError
 	 */
-	public function getFromId( $id ) {
+	public function getFromId( int $id ) {
 		$row = $this->getReplicaDBConnection()->newSelectQueryBuilder()
 			->select( [ 'linter_cat', 'linter_params', 'linter_start', 'linter_end' ] )
 			->from( 'linter' )
-			->where( [ 'linter_id' => $id, 'linter_page' => $this->pageId ] )
+			->where( [ 'linter_id' => $id ] )
 			->caller( __METHOD__ )
 			->fetchRow();
 
@@ -156,13 +138,14 @@ class Database {
 	/**
 	 * Get all the lint errors for a page
 	 *
+	 * @param int $pageId
 	 * @return LintError[]
 	 */
-	public function getForPage() {
+	public function getForPage( int $pageId ) {
 		$rows = $this->getReplicaDBConnection()->newSelectQueryBuilder()
 			->select( [ 'linter_id', 'linter_cat', 'linter_start', 'linter_end', 'linter_params' ] )
 			->from( 'linter' )
-			->where( [ 'linter_page' => $this->pageId ] )
+			->where( [ 'linter_page' => $pageId ] )
 			->caller( __METHOD__ )
 			->fetchResultSet();
 
@@ -182,12 +165,14 @@ class Database {
 	 * Convert a LintError object into an array for
 	 * inserting/querying in the database
 	 *
+	 * @param int $pageId
+	 * @param int $namespaceId
 	 * @param LintError $error
 	 * @return array
 	 */
-	private function buildErrorRow( LintError $error ) {
+	private function buildErrorRow( int $pageId, int $namespaceId, LintError $error ) {
 		$result = [
-			'linter_page' => $this->pageId,
+			'linter_page' => $pageId,
 			'linter_cat' => $this->categoryManager->getCategoryId( $error->category, $error->catId ),
 			'linter_params' => FormatJson::encode( $error->params, false, FormatJson::ALL_OK ),
 			'linter_start' => $error->location[ 0 ],
@@ -195,11 +180,18 @@ class Database {
 		];
 
 		// To enable 756101
-		if (
-			$this->options->get( 'LinterWriteNamespaceColumnStage' ) &&
-			$this->namespaceID !== null
-		) {
-			$result[ 'linter_namespace' ] = $this->namespaceID;
+		//
+		// During the addition of this column to the table, the initial value
+		// of null allows the migrate stage code to determine the needs to fill
+		// in the field for that record, as the record was created prior to the
+		// write stage code being active and filling it in during record
+		// creation. Once the migrate code runs once no nulls should exist in
+		// this field for any record, and if the migrate code times out during
+		// execution, can be restarted and continue without duplicating work.
+		// The final code that enables the use of this field during records
+		// search will depend on this fields index being valid for all records.
+		if ( $this->options->get( 'LinterWriteNamespaceColumnStage' ) ) {
+			$result[ 'linter_namespace' ] = $namespaceId;
 		}
 
 		// To enable 720130
@@ -244,11 +236,13 @@ class Database {
 	 * Save the specified lint errors in the
 	 * database
 	 *
+	 * @param int $pageId
+	 * @param int $namespaceId
 	 * @param LintError[] $errors
 	 * @return array [ 'deleted' => [ cat => count ], 'added' => [ cat => count ] ]
 	 */
-	public function setForPage( $errors ) {
-		$previous = $this->getForPage();
+	public function setForPage( int $pageId, int $namespaceId, $errors ) {
+		$previous = $this->getForPage( $pageId );
 		$dbw = $this->getDBConnectionRef( DB_PRIMARY );
 		if ( !$previous && !$errors ) {
 			return [ 'deleted' => [], 'added' => [] ];
@@ -258,7 +252,7 @@ class Database {
 		} elseif ( $previous && !$errors ) {
 			$dbw->newDeleteQueryBuilder()
 				->deleteFrom( 'linter' )
-				->where( [ 'linter_page' => $this->pageId ] )
+				->where( [ 'linter_page' => $pageId ] )
 				->caller( __METHOD__ )
 				->execute();
 			return [ 'deleted' => $this->countByCat( $previous ), 'added' => [] ];
@@ -296,7 +290,11 @@ class Database {
 			$dbw->newInsertQueryBuilder()
 				->insertInto( 'linter' )
 				->ignore()
-				->rows( array_map( [ $this, 'buildErrorRow' ], $toInsert ) )
+				->rows(
+					array_map( function ( LintError $error ) use ( $pageId, $namespaceId ) {
+						return $this->buildErrorRow( $pageId, $namespaceId, $error );
+					}, $toInsert )
+				)
 				->caller( __METHOD__ )
 				->execute();
 		}
@@ -314,7 +312,6 @@ class Database {
 	 * be returned.
 	 *
 	 * @param int $catId
-	 *
 	 * @return int
 	 */
 	private function getTotalsEstimate( $catId ) {
@@ -348,16 +345,17 @@ class Database {
 	}
 
 	/**
-	 *
 	 * This uses COUNT(*), which is accurate, but can be significantly
 	 * slower depending upon how many rows are in the database.
+	 *
+	 * @param int $pageId
 	 * @return int[]
 	 */
-	public function getTotalsForPage(): array {
+	public function getTotalsForPage( int $pageId ): array {
 		$rows = $this->getReplicaDBConnection()->newSelectQueryBuilder()
 			->select( [ 'linter_cat', 'COUNT(*) AS count' ] )
 			->from( 'linter' )
-			->where( [ 'linter_page' => $this->pageId ] )
+			->where( [ 'linter_page' => $pageId ] )
 			->caller( __METHOD__ )
 			->groupBy( 'linter_cat' )
 			->fetchResultSet();
@@ -400,16 +398,17 @@ class Database {
 	 * This code is intended to be run once though it could be run multiple times
 	 * using `--force` if needed via the maintenance script.
 	 * It is safe to run more than once, and will quickly exit if no records need updating.
+	 *
 	 * @param int $pageBatchSize
 	 * @param int $linterBatchSize
 	 * @param int $sleep
 	 * @param bool $bypassConfig
 	 * @return int number of pages updated, each with one or more linter records
 	 */
-	public function migrateNamespace( int $pageBatchSize,
-		 int $linterBatchSize,
-		 int $sleep,
-		 bool $bypassConfig = false ): int {
+	public function migrateNamespace(
+		int $pageBatchSize, int $linterBatchSize, int $sleep,
+		bool $bypassConfig = false
+	): int {
 		// code used by phpunit test, bypassed when run as a maintenance script
 		if ( !$bypassConfig ) {
 			if ( !$this->options->get( 'LinterWriteNamespaceColumnStage' ) ) {
@@ -466,13 +465,13 @@ class Database {
 
 					foreach ( $pageResults as $pageRow ) {
 						$pageId = intval( $pageRow->page_id );
-						$namespaceID = intval( $pageRow->page_namespace );
+						$namespaceId = intval( $pageRow->page_namespace );
 
 						// If a record about to be updated has been removed by another process,
 						// the update will not error, and continue updating the existing records.
 						$dbw->newUpdateQueryBuilder()
 							->update( 'linter' )
-							->set( [ 'linter_namespace' => $namespaceID ] )
+							->set( [ 'linter_namespace' => $namespaceId ] )
 							->where( [
 								'linter_namespace' => null,
 								'linter_page' => $pageId
@@ -507,14 +506,14 @@ class Database {
 	 * Note: When linter_params are not set, the content is set to '[]' indicating no content
 	 * and the code also handles a null linter_params field if found.
 	 * This code is only run once by maintenance script migrateTagTemplate.php
+	 *
 	 * @param int $batchSize
 	 * @param int $sleep
 	 * @param bool $bypassConfig
 	 * @return int
 	 */
-	public function migrateTemplateAndTagInfo( int $batchSize,
-		int $sleep,
-		bool $bypassConfig = false
+	public function migrateTemplateAndTagInfo(
+		int $batchSize, int $sleep, bool $bypassConfig = false
 	): int {
 		// code used by phpunit test, bypassed when run as a maintenance script
 		if ( !$bypassConfig ) {

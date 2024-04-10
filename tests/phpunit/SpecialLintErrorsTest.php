@@ -36,10 +36,10 @@ use SpecialPageTestBase;
  */
 class SpecialLintErrorsTest extends SpecialPageTestBase {
 
-	private function newDatabase( int $pageId, ?int $namespaceId = null ) {
+	private function newDatabase() {
 		$services = $this->getServiceContainer();
 		$databaseFactory = $services->get( 'Linter.DatabaseFactory' );
-		return $databaseFactory->newDatabase( $pageId, $namespaceId );
+		return $databaseFactory->newDatabase();
 	}
 
 	private function newRecordLintJob( PageReference $page, array $params ) {
@@ -122,9 +122,10 @@ class SpecialLintErrorsTest extends SpecialPageTestBase {
 		] );
 		$this->assertTrue( $job->run() );
 
-		$db = $this->newDatabase( $titleAndPage['pageID'] );
+		$pageId = $titleAndPage['pageID'];
+		$db = $this->newDatabase();
 
-		$errorsFromDb = array_values( $db->getForPage() );
+		$errorsFromDb = array_values( $db->getForPage( $pageId ) );
 		$this->assertCount( 1, $errorsFromDb );
 
 		$cssText = 'css content model change test page content';
@@ -140,7 +141,7 @@ class SpecialLintErrorsTest extends SpecialPageTestBase {
 			"update with css content model to trigger onRevisionFromEditComplete hook"
 		);
 
-		$errorsFromDb = array_values( $db->getForPage() );
+		$errorsFromDb = array_values( $db->getForPage( $pageId ) );
 		$this->assertCount( 0, $errorsFromDb );
 	}
 
@@ -158,9 +159,10 @@ class SpecialLintErrorsTest extends SpecialPageTestBase {
 		] );
 		$this->assertTrue( $job->run() );
 
-		$db = $this->newDatabase( $titleAndPage['pageID'] );
+		$pageId = $titleAndPage['pageID'];
+		$db = $this->newDatabase();
 
-		$errorsFromDb = array_values( $db->getForPage() );
+		$errorsFromDb = array_values( $db->getForPage( $pageId ) );
 		$this->assertCount( 1, $errorsFromDb );
 
 		// This test recreates the bug mentioned in T280193 of not
@@ -179,7 +181,7 @@ class SpecialLintErrorsTest extends SpecialPageTestBase {
 			"update with blank text content model to trigger onRevisionFromEditComplete hook"
 		);
 
-		$errorsFromDb = array_values( $db->getForPage() );
+		$errorsFromDb = array_values( $db->getForPage( $pageId ) );
 		$this->assertCount( 0, $errorsFromDb );
 	}
 

@@ -96,7 +96,7 @@ class Hooks implements
 			return;
 		}
 
-		$database = $this->databaseFactory->newDatabase( $title->getArticleID() );
+		$database = $this->databaseFactory->newDatabase();
 		$lintError = $database->getFromId( $lintId );
 		if ( !$lintError ) {
 			// Already fixed or bogus URL parameter?
@@ -120,10 +120,13 @@ class Hooks implements
 	 * @param array &$updates
 	 */
 	public function onWikiPageDeletionUpdates( $wikiPage, $content, &$updates ) {
-		$id = $wikiPage->getId();
-		$updates[] = new MWCallableUpdate( function () use ( $id ) {
-			$database = $this->databaseFactory->newDatabase( $id );
-			$this->totalsLookup->updateStats( $database, $database->setForPage( [] ) );
+		$updates[] = new MWCallableUpdate( function () use ( $wikiPage ) {
+			$database = $this->databaseFactory->newDatabase();
+			$this->totalsLookup->updateStats(
+				$database, $database->setForPage(
+					$wikiPage->getId(), $wikiPage->getNamespace(), []
+				)
+			);
 		}, __METHOD__ );
 	}
 
@@ -157,8 +160,12 @@ class Hooks implements
 			( in_array( "mw-contentmodelchange", $tags ) &&
 			!in_array( $wikiPage->getContentModel(), self::LINTABLE_CONTENT_MODELS ) )
 		) {
-			$database = $this->databaseFactory->newDatabase( $wikiPage->getId() );
-			$this->totalsLookup->updateStats( $database, $database->setForPage( [] ) );
+			$database = $this->databaseFactory->newDatabase();
+			$this->totalsLookup->updateStats(
+				$database, $database->setForPage(
+					$wikiPage->getId(), $wikiPage->getNamespace(), []
+				)
+			);
 		}
 	}
 
@@ -192,8 +199,8 @@ class Hooks implements
 		if ( !$pageId ) {
 			return;
 		}
-		$database = $this->databaseFactory->newDatabase( $pageId );
-		$totals = array_filter( $database->getTotalsForPage() );
+		$database = $this->databaseFactory->newDatabase();
+		$totals = array_filter( $database->getTotalsForPage( $pageId ) );
 		if ( !$totals ) {
 			// No errors, yay!
 			return;

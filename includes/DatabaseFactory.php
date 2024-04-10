@@ -24,7 +24,7 @@ use MediaWiki\Config\ServiceOptions;
 use Wikimedia\Rdbms\LBFactory;
 
 /**
- * Create a Database helper specialized to a particular page id and namespace.
+ * Create a Database helper.
  */
 class DatabaseFactory {
 	private ServiceOptions $options;
@@ -48,14 +48,11 @@ class DatabaseFactory {
 
 	/**
 	 * Create a new Database helper.
-	 * @param int $pageId
-	 * @param ?int $namespaceId
+	 *
 	 * @return Database
 	 */
-	public function newDatabase( int $pageId, ?int $namespaceId = null ): Database {
+	public function newDatabase(): Database {
 		return new Database(
-			$pageId,
-			$namespaceId,
 			$this->options,
 			$this->categoryManager,
 			$this->dbLoadBalancerFactory

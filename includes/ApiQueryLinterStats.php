@@ -49,7 +49,7 @@ class ApiQueryLinterStats extends ApiQueryBase {
 	 * Add totals to output
 	 */
 	public function execute() {
-		$totals = $this->totalsLookup->getTotals( $this->databaseFactory->newDatabase( 0 ) );
+		$totals = $this->totalsLookup->getTotals( $this->databaseFactory->newDatabase() );
 		ApiResult::setArrayType( $totals, 'assoc' );
 		$this->getResult()->addValue( [ 'query', 'linterstats' ], 'totals', $totals );
 	}

@@ -69,10 +69,15 @@ class RecordLintJob extends Job {
 			$errors[$error->id()] = $error;
 		}
 
-		$lintDb = $this->databaseFactory->newDatabase(
-			$this->title->getArticleID(), $this->title->getNamespace()
+		$lintDb = $this->databaseFactory->newDatabase();
+		$this->totalsLookup->updateStats(
+			$lintDb,
+			$lintDb->setForPage(
+				$this->title->getArticleID(),
+				$this->title->getNamespace(),
+				$errors
+			)
 		);
-		$this->totalsLookup->updateStats( $lintDb, $lintDb->setForPage( $errors ) );
 
 		return true;
 	}
