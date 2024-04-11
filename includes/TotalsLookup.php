@@ -39,24 +39,28 @@ class TotalsLookup {
 	private WANObjectCache $cache;
 	private IBufferingStatsdDataFactory $statsdDataFactory;
 	private CategoryManager $categoryManager;
+	private Database $database;
 
 	/**
 	 * @param ServiceOptions $options
 	 * @param WANObjectCache $cache
 	 * @param IBufferingStatsdDataFactory $statsdDataFactory
 	 * @param CategoryManager $categoryManager
+	 * @param Database $database
 	 */
 	public function __construct(
 		ServiceOptions $options,
 		WANObjectCache $cache,
 		IBufferingStatsdDataFactory $statsdDataFactory,
-		CategoryManager $categoryManager
+		CategoryManager $categoryManager,
+		Database $database
 	) {
 		$options->assertRequiredOptions( self::CONSTRUCTOR_OPTIONS );
 		$this->options = $options;
 		$this->cache = $cache;
 		$this->statsdDataFactory = $statsdDataFactory;
 		$this->categoryManager = $categoryManager;
+		$this->database = $database;
 	}
 
 	/**
@@ -70,10 +74,9 @@ class TotalsLookup {
 	/**
 	 * Get the totals for every category in the database
 	 *
-	 * @param Database $db
 	 * @return array
 	 */
-	public function getTotals( Database $db ): array {
+	public function getTotals(): array {
 		$cats = $this->categoryManager->getVisibleCategories();
 		$fetchedTotals = false;
 		$totals = [];
@@ -81,12 +84,12 @@ class TotalsLookup {
 			$totals[$cat] = $this->cache->getWithSetCallback(
 				$this->makeKey( $cat ),
 				WANObjectCache::TTL_INDEFINITE,
-				static function ( $oldValue, &$ttl, &$setOpts, $oldAsOf ) use ( $cat, $db, &$fetchedTotals ) {
+				function ( $oldValue, &$ttl, &$setOpts, $oldAsOf ) use ( $cat, &$fetchedTotals ) {
 					$setOpts += MWDatabase::getCacheSetOptions(
-						$db->getDBConnectionRef( DB_REPLICA )
+						$this->database->getDBConnectionRef( DB_REPLICA )
 					);
 					if ( $fetchedTotals === false ) {
-						$fetchedTotals = $db->getTotals();
+						$fetchedTotals = $this->database->getTotals();
 					}
 					return $fetchedTotals[$cat];
 				},
@@ -99,17 +102,15 @@ class TotalsLookup {
 				]
 			);
 		}
-
 		return $totals;
 	}
 
 	/**
 	 * Send stats to statsd and update totals cache
 	 *
-	 * @param Database $db
 	 * @param array $changes
 	 */
-	public function updateStats( Database $db, array $changes ) {
+	public function updateStats( array $changes ) {
 		$linterStatsdSampleFactor = $this->options->get( 'LinterStatsdSampleFactor' );
 
 		if ( $linterStatsdSampleFactor === false ) {
@@ -135,7 +136,7 @@ class TotalsLookup {
 			return;
 		}
 
-		$totals = $db->getTotals();
+		$totals = $this->database->getTotals();
 		$wiki = WikiMap::getCurrentWikiId();
 		$stats = $this->statsdDataFactory;
 		foreach ( $totals as $name => $count ) {

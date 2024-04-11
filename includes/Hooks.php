@@ -121,7 +121,7 @@ class Hooks implements
 	public function onWikiPageDeletionUpdates( $wikiPage, $content, &$updates ) {
 		$updates[] = new MWCallableUpdate( function () use ( $wikiPage ) {
 			$this->totalsLookup->updateStats(
-				$this->database, $this->database->setForPage(
+				$this->database->setForPage(
 					$wikiPage->getId(), $wikiPage->getNamespace(), []
 				)
 			);
@@ -159,7 +159,7 @@ class Hooks implements
 			!in_array( $wikiPage->getContentModel(), self::LINTABLE_CONTENT_MODELS ) )
 		) {
 			$this->totalsLookup->updateStats(
-				$this->database, $this->database->setForPage(
+				$this->database->setForPage(
 					$wikiPage->getId(), $wikiPage->getNamespace(), []
 				)
 			);

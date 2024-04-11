@@ -70,7 +70,6 @@ class RecordLintJob extends Job {
 		}
 
 		$this->totalsLookup->updateStats(
-			$this->database,
 			$this->database->setForPage(
 				$this->title->getArticleID(),
 				$this->title->getNamespace(),

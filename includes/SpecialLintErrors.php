@@ -39,7 +39,6 @@ class SpecialLintErrors extends SpecialPage {
 	private PermissionManager $permissionManager;
 	private CategoryManager $categoryManager;
 	private TotalsLookup $totalsLookup;
-	private Database $database;
 
 	/**
 	 * @var string|null
@@ -53,7 +52,6 @@ class SpecialLintErrors extends SpecialPage {
 	 * @param PermissionManager $permissionManager
 	 * @param CategoryManager $categoryManager
 	 * @param TotalsLookup $totalsLookup
-	 * @param Database $database
 	 */
 	public function __construct(
 		NamespaceInfo $namespaceInfo,
@@ -61,8 +59,7 @@ class SpecialLintErrors extends SpecialPage {
 		LinkCache $linkCache,
 		PermissionManager $permissionManager,
 		CategoryManager $categoryManager,
-		TotalsLookup $totalsLookup,
-		Database $database
+		TotalsLookup $totalsLookup
 	) {
 		parent::__construct( 'LintErrors' );
 		$this->namespaceInfo = $namespaceInfo;
@@ -71,7 +68,6 @@ class SpecialLintErrors extends SpecialPage {
 		$this->permissionManager = $permissionManager;
 		$this->categoryManager = $categoryManager;
 		$this->totalsLookup = $totalsLookup;
-		$this->database = $database;
 	}
 
 	/**
@@ -345,7 +341,7 @@ class SpecialLintErrors extends SpecialPage {
 	}
 
 	private function showCategoryListings() {
-		$totals = $this->totalsLookup->getTotals( $this->database );
+		$totals = $this->totalsLookup->getTotals();
 
 		// Display lint issues by priority
 		$this->displayList( 'high', $totals, $this->categoryManager->getHighPriority() );

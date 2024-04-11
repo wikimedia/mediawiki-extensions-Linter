@@ -60,8 +60,7 @@
 		"linterstats": {
 			"class": "MediaWiki\\Linter\\ApiQueryLinterStats",
 			"services": [
-				"Linter.TotalsLookup",
-				"Linter.Database"
+				"Linter.TotalsLookup"
 			]
 		}
 	},
@@ -74,8 +73,7 @@
 				"LinkCache",
 				"PermissionManager",
 				"Linter.CategoryManager",
-				"Linter.TotalsLookup",
-				"Linter.Database"
+				"Linter.TotalsLookup"
 			]
 		}
 	},

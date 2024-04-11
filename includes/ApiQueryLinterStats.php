@@ -26,30 +26,26 @@ use ApiResult;
 class ApiQueryLinterStats extends ApiQueryBase {
 
 	private TotalsLookup $totalsLookup;
-	private Database $database;
 
 	/**
 	 * @param ApiQuery $queryModule
 	 * @param string $moduleName
 	 * @param TotalsLookup $totalsLookup
-	 * @param Database $database
 	 */
 	public function __construct(
 		ApiQuery $queryModule,
 		string $moduleName,
-		TotalsLookup $totalsLookup,
-		Database $database
+		TotalsLookup $totalsLookup
 	) {
 		parent::__construct( $queryModule, $moduleName, 'lntrst' );
 		$this->totalsLookup = $totalsLookup;
-		$this->database = $database;
 	}
 
 	/**
 	 * Add totals to output
 	 */
 	public function execute() {
-		$totals = $this->totalsLookup->getTotals( $this->database );
+		$totals = $this->totalsLookup->getTotals();
 		ApiResult::setArrayType( $totals, 'assoc' );
 		$this->getResult()->addValue( [ 'query', 'linterstats' ], 'totals', $totals );
 	}

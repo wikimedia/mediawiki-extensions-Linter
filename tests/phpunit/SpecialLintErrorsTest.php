@@ -58,8 +58,7 @@ class SpecialLintErrorsTest extends SpecialPageTestBase {
 			$services->getLinkCache(),
 			$services->getPermissionManager(),
 			$services->get( 'Linter.CategoryManager' ),
-			$services->get( 'Linter.TotalsLookup' ),
-			$this->getDatabase()
+			$services->get( 'Linter.TotalsLookup' )
 		);
 	}
 
