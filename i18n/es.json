@@ -12,7 +12,8 @@
 			"Luzcaru",
 			"Macofe",
 			"MarcoAurelio",
-			"No se"
+			"No se",
+			"Eulalio"
 		]
 	},
 	"linterrors": "Errores de sintaxis",
@@ -79,7 +80,9 @@
 	"linter-pager-category-header": "Categoría",
 	"linter-pager-deletable-table-tag-details": "Etiqueta de tabla que se debería borrar",
 	"linter-pager-details-header": "Información adicional",
+	"linter-pager-fostered-details": "Contenido fomentado",
 	"linter-pager-html5-misnesting-details": "Anidación errónea (ahora rota)",
+	"linter-pager-inline-media-caption-details": "Capítulo invisible",
 	"linter-pager-large-tables-details": "Tabla que es grande para la vista móvil",
 	"linter-pager-misc-tidy-replacement-issues-details": "Errores varios de marcado",
 	"linter-pager-misnested-tag-details": "Etiqueta mal anidada que se debería anidar correctamente",
@@ -96,6 +99,7 @@
 	"linter-pager-tidy-whitespace-bug-details": "Defecto de espacio en blanco",
 	"linter-pager-title-header": "Título de la página",
 	"linter-pager-unclosed-quotes-in-heading-details": "Par de comillas sin cerrar que se propaga fuera de la tabla de contenidos",
+	"linter-pager-wikilink-in-extlink-details": "Enlaces en enlaces",
 	"linter-prefix-search-subpage": "Páginas con errores de sintaxis que coinciden con el prefijo del título o el título completo: $1",
 	"linterrors-subpage": "Errores de sintaxis: $1",
 	"linterrors-summary": "<strong>Nota:</strong> los recuentos de los categorías no son precisos, ya que se basan en estimaciones.",
