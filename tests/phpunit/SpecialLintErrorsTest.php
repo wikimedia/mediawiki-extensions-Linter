@@ -36,10 +36,8 @@ use SpecialPageTestBase;
  */
 class SpecialLintErrorsTest extends SpecialPageTestBase {
 
-	private function newDatabase() {
-		$services = $this->getServiceContainer();
-		$databaseFactory = $services->get( 'Linter.DatabaseFactory' );
-		return $databaseFactory->newDatabase();
+	private function getDatabase() {
+		return $this->getServiceContainer()->get( 'Linter.Database' );
 	}
 
 	private function newRecordLintJob( PageReference $page, array $params ) {
@@ -48,7 +46,7 @@ class SpecialLintErrorsTest extends SpecialPageTestBase {
 			$page,
 			$params,
 			$services->get( 'Linter.TotalsLookup' ),
-			$services->get( 'Linter.DatabaseFactory' )
+			$this->getDatabase()
 		);
 	}
 
@@ -61,7 +59,7 @@ class SpecialLintErrorsTest extends SpecialPageTestBase {
 			$services->getPermissionManager(),
 			$services->get( 'Linter.CategoryManager' ),
 			$services->get( 'Linter.TotalsLookup' ),
-			$services->get( 'Linter.DatabaseFactory' )
+			$this->getDatabase()
 		);
 	}
 
@@ -123,7 +121,7 @@ class SpecialLintErrorsTest extends SpecialPageTestBase {
 		$this->assertTrue( $job->run() );
 
 		$pageId = $titleAndPage['pageID'];
-		$db = $this->newDatabase();
+		$db = $this->getDatabase();
 
 		$errorsFromDb = array_values( $db->getForPage( $pageId ) );
 		$this->assertCount( 1, $errorsFromDb );
@@ -160,7 +158,7 @@ class SpecialLintErrorsTest extends SpecialPageTestBase {
 		$this->assertTrue( $job->run() );
 
 		$pageId = $titleAndPage['pageID'];
-		$db = $this->newDatabase();
+		$db = $this->getDatabase();
 
 		$errorsFromDb = array_values( $db->getForPage( $pageId ) );
 		$this->assertCount( 1, $errorsFromDb );

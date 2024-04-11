@@ -53,27 +53,27 @@ class Hooks implements
 	private JobQueueGroup $jobQueueGroup;
 	private CategoryManager $categoryManager;
 	private TotalsLookup $totalsLookup;
-	private DatabaseFactory $databaseFactory;
+	private Database $database;
 
 	/**
 	 * @param LinkRenderer $linkRenderer
 	 * @param JobQueueGroup $jobQueueGroup
 	 * @param CategoryManager $categoryManager
 	 * @param TotalsLookup $totalsLookup
-	 * @param DatabaseFactory $databaseFactory
+	 * @param Database $database
 	 */
 	public function __construct(
 		LinkRenderer $linkRenderer,
 		JobQueueGroup $jobQueueGroup,
 		CategoryManager $categoryManager,
 		TotalsLookup $totalsLookup,
-		DatabaseFactory $databaseFactory
+		Database $database
 	) {
 		$this->linkRenderer = $linkRenderer;
 		$this->jobQueueGroup = $jobQueueGroup;
 		$this->categoryManager = $categoryManager;
 		$this->totalsLookup = $totalsLookup;
-		$this->databaseFactory = $databaseFactory;
+		$this->database = $database;
 	}
 
 	/**
@@ -96,8 +96,7 @@ class Hooks implements
 			return;
 		}
 
-		$database = $this->databaseFactory->newDatabase();
-		$lintError = $database->getFromId( $lintId );
+		$lintError = $this->database->getFromId( $lintId );
 		if ( !$lintError ) {
 			// Already fixed or bogus URL parameter?
 			return;
@@ -121,9 +120,8 @@ class Hooks implements
 	 */
 	public function onWikiPageDeletionUpdates( $wikiPage, $content, &$updates ) {
 		$updates[] = new MWCallableUpdate( function () use ( $wikiPage ) {
-			$database = $this->databaseFactory->newDatabase();
 			$this->totalsLookup->updateStats(
-				$database, $database->setForPage(
+				$this->database, $this->database->setForPage(
 					$wikiPage->getId(), $wikiPage->getNamespace(), []
 				)
 			);
@@ -160,9 +158,8 @@ class Hooks implements
 			( in_array( "mw-contentmodelchange", $tags ) &&
 			!in_array( $wikiPage->getContentModel(), self::LINTABLE_CONTENT_MODELS ) )
 		) {
-			$database = $this->databaseFactory->newDatabase();
 			$this->totalsLookup->updateStats(
-				$database, $database->setForPage(
+				$this->database, $this->database->setForPage(
 					$wikiPage->getId(), $wikiPage->getNamespace(), []
 				)
 			);
@@ -199,8 +196,7 @@ class Hooks implements
 		if ( !$pageId ) {
 			return;
 		}
-		$database = $this->databaseFactory->newDatabase();
-		$totals = array_filter( $database->getTotalsForPage( $pageId ) );
+		$totals = array_filter( $this->database->getTotalsForPage( $pageId ) );
 		if ( !$totals ) {
 			// No errors, yay!
 			return;
@@ -282,7 +278,7 @@ class Hooks implements
 		$job = new RecordLintJob( $title, [
 			'errors' => $errors,
 			'revision' => $revision,
-		], $this->totalsLookup, $this->databaseFactory );
+		], $this->totalsLookup, $this->database );
 		$this->jobQueueGroup->push( $job );
 		return true;
 	}

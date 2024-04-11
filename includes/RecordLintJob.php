@@ -25,24 +25,24 @@ use MediaWiki\Page\PageReference;
 
 class RecordLintJob extends Job {
 	private TotalsLookup $totalsLookup;
-	private DatabaseFactory $databaseFactory;
+	private Database $database;
 
 	/**
 	 * RecordLintJob constructor.
 	 * @param PageReference $page
 	 * @param array $params
 	 * @param TotalsLookup $totalsLookup
-	 * @param DatabaseFactory $databaseFactory
+	 * @param Database $database
 	 */
 	public function __construct(
 		PageReference $page,
 		array $params,
 		TotalsLookup $totalsLookup,
-		DatabaseFactory $databaseFactory
+		Database $database
 	) {
 		parent::__construct( 'RecordLintJob', $page, $params );
 		$this->totalsLookup = $totalsLookup;
-		$this->databaseFactory = $databaseFactory;
+		$this->database = $database;
 	}
 
 	public function run() {
@@ -69,10 +69,9 @@ class RecordLintJob extends Job {
 			$errors[$error->id()] = $error;
 		}
 
-		$lintDb = $this->databaseFactory->newDatabase();
 		$this->totalsLookup->updateStats(
-			$lintDb,
-			$lintDb->setForPage(
+			$this->database,
+			$this->database->setForPage(
 				$this->title->getArticleID(),
 				$this->title->getNamespace(),
 				$errors

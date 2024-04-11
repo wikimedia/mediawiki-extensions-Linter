@@ -35,8 +35,8 @@ return [
 			$services->getMainConfig()->get( 'LinterCategories' )
 		);
 	},
-	'Linter.DatabaseFactory' => static function ( MediaWikiServices $services ): DatabaseFactory {
-		return new DatabaseFactory(
+	'Linter.Database' => static function ( MediaWikiServices $services ): Database {
+		return new Database(
 			new ServiceOptions(
 				Database::CONSTRUCTOR_OPTIONS,
 				$services->getMainConfig()

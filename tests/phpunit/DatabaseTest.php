@@ -29,14 +29,12 @@ use MediaWikiIntegrationTestCase;
  * @covers \MediaWiki\Linter\Database
  */
 class DatabaseTest extends MediaWikiIntegrationTestCase {
-	private function newDatabase() {
-		$services = $this->getServiceContainer();
-		$databaseFactory = $services->get( 'Linter.DatabaseFactory' );
-		return $databaseFactory->newDatabase();
+	private function getDatabase() {
+		return $this->getServiceContainer()->get( 'Linter.Database' );
 	}
 
 	public function testConstructor() {
-		$this->assertInstanceOf( Database::class, $this->newDatabase() );
+		$this->assertInstanceOf( Database::class, $this->getDatabase() );
 	}
 
 	private function getDummyLintErrors() {
@@ -84,7 +82,7 @@ class DatabaseTest extends MediaWikiIntegrationTestCase {
 	public function testSetForPage() {
 		$pageId = 5;
 		$namespaceId = 0;
-		$lintDb = $this->newDatabase();
+		$lintDb = $this->getDatabase();
 		$dummyErrors = $this->getDummyLintErrors();
 
 		$result = $lintDb->setForPage( $pageId, $namespaceId, $dummyErrors );

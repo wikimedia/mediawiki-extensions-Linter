@@ -32,7 +32,7 @@
 				"JobQueueGroup",
 				"Linter.CategoryManager",
 				"Linter.TotalsLookup",
-				"Linter.DatabaseFactory"
+				"Linter.Database"
 			]
 		},
 		"schema": {
@@ -61,7 +61,7 @@
 			"class": "MediaWiki\\Linter\\ApiQueryLinterStats",
 			"services": [
 				"Linter.TotalsLookup",
-				"Linter.DatabaseFactory"
+				"Linter.Database"
 			]
 		}
 	},
@@ -75,7 +75,7 @@
 				"PermissionManager",
 				"Linter.CategoryManager",
 				"Linter.TotalsLookup",
-				"Linter.DatabaseFactory"
+				"Linter.Database"
 			]
 		}
 	},
@@ -84,7 +84,7 @@
 			"class": "MediaWiki\\Linter\\RecordLintJob",
 			"services": [
 				"Linter.TotalsLookup",
-				"Linter.DatabaseFactory"
+				"Linter.Database"
 			]
 		}
 	},
