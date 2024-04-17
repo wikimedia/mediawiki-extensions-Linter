@@ -6,9 +6,11 @@
 		]
 	},
 	"linterrors": "Lint-feeilah",
+	"linter-category-wikilink-in-extlink": "Liiŋkah liiŋkâin",
 	"linter-form-namespace": "Nommâkomovuotâ:",
 	"linter-numerrors": "($1 {{PLURAL:$1|feilâ|feeilâ|feilâd}})",
 	"linter-page-history": "historjá",
+	"linter-pager-wikilink-in-extlink-details": "Liiŋkah liiŋkâin",
 	"linterrors-subpage": "Lint-feeilah: $1",
 	"pageinfo-linter": "Lint-feeilah"
 }
