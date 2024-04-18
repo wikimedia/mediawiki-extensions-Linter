@@ -384,10 +384,7 @@ class SpecialLintErrors extends SpecialPage {
 	 * @return string[]
 	 */
 	protected function getSubpagesForPrefixSearch() {
-		return array_merge(
-			$this->categoryManager->getVisibleCategories(),
-			$this->categoryManager->getInvisibleCategories()
-		);
+		return $this->categoryManager->getVisibleCategories();
 	}
 
 }
