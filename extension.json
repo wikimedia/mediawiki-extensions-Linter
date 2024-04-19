@@ -30,9 +30,12 @@
 			"services": [
 				"LinkRenderer",
 				"JobQueueGroup",
+				"ParsoidParserFactory",
+				"WikiPageFactory",
 				"Linter.CategoryManager",
 				"Linter.TotalsLookup",
-				"Linter.Database"
+				"Linter.Database",
+				"MainConfig"
 			]
 		},
 		"schema": {
@@ -46,7 +49,8 @@
 		"InfoAction": "main",
 		"WikiPageDeletionUpdates": "main",
 		"RevisionFromEditComplete": "main",
-		"ParserLogLinterData": "main"
+		"ParserLogLinterData": "main",
+		"RevisionDataUpdates": "main"
 	},
 	"APIListModules": {
 		"linterrors": {
@@ -247,6 +251,9 @@
 		},
 		"LinterUserInterfaceTagAndTemplateStage": {
 			"value": false
+		},
+		"LinterParseOnDerivedDataUpdate": {
+			"value": true
 		}
 	},
 	"ServiceWiringFiles": [
