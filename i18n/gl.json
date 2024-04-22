@@ -74,7 +74,7 @@
 	"linter-pager-tidy-whitespace-bug-details": "Erro ao procesar os espazos en branco",
 	"linter-pager-title-header": "Título da páxina",
 	"linter-pager-unclosed-quotes-in-heading-details": "Cita non pechada que sae da táboa de contidos",
-	"linterrors-subpage": "Erros de lintː $1",
+	"linterrors-subpage": "Erros de Lint: $1",
 	"linterrors-summary": "<strong>Nota:</strong> O reconto para as categorías non é exacto pois se basea en estimacións.",
 	"multi-part-template-block": "O resultado non procede dun só modelo",
 	"pageinfo-linter": "Erros detectados por Lint"
