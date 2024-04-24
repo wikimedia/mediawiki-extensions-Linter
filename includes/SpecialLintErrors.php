@@ -222,16 +222,16 @@ class SpecialLintErrors extends SpecialPage {
 	}
 
 	/**
-	 * @param string|null $par
+	 * @param string|null $subPage
 	 */
-	public function execute( $par ) {
+	public function execute( $subPage ) {
 		$request = $this->getRequest();
 		$out = $this->getOutput();
 
 		$params = $request->getQueryValues();
 
 		$this->setHeaders();
-		$this->outputHeader( $par || isset( $params[ 'titlesearch' ] ) ? 'disable-summary' : '' );
+		$this->outputHeader( $subPage || isset( $params[ 'titlesearch' ] ) ? 'disable-summary' : '' );
 
 		$namespaces = $this->findNamespaces( $request );
 
@@ -248,7 +248,7 @@ class SpecialLintErrors extends SpecialPage {
 		// of a custom namespace (just the text before a ':') to search for and pressed the associated Submit button.
 		// Added the pageback parameter to inform the code that the '<- Special:LintErrors' link had been used to allow
 		// the UI to redisplay with previous form values, instead of just resubmitting the query.
-		if ( $par === null && isset( $params[ 'titlesearch' ] ) && !isset( $params[ 'pageback'] ) ) {
+		if ( $subPage === null && isset( $params[ 'titlesearch' ] ) && !isset( $params[ 'pageback'] ) ) {
 			unset( $params[ 'title' ] );
 			$params = array_merge( [ 'pageback' => true ], $params );
 			$out->addBacklinkSubtitle( $this->getPageTitle(), $params );
@@ -276,8 +276,11 @@ class SpecialLintErrors extends SpecialPage {
 			return;
 		}
 
-		if ( in_array( $par, $this->getSubpagesForPrefixSearch() ) ) {
-			$this->category = $par;
+		if ( in_array( $subPage, array_merge(
+			$this->categoryManager->getVisibleCategories(),
+			$this->categoryManager->getInvisibleCategories()
+		) ) ) {
+			$this->category = $subPage;
 		}
 
 		if ( !$this->category ) {

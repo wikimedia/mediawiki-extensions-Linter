@@ -42,7 +42,8 @@ class LintErrorsPager extends TablePager {
 	private PermissionManager $permissionManager;
 
 	private ?string $category;
-	private ?int $categoryId;
+	/** @var mixed */
+	private $categoryId;
 	private array $namespaces;
 	private bool $exactMatch;
 	private string $title;
@@ -88,8 +89,11 @@ class LintErrorsPager extends TablePager {
 		if ( $category !== null ) {
 			$this->categoryId = $categoryManager->getCategoryId( $category );
 		} else {
-			$this->categoryId = null;
+			$this->categoryId = array_values( $this->categoryManager->getCategoryIds(
+				$this->categoryManager->getVisibleCategories()
+			) );
 		}
+
 		$this->namespaces = $namespaces;
 		$this->exactMatch = $exactMatch;
 		$this->title = $title;
@@ -109,11 +113,8 @@ class LintErrorsPager extends TablePager {
 				'linter_id', 'linter_params',
 				'linter_start', 'linter_end',
 				'linter_cat'
-			] );
-
-		if ( $this->categoryId !== null ) {
-			$queryBuilder->where( [ 'linter_cat' => $this->categoryId ] );
-		}
+			] )
+			->where( [ 'linter_cat' => $this->categoryId ] );
 
 		if ( $this->title !== '' ) {
 			$namespaces = $this->namespaces ?: [ NS_MAIN ];
@@ -184,7 +185,8 @@ class LintErrorsPager extends TablePager {
 		// category is set each time based on the category set in the lint error $row
 		// not by the class when lints are being reported by type for many pages
 		$category = $this->category;
-		if ( $category === null && $row->linter_cat !== null ) {
+		if ( $category === null ) {
+			// Assert $row->linter_cat !== null ?
 			$category = $this->categoryManager->getCategoryName( $row->linter_cat );
 		} else {
 			$row->linter_cat = $this->categoryId;
