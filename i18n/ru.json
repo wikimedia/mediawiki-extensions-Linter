@@ -77,7 +77,7 @@
 	"linter-pager-deletable-table-tag-details": "Тег таблицы, который следует удалить",
 	"linter-pager-details-header": "Дополнительная информация",
 	"linter-pager-html5-misnesting-details": "Некорректная вложенность (не работает)",
-	"linter-pager-inline-media-caption-details": "Внутристрочные медиафайлы с подписями",
+	"linter-pager-inline-media-caption-details": "Невидимая подпись",
 	"linter-pager-misc-tidy-replacement-issues-details": "Различные ошибки разметки",
 	"linter-pager-misnested-tag-details": "Неверно вложенный тег, который должен быть правильно вложен",
 	"linter-pager-missing-end-tag-details": "Отсутствующий закрывающий тег",
