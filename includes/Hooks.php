@@ -119,11 +119,14 @@ class Hooks implements
 	 * @param array &$updates
 	 */
 	public function onWikiPageDeletionUpdates( $wikiPage, $content, &$updates ) {
-		$updates[] = new MWCallableUpdate( function () use ( $wikiPage ) {
+		// The article id of the title is set to 0 when the page is deleted so
+		// capture it before creating the callback.
+		$id = $wikiPage->getId();
+		$ns = $wikiPage->getNamespace();
+
+		$updates[] = new MWCallableUpdate( function () use ( $id, $ns ) {
 			$this->totalsLookup->updateStats(
-				$this->database->setForPage(
-					$wikiPage->getId(), $wikiPage->getNamespace(), []
-				)
+				$this->database->setForPage( $id, $ns, [] )
 			);
 		}, __METHOD__ );
 	}
