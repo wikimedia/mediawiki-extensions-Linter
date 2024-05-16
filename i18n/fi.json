@@ -29,6 +29,7 @@
 	"linter-pager-category-header": "Luokka",
 	"linter-pager-deletable-table-tag-details": "Table-tagi, joka pitäisi poistaa",
 	"linter-pager-details-header": "Lisätiedot",
+	"linter-pager-inline-media-caption-details": "Näkymätön kuvateksti",
 	"linter-pager-misc-tidy-replacement-issues-details": "Muut syntaksivirheet",
 	"linter-pager-missing-end-tag-details": "Missing end tag",
 	"linter-pager-multiline-html-table-in-list-details": "Monirivinen HTML5-taulukko luettelon sisällä",
