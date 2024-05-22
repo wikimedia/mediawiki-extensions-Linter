@@ -278,6 +278,16 @@ class Hooks implements
 			}
 			$errors[] = $info;
 		}
+
+		LoggerFactory::getInstance( 'Linter' )->debug(
+			'{method}: Recording {numErrors} errors for {page}',
+			[
+				'method' => __METHOD__,
+				'numErrors' => count( $errors ),
+				'page' => $page
+			]
+		);
+
 		$job = new RecordLintJob( $title, [
 			'errors' => $errors,
 			'revision' => $revision,
