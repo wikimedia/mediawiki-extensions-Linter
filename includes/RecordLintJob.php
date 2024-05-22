@@ -21,6 +21,7 @@
 namespace MediaWiki\Linter;
 
 use Job;
+use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\Page\PageReference;
 
 class RecordLintJob extends Job {
@@ -68,6 +69,15 @@ class RecordLintJob extends Job {
 			// (e.g. same category of error in same template)
 			$errors[$error->id()] = $error;
 		}
+
+		LoggerFactory::getInstance( 'Linter' )->debug(
+			'{method}: Recording {numErrors} errors for {page}',
+			[
+				'method' => __METHOD__,
+				'numErrors' => count( $errors ),
+				'page' => $this->title->getPrefixedDBkey()
+			]
+		);
 
 		$this->totalsLookup->updateStats(
 			$this->database->setForPage(
