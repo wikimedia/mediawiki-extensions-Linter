@@ -250,6 +250,11 @@ class LintErrorsPager extends TablePager {
 				} elseif ( $category === 'misc-tidy-replacement-issues' ) {
 					/* There will be a 'subtype' param to disambiguate */
 					return Html::element( 'code', [], $lintError->params['subtype'] );
+				} elseif ( $category === 'missing-image-alt-text' ) {
+					$title = Title::newFromText( $lintError->params['file'], NS_FILE );
+					return Html::element( 'a', [
+						'href' => $title->getLocalUrl(),
+					], $title );
 				}
 				return '';
 			case 'template':

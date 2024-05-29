@@ -225,6 +225,11 @@
 					"enabled": true,
 					"priority": "none",
 					"no-params": true
+				},
+				"missing-image-alt-text": {
+					"dbid": 23,
+					"enabled": true,
+					"priority": "none"
 				}
 			}
 		},
