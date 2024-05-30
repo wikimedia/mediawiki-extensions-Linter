@@ -16,7 +16,8 @@
 			"Xiplus",
 			"沈澄心",
 			"铁桶",
-			"Anterdc99"
+			"Anterdc99",
+			"LittlePaw365"
 		]
 	},
 	"linterrors": "Lint错误",
@@ -67,7 +68,7 @@
 	"linter-invalid-title": "未找到命名空间和/或页面名称，或格式错误",
 	"linter-form-exact-match": "搜索特定页面标题",
 	"linter-form-prefix-match": "搜索所有与此页面前缀相匹配的页面",
-	"linter-form-exact-or-prefix": "搜索特定的页面标题或均带有某标题前缀的所有页面",
+	"linter-form-exact-or-prefix": "搜索特定页面标题或所有有共同标题前缀的页面",
 	"linter-form-namespace": "命名空间：",
 	"linter-form-tag": "按标签名称筛选",
 	"linter-form-tag-option-all": "无筛选",
