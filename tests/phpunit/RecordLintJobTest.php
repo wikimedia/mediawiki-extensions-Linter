@@ -26,6 +26,7 @@ use MediaWiki\Page\PageReference;
 use MediaWiki\Title\Title;
 use MediaWikiIntegrationTestCase;
 use Wikimedia\Rdbms\SelectQueryBuilder;
+use Wikimedia\Rdbms\UpdateQueryBuilder;
 
 /**
  * @group Database
@@ -109,6 +110,21 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 			->where( [ 'linter_page' => $pageId ] )
 			->caller( __METHOD__ );
 		return $queryLinterPageNamespace->fetchField();
+	}
+
+	/**
+	 * Set just the linter_namespace field value from the linter table for a page
+	 *
+	 * @param int $pageId
+	 */
+	private function setNamespaceForPageToNull( int $pageId ) {
+		$queryLinterPageNamespace = new UpdateQueryBuilder( $this->db );
+		$queryLinterPageNamespace
+			->update( 'linter' )
+			->set( [ 'linter_namespace' => null ] )
+			->where( [ 'linter_page' => $pageId ] )
+			->caller( __METHOD__ )
+			->execute();
 	}
 
 	public function testRun() {
@@ -227,17 +243,20 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * @param array $namespaceIds
-	 * @param array $writeEnables
+	 * @param array $setToID
 	 * @return array
 	 */
-	private function createPagesWithNamespace( array $namespaceIds, array $writeEnables ): array {
+	private function createPagesWithNamespace( array $namespaceIds, array $setToID ): array {
 		$titleAndPages = [];
 		foreach ( $namespaceIds as $index => $namespaceId ) {
-			// enable/disable writing the namespace field in the linter table during page creation
-			$this->overrideConfigValue( 'LinterWriteNamespaceColumnStage', $writeEnables[ $index ] );
-			$titleAndPages[] = $this->createTitleAndPageAndRunJob(
+			$titleAndPage = $this->createTitleAndPageAndRunJob(
 				'TestPageNamespace' . $index,
 				intval( $namespaceId ) );
+			$titleAndPages[] = $titleAndPage;
+			// To test the migration code, set some namespaces to null to simulate having a mix of valid and null values
+			if ( !$setToID[ $index ] ) {
+				$this->setNamespaceForPageToNull( $titleAndPage['pageID'] );
+			}
 		}
 		return $titleAndPages;
 	}
@@ -259,9 +278,9 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 	public function testMigrateNamespace() {
 		// Create groups of records that do not need migrating to ensure batching works properly
 		$namespaceIds = [ '0', '1', '2', '3', '4', '5', '4', '3', '2', '1', '0', '1', '2' ];
-		$writeEnables = [ false, true, true, true, false, false, true, true, false, false, false, true, false ];
+		$setToID = [ false, true, true, true, false, false, true, true, false, false, false, true, false ];
 
-		$titleAndPages = $this->createPagesWithNamespace( $namespaceIds, $writeEnables );
+		$titleAndPages = $this->createPagesWithNamespace( $namespaceIds, $setToID );
 
 		// Verify the create page function did not populate the linter_namespace field for TestPageNamespace0
 		$pageId = $titleAndPages[ 0 ][ 'pageID' ];
@@ -270,7 +289,7 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 
 		// migrate unpopulated namespace_id(s) from the page table to linter table
 		$database = $this->getDatabase();
-		$database->migrateNamespace( 2, 3, 0, true );
+		$database->migrateNamespace( 2, 3, 0 );
 
 		// Verify all linter records now have proper namespace IDs in the linter_namespace field
 		$this->checkPagesNamespace( $titleAndPages, $namespaceIds );

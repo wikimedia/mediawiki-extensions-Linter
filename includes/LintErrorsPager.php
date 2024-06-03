@@ -119,12 +119,10 @@ class LintErrorsPager extends TablePager {
 		if ( $this->title !== '' ) {
 			$namespaces = $this->namespaces ?: [ NS_MAIN ];
 			// Specify page_namespace so that the index can be used (T360865)
-			$queryBuilder->where( [ 'page_namespace' => $namespaces ] );
-			if ( $mainConfig->get( 'LinterUseNamespaceColumnStage' ) ) {
-				// Also put a condition on linter_namespace, in case the DB
-				// decides to put the linter table first
-				$queryBuilder->where( [ 'linter_namespace' => $namespaces ] );
-			}
+			// Also put a condition on linter_namespace, in case the DB
+			// decides to put the linter table first
+			$queryBuilder->where( [ 'page_namespace' => $namespaces, 'linter_namespace' => $namespaces ] );
+
 			if ( $this->exactMatch ) {
 				$queryBuilder->where( [
 					'page_title' => $this->title
@@ -135,9 +133,7 @@ class LintErrorsPager extends TablePager {
 				) );
 			}
 		} elseif ( $this->namespaces ) {
-			$namespaceCol = $mainConfig->get( 'LinterUseNamespaceColumnStage' )
-				? "linter_namespace" : "page_namespace";
-			$queryBuilder->where( [ $namespaceCol => $this->namespaces ] );
+			$queryBuilder->where( [ 'linter_namespace' => $this->namespaces ] );
 		}
 
 		if ( $mainConfig->get( 'LinterUserInterfaceTagAndTemplateStage' ) ) {

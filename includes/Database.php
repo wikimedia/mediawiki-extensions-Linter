@@ -34,7 +34,6 @@ use Wikimedia\Rdbms\SelectQueryBuilder;
  */
 class Database {
 	public const CONSTRUCTOR_OPTIONS = [
-		'LinterWriteNamespaceColumnStage',
 		'LinterWriteTagAndTemplateColumnsStage',
 	];
 
@@ -176,23 +175,9 @@ class Database {
 			'linter_cat' => $this->categoryManager->getCategoryId( $error->category, $error->catId ),
 			'linter_params' => FormatJson::encode( $error->params, false, FormatJson::ALL_OK ),
 			'linter_start' => $error->location[ 0 ],
-			'linter_end' => $error->location[ 1 ]
+			'linter_end' => $error->location[ 1 ],
+			'linter_namespace' => $namespaceId
 		];
-
-		// To enable 756101
-		//
-		// During the addition of this column to the table, the initial value
-		// of null allows the migrate stage code to determine the needs to fill
-		// in the field for that record, as the record was created prior to the
-		// write stage code being active and filling it in during record
-		// creation. Once the migrate code runs once no nulls should exist in
-		// this field for any record, and if the migrate code times out during
-		// execution, can be restarted and continue without duplicating work.
-		// The final code that enables the use of this field during records
-		// search will depend on this fields index being valid for all records.
-		if ( $this->options->get( 'LinterWriteNamespaceColumnStage' ) ) {
-			$result[ 'linter_namespace' ] = $namespaceId;
-		}
 
 		// To enable 720130
 		if ( $this->options->get( 'LinterWriteTagAndTemplateColumnsStage' ) ) {
@@ -402,19 +387,11 @@ class Database {
 	 * @param int $pageBatchSize
 	 * @param int $linterBatchSize
 	 * @param int $sleep
-	 * @param bool $bypassConfig
 	 * @return int number of pages updated, each with one or more linter records
 	 */
 	public function migrateNamespace(
-		int $pageBatchSize, int $linterBatchSize, int $sleep,
-		bool $bypassConfig = false
+		int $pageBatchSize, int $linterBatchSize, int $sleep
 	): int {
-		// code used by phpunit test, bypassed when run as a maintenance script
-		if ( !$bypassConfig ) {
-			if ( !$this->options->get( 'LinterWriteNamespaceColumnStage' ) ) {
-				return 0;
-			}
-		}
 		if ( gettype( $sleep ) !== 'integer' || $sleep < 0 ) {
 			$sleep = 0;
 		}

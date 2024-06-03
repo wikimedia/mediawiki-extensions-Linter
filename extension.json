@@ -240,12 +240,6 @@
 		"LinterStatsdSampleFactor": {
 			"value": false
 		},
-		"LinterWriteNamespaceColumnStage": {
-			"value": false
-		},
-		"LinterUseNamespaceColumnStage": {
-			"value": false
-		},
 		"LinterWriteTagAndTemplateColumnsStage": {
 			"value": false
 		},
