@@ -21,11 +21,13 @@
 namespace MediaWiki\Linter;
 
 use ApiQuerySiteinfo;
+use Config;
 use Content;
 use IContextSource;
 use JobQueueError;
 use JobQueueGroup;
 use MediaWiki\Api\Hook\APIQuerySiteInfoGeneralInfoHook;
+use MediaWiki\Deferred\DeferrableUpdate;
 use MediaWiki\Deferred\MWCallableUpdate;
 use MediaWiki\Hook\BeforePageDisplayHook;
 use MediaWiki\Hook\InfoActionHook;
@@ -35,8 +37,12 @@ use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Page\Hook\RevisionFromEditCompleteHook;
 use MediaWiki\Page\Hook\WikiPageDeletionUpdatesHook;
+use MediaWiki\Page\WikiPageFactory;
+use MediaWiki\Parser\Parsoid\ParsoidParserFactory;
+use MediaWiki\Revision\RenderedRevision;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\SpecialPage\SpecialPage;
+use MediaWiki\Storage\Hook\RevisionDataUpdatesHook;
 use MediaWiki\Title\Title;
 use MediaWiki\User\UserIdentity;
 use Skin;
@@ -48,17 +54,23 @@ class Hooks implements
 	InfoActionHook,
 	ParserLogLinterDataHook,
 	RevisionFromEditCompleteHook,
-	WikiPageDeletionUpdatesHook
+	WikiPageDeletionUpdatesHook,
+	RevisionDataUpdatesHook
 {
 	private LinkRenderer $linkRenderer;
 	private JobQueueGroup $jobQueueGroup;
+	private ParsoidParserFactory $parsoidParserFactory;
+	private WikiPageFactory $wikiPageFactory;
 	private CategoryManager $categoryManager;
 	private TotalsLookup $totalsLookup;
 	private Database $database;
+	private bool $parseOnDerivedDataUpdates;
 
 	/**
 	 * @param LinkRenderer $linkRenderer
 	 * @param JobQueueGroup $jobQueueGroup
+	 * @param ParsoidParserFactory $parsoidParserFactory
+	 * @param WikiPageFactory $wikiPageFactory
 	 * @param CategoryManager $categoryManager
 	 * @param TotalsLookup $totalsLookup
 	 * @param Database $database
@@ -66,15 +78,21 @@ class Hooks implements
 	public function __construct(
 		LinkRenderer $linkRenderer,
 		JobQueueGroup $jobQueueGroup,
+		ParsoidParserFactory $parsoidParserFactory,
+		WikiPageFactory $wikiPageFactory,
 		CategoryManager $categoryManager,
 		TotalsLookup $totalsLookup,
-		Database $database
+		Database $database,
+		Config $config
 	) {
 		$this->linkRenderer = $linkRenderer;
 		$this->jobQueueGroup = $jobQueueGroup;
+		$this->parsoidParserFactory = $parsoidParserFactory;
+		$this->wikiPageFactory = $wikiPageFactory;
 		$this->categoryManager = $categoryManager;
 		$this->totalsLookup = $totalsLookup;
 		$this->database = $database;
+		$this->parseOnDerivedDataUpdates = $config->get( 'LinterParseOnDerivedDataUpdate' );
 	}
 
 	/**
@@ -240,6 +258,7 @@ class Hooks implements
 	): bool {
 		$errors = [];
 		$title = Title::newFromText( $page );
+
 		if (
 			!$title || !$title->getArticleID() ||
 			$title->getLatestRevID() != $revision
@@ -309,5 +328,36 @@ class Hooks implements
 		}
 
 		return true;
+	}
+
+	/**
+	 * @param Title $title
+	 * @param RenderedRevision $renderedRevision
+	 * @param DeferrableUpdate[] &$updates
+	 */
+	public function onRevisionDataUpdates( $title, $renderedRevision, &$updates ) {
+		if ( !$this->parseOnDerivedDataUpdates ) {
+			return;
+		}
+
+		if ( $renderedRevision->getOptions()->getUseParsoid() ) {
+			// Parsoid was already used for the canonical parse, nothing to do:
+			// onParserLogLinterData was already called.
+			// This will be the case when parsoid page views are enabled.
+			// Eventually, ParserLogLinterData will probably go away and we'll
+			// have the lint data in the ParserOutput. We'll then just use
+			// that data to create a RecordLintJob.
+			return;
+		}
+
+		if ( !in_array( $title->getContentModel(), self::LINTABLE_CONTENT_MODELS ) ) {
+			return;
+		}
+
+		$updates[] = new LintUpdate(
+			$this->parsoidParserFactory->create(),
+			$this->wikiPageFactory,
+			$renderedRevision
+		);
 	}
 }
