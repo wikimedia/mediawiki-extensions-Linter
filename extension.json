@@ -240,12 +240,6 @@
 		"LinterStatsdSampleFactor": {
 			"value": false
 		},
-		"LinterWriteTagAndTemplateColumnsStage": {
-			"value": false
-		},
-		"LinterUserInterfaceTagAndTemplateStage": {
-			"value": false
-		},
 		"LinterParseOnDerivedDataUpdate": {
 			"value": true
 		}

@@ -33,9 +33,7 @@ use Wikimedia\Rdbms\SelectQueryBuilder;
  * Database logic
  */
 class Database {
-	public const CONSTRUCTOR_OPTIONS = [
-		'LinterWriteTagAndTemplateColumnsStage',
-	];
+	public const CONSTRUCTOR_OPTIONS = [];
 
 	/**
 	 * Maximum number of errors to save per category,
@@ -179,23 +177,20 @@ class Database {
 			'linter_namespace' => $namespaceId
 		];
 
-		// To enable 720130
-		if ( $this->options->get( 'LinterWriteTagAndTemplateColumnsStage' ) ) {
-			$templateInfo = $error->templateInfo ?? '';
-			if ( is_array( $templateInfo ) ) {
-				if ( isset( $templateInfo[ 'multiPartTemplateBlock' ] ) ) {
-					$templateInfo = 'multi-part-template-block';
-				} else {
-					$templateInfo = $templateInfo[ 'name' ] ?? '';
-				}
+		$templateInfo = $error->templateInfo ?? '';
+		if ( is_array( $templateInfo ) ) {
+			if ( isset( $templateInfo[ 'multiPartTemplateBlock' ] ) ) {
+				$templateInfo = 'multi-part-template-block';
+			} else {
+				$templateInfo = $templateInfo[ 'name' ] ?? '';
 			}
-			$templateInfo = mb_strcut( $templateInfo, 0, self::MAX_TEMPLATE_LENGTH );
-			$result[ 'linter_template' ] = $templateInfo;
-
-			$tagInfo = $error->tagInfo ?? '';
-			$tagInfo = mb_strcut( $tagInfo, 0, self::MAX_TAG_LENGTH );
-			$result[ 'linter_tag' ] = $tagInfo;
 		}
+		$templateInfo = mb_strcut( $templateInfo, 0, self::MAX_TEMPLATE_LENGTH );
+		$result[ 'linter_template' ] = $templateInfo;
+
+		$tagInfo = $error->tagInfo ?? '';
+		$tagInfo = mb_strcut( $tagInfo, 0, self::MAX_TAG_LENGTH );
+		$result[ 'linter_tag' ] = $tagInfo;
 
 		return $result;
 	}
@@ -486,18 +481,11 @@ class Database {
 	 *
 	 * @param int $batchSize
 	 * @param int $sleep
-	 * @param bool $bypassConfig
 	 * @return int
 	 */
 	public function migrateTemplateAndTagInfo(
-		int $batchSize, int $sleep, bool $bypassConfig = false
+		int $batchSize, int $sleep
 	): int {
-		// code used by phpunit test, bypassed when run as a maintenance script
-		if ( !$bypassConfig ) {
-			if ( !$this->options->get( 'LinterWriteTagAndTemplateColumnsStage' ) ) {
-				return 0;
-			}
-		}
 		if ( gettype( $sleep ) !== 'integer' || $sleep < 0 ) {
 			$sleep = 0;
 		}

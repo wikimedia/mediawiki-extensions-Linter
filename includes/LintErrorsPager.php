@@ -136,14 +136,12 @@ class LintErrorsPager extends TablePager {
 			$queryBuilder->where( [ 'linter_namespace' => $this->namespaces ] );
 		}
 
-		if ( $mainConfig->get( 'LinterUserInterfaceTagAndTemplateStage' ) ) {
-			if ( $this->throughTemplate !== 'all' ) {
-				$op = ( $this->throughTemplate === 'with' ) ? '!=' : '=';
-				$queryBuilder->where( $this->mDb->expr( 'linter_template', $op, '' ) );
-			}
-			if ( $this->tag !== 'all' && ( new HtmlTags( $this ) )->checkAllowedHTMLTags( $this->tag ) ) {
-				$queryBuilder->where( [ 'linter_tag'  => $this->tag ] );
-			}
+		if ( $this->throughTemplate !== 'all' ) {
+			$op = ( $this->throughTemplate === 'with' ) ? '!=' : '=';
+			$queryBuilder->where( $this->mDb->expr( 'linter_template', $op, '' ) );
+		}
+		if ( $this->tag !== 'all' && ( new HtmlTags( $this ) )->checkAllowedHTMLTags( $this->tag ) ) {
+			$queryBuilder->where( [ 'linter_tag'  => $this->tag ] );
 		}
 	}
 

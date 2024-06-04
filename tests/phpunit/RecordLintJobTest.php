@@ -150,7 +150,6 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 	}
 
 	public function testWriteTagAndTemplate() {
-		$this->overrideConfigValue( 'LinterWriteTagAndTemplateColumnsStage', true );
 		$error = [
 			'type' => 'obsolete-tag',
 			'location' => [ 0, 10 ],
@@ -181,8 +180,6 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 	}
 
 	public function testWriteTagAndTemplateLengthExceeded() {
-		$this->overrideConfigValue( 'LinterWriteTagAndTemplateColumnsStage', true );
-
 		// Verify special case test for write code encountering params with tag and template string lengths exceeded
 		$tagWithMoreThan30Characters = "center tag exceeding 30 characters";
 		$tagTruncated = "center tag exceeding 30 charac";
@@ -311,6 +308,22 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
+	 * Set the linter_tag and linter_template field values to an empty string for a page
+	 * to test that the database migration code handles existing records with fields set
+	 * and records where the fields are not yet set, and need migration.
+	 * @param int $pageId
+	 */
+	private function setTagAndTemplateForPageToEmptyString( int $pageId ) {
+		$queryLinterPageNamespace = new UpdateQueryBuilder( $this->db );
+		$queryLinterPageNamespace
+			->update( 'linter' )
+			->set( [ 'linter_template' => '', 'linter_tag' => '' ] )
+			->where( [ 'linter_page' => $pageId ] )
+			->caller( __METHOD__ )
+			->execute();
+	}
+
+	/**
 	 * @param array $writeEnables
 	 * @param array $error
 	 * @return array
@@ -318,9 +331,12 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 	private function createPagesWithTagAndTemplate( array $writeEnables, array $error ): array {
 		$titleAndPages = [];
 		foreach ( $writeEnables as $index => $enable ) {
-			// enable/disable writing the tag and template fields in the linter table during page creation
-			$this->overrideConfigValue( 'LinterWriteTagAndTemplateColumnsStage', $enable );
-			$titleAndPages[] = $this->createTitleAndPageForTagsAndRunJob( 'TestPage' . $index, $error );
+			$titleAndPage = $this->createTitleAndPageForTagsAndRunJob( 'TestPage' . $index, $error );
+			$titleAndPages[] = $titleAndPage;
+			// clear the tag and template field data for select test records
+			if ( !$enable ) {
+				$this->setTagAndTemplateForPageToEmptyString( $titleAndPage[ 'pageID' ] );
+			}
 		}
 		return $titleAndPages;
 	}
@@ -353,7 +369,6 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 		$titleAndPages = $this->createPagesWithTagAndTemplate( $writeEnables, $error );
 
 		// Create special case test of migrate code encountering brackets - linter_params = '[]'
-		$this->overrideConfigValue( 'LinterWriteTagAndTemplateColumnsStage', false );
 		$error = [
 			'type' => 'wikilink-in-extlink',
 			'location' => [ 0, 10 ],
@@ -398,7 +413,7 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 
 		// Migrate unpopulated tag and template info from the params field
 		$database = $this->getDatabase();
-		$database->migrateTemplateAndTagInfo( 3, 0, true );
+		$database->migrateTemplateAndTagInfo( 3, 0 );
 
 		// Verify all linter records have the proper tag and template field info migrated from the params field
 		$this->checkPagesTagAndTemplate( $titleAndPages );

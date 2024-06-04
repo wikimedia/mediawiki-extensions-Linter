@@ -104,31 +104,27 @@ class SpecialLintErrors extends SpecialPage {
 			]
 		];
 
-		$enableUserInterfaceTagAndTemplateStage =
-			$this->getConfig()->get( 'LinterUserInterfaceTagAndTemplateStage' );
-		if ( $enableUserInterfaceTagAndTemplateStage ) {
-			$selectTemplateOptions = [
-				(string)$this->msg( 'linter-form-template-option-all' )->escaped() => 'all',
-				(string)$this->msg( 'linter-form-template-option-with' )->escaped() => 'with',
-				(string)$this->msg( 'linter-form-template-option-without' )->escaped() => 'without',
-			];
-			$htmlTags = new HtmlTags( $this );
-			$tagAndTemplateFields = [
-				'tag' => [
-					'type' => 'select',
-					'name' => 'tag',
-					'label-message' => 'linter-form-tag',
-					'options' => $htmlTags->getAllowedHTMLTags()
-				],
-				'template' => [
-					'type' => 'select',
-					'name' => 'template',
-					'label-message' => 'linter-form-template',
-					'options' => $selectTemplateOptions
-				]
-			];
-			$fields = array_merge( $fields, $tagAndTemplateFields );
-		}
+		$selectTemplateOptions = [
+			(string)$this->msg( 'linter-form-template-option-all' )->escaped() => 'all',
+			(string)$this->msg( 'linter-form-template-option-with' )->escaped() => 'with',
+			(string)$this->msg( 'linter-form-template-option-without' )->escaped() => 'without',
+		];
+		$htmlTags = new HtmlTags( $this );
+		$tagAndTemplateFields = [
+			'tag' => [
+				'type' => 'select',
+				'name' => 'tag',
+				'label-message' => 'linter-form-tag',
+				'options' => $htmlTags->getAllowedHTMLTags()
+			],
+			'template' => [
+				'type' => 'select',
+				'name' => 'template',
+				'label-message' => 'linter-form-template',
+				'options' => $selectTemplateOptions
+			]
+		];
+		$fields = array_merge( $fields, $tagAndTemplateFields );
 
 		$form = HTMLForm::factory( 'ooui', $fields, $this->getContext() );
 		$form->setWrapperLegend( true );
