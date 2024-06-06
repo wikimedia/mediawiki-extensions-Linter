@@ -89,6 +89,7 @@
 	"linter-pager-category-header": "分类",
 	"linter-pager-deletable-table-tag-details": "应被删除的表格标签",
 	"linter-pager-details-header": "额外信息",
+	"linter-pager-fostered-details": "表格中不合法内容",
 	"linter-pager-html5-misnesting-details": "嵌套错误（现已损坏）",
 	"linter-pager-inline-media-caption-details": "不可见的说明",
 	"linter-pager-large-tables-details": "对移动视图来说很大的表格",
