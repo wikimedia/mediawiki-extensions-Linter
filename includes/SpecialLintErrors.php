@@ -20,9 +20,9 @@
 
 namespace MediaWiki\Linter;
 
-use HTMLForm;
 use MediaWiki\Cache\LinkCache;
 use MediaWiki\Html\Html;
+use MediaWiki\HTMLForm\HTMLForm;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Request\WebRequest;

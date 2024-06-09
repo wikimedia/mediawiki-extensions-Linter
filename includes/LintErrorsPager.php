@@ -20,9 +20,9 @@
 
 namespace MediaWiki\Linter;
 
-use IContextSource;
 use InvalidArgumentException;
 use MediaWiki\Cache\LinkCache;
+use MediaWiki\Context\IContextSource;
 use MediaWiki\Html\Html;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\MediaWikiServices;
