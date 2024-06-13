@@ -10,12 +10,14 @@
 			"Pyscowicz",
 			"Silvonen",
 			"Valtlait",
-			"Yupik"
+			"Yupik",
+			"Majavah"
 		]
 	},
 	"linterrors": "Lint-virheet",
 	"linter-category-deletable-table-tag": "Table-tagi, joka pitäisi poistaa",
 	"linter-category-deletable-table-tag-desc": "Näillä sivuilla on table-tagi, joka pitäisi poistaa.",
+	"linter-category-misc-tidy-replacement-issues": "Sekalaiset ongelmat",
 	"linter-category-missing-end-tag": "Missing end tag",
 	"linter-category-missing-end-tag-desc": "These pages have missing end tags.",
 	"linter-form-namespace": "Nimiavaruus:",
