@@ -12,7 +12,8 @@
 			"Luzcaru",
 			"Macofe",
 			"MarcoAurelio",
-			"No se"
+			"No se",
+			"Eulalio"
 		]
 	},
 	"linterrors": "Errores de sintaxis",
@@ -59,6 +60,7 @@
 	"linter-form-prefix-match": "Buscar todas las páginas que coincidan con el prefijo del título",
 	"linter-form-exact-or-prefix": "Buscar un título específico de página, o bien todas las páginas con un prefijo de título común",
 	"linter-form-namespace": "Espacio de nombres:",
+	"linter-form-tag": "Filtrar por nombre de etiqueta",
 	"linter-form-tag-option-all": "Sin filtro",
 	"linter-form-template": "Filtrar por estado de la plantilla",
 	"linter-form-template-option-all": "Sin filtro",
