@@ -299,7 +299,7 @@ class Hooks implements
 			$errors[] = $info;
 		}
 
-		LoggerFactory::getInstance( 'Linter' )->debug(
+		LoggerFactory::getInstance( 'Linter' )->info(
 			'{method}: Recording {numErrors} errors for {page}',
 			[
 				'method' => __METHOD__,
@@ -318,7 +318,7 @@ class Hooks implements
 		} catch ( JobQueueError $e ) {
 			// Since linting is currently tied up with read views,
 			// don't let a failure to enqueue block a parse.
-			LoggerFactory::getInstance( 'Linter' )->error(
+			LoggerFactory::getInstance( 'Linter' )->debug(
 				'{method}: Failed to inject job: "{msg}"!',
 				[
 					'method' => __METHOD__,

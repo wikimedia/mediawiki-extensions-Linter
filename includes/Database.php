@@ -391,7 +391,7 @@ class Database {
 			$sleep = 0;
 		}
 
-		$logger = LoggerFactory::getInstance( 'MigrateNamespaceChannel' );
+		$logger = LoggerFactory::getInstance( 'Linter' );
 
 		$lbFactory = $this->dbLoadBalancerFactory;
 		$dbw = $this->getDBConnectionRef( DB_PRIMARY );
@@ -490,7 +490,7 @@ class Database {
 			$sleep = 0;
 		}
 
-		$logger = LoggerFactory::getInstance( 'MigrateTagAndTemplateChannel' );
+		$logger = LoggerFactory::getInstance( 'Linter' );
 
 		$lbFactory = $this->dbLoadBalancerFactory;
 		$dbw = $this->getDBConnectionRef( DB_PRIMARY );
