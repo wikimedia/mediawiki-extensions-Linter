@@ -70,7 +70,7 @@ class RecordLintJob extends Job {
 			$errors[$error->id()] = $error;
 		}
 
-		LoggerFactory::getInstance( 'Linter' )->info(
+		LoggerFactory::getInstance( 'Linter' )->debug(
 			'{method}: Recording {numErrors} errors for {page}',
 			[
 				'method' => __METHOD__,

@@ -66,7 +66,7 @@ class LintUpdate extends DataUpdate {
 		$pOptions = $page->makeParserOptions( 'canonical' );
 		$pOptions->setUseParsoid();
 
-		LoggerFactory::getInstance( 'Linter' )->info(
+		LoggerFactory::getInstance( 'Linter' )->debug(
 			'{method}: Parsing {page}',
 			[
 				'method' => __METHOD__,
