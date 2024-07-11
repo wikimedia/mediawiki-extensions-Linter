@@ -299,7 +299,7 @@ class Hooks implements
 			$errors[] = $info;
 		}
 
-		LoggerFactory::getInstance( 'Linter' )->info(
+		LoggerFactory::getInstance( 'Linter' )->debug(
 			'{method}: Recording {numErrors} errors for {page}',
 			[
 				'method' => __METHOD__,
