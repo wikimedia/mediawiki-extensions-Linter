@@ -232,7 +232,7 @@
 				},
 				"missing-image-alt-text": {
 					"dbid": 23,
-					"enabled": true,
+					"enabled": false,
 					"priority": "none"
 				}
 			}
