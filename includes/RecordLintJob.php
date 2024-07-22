@@ -27,6 +27,7 @@ use MediaWiki\Page\PageReference;
 class RecordLintJob extends Job {
 	private TotalsLookup $totalsLookup;
 	private Database $database;
+	private CategoryManager $categoryManager;
 
 	/**
 	 * RecordLintJob constructor.
@@ -34,16 +35,19 @@ class RecordLintJob extends Job {
 	 * @param array $params
 	 * @param TotalsLookup $totalsLookup
 	 * @param Database $database
+	 * @param CategoryManager $categoryManager
 	 */
 	public function __construct(
 		PageReference $page,
 		array $params,
 		TotalsLookup $totalsLookup,
-		Database $database
+		Database $database,
+		CategoryManager $categoryManager
 	) {
 		parent::__construct( 'RecordLintJob', $page, $params );
 		$this->totalsLookup = $totalsLookup;
 		$this->database = $database;
+		$this->categoryManager = $categoryManager;
 	}
 
 	public function run() {
@@ -55,7 +59,7 @@ class RecordLintJob extends Job {
 		// [ 'id' => LintError ]
 		$errors = [];
 		foreach ( $this->params['errors'] as $errorInfo ) {
-			if ( in_array( $errorInfo['type'], [ 'inline-media-caption', 'missing-image-alt-text' ] ) ) {
+			if ( !$this->categoryManager->isEnabled( $errorInfo['type'] ) ) {
 				// Drop lints of these types for now
 				continue;
 			}

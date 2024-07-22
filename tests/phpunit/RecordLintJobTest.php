@@ -44,7 +44,8 @@ class RecordLintJobTest extends MediaWikiIntegrationTestCase {
 			$page,
 			$params,
 			$services->get( 'Linter.TotalsLookup' ),
-			$this->getDatabase()
+			$this->getDatabase(),
+			$services->get( 'Linter.CategoryManager' )
 		);
 	}
 
