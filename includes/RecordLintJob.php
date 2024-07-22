@@ -55,8 +55,8 @@ class RecordLintJob extends Job {
 		// [ 'id' => LintError ]
 		$errors = [];
 		foreach ( $this->params['errors'] as $errorInfo ) {
-			if ( $errorInfo['type'] === 'inline-media-caption' ) {
-				// Drop lints of this type for now
+			if ( in_array( $errorInfo['type'], [ 'inline-media-caption', 'missing-image-alt-text' ] ) ) {
+				// Drop lints of these types for now
 				continue;
 			}
 			$error = new LintError(
