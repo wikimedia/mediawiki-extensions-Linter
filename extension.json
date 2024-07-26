@@ -86,7 +86,8 @@
 			"class": "MediaWiki\\Linter\\RecordLintJob",
 			"services": [
 				"Linter.TotalsLookup",
-				"Linter.Database"
+				"Linter.Database",
+				"Linter.CategoryManager"
 			]
 		}
 	},

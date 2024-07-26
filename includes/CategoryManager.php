@@ -63,11 +63,18 @@ class CategoryManager {
 	private $hasNoParams = [];
 
 	/**
+	 * @var bool[]
+	 * @phan-var array<string,bool>
+	 */
+	private $isEnabled = [];
+
+	/**
 	 * Do not instantiate directly: use MediaWikiServices to fetch.
 	 * @param array $linterCategories
 	 */
 	public function __construct( array $linterCategories ) {
 		foreach ( $linterCategories as $name => $info ) {
+			$this->isEnabled[$name] = $info['enabled'];
 			if ( $info['enabled'] ) {
 				$this->categories[$info['priority']][] = $name;
 			}
@@ -105,6 +112,11 @@ class CategoryManager {
 	 */
 	public function hasNoParams( $name ) {
 		return isset( $this->hasNoParams[$name] );
+	}
+
+	public function isEnabled( string $name ): bool {
+		// Default to true so !isKnownCategory aren't dropped
+		return $this->isEnabled[$name] ?? true;
 	}
 
 	/**

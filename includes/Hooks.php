@@ -268,6 +268,11 @@ class Hooks implements
 		$catCounts = [];
 		foreach ( $data as $info ) {
 			if ( $this->categoryManager->isKnownCategory( $info['type'] ) ) {
+				// NOTE: Redundant with RecordLintJob, but why even create the job
+				if ( !$this->categoryManager->isEnabled( $info['type'] ) ) {
+					// Drop lints of these types for now
+					continue;
+				}
 				$info[ 'dbid' ] = null;
 			} elseif ( !isset( $info[ 'dbid' ] ) ) {
 				continue;
@@ -308,10 +313,13 @@ class Hooks implements
 			]
 		);
 
-		$job = new RecordLintJob( $title, [
-			'errors' => $errors,
-			'revision' => $revision,
-		], $this->totalsLookup, $this->database );
+		$job = new RecordLintJob(
+			$title,
+			[ 'errors' => $errors, 'revision' => $revision ],
+			$this->totalsLookup,
+			$this->database,
+			$this->categoryManager
+		);
 
 		try {
 			$this->jobQueueGroup->push( $job );
