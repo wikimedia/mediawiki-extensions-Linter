@@ -235,6 +235,12 @@
 					"dbid": 23,
 					"enabled": false,
 					"priority": "none"
+				},
+				"fostered-transparent": {
+					"dbid": 24,
+					"enabled": true,
+					"priority": "none",
+					"no-params": true
 				}
 			}
 		},
