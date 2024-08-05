@@ -24,7 +24,7 @@
 	"linter-category-html5-misnesting": "在HTML5和HTML4中對錯誤嵌套的標籤有不同的渲染",
 	"linter-category-html5-misnesting-desc": "與HTML4相比，這些錯誤嵌套的標籤在HTML5中的行為將不同。",
 	"linter-category-misc-tidy-replacement-issues": "各項問題",
-	"linter-category-misc-tidy-replacement-issues-desc": "這些頁面還有其它問題，導致呈現出與之前顯示不同的情況",
+	"linter-category-misc-tidy-replacement-issues-desc": "這些頁面還有其它問題，導致渲染出與之前顯示不同的情況",
 	"linter-category-misnested-tag": "錯誤嵌套標籤",
 	"linter-category-misnested-tag-desc": "這些頁面存在可以修復的錯誤嵌套標籤。",
 	"linter-category-missing-end-tag": "缺少結束標籤",
