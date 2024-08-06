@@ -28,6 +28,7 @@
 	"linter-category-deletable-table-tag-desc": "Ces pages ont des balises de tableau qui devraient être supprimées.",
 	"linter-category-fostered": "Contenu mal placé",
 	"linter-category-fostered-desc": "Ces pages ont du contenu mal placé.",
+	"linter-category-fostered-transparent": "Favorisé le rendu d'un contenu transparent.",
 	"linter-category-fostered-transparent-desc": "Ces pages ont favorisé l'apparition de contenus transparent.",
 	"linter-category-html5-misnesting": "Balise mal imbriquée avec des rendus différents en HTML5 et HTML4",
 	"linter-category-html5-misnesting-desc": "Ces balises mal imbriquées auront des comportements différents en HTML5 par rapport à HTML4.",
