@@ -387,7 +387,7 @@ class Database {
 	public function migrateNamespace(
 		int $pageBatchSize, int $linterBatchSize, int $sleep
 	): int {
-		if ( gettype( $sleep ) !== 'integer' || $sleep < 0 ) {
+		if ( $sleep < 0 ) {
 			$sleep = 0;
 		}
 
@@ -486,7 +486,7 @@ class Database {
 	public function migrateTemplateAndTagInfo(
 		int $batchSize, int $sleep
 	): int {
-		if ( gettype( $sleep ) !== 'integer' || $sleep < 0 ) {
+		if ( $sleep < 0 ) {
 			$sleep = 0;
 		}
 
