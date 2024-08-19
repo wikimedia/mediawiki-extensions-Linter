@@ -35,6 +35,6 @@
 	"linter-pager-template-header": "Duerch eng Schabloun?",
 	"linter-pager-title-header": "Titel vun der Säit",
 	"linterrors-subpage": "Lint-Feeler: $1",
-	"linterrors-summary": "<strong>REMARQUE:</strong> D'Compteure fir d'Kategorië sinn net genee, mä baséieren op Schätzungen.",
+	"linterrors-summary": "<strong>REMARK:</strong> D'Compteure fir d'Kategorië sinn net genee, mä baséieren op Schätzungen.",
 	"pageinfo-linter": "Lint-Feeler"
 }
