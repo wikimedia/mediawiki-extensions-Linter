@@ -104,6 +104,6 @@
 	"linter-prefix-search-subpage": "Başlık öneki veya tam başlıkla eşleşen lint hatası olan sayfalar: $1",
 	"linterrors-subpage": "Lint hataları: $1",
 	"linterrors-summary": "<strong>Not:</strong> Kategorilerde gösterilen sayımlar tam değildir, tahmine dayalıdır.",
-	"multi-part-template-block": "Tek bir şablondan çıkış değil",
+	"multi-part-template-block": "Çıktı tek bir şablondan değil",
 	"pageinfo-linter": "Lint hataları"
 }
