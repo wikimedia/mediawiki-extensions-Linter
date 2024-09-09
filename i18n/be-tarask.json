@@ -40,6 +40,8 @@
 	"linter-category-tidy-font-bug-desc": "Раней цэтлікі font, калі патрэбна было зьмяніць колер спасылкі, пераносіліся ўнутар яе",
 	"linter-category-tidy-whitespace-bug": "Памылка разбору пропустаў",
 	"linter-category-unclosed-quotes-in-heading": "Незакрытыя двукосьсі ў загалоўку",
+	"linter-category-unclosed-quotes-in-heading-desc": "У загалоўках гэтых старонак ёсьць незакрытыя цытаты, якія пасьля пераносяцца і на зьмест.",
+	"linter-category-wikilink-in-extlink": "Спасылкі ў спасылках",
 	"linter-desc": "Сочыць за lint-памылкамі з вонкавага сэрвісу і паказвае іх удзельнікам",
 	"linter-form-namespace": "Прастора назваў:",
 	"linter-form-title-prefix": "Калі ласка, увядзіце прэфікс назвы ці поўную назву:",
