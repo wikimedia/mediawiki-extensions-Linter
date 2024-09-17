@@ -241,6 +241,11 @@
 					"enabled": true,
 					"priority": "none",
 					"no-params": true
+				},
+				"duplicate-ids": {
+					"dbid": 25,
+					"enabled": true,
+					"priority": "high"
 				}
 			}
 		},
