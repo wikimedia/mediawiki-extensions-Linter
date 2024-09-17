@@ -249,6 +249,8 @@ class LintErrorsPager extends TablePager {
 					return Html::element( 'a', [
 						'href' => $title->getLocalUrl(),
 					], $title );
+				} elseif ( $category === 'duplicate-ids' ) {
+					return Html::element( 'code', [], $lintError->params['id'] );
 				}
 				return '';
 			case 'template':
