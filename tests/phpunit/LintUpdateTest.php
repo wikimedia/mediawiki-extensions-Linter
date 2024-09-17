@@ -21,10 +21,11 @@
 namespace MediaWiki\Linter\Test;
 
 use MediaWiki\Content\JavaScriptContent;
+use MediaWiki\Content\JavaScriptContentHandler;
+use MediaWiki\Content\WikitextContentHandler;
 use MediaWiki\Linter\LintUpdate;
 use MediaWiki\MainConfigNames;
 use MediaWiki\Parser\ParserOutput;
-use MediaWiki\Parser\Parsoid\ParsoidParser;
 use MediaWiki\Revision\MutableRevisionRecord;
 use MediaWiki\Revision\RenderedRevision;
 use MediaWiki\Revision\RevisionRecord;
@@ -54,8 +55,6 @@ class LintUpdateTest extends MediaWikiIntegrationTestCase {
 	 * and in turn triggers the ParserLogLinterData hook via Parsoid.
 	 */
 	public function testUpdate() {
-		$parsoid = $this->getServiceContainer()->getParsoidParserFactory()->create();
-
 		// NOTE: This performs an edit, so do it before installing the temp hook below!
 		$rrev = $this->newRenderedRevision();
 
@@ -64,7 +63,7 @@ class LintUpdateTest extends MediaWikiIntegrationTestCase {
 			$hookCalled = true;
 		}, false );
 
-		$update = $this->newLintUpdate( $parsoid, $rrev );
+		$update = $this->newLintUpdate( $rrev );
 		$update->doUpdate();
 
 		$this->assertTrue( $hookCalled );
@@ -74,23 +73,28 @@ class LintUpdateTest extends MediaWikiIntegrationTestCase {
 	 * Assert that we don't parse if the content model is not supported.
 	 */
 	public function testSkipModel() {
-		$parsoid = $this->createNoOpMock(
-			ParsoidParser::class,
-			[ 'parse' ]
+		$contentHandler = $this->createNoOpMock(
+			JavaScriptContentHandler::class,
+			[ 'getParserOutput' ]
 		);
-
-		$parsoid->expects( $this->never() )->method( 'parse' );
+		$contentHandler->expects( $this->never() )->method( 'getParserOutput' );
+		$contentHandlers = $this->getConfVar( MainConfigNames::ContentHandlers );
+		$this->overrideConfigValue( MainConfigNames::ContentHandlers, [
+			CONTENT_MODEL_JAVASCRIPT => [
+				'factory' => fn () => $contentHandler,
+			],
+		] + $contentHandlers );
 
 		$page = $this->getExistingTestPage();
 		$rev = new MutableRevisionRecord( $page );
 		$rev->setSlot(
 			SlotRecord::newUnsaved(
 				SlotRecord::MAIN,
-				new JavaScriptContent( '{}' )
+				new JavascriptContent( '{}' )
 			)
 		);
 
-		$update = $this->newLintUpdate( $parsoid, $this->newRenderedRevision( $page, $rev ) );
+		$update = $this->newLintUpdate( $this->newRenderedRevision( $page, $rev ) );
 		$update->doUpdate();
 	}
 
@@ -99,13 +103,7 @@ class LintUpdateTest extends MediaWikiIntegrationTestCase {
 	 * latest revision.
 	 */
 	public function testSkipOld() {
-		$parsoid = $this->createNoOpMock(
-			ParsoidParser::class,
-			[ 'parse' ]
-		);
-
-		$parsoid->expects( $this->never() )->method( 'parse' );
-
+		// This may use the "real" wikitext content handler
 		$page = $this->getExistingTestPage();
 		$rev = new MutableRevisionRecord( $page );
 		$rev->setSlot(
@@ -117,8 +115,22 @@ class LintUpdateTest extends MediaWikiIntegrationTestCase {
 
 		// make it not the current revision
 		$rev->setId( $page->getLatest() - 1 );
+		$newRev = $this->newRenderedRevision( $page, $rev );
 
-		$update = $this->newLintUpdate( $parsoid, $this->newRenderedRevision( $page, $rev ) );
+		// Ok, now set up a mock content handler for the remainder
+		$contentHandler = $this->createNoOpMock(
+			WikitextContentHandler::class,
+			[ 'getParserOutput' ]
+		);
+		$contentHandler->expects( $this->never() )->method( 'getParserOutput' );
+		$contentHandlers = $this->getConfVar( MainConfigNames::ContentHandlers );
+		$this->overrideConfigValue( MainConfigNames::ContentHandlers, [
+			CONTENT_MODEL_WIKITEXT => [
+				'factory' => fn () => $contentHandler,
+			],
+		] + $contentHandlers );
+
+		$update = $this->newLintUpdate( $newRev );
 		$update->doUpdate();
 	}
 
@@ -183,11 +195,10 @@ class LintUpdateTest extends MediaWikiIntegrationTestCase {
 		return $rrev;
 	}
 
-	private function newLintUpdate( ParsoidParser $parsoid, RenderedRevision $renderedRevision ) {
+	private function newLintUpdate( RenderedRevision $renderedRevision ) {
 		$wikiPageFactory = $this->getServiceContainer()->getWikiPageFactory();
 
 		return new LintUpdate(
-			$parsoid,
 			$wikiPageFactory,
 			$renderedRevision
 		);
