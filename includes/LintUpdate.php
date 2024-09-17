@@ -24,22 +24,28 @@ use MediaWiki\Content\Renderer\ContentParseParams;
 use MediaWiki\Content\TextContent;
 use MediaWiki\Deferred\DataUpdate;
 use MediaWiki\Logger\LoggerFactory;
+use MediaWiki\MainConfigNames;
+use MediaWiki\MediaWikiServices;
 use MediaWiki\Page\WikiPageFactory;
 use MediaWiki\Revision\RenderedRevision;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\SlotRecord;
+use Wikimedia\Stats\StatsFactory;
 
 class LintUpdate extends DataUpdate {
 
 	private WikiPageFactory $wikiPageFactory;
+	private StatsFactory $statsFactory;
 	private RenderedRevision $renderedRevision;
 
 	public function __construct(
 		WikiPageFactory $wikiPageFactory,
+		StatsFactory $statsFactory,
 		RenderedRevision $renderedRevision
 	) {
 		parent::__construct();
 		$this->wikiPageFactory = $wikiPageFactory;
+		$this->statsFactory = $statsFactory;
 		$this->renderedRevision = $renderedRevision;
 	}
 
@@ -62,6 +68,10 @@ class LintUpdate extends DataUpdate {
 
 		$pOptions = $page->makeParserOptions( 'canonical' );
 		$pOptions->setUseParsoid();
+		$pOptions->setRenderReason( 'LintUpdate' );
+
+		// XXX no previous output available on this code path
+		$previousOutput = null;
 
 		LoggerFactory::getInstance( 'Linter' )->debug(
 			'{method}: Parsing {page}',
@@ -83,9 +93,34 @@ class LintUpdate extends DataUpdate {
 			$pOptions,
 			// no need to generate HTML
 			false,
-			// XXX no previous output available
-			null
+			$previousOutput
 		);
-		$content->getContentHandler()->getParserOutput( $content, $cpoParams );
+		$output = $content->getContentHandler()->getParserOutput( $content, $cpoParams );
+
+		// T371713: Temporary statistics collection code to determine
+		// feasibility of Parsoid selective update
+		$sampleRate = MediaWikiServices::getInstance()->getMainConfig()->get(
+			MainConfigNames::ParsoidSelectiveUpdateSampleRate
+		);
+		$doSample = ( $sampleRate && mt_rand( 1, $sampleRate ) === 1 );
+		if ( $doSample ) {
+			$labels = [
+				'source' => 'LintUpdate',
+				'type' => 'full',
+				'reason' => $pOptions->getRenderReason(),
+				'parser' => 'parsoid',
+				'opportunistic' => 'false',
+			];
+			$totalStat = $this->statsFactory
+				->getCounter( 'parsercache_selective_total' );
+			$timeStat = $this->statsFactory
+				->getCounter( 'parsercache_selective_cpu_seconds' );
+			foreach ( $labels as $key => $value ) {
+				$totalStat->setLabel( $key, $value );
+				$timeStat->setLabel( $key, $value );
+			}
+			$totalStat->increment();
+			$timeStat->incrementBy( $output->getTimeProfile( 'cpu' ) );
+		}
 	}
 }

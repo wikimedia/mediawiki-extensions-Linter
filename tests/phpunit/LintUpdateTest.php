@@ -32,6 +32,7 @@ use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\SlotRecord;
 use MediaWikiIntegrationTestCase;
 use RefreshLinksJob;
+use Wikimedia\Stats\StatsFactory;
 use WikiPage;
 use WikitextContent;
 
@@ -200,6 +201,7 @@ class LintUpdateTest extends MediaWikiIntegrationTestCase {
 
 		return new LintUpdate(
 			$wikiPageFactory,
+			StatsFactory::newNull(),
 			$renderedRevision
 		);
 	}
