@@ -105,5 +105,6 @@
 	"linterrors-subpage": "Lint hataları: $1",
 	"linterrors-summary": "<strong>Not:</strong> Kategorilerde gösterilen sayımlar tam değildir, tahmine dayalıdır.",
 	"multi-part-template-block": "Çıktı tek bir şablondan değil",
-	"pageinfo-linter": "Lint hataları"
+	"pageinfo-linter": "Lint hataları",
+	"pageinfo-linter-moreinfo": "Lint hataları hakkında ayrıntılı bilgiye ulaşın."
 }
