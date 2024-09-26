@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"BHARATHESHA ALASANDEMAJALU"
+			"BHARATHESHA ALASANDEMAJALU",
+			"Pragathi. BH"
 		]
 	},
+	"linter-category-duplicate-ids": "ನಕಲು ಐಡಿಲು",
+	"linter-category-duplicate-ids-desc": "ಈ ಪುಟೊಕುಲು ನಕಲಿ ಐಡಿ ಗುಣಲಕ್ಷಣೊಲೆನ್ ಹೊಂದಿರುವ ಅಂಶೊಲೆನ್ ಪಡೆಯೊಂದಿತ್ತೆ.",
 	"linter-page-history": "ಇತಿಹಾಸೊ"
 }
