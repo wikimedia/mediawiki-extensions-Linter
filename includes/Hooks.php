@@ -38,7 +38,6 @@ use MediaWiki\Output\OutputPage;
 use MediaWiki\Page\Hook\RevisionFromEditCompleteHook;
 use MediaWiki\Page\Hook\WikiPageDeletionUpdatesHook;
 use MediaWiki\Page\WikiPageFactory;
-use MediaWiki\Parser\Parsoid\ParsoidParserFactory;
 use MediaWiki\Revision\RenderedRevision;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\SpecialPage\SpecialPage;
@@ -59,7 +58,6 @@ class Hooks implements
 {
 	private LinkRenderer $linkRenderer;
 	private JobQueueGroup $jobQueueGroup;
-	private ParsoidParserFactory $parsoidParserFactory;
 	private WikiPageFactory $wikiPageFactory;
 	private CategoryManager $categoryManager;
 	private TotalsLookup $totalsLookup;
@@ -69,7 +67,6 @@ class Hooks implements
 	/**
 	 * @param LinkRenderer $linkRenderer
 	 * @param JobQueueGroup $jobQueueGroup
-	 * @param ParsoidParserFactory $parsoidParserFactory
 	 * @param WikiPageFactory $wikiPageFactory
 	 * @param CategoryManager $categoryManager
 	 * @param TotalsLookup $totalsLookup
@@ -78,7 +75,6 @@ class Hooks implements
 	public function __construct(
 		LinkRenderer $linkRenderer,
 		JobQueueGroup $jobQueueGroup,
-		ParsoidParserFactory $parsoidParserFactory,
 		WikiPageFactory $wikiPageFactory,
 		CategoryManager $categoryManager,
 		TotalsLookup $totalsLookup,
@@ -87,7 +83,6 @@ class Hooks implements
 	) {
 		$this->linkRenderer = $linkRenderer;
 		$this->jobQueueGroup = $jobQueueGroup;
-		$this->parsoidParserFactory = $parsoidParserFactory;
 		$this->wikiPageFactory = $wikiPageFactory;
 		$this->categoryManager = $categoryManager;
 		$this->totalsLookup = $totalsLookup;
@@ -363,7 +358,6 @@ class Hooks implements
 		}
 
 		$updates[] = new LintUpdate(
-			$this->parsoidParserFactory->create(),
 			$this->wikiPageFactory,
 			$renderedRevision
 		);

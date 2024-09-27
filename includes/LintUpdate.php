@@ -20,28 +20,25 @@
 
 namespace MediaWiki\Linter;
 
+use MediaWiki\Content\Renderer\ContentParseParams;
 use MediaWiki\Content\TextContent;
 use MediaWiki\Deferred\DataUpdate;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\Page\WikiPageFactory;
-use MediaWiki\Parser\Parsoid\ParsoidParser;
 use MediaWiki\Revision\RenderedRevision;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\SlotRecord;
 
 class LintUpdate extends DataUpdate {
 
-	private ParsoidParser $parsoid;
 	private WikiPageFactory $wikiPageFactory;
 	private RenderedRevision $renderedRevision;
 
 	public function __construct(
-		ParsoidParser $parsoid,
 		WikiPageFactory $wikiPageFactory,
 		RenderedRevision $renderedRevision
 	) {
 		parent::__construct();
-		$this->parsoid = $parsoid;
 		$this->wikiPageFactory = $wikiPageFactory;
 		$this->renderedRevision = $renderedRevision;
 	}
@@ -80,13 +77,15 @@ class LintUpdate extends DataUpdate {
 		// However, unlike RefreshLinksJob, we don't parse if we already
 		// have the output in the cache. This avoids duplicating the effort
 		// of ParsoidCachePrewarmJob.
-		$this->parsoid->parse(
-			$content->getText(),
+		$cpoParams = new ContentParseParams(
 			$rev->getPage(),
+			$rev->getId(),
 			$pOptions,
-			true,
-			true,
-			$rev->getId()
+			// no need to generate HTML
+			false,
+			// XXX no previous output available
+			null
 		);
+		$content->getContentHandler()->getParserOutput( $content, $cpoParams );
 	}
 }

@@ -30,7 +30,6 @@
 			"services": [
 				"LinkRenderer",
 				"JobQueueGroup",
-				"ParsoidParserFactory",
 				"WikiPageFactory",
 				"Linter.CategoryManager",
 				"Linter.TotalsLookup",
