@@ -45,6 +45,7 @@ use MediaWiki\Storage\Hook\RevisionDataUpdatesHook;
 use MediaWiki\Title\Title;
 use MediaWiki\User\UserIdentity;
 use Skin;
+use Wikimedia\Stats\StatsFactory;
 use WikiPage;
 
 class Hooks implements
@@ -59,6 +60,7 @@ class Hooks implements
 	private LinkRenderer $linkRenderer;
 	private JobQueueGroup $jobQueueGroup;
 	private WikiPageFactory $wikiPageFactory;
+	private StatsFactory $statsFactory;
 	private CategoryManager $categoryManager;
 	private TotalsLookup $totalsLookup;
 	private Database $database;
@@ -68,6 +70,7 @@ class Hooks implements
 	 * @param LinkRenderer $linkRenderer
 	 * @param JobQueueGroup $jobQueueGroup
 	 * @param WikiPageFactory $wikiPageFactory
+	 * @param StatsFactory $statsFactory
 	 * @param CategoryManager $categoryManager
 	 * @param TotalsLookup $totalsLookup
 	 * @param Database $database
@@ -76,6 +79,7 @@ class Hooks implements
 		LinkRenderer $linkRenderer,
 		JobQueueGroup $jobQueueGroup,
 		WikiPageFactory $wikiPageFactory,
+		StatsFactory $statsFactory,
 		CategoryManager $categoryManager,
 		TotalsLookup $totalsLookup,
 		Database $database,
@@ -84,6 +88,7 @@ class Hooks implements
 		$this->linkRenderer = $linkRenderer;
 		$this->jobQueueGroup = $jobQueueGroup;
 		$this->wikiPageFactory = $wikiPageFactory;
+		$this->statsFactory = $statsFactory;
 		$this->categoryManager = $categoryManager;
 		$this->totalsLookup = $totalsLookup;
 		$this->database = $database;
@@ -359,7 +364,8 @@ class Hooks implements
 
 		$updates[] = new LintUpdate(
 			$this->wikiPageFactory,
-			$renderedRevision
+			$this->statsFactory,
+			$renderedRevision,
 		);
 	}
 }
