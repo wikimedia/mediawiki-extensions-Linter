@@ -22,6 +22,7 @@
 	"linter-category-deletable-table-tag": "應被刪除的表格標籤",
 	"linter-category-deletable-table-tag-desc": "這些頁面擁有應被刪除的表格標籤。",
 	"linter-category-duplicate-ids": "重複ID",
+	"linter-category-duplicate-ids-desc": "這些頁面含有重複 id 屬性的元素。",
 	"linter-category-fostered": "表格不合法內容",
 	"linter-category-fostered-desc": "這些頁面的表格中含有不合法內容。",
 	"linter-category-fostered-transparent": "不合法透明內容渲染",

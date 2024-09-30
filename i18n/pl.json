@@ -3,6 +3,7 @@
 		"authors": [
 			"Chrumps",
 			"Matma Rex",
+			"Meeqoo",
 			"Msz2001",
 			"Rail",
 			"WTM",
@@ -16,6 +17,7 @@
 	"linter-category-large-tables-desc": "Na tych stronach znajdują się tabele, które trudno przeglądać na urządzeniach mobilnych",
 	"linter-category-deletable-table-tag": "Nadmiarowe znaczniki tabeli do usunięcia",
 	"linter-category-deletable-table-tag-desc": "Te strony zawierają nadmiarowe znaczniki tabeli, zagnieżdżone w innej tabeli, które powinny zostać usunięte.",
+	"linter-category-duplicate-ids": "Zduplikowane identyfikatory",
 	"linter-category-fostered": "Osierocona zawartość",
 	"linter-category-fostered-desc": "Na tych stronach występuje osierocona zawartość.",
 	"linter-category-fostered-transparent": "Osierocona niewidoczna zawartość",
@@ -82,6 +84,7 @@
 	"linter-pager-category-header": "Kategoria",
 	"linter-pager-deletable-table-tag-details": "Nadmiarowe znaczniki tabeli do usunięcia",
 	"linter-pager-details-header": "Dodatkowe informacje",
+	"linter-pager-duplicate-ids-details": "Zduplikowane ID",
 	"linter-pager-fostered-details": "Osierocona zawartość",
 	"linter-pager-fostered-transparent-details": "Osierocona niewidoczna zawartość",
 	"linter-pager-html5-misnesting-details": "Źle zagnieżdżone (i widoczne uszkodzenia)",
