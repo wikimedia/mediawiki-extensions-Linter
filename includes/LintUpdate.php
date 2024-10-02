@@ -20,32 +20,29 @@
 
 namespace MediaWiki\Linter;
 
-use MediaWiki\Content\Renderer\ContentParseParams;
 use MediaWiki\Content\TextContent;
 use MediaWiki\Deferred\DataUpdate;
 use MediaWiki\Logger\LoggerFactory;
-use MediaWiki\MainConfigNames;
-use MediaWiki\MediaWikiServices;
+use MediaWiki\Page\ParserOutputAccess;
 use MediaWiki\Page\WikiPageFactory;
 use MediaWiki\Revision\RenderedRevision;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\SlotRecord;
-use Wikimedia\Stats\StatsFactory;
 
 class LintUpdate extends DataUpdate {
 
 	private WikiPageFactory $wikiPageFactory;
-	private StatsFactory $statsFactory;
+	private ParserOutputAccess $parserOutputAccess;
 	private RenderedRevision $renderedRevision;
 
 	public function __construct(
 		WikiPageFactory $wikiPageFactory,
-		StatsFactory $statsFactory,
+		ParserOutputAccess $parserOutputAccess,
 		RenderedRevision $renderedRevision
 	) {
 		parent::__construct();
 		$this->wikiPageFactory = $wikiPageFactory;
-		$this->statsFactory = $statsFactory;
+		$this->parserOutputAccess = $parserOutputAccess;
 		$this->renderedRevision = $renderedRevision;
 	}
 
@@ -70,9 +67,6 @@ class LintUpdate extends DataUpdate {
 		$pOptions->setUseParsoid();
 		$pOptions->setRenderReason( 'LintUpdate' );
 
-		// XXX no previous output available on this code path
-		$previousOutput = null;
-
 		LoggerFactory::getInstance( 'Linter' )->debug(
 			'{method}: Parsing {page}',
 			[
@@ -86,41 +80,12 @@ class LintUpdate extends DataUpdate {
 		// This matches the behavior of RefreshLinksJob.
 		// However, unlike RefreshLinksJob, we don't parse if we already
 		// have the output in the cache. This avoids duplicating the effort
-		// of ParsoidCachePrewarmJob.
-		$cpoParams = new ContentParseParams(
-			$rev->getPage(),
-			$rev->getId(),
-			$pOptions,
-			// no need to generate HTML
-			false,
-			$previousOutput
+		// of ParsoidCachePrewarmJob / DiscussionTools
+		// (note that even with OPT_NO_UPDATE_CACHE we still update the
+		// *local* cache, which prevents wasting effort on duplicate parses)
+		$this->parserOutputAccess->getParserOutput(
+			$page, $pOptions, $rev,
+			ParserOutputAccess::OPT_NO_UPDATE_CACHE
 		);
-		$output = $content->getContentHandler()->getParserOutput( $content, $cpoParams );
-
-		// T371713: Temporary statistics collection code to determine
-		// feasibility of Parsoid selective update
-		$sampleRate = MediaWikiServices::getInstance()->getMainConfig()->get(
-			MainConfigNames::ParsoidSelectiveUpdateSampleRate
-		);
-		$doSample = ( $sampleRate && mt_rand( 1, $sampleRate ) === 1 );
-		if ( $doSample ) {
-			$labels = [
-				'source' => 'LintUpdate',
-				'type' => 'full',
-				'reason' => $pOptions->getRenderReason(),
-				'parser' => 'parsoid',
-				'opportunistic' => 'false',
-			];
-			$totalStat = $this->statsFactory
-				->getCounter( 'parsercache_selective_total' );
-			$timeStat = $this->statsFactory
-				->getCounter( 'parsercache_selective_cpu_seconds' );
-			foreach ( $labels as $key => $value ) {
-				$totalStat->setLabel( $key, $value );
-				$timeStat->setLabel( $key, $value );
-			}
-			$totalStat->increment();
-			$timeStat->incrementBy( $output->getTimeProfile( 'cpu' ) );
-		}
 	}
 }

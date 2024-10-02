@@ -31,7 +31,7 @@
 				"LinkRenderer",
 				"JobQueueGroup",
 				"WikiPageFactory",
-				"StatsFactory",
+				"ParserOutputAccess",
 				"Linter.CategoryManager",
 				"Linter.TotalsLookup",
 				"Linter.Database",
