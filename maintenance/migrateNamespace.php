@@ -39,14 +39,12 @@ class MigrateNamespace extends LoggedUpdateMaintenance {
 	 * @inheritDoc
 	 */
 	protected function doDBUpdates() {
-		$config = $this->getConfig();
-
 		$this->output( "Running linter migrate namespace function, this may take a while\n" );
 
 		$batchSize = $this->getBatchSize();
 		$sleep = (int)$this->getOption( 'sleep', 1 );
 
-		$dbw = self::getDB( DB_PRIMARY );
+		$dbw = $this->getDB( DB_PRIMARY );
 		if ( !$dbw->fieldExists( 'linter', 'linter_namespace', __METHOD__ ) ) {
 			$this->output( "Run update.php to add linter_namespace field to the linter table.\n" );
 			return false;

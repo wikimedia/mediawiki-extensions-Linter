@@ -43,7 +43,7 @@ class MigrateTagTemplate extends LoggedUpdateMaintenance {
 		$batchSize = $this->getBatchSize();
 		$sleep = (int)$this->getOption( 'sleep', 1 );
 
-		$dbw = self::getDB( DB_PRIMARY );
+		$dbw = $this->getDB( DB_PRIMARY );
 		if ( !$dbw->fieldExists( 'linter', 'linter_template', __METHOD__ ) ) {
 			$this->output( "Run update.php to add linter_tag and linter_template fields to the linter table.\n" );
 			return false;
