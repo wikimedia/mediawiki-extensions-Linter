@@ -32,7 +32,6 @@ use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\SlotRecord;
 use MediaWikiIntegrationTestCase;
 use RefreshLinksJob;
-use Wikimedia\Stats\StatsFactory;
 use WikiPage;
 use WikitextContent;
 
@@ -45,10 +44,15 @@ class LintUpdateTest extends MediaWikiIntegrationTestCase {
 	protected function setUp(): void {
 		parent::setUp();
 
-		$this->overrideConfigValue( MainConfigNames::ParsoidSettings, [
-			'linting' => true
+		$this->overrideConfigValues( [
+			MainConfigNames::ParsoidSettings => [
+				'linting' => true
+			],
+			'LinterParseOnDerivedDataUpdate' => true,
+			// Ensure that parser cache contents don't
+			// affect tests.
+			'ParserCacheType' => CACHE_NONE,
 		] );
-		$this->overrideConfigValue( 'LinterParseOnDerivedDataUpdate', true );
 	}
 
 	/**
@@ -94,6 +98,8 @@ class LintUpdateTest extends MediaWikiIntegrationTestCase {
 				new JavascriptContent( '{}' )
 			)
 		);
+		// Clear the local cache in the ParserOutputAccess
+		$this->resetServices();
 
 		$update = $this->newLintUpdate( $this->newRenderedRevision( $page, $rev ) );
 		$update->doUpdate();
@@ -131,6 +137,9 @@ class LintUpdateTest extends MediaWikiIntegrationTestCase {
 			],
 		] + $contentHandlers );
 
+		// Clear the local cache in the ParserOutputAccess
+		$this->resetServices();
+
 		$update = $this->newLintUpdate( $newRev );
 		$update->doUpdate();
 	}
@@ -142,6 +151,9 @@ class LintUpdateTest extends MediaWikiIntegrationTestCase {
 	 * @covers \MediaWiki\Linter\Hooks::onRevisionDataUpdates
 	 */
 	public function testPageEditIntegration() {
+		// Clear the local cache in the ParserOutputAccess
+		$this->resetServices();
+
 		$hookCalled = 0;
 		$this->setTemporaryHook( 'ParserLogLinterData', static function () use ( &$hookCalled ) {
 			$hookCalled++;
@@ -165,6 +177,8 @@ class LintUpdateTest extends MediaWikiIntegrationTestCase {
 	public function testRefreshLinksJobIntegration() {
 		// NOTE: This performs an edit, so do it before installing the temp hook below!
 		$page = $this->getExistingTestPage();
+		// Clear the local cache in the ParserOutputAccess
+		$this->resetServices();
 
 		$hookCalled = 0;
 		$this->setTemporaryHook( 'ParserLogLinterData', static function () use ( &$hookCalled ) {
@@ -192,16 +206,19 @@ class LintUpdateTest extends MediaWikiIntegrationTestCase {
 		);
 
 		$rrev->setRevisionParserOutput( new ParserOutput( 'testing' ) );
+		// Clear the local cache in the ParserOutputAccess
+		$this->resetServices();
 
 		return $rrev;
 	}
 
 	private function newLintUpdate( RenderedRevision $renderedRevision ) {
 		$wikiPageFactory = $this->getServiceContainer()->getWikiPageFactory();
+		$parserOutputAccess = $this->getServiceContainer()->getParserOutputAccess();
 
 		return new LintUpdate(
 			$wikiPageFactory,
-			StatsFactory::newNull(),
+			$parserOutputAccess,
 			$renderedRevision
 		);
 	}

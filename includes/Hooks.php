@@ -37,6 +37,7 @@ use MediaWiki\Output\Hook\BeforePageDisplayHook;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Page\Hook\RevisionFromEditCompleteHook;
 use MediaWiki\Page\Hook\WikiPageDeletionUpdatesHook;
+use MediaWiki\Page\ParserOutputAccess;
 use MediaWiki\Page\WikiPageFactory;
 use MediaWiki\Revision\RenderedRevision;
 use MediaWiki\Revision\RevisionRecord;
@@ -45,7 +46,6 @@ use MediaWiki\Storage\Hook\RevisionDataUpdatesHook;
 use MediaWiki\Title\Title;
 use MediaWiki\User\UserIdentity;
 use Skin;
-use Wikimedia\Stats\StatsFactory;
 use WikiPage;
 
 class Hooks implements
@@ -60,7 +60,7 @@ class Hooks implements
 	private LinkRenderer $linkRenderer;
 	private JobQueueGroup $jobQueueGroup;
 	private WikiPageFactory $wikiPageFactory;
-	private StatsFactory $statsFactory;
+	private ParserOutputAccess $parserOutputAccess;
 	private CategoryManager $categoryManager;
 	private TotalsLookup $totalsLookup;
 	private Database $database;
@@ -70,7 +70,7 @@ class Hooks implements
 	 * @param LinkRenderer $linkRenderer
 	 * @param JobQueueGroup $jobQueueGroup
 	 * @param WikiPageFactory $wikiPageFactory
-	 * @param StatsFactory $statsFactory
+	 * @param ParserOutputAccess $parserOutputAccess
 	 * @param CategoryManager $categoryManager
 	 * @param TotalsLookup $totalsLookup
 	 * @param Database $database
@@ -79,7 +79,7 @@ class Hooks implements
 		LinkRenderer $linkRenderer,
 		JobQueueGroup $jobQueueGroup,
 		WikiPageFactory $wikiPageFactory,
-		StatsFactory $statsFactory,
+		ParserOutputAccess $parserOutputAccess,
 		CategoryManager $categoryManager,
 		TotalsLookup $totalsLookup,
 		Database $database,
@@ -88,7 +88,7 @@ class Hooks implements
 		$this->linkRenderer = $linkRenderer;
 		$this->jobQueueGroup = $jobQueueGroup;
 		$this->wikiPageFactory = $wikiPageFactory;
-		$this->statsFactory = $statsFactory;
+		$this->parserOutputAccess = $parserOutputAccess;
 		$this->categoryManager = $categoryManager;
 		$this->totalsLookup = $totalsLookup;
 		$this->database = $database;
@@ -364,7 +364,7 @@ class Hooks implements
 
 		$updates[] = new LintUpdate(
 			$this->wikiPageFactory,
-			$this->statsFactory,
+			$this->parserOutputAccess,
 			$renderedRevision,
 		);
 	}
