@@ -1,5 +1,9 @@
 <?php
 
+namespace MediaWiki\Linter\Maintenance;
+
+use LoggedUpdateMaintenance;
+
 /**
  * Maintenance script that migrates the linter_params field value to the new tag and template fields
  * Note: The schema migration "patch-linter-add-template-tag-fields.json" is expected to have been done.

@@ -1,5 +1,9 @@
 <?php
 
+namespace MediaWiki\Linter\Maintenance;
+
+use LoggedUpdateMaintenance;
+
 /**
  * Maintenance script that migrates the page table page_namespace field values
  * to the linter table linter_namespace field to improve linter search performance.

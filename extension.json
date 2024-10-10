@@ -12,6 +12,10 @@
 	"requires": {
 		"MediaWiki": ">= 1.43"
 	},
+	"AutoloadClasses": {
+		"MediaWiki\\Linter\\Maintenance\\MigrateNamespace": "maintenance/migrateNamespace.php",
+		"MediaWiki\\Linter\\Maintenance\\MigrateTagTemplate": "maintenance/migrateTagTemplate.php"
+	},
 	"AutoloadNamespaces": {
 		"MediaWiki\\Linter\\": "includes/"
 	},
