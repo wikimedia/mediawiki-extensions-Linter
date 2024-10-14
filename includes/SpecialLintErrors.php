@@ -198,25 +198,26 @@ class SpecialLintErrors extends SpecialPage {
 	 * @return array
 	 */
 	protected function findNamespaces( $request ) {
-		$namespaces = [];
-		$activeNamespaces = array_keys(
-			$this->namespaceInfo->getCanonicalNamespaces()
-		);
-		// Remove -2 = "media" and -1 = "Special" namespace elements
-		$activeNamespaces = array_filter( $activeNamespaces,
-			static function ( $x ) {
-				return $x >= 0;
-			}
-		);
-		if ( $request->getCheck( 'wpNamespaceRestrictions' ) ) {
-			$namespaceRequestValues = $request->getRawVal( 'wpNamespaceRestrictions' ) ?? '';
-			if ( $namespaceRequestValues !== '' ) {
-				$namespaceIDs = array_map( 'intval', explode( "\n", $namespaceRequestValues ) );
-				// Security measure: only allow active namespace IDs to reach the query
-				$namespaces = array_values( array_intersect( $activeNamespaces, $namespaceIDs ) );
-			}
+		$namespaceRequestValues = $request->getRawVal( 'wpNamespaceRestrictions' ) ?? '';
+		if ( $namespaceRequestValues === '' ) {
+			return [];
 		}
-		return $namespaces;
+
+		// Security measure: only allow active namespace IDs to reach the query
+		return array_values(
+			array_intersect(
+				// Remove -2 = "media" and -1 = "Special" namespace elements
+				array_filter(
+					array_keys(
+						$this->namespaceInfo->getCanonicalNamespaces()
+					),
+					static function ( $x ) {
+						return $x >= 0;
+					}
+				),
+				array_map( 'intval', explode( "\n", $namespaceRequestValues ) )
+			)
+		);
 	}
 
 	/**
