@@ -209,8 +209,8 @@ class SpecialLintErrors extends SpecialPage {
 			}
 		);
 		if ( $request->getCheck( 'wpNamespaceRestrictions' ) ) {
-			$namespaceRequestValues = $request->getRawVal( 'wpNamespaceRestrictions' );
-			if ( strlen( $namespaceRequestValues ) > 0 ) {
+			$namespaceRequestValues = $request->getRawVal( 'wpNamespaceRestrictions' ) ?? '';
+			if ( $namespaceRequestValues !== '' ) {
 				$namespaceIDs = array_map( 'intval', explode( "\n", $namespaceRequestValues ) );
 				// Security measure: only allow active namespace IDs to reach the query
 				$namespaces = array_values( array_intersect( $activeNamespaces, $namespaceIDs ) );
