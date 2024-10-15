@@ -17,7 +17,7 @@
 	"linter-category-deletable-table-tag": "টেবিল ট্যাগ যা মুছে ফেলা উচিত",
 	"linter-category-deletable-table-tag-desc": "এই সব পাতায় টেবিল ট্যাগ রয়েছে যা মুছে ফেলা উচিত।",
 	"linter-category-duplicate-ids": "ডুপ্লিকেট আইডি",
-	"linter-category-duplicate-ids-desc": "এই পৃষ্ঠাগুলিতে ডুপ্লিকেট  আইডি বৈশিষ্ট্য সহ উপাদান রয়েছে৷",
+	"linter-category-duplicate-ids-desc": "এই পাতাগুলিতে সদৃশ্য আইডি বৈশিষ্ট্যযুক্ত উপাদান রয়েছে।",
 	"linter-category-misc-tidy-replacement-issues": "বিবিধ সমস্যা",
 	"linter-category-missing-end-tag": "সমাপ্ত হবার ট্যাগ অনুপস্থিত",
 	"linter-category-self-closed-tag": "স্ব-বন্ধকৃত ট্যাগ",
