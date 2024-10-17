@@ -87,5 +87,6 @@
 	"linterrors-subpage": "Errori di Lint: $1",
 	"linterrors-summary": "<strong>Nota:</strong> i conteggi degli errori non sono esatti, bensì stimati.",
 	"multi-part-template-block": "Generato da più di un template",
-	"pageinfo-linter": "Errori di Lint"
+	"pageinfo-linter": "Errori di Lint",
+	"pageinfo-linter-moreinfo": "Visualizza informazioni dettagliate sugli errori di Lint."
 }
