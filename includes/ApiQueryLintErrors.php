@@ -51,11 +51,14 @@ class ApiQueryLintErrors extends ApiQueryBase {
 		$this->requireMaxOneParameter( $params, 'pageid', 'title' );
 		$this->requireMaxOneParameter( $params, 'namespace', 'title' );
 
+		$useIndex = true;
 		$categories = $params['categories'];
 		if ( !$categories ) {
 			$categories = $this->categoryManager->getVisibleCategories();
 		}
-
+		if ( count( $categories ) > 1 ) {
+			$useIndex = false;
+		}
 		$this->addTables( 'linter' );
 		$this->addWhereFld( 'linter_cat', array_values( $this->categoryManager->getCategoryIds(
 			$categories
@@ -67,14 +70,17 @@ class ApiQueryLintErrors extends ApiQueryBase {
 		if ( $params['pageid'] !== null ) {
 			// This can be an array or a single pageid
 			$this->addWhereFld( 'linter_page', $params['pageid'] );
+			$useIndex = false;
 		}
 		if ( $params['namespace'] !== null ) {
 			$this->addWhereFld( 'page_namespace', $params['namespace'] );
+			$useIndex = false;
 		}
 		if ( $params['title'] !== null ) {
 			$title = $this->getTitleFromTitleOrPageId( [ 'title' => $params['title'] ] );
 			$this->addWhereFld( 'page_namespace', $title->getNamespace() );
 			$this->addWhereFld( 'page_title', $title->getDBkey() );
+			$useIndex = false;
 		}
 		$this->addTables( 'page' );
 		$this->addJoinConds( [ 'page' => [ 'INNER JOIN', 'page_id=linter_page' ] ] );
@@ -83,6 +89,10 @@ class ApiQueryLintErrors extends ApiQueryBase {
 			'linter_start', 'linter_end',
 			'page_namespace', 'page_title',
 		] );
+		if ( $useIndex ) {
+			// T200517#10236299: Force the use of the category index
+			$this->addOption( 'USE INDEX', [ 'linter' => 'linter_cat_page_position' ] );
+		}
 		// Be explicit about ORDER BY
 		$this->addOption( 'ORDER BY', 'linter_id' );
 		// Add +1 to limit to know if there's another row for continuation

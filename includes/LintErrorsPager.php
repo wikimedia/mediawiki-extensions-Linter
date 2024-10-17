@@ -116,6 +116,8 @@ class LintErrorsPager extends TablePager {
 			] )
 			->where( [ 'linter_cat' => $this->categoryId ] );
 
+		$useIndex = false;
+
 		if ( $this->title !== '' ) {
 			$namespaces = $this->namespaces ?: [ NS_MAIN ];
 			// Specify page_namespace so that the index can be used (T360865)
@@ -134,14 +136,23 @@ class LintErrorsPager extends TablePager {
 			}
 		} elseif ( $this->namespaces ) {
 			$queryBuilder->where( [ 'linter_namespace' => $this->namespaces ] );
+		} else {
+			$useIndex = true;
 		}
 
 		if ( $this->throughTemplate !== 'all' ) {
+			$useIndex = false;
 			$op = ( $this->throughTemplate === 'with' ) ? '!=' : '=';
 			$queryBuilder->where( $this->mDb->expr( 'linter_template', $op, '' ) );
 		}
 		if ( $this->tag !== 'all' && ( new HtmlTags( $this ) )->checkAllowedHTMLTags( $this->tag ) ) {
+			$useIndex = false;
 			$queryBuilder->where( [ 'linter_tag'  => $this->tag ] );
+		}
+
+		if ( $useIndex ) {
+			// T200517#10236299: Force the use of the category index
+			$queryBuilder->option( 'USE INDEX', [ 'linter' => 'linter_cat_page_position' ] );
 		}
 	}
 
