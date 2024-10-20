@@ -20,11 +20,11 @@
 
 namespace MediaWiki\Linter;
 
-use IBufferingStatsdDataFactory;
 use MediaWiki\Config\ServiceOptions;
 use MediaWiki\WikiMap\WikiMap;
-use WANObjectCache;
+use Wikimedia\ObjectCache\WANObjectCache;
 use Wikimedia\Rdbms\Database as MWDatabase;
+use Wikimedia\Stats\IBufferingStatsdDataFactory;
 
 /**
  * Lookup to find and cache the total amount of

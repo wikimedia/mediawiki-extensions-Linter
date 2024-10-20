@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Linter\Maintenance;
 
-use LoggedUpdateMaintenance;
+use MediaWiki\Maintenance\LoggedUpdateMaintenance;
 
 /**
  * Maintenance script that migrates the linter_params field value to the new tag and template fields

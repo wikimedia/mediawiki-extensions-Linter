@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Linter\Maintenance;
 
-use LoggedUpdateMaintenance;
+use MediaWiki\Maintenance\LoggedUpdateMaintenance;
 
 /**
  * Maintenance script that migrates the page table page_namespace field values

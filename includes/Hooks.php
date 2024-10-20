@@ -20,12 +20,12 @@
 
 namespace MediaWiki\Linter;
 
-use ApiQuerySiteinfo;
-use Content;
 use JobQueueError;
 use JobQueueGroup;
+use MediaWiki\Api\ApiQuerySiteinfo;
 use MediaWiki\Api\Hook\APIQuerySiteInfoGeneralInfoHook;
 use MediaWiki\Config\Config;
+use MediaWiki\Content\Content;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\Deferred\DeferrableUpdate;
 use MediaWiki\Deferred\MWCallableUpdate;

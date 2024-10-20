@@ -20,8 +20,8 @@
 
 namespace MediaWiki\Linter;
 
-use FormatJson;
 use MediaWiki\Config\ServiceOptions;
+use MediaWiki\Json\FormatJson;
 use MediaWiki\Logger\LoggerFactory;
 use stdClass;
 use Wikimedia\Rdbms\IDatabase;

@@ -22,6 +22,7 @@ namespace MediaWiki\Linter\Test;
 
 use MediaWiki\Content\JavaScriptContent;
 use MediaWiki\Content\JavaScriptContentHandler;
+use MediaWiki\Content\WikitextContent;
 use MediaWiki\Content\WikitextContentHandler;
 use MediaWiki\Linter\LintUpdate;
 use MediaWiki\MainConfigNames;
@@ -33,7 +34,6 @@ use MediaWiki\Revision\SlotRecord;
 use MediaWikiIntegrationTestCase;
 use RefreshLinksJob;
 use WikiPage;
-use WikitextContent;
 
 /**
  * @group Database

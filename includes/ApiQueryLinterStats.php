@@ -19,9 +19,9 @@
  */
 namespace MediaWiki\Linter;
 
-use ApiQuery;
-use ApiQueryBase;
-use ApiResult;
+use MediaWiki\Api\ApiQuery;
+use MediaWiki\Api\ApiQueryBase;
+use MediaWiki\Api\ApiResult;
 
 class ApiQueryLinterStats extends ApiQueryBase {
 

@@ -20,8 +20,8 @@
 
 namespace MediaWiki\Linter\Test;
 
-use ContentHandler;
 use Exception;
+use MediaWiki\Content\ContentHandler;
 use MediaWiki\Linter\RecordLintJob;
 use MediaWiki\Linter\SpecialLintErrors;
 use MediaWiki\Page\PageReference;
