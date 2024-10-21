@@ -20,7 +20,7 @@
 	"linter-category-large-tables-desc": "Description of category\n\nSimilar messages:\n* {{msg-mw|Linter-category-bogus-image-options-desc}}\n* {{msg-mw|Linter-category-fostered-desc}}\netc.",
 	"linter-category-deletable-table-tag": "Name of lint error category. See [[:mw:Help:Lint errors/deletable-table-tag]]",
 	"linter-category-deletable-table-tag-desc": "Description of category\n\nSimilar messages:\n* {{msg-mw|Linter-category-bogus-image-options-desc}}\n* {{msg-mw|Linter-category-fostered-desc}}\netc.",
-	"linter-category-duplicate-ids": "Name of lint error category. See [[:mw:Help:Lint errors/duplicate-ids]]",
+	"linter-category-duplicate-ids": "{{tracking category name}}\nName of lint error category. See [[:mw:Help:Lint errors/duplicate-ids]]",
 	"linter-category-duplicate-ids-desc": "Description of category\n\nSimilar messages:\n* {{msg-mw|Linter-category-deletable-table-tag-desc}}\n* {{msg-mw|Linter-category-fostered-desc}}\netc.",
 	"linter-category-fostered": "Name of lint error category. See [[:mw:Help:Lint errors/fostered]]",
 	"linter-category-fostered-desc": "Description of category. This lint error is explained on [[mw:Special:MyLanguage/Help:Lint errors/fostered]].\n\nSimilar messages:\n* {{msg-mw|Linter-category-bogus-image-options-desc}}\n* {{msg-mw|Linter-category-deletable-table-tag-desc}}\netc.",
