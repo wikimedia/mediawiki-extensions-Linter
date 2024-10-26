@@ -190,7 +190,7 @@ class LintUpdateTest extends MediaWikiIntegrationTestCase {
 		$this->assertSame( 1, $hookCalled );
 	}
 
-	private function newRenderedRevision( WikiPage $page = null, RevisionRecord $rev = null ) {
+	private function newRenderedRevision( ?WikiPage $page = null, ?RevisionRecord $rev = null ) {
 		$page = $this->getExistingTestPage();
 		$title = $page->getTitle();
 
