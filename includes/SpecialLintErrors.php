@@ -226,6 +226,7 @@ class SpecialLintErrors extends SpecialPage {
 	public function execute( $subPage ) {
 		$request = $this->getRequest();
 		$out = $this->getOutput();
+		$out->addModuleStyles( 'ext.linter.styles' );
 
 		$params = $request->getQueryValues();
 

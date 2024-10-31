@@ -101,6 +101,11 @@
 			"dependencies": [
 				"jquery.textSelection"
 			]
+		},
+		"ext.linter.styles": {
+			"styles": [
+				"special.less"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {
