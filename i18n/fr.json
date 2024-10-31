@@ -15,7 +15,11 @@
 			"Urhixidur",
 			"Verdy p",
 			"Wladek92",
-			"SleaY"
+			"SleaY",
+			"Mahabarata",
+			"McDutchie",
+			"Méthodes Bulebe Hangi",
+			"Terio legale"
 		]
 	},
 	"linterrors": "Erreurs d’analyse Lint",
@@ -88,7 +92,7 @@
 	"linter-pager-deletable-table-tag-details": "Balise de tableau qui devrait être supprimée",
 	"linter-pager-details-header": "Informations supplémentaires",
 	"linter-pager-html5-misnesting-details": "Mauvaise imbrication (maintenant hors service)",
-	"linter-pager-inline-media-caption-details": "Média inclus avec légendes",
+	"linter-pager-inline-media-caption-details": "Légende invisible",
 	"linter-pager-large-tables-details": "Tableau qui est large pour la visualisation sur mobile",
 	"linter-pager-misc-tidy-replacement-issues-details": "Erreurs diverses de balisage",
 	"linter-pager-misnested-tag-details": "Balise mal imbriquée qui devrait l’être correctement",
@@ -106,7 +110,7 @@
 	"linter-pager-tidy-whitespace-bug-details": "Anomalie de l’analyse des blancs",
 	"linter-pager-title-header": "Titre de la page",
 	"linter-pager-unclosed-quotes-in-heading-details": "Apostrophes non fermées dans un titre, qui débordent de la table des matières",
-	"linter-pager-wikilink-in-extlink-details": "Liens wiki inclus dans les liens externes devant être corrigés",
+	"linter-pager-wikilink-in-extlink-details": "Liens dans les liens",
 	"linter-prefix-search-subpage": "Pages ayant des erreurs d’analyse Lint correspondant à un préfixe de titre ou au titre complet : $1",
 	"linterrors-subpage": "Erreurs d’analyse Lint : $1",
 	"linterrors-summary": "<strong>Note :</strong> les compteurs pour les catégories ne sont pas forcément exacts, mais basés sur des estimations.",
