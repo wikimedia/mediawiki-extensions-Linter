@@ -102,7 +102,7 @@
 	"linter-pager-tidy-whitespace-bug-details": "علة مسافة بيضاء تيدي",
 	"linter-pager-title-header": "عنوان الصفحة",
 	"linter-pager-unclosed-quotes-in-heading-details": "اقتباس غير مغلق يتسرب خارج جدول المحتويات",
-	"linter-pager-wikilink-in-extlink-details": "وصلات الويكي المتداخلة في الوصلات الخارجية التي تحتاج إلى إصلاح",
+	"linter-pager-wikilink-in-extlink-details": "روابط في الروابط",
 	"linter-prefix-search-subpage": "الصفحات التي تحتوي على أخطاء النسالة تطابق بادئة العنوان أو العنوان الكامل: $1",
 	"linterrors-subpage": "أخطاء لنت: $1",
 	"linterrors-summary": "<strong>ملاحظة:</strong> إنَّ أعداد التصنيفات ليست دقيقة، ولكنها تستند إلى التقديرات.",
