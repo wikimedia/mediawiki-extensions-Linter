@@ -52,10 +52,16 @@
 		"APIQuerySiteInfoGeneralInfo": "main",
 		"InfoAction": "main",
 		"WikiPageDeletionUpdates": "main",
-		"RevisionFromEditComplete": "main",
 		"ParserLogLinterData": "main",
 		"RevisionDataUpdates": "main"
 	},
+	"DomainEventSubscribers": [
+		{
+			"events": [ "PageUpdated" ],
+			"class": "MediaWiki\\Linter\\LintSubscriber",
+			"services": [ "Linter.TotalsLookup", "Linter.Database" ]
+		}
+	],
 	"APIListModules": {
 		"linterrors": {
 			"class": "MediaWiki\\Linter\\ApiQueryLintErrors",

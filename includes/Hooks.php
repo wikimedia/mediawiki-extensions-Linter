@@ -35,16 +35,13 @@ use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\Output\Hook\BeforePageDisplayHook;
 use MediaWiki\Output\OutputPage;
-use MediaWiki\Page\Hook\RevisionFromEditCompleteHook;
 use MediaWiki\Page\Hook\WikiPageDeletionUpdatesHook;
 use MediaWiki\Page\ParserOutputAccess;
 use MediaWiki\Page\WikiPageFactory;
 use MediaWiki\Revision\RenderedRevision;
-use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Storage\Hook\RevisionDataUpdatesHook;
 use MediaWiki\Title\Title;
-use MediaWiki\User\UserIdentity;
 use Skin;
 use WikiPage;
 
@@ -53,7 +50,6 @@ class Hooks implements
 	BeforePageDisplayHook,
 	InfoActionHook,
 	ParserLogLinterDataHook,
-	RevisionFromEditCompleteHook,
 	WikiPageDeletionUpdatesHook,
 	RevisionDataUpdatesHook
 {
@@ -65,6 +61,11 @@ class Hooks implements
 	private TotalsLookup $totalsLookup;
 	private Database $database;
 	private bool $parseOnDerivedDataUpdates;
+
+	/**
+	 * This should match Parsoid's PageConfig::hasLintableContentModel()
+	 */
+	public const LINTABLE_CONTENT_MODELS = [ CONTENT_MODEL_WIKITEXT, 'proofread-page' ];
 
 	/**
 	 * @param LinkRenderer $linkRenderer
@@ -148,44 +149,6 @@ class Hooks implements
 				$this->database->setForPage( $id, $ns, [] )
 			);
 		}, __METHOD__ );
-	}
-
-	/**
-	 * This should match Parsoid's PageConfig::hasLintableContentModel()
-	 */
-	public const LINTABLE_CONTENT_MODELS = [ CONTENT_MODEL_WIKITEXT, 'proofread-page' ];
-
-	/**
-	 * Hook: RevisionFromEditComplete
-	 *
-	 * Remove entries from the linter table upon page content model change away from wikitext
-	 *
-	 * @param WikiPage $wikiPage
-	 * @param RevisionRecord $newRevisionRecord
-	 * @param bool|int $originalRevId
-	 * @param UserIdentity $user
-	 * @param string[] &$tags
-	 */
-	public function onRevisionFromEditComplete(
-		$wikiPage, $newRevisionRecord, $originalRevId, $user, &$tags
-	) {
-		// This is just a stop-gap to deal with callers that aren't complying
-		// with the advertised hook signature.
-		if ( !is_array( $tags ) ) {
-			return;
-		}
-
-		if (
-			in_array( "mw-blank", $tags ) ||
-			( in_array( "mw-contentmodelchange", $tags ) &&
-			!in_array( $wikiPage->getContentModel(), self::LINTABLE_CONTENT_MODELS ) )
-		) {
-			$this->totalsLookup->updateStats(
-				$this->database->setForPage(
-					$wikiPage->getId(), $wikiPage->getNamespace(), []
-				)
-			);
-		}
 	}
 
 	/**
