@@ -13,6 +13,7 @@
 	"apihelp-query+linterrors-param-from": "Identificador do comprobador a partir do que comezar a consulta",
 	"apihelp-query+linterrors-param-namespace": "Só incluír erros do comprobador dos espazos de nomes especificados",
 	"apihelp-query+linterrors-param-pageid": "Incluír só os erros de Lint dos identificadores de páxina especificados",
+	"apihelp-query+linterrors-param-title": "Incluír só os erros de Lint do títulos de páxina especificado",
 	"apihelp-query+linterrors-example-1": "Obter tódolos erros do comprobador da categoría da etiqueta obsoleta",
 	"apihelp-record-lint-description": "Gardar un erro do comprobador na base de datos",
 	"apihelp-record-lint-summary": "Gardar un erro do comprobador na base de datos",
