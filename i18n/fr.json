@@ -14,7 +14,12 @@
 			"Thibaut120094",
 			"Urhixidur",
 			"Verdy p",
-			"Wladek92"
+			"Wladek92",
+			"Mahabarata",
+			"McDutchie",
+			"Méthodes Bulebe Hangi",
+			"SleaY",
+			"Terio legale"
 		]
 	},
 	"linterrors": "Erreurs d’analyse Lint",
@@ -67,7 +72,7 @@
 	"linter-heading-medium-priority": "Priorité moyenne",
 	"linter-namespace-invert-error": "La case à cocher « Inverser la sélection » est en conflit avec le critère pour « tout » espace de noms.",
 	"linter-namespace-mismatch": "L’espace de noms spécifié dans la liste de sélection ne correspond pas à celui fourni dans le texte du titre.",
-	"linter-numerrors": "($1 erreur{{PLURAL:$1||s}})",
+	"linter-numerrors": "($1 {{PLURAL:$1|erreur|erreurs}})",
 	"linter-page-edit": "modifier",
 	"linter-page-history": "historique",
 	"linter-page-title-edit": "$1 ($2)",
