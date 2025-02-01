@@ -86,7 +86,7 @@ class LintUpdateTest extends MediaWikiIntegrationTestCase {
 		$contentHandlers = $this->getConfVar( MainConfigNames::ContentHandlers );
 		$this->overrideConfigValue( MainConfigNames::ContentHandlers, [
 			CONTENT_MODEL_JAVASCRIPT => [
-				'factory' => fn () => $contentHandler,
+				'factory' => static fn () => $contentHandler,
 			],
 		] + $contentHandlers );
 
@@ -133,7 +133,7 @@ class LintUpdateTest extends MediaWikiIntegrationTestCase {
 		$contentHandlers = $this->getConfVar( MainConfigNames::ContentHandlers );
 		$this->overrideConfigValue( MainConfigNames::ContentHandlers, [
 			CONTENT_MODEL_WIKITEXT => [
-				'factory' => fn () => $contentHandler,
+				'factory' => static fn () => $contentHandler,
 			],
 		] + $contentHandlers );
 
