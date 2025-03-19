@@ -10,7 +10,7 @@
 	"descriptionmsg": "linter-desc",
 	"type": "specialpage",
 	"requires": {
-		"MediaWiki": ">= 1.43"
+		"MediaWiki": ">= 1.44"
 	},
 	"AutoloadClasses": {
 		"MediaWiki\\Linter\\Maintenance\\MigrateNamespace": "maintenance/migrateNamespace.php",
@@ -57,9 +57,14 @@
 	},
 	"DomainEventSubscribers": [
 		{
-			"events": [ "PageUpdated" ],
+			"events": [
+				"PageUpdated"
+			],
 			"class": "MediaWiki\\Linter\\LintSubscriber",
-			"services": [ "Linter.TotalsLookup", "Linter.Database" ]
+			"services": [
+				"Linter.TotalsLookup",
+				"Linter.Database"
+			]
 		}
 	],
 	"APIListModules": {
