@@ -24,6 +24,7 @@ use MediaWiki\Cache\LinkCache;
 use MediaWiki\Html\Html;
 use MediaWiki\HTMLForm\HTMLForm;
 use MediaWiki\Output\OutputPage;
+use MediaWiki\Parser\ParserOptions;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Request\WebRequest;
 use MediaWiki\SpecialPage\SpecialPage;
@@ -269,7 +270,10 @@ class SpecialLintErrors extends SpecialPage {
 					$namespaces,
 					$exactMatch, $titleSearch[ 'titlefield' ], $template, $tag
 				);
-				$out->addParserOutput( $pager->getFullOutput() );
+				$out->addParserOutput(
+					$pager->getFullOutput(),
+					ParserOptions::newFromContext( $this->getContext() )
+				);
 			} else {
 				$this->displayError( $out, $titleSearch[ 'error' ] );
 			}
@@ -315,7 +319,10 @@ class SpecialLintErrors extends SpecialPage {
 					$namespaces,
 					$exactMatch, $titleCategorySearch[ 'titlefield' ], $template, $tag
 				);
-				$out->addParserOutput( $pager->getFullOutput() );
+				$out->addParserOutput(
+					$pager->getFullOutput(),
+					ParserOptions::newFromContext( $this->getContext() )
+				);
 			} else {
 				$this->displayError( $out, $titleCategorySearch[ 'error' ] );
 			}
