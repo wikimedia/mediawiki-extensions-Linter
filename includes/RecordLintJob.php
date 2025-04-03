@@ -50,6 +50,7 @@ class RecordLintJob extends Job {
 		$this->categoryManager = $categoryManager;
 	}
 
+	/** @inheritDoc */
 	public function run() {
 		if ( $this->title->getLatestRevID() != $this->params['revision'] ) {
 			// Outdated now, let a later job handle it
