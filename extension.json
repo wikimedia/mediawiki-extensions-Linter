@@ -55,12 +55,12 @@
 		"ParserLogLinterData": "main",
 		"RevisionDataUpdates": "main"
 	},
-	"DomainEventSubscribers": [
+	"DomainEventIngresses": [
 		{
 			"events": [
-				"PageUpdated"
+				"PageRevisionUpdated"
 			],
-			"class": "MediaWiki\\Linter\\LintSubscriber",
+			"class": "MediaWiki\\Linter\\LintEventIngress",
 			"services": [
 				"Linter.TotalsLookup",
 				"Linter.Database"

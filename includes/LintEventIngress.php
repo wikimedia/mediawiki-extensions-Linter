@@ -2,11 +2,11 @@
 
 namespace MediaWiki\Linter;
 
-use MediaWiki\DomainEvent\EventSubscriberBase;
+use MediaWiki\DomainEvent\DomainEventIngress;
+use MediaWiki\Page\Event\PageRevisionUpdatedEvent;
 use MediaWiki\Revision\SlotRecord;
-use MediaWiki\Storage\PageUpdatedEvent;
 
-class LintSubscriber extends EventSubscriberBase {
+class LintEventIngress extends DomainEventIngress {
 	private TotalsLookup $totalsLookup;
 	private Database $database;
 
@@ -19,10 +19,10 @@ class LintSubscriber extends EventSubscriberBase {
 	 * Remove entries from the linter table upon page content model change away from wikitext
 	 *
 	 * @noinspection PhpUnused
-	 * @param PageUpdatedEvent $event
+	 * @param PageRevisionUpdatedEvent $event
 	 * @return void
 	 */
-	public function handlePageUpdatedEventAfterCommit( PageUpdatedEvent $event ) {
+	public function handlePageRevisionUpdatedEvent( PageRevisionUpdatedEvent $event ) {
 		$page = $event->getPage();
 		$tags = $event->getTags();
 
@@ -31,7 +31,7 @@ class LintSubscriber extends EventSubscriberBase {
 			(
 				in_array( "mw-contentmodelchange", $tags ) &&
 				!in_array(
-					$event->getNewRevision()->getSlot( SlotRecord::MAIN )->getModel(),
+					$event->getLatestRevisionAfter()->getSlot( SlotRecord::MAIN )->getModel(),
 					Hooks::LINTABLE_CONTENT_MODELS
 				)
 			)
