@@ -266,6 +266,12 @@
 					"dbid": 25,
 					"enabled": true,
 					"priority": "high"
+				},
+				"empty-heading": {
+					"dbid": 26,
+					"enabled": true,
+					"priority": "low",
+					"no-params": true
 				}
 			}
 		},
