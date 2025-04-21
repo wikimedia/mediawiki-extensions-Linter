@@ -20,7 +20,7 @@
 
 namespace MediaWiki\Linter;
 
-use Job;
+use MediaWiki\JobQueue\Job;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\Page\PageReference;
 
