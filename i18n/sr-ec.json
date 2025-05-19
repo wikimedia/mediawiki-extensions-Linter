@@ -8,7 +8,8 @@
 			"Prevodim",
 			"Zoranzoki21",
 			"Сербијана",
-			"Milicevic01"
+			"Milicevic01",
+			"Aca"
 		]
 	},
 	"linterrors": "Пречишћивање грешака",
@@ -44,7 +45,9 @@
 	"linter-category-wikilink-in-extlink": "Везе у везама",
 	"linter-category-wikilink-in-extlink-desc": "Ове странице имају викивезе у спољашњим везама које могу да се поправе",
 	"linter-desc": "Прати грешке у коду са спољне услуге и приказује их корисницима",
+	"linter-form-exact-match": "Претрага по одређеном наслову странице",
 	"linter-form-namespace": "Именски простор:",
+	"linter-form-title-prefix": "Унесите префикс странице или комплетан наслов:",
 	"linter-heading-high-priority": "Висок приоритет",
 	"linter-heading-low-priority": "Низак приоритет",
 	"linter-heading-medium-priority": "Средњи приоритет",
