@@ -4,7 +4,8 @@
 			"IRTC1015",
 			"Ykhwong",
 			"메이",
-			"밝은소년"
+			"밝은소년",
+			"YeBoy371"
 		]
 	},
 	"linterrors": "린트 오류",
@@ -71,6 +72,7 @@
 	"linter-page-history": "역사",
 	"linter-page-viewsource": "원본 보기",
 	"linter-pager-bogus-image-options-details": "무효한 파일 옵션",
+	"linter-pager-category-header": "분류",
 	"linter-pager-deletable-table-tag-details": "삭제해야 하는 테이블 태그",
 	"linter-pager-html5-misnesting-details": "잘못 끼워넣음 (현재 깨져있는 상태)",
 	"linter-pager-inline-media-caption-details": "보이지 않는 캡션",
