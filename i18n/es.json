@@ -62,7 +62,7 @@
 	"linter-category-tidy-font-bug-desc": "Anteriormente, estas etiquetas font se trasladaban al interior de los enlaces para cambiar el color de los mismos",
 	"linter-category-tidy-whitespace-bug": "Defecto de espacio en blanco",
 	"linter-category-tidy-whitespace-bug-desc": "Estas páginas provocaron un error de espacio en blanco que debería evitarse.",
-	"linter-category-unclosed-quotes-in-heading": "Comilla sin cerrar en título",
+	"linter-category-unclosed-quotes-in-heading": "Comilla sin cerrar en encabezado",
 	"linter-category-unclosed-quotes-in-heading-desc": "Estas páginas tienen unas comillas sin cerrar en un encabezado que se propagan fuera de la tabla de contenidos.",
 	"linter-category-wikilink-in-extlink": "Enlaces en enlaces",
 	"linter-category-wikilink-in-extlink-desc": "Estas páginas tienen enlaces en enlaces externos que podría ser fijado",
