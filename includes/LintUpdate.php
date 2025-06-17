@@ -106,12 +106,21 @@ class LintUpdate extends DataUpdate {
 	public static function updateParserPerformanceStats(
 		StatsFactory $statsFactory, ParserOutput $po, bool $useParsoid
 	) {
+		$limitReport = $po->getLimitReportData();
+		$lnSize = strval( ceil( log(
+			( $limitReport['limitreport-revisionsize']['value'] ?? 0 ) +
+			( $limitReport['limitreport-postexpandincludesize']['value'] ?? 0 ) +
+			// add 1 to avoid log(0)
+			1,
+			// log_10(size) or "how many digits in the size"
+			10
+		) ) );
 		$labels = [
 			'parser' => $useParsoid ? 'parsoid' : 'legacy',
-			// Future work (T393400): add label w/ buckets based on
+			// T393400: add label w/ buckets based on
 			// original wikitext size (revision size + post-include size)
+			'wikitext_size_exp' => $lnSize,
 		];
-		// add buckets for wikitext size?
 		$cpuTime = $po->getTimeProfile( 'cpu' );
 		$wallTime = $po->getTimeProfile( 'wall' );
 		if ( $cpuTime === null || $wallTime === null ) {
@@ -128,16 +137,16 @@ class LintUpdate extends DataUpdate {
 		$statCpuTime = $statsFactory
 			->getCounter( "lintupdate_parse_cpu_seconds" )
 			->setLabels( $labels )
-			->increment( $cpuTime );
+			->incrementBy( $cpuTime );
 		$statWallTime = $statsFactory
 			->getCounter( "lintupdate_parse_wall_seconds" )
 			->setLabels( $labels )
-			->increment( $wallTime );
+			->incrementBy( $wallTime );
 
 		// Collect HTML size comparison data
 		$statHtmlSize = $statsFactory
 			->getCounter( "lintupdate_parse_html_bytes" )
 			->setLabels( $labels )
-			->increment( strlen( $po->getRawText() ?? '' ) );
+			->incrementBy( strlen( $po->getRawText() ?? '' ) );
 	}
 }
