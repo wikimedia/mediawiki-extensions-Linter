@@ -108,8 +108,8 @@ class LintUpdate extends DataUpdate {
 	) {
 		$limitReport = $po->getLimitReportData();
 		$lnSize = strval( ceil( log(
-			( $limitReport['limitreport-revisionsize']['value'] ?? 0 ) +
-			( $limitReport['limitreport-postexpandincludesize']['value'] ?? 0 ) +
+			( $limitReport['limitreport-revisionsize'][0] ?? 0 ) +
+			( $limitReport['limitreport-postexpandincludesize'][0] ?? 0 ) +
 			// add 1 to avoid log(0)
 			1,
 			// log_10(size) or "how many digits in the size"
