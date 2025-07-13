@@ -148,7 +148,7 @@ class SpecialLintErrors extends SpecialPage {
 		// Check all titles for malformation regardless of exact match or prefix match
 		try {
 			$titleElements = $this->titleParser->parseTitle( $title );
-		} catch ( MalformedTitleException  $e ) {
+		} catch ( MalformedTitleException ) {
 			return [ 'titlefield' => null, 'error' => 'linter-invalid-title' ];
 		}
 

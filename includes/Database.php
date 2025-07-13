@@ -116,7 +116,7 @@ class Database {
 	public static function makeLintError( CategoryManager $categoryManager, $row ) {
 		try {
 			$name = $categoryManager->getCategoryName( $row->linter_cat );
-		} catch ( MissingCategoryException $e ) {
+		} catch ( MissingCategoryException ) {
 			LoggerFactory::getInstance( 'Linter' )->error(
 				'Could not find name for id: {linter_cat}',
 				[ 'linter_cat' => $row->linter_cat ]
@@ -346,7 +346,7 @@ class Database {
 		foreach ( $rows as $row ) {
 			try {
 				$catName = $this->categoryManager->getCategoryName( $row->linter_cat );
-			} catch ( MissingCategoryException $e ) {
+			} catch ( MissingCategoryException ) {
 				continue;
 			}
 			// Only set visible categories.  Alternatively, we could add another
