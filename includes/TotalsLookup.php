@@ -41,13 +41,6 @@ class TotalsLookup {
 	private CategoryManager $categoryManager;
 	private Database $database;
 
-	/**
-	 * @param ServiceOptions $options
-	 * @param WANObjectCache $cache
-	 * @param IBufferingStatsdDataFactory $statsdDataFactory
-	 * @param CategoryManager $categoryManager
-	 * @param Database $database
-	 */
 	public function __construct(
 		ServiceOptions $options,
 		WANObjectCache $cache,

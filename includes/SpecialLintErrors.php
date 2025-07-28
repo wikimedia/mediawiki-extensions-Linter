@@ -46,14 +46,6 @@ class SpecialLintErrors extends SpecialPage {
 	 */
 	private $category;
 
-	/**
-	 * @param NamespaceInfo $namespaceInfo
-	 * @param TitleParser $titleParser
-	 * @param LinkCache $linkCache
-	 * @param PermissionManager $permissionManager
-	 * @param CategoryManager $categoryManager
-	 * @param TotalsLookup $totalsLookup
-	 */
 	public function __construct(
 		NamespaceInfo $namespaceInfo,
 		TitleParser $titleParser,

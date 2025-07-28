@@ -182,9 +182,6 @@ class SpecialLintErrorsTest extends SpecialPageTestBase {
 		$this->assertCount( 0, $errorsFromDb );
 	}
 
-	/**
-	 * @param array $pageData
-	 */
 	private function createPagesWithLintErrorsFromData( array $pageData ) {
 		foreach ( $pageData as $data ) {
 			$titleAndPage = $this->createTitleAndPage( $data[ 'name' ], $data[ 'ns' ] );
@@ -205,9 +202,6 @@ class SpecialLintErrorsTest extends SpecialPageTestBase {
 		}
 	}
 
-	/**
-	 * @return array
-	 */
 	private function createTitleAndPageAndLintErrorData(): array {
 		$pageData = [];
 		$pageData[] = [ 'name' => 'Lint Error One', 'ns' => NS_MAIN,

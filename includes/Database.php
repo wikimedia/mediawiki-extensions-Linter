@@ -53,11 +53,6 @@ class Database {
 	private CategoryManager $categoryManager;
 	private LBFactory $dbLoadBalancerFactory;
 
-	/**
-	 * @param ServiceOptions $options
-	 * @param CategoryManager $categoryManager
-	 * @param LBFactory $dbLoadBalancerFactory
-	 */
 	public function __construct(
 		ServiceOptions $options,
 		CategoryManager $categoryManager,
@@ -77,9 +72,6 @@ class Database {
 		return $this->dbLoadBalancerFactory->getMainLB()->getConnection( $mode );
 	}
 
-	/**
-	 * @return IReadableDatabase
-	 */
 	public function getReplicaDBConnection(): IReadableDatabase {
 		return $this->dbLoadBalancerFactory->getReplicaDatabase();
 	}

@@ -69,16 +69,6 @@ class Hooks implements
 	 */
 	public const LINTABLE_CONTENT_MODELS = [ CONTENT_MODEL_WIKITEXT, 'proofread-page' ];
 
-	/**
-	 * @param LinkRenderer $linkRenderer
-	 * @param JobQueueGroup $jobQueueGroup
-	 * @param StatsFactory $statsFactory
-	 * @param WikiPageFactory $wikiPageFactory
-	 * @param ParserOutputAccess $parserOutputAccess
-	 * @param CategoryManager $categoryManager
-	 * @param TotalsLookup $totalsLookup
-	 * @param Database $database
-	 */
 	public function __construct(
 		LinkRenderer $linkRenderer,
 		JobQueueGroup $jobQueueGroup,
