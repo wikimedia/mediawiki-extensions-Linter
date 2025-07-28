@@ -359,10 +359,8 @@ class Database {
 		return $ret;
 	}
 
-	/**
-	 * @return int[]
-	 */
-	public function getTotals() {
+	/** @return array<string,int> */
+	public function getTotals(): array {
 		$ret = [];
 		foreach ( $this->categoryManager->getVisibleCategories() as $cat ) {
 			$id = $this->categoryManager->getCategoryId( $cat );

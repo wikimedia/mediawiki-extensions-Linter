@@ -71,10 +71,7 @@ class SpecialLintErrors extends SpecialPage {
 		$this->totalsLookup = $totalsLookup;
 	}
 
-	/**
-	 * @param string $titleLabel
-	 */
-	protected function showFilterForm( $titleLabel ) {
+	protected function showFilterForm( string $titleLabel ): void {
 		$selectOptions = [
 			(string)$this->msg( 'linter-form-exact-match' )->escaped() => true,
 			(string)$this->msg( 'linter-form-prefix-match' )->escaped() => false,
@@ -144,7 +141,7 @@ class SpecialLintErrors extends SpecialPage {
 	 * @param array $namespaces
 	 * @return array
 	 */
-	public function cleanTitle( string $title, $namespaces ): array {
+	public function cleanTitle( string $title, array $namespaces ): array {
 		// Check all titles for malformation regardless of exact match or prefix match
 		try {
 			$titleElements = $this->titleParser->parseTitle( $title );
@@ -194,11 +191,8 @@ class SpecialLintErrors extends SpecialPage {
 	/**
 	 * Extract namespace settings from the request object,
 	 * returning an array of namespace id numbers
-	 *
-	 * @param WebRequest $request
-	 * @return array
 	 */
-	protected function findNamespaces( $request ) {
+	protected function findNamespaces( WebRequest $request ): array {
 		$namespaceRequestValues = $request->getRawVal( 'wpNamespaceRestrictions' ) ?? '';
 		if ( $namespaceRequestValues === '' ) {
 			return [];
@@ -327,10 +321,10 @@ class SpecialLintErrors extends SpecialPage {
 
 	/**
 	 * @param string $priority
-	 * @param int[] $totals name => count
+	 * @param array<string,int> $totals name => count
 	 * @param string[] $categories
 	 */
-	private function displayList( $priority, $totals, array $categories ) {
+	private function displayList( string $priority, array $totals, array $categories ): void {
 		$out = $this->getOutput();
 		$msgName = 'linter-heading-' . $priority . '-priority';
 		$out->addHTML( Html::element( 'h2', [], $this->msg( $msgName )->text() ) );
@@ -359,10 +353,10 @@ class SpecialLintErrors extends SpecialPage {
 
 	/**
 	 * @param string[] $cats
-	 * @param int[] $totals name => count
+	 * @param array<string,int> $totals name => count
 	 * @return string
 	 */
-	private function buildCategoryList( array $cats, array $totals ) {
+	private function buildCategoryList( array $cats, array $totals ): string {
 		$linkRenderer = $this->getLinkRenderer();
 		$html = Html::openElement( 'ul' ) . "\n";
 		foreach ( $cats as $cat ) {
