@@ -89,7 +89,7 @@
 	"linter-pager-template-header": "Door middel van een sjabloon?",
 	"linter-pager-tidy-font-bug-details": "Font element probeert de koppelingskleur te wijzigingen",
 	"linter-pager-tidy-whitespace-bug-details": "Witruimte intepretatiebug",
-	"linter-pager-title-header": "Paginanaam",
+	"linter-pager-title-header": "Paginatitel",
 	"linter-pager-unclosed-quotes-in-heading-details": "Niet-afgesloten aanhalingsteken dat uit de inhoudsopgave lekt",
 	"linter-prefix-search-subpage": "Pagina's met lintfouten die overeenkomen met het voorvoegsel van de titel of de volledige titel: $1",
 	"linterrors-subpage": "Lintfouten: $1",
