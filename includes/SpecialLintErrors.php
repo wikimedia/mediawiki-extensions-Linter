@@ -165,7 +165,7 @@ class SpecialLintErrors extends SpecialPage {
 		$titleNamespace = $titleElements->getNamespace();
 		// Determine if the user entered ':' (resolves to main) as the namespace part of the title,
 		// or was it was set by default by parseTitle() to 0, but the user intended to search across 'all' namespaces.
-		if ( $titleNamespace === 0 && $title[0] !== ':' ) {
+		if ( $titleElements->inNamespace( NS_MAIN ) && !str_starts_with( $title, ':' ) ) {
 			$titleNamespace = null;
 		}
 
@@ -209,12 +209,8 @@ class SpecialLintErrors extends SpecialPage {
 			array_intersect(
 				// Remove -2 = "media" and -1 = "Special" namespace elements
 				array_filter(
-					array_keys(
-						$this->namespaceInfo->getCanonicalNamespaces()
-					),
-					static function ( $x ) {
-						return $x >= 0;
-					}
+					array_keys( $this->namespaceInfo->getCanonicalNamespaces() ),
+					static fn ( $id ) => $id >= NS_MAIN
 				),
 				array_map( 'intval', explode( "\n", $namespaceRequestValues ) )
 			)
