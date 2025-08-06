@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"H78c67c"
+			"H78c67c",
+			"Ktchankt"
 		]
 	},
-	"linter-category-night-mode-unaware-background-color-desc": "呢啲頁面有 inline 背景色彩樣式但冇對應嘅文字色彩，會整壞黑暗模式"
+	"linterrors": "Lint出錯",
+	"linter-category-night-mode-unaware-background-color-desc": "呢啲頁面有 inline 背景色彩樣式但冇對應嘅文字色彩，會整壞黑暗模式",
+	"pageinfo-linter": "Lint出錯"
 }
