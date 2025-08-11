@@ -1,7 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"H78c67c"
+			"H78c67c",
+			"Ktchankt"
 		]
-	}
+	},
+	"linterrors": "Lint出錯",
+	"pageinfo-linter": "Lint出錯"
 }
