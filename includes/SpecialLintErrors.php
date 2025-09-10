@@ -323,12 +323,10 @@ class SpecialLintErrors extends SpecialPage {
 		$out->addHTML( $this->buildCategoryList( $categories, $totals ) );
 	}
 
-	/**
-	 */
 	private function displaySearchPage() {
 		$out = $this->getOutput();
 		$out->addHTML( Html::element( 'h2', [],
-			$this->msg( "linter-lints-prefix-search-page-desc" )->text() ) );
+		$this->msg( "linter-lints-prefix-search-page-desc" )->text() ) );
 		$this->showFilterForm( 'titlesearch' );
 	}
 
