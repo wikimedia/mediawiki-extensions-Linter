@@ -249,6 +249,14 @@ class LintErrorsPager extends TablePager {
 					], $title );
 				} elseif ( $category === 'duplicate-ids' ) {
 					return Html::element( 'code', [], $lintError->params['id'] );
+				} elseif ( $category === 'template-arg-in-extension-tag' ) {
+					$nameHtml = Html::element( 'code', [], $lintError->params['ext-name'] );
+					$parametersHtmlArray = [];
+					foreach ( $lintError->params['details'] as $parameter ) {
+						$parametersHtmlArray[] = Html::element( 'code', [], $parameter );
+					}
+					$parametersHtml = implode( ', ', $parametersHtmlArray );
+					return "$nameHtml: [ $parametersHtml ]";
 				}
 				return '';
 			case 'template':

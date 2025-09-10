@@ -273,6 +273,11 @@
 					"enabled": true,
 					"priority": "low",
 					"no-params": true
+				},
+				"template-arg-in-extension-tag": {
+					"dbid": 27,
+					"enabled": true,
+					"priority": "high"
 				}
 			}
 		},
