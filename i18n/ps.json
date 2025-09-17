@@ -3,10 +3,11 @@
 		"authors": [
 			"Af420",
 			"Amjad Khan",
-			"Baloch Khan"
+			"Baloch Khan",
+			"شاه زمان پټان"
 		]
 	},
-	"linterrors": "لينټ تېروتنې",
+	"linterrors": "پټ ساتل‌شوې تېروتنې",
 	"linter-category-bogus-image-options": "د بوګ دوتنې انتخابونه",
 	"linter-category-misnested-tag": "بې ځایه شوي ټګۍ",
 	"linter-category-missing-end-tag": "ورک پای ټکي",
