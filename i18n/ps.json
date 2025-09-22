@@ -8,11 +8,20 @@
 		]
 	},
 	"linterrors": "پټ ساتل‌شوې تېروتنې",
-	"linter-category-bogus-image-options": "د بوګ دوتنې انتخابونه",
+	"linter-category-bogus-image-options": "شکمنې دوتنې خوښنې",
+	"linter-category-bogus-image-options-desc": "دا مخونه د شکمنو خوښنو لرونکې دوتنې لري",
+	"linter-category-deletable-table-tag": "لښتيال نښلن چې بايد ړنگ کړای شي",
+	"linter-category-deletable-table-tag-desc": "دا مخونه نښانونه لري چې بايد ړنگ کړای شي.",
+	"linter-category-fostered": "منځپانگه چې د لښتيال اړوند نه ده",
+	"linter-category-fostered-desc": "دا مخونه د لښتيال ناا اند منځپانگه لري.",
 	"linter-category-misnested-tag": "بې ځایه شوي ټګۍ",
 	"linter-category-missing-end-tag": "ورک پای ټکي",
 	"linter-category-obsolete-tag": "وروستي اسټیکرز HTML",
+	"linter-category-self-closed-tag": "ځاني تړل‌شوي نښلنونه",
+	"linter-category-self-closed-tag-desc": "دا مخونه ځاني تړل‌شوي نښلنونه لري.",
 	"linter-category-stripped-tag": "لیرې شوي ټکي",
+	"linter-category-stripped-tag-desc": "دا مخونه بربنډ نښانونه لري.",
 	"linter-page-edit": "سمول",
+	"linterrors-summary": "<strong>يادونه:</strong> د وېشنيزو شمېرنې کره شمېرنې نه دي؛ بلکې اټکلي شمېرنې دي.",
 	"pageinfo-linter": "پټ ساتل شوي تېروتنې"
 }
