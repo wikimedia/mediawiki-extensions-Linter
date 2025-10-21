@@ -4,7 +4,8 @@
 			"Minh Nguyen",
 			"NguoiDungKhongDinhDanh",
 			"Thienhau2003",
-			"Vinhtantran"
+			"Vinhtantran",
+			"Nvdtn19"
 		]
 	},
 	"linterrors": "Lỗi cú pháp",
@@ -14,8 +15,8 @@
 	"linter-category-large-tables-desc": "Những trang này có các bảng khó xem trên thiết bị di động",
 	"linter-category-deletable-table-tag": "Thẻ bảng cần xóa",
 	"linter-category-deletable-table-tag-desc": "Các trang này chứa thẻ bảng cần được xóa.",
-	"linter-category-fostered": "Nội dung được nhận nuôi",
-	"linter-category-fostered-desc": "Các trang này có nội dung được nhận nuôi.",
+	"linter-category-fostered": "Nội dung bị tách ra",
+	"linter-category-fostered-desc": "Các trang này có nội dung bị tách ra. Nó xảy ra khi một phần nội dung (văn bản, thẻ HTML, hay mã wiki) bị đẩy ra khỏi vị trí hợp lệ trong cấu trúc DOM.",
 	"linter-category-html5-misnesting": "Thẻ lồng nhau bị sai và hiển thị khác nhau trong HTML5 và HTML4",
 	"linter-category-html5-misnesting-desc": "Những thẻ lồng nhau bị sai này sẽ hiển thị khác nhau trong HTML5 so với HTML4.",
 	"linter-category-misc-tidy-replacement-issues": "Các vấn đề khác",
