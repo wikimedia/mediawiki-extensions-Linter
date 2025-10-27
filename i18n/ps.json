@@ -25,6 +25,7 @@
 	"linter-category-stripped-tag": "لیرې شوي ټکي",
 	"linter-category-stripped-tag-desc": "دا مخونه بربنډ نښانونه لري.",
 	"linter-category-wikilink-in-extlink": "تړونو کې تړوني",
+	"linter-lints-prefix-search-page-desc": "د مخ سرليک د مختاړي يا بشپړ سرليک له مخې د غونډلپوهې تېروتنو لرونکو مخونو پلټل",
 	"linter-form-namespace": "نوم‌تشيال:",
 	"linter-form-title-prefix": "مهرباني وکړئ سرليک مختاړی دننه کړئ يا سرليک بشپړ کړئ:",
 	"linter-heading-high-priority": "لوړ لومړیتوب",
