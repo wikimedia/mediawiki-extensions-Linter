@@ -65,6 +65,11 @@ $specialPageAliases['pl'] = [
 	'LintErrors' => [ 'Błędy_składniowe', 'Błędy_lintera' ],
 ];
 
+/** Slovak (slovenčina) */
+$specialPageAliases['sk'] = [
+	'LintErrors' => [ 'ChybyNájdenéLintom' ],
+];
+
 /** Serbian (Cyrillic script) (српски (ћирилица)‎) */
 $specialPageAliases['sr-ec'] = [
 	'LintErrors' => [ 'Пречишћивање_грешака' ],
