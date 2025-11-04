@@ -5,7 +5,8 @@
 			"NguoiDungKhongDinhDanh",
 			"Thienhau2003",
 			"Vinhtantran",
-			"Nvdtn19"
+			"Nvdtn19",
+			"SaldırganSincap"
 		]
 	},
 	"linterrors": "Lỗi cú pháp",
@@ -44,7 +45,7 @@
 	"linter-category-obsolete-tag": "Thẻ HTML cũ",
 	"linter-category-obsolete-tag-desc": "Các trang này chứa thẻ HTML cũ.",
 	"linter-category-pwrap-bug-workaround": "Lỗi bao đoạn văn",
-	"linter-category-pwrap-bug-workaround-desc": "Các trang này mắc lỗi bao đoạn văn (paragraph wrapping bug), khiến thẻ <p> được mở hoặc đóng sai vị trí. Lỗi này có thể được xử lý tạm thời bằng cách chỉnh lại cấu trúc mã wiki.",
+	"linter-category-pwrap-bug-workaround-desc": "Các trang này mắc lỗi bao đoạn văn (paragraph wrapping bug), khiến thẻ <nowiki><p></nowiki> được mở hoặc đóng sai vị trí. Lỗi này có thể được xử lý tạm thời bằng cách chỉnh lại cấu trúc mã wiki.",
 	"linter-category-self-closed-tag": "Thẻ tự đóng",
 	"linter-category-self-closed-tag-desc": "Các trang này chứa thẻ tự đóng.",
 	"linter-category-stripped-tag": "Thẻ bị loại bỏ",
