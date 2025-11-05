@@ -112,7 +112,7 @@
 	"linter-pager-title-header": "כותרת הדף",
 	"linter-pager-unclosed-quotes-in-heading-details": "מירכאות לא סגורות שזולגות מתוכן עניינים",
 	"linter-pager-wikilink-in-extlink-details": "קישורים בתוך קישורים",
-	"linter-pager-template-arg-in-extension-tag-details": "שם תג הרחבה עם צורך בעדכון [ופרמטרים של תבנית שמשמשים בתוכו]",
+	"linter-pager-template-arg-in-extension-tag-details": "שם תג הרחבה עם צורך בעדכון (ופרמטרים של תבנית שמשמשים בתוכו)",
 	"linter-prefix-search-subpage": "דפים עם שגיאות ניקיון שמתאימים לתחילית כותרת או כותרת שלמה: $1",
 	"linterrors-subpage": "שגיאות ניקיון: $1",
 	"linterrors-summary": "<strong>הערה:</strong> הספירה של הקטגוריות אינה מדויקת, היא מבוססת על אומדנים.",
