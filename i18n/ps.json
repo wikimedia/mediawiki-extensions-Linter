@@ -50,7 +50,6 @@
 	"linter-numerrors": "($1 {{PLURAL:$1|تېروتنه|تېروتنې}})",
 	"linter-page-edit": "سمول",
 	"linter-page-history": "پېښليک",
-	"linter-page-title-edit": "$1 ($2)",
 	"linter-page-viewsource": "سرچينه کتل",
 	"linter-pager-bogus-image-options-details": "شکمنې دوتنې خوښنه",
 	"linter-pager-category-header": "وېشنيزه",

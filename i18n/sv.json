@@ -73,7 +73,6 @@
 	"linter-numerrors": "($1 {{PLURAL:$1|fel}})",
 	"linter-page-edit": "redigera",
 	"linter-page-history": "historik",
-	"linter-page-title-edit": "$1 ($2)",
 	"linter-page-viewsource": "visa wikitext",
 	"linter-pager-bogus-image-options-details": "Ogiltigt filalternativ",
 	"linter-pager-category-header": "Kategori",
