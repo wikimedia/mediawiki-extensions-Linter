@@ -122,7 +122,7 @@
 	"linter-pager-title-header": "Paginatitel",
 	"linter-pager-unclosed-quotes-in-heading-details": "Niet-afgesloten aanhalingsteken dat uit de inhoudsopgave lekt",
 	"linter-pager-wikilink-in-extlink-details": "Koppelingen in koppelingen",
-	"linter-pager-template-arg-in-extension-tag-details": "De naam van de uitbreidingstag die moet worden bijgewerkt [en de sjabloonparameters die erin worden gebruikt]",
+	"linter-pager-template-arg-in-extension-tag-details": "De naam van de uitbreidingstag die moet worden bijgewerkt (en de sjabloonparameters die erin worden gebruikt)",
 	"linter-prefix-search-subpage": "Pagina's met lintfouten die overeenkomen met het voorvoegsel van de titel of de volledige titel: $1",
 	"linterrors-subpage": "Lintfouten: $1",
 	"linterrors-summary": "<strong>Let op:</strong> De categorietellingen zijn niet exact, maar komen voort uit schattingen.",
