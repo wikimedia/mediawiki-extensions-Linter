@@ -70,7 +70,7 @@
 	"linter-pager-template-header": "کينډۍ له لارې؟",
 	"linter-pager-title-header": "مخ سرليک",
 	"linter-pager-wikilink-in-extlink-details": "تړونو کې تړوني",
-	"linter-prefix-search-subpage": "پټۍ کې تېروتنې لرونکي مخونه چې د سرليک مختاړي يا بشپړ سرليک سره سمون خوري:",
+	"linter-prefix-search-subpage": "پټۍ کې تېروتنې لرونکي مخونه چې د سرليک مختاړي يا بشپړ سرليک سره سمون خوري: $1",
 	"linterrors-subpage": "پټ ساتل‌شوې تېروتنې: $1",
 	"linterrors-summary": "<strong>يادونه:</strong> د وېشنيزو شمېرنې کره شمېرنې نه دي؛ بلکې اټکلي شمېرنې دي.",
 	"pageinfo-linter": "پټ ساتل شوي تېروتنې",
