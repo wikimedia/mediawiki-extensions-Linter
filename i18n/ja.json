@@ -90,7 +90,6 @@
 	"linter-numerrors": "($1 {{PLURAL:$1|件のエラー}})",
 	"linter-page-edit": "編集",
 	"linter-page-history": "履歴",
-	"linter-page-title-edit": "$1 ($2)",
 	"linter-page-viewsource": "ソースを閲覧",
 	"linter-pager-bogus-image-options-details": "不正なファイルオプション",
 	"linter-pager-category-header": "カテゴリ",
