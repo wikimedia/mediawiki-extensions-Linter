@@ -34,7 +34,6 @@
 	"linter-numerrors": "($1 {{PLURAL:$1|تېروتنه|تېروتنې}})",
 	"linter-page-edit": "سمول",
 	"linter-page-history": "پېښليک",
-	"linter-page-title-edit": "$1 ($2)",
 	"linter-page-viewsource": "سرچينه کتل",
 	"linter-pager-bogus-image-options-details": "شکمنې دوتنې خوښنه",
 	"linter-pager-category-header": "وېشنيزه",
@@ -46,6 +45,7 @@
 	"linter-pager-stripped-tag-details": "لیرې‌شوی نښلن",
 	"linter-pager-template-header": "کينډۍ له لارې؟",
 	"linter-pager-title-header": "مخ سرليک",
+	"linter-prefix-search-subpage": "پټۍ کې تېروتنې لرونکي مخونه چې د سرليک مختاړي يا بشپړ سرليک سره سمون خوري: $1",
 	"linterrors-subpage": "پټ ساتل‌شوې تېروتنې: $1",
 	"linterrors-summary": "<strong>يادونه:</strong> د وېشنيزو شمېرنې کره شمېرنې نه دي؛ بلکې اټکلي شمېرنې دي.",
 	"pageinfo-linter": "پټ ساتل شوي تېروتنې"
