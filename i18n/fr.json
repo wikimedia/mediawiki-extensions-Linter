@@ -34,6 +34,7 @@
 	"linter-category-duplicate-ids-desc": "Ces pages contiennent des éléments avec des attributs d'identification en double.",
 	"linter-category-empty-heading": "Titres vides",
 	"linter-category-empty-heading-desc": "Ces pages contiennent des titres vides.",
+	"linter-category-template-arg-in-extension-tag": "Balise d'extension contenant un paramètre de modèle",
 	"linter-category-fostered": "Contenu mal placé",
 	"linter-category-fostered-desc": "Ces pages ont du contenu mal placé.",
 	"linter-category-fostered-transparent": "Contenu invisible et égaré dans un tableau",
