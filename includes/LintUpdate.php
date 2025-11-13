@@ -90,7 +90,7 @@ class LintUpdate extends DataUpdate {
 		// *local* cache, which prevents wasting effort on duplicate parses)
 		$status = $this->parserOutputAccess->getParserOutput(
 			$page, $pOptions, $rev,
-			ParserOutputAccess::OPT_NO_UPDATE_CACHE
+			[ ParserOutputAccess::OPT_NO_UPDATE_CACHE => true, ],
 		);
 		if ( $status->isOK() ) {
 			self::updateParserPerformanceStats(
