@@ -78,6 +78,7 @@
 	"linter-pager-category-header": "Kategori",
 	"linter-pager-deletable-table-tag-details": "Tabelltagg som bör raderas",
 	"linter-pager-details-header": "Ytterligare info",
+	"linter-pager-fostered-transparent-details": "Främjad rendering av transparent innehåll",
 	"linter-pager-html5-misnesting-details": "Felaktig nästling (numera trasig)",
 	"linter-pager-large-tables-details": "Tabell som är stor för mobilvisning",
 	"linter-pager-misc-tidy-replacement-issues-details": "Övriga formateringsfel",
