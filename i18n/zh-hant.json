@@ -27,6 +27,8 @@
 	"linter-category-duplicate-ids-desc": "這些頁面含有重複 id 屬性的元素。",
 	"linter-category-empty-heading": "空標題",
 	"linter-category-empty-heading-desc": "這些頁面含有空標題。",
+	"linter-category-template-arg-in-extension-tag": "帶有模板參數的擴充標籤",
+	"linter-category-template-arg-in-extension-tag-desc": "這些頁面包含帶有模板參數的擴充標籤，因此無法正確嵌入。",
 	"linter-category-fostered": "表格內容嵌套錯誤",
 	"linter-category-fostered-desc": "這些頁面含有內容嵌套錯誤的表格。",
 	"linter-category-fostered-transparent": "渲染後透明的表格內容嵌套錯誤",
