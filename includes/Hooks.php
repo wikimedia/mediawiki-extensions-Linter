@@ -54,15 +54,7 @@ class Hooks implements
 	WikiPageDeletionUpdatesHook,
 	RevisionDataUpdatesHook
 {
-	private LinkRenderer $linkRenderer;
-	private JobQueueGroup $jobQueueGroup;
-	private StatsFactory $statsFactory;
-	private WikiPageFactory $wikiPageFactory;
-	private ParserOutputAccess $parserOutputAccess;
-	private CategoryManager $categoryManager;
-	private TotalsLookup $totalsLookup;
-	private Database $database;
-	private bool $parseOnDerivedDataUpdates;
+	private readonly bool $parseOnDerivedDataUpdates;
 
 	/**
 	 * This should match Parsoid's PageConfig::hasLintableContentModel()
@@ -70,24 +62,16 @@ class Hooks implements
 	public const LINTABLE_CONTENT_MODELS = [ CONTENT_MODEL_WIKITEXT, 'proofread-page' ];
 
 	public function __construct(
-		LinkRenderer $linkRenderer,
-		JobQueueGroup $jobQueueGroup,
-		StatsFactory $statsFactory,
-		WikiPageFactory $wikiPageFactory,
-		ParserOutputAccess $parserOutputAccess,
-		CategoryManager $categoryManager,
-		TotalsLookup $totalsLookup,
-		Database $database,
+		private readonly LinkRenderer $linkRenderer,
+		private readonly JobQueueGroup $jobQueueGroup,
+		private readonly StatsFactory $statsFactory,
+		private readonly WikiPageFactory $wikiPageFactory,
+		private readonly ParserOutputAccess $parserOutputAccess,
+		private readonly CategoryManager $categoryManager,
+		private readonly TotalsLookup $totalsLookup,
+		private readonly Database $database,
 		Config $config
 	) {
-		$this->linkRenderer = $linkRenderer;
-		$this->jobQueueGroup = $jobQueueGroup;
-		$this->statsFactory = $statsFactory;
-		$this->wikiPageFactory = $wikiPageFactory;
-		$this->parserOutputAccess = $parserOutputAccess;
-		$this->categoryManager = $categoryManager;
-		$this->totalsLookup = $totalsLookup;
-		$this->database = $database;
 		$this->parseOnDerivedDataUpdates = $config->get( 'LinterParseOnDerivedDataUpdate' );
 	}
 

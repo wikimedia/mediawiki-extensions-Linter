@@ -34,33 +34,20 @@ use MediaWiki\Title\TitleParser;
 
 class SpecialLintErrors extends SpecialPage {
 
-	private NamespaceInfo $namespaceInfo;
-	private TitleParser $titleParser;
-	private LinkCache $linkCache;
-	private PermissionManager $permissionManager;
-	private CategoryManager $categoryManager;
-	private TotalsLookup $totalsLookup;
-
 	/**
 	 * @var string|null
 	 */
 	private $category;
 
 	public function __construct(
-		NamespaceInfo $namespaceInfo,
-		TitleParser $titleParser,
-		LinkCache $linkCache,
-		PermissionManager $permissionManager,
-		CategoryManager $categoryManager,
-		TotalsLookup $totalsLookup
+		private readonly NamespaceInfo $namespaceInfo,
+		private readonly TitleParser $titleParser,
+		private readonly LinkCache $linkCache,
+		private readonly PermissionManager $permissionManager,
+		private readonly CategoryManager $categoryManager,
+		private readonly TotalsLookup $totalsLookup,
 	) {
 		parent::__construct( 'LintErrors' );
-		$this->namespaceInfo = $namespaceInfo;
-		$this->titleParser = $titleParser;
-		$this->linkCache = $linkCache;
-		$this->permissionManager = $permissionManager;
-		$this->categoryManager = $categoryManager;
-		$this->totalsLookup = $totalsLookup;
 	}
 
 	protected function showFilterForm( string $titleLabel ): void {

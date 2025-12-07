@@ -33,22 +33,13 @@ use Wikimedia\Stats\StatsFactory;
 
 class LintUpdate extends DataUpdate {
 
-	private StatsFactory $statsFactory;
-	private WikiPageFactory $wikiPageFactory;
-	private ParserOutputAccess $parserOutputAccess;
-	private RenderedRevision $renderedRevision;
-
 	public function __construct(
-		StatsFactory $statsFactory,
-		WikiPageFactory $wikiPageFactory,
-		ParserOutputAccess $parserOutputAccess,
-		RenderedRevision $renderedRevision
+		private readonly StatsFactory $statsFactory,
+		private readonly WikiPageFactory $wikiPageFactory,
+		private readonly ParserOutputAccess $parserOutputAccess,
+		private readonly RenderedRevision $renderedRevision,
 	) {
 		parent::__construct();
-		$this->statsFactory = $statsFactory;
-		$this->wikiPageFactory = $wikiPageFactory;
-		$this->parserOutputAccess = $parserOutputAccess;
-		$this->renderedRevision = $renderedRevision;
 	}
 
 	public function doUpdate() {

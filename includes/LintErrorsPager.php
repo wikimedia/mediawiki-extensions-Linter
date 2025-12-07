@@ -36,17 +36,8 @@ use Wikimedia\Rdbms\SelectQueryBuilder;
 
 class LintErrorsPager extends TablePager {
 
-	private CategoryManager $categoryManager;
-	private LinkCache $linkCache;
-	private LinkRenderer $linkRenderer;
-	private PermissionManager $permissionManager;
-
-	private ?string $category;
 	/** @var mixed */
 	private $categoryId;
-	private array $namespaces;
-	private bool $exactMatch;
-	private string $title;
 	private string $tag;
 
 	/**
@@ -56,23 +47,17 @@ class LintErrorsPager extends TablePager {
 
 	public function __construct(
 		IContextSource $context,
-		CategoryManager $categoryManager,
-		LinkCache $linkCache,
-		LinkRenderer $linkRenderer,
-		PermissionManager $permissionManager,
-		?string $category,
-		array $namespaces,
-		bool $exactMatch,
-		string $title,
+		private readonly CategoryManager $categoryManager,
+		private readonly LinkCache $linkCache,
+		private readonly LinkRenderer $linkRenderer,
+		private readonly PermissionManager $permissionManager,
+		private readonly ?string $category,
+		private readonly array $namespaces,
+		private readonly bool $exactMatch,
+		private readonly string $title,
 		string $throughTemplate,
 		string $tag
 	) {
-		$this->categoryManager = $categoryManager;
-		$this->linkCache = $linkCache;
-		$this->linkRenderer = $linkRenderer;
-		$this->permissionManager = $permissionManager;
-
-		$this->category = $category;
 		if ( $category !== null ) {
 			$this->categoryId = $categoryManager->getCategoryId( $category );
 		} else {
@@ -81,9 +66,6 @@ class LintErrorsPager extends TablePager {
 			) );
 		}
 
-		$this->namespaces = $namespaces;
-		$this->exactMatch = $exactMatch;
-		$this->title = $title;
 		$this->throughTemplate = $throughTemplate ?: 'all';
 		$this->tag = $tag ?: 'all';
 		parent::__construct( $context );

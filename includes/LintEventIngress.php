@@ -8,12 +8,10 @@ use MediaWiki\Page\Event\PageRevisionUpdatedListener;
 use MediaWiki\Revision\SlotRecord;
 
 class LintEventIngress extends DomainEventIngress implements PageRevisionUpdatedListener {
-	private TotalsLookup $totalsLookup;
-	private Database $database;
-
-	public function __construct( TotalsLookup $totalsLookup, Database $database ) {
-		$this->totalsLookup = $totalsLookup;
-		$this->database = $database;
+	public function __construct(
+		private readonly TotalsLookup $totalsLookup,
+		private readonly Database $database,
+	) {
 	}
 
 	/**
