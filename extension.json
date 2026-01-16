@@ -52,7 +52,7 @@
 		"BeforePageDisplay": "main",
 		"APIQuerySiteInfoGeneralInfo": "main",
 		"InfoAction": "main",
-		"WikiPageDeletionUpdates": "main",
+		"PageDeletionDataUpdates": "main",
 		"ParserLogLinterData": "main",
 		"RevisionDataUpdates": "main"
 	},

@@ -23,7 +23,6 @@ namespace MediaWiki\Linter;
 use MediaWiki\Api\ApiQuerySiteinfo;
 use MediaWiki\Api\Hook\APIQuerySiteInfoGeneralInfoHook;
 use MediaWiki\Config\Config;
-use MediaWiki\Content\Content;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\Deferred\DeferrableUpdate;
 use MediaWiki\Deferred\MWCallableUpdate;
@@ -34,11 +33,11 @@ use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\Output\Hook\BeforePageDisplayHook;
 use MediaWiki\Output\OutputPage;
-use MediaWiki\Page\Hook\WikiPageDeletionUpdatesHook;
+use MediaWiki\Page\Hook\PageDeletionDataUpdatesHook;
 use MediaWiki\Page\ParserOutputAccess;
-use MediaWiki\Page\WikiPage;
 use MediaWiki\Page\WikiPageFactory;
 use MediaWiki\Revision\RenderedRevision;
+use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\SlotRecord;
 use MediaWiki\Skin\Skin;
 use MediaWiki\SpecialPage\SpecialPage;
@@ -51,7 +50,7 @@ class Hooks implements
 	BeforePageDisplayHook,
 	InfoActionHook,
 	ParserLogLinterDataHook,
-	WikiPageDeletionUpdatesHook,
+	PageDeletionDataUpdatesHook,
 	RevisionDataUpdatesHook
 {
 	private readonly bool $parseOnDerivedDataUpdates;
@@ -109,19 +108,20 @@ class Hooks implements
 	}
 
 	/**
-	 * Hook: WikiPageDeletionUpdates
+	 * Hook: PageDeletionDataUpdates
 	 *
 	 * Remove entries from the linter table upon page deletion
 	 *
-	 * @param WikiPage $wikiPage
-	 * @param Content $content
-	 * @param array &$updates
+	 * @param Title $title
+	 * @param RevisionRecord $revision
+	 * @param DeferrableUpdate[] &$updates
+	 * @return bool|void
 	 */
-	public function onWikiPageDeletionUpdates( $wikiPage, $content, &$updates ) {
+	public function onPageDeletionDataUpdates( $title, $revision, &$updates ) {
 		// The article id of the title is set to 0 when the page is deleted so
 		// capture it before creating the callback.
-		$id = $wikiPage->getId();
-		$ns = $wikiPage->getNamespace();
+		$id = $revision->getPage()->getId();
+		$ns = $title->getNamespace();
 
 		$updates[] = new MWCallableUpdate( function () use ( $id, $ns ) {
 			$this->totalsLookup->updateStats(
