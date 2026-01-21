@@ -21,11 +21,11 @@
 namespace MediaWiki\Linter;
 
 use InvalidArgumentException;
-use MediaWiki\Cache\LinkCache;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\Html\Html;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Page\LinkCache;
 use MediaWiki\Pager\TablePager;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Title\Title;
