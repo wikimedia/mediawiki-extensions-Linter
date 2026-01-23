@@ -5,6 +5,7 @@
 			"Inkowik",
 			"Kghbln",
 			"Metalhead64",
+			"PerfektesChaos",
 			"TomatoCake"
 		]
 	},
@@ -19,7 +20,7 @@
 	"linter-category-duplicate-ids-desc": "Diese Seiten haben Elemente mit doppelten ID-Attributen.",
 	"linter-category-empty-heading": "Leere Überschriften",
 	"linter-category-empty-heading-desc": "Diese Seiten haben leere Überschriften.",
-	"linter-category-template-arg-in-extension-tag": "Erweiterungstag mit Vorlageparameter",
+	"linter-category-template-arg-in-extension-tag": "Erweiterungstag mit Vorlagenparameter",
 	"linter-category-template-arg-in-extension-tag-desc": "Diese Seiten haben einen Erweiterungstag mit Vorlageparameter, der nicht ordnungsgeäß aufgebaut ist.",
 	"linter-category-fostered": "Falsch verschachtelter Inhalt",
 	"linter-category-fostered-desc": "Diese Seiten haben falsch verschachtelte Inhalte.",
