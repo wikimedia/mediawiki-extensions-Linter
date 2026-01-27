@@ -23,6 +23,7 @@ $specialPageAliases = [];
 /** English (English) */
 $specialPageAliases['en'] = [
 	'LintErrors' => [ 'LintErrors' ],
+	'LintTemplateErrors' => [ 'LintTemplateErrors' ],
 ];
 
 /** Azerbaijani (Azərbaycanca) */

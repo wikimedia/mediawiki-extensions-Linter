@@ -54,7 +54,8 @@
 		"InfoAction": "main",
 		"PageDeletionDataUpdates": "main",
 		"ParserLogLinterData": "main",
-		"RevisionDataUpdates": "main"
+		"RevisionDataUpdates": "main",
+		"wgQueryPages": "main"
 	},
 	"DomainEventIngresses": [
 		{
@@ -94,6 +95,13 @@
 				"PermissionManager",
 				"Linter.CategoryManager",
 				"Linter.TotalsLookup"
+			]
+		},
+		"LintTemplateErrors": {
+			"class": "MediaWiki\\Linter\\SpecialLintTemplateErrors",
+			"services": [
+				"ConnectionProvider",
+				"Linter.CategoryManager"
 			]
 		}
 	},

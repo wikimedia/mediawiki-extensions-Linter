@@ -40,6 +40,7 @@ use MediaWiki\Revision\RenderedRevision;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\SlotRecord;
 use MediaWiki\Skin\Skin;
+use MediaWiki\SpecialPage\Hook\WgQueryPagesHook;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Storage\Hook\RevisionDataUpdatesHook;
 use MediaWiki\Title\Title;
@@ -51,7 +52,8 @@ class Hooks implements
 	InfoActionHook,
 	ParserLogLinterDataHook,
 	PageDeletionDataUpdatesHook,
-	RevisionDataUpdatesHook
+	RevisionDataUpdatesHook,
+	WgQueryPagesHook
 {
 	private readonly bool $parseOnDerivedDataUpdates;
 
@@ -305,4 +307,10 @@ class Hooks implements
 			$renderedRevision,
 		);
 	}
+
+	/** @inheritDoc */
+	public function onWgQueryPages( &$qp ): void {
+		$qp[] = [ SpecialLintTemplateErrors::class, 'LintTemplateErrors' ];
+	}
+
 }

@@ -5,6 +5,7 @@
 		]
 	},
 	"linterrors": "Lint errors",
+	"linttemplateerrors": "Templates generating lint errors",
 	"linter-category-bogus-image-options": "Bogus file options",
 	"linter-category-bogus-image-options-desc": "These pages have files with bogus options.",
 	"linter-category-large-tables": "Big Tables that are hard to view on mobile",
@@ -59,6 +60,7 @@
 	"linter-category-wikilink-in-extlink-desc": "These pages have wikilinks in external links that could be fixed",
 	"linter-desc": "Track lint errors from an external service and show them to users",
 	"linter-lints-prefix-search-page-desc": "Search for pages with lint errors by page title prefix or complete title",
+	"linter-invalid-category": "Category not found or malformed",
 	"linter-invalid-title": "Namespace and/or pagename not found or malformed",
 	"linter-form-exact-match": "Search for a specific page title",
 	"linter-form-prefix-match": "Search for all pages that match the title prefix",
@@ -116,5 +118,7 @@
 	"linterrors-summary": "<strong>Note:</strong> The counts for categories are not accurate counts, but are based on estimates.",
 	"multi-part-template-block": "Output not from a single template",
 	"pageinfo-linter": "Lint errors",
-	"pageinfo-linter-moreinfo": "View detailed information on the lint errors."
+	"pageinfo-linter-moreinfo": "View detailed information on the lint errors.",
+	"category-by-template-view": "View templates that generate these lint errors.",
+	"category-by-template-desc": "These templates are generating '''$1''' lint errors."
 }

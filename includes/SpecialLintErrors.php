@@ -106,7 +106,13 @@ class SpecialLintErrors extends SpecialPage {
 		$form = HTMLForm::factory( 'ooui', $fields, $this->getContext() );
 		$form->setWrapperLegend( true );
 		if ( $this->category !== null ) {
-			$form->addHeaderHtml( $this->msg( "linter-category-{$this->category}-desc" )->parse() );
+			$temps = $this->titleParser->parseTitle( 'Special:LintTemplateErrors/' . $this->category );
+			$form->addHeaderHtml(
+				$this->msg( "linter-category-{$this->category}-desc" )->parse() . " " .
+					$this->getLinkRenderer()->makeLink(
+						$temps, $this->msg( "category-by-template-view" )->text()
+					)
+			);
 		}
 		$form->setMethod( 'get' );
 		$form->prepareForm()->displayForm( false );

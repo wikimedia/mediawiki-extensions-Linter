@@ -15,6 +15,7 @@
 		]
 	},
 	"linterrors": "{{doc-special|LintErrors}}",
+	"linttemplateerrors": "{{doc-special|LintTemplateErrors}}",
 	"linter-category-bogus-image-options": "Name of lint error category. See [[:mw:Help:Lint errors/bogus-image-options]]",
 	"linter-category-bogus-image-options-desc": "Description of category\n\nSimilar messages:\n* {{msg-mw|Linter-category-deletable-table-tag-desc}}\n* {{msg-mw|Linter-category-fostered-desc}}\netc.",
 	"linter-category-large-tables": "Name of lint error category. See [[:mw:Help:Lint errors/large-tables]]",
@@ -69,6 +70,7 @@
 	"linter-category-wikilink-in-extlink-desc": "Description of category\n\nSimilar messages:\n* {{msg-mw|Linter-category-bogus-image-options-desc}}\n* {{msg-mw|Linter-category-deletable-table-tag-desc}}\n* {{msg-mw|Linter-category-fostered-desc}}\netc.",
 	"linter-desc": "{{desc|name=Linter|url=https://www.mediawiki.org/wiki/Extension:Linter}}",
 	"linter-lints-prefix-search-page-desc": "Heading for a form section that allows users to search by page title prefix or complete title, for a group of pages with lint errors",
+	"linter-invalid-category": "Error message for invalid category",
 	"linter-invalid-title": "Error message for lint errors for single page - not found or malformed namespace and-or pagename",
 	"linter-form-exact-match": "Label for radio button for Search for a specific page title",
 	"linter-form-prefix-match": "Label for radio button for Search for all pages that match the title prefix",
@@ -126,5 +128,7 @@
 	"linterrors-summary": "Summary message for Special:LintErrors",
 	"multi-part-template-block": "Table cell on [[Special:LintErrors]] indicating that content block is not produced by a single template",
 	"pageinfo-linter": "Heading on ?action=info for a page if it has lint errors",
-	"pageinfo-linter-moreinfo": "Link text below a summary table on ?action=info that goes to Special:LintErrors for that specific page"
+	"pageinfo-linter-moreinfo": "Link text below a summary table on ?action=info that goes to Special:LintErrors for that specific page",
+	"category-by-template-view": "Link text that goes to Special:LintTemplateErrors for the specific category.",
+	"category-by-template-desc": "Description that goes on Special:LintTemplateErrors for the specific category. $1 is the category name."
 }
