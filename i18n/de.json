@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Brettchenweber",
+			"IWL04",
 			"Inkowik",
 			"Kghbln",
 			"Metalhead64",
@@ -21,7 +22,7 @@
 	"linter-category-empty-heading": "Leere Überschriften",
 	"linter-category-empty-heading-desc": "Diese Seiten haben leere Überschriften.",
 	"linter-category-template-arg-in-extension-tag": "Erweiterungstag mit Vorlagenparameter",
-	"linter-category-template-arg-in-extension-tag-desc": "Diese Seiten haben einen Erweiterungstag mit Vorlageparameter, der nicht ordnungsgeäß aufgebaut ist.",
+	"linter-category-template-arg-in-extension-tag-desc": "Diese Seiten haben einen Erweiterungstag mit Vorlagenparameter, der nicht ordnungsgemäß aufgebaut ist.",
 	"linter-category-fostered": "Falsch verschachtelter Inhalt",
 	"linter-category-fostered-desc": "Diese Seiten haben falsch verschachtelte Inhalte.",
 	"linter-category-fostered-transparent": "Verschalteter rendering-transparenter Inhalt",
