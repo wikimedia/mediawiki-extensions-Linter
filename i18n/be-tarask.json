@@ -40,7 +40,7 @@
 	"linter-category-multiline-html-table-in-list": "Шматрадковая табліца ў сьпісе",
 	"linter-category-multiline-html-table-in-list-desc": "Раней табліцы пераносіліся ўнутар ці па-за межы сьпісу, а цяпер сьпіс пашыраецца на рэшту старонкі.",
 	"linter-category-multiple-unclosed-formatting-tags": "Шмат незакрытых цэтлікаў фарматаваньня",
-	"linter-category-multiple-unclosed-formatting-tags-desc": "Гэтыя старонкі маюць некалькі незакрытых цэтлікаў фарматаваньня",
+	"linter-category-multiple-unclosed-formatting-tags-desc": "Гэтыя старонкі маюць мноства незакрытых цэтлікаў фарматаваньня",
 	"linter-category-obsolete-tag": "Састарэлыя HTML-тэгі",
 	"linter-category-obsolete-tag-desc": "Гэтыя старонкі ўжываюць састарэлыя HTML-тэґі.",
 	"linter-category-pwrap-bug-workaround": "Пазьбяганьне памылкі абгорткі параграфу",
