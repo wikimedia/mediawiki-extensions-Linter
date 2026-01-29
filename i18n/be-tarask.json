@@ -42,7 +42,7 @@
 	"linter-category-multiple-unclosed-formatting-tags": "Шмат незакрытых цэтлікаў фарматаваньня",
 	"linter-category-multiple-unclosed-formatting-tags-desc": "Гэтыя старонкі маюць некалькі незакрытых цэтлікаў фарматаваньня",
 	"linter-category-obsolete-tag": "Састарэлыя HTML-тэгі",
-	"linter-category-obsolete-tag-desc": "Гэтыя старонкі ўтрымліваюць састарэлыя HTML-тэгі.",
+	"linter-category-obsolete-tag-desc": "Гэтыя старонкі ўжываюць састарэлыя HTML-тэґі.",
 	"linter-category-pwrap-bug-workaround": "Пазьбяганьне памылкі абгорткі параграфу",
 	"linter-category-pwrap-bug-workaround-desc": "Гэтыя старонкі маюць памылку абгорткі параграфу, якая можа быць пазьбегнутая.",
 	"linter-category-self-closed-tag": "Самазакрытыя тэгі",
