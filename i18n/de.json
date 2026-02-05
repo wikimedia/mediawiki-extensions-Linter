@@ -11,6 +11,7 @@
 		]
 	},
 	"linterrors": "Lint-Fehler",
+	"linttemplateerrors": "Vorlagen, die Lint-Fehler erzeugen",
 	"linter-category-bogus-image-options": "Fehlerhafte Dateioptionen",
 	"linter-category-bogus-image-options-desc": "Diese Seiten haben Dateien mit fehlerhaften Optionen.",
 	"linter-category-large-tables": "Große Tabellen, die auf dem Handy schlecht zu sehen sind",
@@ -65,6 +66,7 @@
 	"linter-category-wikilink-in-extlink-desc": "Diese Seiten haben Wikilinks in externen Links, die korrigiert werden können.",
 	"linter-desc": "Ermöglicht das Ermitteln von Wikitext-Fehlern mit Hilfe eines externen Dienstes und zeigt diese Benutzern an",
 	"linter-lints-prefix-search-page-desc": "Suche nach Seiten mit Lint-Fehlern anhand des Präfixes des Seitentitels oder des vollständigen Titels",
+	"linter-invalid-category": "Kategorie nicht gefunden oder fehlerhaft",
 	"linter-invalid-title": "Namensraum und/oder Seitenname nicht gefunden oder falsch geformt",
 	"linter-form-exact-match": "Suche nach einem bestimmten Seitentitel",
 	"linter-form-prefix-match": "Suche nach allen Seiten, die dem Titelpräfix entsprechen",
@@ -121,5 +123,7 @@
 	"linterrors-summary": "<strong>Hinweis:</strong> Die Zähler für Kategorien sind nicht genau, sondern basieren auf Schätzungen.",
 	"multi-part-template-block": "Ausgabe nicht von einer einzelnen Vorlage",
 	"pageinfo-linter": "Lint-Fehler",
-	"pageinfo-linter-moreinfo": "Detaillierte Informationen zu den Lint-Fehlern anzeigen"
+	"pageinfo-linter-moreinfo": "Detaillierte Informationen zu den Lint-Fehlern anzeigen",
+	"category-by-template-view": "Anzeigen von Vorlagen, die diese Lint-Fehler erzeugen.",
+	"category-by-template-desc": "Diese Vorlagen erzeugen ''' $1 ''' Lint-Fehler."
 }
