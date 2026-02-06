@@ -62,7 +62,9 @@ class SpecialLintTemplateErrors extends QueryPage {
 			'tables' => [ 'linter' ],
 			'fields' => [
 				'title' => 'linter_template',
-				'namespace' => 'linter_template',
+				// linter_template uses the local text ns prefix
+				// so we need to use NS_MAIN to make it work
+				'namespace' => NS_MAIN,
 				'value' => 'COUNT(*)',
 			],
 			'conds' => [
@@ -177,7 +179,6 @@ class SpecialLintTemplateErrors extends QueryPage {
 
 				$vals[] = [
 					'qcc_type' => $this->getName(),
-					'qcc_namespace' => $row->namespace,
 					'qcc_title' => $row->title,
 					'qcc_value' => $value,
 					'qcc_titletwo' => $category
@@ -227,8 +228,8 @@ class SpecialLintTemplateErrors extends QueryPage {
 				->deleteFrom( 'querycachetwo' )
 				->where( [
 					'qcc_type' => $this->getName(),
-					'qcc_namespace' => $title->getNamespace(),
-					'qcc_title' => $title->getDBkey(),
+					'qcc_namespace' => NS_MAIN,
+					'qcc_title' => Title::castFromLinkTarget( $title )?->getPrefixedDBKey(),
 				] )
 				->caller( __METHOD__ )->execute();
 		}
