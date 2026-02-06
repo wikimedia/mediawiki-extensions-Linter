@@ -11,6 +11,7 @@
 		]
 	},
 	"linterrors": "Błędy składniowe",
+	"linttemplateerrors": "Szablony generujące błędy lintowania",
 	"linter-category-bogus-image-options": "Nieprawidłowe opcje pliku",
 	"linter-category-bogus-image-options-desc": "Te strony odwołują się do plików z podaniem nieistniejących opcji.",
 	"linter-category-large-tables": "Duże tabele, które trudno się czyta na urządzeniach mobilnych",
@@ -30,7 +31,7 @@
 	"linter-category-html5-misnesting": "Błędnie zagnieżdżony znacznik z różnym renderowaniem w HTML5 i HTML4",
 	"linter-category-html5-misnesting-desc": "Te źle zagnieżdżone znaczniki będą zachowywać się inaczej w HTML5 niż w HTML4.",
 	"linter-category-night-mode-unaware-background-color": "Istnieje reguła stylów inline dla koloru tła bez wskazania koloru czcionki",
-	"linter-category-night-mode-unaware-background-color-desc": "Te strony mają reguły stylów inline, które określają kolor tła, ale nie wskazują koloru tekstu, co wpływa negatywnie na doświadczenia użytkownika w trybie ciemnym",
+	"linter-category-night-mode-unaware-background-color-desc": "Te strony mają reguły stylów inline, które określają kolor tła, ale nie wskazują koloru tekstu, co wpływa negatywnie na doświadczenia użytkownika w trybie ciemnym.",
 	"linter-category-misc-tidy-replacement-issues": "Inne problemy",
 	"linter-category-misc-tidy-replacement-issues-desc": "Te strony mają inne problemy, które powodują, że są renderowane inaczej niż wcześniej",
 	"linter-category-misnested-tag": "Źle zagnieżdżone znaczniki",
@@ -65,6 +66,7 @@
 	"linter-category-wikilink-in-extlink-desc": "Te strony mają wstawione linki wewnętrzne w kodzie linków zewnętrznych",
 	"linter-desc": "Śledzi błędy składniowe z usługi zewnętrznej i pokazuje je użytkownikom",
 	"linter-lints-prefix-search-page-desc": "Wyszukaj strony z błędami składniowymi według tytułu",
+	"linter-invalid-category": "Kategoria nie została znaleziona lub jest nieprawidłowo sformatowana",
 	"linter-invalid-title": "Nieprawidłowy tytuł lub przestrzeń nazw",
 	"linter-form-exact-match": "Dokładnie ten tytuł",
 	"linter-form-prefix-match": "Wszystkie strony o tytule rozpoczynającym się od tego przedrostka",
@@ -121,5 +123,7 @@
 	"linterrors-summary": "<strong>Uwaga:</strong> Liczby elementów poszczególnych kategorii nie są dokładne, opierają się one na szacunkach.",
 	"multi-part-template-block": "Wynik nie pochodzi z jednego szablonu",
 	"pageinfo-linter": "Błędy składniowe",
-	"pageinfo-linter-moreinfo": "Zobacz szczegółowe informacje o błędach lintera."
+	"pageinfo-linter-moreinfo": "Zobacz szczegółowe informacje o błędach lintera.",
+	"category-by-template-view": "Wyświetl szablony, które generują te błędy.",
+	"category-by-template-desc": "Te szablony generują błędy lintera '''$1''."
 }

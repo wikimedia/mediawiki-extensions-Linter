@@ -5,6 +5,7 @@
 		]
 	},
 	"linterrors": "Errores de Lint",
+	"linttemplateerrors": "Patronos que genera errores de lint",
 	"linter-category-bogus-image-options": "Optiones de file invalide",
 	"linter-category-bogus-image-options-desc": "Iste paginas ha files con optiones invalide.",
 	"linter-category-large-tables": "Grande tabellas difficile a visualisar sur mobile",
@@ -59,6 +60,7 @@
 	"linter-category-wikilink-in-extlink-desc": "Iste paginas ha wikiligamines in ligamines externe que poterea esser reparate",
 	"linter-desc": "Tracia errores de analyse Lint desde un servicio externe e monstrar los al usatores",
 	"linter-lints-prefix-search-page-desc": "Cercar paginas con errores de analyse Lint per prefixo de titulo de pagina o per titulo complete",
+	"linter-invalid-category": "Categoria non trovate o mal formate",
 	"linter-invalid-title": "Spatio de nomines e/o nomine de pagina non trovate o mal formate",
 	"linter-form-exact-match": "Cercar un titulo de pagina specific",
 	"linter-form-prefix-match": "Cercar tote le paginas que corresponde al prefixo de titulo",
@@ -115,5 +117,7 @@
 	"linterrors-summary": "<strong>Nota:</strong> Le numeros de categorias non es exacte, ma basate sur estimationes.",
 	"multi-part-template-block": "Resultato generate per plus de un patrono",
 	"pageinfo-linter": "Errores de analyse Lint",
-	"pageinfo-linter-moreinfo": "Vider informationes detaliate sur le errores de lint."
+	"pageinfo-linter-moreinfo": "Vider informationes detaliate sur le errores de lint.",
+	"category-by-template-view": "Vider le patronos que genera iste errores de lint.",
+	"category-by-template-desc": "Iste patronos genera '''$1''' errores de lint."
 }

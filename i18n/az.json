@@ -10,6 +10,7 @@
 		]
 	},
 	"linterrors": "Sintaksis xətaları",
+	"linttemplateerrors": "Sintaksis xətaları yaradan şablonlar",
 	"linter-category-bogus-image-options": "Səhv fayl parametrləri",
 	"linter-category-bogus-image-options-desc": "Bu səhifələrdə səhv parametrləri olan fayllar var.",
 	"linter-category-large-tables": "Mobildə görünüşü çətin olan Böyük Cədvəllər",
@@ -21,6 +22,7 @@
 	"linter-category-empty-heading": "Boş başlıqlar",
 	"linter-category-empty-heading-desc": "Bu səhifələrdə boş başlıqlar var.",
 	"linter-category-template-arg-in-extension-tag": "Şablon parametrləri olan uzantı teqi",
+	"linter-category-template-arg-in-extension-tag-desc": "Bu səhifələrdə şablon parametrini ehtiva edən uzantı teqi var və bu, düzgün şəkildə istifadə edilməyəcək.",
 	"linter-category-fostered": "Təşviq edilmiş məzmun",
 	"linter-category-fostered-desc": "Bu səhifələrin məzmunu təşviq edilib.",
 	"linter-category-fostered-transparent": "Renderdə görünməyən məzmun",
@@ -48,6 +50,7 @@
 	"linter-category-obsolete-tag": "Köhnəlmiş HTML teqləri",
 	"linter-category-obsolete-tag-desc": "Bu səhifələr köhnəlmiş HTML teqlərindən istifadə edir.",
 	"linter-category-pwrap-bug-workaround": "Paraqraf sürüşdürmə xətası müvəqqəti həlli",
+	"linter-category-pwrap-bug-workaround-desc": "Bu səhifələrdə həll edilə bilən abzas bağlama xətası var.",
 	"linter-category-self-closed-tag": "Self-qapalı tags",
 	"linter-category-self-closed-tag-desc": "Bu pages özünü qapalı tags var.",
 	"linter-category-stripped-tag": "Açılma teqi olmayan teqlər",
@@ -62,6 +65,7 @@
 	"linter-category-wikilink-in-extlink-desc": "Bu səhifələrdə xarici keçidlərin daxilində vikilinklər var",
 	"linter-desc": "Xarici xidmətdən gələn sintaksis xətalarını izləyin və onları istifadəçilərə göstərin",
 	"linter-lints-prefix-search-page-desc": "Səhifə başlığı prefiksi və ya tam başlığı ilə sintaksis xətaları olan səhifələri axtarın",
+	"linter-invalid-category": "Kateqoriya tapılmadı və ya deformasiyaya uğradı",
 	"linter-invalid-title": "Ad fəzası və/və ya səhifə adı tapılmadı və ya səhv formalaşdırıldı",
 	"linter-form-exact-match": "Müəyyən bir səhifə başlığını axtar",
 	"linter-form-prefix-match": "Başlıq prefiksinə uyğun gələn bütün səhifələri axtar",
@@ -112,10 +116,13 @@
 	"linter-pager-title-header": "Səhifə başlığı",
 	"linter-pager-unclosed-quotes-in-heading-details": "Mündəricatdan daşan qapalı olmayan dırnaq işarəsi",
 	"linter-pager-wikilink-in-extlink-details": "Keçid daxilində keçid",
+	"linter-pager-template-arg-in-extension-tag-details": "Yeniləmə ehtiyacı olan uzantı teqi adı (və içərisində istifadə olunan şablon parametrləri)",
 	"linter-prefix-search-subpage": "Başlıq prefiksi və ya tam başlığa uyğun gələn lint xətaları olan səhifələr: $1",
 	"linterrors-subpage": "Sintaksis xətaları: $1",
 	"linterrors-summary": "<strong>Qeyd:</strong> Kateqoriyalar üçün hesablamalar dəqiq hesablamalar deyil, təxminlərə əsaslanır.",
 	"multi-part-template-block": "Xətaya tək bir şablon səbəb olmur",
 	"pageinfo-linter": "Sintaksis xətaları",
-	"pageinfo-linter-moreinfo": "Sintaksis xətaları haqqında ətraflı məlumata baxın."
+	"pageinfo-linter-moreinfo": "Sintaksis xətaları haqqında ətraflı məlumata baxın.",
+	"category-by-template-view": "Bu xətaları yaradan şablonlara baxın.",
+	"category-by-template-desc": "Bu şablonlar '''$1''' xətaları yaradır."
 }
