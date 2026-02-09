@@ -10,6 +10,7 @@
 		]
 	},
 	"linterrors": "Erros detectados por Lint",
+	"linttemplateerrors": "Modelos que xeran erros de Lint",
 	"linter-category-bogus-image-options": "Opcións de ficheiro incorrectas",
 	"linter-category-bogus-image-options-desc": "Estas páxinas teñen ficheiros con opcións inútiles.",
 	"linter-category-large-tables": "Táboas grandes que son difíciles de ver no móbil",
@@ -64,6 +65,7 @@
 	"linter-category-wikilink-in-extlink-desc": "Estas páxinas teñene ligazóns wiki dentro de ligazóns externas e precisan ser correxidas",
 	"linter-desc": "Supervisa erros informados por un servizo comprobador externo e móstraos ós usuarios",
 	"linter-lints-prefix-search-page-desc": "Procurar páxinas con erros de Lint por prefixo do título ou por título completo",
+	"linter-invalid-category": "Categoría non atopada ou con formato incorrecto",
 	"linter-invalid-title": "Espazo de nomes e/ou nome da páxina non atopado ou con formato incorrecto",
 	"linter-form-exact-match": "Procurar un título de páxina específico",
 	"linter-form-prefix-match": "Procurar todas as páxinas que coincidan co prefixo do título",
@@ -120,5 +122,7 @@
 	"linterrors-summary": "<strong>Nota:</strong> As contaxes para as categorías non son exactas pois se basean en estimacións.",
 	"multi-part-template-block": "O resultado non procede dun só modelo",
 	"pageinfo-linter": "Erros detectados por Lint",
-	"pageinfo-linter-moreinfo": "Ollar información detallada sobre os erros de Lint."
+	"pageinfo-linter-moreinfo": "Ollar información detallada sobre os erros de Lint.",
+	"category-by-template-view": "Ver modelos que xeran estes erros de Lint.",
+	"category-by-template-desc": "Estes modelos están a xerar '''$1''' erros de Lint."
 }

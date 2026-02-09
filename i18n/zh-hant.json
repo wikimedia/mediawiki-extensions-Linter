@@ -17,6 +17,7 @@
 		]
 	},
 	"linterrors": "Lint錯誤",
+	"linttemplateerrors": "模板產生 lint 錯誤",
 	"linter-category-bogus-image-options": "不正確的檔案選項",
 	"linter-category-bogus-image-options-desc": "這些頁面有些圖片或檔案含有錯誤的選項。",
 	"linter-category-large-tables": "難以在行動裝置上檢視的巨大表格",
@@ -71,6 +72,7 @@
 	"linter-category-wikilink-in-extlink-desc": "這些頁面所擁有在外部連結裡的 wiki 連結可被修正",
 	"linter-desc": "自外部服務追蹤 lint 錯誤，並且對使用者顯示",
 	"linter-lints-prefix-search-page-desc": "按頁面標題前綴或完整標題搜尋有 lint 錯誤的頁面",
+	"linter-invalid-category": "未找到分類或格式錯誤",
 	"linter-invalid-title": "未找到命名空間與/或頁面名稱，或是格式錯誤",
 	"linter-form-exact-match": "搜尋特定頁面標題",
 	"linter-form-prefix-match": "搜尋匹配標題前綴的所有頁面",
@@ -127,5 +129,7 @@
 	"linterrors-summary": "<strong>注意：</strong>分類的數量並不精確，這是估計值。",
 	"multi-part-template-block": "輸出並非來自單一個模板",
 	"pageinfo-linter": "Lint 錯誤",
-	"pageinfo-linter-moreinfo": "查看 lint 錯誤的詳細資訊。"
+	"pageinfo-linter-moreinfo": "查看 lint 錯誤的詳細資訊。",
+	"category-by-template-view": "查看會產生這些 lint 錯誤的模板。",
+	"category-by-template-desc": "這些模板會產生 '''$1''' lint 錯誤。"
 }
