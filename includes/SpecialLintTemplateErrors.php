@@ -44,6 +44,11 @@ class SpecialLintTemplateErrors extends QueryPage {
 		}
 		$this->category = $par;
 		parent::execute( $par );
+		$this->getOutput()->setPageTitleMsg(
+			$this->msg( 'category-by-template',
+				$this->msg( "linter-category-{$this->category}" )->text()
+			)
+		);
 	}
 
 	/**
