@@ -240,4 +240,11 @@ class SpecialLintTemplateErrors extends QueryPage {
 		}
 	}
 
+	/**
+	 * @return string[]
+	 */
+	protected function getSubpagesForPrefixSearch() {
+		return $this->categoryManager->getVisibleCategories();
+	}
+
 }
