@@ -5,7 +5,7 @@
 		]
 	},
 	"linterrors": "Lint errors",
-	"linttemplateerrors": "Templates generating lint errors",
+	"linttemplateerrors": "Transclusions containing lint errors",
 	"linter-category-bogus-image-options": "Bogus file options",
 	"linter-category-bogus-image-options-desc": "These pages have files with bogus options.",
 	"linter-category-large-tables": "Big Tables that are hard to view on mobile",
@@ -119,6 +119,7 @@
 	"multi-part-template-block": "Output not from a single template",
 	"pageinfo-linter": "Lint errors",
 	"pageinfo-linter-moreinfo": "View detailed information on the lint errors.",
-	"category-by-template-view": "View templates that generate these lint errors.",
-	"category-by-template-desc": "These templates are generating '''$1''' lint errors."
+	"category-by-template": "Transclusions containing lint errors: $1",
+	"category-by-template-view": "View transclusions that contain these lint errors.",
+	"category-by-template-desc": "Transclusions of these pages contain '''[[Special:LintErrors/$1|$1]]''' lint errors.  ''Note that some transclusions might show up on this list because of the arguments passed into the transclusion and not the transclusion source.''"
 }

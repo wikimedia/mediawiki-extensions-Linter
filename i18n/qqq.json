@@ -129,6 +129,7 @@
 	"multi-part-template-block": "Table cell on [[Special:LintErrors]] indicating that content block is not produced by a single template",
 	"pageinfo-linter": "Heading on ?action=info for a page if it has lint errors",
 	"pageinfo-linter-moreinfo": "Link text below a summary table on ?action=info that goes to Special:LintErrors for that specific page",
+	"category-by-template": "Page title for Special:LintTemplateErrors, $1 is the localized category description",
 	"category-by-template-view": "Link text that goes to Special:LintTemplateErrors for the specific category.",
 	"category-by-template-desc": "Description that goes on Special:LintTemplateErrors for the specific category. $1 is the category name."
 }
