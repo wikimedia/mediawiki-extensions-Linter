@@ -5,6 +5,7 @@
 			"Anterdc99",
 			"Func",
 			"Gerongfenh",
+			"Gsdn",
 			"GuoPC",
 			"Hanyanbo98",
 			"Hzy980512",
@@ -24,6 +25,7 @@
 		]
 	},
 	"linterrors": "Lint错误",
+	"linttemplateerrors": "生成lint错误的模板",
 	"linter-category-bogus-image-options": "不正确的文件选项",
 	"linter-category-bogus-image-options-desc": "这些页面有选项不正确的文件。",
 	"linter-category-large-tables": "难以在移动设备上查看的巨大表格",
@@ -78,6 +80,7 @@
 	"linter-category-wikilink-in-extlink-desc": "这些页面在可以修复的外部链接中有维基链接",
 	"linter-desc": "从外部服务追踪lint错误，并向用户显示",
 	"linter-lints-prefix-search-page-desc": "使用页面标题前缀或完整标题搜索有lint错误的页面",
+	"linter-invalid-category": "分类未找到或格式错误",
 	"linter-invalid-title": "未找到命名空间和/或页面名称，或格式错误",
 	"linter-form-exact-match": "搜索特定页面标题",
 	"linter-form-prefix-match": "搜索所有与此页面前缀相匹配的页面",
@@ -134,5 +137,7 @@
 	"linterrors-summary": "<strong>注意：</strong>分类计数并不精确，而是基于估计。",
 	"multi-part-template-block": "输出并非来自单个模板",
 	"pageinfo-linter": "Lint错误",
-	"pageinfo-linter-moreinfo": "查看lint错误的详细信息。"
+	"pageinfo-linter-moreinfo": "查看lint错误的详细信息。",
+	"category-by-template-view": "查看会生成这些lint错误的模板。",
+	"category-by-template-desc": "这些模板会生成 ''' $1 ''' lint错误。"
 }
