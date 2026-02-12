@@ -28,7 +28,7 @@
 	"linter-category-html5-misnesting": "Błędnie zagnieżdżony znacznik z różnym renderowaniem w HTML5 i HTML4",
 	"linter-category-html5-misnesting-desc": "Te źle zagnieżdżone znaczniki będą zachowywać się inaczej w HTML5 niż w HTML4.",
 	"linter-category-night-mode-unaware-background-color": "Istnieje reguła stylów inline dla koloru tła bez wskazania koloru czcionki",
-	"linter-category-night-mode-unaware-background-color-desc": "Te strony mają reguły stylów inline, które określają kolor tła, ale nie wskazują koloru tekstu, co wpływa negatywnie na doświadczenia użytkownika w trybie ciemnym",
+	"linter-category-night-mode-unaware-background-color-desc": "Te strony mają reguły stylów inline, które określają kolor tła, ale nie wskazują koloru tekstu, co wpływa negatywnie na doświadczenia użytkownika w trybie ciemnym.",
 	"linter-category-misc-tidy-replacement-issues": "Inne problemy",
 	"linter-category-misc-tidy-replacement-issues-desc": "Te strony mają inne problemy, które powodują, że są renderowane inaczej niż wcześniej",
 	"linter-category-misnested-tag": "Źle zagnieżdżone znaczniki",
