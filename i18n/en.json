@@ -121,5 +121,6 @@
 	"pageinfo-linter-moreinfo": "View detailed information on the lint errors.",
 	"category-by-template": "Transclusions containing lint errors: $1",
 	"category-by-template-view": "View transclusions that contain these lint errors.",
-	"category-by-template-desc": "Transclusions of these pages contain '''[[Special:LintErrors/$1|$1]]''' lint errors.  ''Note that some transclusions might show up on this list because of the arguments passed into the transclusion and not the transclusion source.''"
+	"category-by-template-desc": "Transclusions of these pages contain '''[[Special:LintErrors/$1|$1]]''' lint errors.  ''Note that some transclusions might show up on this list because of the arguments passed into the transclusion and not the transclusion source.''",
+	"linter-template-errors-index-desc": "These are lists of transclusions of pages containing lint errors.  ''Note that some transclusions might show up on these lists because of the arguments passed into the transclusion and not the transclusion source.''"
 }
