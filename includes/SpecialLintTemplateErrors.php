@@ -32,7 +32,14 @@ class SpecialLintTemplateErrors extends QueryPage {
 	 * @inheritDoc
 	 */
 	public function execute( $par ) {
-		if ( !$this->categoryManager->isKnownCategory( $par ?? '' ) ) {
+		// If no category is provided, show an index
+		if ( !$par ) {
+			$this->showCategoryIndex();
+			return;
+		}
+
+		if ( !$this->categoryManager->isKnownCategory( $par ) ) {
+			$this->setHeaders();
 			$this->getOutput()->addHTML(
 				Html::element(
 					'span',
@@ -42,6 +49,7 @@ class SpecialLintTemplateErrors extends QueryPage {
 			);
 			return;
 		}
+
 		$this->category = $par;
 		parent::execute( $par );
 		$this->getOutput()->setPageTitleMsg(
@@ -49,6 +57,31 @@ class SpecialLintTemplateErrors extends QueryPage {
 				$this->msg( "linter-category-{$this->category}" )->text()
 			)
 		);
+	}
+
+	/**
+	 * Display an index of all available lint error categories
+	 */
+	private function showCategoryIndex() {
+		$this->setHeaders();
+
+		$out = $this->getOutput();
+		$out->addWikiMsg( 'linter-template-errors-index-desc' );
+
+		$categories = $this->categoryManager->getVisibleCategories();
+
+		$out->addHTML( Html::openElement( 'ul' ) );
+
+		foreach ( $categories as $category ) {
+			$categoryTitle = $this->msg( "linter-category-{$category}" )->text();
+			$link = $this->getLinkRenderer()->makeLink(
+				$this->getPageTitle( $category ),
+				$categoryTitle
+			);
+			$out->addHTML( Html::rawElement( 'li', [], $link ) );
+		}
+
+		$out->addHTML( Html::closeElement( 'ul' ) );
 	}
 
 	/**
