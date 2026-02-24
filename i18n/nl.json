@@ -19,7 +19,7 @@
 		]
 	},
 	"linterrors": "Lintfouten",
-	"linttemplateerrors": "Sjablonen die lintfouten veroorzaken",
+	"linttemplateerrors": "Transclusies die lintfouten bevatten",
 	"linter-category-bogus-image-options": "Onjuist opgegeven opties mediabestand",
 	"linter-category-bogus-image-options-desc": "Deze pagina's bevatten mediabestanden met onjuist opgegeven opties.",
 	"linter-category-large-tables": "Grote tabellen die moeilijk te bekijken zijn op mobiel",
@@ -132,6 +132,7 @@
 	"multi-part-template-block": "Uitvoer komt niet van een enkel sjabloon",
 	"pageinfo-linter": "Lintfouten",
 	"pageinfo-linter-moreinfo": "Gedetailleerde informatie bekijken over de lintfouten.",
-	"category-by-template-view": "Sjablonen bekijken die deze lintfouten veroorzaken.",
-	"category-by-template-desc": "Deze sjablonen veroorzaken lintfouten van het type '''$1'''."
+	"category-by-template": "Transclusies die lintfouten bevatten: $1",
+	"category-by-template-view": "Transclusies bekijken die deze lintfouten bevatten.",
+	"category-by-template-desc": "Transclusies van deze pagina's bevatten '''[[Special:LintErrors/$1|$1]]''' lintfouten. ''Merk op dat sommige transclusies in deze lijst kunnen verschijnen vanwege de argumenten die aan de transclusie worden doorgegeven en niet vanwege de broncode van de transclusie.''"
 }

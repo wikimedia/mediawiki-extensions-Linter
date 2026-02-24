@@ -5,7 +5,7 @@
 		]
 	},
 	"linterrors": "Errores de Lint",
-	"linttemplateerrors": "Patronos que genera errores de lint",
+	"linttemplateerrors": "Transclusiones que contine errores de lint",
 	"linter-category-bogus-image-options": "Optiones de file invalide",
 	"linter-category-bogus-image-options-desc": "Iste paginas ha files con optiones invalide.",
 	"linter-category-large-tables": "Grande tabellas difficile a visualisar sur mobile",
@@ -118,6 +118,6 @@
 	"multi-part-template-block": "Resultato generate per plus de un patrono",
 	"pageinfo-linter": "Errores de analyse Lint",
 	"pageinfo-linter-moreinfo": "Vider informationes detaliate sur le errores de lint.",
-	"category-by-template-view": "Vider le patronos que genera iste errores de lint.",
-	"category-by-template-desc": "Iste patronos genera '''$1''' errores de lint."
+	"category-by-template-view": "Vider le transclusiones que contine iste errores de lint.",
+	"category-by-template-desc": "Le transclusiones de iste pagina contine '''[[Special:LintErrors/$1|$1]]''' errores de lint.  ''Nota ben que alcun transclusiones pote figurar in iste lista a causa del argumentos passate al transclusion e non a causa del fonte del transclusion.''"
 }

@@ -11,7 +11,7 @@
 		]
 	},
 	"linterrors": "Lint-Fehler",
-	"linttemplateerrors": "Vorlagen, die Lint-Fehler erzeugen",
+	"linttemplateerrors": "Transklusionen, die Lint-Fehler enthalten",
 	"linter-category-bogus-image-options": "Fehlerhafte Dateioptionen",
 	"linter-category-bogus-image-options-desc": "Diese Seiten haben Dateien mit fehlerhaften Optionen.",
 	"linter-category-large-tables": "Große Tabellen, die auf dem Handy schlecht zu sehen sind",
@@ -124,6 +124,7 @@
 	"multi-part-template-block": "Ausgabe nicht von einer einzelnen Vorlage",
 	"pageinfo-linter": "Lint-Fehler",
 	"pageinfo-linter-moreinfo": "Detaillierte Informationen zu den Lint-Fehlern anzeigen",
-	"category-by-template-view": "Anzeigen von Vorlagen, die diese Lint-Fehler erzeugen.",
-	"category-by-template-desc": "Diese Vorlagen erzeugen ''' $1 ''' Lint-Fehler."
+	"category-by-template": "Vorlagen, die Lint-Fehler auslösen: $1",
+	"category-by-template-view": "Transklusionen anzeigen, die diese Lint-Fehler enthalten.",
+	"category-by-template-desc": "Die Transklusionen dieser Seiten enthalten Lint-Fehler vom Typ '''[[Special:LintErrors/$1|$1]]'''. Beachte, dass einige Transklusionen aufgrund der an die Transklusion übergebenen Argumente und nicht aufgrund des Transklusionsquellcodes in dieser Liste erscheinen können."
 }

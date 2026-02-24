@@ -10,7 +10,7 @@
 		]
 	},
 	"linterrors": "Sintaksis xətaları",
-	"linttemplateerrors": "Sintaksis xətaları yaradan şablonlar",
+	"linttemplateerrors": "Lint xətaları olan şablonlar",
 	"linter-category-bogus-image-options": "Səhv fayl parametrləri",
 	"linter-category-bogus-image-options-desc": "Bu səhifələrdə səhv parametrləri olan fayllar var.",
 	"linter-category-large-tables": "Mobildə görünüşü çətin olan Böyük Cədvəllər",

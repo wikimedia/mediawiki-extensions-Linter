@@ -25,6 +25,7 @@
 		]
 	},
 	"linterrors": "Erreurs d’analyse Lint",
+	"linttemplateerrors": "Modèles générant des erreurs de lint",
 	"linter-category-bogus-image-options": "Options de fichier erronées",
 	"linter-category-bogus-image-options-desc": "Ces pages ont des fichiers avec des options erronées.",
 	"linter-category-large-tables": "Grands tableaux difficiles à visualiser sur mobile",
@@ -79,6 +80,7 @@
 	"linter-category-wikilink-in-extlink-desc": "Ces pages ont des liens wiki dans des liens externes, qui doivent être corrigés.",
 	"linter-desc": "Tracer les erreurs d’analyse Lint depuis un service externe et les afficher aux utilisateurs",
 	"linter-lints-prefix-search-page-desc": "Recherche des pages ayant des erreurs d’analyse Lint par préfixe de titre de page ou par titre complet",
+	"linter-invalid-category": "Catégorie introuvable ou malformée",
 	"linter-invalid-title": "Espace de noms ou nom de page introuvable ou mal formé",
 	"linter-form-exact-match": "Rechercher un titre de page spécifique",
 	"linter-form-prefix-match": "Rechercher toutes les pages correspondant à un préfixe de titre",
@@ -135,5 +137,7 @@
 	"linterrors-summary": "<strong>Note :</strong> les compteurs pour les catégories ne sont pas forcément exacts, mais basés sur des estimations.",
 	"multi-part-template-block": "Résultat ne venant pas d’un modèle unique",
 	"pageinfo-linter": "Erreurs d’analyse Lint",
-	"pageinfo-linter-moreinfo": "Afficher les informations détaillées sur les erreurs d’analyse lint."
+	"pageinfo-linter-moreinfo": "Afficher les informations détaillées sur les erreurs d’analyse lint.",
+	"category-by-template-view": "Afficher les modèles qui génèrent ces erreurs de lint.",
+	"category-by-template-desc": "Ces modèles génèrent des erreurs de lint '''$1'''."
 }
