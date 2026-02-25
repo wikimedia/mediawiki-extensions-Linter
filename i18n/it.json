@@ -10,7 +10,7 @@
 		]
 	},
 	"linterrors": "Errori di Lint",
-	"linttemplateerrors": "Template che generano errori di lint",
+	"linttemplateerrors": "Transclusioni contenenti errori di lint",
 	"linter-category-bogus-image-options": "Parametri di \"File:\" inesistenti",
 	"linter-category-bogus-image-options-desc": "Queste pagine contengono inclusioni di immagini o altri file con parametri non validi.",
 	"linter-category-large-tables": "Tabelle grandi difficili da visualizzare sui dispositivi mobili",
@@ -120,6 +120,6 @@
 	"multi-part-template-block": "Generato da più di un template",
 	"pageinfo-linter": "Errori di Lint",
 	"pageinfo-linter-moreinfo": "Visualizza informazioni dettagliate sugli errori di Lint.",
-	"category-by-template-view": "Visualizza i template che generano questi errori di lint.",
-	"category-by-template-desc": "Questi template stanno generando errori di lint '''$1'''."
+	"category-by-template-view": "Visualizza le transclusioni che contengono questi errori di lint.",
+	"category-by-template-desc": "Le transclusioni di queste pagine contengono '''[[Special:LintErrors/$1|$1]]''' errori lint. ''Si noti che alcune transclusioni potrebbero comparire in questo elenco a causa degli argomenti passati nella transclusione e non della sorgente della transclusione.''"
 }

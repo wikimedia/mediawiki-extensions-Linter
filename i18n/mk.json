@@ -5,7 +5,7 @@
 		]
 	},
 	"linterrors": "Грешки од пречистувачот",
-	"linttemplateerrors": "Предлошки што создаваат грешки во Lint",
+	"linttemplateerrors": "Превметнувања со грешки во Lint",
 	"linter-category-bogus-image-options": "Лажни податотечни можности",
 	"linter-category-bogus-image-options-desc": "Овие страници имаат податотеки со лажни можности.",
 	"linter-category-large-tables": "Големи табели што тешко се гледаат на мобилен",
@@ -118,6 +118,7 @@
 	"multi-part-template-block": "Изводот не е од единствена предлошка",
 	"pageinfo-linter": "Грешки од пречистувачот",
 	"pageinfo-linter-moreinfo": "Погледајте подробни информации за грешките во Lint.",
-	"category-by-template-view": "Погледајте ги предлошките што ги создаваат овие грешки во Lint.",
-	"category-by-template-desc": "Овие предлошки создаваат грешки во Lint во '''$1'''."
+	"category-by-template": "Превметнувања со грешки во Lint: $1",
+	"category-by-template-view": "Погледајте ги превметнувањата што ги содржат овие грешки во Lint.",
+	"category-by-template-desc": "Превметнувања на овие страници содржат грешки во Lint со '''[[Special:LintErrors/$1|$1]]'''.  ''Имајте на ум дека некои превметнувања може да се јават на списокот поради аргументите што му се даваат на превметнувањето, а не на неговиот извор.''"
 }
