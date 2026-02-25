@@ -119,7 +119,8 @@
 		"ext.linter.edit": {
 			"scripts": "ext.linter.edit.js",
 			"dependencies": [
-				"jquery.textSelection"
+				"jquery.textSelection",
+				"user.options"
 			]
 		},
 		"ext.linter.styles": {
