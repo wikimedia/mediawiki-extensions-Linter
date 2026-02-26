@@ -118,6 +118,7 @@
 	"multi-part-template-block": "Resultato generate per plus de un patrono",
 	"pageinfo-linter": "Errores de analyse Lint",
 	"pageinfo-linter-moreinfo": "Vider informationes detaliate sur le errores de lint.",
+	"category-by-template": "Transclusiones que contine errores de lint: $1",
 	"category-by-template-view": "Vider le transclusiones que contine iste errores de lint.",
 	"category-by-template-desc": "Le transclusiones de iste pagina contine '''[[Special:LintErrors/$1|$1]]''' errores de lint.  ''Nota ben que alcun transclusiones pote figurar in iste lista a causa del argumentos passate al transclusion e non a causa del fonte del transclusion.''"
 }
