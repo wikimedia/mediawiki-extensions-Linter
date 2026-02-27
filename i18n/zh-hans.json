@@ -138,6 +138,6 @@
 	"multi-part-template-block": "输出并非来自单个模板",
 	"pageinfo-linter": "Lint错误",
 	"pageinfo-linter-moreinfo": "查看lint错误的详细信息。",
-	"category-by-template-view": "查看会生成这些lint错误的模板。",
+	"category-by-template-view": "查看包含这些lint错误的嵌入。",
 	"category-by-template-desc": "这些模板会生成 ''' $1 ''' lint错误。"
 }

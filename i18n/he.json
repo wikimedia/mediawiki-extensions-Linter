@@ -9,6 +9,7 @@
 		]
 	},
 	"linterrors": "שגיאות ניקיון",
+	"linttemplateerrors": "הכללות שמכילות שגיאות ניקיון",
 	"linter-category-bogus-image-options": "אפשרויות קובץ שגויות",
 	"linter-category-bogus-image-options-desc": "בדפים האלה יש אפשרויות קובץ שגויות.",
 	"linter-category-large-tables": "טבלאות גדולות שקשה לראות במכשירים ניידים",
@@ -120,5 +121,6 @@
 	"linterrors-summary": "<strong>הערה:</strong> הספירה של הקטגוריות אינה מדויקת, היא מבוססת על אומדנים.",
 	"multi-part-template-block": "פלט שלא נוצר מתבנית בודדת",
 	"pageinfo-linter": "שגיאות ניקיון",
-	"pageinfo-linter-moreinfo": "הצגת מידע מפורט על שגיאות ניקיון."
+	"pageinfo-linter-moreinfo": "הצגת מידע מפורט על שגיאות ניקיון.",
+	"category-by-template": "הכללות שמכילות שגיאות ניקיון: $1"
 }
