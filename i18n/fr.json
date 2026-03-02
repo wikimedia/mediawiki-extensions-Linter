@@ -16,6 +16,7 @@
 			"Méthodes Bulebe Hangi",
 			"Pamputt",
 			"Pols12",
+			"Raveloaritiana Mamisoa",
 			"SleaY",
 			"Terio legale",
 			"Thibaut120094",
@@ -25,7 +26,7 @@
 		]
 	},
 	"linterrors": "Erreurs d’analyse Lint",
-	"linttemplateerrors": "Modèles générant des erreurs de lint",
+	"linttemplateerrors": "Transclusions contenant des erreurs de lint",
 	"linter-category-bogus-image-options": "Options de fichier erronées",
 	"linter-category-bogus-image-options-desc": "Ces pages ont des fichiers avec des options erronées.",
 	"linter-category-large-tables": "Grands tableaux difficiles à visualiser sur mobile",
@@ -138,6 +139,6 @@
 	"multi-part-template-block": "Résultat ne venant pas d’un modèle unique",
 	"pageinfo-linter": "Erreurs d’analyse Lint",
 	"pageinfo-linter-moreinfo": "Afficher les informations détaillées sur les erreurs d’analyse lint.",
-	"category-by-template-view": "Afficher les modèles qui génèrent ces erreurs de lint.",
-	"category-by-template-desc": "Ces modèles génèrent des erreurs de lint '''$1'''."
+	"category-by-template-view": "Afficher les transactions contenant ces erreurs de lint.",
+	"category-by-template-desc": "Les transclusions de ces pages contiennent des erreurs de linting « [[Special:LintErrors/ $1 | $1 ]] ». Notez que certaines transclusions peuvent apparaître dans cette liste en raison des arguments passés à la transclusion et non de sa source."
 }

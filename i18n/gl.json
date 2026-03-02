@@ -10,7 +10,7 @@
 		]
 	},
 	"linterrors": "Erros detectados por Lint",
-	"linttemplateerrors": "Modelos que xeran erros de Lint",
+	"linttemplateerrors": "Transclusións que conteñen erros de Lint",
 	"linter-category-bogus-image-options": "Opcións de ficheiro incorrectas",
 	"linter-category-bogus-image-options-desc": "Estas páxinas teñen ficheiros con opcións inútiles.",
 	"linter-category-large-tables": "Táboas grandes que son difíciles de ver no móbil",
@@ -123,6 +123,7 @@
 	"multi-part-template-block": "O resultado non procede dun só modelo",
 	"pageinfo-linter": "Erros detectados por Lint",
 	"pageinfo-linter-moreinfo": "Ollar información detallada sobre os erros de Lint.",
-	"category-by-template-view": "Ver modelos que xeran estes erros de Lint.",
-	"category-by-template-desc": "Estes modelos están a xerar '''$1''' erros de Lint."
+	"category-by-template": "Transclusións que conteñen erros de Lint: $1",
+	"category-by-template-view": "Ver as transclusións que conteñen estes erros de Lint.",
+	"category-by-template-desc": "As transclusións destas páxinas conteñen '''[[Special:LintErrors/$1|$1]]''' erros de Lint. ''Ten en conta que algunhas transclusións poden aparecer nesta lista debido aos argumentos pasados á transclusión e non á fonte da transclusión.''"
 }

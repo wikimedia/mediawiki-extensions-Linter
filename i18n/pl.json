@@ -11,7 +11,7 @@
 		]
 	},
 	"linterrors": "Błędy składniowe",
-	"linttemplateerrors": "Szablony generujące błędy lintowania",
+	"linttemplateerrors": "Transkluzje zawierające błędy lintowania",
 	"linter-category-bogus-image-options": "Nieprawidłowe opcje pliku",
 	"linter-category-bogus-image-options-desc": "Te strony odwołują się do plików z podaniem nieistniejących opcji.",
 	"linter-category-large-tables": "Duże tabele, które trudno się czyta na urządzeniach mobilnych",
@@ -124,6 +124,7 @@
 	"multi-part-template-block": "Wynik nie pochodzi z jednego szablonu",
 	"pageinfo-linter": "Błędy składniowe",
 	"pageinfo-linter-moreinfo": "Zobacz szczegółowe informacje o błędach lintera.",
-	"category-by-template-view": "Wyświetl szablony, które generują te błędy.",
-	"category-by-template-desc": "Te szablony generują błędy lintera '''$1''."
+	"category-by-template": "Transkluzje zawierające błędy lintera: $1",
+	"category-by-template-view": "Wyświetl transkluzje, które zawierają te błędy.",
+	"category-by-template-desc": "Transkluzje tych stron zawierają błędy lintera '''[[Special:LintErrors/$1|$1]]'''.  ''Uwaga: niektóre transkluzje tu wymienione są z powodu błędów w parametrach wywołania, a nie w samej stronie transkludowanej.''"
 }

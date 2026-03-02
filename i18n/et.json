@@ -5,6 +5,7 @@
 		]
 	},
 	"linterrors": "Linteri vead",
+	"linttemplateerrors": "Mallikasutusi sisaldavad linteri vead",
 	"linter-category-bogus-image-options": "Vigased failisuvandid",
 	"linter-category-bogus-image-options-desc": "Neil lehekülgedel on faile, mille süntaksis on vigane failisuvand.",
 	"linter-category-large-tables": "Suured tabelid, mida on mobiilis tülikas vaadata",
@@ -59,6 +60,7 @@
 	"linter-category-wikilink-in-extlink-desc": "Neil lehekülgedel on välislinkide sees vikilinke, mille saab parandada.",
 	"linter-desc": "Võimaldab välisest teenusest pärit Linteri vigu jälgida ja neid kasutajatele näidata.",
 	"linter-lints-prefix-search-page-desc": "Vigadega lehekülgede otsimine pealkirja eesliite või terve pealkirja järgi",
+	"linter-invalid-category": "Kategooria leidmatu või väärdunud",
 	"linter-invalid-title": "Nimeruum ja/või lehekülje pealkiri leidmatu või väärdunud",
 	"linter-form-exact-match": "Otsi kindla lehekülje pealkirja",
 	"linter-form-prefix-match": "Otsi kõiki lehekülgi, mis vastavad pealkirja eesliitele",
@@ -111,5 +113,8 @@
 	"linterrors-summary": "<strong>Märkus:</strong> Kategooriatesse kuuluvate vigade arv on hinnanguline, mitte täpne.",
 	"multi-part-template-block": "Ei väljastata üheainsa malli vahendusel",
 	"pageinfo-linter": "Linteri vead",
-	"pageinfo-linter-moreinfo": "Vaata üksikasju Linteri vigade kohta"
+	"pageinfo-linter-moreinfo": "Vaata üksikasju Linteri vigade kohta",
+	"category-by-template": "Mallikasutusi sisaldavad linteri vead: $1",
+	"category-by-template-view": "Vaata mallikasutusi, mis sisaldavad neid linteri vigu.",
+	"category-by-template-desc": "Nende lehekülgede mallina kasutamised sisaldavad linteri kategooria '''[[Special:LintErrors/$1|$1]]''' vigu.  ''Pane tähele, et osa mallikasutusi ei pruugi selles loendis kajastuda, sest mallikasutuse argumendid võivad sisalduda mallikasutuses endas, mitte selle allikas.''"
 }
