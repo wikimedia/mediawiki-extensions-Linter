@@ -7,7 +7,7 @@
 		]
 	},
 	"linterrors": "Lint-Feeler",
-	"linttemplateerrors": "Schablounen, déi Lint-Feeler provozéieren",
+	"linttemplateerrors": "Transklusiounen, déi Lint-Feeler enthalen",
 	"linter-category-duplicate-ids": "Duebel IDen",
 	"linter-category-empty-heading": "Eidel Iwwerschrëften",
 	"linter-category-empty-heading-desc": "Dës Säiten hunn eidel Iwwerschrëften",
