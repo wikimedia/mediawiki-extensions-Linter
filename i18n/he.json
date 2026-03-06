@@ -122,5 +122,6 @@
 	"multi-part-template-block": "פלט שלא נוצר מתבנית בודדת",
 	"pageinfo-linter": "שגיאות ניקיון",
 	"pageinfo-linter-moreinfo": "הצגת מידע מפורט על שגיאות ניקיון.",
-	"category-by-template": "הכללות שמכילות שגיאות ניקיון: $1"
+	"category-by-template": "הכללות שמכילות שגיאות ניקיון: $1",
+	"category-by-template-view": "הצגת הכללות שמכילות את שגיאות הניקיון האלו."
 }

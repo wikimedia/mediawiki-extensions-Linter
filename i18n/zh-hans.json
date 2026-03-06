@@ -25,7 +25,7 @@
 		]
 	},
 	"linterrors": "Lint错误",
-	"linttemplateerrors": "生成lint错误的模板",
+	"linttemplateerrors": "包含lint错误的嵌入",
 	"linter-category-bogus-image-options": "不正确的文件选项",
 	"linter-category-bogus-image-options-desc": "这些页面有选项不正确的文件。",
 	"linter-category-large-tables": "难以在移动设备上查看的巨大表格",
@@ -138,6 +138,7 @@
 	"multi-part-template-block": "输出并非来自单个模板",
 	"pageinfo-linter": "Lint错误",
 	"pageinfo-linter-moreinfo": "查看lint错误的详细信息。",
+	"category-by-template": "包含lint错误的嵌入：$1",
 	"category-by-template-view": "查看包含这些lint错误的嵌入。",
-	"category-by-template-desc": "这些模板会生成 ''' $1 ''' lint错误。"
+	"category-by-template-desc": "这些页面的嵌入包含'''[[Special:LintErrors/$1|$1]]'''lint错误。''请注意，某些嵌入出现在此列表中可能是由于传递给嵌入的参数存在错误，而非嵌入本身的源代码。''"
 }
