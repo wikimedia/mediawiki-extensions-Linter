@@ -228,7 +228,7 @@ class LintErrorsPager extends TablePager {
 					$title = Title::newFromText( $lintError->params['file'], NS_FILE );
 					return Html::element( 'a', [
 						'href' => $title->getLocalUrl(),
-					], $title );
+					], $title->getPrefixedText() );
 				} elseif ( $category === 'duplicate-ids' ) {
 					return Html::element( 'code', [], $lintError->params['id'] );
 				} elseif ( $category === 'template-arg-in-extension-tag' ) {
