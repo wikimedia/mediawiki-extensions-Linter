@@ -3,11 +3,14 @@
 namespace MediaWiki\Linter;
 
 use MediaWiki\DomainEvent\DomainEventIngress;
-use MediaWiki\Page\Event\PageRevisionUpdatedEvent;
-use MediaWiki\Page\Event\PageRevisionUpdatedListener;
+use MediaWiki\Page\Event\PageLatestRevisionChangedEvent;
+use MediaWiki\Page\Event\PageLatestRevisionChangedListener;
 use MediaWiki\Revision\SlotRecord;
 
-class LintEventIngress extends DomainEventIngress implements PageRevisionUpdatedListener {
+/**
+ * @noinspection PhpUnused
+ */
+class LintEventIngress extends DomainEventIngress implements PageLatestRevisionChangedListener {
 	public function __construct(
 		private readonly TotalsLookup $totalsLookup,
 		private readonly Database $database,
@@ -18,10 +21,12 @@ class LintEventIngress extends DomainEventIngress implements PageRevisionUpdated
 	 * Remove entries from the linter table upon page content model change away from wikitext
 	 *
 	 * @noinspection PhpUnused
-	 * @param PageRevisionUpdatedEvent $event
+	 * @param PageLatestRevisionChangedEvent $event
 	 * @return void
 	 */
-	public function handlePageRevisionUpdatedEvent( PageRevisionUpdatedEvent $event ): void {
+	public function handlePageLatestRevisionChangedEvent(
+		PageLatestRevisionChangedEvent $event
+	): void {
 		$page = $event->getPage();
 		$tags = $event->getTags();
 

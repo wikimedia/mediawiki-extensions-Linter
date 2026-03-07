@@ -60,7 +60,7 @@
 	"DomainEventIngresses": [
 		{
 			"events": [
-				"PageRevisionUpdated"
+				"PageLatestRevisionChanged"
 			],
 			"class": "MediaWiki\\Linter\\LintEventIngress",
 			"services": [
