@@ -196,6 +196,11 @@ class SpecialLintErrors extends SpecialPage {
 		);
 	}
 
+	private function getTemplate(): string {
+		$template = $this->getRequest()->getText( 'template' );
+		return in_array( $template, [ 'with', 'without', 'all' ], true ) ? $template : 'all';
+	}
+
 	/**
 	 * @param string|null $subPage
 	 */
@@ -217,7 +222,7 @@ class SpecialLintErrors extends SpecialPage {
 		$htmlTags = new HtmlTags( $this );
 		$allowedHtmlTags = $htmlTags->getAllowedHTMLTags();
 		$tag = $allowedHtmlTags[ $tagName ] ?? 'all';
-		$template = $this->getRequest()->getText( 'template' );
+		$template = $this->getTemplate();
 
 		// If the request contains a 'titlesearch' parameter, then the user entered a page title
 		// or just the first few characters of the title. They also may have entered the first few characters
@@ -242,8 +247,12 @@ class SpecialLintErrors extends SpecialPage {
 					$this->getLinkRenderer(),
 					$this->permissionManager,
 					null,
+					// FIXME: Should this be $titleSearch['namespaces']?
 					$namespaces,
-					$exactMatch, $titleSearch[ 'titlefield' ], $template, $tag
+					$exactMatch,
+					$titleSearch[ 'titlefield' ],
+					$template,
+					$tag
 				);
 				$out->addParserOutput(
 					$pager->getFullOutput(),
@@ -277,7 +286,7 @@ class SpecialLintErrors extends SpecialPage {
 			$title = $request->getText( 'titlecategorysearch' );
 			// For category-based searches, allow an undefined title to display all records
 			if ( $title === '' ) {
-				$titleCategorySearch = [ 'titlefield' => '', 'namespace' => $namespaces, 'pageid' => null ];
+				$titleCategorySearch = [ 'titlefield' => '', 'namespace' => $namespaces ];
 			} else {
 				$titleCategorySearch = $this->cleanTitle( $title, $namespaces );
 			}
@@ -291,8 +300,12 @@ class SpecialLintErrors extends SpecialPage {
 					$this->getLinkRenderer(),
 					$this->permissionManager,
 					$this->category,
+					// FIXME: Should this be $titleSearch['namespaces']?
 					$namespaces,
-					$exactMatch, $titleCategorySearch[ 'titlefield' ], $template, $tag
+					$exactMatch,
+					$titleCategorySearch[ 'titlefield' ],
+					$template,
+					$tag
 				);
 				$out->addParserOutput(
 					$pager->getFullOutput(),

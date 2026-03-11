@@ -41,9 +41,9 @@ class LintErrorsPager extends TablePager {
 	private string $tag;
 
 	/**
-	 * Allowed values are keys 'all', 'with' or 'without'
+	 * Special values are keys 'all', 'with' or 'without'
 	 */
-	private string $throughTemplate;
+	private string $template;
 
 	public function __construct(
 		IContextSource $context,
@@ -55,7 +55,7 @@ class LintErrorsPager extends TablePager {
 		private readonly array $namespaces,
 		private readonly bool $exactMatch,
 		private readonly string $title,
-		string $throughTemplate,
+		string $template,
 		string $tag
 	) {
 		if ( $category !== null ) {
@@ -65,8 +65,7 @@ class LintErrorsPager extends TablePager {
 				$this->categoryManager->getVisibleCategories()
 			) );
 		}
-
-		$this->throughTemplate = $throughTemplate ?: 'all';
+		$this->template = $template ?: 'all';
 		$this->tag = $tag ?: 'all';
 		parent::__construct( $context );
 	}
@@ -109,11 +108,13 @@ class LintErrorsPager extends TablePager {
 			$useIndex = true;
 		}
 
-		if ( $this->throughTemplate !== 'all' ) {
+		if ( $this->template !== 'all' ) {
 			$useIndex = false;
-			$op = ( $this->throughTemplate === 'with' ) ? '!=' : '=';
-			$queryBuilder->where( $this->mDb->expr( 'linter_template', $op, '' ) );
+			$op = ( $this->template === 'with' ) ? '!=' : '=';
+			$val = ( in_array( $this->template, [ 'with', 'without' ], true ) ) ? '' : $this->template;
+			$queryBuilder->where( $this->mDb->expr( 'linter_template', $op, $val ) );
 		}
+
 		if ( $this->tag !== 'all' && ( new HtmlTags( $this ) )->checkAllowedHTMLTags( $this->tag ) ) {
 			$useIndex = false;
 			$queryBuilder->where( [ 'linter_tag'  => $this->tag ] );

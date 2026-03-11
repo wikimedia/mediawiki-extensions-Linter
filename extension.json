@@ -101,6 +101,9 @@
 			"class": "MediaWiki\\Linter\\SpecialLintTemplateErrors",
 			"services": [
 				"ConnectionProvider",
+				"TitleParser",
+				"LinkCache",
+				"PermissionManager",
 				"Linter.CategoryManager"
 			]
 		}

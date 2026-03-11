@@ -4,8 +4,13 @@ namespace MediaWiki\Linter;
 
 use MediaWiki\Html\Html;
 use MediaWiki\Linker\LinkTarget;
+use MediaWiki\Page\LinkCache;
+use MediaWiki\Parser\ParserOptions;
+use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\SpecialPage\QueryPage;
+use MediaWiki\Title\MalformedTitleException;
 use MediaWiki\Title\Title;
+use MediaWiki\Title\TitleParser;
 use Wikimedia\Rdbms\IConnectionProvider;
 use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\Rdbms\SelectQueryBuilder;
@@ -17,6 +22,9 @@ class SpecialLintTemplateErrors extends QueryPage {
 
 	public function __construct(
 		IConnectionProvider $dbProvider,
+		private readonly TitleParser $titleParser,
+		private readonly LinkCache $linkCache,
+		private readonly PermissionManager $permissionManager,
 		private readonly CategoryManager $categoryManager
 	) {
 		parent::__construct( 'LintTemplateErrors' );
@@ -40,6 +48,7 @@ class SpecialLintTemplateErrors extends QueryPage {
 
 		if ( !$this->categoryManager->isKnownCategory( $par ) ) {
 			$this->setHeaders();
+			$this->getOutput()->addBacklinkSubtitle( $this->getPageTitle() );
 			$this->getOutput()->addHTML(
 				Html::element(
 					'span',
@@ -51,8 +60,15 @@ class SpecialLintTemplateErrors extends QueryPage {
 		}
 
 		$this->category = $par;
-		$this->getOutput()->addBacklinkSubtitle( $this->getPageTitle() );
+		$params = $this->getRequest()->getQueryValues();
+
+		if ( isset( $params[ 'template' ] ) ) {
+			$this->showPages();
+			return;
+		}
+
 		parent::execute( $par );
+		$this->getOutput()->addBacklinkSubtitle( $this->getPageTitle() );
 		$this->getOutput()->setPageTitleMsg(
 			$this->msg( 'category-by-template',
 				$this->msg( "linter-category-{$this->category}" )->text()
@@ -83,6 +99,57 @@ class SpecialLintTemplateErrors extends QueryPage {
 		}
 
 		$out->addHTML( Html::closeElement( 'ul' ) );
+	}
+
+	/**
+	 * FIXME: This is a bit redundant with SpecialLintErrors::execute
+	 * but that method needs to be refactored before trying to shoehorn
+	 * this in.
+	 */
+	private function showPages() {
+		$this->setHeaders();
+
+		$out = $this->getOutput();
+		$out->addBacklinkSubtitle( $this->getPageTitle( $this->category ) );
+		$out->setPageTitleMsg(
+			$this->msg( 'category-by-template',
+				$this->msg( "linter-category-{$this->category}" )->text()
+			)
+		);
+
+		try {
+			$template = $this->titleParser->parseTitle(
+				$this->getRequest()->getText( 'template' )
+			);
+		} catch ( MalformedTitleException ) {
+			$this->getOutput()->addHTML(
+				Html::element(
+					'span',
+					[ 'class' => 'error' ],
+					$this->msg( 'linter-invalid-title' )->text()
+				)
+			);
+			return;
+		}
+
+		$pager = new LintErrorsPager(
+			$this->getContext(),
+			$this->categoryManager,
+			$this->linkCache,
+			$this->getLinkRenderer(),
+			$this->permissionManager,
+			$this->category,
+			[],
+			false,
+			'',
+			Title::castFromLinkTarget( $template )?->getPrefixedDBKey() ?? '',
+			''
+		);
+
+		$out->addParserOutput(
+			$pager->getFullOutput(),
+			ParserOptions::newFromContext( $this->getContext() )
+		);
 	}
 
 	/**
@@ -130,7 +197,13 @@ class SpecialLintTemplateErrors extends QueryPage {
 			return '&mdash;';
 		}
 		$count = intval( $result->value );
-		return $this->getLinkRenderer()->makeLink( $title ) . " ({$count})";
+		return $this->getLinkRenderer()->makeLink( $title ) .
+			" ({$count}, " . $this->getLinkRenderer()->makeLink(
+				$this->getPageTitle()->getSubpage( $this->category ),
+				'pages',
+				[],
+				[ 'template' => $title->getPrefixedDBKey() ]
+			) . ")";
 	}
 
 	/** @inheritDoc */
