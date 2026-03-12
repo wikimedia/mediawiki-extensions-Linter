@@ -123,6 +123,7 @@
 	"multi-part-template-block": "Xətaya tək bir şablon səbəb olmur",
 	"pageinfo-linter": "Sintaksis xətaları",
 	"pageinfo-linter-moreinfo": "Sintaksis xətaları haqqında ətraflı məlumata baxın.",
+	"category-by-template": "Sintaksis xətaları olan transkripsiyalar: $1",
 	"category-by-template-view": "Bu xətaları yaradan şablonlara baxın.",
 	"category-by-template-desc": "Bu şablonlar '''$1''' xətaları yaradır."
 }

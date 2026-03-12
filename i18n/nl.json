@@ -134,5 +134,6 @@
 	"pageinfo-linter-moreinfo": "Gedetailleerde informatie bekijken over de lintfouten.",
 	"category-by-template": "Transclusies die lintfouten bevatten: $1",
 	"category-by-template-view": "Transclusies bekijken die deze lintfouten bevatten.",
-	"category-by-template-desc": "Transclusies van deze pagina's bevatten '''[[Special:LintErrors/$1|$1]]''' lintfouten. ''Merk op dat sommige transclusies in deze lijst kunnen verschijnen vanwege de argumenten die aan de transclusie worden doorgegeven en niet vanwege de broncode van de transclusie.''"
+	"category-by-template-desc": "Transclusies van deze pagina's bevatten '''[[Special:LintErrors/$1|$1]]''' lintfouten. ''Merk op dat sommige transclusies in deze lijst kunnen verschijnen vanwege de argumenten die aan de transclusie worden doorgegeven en niet vanwege de broncode van de transclusie.''",
+	"linter-template-errors-index-desc": "Dit zijn lijsten met transclusies van pagina's die lintfouten bevatten. ''Merk op dat sommige transclusies in deze lijsten kunnen voorkomen vanwege de argumenten die aan de transclusie zijn doorgegeven en niet vanwege de bron van de transclusie.''"
 }
