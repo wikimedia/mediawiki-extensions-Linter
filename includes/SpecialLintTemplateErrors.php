@@ -177,7 +177,8 @@ class SpecialLintTemplateErrors extends QueryPage {
 				$dbr->expr( 'linter_cat', '=',
 					$this->categoryManager->getCategoryId( $this->category ) ),
 				$dbr->expr( 'linter_template', '!=', "" ),
-				$dbr->expr( 'linter_template', '!=', "multi-part-template-block" )
+				$dbr->expr( 'linter_template', '!=', "multi-part-template-block" ),
+				$dbr->expr( 'linter_template', '!=', "parser-function" ),
 			],
 			'options' => [
 				'GROUP BY' => [ 'linter_template' ],

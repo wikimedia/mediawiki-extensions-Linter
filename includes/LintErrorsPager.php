@@ -249,6 +249,8 @@ class LintErrorsPager extends TablePager {
 
 				if ( isset( $lintError->templateInfo['multiPartTemplateBlock'] ) ) {
 					return $this->msg( 'multi-part-template-block' )->escaped();
+				} elseif ( isset( $lintError->templateInfo['parserFunction'] ) ) {
+					return $this->msg( 'parser-function' )->escaped();
 				} else {
 					// @phan-suppress-next-line PhanTypeArraySuspiciousNullable Null checked above
 					$templateName = $lintError->templateInfo['name'];
