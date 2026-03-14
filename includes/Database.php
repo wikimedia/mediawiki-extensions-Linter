@@ -166,6 +166,8 @@ class Database {
 		if ( is_array( $templateInfo ) ) {
 			if ( isset( $templateInfo[ 'multiPartTemplateBlock' ] ) ) {
 				$templateInfo = 'multi-part-template-block';
+			} elseif ( isset( $templateInfo[ 'parserFunction' ] ) ) {
+				$templateInfo = 'parser-function';
 			} else {
 				$templateInfo = $templateInfo[ 'name' ] ?? '';
 			}
@@ -505,6 +507,8 @@ class Database {
 				if ( is_object( $templateInfo ) ) {
 					if ( isset( $templateInfo->multiPartTemplateBlock ) ) {
 						$templateInfo = 'multi-part-template-block';
+					} elseif ( isset( $templateInfo->parserFunction ) ) {
+						$templateInfo = 'parser-function';
 					} else {
 						$templateInfo = $templateInfo->name ?? '';
 					}
