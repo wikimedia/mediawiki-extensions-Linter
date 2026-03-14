@@ -51,6 +51,7 @@ class SpecialLintTemplateErrors extends QueryPage {
 		}
 
 		$this->category = $par;
+		$this->getOutput()->addBacklinkSubtitle( $this->getPageTitle() );
 		parent::execute( $par );
 		$this->getOutput()->setPageTitleMsg(
 			$this->msg( 'category-by-template',
