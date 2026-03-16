@@ -139,6 +139,6 @@
 	"multi-part-template-block": "Résultat ne venant pas d’un modèle unique",
 	"pageinfo-linter": "Erreurs d’analyse Lint",
 	"pageinfo-linter-moreinfo": "Afficher les informations détaillées sur les erreurs d’analyse lint.",
-	"category-by-template-view": "Afficher les transactions contenant ces erreurs de lint.",
+	"category-by-template-view": "Afficher les transclusions contenant ces erreurs de lint.",
 	"category-by-template-desc": "Les transclusions de ces pages contiennent des erreurs de linting « [[Special:LintErrors/ $1 | $1 ]] ». Notez que certaines transclusions peuvent apparaître dans cette liste en raison des arguments passés à la transclusion et non de sa source."
 }
