@@ -126,6 +126,6 @@
 	"pageinfo-linter-moreinfo": "Detaillierte Informationen zu den Lint-Fehlern anzeigen",
 	"category-by-template": "Vorlagen, die Lint-Fehler auslösen: $1",
 	"category-by-template-view": "Transklusionen anzeigen, die diese Lint-Fehler enthalten.",
-	"category-by-template-desc": "Die Transklusionen dieser Seiten enthalten Lint-Fehler vom Typ '''[[Special:LintErrors/$1|$1]]'''. Beachte, dass einige Transklusionen aufgrund der an die Transklusion übergebenen Argumente und nicht aufgrund des Transklusionsquellcodes in dieser Liste erscheinen können.",
-	"linter-template-errors-index-desc": "Dies sind Listen von Transklusionen von Seiten, die Lint-Fehler enthalten. ''Beachte, dass einige Transklusionen aufgrund der an die Transklusion übergebenen Argumente und nicht aufgrund der Transklusionsquelle in diesen Listen erscheinen können.''\n\n'"
+	"category-by-template-desc": "Die Transklusionen dieser Seiten enthalten Lint-Fehler vom Typ '''[[Special:LintErrors/$1|$1]]'''. ''Beachte, dass einige Transklusionen aufgrund der an die Transklusion übergebenen Argumente und nicht aufgrund der Transklusionsquelle in dieser Liste erscheinen können.''",
+	"linter-template-errors-index-desc": "Dies sind Listen von Transklusionen von Seiten, die Lint-Fehler enthalten. ''Beachte, dass einige Transklusionen aufgrund der an die Transklusion übergebenen Argumente und nicht aufgrund der Transklusionsquelle in diesen Listen erscheinen können.''"
 }
