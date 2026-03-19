@@ -5,6 +5,7 @@
 			"Bultro",
 			"Candalua",
 			"Daimona Eaytoy",
+			"FL2226",
 			"Ontsed",
 			"Sakretsu"
 		]
@@ -121,5 +122,6 @@
 	"pageinfo-linter": "Errori di Lint",
 	"pageinfo-linter-moreinfo": "Visualizza informazioni dettagliate sugli errori di Lint.",
 	"category-by-template-view": "Visualizza le transclusioni che contengono questi errori di lint.",
-	"category-by-template-desc": "Le transclusioni di queste pagine contengono '''[[Special:LintErrors/$1|$1]]''' errori lint. ''Si noti che alcune transclusioni potrebbero comparire in questo elenco a causa degli argomenti passati nella transclusione e non della sorgente della transclusione.''"
+	"category-by-template-desc": "Le transclusioni di queste pagine contengono '''[[Special:LintErrors/$1|$1]]''' errori lint. ''Si noti che alcune transclusioni potrebbero comparire in questo elenco a causa degli argomenti passati nella transclusione e non della sorgente della transclusione.''",
+	"linter-template-errors-index-desc": "Questi sono elenchi di transclusioni di pagine contenenti errori di lint. ''Si noti che alcune transclusioni potrebbero comparire in questi elenchi a causa degli argomenti passati alla transclusione e non a causa della sorgente della transclusione.''"
 }
