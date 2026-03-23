@@ -139,6 +139,8 @@
 	"multi-part-template-block": "Résultat ne venant pas d’un modèle unique",
 	"pageinfo-linter": "Erreurs d’analyse Lint",
 	"pageinfo-linter-moreinfo": "Afficher les informations détaillées sur les erreurs d’analyse lint.",
+	"category-by-template": "Transclusions contenant des erreurs de lint : $1",
 	"category-by-template-view": "Afficher les transclusions contenant ces erreurs de lint.",
-	"category-by-template-desc": "Les transclusions de ces pages contiennent des erreurs de linting « [[Special:LintErrors/ $1 | $1 ]] ». Notez que certaines transclusions peuvent apparaître dans cette liste en raison des arguments passés à la transclusion et non de sa source."
+	"category-by-template-desc": "Les transclusions de ces pages contiennent des erreurs d'analyse lint « [[Special:LintErrors/$1|$1]] ». Notez que certaines transclusions peuvent apparaître dans cette liste en raison des arguments passés à la transclusion et non de sa source.",
+	"linter-template-errors-index-desc": "Voici des listes de transclusions de pages contenant des erreurs de linting. '''Notez que certaines transclusions peuvent apparaître dans ces listes en raison des arguments passés à la transclusion et non de la source de la transclusion.'''"
 }
