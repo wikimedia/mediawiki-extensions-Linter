@@ -116,5 +116,6 @@
 	"pageinfo-linter-moreinfo": "Vaata üksikasju Linteri vigade kohta",
 	"category-by-template": "Mallikasutusi sisaldavad linteri vead: $1",
 	"category-by-template-view": "Vaata mallikasutusi, mis sisaldavad neid linteri vigu.",
-	"category-by-template-desc": "Nende lehekülgede mallina kasutamised sisaldavad linteri kategooria '''[[Special:LintErrors/$1|$1]]''' vigu.  ''Pane tähele, et osa mallikasutusi ei pruugi selles loendis kajastuda, sest mallikasutuse argumendid võivad sisalduda mallikasutuses endas, mitte selle allikas.''"
+	"category-by-template-desc": "Nende lehekülgede mallina kasutamised sisaldavad linteri kategooria '''[[Special:LintErrors/$1|$1]]''' vigu.  ''Pane tähele, et osa mallikasutusi ei pruugi selles loendis kajastuda, sest mallikasutuse argumendid võivad sisalduda mallikasutuses endas, mitte selle allikas.''",
+	"linter-template-errors-index-desc": "Neis loendites on leheküljed, mis sisaldavad linteri vigu. ''Pane tähele, et osa mallikasutusi ei pruugi neis loendites kajastuda, sest mallikasutuse argumendid võivad sisalduda mallikasutuses endas, mitte selle allikas.''"
 }
