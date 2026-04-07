@@ -117,7 +117,7 @@ class LintUpdate extends DataUpdate {
 		if ( $cpuTime === null || $wallTime === null ) {
 			return;
 		}
-		$statCounter = $statsFactory
+		$statsFactory
 			->getCounter( "lintupdate_parse_count" )
 			->setLabels( $labels )
 			->increment();
@@ -125,17 +125,17 @@ class LintUpdate extends DataUpdate {
 		// Average time can be computed by dividing this counter (over some
 		// time period) by the $statsCounter with label 'cache_miss' (for
 		// the same time period).
-		$statCpuTime = $statsFactory
+		$statsFactory
 			->getCounter( "lintupdate_parse_cpu_seconds" )
 			->setLabels( $labels )
 			->incrementBy( $cpuTime );
-		$statWallTime = $statsFactory
+		$statsFactory
 			->getCounter( "lintupdate_parse_wall_seconds" )
 			->setLabels( $labels )
 			->incrementBy( $wallTime );
 
 		// Collect HTML size comparison data
-		$statHtmlSize = $statsFactory
+		$statsFactory
 			->getCounter( "lintupdate_parse_html_bytes" )
 			->setLabels( $labels )
 			->incrementBy( strlen( $po->getRawText() ?? '' ) );
