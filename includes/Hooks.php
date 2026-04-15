@@ -20,14 +20,13 @@
 
 namespace MediaWiki\Linter;
 
+use MediaWiki\Actions\Hook\InfoActionHook;
 use MediaWiki\Api\ApiQuerySiteinfo;
 use MediaWiki\Api\Hook\APIQuerySiteInfoGeneralInfoHook;
 use MediaWiki\Config\Config;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\Deferred\DeferrableUpdate;
 use MediaWiki\Deferred\MWCallableUpdate;
-use MediaWiki\Hook\InfoActionHook;
-use MediaWiki\Hook\ParserLogLinterDataHook;
 use MediaWiki\JobQueue\JobQueueGroup;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Logger\LoggerFactory;
@@ -36,6 +35,7 @@ use MediaWiki\Output\OutputPage;
 use MediaWiki\Page\Hook\PageDeletionDataUpdatesHook;
 use MediaWiki\Page\ParserOutputAccess;
 use MediaWiki\Page\WikiPageFactory;
+use MediaWiki\Parser\Hook\ParserLogLinterDataHook;
 use MediaWiki\Revision\RenderedRevision;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\SlotRecord;
