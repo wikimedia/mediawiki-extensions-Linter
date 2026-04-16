@@ -122,6 +122,7 @@
 	"linterrors-subpage": "Lint-Fehler: $1",
 	"linterrors-summary": "<strong>Hinweis:</strong> Die Zähler für Kategorien sind nicht genau, sondern basieren auf Schätzungen.",
 	"multi-part-template-block": "Ausgabe nicht von einer einzelnen Vorlage",
+	"parser-function": "Ausgabe einer Parserfunktion",
 	"pageinfo-linter": "Lint-Fehler",
 	"pageinfo-linter-moreinfo": "Detaillierte Informationen zu den Lint-Fehlern anzeigen",
 	"category-by-template": "Vorlagen, die Lint-Fehler auslösen: $1",
