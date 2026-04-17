@@ -118,6 +118,7 @@
 	"linterrors-subpage": "लिंट त्रुटियाँ: $1",
 	"linterrors-summary": "<strong>नोट:</strong> श्रेणियों की गणनाएँ सटीक नहीं हैं, बल्कि अनुमानों पर आधारित हैं।",
 	"multi-part-template-block": "आउटपुट किसी एक साँचे से नहीं",
+	"parser-function": "पार्सर फ़ंक्शन से प्राप्त आउटपुट",
 	"pageinfo-linter": "लिंट त्रुटियाँ",
 	"pageinfo-linter-moreinfo": "लिंट त्रुटियों के बारे में विस्तृत जानकारी देखें।",
 	"category-by-template": "लिंट त्रुटियों त्रुटियों वाले ट्रांसक्लूशन्स: $1",

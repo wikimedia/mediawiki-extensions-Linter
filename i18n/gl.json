@@ -121,6 +121,7 @@
 	"linterrors-subpage": "Erros de Lint: $1",
 	"linterrors-summary": "<strong>Nota:</strong> As contaxes para as categorías non son exactas pois se basean en estimacións.",
 	"multi-part-template-block": "O resultado non procede dun só modelo",
+	"parser-function": "O resultado dunha función analizadora",
 	"pageinfo-linter": "Erros detectados por Lint",
 	"pageinfo-linter-moreinfo": "Ollar información detallada sobre os erros de Lint.",
 	"category-by-template": "Transclusións que conteñen erros de Lint: $1",

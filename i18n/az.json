@@ -121,6 +121,7 @@
 	"linterrors-subpage": "Sintaksis xətaları: $1",
 	"linterrors-summary": "<strong>Qeyd:</strong> Kateqoriyalar üçün hesablamalar dəqiq hesablamalar deyil, təxminlərə əsaslanır.",
 	"multi-part-template-block": "Xətaya tək bir şablon səbəb olmur",
+	"parser-function": "Ayrışdırıcı funksiyanın nəticəsi",
 	"pageinfo-linter": "Sintaksis xətaları",
 	"pageinfo-linter-moreinfo": "Sintaksis xətaları haqqında ətraflı məlumata baxın.",
 	"category-by-template": "Sintaksis xətaları olan transkripsiyalar: $1",

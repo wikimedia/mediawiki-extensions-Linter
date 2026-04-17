@@ -130,6 +130,7 @@
 	"linterrors-subpage": "Lintfouten: $1",
 	"linterrors-summary": "<strong>Let op:</strong> De categorietellingen zijn niet exact, maar komen voort uit schattingen.",
 	"multi-part-template-block": "Uitvoer komt niet van een enkel sjabloon",
+	"parser-function": "Uitvoer van een parserfunctie",
 	"pageinfo-linter": "Lintfouten",
 	"pageinfo-linter-moreinfo": "Gedetailleerde informatie bekijken over de lintfouten.",
 	"category-by-template": "Transclusies die lintfouten bevatten: $1",

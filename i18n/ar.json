@@ -127,6 +127,7 @@
 	"linterrors-subpage": "أخطاء لنت: $1",
 	"linterrors-summary": "<strong>ملاحظة:</strong> إنَّ أعداد التصنيفات ليست دقيقة، ولكنها تستند إلى التقديرات.",
 	"multi-part-template-block": "إخراج ليس من قالب واحد",
+	"parser-function": "مخرجات دالة التحليل اللغوي",
 	"pageinfo-linter": "أخطاء لنت",
 	"pageinfo-linter-moreinfo": "عرض معلومات مفصلة عن أخطاء النسالة.",
 	"category-by-template": "عمليات تضمين تحتوي على أخطاء في التدقيق اللغوي: $1",
