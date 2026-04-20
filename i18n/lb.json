@@ -62,6 +62,7 @@
 	"linterrors-subpage": "Lint-Feeler: $1",
 	"linterrors-summary": "<strong>REMARK:</strong> D'Compteure fir d'Kategorië sinn net genee, mä baséieren op Schätzungen.",
 	"multi-part-template-block": "Ausgab net vun enger eenzeler Schabloun",
+	"parser-function": "Output vun enger Parserfunktioun",
 	"pageinfo-linter": "Lint-Feeler",
 	"pageinfo-linter-moreinfo": "Detailléiert Informatiounen iwwer d'Lint-Feelere weisen.",
 	"category-by-template-view": "Transklusioune weisen, an deenen dës Lint-Feeler virkommen."
