@@ -116,6 +116,7 @@
 	"linterrors-subpage": "Грешки од пречистувачот: $1",
 	"linterrors-summary": "<strong>Напомена:</strong> Бројот на категории не е точен, туку претставува проценка",
 	"multi-part-template-block": "Изводот не е од единствена предлошка",
+	"parser-function": "Извод од расчленувачка функција",
 	"pageinfo-linter": "Грешки од пречистувачот",
 	"pageinfo-linter-moreinfo": "Погледајте подробни информации за грешките во Lint.",
 	"category-by-template": "Превметнувања со грешки во Lint: $1",
