@@ -34,7 +34,7 @@
 	"linter-category-missing-end-tag-in-heading": "У загалоўку бракуе канцавога тэґу",
 	"linter-category-missing-end-tag-in-heading-desc": "У загалоўках гэтых старонак бракуе канцавых тэґаў.",
 	"linter-category-missing-image-alt-text": "Брак альтэрнатыўнага тэксту выявы",
-	"linter-category-missing-image-alt-text-desc": "У выявах на гэтых старонках адсутнічае даступны альтэрнатыўны тэкст.",
+	"linter-category-missing-image-alt-text-desc": "У выявах на гэтых старонках няма даступнага альтэрнатыўнага тэксту.",
 	"linter-category-multi-colon-escape": "Мноства выкарыстаных двухкроп’яў",
 	"linter-category-multi-colon-escape-desc": "Гэтыя старонкі маюць спасылкі зь мноствам двухкроп’яў ў пачатку.",
 	"linter-category-multiline-html-table-in-list": "Шматрадковая табліца ў сьпісе",
