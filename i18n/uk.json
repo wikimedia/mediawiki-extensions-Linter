@@ -7,7 +7,8 @@
 			"Piramidion",
 			"Vlad5250",
 			"Ата",
-			"Repakr"
+			"Repakr",
+			"Movses"
 		]
 	},
 	"linterrors": "Lint-помилки",
@@ -116,7 +117,7 @@
 	"linter-prefix-search-subpage": "Сторінки з lint-помилками, що відповідають префіксу назви або повній назві: $1",
 	"linterrors-subpage": "Lint-помилки: $1",
 	"linterrors-summary": "<strong>Примітка:</strong> підрахунок для категорій не є точним — він базується на приблизних значеннях.",
-	"multi-part-template-block": "Результати з двох або більше шаблонів",
+	"multi-part-template-block": "Вивід більш ніж з одного шаблону",
 	"pageinfo-linter": "Lint-помилки",
 	"pageinfo-linter-moreinfo": "Переглянути детальну інформацію про lint-помилки."
 }
