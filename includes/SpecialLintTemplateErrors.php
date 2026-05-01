@@ -201,7 +201,7 @@ class SpecialLintTemplateErrors extends QueryPage {
 		return $this->getLinkRenderer()->makeLink( $title ) .
 			" ({$count}, " . $this->getLinkRenderer()->makeLink(
 				$this->getPageTitle()->getSubpage( $this->category ),
-				'pages',
+				$this->msg( 'linter-template-errors-pages-link' )->text(),
 				[],
 				[ 'template' => $title->getPrefixedDBKey() ]
 			) . ")";

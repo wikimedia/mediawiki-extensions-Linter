@@ -133,5 +133,6 @@
 	"category-by-template": "Page title for Special:LintTemplateErrors, $1 is the localized category description",
 	"category-by-template-view": "Link text that goes to Special:LintTemplateErrors for the specific category.",
 	"category-by-template-desc": "Description that goes on Special:LintTemplateErrors for the specific category. $1 is the category name.",
-	"linter-template-errors-index-desc": "Description text shown on Special:LintTemplateErrors index page that explains what the page contains"
+	"linter-template-errors-index-desc": "Description text shown on Special:LintTemplateErrors index page that explains what the page contains",
+	"linter-template-errors-pages-link": "Link text shown next to a transclusion count on Special:LintTemplateErrors that links to the list of pages containing the lint errors caused by that transclusion."
 }
