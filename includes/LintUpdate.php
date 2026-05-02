@@ -138,6 +138,6 @@ class LintUpdate extends DataUpdate {
 		$statsFactory
 			->getCounter( "lintupdate_parse_html_bytes" )
 			->setLabels( $labels )
-			->incrementBy( strlen( $po->getRawText() ?? '' ) );
+			->incrementBy( strlen( $po->getContentHolderText() ) );
 	}
 }
