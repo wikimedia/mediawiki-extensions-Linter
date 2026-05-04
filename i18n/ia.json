@@ -116,6 +116,7 @@
 	"linterrors-subpage": "Errores de analyse Lint: $1",
 	"linterrors-summary": "<strong>Nota:</strong> Le numeros de categorias non es exacte, ma basate sur estimationes.",
 	"multi-part-template-block": "Resultato generate per plus de un patrono",
+	"parser-function": "Sortita de un function del analysator syntactic",
 	"pageinfo-linter": "Errores de analyse Lint",
 	"pageinfo-linter-moreinfo": "Vider informationes detaliate sur le errores de lint.",
 	"category-by-template": "Transclusiones que contine errores de lint: $1",
