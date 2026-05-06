@@ -126,5 +126,7 @@
 	"pageinfo-linter-moreinfo": "Sintaksis xətaları haqqında ətraflı məlumata baxın.",
 	"category-by-template": "Sintaksis xətaları olan transkripsiyalar: $1",
 	"category-by-template-view": "Bu xətaları yaradan şablonlara baxın.",
-	"category-by-template-desc": "Bu şablonlar '''$1''' xətaları yaradır."
+	"category-by-template-desc": "Bu səhifələrin transkripsiyalarında '''[[Special:LintErrors/$1|$1]]''' xətaları var. ''Qeyd edək ki, bəzi transkripsiyalar bu siyahıda transkripsiya mənbəyinə deyil, transkripsiyaya ötürülən arqumentlərə görə görünə bilər.''",
+	"linter-template-errors-index-desc": "Bunlar xətaları olan səhifələrin transkripsiyalarıdır. ''Qeyd edək ki, bəzi transkripsiyalar mənbəyinə deyil, transkripsiyaya ötürülən arqumentlərə görə bu siyahılarda görünə bilər.''",
+	"linter-template-errors-pages-link": "səhifələr"
 }

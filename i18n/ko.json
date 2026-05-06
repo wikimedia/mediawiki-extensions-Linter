@@ -127,5 +127,6 @@
 	"category-by-template": "린트 오류를 포함한 끼워넣은 문서: $1",
 	"category-by-template-view": "이 린트 오류가 있는 끼워넣은 문서를 봅니다.",
 	"category-by-template-desc": "이 문서들의 끼워넣은 문서에는 '''[[Special:LintErrors/$1|$1]]''' 린트 오류가 포함되어 있습니다. 일부 끼워넣은 문서는 끼워넣은 문서의 출처 자체가 아니라 끼워넣은 문서에 전달된 매개변수 때문에 이 목록에 표시될 수 있습니다.",
-	"linter-template-errors-index-desc": "린트 오류가 포함된 문서의 끼워넣기의 목록입니다. ''일부 끼워넣기는 끼워넣기 출처 자체가 아닌 끼워넣기에 전달된 인수 때문에 이 목록에 나타날 수 있습니다.''"
+	"linter-template-errors-index-desc": "린트 오류가 포함된 문서의 끼워넣기의 목록입니다. ''일부 끼워넣기는 끼워넣기 출처 자체가 아닌 끼워넣기에 전달된 인수 때문에 이 목록에 나타날 수 있습니다.''",
+	"linter-template-errors-pages-link": "문서"
 }
