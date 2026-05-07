@@ -32,7 +32,6 @@ use MediaWiki\Parser\ParserOutput;
 use MediaWiki\Revision\MutableRevisionRecord;
 use MediaWiki\Revision\RenderedRevision;
 use MediaWiki\Revision\RevisionRecord;
-use MediaWiki\Revision\SlotRecord;
 use MediaWikiIntegrationTestCase;
 use Wikimedia\Stats\StatsFactory;
 
@@ -92,13 +91,7 @@ class LintUpdateTest extends MediaWikiIntegrationTestCase {
 		] + $contentHandlers );
 
 		$page = $this->getExistingTestPage();
-		$rev = new MutableRevisionRecord( $page );
-		$rev->setSlot(
-			SlotRecord::newUnsaved(
-				SlotRecord::MAIN,
-				new JavascriptContent( '{}' )
-			)
-		);
+		$rev = MutableRevisionRecord::newFromContent( $page, new JavascriptContent( '{}' ) );
 		// Clear the local cache in the ParserOutputAccess
 		$this->resetServices();
 
@@ -113,16 +106,9 @@ class LintUpdateTest extends MediaWikiIntegrationTestCase {
 	public function testSkipOld() {
 		// This may use the "real" wikitext content handler
 		$page = $this->getExistingTestPage();
-		$rev = new MutableRevisionRecord( $page );
-		$rev->setSlot(
-			SlotRecord::newUnsaved(
-				SlotRecord::MAIN,
-				new WikitextContent( 'bla bla' )
-			)
-		);
-
-		// make it not the current revision
-		$rev->setId( $page->getLatest() - 1 );
+		$rev = MutableRevisionRecord::newFromContent( $page, new WikitextContent( 'bla bla' ) )
+			 // make it not the current revision
+			->setId( $page->getLatest() - 1 );
 		$newRev = $this->newRenderedRevision( $page, $rev );
 
 		// Ok, now set up a mock content handler for the remainder
