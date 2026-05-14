@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"AhmedG612"
+		]
+	},
+	"category-by-template": "Gudbinta ka kooban khaladaad lint: $1",
+	"category-by-template-view": "Eeg ku xirnaanta ay ku jiraan khaladaadkan lint",
+	"category-by-template-desc": "Gudbinta bogaggan waxay ka kooban yihiin '''[[Special:LintErrors/$1|$1]]''' khaladaad lint ah.  ''Ogsoonow in qaar ka mid ah gudbinta laga yaabo inay ku soo baxaan liiskan sababo la xiriira xogta loo gudbiyo gudbinta ee aan ahayn isha gudbinta.''",
+	"linter-template-errors-index-desc": "Kuwani waa liisaska gudbinta bogag ka kooban khaladaad lint ah.  ''Ogsoonow in qaar ka mid ah gudbinta laga yaabo inay ka soo muuqdaan liisaskan sababo la xiriira xogta loo gudbiyo gudbinta ee aan ahayn isha gudbinta.''"
+}
