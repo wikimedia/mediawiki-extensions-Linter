@@ -44,7 +44,7 @@
 	"linter-category-obsolete-tag": "Састарэлыя HTML-тэгі",
 	"linter-category-obsolete-tag-desc": "Гэтыя старонкі ўжываюць састарэлыя HTML-тэґі.",
 	"linter-category-pwrap-bug-workaround": "Пазьбяганьне памылкі абгорткі параграфу",
-	"linter-category-pwrap-bug-workaround-desc": "Гэтыя старонкі маюць памылку абгорткі параграфу, якая можа быць пазьбегнутая.",
+	"linter-category-pwrap-bug-workaround-desc": "Гэтыя старонкі маюць памылку абгорткі параграфу, якую можна абмінуць.",
 	"linter-category-self-closed-tag": "Самазакрытыя тэгі",
 	"linter-category-self-closed-tag-desc": "Гэтыя старонкі маюць самазакрытыя тэгі.",
 	"linter-category-stripped-tag": "Няпарныя тэгі",
