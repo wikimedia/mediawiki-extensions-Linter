@@ -61,6 +61,7 @@
 	"linter-desc": "Ka raadraac khaladaadka lint-ka adeeg dibadeed oo u muuji isticmaalayaasha",
 	"linter-lints-prefix-search-page-desc": "Raadi bogag leh khaladaad lint iyadoo lagu raadinayo bilowga cinwaanka bogga ama cinwaanka buuxa",
 	"linter-invalid-category": "Qaybtaan lama helin ama si khaldan loo sameeyay",
+	"linter-invalid-title": "Magaca meel-magac iyo/ama magaca bogga lama helin ama si khaldan ayaa loo qoray",
 	"linter-form-exact-match": "Raadi cinwaan bog oo gaar ah",
 	"linter-form-prefix-match": "Raadi dhammaan bogagga u dhigma bilowga cinwaanka",
 	"linter-form-exact-or-prefix": "Raadi cinwaan bog oo gaar ah, ama dhammaan bogagga leh bilow cinwaan oo la wadaago",
