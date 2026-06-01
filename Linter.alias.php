@@ -84,6 +84,7 @@ $specialPageAliases['sr-el'] = [
 /** Ukrainian (Українська) */
 $specialPageAliases['uk'] = [
 	'LintErrors' => [ 'Lint-помилки' ],
+	'LintTemplateErrors' => [ 'Lint-помилки_у_шаблонах' ],
 ];
 
 /** Urdu (اردو) */
