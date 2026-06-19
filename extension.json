@@ -290,6 +290,12 @@
 					"dbid": 27,
 					"enabled": true,
 					"priority": "high"
+				},
+				"pre-expansion": {
+					"dbid": 28,
+					"enabled": true,
+					"priority": "none",
+					"no-params": true
 				}
 			}
 		},
