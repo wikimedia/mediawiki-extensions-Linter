@@ -294,7 +294,7 @@
 				"pre-expansion": {
 					"dbid": 28,
 					"enabled": true,
-					"priority": "none",
+					"priority": "low",
 					"no-params": true
 				}
 			}
