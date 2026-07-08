@@ -49,6 +49,8 @@
 	"linter-category-multiple-unclosed-formatting-tags-desc": "Estas páxinas teñen múltiples etiquetas de formato sen peche",
 	"linter-category-obsolete-tag": "Etiquetas HTML obsoletas",
 	"linter-category-obsolete-tag-desc": "Estas páxinas usan etiquetas HTML obsoletas.",
+	"linter-category-pre-expansion": "Modelos de expansión de etiquetas previos ao formato de texto wiki",
+	"linter-category-pre-expansion-desc": "Estas páxinas teñen modelos de expansión de etiquetas previos ao formato de texto wiki.",
 	"linter-category-pwrap-bug-workaround": "Solución de erros de axuste de parágrafo",
 	"linter-category-pwrap-bug-workaround-desc": "Estas páxinas teñen un erro de axuste de parágrafo que podería evitarse.",
 	"linter-category-self-closed-tag": "Etiquetas auto-pechadas",

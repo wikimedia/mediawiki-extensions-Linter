@@ -49,6 +49,8 @@
 	"linter-category-multiple-unclosed-formatting-tags-desc": "이 문서에는 닫히지 않은 서식 태그가 여러 개 있습니다",
 	"linter-category-obsolete-tag": "구식의 HTML 태그",
 	"linter-category-obsolete-tag-desc": "이 문서들은 구식의 HTML 태그를 사용합니다.",
+	"linter-category-pre-expansion": "틀을 확장하는 위키텍스트 형식 pre 확장 기능 태그",
+	"linter-category-pre-expansion-desc": "이 문서들은 틀을 확장하는, 위키텍스트 형식의 pre 확장 기능 태그를 사용합니다.",
 	"linter-category-pwrap-bug-workaround": "문단 래핑 버그 우회 처리",
 	"linter-category-pwrap-bug-workaround-desc": "이 문서들은 우회 처리가 가능한 문단 래핑 버그가 있습니다.",
 	"linter-category-self-closed-tag": "스스로 닫는 태그",

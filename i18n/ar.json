@@ -55,6 +55,8 @@
 	"linter-category-multiple-unclosed-formatting-tags-desc": "تحتوي هذه الصفحات على عدة علامات تنسيق غير مغلقة",
 	"linter-category-obsolete-tag": "علامات HTML قديمة",
 	"linter-category-obsolete-tag-desc": "تستخدم هذه الصفحات علامات HTML القديمة.",
+	"linter-category-pre-expansion": "قوالب توسيع علامة الامتداد المسبق لتنسيق Wikitext",
+	"linter-category-pre-expansion-desc": "تحتوي هذه الصفحات على قوالب قابلة للتوسيع بتنسيق ويكي نصي قبل علامة الامتداد.",
 	"linter-category-pwrap-bug-workaround": "حل علة التفاف الفقرة",
 	"linter-category-pwrap-bug-workaround-desc": "تحتوي هذه الصفحات على خطأ التفاف فقرة يمكن التعامل معه.",
 	"linter-category-self-closed-tag": "علامات ذاتية الإغلاق",
@@ -133,5 +135,6 @@
 	"category-by-template": "عمليات تضمين تحتوي على أخطاء في التدقيق اللغوي: $1",
 	"category-by-template-view": "عرض عمليات التضمين التي تحتوي على أخطاء التدقيق هذه.",
 	"category-by-template-desc": "تحتوي عمليات تضمين هذه الصفحات على أخطاء في التدقيق اللغوي من نوع '''[[Special:LintErrors/$1|$1]]'''. لاحظ أن بعض عمليات التضمين قد تظهر في هذه القائمة بسبب الوسائط المُمرَّرة إلى عملية التضمين وليس بسبب مصدر التضمين نفسه.",
-	"linter-template-errors-index-desc": "هذه قوائم بعمليات تضمين الصفحات التي تحتوي على أخطاء في برنامج Lint. لاحظ أن بعض عمليات التضمين قد تظهر في هذه القوائم بسبب الوسائط المُمرَّرة إلى عملية التضمين وليس بسبب مصدر التضمين نفسه."
+	"linter-template-errors-index-desc": "هذه قوائم بعمليات تضمين الصفحات التي تحتوي على أخطاء في برنامج Lint. لاحظ أن بعض عمليات التضمين قد تظهر في هذه القوائم بسبب الوسائط المُمرَّرة إلى عملية التضمين وليس بسبب مصدر التضمين نفسه.",
+	"linter-template-errors-pages-link": "الصفحات"
 }

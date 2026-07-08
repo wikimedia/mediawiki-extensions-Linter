@@ -44,6 +44,8 @@
 	"linter-category-multiple-unclosed-formatting-tags-desc": "Овие страници имаат повеќе незатворени форматни ознаки",
 	"linter-category-obsolete-tag": "Застарени HTML-ознаки",
 	"linter-category-obsolete-tag-desc": "Овие страници имаат застарени HTML-ознаки",
+	"linter-category-pre-expansion": "Предлошки за проширување на ознаки пред додаток во викитекстуалтен формат",
+	"linter-category-pre-expansion-desc": "Овие страници имаат предлошки за проширување на ознаки пред додаток во викитекстуалтен формат.",
 	"linter-category-pwrap-bug-workaround": "Заобиколка на грешка во пасусниот прелом",
 	"linter-category-pwrap-bug-workaround-desc": "Овие страници имаат грешка во пасусниот прелом што може да се заобиколи.",
 	"linter-category-self-closed-tag": "Самозатворени ознаки",

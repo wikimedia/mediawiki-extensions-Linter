@@ -44,6 +44,8 @@
 	"linter-category-multiple-unclosed-formatting-tags-desc": "Bogaggan waxay leeyihiin calaamado qaabeyn oo badan oo aan la xirin.",
 	"linter-category-obsolete-tag": "Calaamado HTML ah oo duugoobay",
 	"linter-category-obsolete-tag-desc": "Bogaggan waxay isticmaalaan calaamado HTML ah oo duugoobay.",
+	"linter-category-pre-expansion": "Qaabka Wikitext-ka ka hor kordhinta wuxuu ballaariyaa tusmada",
+	"linter-category-pre-expansion-desc": "Bogaggan waxay leeyihiin calaamad Wikitext ah oo ka hor kordhintaan kaas oo ballaariya tusmada",
 	"linter-category-pwrap-bug-workaround": "Xalka ku meelgaarka ah ee khaladka isku duubidda tuducyada",
 	"linter-category-pwrap-bug-workaround-desc": "Bogaggan waxay leeyihiin khalad ku saabsan isku duubidda tuducyada oo la heli karo xal ku-meelgaar ah.",
 	"linter-category-self-closed-tag": "Calaamado is xiraya",

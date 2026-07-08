@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Pratik11",
 			"पर्वत सुबेदी"
 		]
 	},
 	"linter-category-misc-tidy-replacement-issues": "विविध कारणहरू",
+	"linter-category-pre-expansion": "विकिटेक्स्ट ढाँचा पूर्व विस्तार ट्याग विस्तार टेम्प्लेट",
 	"linter-pager-category-header": "श्रेणी"
 }
