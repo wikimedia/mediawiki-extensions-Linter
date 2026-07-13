@@ -10,6 +10,7 @@
 			"Mormegil",
 			"Robby",
 			"Sunpriat",
+			"Tacsipacsi",
 			"Umherirrender",
 			"Verdy p"
 		]
@@ -55,7 +56,7 @@
 	"linter-category-obsolete-tag": "Name of lint error category. See [[:mw:Help:Lint errors/obsolete-tag]]",
 	"linter-category-obsolete-tag-desc": "Description of category\n\nSimilar messages:\n* {{msg-mw|Linter-category-bogus-image-options-desc}}\n* {{msg-mw|Linter-category-deletable-table-tag-desc}}\n* {{msg-mw|Linter-category-fostered-desc}}\netc.",
 	"linter-category-pre-expansion": "Name of lint error category. See [[:mw:Help:Lint errors/pre-expansion]]",
-	"linter-category-pre-expansion-desc": "Description of category\n\nSimilar messages:\n* {{msg-mw|Linter-category-bogus-image-options-desc}}\n* {{msg-mw|Linter-category-deletable-table-tag-desc}}\n* {{msg-mw|Linter-category-fostered-desc}}\netc.",
+	"linter-category-pre-expansion-desc": "Description of category, see [[mw:Special:MyLanguage/Help:Lint errors/pre-expansion|documentation]].\n\nSimilar messages:\n* {{msg-mw|Linter-category-bogus-image-options-desc}}\n* {{msg-mw|Linter-category-deletable-table-tag-desc}}\n* {{msg-mw|Linter-category-fostered-desc}}\netc.",
 	"linter-category-pwrap-bug-workaround": "Name of lint error category. See [[:mw:Help:Lint errors/pwrap-bug-workaround]]",
 	"linter-category-pwrap-bug-workaround-desc": "Description of category\n\nSimilar messages:\n* {{msg-mw|Linter-category-bogus-image-options-desc}}\n* {{msg-mw|Linter-category-deletable-table-tag-desc}}\n* {{msg-mw|Linter-category-fostered-desc}}\netc.",
 	"linter-category-self-closed-tag": "Name of lint error category. See [[:mw:Help:Lint errors/self-closed-tag]]",
