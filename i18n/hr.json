@@ -10,7 +10,8 @@
 		]
 	},
 	"linterrors": "Sintaksne pogreške",
-	"linter-category-bogus-image-options": "Pogrješke mogućnosti prikaza datoteka",
+	"linter-category-bogus-image-options": "Pogreške parametara u pozivima datoteka",
+	"linter-category-bogus-image-options-desc": "Ove stranice sadrže pozive datoteka s lažnim opcijama.",
 	"linter-category-misnested-tag": "Nepravilno ugniježđene oznake",
 	"linter-category-missing-end-tag": "Nedostaje zatvarajuća oznaka",
 	"linter-category-missing-end-tag-desc": "Na sljedećim stranicama nedostaju zatvarajuće HTML oznake.",
