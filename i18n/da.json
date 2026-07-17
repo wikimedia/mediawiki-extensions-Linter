@@ -98,6 +98,7 @@
 	"linter-pager-missing-end-tag-details": "Manglende slut-tag",
 	"linter-pager-missing-end-tag-in-heading-details": "Manglende slut-tag i overskriften",
 	"linter-pager-missing-image-alt-text-details": "Manglende alt-tekst til billede",
+	"linter-pager-multi-colon-escape-details": "Multi-kolon-escape",
 	"linter-pager-multiline-html-table-in-list-details": "Flerlinjet HTML5-tabel i en liste",
 	"linter-pager-multiple-unclosed-formatting-tags-details": "Flere ikke-lukkede formateringstags på siden",
 	"linter-pager-night-mode-unaware-background-color-details": "Baggrundsfarvens indlejrede stil kræver tekstfarve",
