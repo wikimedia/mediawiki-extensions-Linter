@@ -64,7 +64,7 @@ class TotalsLookup {
 				WANObjectCache::TTL_INDEFINITE,
 				function ( $oldValue, &$ttl, &$setOpts, $oldAsOf ) use ( $cat, &$fetchedTotals ) {
 					$setOpts += MWDatabase::getCacheSetOptions(
-						$this->database->getDBConnectionRef( DB_REPLICA )
+						$this->database->getReplicaDBConnection()
 					);
 					if ( $fetchedTotals === false ) {
 						$fetchedTotals = $this->database->getTotals();

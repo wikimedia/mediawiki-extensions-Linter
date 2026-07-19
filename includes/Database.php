@@ -57,12 +57,8 @@ class Database {
 		$options->assertRequiredOptions( self::CONSTRUCTOR_OPTIONS );
 	}
 
-	/**
-	 * @param int $mode DB_PRIMARY or DB_REPLICA
-	 * @return IDatabase
-	 */
-	public function getDBConnectionRef( int $mode ): IDatabase {
-		return $this->dbLoadBalancerFactory->getMainLB()->getConnection( $mode );
+	public function getPrimaryDBConnection(): IDatabase {
+		return $this->dbLoadBalancerFactory->getPrimaryDatabase();
 	}
 
 	public function getReplicaDBConnection(): IReadableDatabase {
@@ -210,7 +206,7 @@ class Database {
 	 */
 	public function setForPage( int $pageId, int $namespaceId, $errors ) {
 		$previous = $this->getForPage( $pageId );
-		$dbw = $this->getDBConnectionRef( DB_PRIMARY );
+		$dbw = $this->getPrimaryDBConnection();
 		if ( !$previous && !$errors ) {
 			return [ 'deleted' => [], 'added' => [] ];
 		} elseif ( !$previous && $errors ) {
@@ -379,8 +375,8 @@ class Database {
 		$logger = LoggerFactory::getInstance( 'Linter' );
 
 		$lbFactory = $this->dbLoadBalancerFactory;
-		$dbw = $this->getDBConnectionRef( DB_PRIMARY );
-		$dbread = $this->getDBConnectionRef( DB_REPLICA );
+		$dbw = $this->getPrimaryDBConnection();
+		$dbread = $this->getReplicaDBConnection();
 
 		$logger->info( "Migrate namespace starting\n" );
 
@@ -478,7 +474,7 @@ class Database {
 		$logger = LoggerFactory::getInstance( 'Linter' );
 
 		$lbFactory = $this->dbLoadBalancerFactory;
-		$dbw = $this->getDBConnectionRef( DB_PRIMARY );
+		$dbw = $this->getPrimaryDBConnection();
 
 		$logger->info( "Migration of linter_params field to linter_tag and linter_template fields starting\n" );
 
