@@ -47,6 +47,8 @@
 	"linter-category-multiple-unclosed-formatting-tags-desc": "دا مخونه گڼ ناتړلي بڼل شوي نښلنونه لري",
 	"linter-category-obsolete-tag": "له دوده‌لوېدلي اېچ‌ټي‌اېم‌اېل نښلنونه",
 	"linter-category-obsolete-tag-desc": "دا مخونه زاړه اېچ‌ټي‌اېم‌اېل نښلنونه لري.",
+	"linter-category-pre-expansion": "يوه کينډۍ د ويکي‌ليک-بڼې مخکې شاتاړي نښلن دننه کارېږي",
+	"linter-category-pre-expansion-desc": "دا مخونه د ويکي‌ليک بڼې مخکې شاتاړي نښلن غځېدونکې کينډۍ لري.",
 	"linter-category-pwrap-bug-workaround": "د پاراگراف رانغاړلو ستونزې حل لار",
 	"linter-category-pwrap-bug-workaround-desc": "دا مخونه د پاراگراف پوښلو ستونزه لري چې هوارېدی شي.",
 	"linter-category-self-closed-tag": "ځاني تړل‌شوي نښلنونه",
