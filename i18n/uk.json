@@ -51,7 +51,7 @@
 	"linter-category-multiple-unclosed-formatting-tags-desc": "Ці сторінки мають декілька незакритих тегів форматування",
 	"linter-category-obsolete-tag": "Застарілі HTML-теги",
 	"linter-category-obsolete-tag-desc": "Ці сторінки використовують застарілі HTML-теги.",
-	"linter-category-pre-expansion": "Тег розширення pre для форматування вікітексту, в якому розкриваються шаблони",
+	"linter-category-pre-expansion": "Шаблон використовується всередині тега розширення pre для форматування вікітексту",
 	"linter-category-pre-expansion-desc": "Ці сторінки мають тег розширення pre для форматування вікітексту, в якому розкриваються шаблони.",
 	"linter-category-pwrap-bug-workaround": "Вирішення багу з обгортанням абзацу",
 	"linter-category-pwrap-bug-workaround-desc": "Ці сторінки мають помилки із обгортанням абзацу, який можна виправити.",
