@@ -23,7 +23,6 @@ namespace MediaWiki\Linter;
 use MediaWiki\Config\ServiceOptions;
 use MediaWiki\WikiMap\WikiMap;
 use Wikimedia\ObjectCache\WANObjectCache;
-use Wikimedia\Rdbms\Database as MWDatabase;
 use Wikimedia\Stats\IBufferingStatsdDataFactory;
 
 /**
@@ -62,10 +61,7 @@ class TotalsLookup {
 			$totals[$cat] = $this->cache->getWithSetCallback(
 				$this->makeKey( $cat ),
 				WANObjectCache::TTL_INDEFINITE,
-				function ( $oldValue, &$ttl, &$setOpts, $oldAsOf ) use ( $cat, &$fetchedTotals ) {
-					$setOpts += MWDatabase::getCacheSetOptions(
-						$this->database->getReplicaDBConnection()
-					);
+				function () use ( $cat, &$fetchedTotals ) {
 					if ( $fetchedTotals === false ) {
 						$fetchedTotals = $this->database->getTotals();
 					}
