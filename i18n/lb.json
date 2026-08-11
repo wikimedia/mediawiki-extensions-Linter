@@ -39,7 +39,7 @@
 	"linter-heading-high-priority": "Héich Prioritéit",
 	"linter-heading-low-priority": "Niddreg Prioritéit",
 	"linter-heading-medium-priority": "Mëttel Prioritéit",
-	"linter-numerrors": "({{PLURAL:$1|Ee|$1}} Feeler)",
+	"linter-numerrors": "({{PLURAL:$1|$1}} Feeler)",
 	"linter-page-edit": "änneren",
 	"linter-page-history": "Versiounen",
 	"linter-page-viewsource": "Quellcode kucken",
