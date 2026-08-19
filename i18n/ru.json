@@ -128,5 +128,6 @@
 	"linterrors-summary": "<strong>Примечание:</strong> Показатели для категорий не являются точными подсчётами, а основаны на оценках.",
 	"multi-part-template-block": "Из нескольких шаблонов",
 	"pageinfo-linter": "Ошибки статического анализатора",
-	"category-by-template-view": "Просмотр включений, содержащих эти ошибки."
+	"category-by-template-view": "Просмотр включений, содержащих эти ошибки.",
+	"linter-template-errors-pages-link": "страницы"
 }
