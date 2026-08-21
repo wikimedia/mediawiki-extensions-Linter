@@ -137,6 +137,7 @@
 	"linterrors-subpage": "Erreurs d’analyse Lint : $1",
 	"linterrors-summary": "<strong>Note :</strong> les compteurs pour les catégories ne sont pas forcément exacts, mais basés sur des estimations.",
 	"multi-part-template-block": "Résultat ne venant pas d’un modèle unique",
+	"parser-function": "Sortie d'une fonction d'analyse syntaxique",
 	"pageinfo-linter": "Erreurs d’analyse Lint",
 	"pageinfo-linter-moreinfo": "Afficher les informations détaillées sur les erreurs d’analyse lint.",
 	"category-by-template": "Transclusions contenant des erreurs de lint : $1",
