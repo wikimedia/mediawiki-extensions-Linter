@@ -18,7 +18,7 @@ use Wikimedia\Timestamp\TimestampFormat as TS;
 
 class SpecialLintTemplateErrors extends QueryPage {
 
-	private string $category;
+	private ?string $category = null;
 
 	public function __construct(
 		IConnectionProvider $dbProvider,
@@ -156,6 +156,9 @@ class SpecialLintTemplateErrors extends QueryPage {
 	 * @inheritDoc
 	 */
 	public function getPageHeader() {
+		if ( $this->category === null ) {
+			return '';
+		}
 		return $this->msg(
 			"category-by-template-desc", $this->category
 		)->parse();
@@ -164,6 +167,15 @@ class SpecialLintTemplateErrors extends QueryPage {
 	/** @inheritDoc */
 	public function getQueryInfo() {
 		$dbr = $this->getDatabaseProvider()->getReplicaDatabase();
+		$conds = [
+			$dbr->expr( 'linter_template', '!=', "" ),
+			$dbr->expr( 'linter_template', '!=', "multi-part-template-block" ),
+			$dbr->expr( 'linter_template', '!=', "parser-function" ),
+		];
+		if ( $this->category !== null ) {
+			$conds[] = $dbr->expr( 'linter_cat', '=',
+				$this->categoryManager->getCategoryId( $this->category ) );
+		}
 		return [
 			'tables' => [ 'linter' ],
 			'fields' => [
@@ -173,13 +185,7 @@ class SpecialLintTemplateErrors extends QueryPage {
 				'namespace' => NS_MAIN,
 				'value' => 'COUNT(*)',
 			],
-			'conds' => [
-				$dbr->expr( 'linter_cat', '=',
-					$this->categoryManager->getCategoryId( $this->category ) ),
-				$dbr->expr( 'linter_template', '!=', "" ),
-				$dbr->expr( 'linter_template', '!=', "multi-part-template-block" ),
-				$dbr->expr( 'linter_template', '!=', "parser-function" ),
-			],
+			'conds' => $conds,
 			'options' => [
 				'GROUP BY' => [ 'linter_template' ],
 			],
@@ -198,9 +204,12 @@ class SpecialLintTemplateErrors extends QueryPage {
 			return '&mdash;';
 		}
 		$count = intval( $result->value );
+		$pageTitle = $this->category !== null
+			? $this->getPageTitle()->getSubpage( $this->category )
+			: $this->getPageTitle();
 		return $this->getLinkRenderer()->makeLink( $title ) .
 			" ({$count}, " . $this->getLinkRenderer()->makeLink(
-				$this->getPageTitle()->getSubpage( $this->category ),
+				$pageTitle,
 				$this->msg( 'linter-template-errors-pages-link' )->text(),
 				[],
 				[ 'template' => $title->getPrefixedDBKey() ]
@@ -211,6 +220,13 @@ class SpecialLintTemplateErrors extends QueryPage {
 	public function fetchFromCache( $limit, $offset = false ) {
 		$dbr = $this->getDatabaseProvider()->getReplicaDatabase();
 
+		$conds = [
+			'qcc_type' => $this->getName(),
+		];
+		if ( $this->category !== null ) {
+			$conds['qcc_titletwo'] = $this->category;
+		}
+
 		$queryBuilder = $dbr->newSelectQueryBuilder()
 			->select( [
 				'qcc_type',
@@ -219,10 +235,7 @@ class SpecialLintTemplateErrors extends QueryPage {
 				'title' => 'qcc_title',
 			] )
 			->from( 'querycachetwo' )
-			->where( [
-				'qcc_type' => $this->getName(),
-				'qcc_titletwo' => $this->category,
-			] );
+			->where( $conds );
 
 		if ( $limit !== false ) {
 			$queryBuilder->limit( intval( $limit ) );
