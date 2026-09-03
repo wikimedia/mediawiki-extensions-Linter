@@ -42,7 +42,7 @@
 	"linter-category-fostered-transparent-desc": "Ces pages ont du contenu invisible et mal placé dans un tableau.",
 	"linter-category-html5-misnesting": "Balise mal imbriquée avec des rendus différents en HTML5 et HTML4",
 	"linter-category-html5-misnesting-desc": "Ces balises mal imbriquées auront des comportements différents en HTML5 par rapport à HTML4.",
-	"linter-category-night-mode-unaware-background-color": "Règle de style inline définie pour la couleur d'arrière-plan sans couleur de texte correspondante",
+	"linter-category-night-mode-unaware-background-color": "Règle de style inline définie pour la couleur d’arrière-plan sans couleur de texte correspondante",
 	"linter-category-night-mode-unaware-background-color-desc": "Ces pages ont des règles de style en ligne de couleur d'arrière-plan mais aucune couleur de texte correspondante, ce qui empêche le mode sombre de fonctionner",
 	"linter-category-misc-tidy-replacement-issues": "Problèmes divers",
 	"linter-category-misc-tidy-replacement-issues-desc": "Ces pages présentent d’autres problèmes qui font qu’elles sont rendues différemment de ce qu’elles étaient auparavant.",
