@@ -24,7 +24,6 @@ use InvalidArgumentException;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\Html\Html;
 use MediaWiki\Linker\LinkRenderer;
-use MediaWiki\MediaWikiServices;
 use MediaWiki\Page\LinkCache;
 use MediaWiki\Pager\TablePager;
 use MediaWiki\Permissions\PermissionManager;
@@ -71,7 +70,6 @@ class LintErrorsPager extends TablePager {
 	}
 
 	private function fillQueryBuilder( SelectQueryBuilder $queryBuilder ): void {
-		$mainConfig = MediaWikiServices::getInstance()->getMainConfig();
 		$queryBuilder
 			->table( 'page' )
 			->join( 'linter', null, 'page_id=linter_page' )
