@@ -160,8 +160,10 @@ class LintUpdateTest extends MediaWikiIntegrationTestCase {
 	 * hook via Parsoid.
 	 *
 	 * @covers \MediaWiki\Linter\Hooks::onRevisionDataUpdates
+	 * @dataProvider provideUseParsoidLinksUpdate
 	 */
-	public function testRefreshLinksJobIntegration() {
+	public function testRefreshLinksJobIntegration( bool $useParsoidLinksUpdate ) {
+		$this->overrideConfigValue( MainConfigNames::UseParsoidLinksUpdate, $useParsoidLinksUpdate );
 		// NOTE: This performs an edit, so do it before installing the temp hook below!
 		$page = $this->getExistingTestPage();
 		// Clear the local cache in the ParserOutputAccess
@@ -175,6 +177,13 @@ class LintUpdateTest extends MediaWikiIntegrationTestCase {
 		$job = new RefreshLinksJob( $page, [] );
 		$job->run();
 		$this->assertSame( 1, $hookCalled );
+	}
+
+	public static function provideUseParsoidLinksUpdate(): array {
+		return [
+			'Parsoid links update' => [ true ],
+			'Legacy links update' => [ false ],
+		];
 	}
 
 	private function newRenderedRevision( ?WikiPage $page = null, ?RevisionRecord $rev = null ) {
