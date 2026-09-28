@@ -280,6 +280,10 @@ class Hooks implements
 			return;
 		}
 
+		if ( !in_array( $title->getContentModel(), self::LINTABLE_CONTENT_MODELS ) ) {
+			return;
+		}
+
 		$mainSlotOutput = $renderedRevision->getSlotParserOutput( SlotRecord::MAIN, [] );
 		if ( $mainSlotOutput->getContentHolder()->isParsoidContent() ) {
 			// Parsoid was already used for the canonical parse, nothing to do:
@@ -288,10 +292,6 @@ class Hooks implements
 			// Eventually, ParserLogLinterData will probably go away and we'll
 			// have the lint data in the ParserOutput. We'll then just use
 			// that data to create a RecordLintJob.
-			return;
-		}
-
-		if ( !in_array( $title->getContentModel(), self::LINTABLE_CONTENT_MODELS ) ) {
 			return;
 		}
 
