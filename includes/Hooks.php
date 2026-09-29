@@ -284,8 +284,7 @@ class Hooks implements
 			return;
 		}
 
-		$mainSlotOutput = $renderedRevision->getSlotParserOutput( SlotRecord::MAIN, [] );
-		if ( $mainSlotOutput->getContentHolder()->isParsoidContent() ) {
+		if ( $renderedRevision->getOptions()->getUseParsoid() ) {
 			// Parsoid was already used for the canonical parse, nothing to do:
 			// onParserLogLinterData was already called.
 			// This will be the case when parsoid page views are enabled.
@@ -297,7 +296,7 @@ class Hooks implements
 
 		LintUpdate::updateParserPerformanceStats(
 			$this->statsFactory,
-			$mainSlotOutput,
+			$renderedRevision->getSlotParserOutput( SlotRecord::MAIN, [] ),
 			 /* this is legacy output: */
 			false
 		);
