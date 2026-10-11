@@ -193,6 +193,10 @@ class LintUpdateTest extends MediaWikiIntegrationTestCase {
 		$rev ??= $this->getServiceContainer()->getRevisionLookup()->getRevisionByTitle( $title );
 		$pOpt = $page->makeParserOptions( 'canonical' );
 
+		$parserOutput = new ParserOutput( 'testing' );
+		// Since ParserOutput is constructed with a legacy string
+		$pOpt->setUseParsoid( false );
+
 		$rrev = new RenderedRevision(
 			$rev,
 			$pOpt,
@@ -201,7 +205,7 @@ class LintUpdateTest extends MediaWikiIntegrationTestCase {
 			}
 		);
 
-		$rrev->setRevisionParserOutput( new ParserOutput( 'testing' ) );
+		$rrev->setRevisionParserOutput( $parserOutput );
 		// Clear the local cache in the ParserOutputAccess
 		$this->resetServices();
 
