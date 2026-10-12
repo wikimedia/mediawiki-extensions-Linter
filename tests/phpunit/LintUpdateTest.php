@@ -132,12 +132,16 @@ class LintUpdateTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * Assert that a LintUpdate is triggered on edit through the RevisionDataUpdates
-	 * hook, and in turn triggers the ParserLogLinterData hook via Parsoid.
+	 * Assert that an edit triggers the ParserLogLinterData hook via Parsoid
+	 * exactly once. With the legacy parser, the LintUpdate does the Parsoid
+	 * parse. With Parsoid, the canonical parse does it, and the LintUpdate
+	 * does not parse again.
 	 *
 	 * @covers \MediaWiki\Linter\Hooks::onRevisionDataUpdates
+	 * @dataProvider provideUseParsoidParser
 	 */
-	public function testPageEditIntegration() {
+	public function testPageEditIntegration( bool $useParsoidParser ) {
+		$this->overrideConfigValue( MainConfigNames::UseParsoidParser, $useParsoidParser );
 		// Clear the local cache in the ParserOutputAccess
 		$this->resetServices();
 
@@ -146,12 +150,88 @@ class LintUpdateTest extends MediaWikiIntegrationTestCase {
 			$hookCalled++;
 		}, false );
 
-		$status = $this->editPage( 'JustSomePage', new WikitextContent( 'hello world' ) );
+		$this->editPage( 'JustSomePage', new WikitextContent( 'hello world' ) );
 
 		$this->assertSame( 1, $hookCalled );
+	}
 
-		$page = $this->getServiceContainer()->getWikiPageFactory()
-			->newFromTitle( $status->getNewRevision()->getPage() );
+	/**
+	 * Assert that an edit sends lints when the output was rendered before
+	 * the save. Parsoid does not send the lints of that output, because the
+	 * revision ID is not known. Core reuses the output after the save.
+	 * TemplateData and the edit stash render before the save.
+	 *
+	 * @covers \MediaWiki\Linter\Hooks::onRevisionDataUpdates
+	 * @dataProvider provideUseParsoidParser
+	 */
+	public function testPageEditIntegrationRenderBeforeSave( bool $useParsoidParser ) {
+		$this->overrideConfigValue( MainConfigNames::UseParsoidParser, $useParsoidParser );
+		// Clear the local cache in the ParserOutputAccess
+		$this->resetServices();
+
+		$this->setTemporaryHook( 'MultiContentSave', static function ( RenderedRevision $rrev ) {
+			$rrev->getRevisionParserOutput( [ 'generate-html' => false ] );
+		}, false );
+		$linted = [];
+		$this->setTemporaryHook( 'ParserLogLinterData', static function (
+			string $title, int $revId, array $data
+		) use ( &$linted ) {
+			$linted[] = $data;
+		}, false );
+
+		$this->editPage( 'JustSomePage', new WikitextContent( '<b>hello world' ) );
+
+		$this->assertCount( 1, $linted );
+		$this->assertContains( 'missing-end-tag', array_column( $linted[0], 'type' ) );
+	}
+
+	/**
+	 * Assert that a RefreshLinksJob does not parse again for the lints
+	 * after an edit that reused output from before the save. The
+	 * LintUpdate of the edit puts its output in the parser cache, and
+	 * the job uses that output.
+	 *
+	 * @covers \MediaWiki\Linter\Hooks::onRevisionDataUpdates
+	 */
+	public function testRefreshLinksJobAfterRenderBeforeSave() {
+		$this->overrideConfigValues( [
+			MainConfigNames::UseParsoidParser => true,
+			MainConfigNames::UseParsoidLinksUpdate => true,
+			MainConfigNames::ParserCacheType => CACHE_HASH,
+		] );
+		$page = $this->getExistingTestPage();
+		// Clear the local cache in the ParserOutputAccess
+		$this->resetServices();
+
+		$this->setTemporaryHook( 'MultiContentSave', static function ( RenderedRevision $rrev ) {
+			$rrev->getRevisionParserOutput( [ 'generate-html' => false ] );
+		}, false );
+		$hookCalled = 0;
+		$this->setTemporaryHook( 'ParserLogLinterData', static function () use ( &$hookCalled ) {
+			$hookCalled++;
+		}, false );
+
+		$rootJobTimestamp = wfTimestampNow();
+		$this->editPage( $page, new WikitextContent( '<b>hello world' ) );
+		$this->assertSame( 1, $hookCalled, 'edit' );
+
+		// The job usually runs in a different process. Thus it gets
+		// the output from the parser cache, not from the local cache.
+		$this->getServiceContainer()->getParserOutputAccess()->clearLocalCache();
+		$hookCalled = 0;
+		$job = new RefreshLinksJob( $page, [
+			'rootJobTimestamp' => $rootJobTimestamp,
+			'isOpportunistic' => true,
+		] );
+		$job->run();
+		$this->assertSame( 0, $hookCalled, 'RefreshLinksJob' );
+	}
+
+	public static function provideUseParsoidParser(): array {
+		return [
+			'Legacy parser' => [ false ],
+			'Parsoid parser' => [ true ],
+		];
 	}
 
 	/**

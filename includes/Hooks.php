@@ -297,21 +297,31 @@ class Hooks implements
 		}
 
 		if ( $renderedRevision->getOptions()->getUseParsoid() ) {
-			// Parsoid was already used for the canonical parse, nothing to do:
-			// onParserLogLinterData was already called.
-			// This will be the case when parsoid page views are enabled.
+			// Parsoid was already used for the canonical parse. Usually,
+			// onParserLogLinterData was already called for that parse.
+			// But core can render the revision before the save, for example
+			// for an edit stash or in a MultiContentSave handler, and reuse
+			// that output after the save. Parsoid did not send the lints of
+			// that output, because the revision ID was not known. Only in
+			// that case, add a LintUpdate.
 			// Eventually, ParserLogLinterData will probably go away and we'll
-			// have the lint data in the ParserOutput. We'll then just use
-			// that data to create a RecordLintJob.
-			return;
+			// have the lint data in the ParserOutput (T393717). We'll then just
+			// use that data to create a RecordLintJob.
+			$output = $renderedRevision->getSlotParserOutput(
+				SlotRecord::MAIN, [ 'generate-html' => false ]
+			);
+			if ( !LintUpdate::lintsNotLogged( $output ) ) {
+				return;
+			}
+		} else {
+			LintUpdate::updateParserPerformanceStats(
+				$this->statsFactory,
+				$renderedRevision->getSlotParserOutput( SlotRecord::MAIN, [] ),
+				/* this is legacy output: */
+				false
+			);
 		}
 
-		LintUpdate::updateParserPerformanceStats(
-			$this->statsFactory,
-			$renderedRevision->getSlotParserOutput( SlotRecord::MAIN, [] ),
-			 /* this is legacy output: */
-			false
-		);
 		$updates[] = new LintUpdate(
 			$this->statsFactory,
 			$this->wikiPageFactory,

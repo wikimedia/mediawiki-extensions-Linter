@@ -26,6 +26,7 @@ use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\Page\ParserOutputAccess;
 use MediaWiki\Page\WikiPageFactory;
 use MediaWiki\Parser\ParserOutput;
+use MediaWiki\Parser\Parsoid\ParsoidParser;
 use MediaWiki\Revision\RenderedRevision;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\SlotRecord;
@@ -83,6 +84,16 @@ class LintUpdate extends DataUpdate {
 			$page, $pOptions, $rev,
 			[ ParserOutputAccess::OPT_NO_UPDATE_CACHE => true, ],
 		);
+		if ( $status->isOK() && self::lintsNotLogged( $status->getValue() ) ) {
+			// Core rendered this output before the save, and Parsoid did
+			// not send its lints. Parse again. Put the new output in the
+			// parser cache. Then a RefreshLinksJob that uses the cached
+			// output does not cause a parse for the lints again.
+			$status = $this->parserOutputAccess->getParserOutput(
+				$page, $pOptions, $rev,
+				[ ParserOutputAccess::OPT_NO_CHECK_CACHE => true, ],
+			);
+		}
 		if ( $status->isOK() ) {
 			self::updateParserPerformanceStats(
 				$this->statsFactory,
@@ -91,6 +102,14 @@ class LintUpdate extends DataUpdate {
 				true
 			);
 		}
+	}
+
+	/**
+	 * Check if Parsoid did not send the lints of the given output to the
+	 * ParserLogLinterData hook, because the revision ID was not known.
+	 */
+	public static function lintsNotLogged( ParserOutput $po ): bool {
+		return (bool)$po->getExtensionData( ParsoidParser::LINTS_NOT_LOGGED );
 	}
 
 	/** Collect statistics for the given ParserOutput. */
