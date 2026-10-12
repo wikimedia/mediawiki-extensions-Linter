@@ -43,7 +43,9 @@ use MediaWiki\Skin\Skin;
 use MediaWiki\SpecialPage\Hook\WgQueryPagesHook;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Storage\Hook\RevisionDataUpdatesHook;
+use MediaWiki\Title\MalformedTitleException;
 use MediaWiki\Title\Title;
+use MediaWiki\Title\TitleParser;
 use Wikimedia\Stats\StatsFactory;
 
 class Hooks implements
@@ -69,6 +71,7 @@ class Hooks implements
 		private readonly WikiPageFactory $wikiPageFactory,
 		private readonly ParserOutputAccess $parserOutputAccess,
 		private readonly CategoryManager $categoryManager,
+		private readonly TitleParser $titleParser,
 		private readonly TotalsLookup $totalsLookup,
 		private readonly Database $database,
 		Config $config
@@ -201,10 +204,19 @@ class Hooks implements
 		string $page, int $revision, array $data
 	): bool {
 		$errors = [];
-		$title = Title::newFromText( $page );
+		// Do not use Title::newFromText(). It gives the shared Title from
+		// its cache, and getLatestRevID() keeps page fields in that Title.
+		// During a save, these fields can be out of date. Then this check
+		// drops the lints, and other code gets the incorrect values from
+		// the cache (T432762). Use a new Title object instead.
+		try {
+			$title = Title::newFromLinkTarget( $this->titleParser->parseTitle( $page ) );
+		} catch ( MalformedTitleException ) {
+			return false;
+		}
 
 		if (
-			!$title || !$title->getArticleID() ||
+			!$title->getArticleID() ||
 			$title->getLatestRevID() != $revision
 		) {
 			return false;

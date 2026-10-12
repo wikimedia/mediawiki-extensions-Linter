@@ -38,6 +38,7 @@
 				"WikiPageFactory",
 				"ParserOutputAccess",
 				"Linter.CategoryManager",
+				"TitleParser",
 				"Linter.TotalsLookup",
 				"Linter.Database",
 				"MainConfig"
