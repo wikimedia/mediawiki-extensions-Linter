@@ -11,6 +11,7 @@
 			"Incnis Mrsi",
 			"Kaganer",
 			"Kareyac",
+			"Mitte27",
 			"Movses",
 			"Okras",
 			"Redredsonia",
@@ -128,6 +129,7 @@
 	"linterrors-summary": "<strong>Примечание:</strong> Показатели для категорий не являются точными подсчётами, а основаны на оценках.",
 	"multi-part-template-block": "Из нескольких шаблонов",
 	"pageinfo-linter": "Ошибки статического анализатора",
+	"pageinfo-linter-moreinfo": "Просмотреть подробную информацию об ошибках разметки.",
 	"category-by-template-view": "Просмотр включений, содержащих эти ошибки.",
 	"linter-template-errors-pages-link": "страницы"
 }
