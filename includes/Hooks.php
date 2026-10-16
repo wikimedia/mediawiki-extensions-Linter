@@ -221,6 +221,11 @@ class Hooks implements
 		) {
 			return false;
 		}
+
+		if ( !in_array( $title->getContentModel(), self::LINTABLE_CONTENT_MODELS ) ) {
+			return false;
+		}
+
 		$catCounts = [];
 		foreach ( $data as $info ) {
 			if ( $this->categoryManager->isKnownCategory( $info['type'] ) ) {
