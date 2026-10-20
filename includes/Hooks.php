@@ -62,7 +62,9 @@ class Hooks implements
 	/**
 	 * This should match Parsoid's PageConfig::hasLintableContentModel()
 	 */
-	public const LINTABLE_CONTENT_MODELS = [ CONTENT_MODEL_WIKITEXT, 'proofread-page' ];
+	public const LINTABLE_CONTENT_MODELS = [
+		CONTENT_MODEL_WIKITEXT, 'proofread-page', 'proofread-index'
+	];
 
 	public function __construct(
 		private readonly LinkRenderer $linkRenderer,
