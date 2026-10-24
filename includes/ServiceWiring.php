@@ -52,7 +52,6 @@ return [
 				$services->getMainConfig()
 			),
 			$services->getMainWANObjectCache(),
-			$services->getStatsdDataFactory(),
 			$services->get( 'Linter.CategoryManager' ),
 			$services->get( 'Linter.Database' )
 		);
