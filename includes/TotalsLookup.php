@@ -21,9 +21,7 @@
 namespace MediaWiki\Linter;
 
 use MediaWiki\Config\ServiceOptions;
-use MediaWiki\WikiMap\WikiMap;
 use Wikimedia\ObjectCache\WANObjectCache;
-use Wikimedia\Stats\IBufferingStatsdDataFactory;
 
 /**
  * Lookup to find and cache the total amount of
@@ -37,7 +35,6 @@ class TotalsLookup {
 	public function __construct(
 		private readonly ServiceOptions $options,
 		private readonly WANObjectCache $cache,
-		private readonly IBufferingStatsdDataFactory $statsdDataFactory,
 		private readonly CategoryManager $categoryManager,
 		private readonly Database $database,
 	) {
@@ -80,7 +77,7 @@ class TotalsLookup {
 	}
 
 	/**
-	 * Send stats to statsd and update totals cache
+	 * Update totals cache
 	 *
 	 * @param array $changes
 	 */
@@ -88,7 +85,7 @@ class TotalsLookup {
 		$linterStatsdSampleFactor = $this->options->get( 'LinterStatsdSampleFactor' );
 
 		if ( $linterStatsdSampleFactor === false ) {
-			// Don't send to statsd, but update cache with $changes
+			// Update cache with $changes
 			$raw = $changes['added'];
 			foreach ( $changes['deleted'] as $cat => $count ) {
 				if ( isset( $raw[$cat] ) ) {
@@ -105,20 +102,9 @@ class TotalsLookup {
 					$this->touchCategoryCache( $cat );
 				}
 			}
-			return;
-		} elseif ( mt_rand( 1, $linterStatsdSampleFactor ) != 1 ) {
-			return;
+		} elseif ( mt_rand( 1, $linterStatsdSampleFactor ) == 1 ) {
+			$this->touchAllCategoriesCache();
 		}
-
-		$totals = $this->database->getTotals();
-		$wiki = WikiMap::getCurrentWikiId();
-		$stats = $this->statsdDataFactory;
-		foreach ( $totals as $name => $count ) {
-			$stats->gauge( "linter.category.$name.$wiki", $count );
-		}
-		$stats->gauge( "linter.totals.$wiki", array_sum( $totals ) );
-
-		$this->touchAllCategoriesCache();
 	}
 
 	/**
