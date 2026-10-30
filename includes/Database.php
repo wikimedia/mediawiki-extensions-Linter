@@ -20,7 +20,6 @@
 
 namespace MediaWiki\Linter;
 
-use MediaWiki\Config\ServiceOptions;
 use MediaWiki\Json\FormatJson;
 use MediaWiki\Logger\LoggerFactory;
 use stdClass;
@@ -33,8 +32,6 @@ use Wikimedia\Rdbms\SelectQueryBuilder;
  * Database logic
  */
 class Database {
-	public const CONSTRUCTOR_OPTIONS = [];
-
 	/**
 	 * Maximum number of errors to save per category,
 	 * for a page, the rest are just dropped
@@ -50,11 +47,9 @@ class Database {
 	public const MAX_TEMPLATE_LENGTH = 250;
 
 	public function __construct(
-		private readonly ServiceOptions $options,
 		private readonly CategoryManager $categoryManager,
 		private readonly LBFactory $dbLoadBalancerFactory,
 	) {
-		$options->assertRequiredOptions( self::CONSTRUCTOR_OPTIONS );
 	}
 
 	public function getPrimaryDBConnection(): IDatabase {

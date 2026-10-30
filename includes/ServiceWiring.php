@@ -37,10 +37,6 @@ return [
 	},
 	'Linter.Database' => static function ( MediaWikiServices $services ): Database {
 		return new Database(
-			new ServiceOptions(
-				Database::CONSTRUCTOR_OPTIONS,
-				$services->getMainConfig()
-			),
 			$services->get( 'Linter.CategoryManager' ),
 			$services->getDBLoadBalancerFactory()
 		);
