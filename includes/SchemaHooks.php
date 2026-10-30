@@ -35,18 +35,6 @@ class SchemaHooks implements LoadExtensionSchemaUpdatesHook {
 		$updater->addExtensionTable( 'linter',
 			"{$dir}/sql/{$dbType}/tables-generated.sql"
 		);
-		// 1.38
-		$updater->addExtensionField( 'linter', 'linter_namespace',
-			"{$dir}/sql/{$dbType}/patch-linter-add-namespace.sql"
-		);
-		// 1.38
-		$updater->addExtensionField( 'linter', 'linter_template',
-			"{$dir}/sql/{$dbType}/patch-linter-template-tag-fields.sql"
-		);
-		// 1.40
-		$updater->modifyExtensionField( 'linter', 'linter_params',
-			"{$dir}/sql/{$dbType}/patch-linter-fix-params-null-definition.sql"
-		);
 		// 1.43
 		$updater->addPostDatabaseUpdateMaintenance( MigrateNamespace::class );
 		$updater->addPostDatabaseUpdateMaintenance( MigrateTagTemplate::class );
