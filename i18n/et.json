@@ -44,6 +44,8 @@
 	"linter-category-multiple-unclosed-formatting-tags-desc": "Neil lehekülgedel on mitu sulgemata vormindussilti.",
 	"linter-category-obsolete-tag": "Aegunud HTML-sildid",
 	"linter-category-obsolete-tag-desc": "Need leheküljed kasutavad aegunud HTML-silte.",
+	"linter-category-pre-expansion": "Mallikasutus vikiteksti vormingu lisasildi \"pre\" sees",
+	"linter-category-pre-expansion-desc": "Neil lehekülgedel hõrendab vikiteksti vormingu lisasilt \"pre\" malle.",
 	"linter-category-pwrap-bug-workaround": "Vastukaal reamurdeta lõigu veale",
 	"linter-category-pwrap-bug-workaround-desc": "Neil lehekülgedel on reamurdeta lõigu viga, millele saab vastukaalu seada.",
 	"linter-category-self-closed-tag": "Endassesuletud sildid",
