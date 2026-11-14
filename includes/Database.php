@@ -484,7 +484,7 @@ class Database {
 					$dbw->expr( "linter_params", '!=', null ),
 					$dbw->expr( "linter_id", '>', $lastElement )
 				] )
-				->orderBy( 'linter_id', selectQueryBuilder::SORT_ASC )
+				->orderBy( 'linter_id', SelectQueryBuilder::SORT_ASC )
 				->limit( $batchSize )
 				->caller( __METHOD__ )
 				->fetchResultSet();
