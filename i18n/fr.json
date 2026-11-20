@@ -79,7 +79,7 @@
 	"linter-category-unclosed-quotes-in-heading-desc": "Ces pages ont une citation non close dans un titre de section, ce qui amène un débordement de la table des matières.",
 	"linter-category-wikilink-in-extlink": "Liens dans les liens",
 	"linter-category-wikilink-in-extlink-desc": "Ces pages ont des liens wiki dans des liens externes, qui doivent être corrigés.",
-	"linter-desc": "Tracer les erreurs d’analyse Lint depuis un service externe et les afficher aux utilisateurs",
+	"linter-desc": "Détecter les erreurs d’analyse Lint depuis un service externe et les afficher aux utilisateurs",
 	"linter-lints-prefix-search-page-desc": "Recherche des pages ayant des erreurs d’analyse Lint par préfixe de titre de page ou par titre complet",
 	"linter-invalid-category": "Catégorie introuvable ou malformée",
 	"linter-invalid-title": "Espace de noms ou nom de page introuvable ou mal formé",
